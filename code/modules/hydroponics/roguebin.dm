@@ -173,9 +173,11 @@
 			if(islist(R.created_item))
 				var/list/L = R.created_item
 				for(var/IT in L)
-					new IT(used_turf)
+					var/obj/item/O = new IT(used_turf)
+					R.handle_creation(O)
 			else
-				new R.created_item(used_turf)
+				var/IT = new R.created_item(used_turf)
+				R.handle_creation(IT)
 			playsound(src,pick('sound/items/quench_barrel1.ogg','sound/items/quench_barrel2.ogg'), 100, FALSE)
 			QDEL_NULL(T.hingot)
 			T.update_icon()

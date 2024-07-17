@@ -65,8 +65,10 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("endurance", 2)
 		H.change_stat("speed", 1)
-	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+// The captain is most often rewarded with nobility. 
+	if(prob(75))  // 75% chance to add the noble trait. 
+		ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	H.verbs |= /mob/proc/haltyell
 
 /obj/effect/proc_holder/spell/self/convertrole

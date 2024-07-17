@@ -425,7 +425,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampire Lord", "Extended", "
 		bandito.add_antag_datum(new_antag)
 		GLOB.pre_setup_antags -= bandito
 		bandits += bandito
-		//SSrole_class_handler.bandits_in_round = TRUE
+		SSrole_class_handler.bandits_in_round = TRUE
 
 ///////////////// REBELS
 	for(var/datum/mind/rebelguy in pre_rebels)

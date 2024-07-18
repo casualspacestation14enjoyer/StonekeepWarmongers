@@ -47,6 +47,24 @@
 			return 0.1
 	return chargetime
 
+/datum/intent/shoot/musket
+	chargedrain = 0 //no drain to aim a gun
+
+/datum/intent/shoot/musket/get_chargetime()
+	if(mastermob && chargetime)
+		var/newtime = chargetime
+		//skill block
+		newtime = newtime + 18
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3)
+		//per block
+		newtime = newtime + 20
+		newtime = newtime - (mastermob.STAPER)
+		if(newtime > 0)
+			return newtime
+		else
+			return 0.1
+	return chargetime
+
 /datum/intent/arc/crossbow
 	chargetime = 1
 	chargedrain = 0 //no drain to aim a crossbow

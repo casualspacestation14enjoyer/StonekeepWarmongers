@@ -17,6 +17,8 @@
 	var/department_flag = NONE //Deprecated
 	var/auto_deadmin_role_flags = NONE
 
+	var/warfare_faction = null
+
 	//Players will be allowed to spawn in as jobs that are set to "Station"
 	var/faction = "None"
 
@@ -139,6 +141,7 @@
 		return
 
 	roundstart_experience = skills
+	H.warfare_faction = warfare_faction
 
 	if(roundstart_experience)
 		var/mob/living/carbon/human/experiencer = H

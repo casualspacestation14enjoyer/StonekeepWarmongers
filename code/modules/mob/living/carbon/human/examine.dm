@@ -89,6 +89,9 @@
 		if(real_name in GLOB.excommunicated_players)
 			. += "<span class='userdanger'>HERETIC! SHAME!</span>"
 
+		if(H.warfare_faction != src.warfare_faction)
+			. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
+
 		if(iszizocultist(user) || iszizolackey(user))
 			if(virginity)
 				. += "<span class='userdanger'>VIRGIN!</span>"

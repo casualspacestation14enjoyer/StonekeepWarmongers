@@ -69,6 +69,8 @@
 	var/limb_hit = check_limb_hit(def_zone)//to get the correct message info.
 	if(limb_hit)
 		organ_hit_text = " in \the [parse_zone(limb_hit)]"
+	if(parse_zone(def_zone) == "skull")
+		death()
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(loc, pick(P.hitsound), volume, TRUE, -1)

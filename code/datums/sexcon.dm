@@ -214,6 +214,7 @@
 
 /mob/living/carbon/human
 	var/virginity = FALSE
+	var/warfare_faction = null
 
 /mob/living/carbon/human/proc/on_virgin_loss()
 	var/mob/living/carbon/P = src

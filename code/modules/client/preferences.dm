@@ -236,9 +236,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"
-			if(SSrole_class_handler.drifter_queue_enabled)
-				dat += "<style>#drifter_queue {color:aliceblue;font-weight: bold;} #drifter_queue:hover{color: #eac0b9;}</style>"
-				dat += "<a id='drifter_queue' href='?_src_=prefs;preference=drifters;task=show_drifter_queue'>Adventurer Queue</a>"
 			dat += "</td>"
 			dat += "</tr>"
 
@@ -2464,7 +2461,7 @@ Slots: [job.spawn_positions]</span>
 		character.regenerate_limb(BODY_ZONE_L_ARM)
 		if(istype(charflaw, /datum/charflaw/badsight))
 			charflaw = new /datum/charflaw/randflaw()
-		character.charflaw = new charflaw.type()
+		character.charflaw = null // No flaws in a PvP game
 		character.charflaw.on_mob_creation(character)
 
 	character.dna.real_name = character.real_name

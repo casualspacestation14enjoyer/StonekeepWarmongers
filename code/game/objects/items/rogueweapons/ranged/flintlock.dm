@@ -11,6 +11,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	randomspread = 1
 	spread = 0
+	var/cocked = FALSE
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
 	force = 10
@@ -24,6 +25,40 @@
 	dropshrink = 0.8
 	associated_skill = /datum/skill/combat/flintlocks
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
+	. = ..()
+	if(wielded)
+		ungrip(user)
+	update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attack_right(mob/user)
+	. = ..()
+	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+	if(cocked)
+		cocked = FALSE
+		to_chat(user, "<span class='warning'>I carefully de-cock \the [src].</span>")
+	else
+		cocked = TRUE
+		to_chat(user, "<span class='info'>I cock \the [src].</span>")
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	name = "barkiron"
+	desc = "A type of barksteel made with cheaper materials, usually used by civilian militias or supplied to policing forces. It is rarely used by infrantrymen, but officer's regard it as more noble than a barksteel."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "pistol"
+	item_state = "pistol"
+	recoil = 8
+	randomspread = 2
+	spread = 3
+	dropshrink = 0.5
+	possible_item_intents = list(/datum/intent/shoot/musket, INTENT_GENERIC)
+	gripped_intents = null
+	slot_flags = ITEM_SLOT_HIP
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/attack_self(mob/living/user)
+	return
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/update_icon()
 	icon_state = "[initial(icon_state)][wielded]"
 
@@ -36,7 +71,10 @@
 		update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_with_empty_chamber(mob/living/user)
+	if(!cocked)
+		return
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+	cocked = FALSE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
@@ -50,11 +88,14 @@
 		var/obj/projectile/BB = CB.BB
 		if(user.STAPER > 10)
 			BB.damage = BB.damage * (user.STAPER / 10)
+	if(!cocked)
+		return
+	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+	cocked = FALSE
+	sleep(3)
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
-	sleep(3)
 	..()
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++

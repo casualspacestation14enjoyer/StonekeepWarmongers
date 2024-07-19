@@ -139,9 +139,10 @@
 
 	if(!ishuman(H))
 		return
+	var/mob/living/carbon/human/HUM = H
 
 	roundstart_experience = skills
-	H.warfare_faction = warfare_faction
+	HUM.warfare_faction = warfare_faction
 
 	if(roundstart_experience)
 		var/mob/living/carbon/human/experiencer = H

@@ -290,8 +290,8 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define IS_SHARP			1
 #define IS_SHARP_ACCURATE	2
 
-#define BLUE_TEAM "Bluecoats" // Grenzelhoft
-#define RED_TEAM "Redcoats" // Heartfelt
+#define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
+#define RED_WARTEAM "Heartfelts" // Heartfelt
 
 //His Grace.
 #define HIS_GRACE_SATIATED 0 //He hungers not. If bloodthirst is set to this, His Grace is asleep.

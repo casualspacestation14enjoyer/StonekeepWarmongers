@@ -277,7 +277,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
 	range = 30
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
-	embedchance = 100
+	embedchance = 35
 	woundclass = BCLASS_STAB
 	flag = "bullet"
 	armor_penetration = 200

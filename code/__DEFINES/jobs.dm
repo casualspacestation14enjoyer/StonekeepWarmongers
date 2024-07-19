@@ -104,6 +104,8 @@
 #define ARCHIVIST   (1<<6)
 #define MERCHANT	(1<<7)
 #define FELDSHER    (1<<8)
+#define REDKING     (1<<9)
+#define BLUKING     (1<<10)
 
 #define GARRISON		(1<<1)
 
@@ -127,6 +129,7 @@
 #define MASON		(1<<4)
 #define TAILOR		(1<<5)
 #define SCRIBE		(1<<7)
+#define SOLDIER     (1<<8)
 
 #define PEASANTS		(1<<4)
 

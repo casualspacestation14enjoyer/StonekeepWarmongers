@@ -65,6 +65,9 @@
 			return 0.1
 	return chargetime
 
+/datum/intent/shoot/musket/pistol/get_chargetime()
+	return 4
+
 /datum/intent/arc/crossbow
 	chargetime = 1
 	chargedrain = 0 //no drain to aim a crossbow

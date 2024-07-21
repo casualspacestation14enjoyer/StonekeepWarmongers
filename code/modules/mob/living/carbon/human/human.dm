@@ -895,6 +895,11 @@
 /mob/living/carbon/human/proc/can_be_firemanned(mob/living/carbon/target)
 	return (ishuman(target) && !(target.mobility_flags & MOBILITY_STAND))
 
+/mob/living/carbon/human/proc/setclientwarfaction(w_faction)
+	if(client)
+		client.warfare_faction = w_faction
+	testing(w_faction)
+
 /mob/living/carbon/human/proc/fireman_carry(mob/living/carbon/target)
 	var/carrydelay = 50 //if you have latex you are faster at grabbing
 

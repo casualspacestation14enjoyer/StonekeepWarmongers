@@ -143,7 +143,7 @@
 
 	roundstart_experience = skills
 	HUM.warfare_faction = warfare_faction
-	H.client.warfare_faction = warfare_faction
+	HUM.setclientwarfaction(warfare_faction)
 
 	if(roundstart_experience)
 		var/mob/living/carbon/human/experiencer = H

@@ -289,6 +289,22 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Hunter"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/heartfeltinfantry
+	name = "Heartfelt Infantry"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/heartfeltlord
+	name = "Heartfelt Lord"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/grenzelinfantry
+	name = "Grenzelhoft Infantry"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/grenzellord
+	name = "Grenzelhoft Lord"
+	icon_state = "arrow"
+
 /obj/effect/landmark/start/fisher
 	name = "Fisher"
 	icon_state = "arrow"

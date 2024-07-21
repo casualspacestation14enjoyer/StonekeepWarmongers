@@ -341,6 +341,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 			return "[jobtitle] requires more faith."
 		if(JOB_UNAVAILABLE_LASTCLASS)
 			return "You have played [jobtitle] recently."
+		if(JOB_UNAVAILABLE_WRONGTEAM)
+			return "You're on the wrong team."
 		if(JOB_UNAVAILABLE_JOB_COOLDOWN)
 			if(usr.ckey in GLOB.job_respawn_delays)
 				var/next_respawn_time = GLOB.job_respawn_delays[usr.ckey]
@@ -425,6 +427,10 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 		if(W.get_team(ckey))
 			if(W.get_team(ckey) != job.faction)
 				return JOB_UNAVAILABLE_GENERIC
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		if(client.warfare_faction)
+			if(client.warfare_faction != job.warfare_faction)
+				return JOB_UNAVAILABLE_WRONGTEAM
 	return JOB_AVAILABLE
 
 /mob/dead/new_player/proc/AttemptLateSpawn(rank)

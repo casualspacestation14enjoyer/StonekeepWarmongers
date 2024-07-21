@@ -902,11 +902,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	dat += "<td width='33%' align='left'></td>"
 	dat += "<td width='33%' align='center'>"
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-		switch(N.ready)
-			if(PLAYER_NOT_READY)
-				dat += "<b>UNREADY</b> <a href='byond://?src=[REF(N)];ready=[PLAYER_READY_TO_PLAY]'>READY</a>"
-			if(PLAYER_READY_TO_PLAY)
-				dat += "<a href='byond://?src=[REF(N)];ready=[PLAYER_NOT_READY]'>UNREADY</a> <b>READY</b>"
+		dat += "<b>WAIT FOR ROUND START</b>"
 	else
 		dat += "<a href='byond://?src=[REF(N)];late_join=1'>JOINLATE</a>"
 //	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
@@ -2462,7 +2458,6 @@ Slots: [job.spawn_positions]</span>
 		if(istype(charflaw, /datum/charflaw/badsight))
 			charflaw = new /datum/charflaw/randflaw()
 		character.charflaw = null // No flaws in a PvP game
-		character.charflaw.on_mob_creation(character)
 
 	character.dna.real_name = character.real_name
 

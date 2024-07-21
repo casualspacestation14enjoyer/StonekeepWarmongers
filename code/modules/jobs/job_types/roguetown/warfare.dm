@@ -1,15 +1,14 @@
-/datum/job/roguetown/warfare/special_job_check(mob/dead/new_player/player)
-	if(!player)
-		return
-	if(!player.ckey)
-		return
-	if(warfare_faction == player.client.warfare_faction)
-		return TRUE
-	if(player.client.warfare_faction == null)
-		return TRUE
-
 /datum/job/roguetown/warfare/red
 	warfare_faction = RED_WARTEAM
+
+/datum/job/roguetown/warfare/red/lord
+	title = "Heartfelt Lord"
+	tutorial = "todo"
+	department_flag = NOBLEMEN
+	flag = LORD
+	total_positions = 1
+	spawn_positions = 1
+	faction = "Station"
 
 /datum/job/roguetown/warfare/red/soldier
 	title = "Heartfelt Infantry"
@@ -65,6 +64,15 @@
 
 /datum/job/roguetown/warfare/blu
     warfare_faction = BLUE_WARTEAM
+
+/datum/job/roguetown/warfare/blu/lord
+	title = "Grenzelhoft Lord"
+	tutorial = "todo"
+	department_flag = NOBLEMEN
+	flag = LORD
+	total_positions = 1
+	spawn_positions = 1
+	faction = "Station"
 
 /datum/job/roguetown/warfare/blu/soldier
     title = "Grenzelhoft Infantry"

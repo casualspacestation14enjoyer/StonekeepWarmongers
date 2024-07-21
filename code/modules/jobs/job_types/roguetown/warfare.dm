@@ -1,5 +1,6 @@
 /datum/job/roguetown/warfare/red
 	warfare_faction = RED_WARTEAM
+	selection_color = CLOTHING_RED
 
 /datum/job/roguetown/warfare/red/lord
 	title = "Heartfelt Lord"
@@ -9,6 +10,11 @@
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
+	outfit = null
+	allowed_races = list(
+		"Humen"
+	)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 
 /datum/job/roguetown/warfare/red/soldier
 	title = "Heartfelt Infantry"
@@ -63,7 +69,8 @@
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 /datum/job/roguetown/warfare/blu
-    warfare_faction = BLUE_WARTEAM
+	warfare_faction = BLUE_WARTEAM
+	selection_color = CLOTHING_BLUE
 
 /datum/job/roguetown/warfare/blu/lord
 	title = "Grenzelhoft Lord"

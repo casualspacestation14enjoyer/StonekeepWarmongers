@@ -57,7 +57,7 @@
 	recoil = 8
 	randomspread = 2
 	spread = 3
-	dropshrink = 0.5
+	dropshrink = 0.3
 	possible_item_intents = list(/datum/intent/shoot/musket, INTENT_GENERIC)
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_HIP

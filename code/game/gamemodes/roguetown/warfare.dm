@@ -14,7 +14,7 @@
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
 	var/crownbearer = "John Roguetown"
 
-	var/list/heartfelts = list()
+	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
 	announce_span = "danger"

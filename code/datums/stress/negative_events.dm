@@ -283,3 +283,8 @@
 	timer = 3 MINUTES
 	stressadd = 6
 	desc = "<span class='red'>I slept on the floor! What am I?! An animal?!</span>"
+
+/datum/stressevent/deadlord
+	timer = 3 MINUTES
+	stressadd = 12
+	desc = "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>"

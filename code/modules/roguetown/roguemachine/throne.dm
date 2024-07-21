@@ -58,6 +58,22 @@
 	..()
 	density = TRUE
 	M.set_mob_offsets("bed_buckle", _x = 0, _y = 8)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))
+					C.whowon = RED_WARTEAM
+					C.crownbearer = H.real_name
+					SSticker.force_ending = TRUE
+			if(BLUE_WARTEAM)
+				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
+					C.whowon = BLUE_WARTEAM
+					C.crownbearer = H.real_name
+					SSticker.force_ending = TRUE
 
 /obj/structure/throne/post_unbuckle_mob(mob/living/M)
 	..()
@@ -66,7 +82,7 @@
 
 /obj/structure/throne/Initialize()
 	..()
-	lordcolor("#933030","#2f352f")
+	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
 
 /obj/structure/throne/Destroy()
 	GLOB.lordcolor -= src

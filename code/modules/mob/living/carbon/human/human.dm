@@ -897,7 +897,14 @@
 
 /mob/living/carbon/human/proc/setclientwarfaction(w_faction)
 	if(client)
-		client.warfare_faction = w_faction
+		if(istype(SSticker.mode, /datum/game_mode/warfare))
+			var/datum/game_mode/warfare/C = SSticker.mode
+			client.warfare_faction = w_faction
+			switch(w_faction)
+				if(RED_WARTEAM)
+					C.heartfelts |= client
+				if(BLUE_WARTEAM)
+					C.grenzels |= client
 	testing(w_faction)
 
 /mob/living/carbon/human/proc/fireman_carry(mob/living/carbon/target)

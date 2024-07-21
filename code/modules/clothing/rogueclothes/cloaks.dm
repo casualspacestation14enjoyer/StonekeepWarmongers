@@ -274,6 +274,15 @@
 	detail_tag = "_spl"
 	detail_color = CLOTHING_PURPLE
 
+/obj/item/clothing/cloak/stabard/guard/reddy
+	detail_color = CLOTHING_YELLOW
+	picked = TRUE
+
+/obj/item/clothing/cloak/stabard/guard/bluey // They're the blue team but they don't have blue clothing, too late to change now
+	detail_color = CLOTHING_PURPLE
+	color = CLOTHING_BLACK
+	picked = TRUE
+
 /obj/item/clothing/cloak/stabard/guard/attack_right(mob/user)
 	if(picked)
 		return

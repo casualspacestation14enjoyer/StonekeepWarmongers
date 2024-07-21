@@ -72,6 +72,8 @@
 	///Age of byond account in days
 	var/account_age = -1
 
+	var/warfare_faction = null
+
 	preload_rsc = PRELOAD_RSC
 
 	var/atom/movable/screen/click_catcher/void

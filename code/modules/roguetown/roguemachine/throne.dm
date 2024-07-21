@@ -40,3 +40,45 @@
 	M.color = secondary
 	add_overlay(M)
 	GLOB.lordcolor -= src
+
+// WARFARE THRONE
+
+/obj/structure/throne
+	name = "throne of Heartfelt"
+	desc = "Do not let the enemy sit on this with your crown."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "throne"
+	density = FALSE
+	can_buckle = 1
+	pixel_x = -32
+	max_integrity = 999999
+	buckle_lying = FALSE
+
+/obj/structure/throne/post_buckle_mob(mob/living/M)
+	..()
+	density = TRUE
+	M.set_mob_offsets("bed_buckle", _x = 0, _y = 8)
+
+/obj/structure/throne/post_unbuckle_mob(mob/living/M)
+	..()
+	density = FALSE
+	M.reset_offsets("bed_buckle")
+
+/obj/structure/throne/Initialize()
+	..()
+	lordcolor("#933030","#2f352f")
+
+/obj/structure/throne/Destroy()
+	GLOB.lordcolor -= src
+	return ..()
+
+/obj/structure/throne/lordcolor(primary,secondary)
+	if(!primary || !secondary)
+		return
+	var/mutable_appearance/M = mutable_appearance(icon, "throne_primary", -(layer+0.1))
+	M.color = primary
+	add_overlay(M)
+	M = mutable_appearance(icon, "throne_secondary", -(layer+0.1))
+	M.color = secondary
+	add_overlay(M)
+	GLOB.lordcolor -= src

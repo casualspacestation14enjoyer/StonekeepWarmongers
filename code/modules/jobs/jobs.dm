@@ -152,6 +152,16 @@ GLOBAL_LIST_INIT(roguefight_positions, list(
 	"Green Fighter"
 	))
 
+GLOBAL_LIST_INIT(red_positions, list(
+	"Heartfelt Lord",
+	"Heartfelt Infantry"
+	))
+
+GLOBAL_LIST_INIT(blue_positions, list(
+	"Grenzelhoft Lord",
+	"Grenzelhoft Infantry"
+	))
+
 GLOBAL_LIST_INIT(test_positions, list(
 	"Tester"
 	))

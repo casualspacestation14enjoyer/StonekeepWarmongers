@@ -89,3 +89,10 @@
 		var/obj/item/ammo_casing/caseless/rogue/bolt/A = new()
 		ammo_list += A
 	update_icon()
+
+/obj/item/quiver/bullets/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/A = new()
+		ammo_list += A
+	update_icon()

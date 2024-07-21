@@ -276,12 +276,15 @@
 	icon_state = "musketball_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
 	range = 30
-	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
+	jitter = 5
+	stun = 1
+	hitscan = TRUE
+	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 35
 	woundclass = BCLASS_STAB
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
-	armor_penetration = 200
-	speed = 0.1
+	armor_penetration = 100
 
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "lead ball"

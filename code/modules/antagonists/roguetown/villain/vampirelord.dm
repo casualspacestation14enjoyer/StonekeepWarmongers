@@ -196,6 +196,22 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	sellprice = 1000
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/head/roguetown/crownred
+	name = "crown of Heartfelt"
+	icon_state = "vcrown"
+	body_parts_covered = null
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = null
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/roguetown/crownblu
+	name = "crown of the Grenzelhofts"
+	icon_state = "vcrown_blu"
+	body_parts_covered = null
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = null
+	resistance_flags = FIRE_PROOF
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"
 	icon = 'icons/roguetown/clothing/shirts.dmi'

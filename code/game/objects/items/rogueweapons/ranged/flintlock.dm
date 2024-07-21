@@ -12,6 +12,7 @@
 	randomspread = 1
 	spread = 0
 	var/cocked = FALSE
+	bigboy = TRUE
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
 	force = 10
@@ -24,6 +25,11 @@
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.8
 	associated_skill = /datum/skill/combat/flintlocks
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	icon_state = "longgun_b"
+	item_state = "longgun_b"
+	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()
@@ -47,6 +53,7 @@
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "pistol"
 	item_state = "pistol"
+	bigboy = FALSE
 	recoil = 8
 	randomspread = 2
 	spread = 3
@@ -57,6 +64,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/attack_self(mob/living/user)
+	return
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/update_icon()
 	return
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/update_icon()

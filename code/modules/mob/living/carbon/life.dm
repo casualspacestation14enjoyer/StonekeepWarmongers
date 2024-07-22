@@ -127,14 +127,10 @@
 				if(prob(3) && (painpercent >= 80) )
 					emote("painmoan")
 			else
-				if(painpercent >= 100)
+				if(painpercent >= 40)
 					if(prob(probby))
-						Immobilize(10)
 						emote("painscream")
 						stuttering += 5
-						addtimer(CALLBACK(src, PROC_REF(Stun), 110), 10)
-						addtimer(CALLBACK(src, PROC_REF(Knockdown), 110), 10)
-						mob_timers["painstun"] = world.time + 160
 					else
 						emote("painmoan")
 						stuttering += 5

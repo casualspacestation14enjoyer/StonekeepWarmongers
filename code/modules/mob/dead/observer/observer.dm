@@ -70,11 +70,6 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 /mob/dead/observer/rogue
 	draw_icon = TRUE
 
-/mob/dead/observer/rogue/Initialize()
-	..()
-	if(!(istype(src, /mob/dead/observer/rogue/arcaneeye)))
-		verbs += /client/proc/descend
-
 /mob/dead/observer/rogue/nodraw
 	draw_icon = FALSE
 	icon = 'icons/roguetown/mob/misc.dmi'
@@ -561,7 +556,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	M.key = key
-	client.verbs -= /client/proc/descend
 //	M.Login()	//wat
 	return
 

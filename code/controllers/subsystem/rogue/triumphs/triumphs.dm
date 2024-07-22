@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(triumphs)
 	TRIUMPH BUY MENU THINGS
 */
 	// Whether triumph buys are enabled
-	var/triumph_buys_enabled = TRUE
+	var/triumph_buys_enabled = FALSE
 	//init list to hold triumph buy menus for the session (aka menu data)
 	// Assc list "ckey" = datum
 	var/list/active_triumph_menus = list()

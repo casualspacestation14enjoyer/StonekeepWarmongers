@@ -200,7 +200,7 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale of Roguetown.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on him.</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
@@ -212,10 +212,6 @@
 			key_list += C.ckey
 //	if(key_list.len)
 //		add_roundplayed(key_list)
-	for(var/mob/living/carbon/human/H in GLOB.player_list)
-		if(H.stat != DEAD)
-			if(H.get_triumphs() < 0)
-				H.adjust_triumphs(1)
 	add_roundplayed(key_list)
 //	SEND_SOUND(world, sound(pick('sound/misc/roundend1.ogg','sound/misc/roundend2.ogg')))
 //	SEND_SOUND(world, sound('sound/misc/roundend.ogg'))
@@ -282,7 +278,7 @@
 	CHECK_TICK
 
 	//Now print them all into the log!
-	log_game("Antagonists at round end were...")
+	//log_game("Antagonists at round end were...")
 	for(var/antag_name in total_antagonists)
 		var/list/L = total_antagonists[antag_name]
 		log_game("[antag_name]s :[L.Join(", ")].")
@@ -630,7 +626,6 @@
 /datum/controller/subsystem/ticker/proc/give_show_playerlist_button(client/C)
 	set waitfor = 0
 	to_chat(C,"<a href='?src=[C];playerlistrogue=1'>* SHOW PLAYER LIST *</a>")
-	to_chat(C,"<a href='?src=[C];commendsomeone=1'>* Commend a Character *</a>")
 
 /datum/action/report
 	name = "Show roundend report"

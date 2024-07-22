@@ -1,35 +1,4 @@
 // Verbs
-/client/proc/descend()
-	set name = "Journey to the Underworld"
-	set category = "Spirit"
-
-	switch(alert("Begin the long walk in the underworld too your judgement....",,"Yes","No"))
-		if("Yes")
-			if(istype(mob, /mob/living/carbon/human))
-				var/mob/living/carbon/human/D = mob
-				if(D.buried && D.funeral)
-					D.returntolobby()
-					return
-
-				// Check if the player's job is hiv+
-				var/datum/job/target_job = SSjob.GetJob(D.mind.assigned_role)
-				if(target_job)
-					if(target_job.job_reopens_slots_on_death)
-						target_job.current_positions = max(0, target_job.current_positions - 1)
-					if(target_job.same_job_respawn_delay)
-						// Store the current time for the player
-						GLOB.job_respawn_delays[src.ckey] = world.time + target_job.same_job_respawn_delay
-
-			for(var/obj/effect/landmark/underworld/A in world)
-				var/mob/living/carbon/spirit/O = new /mob/living/carbon/spirit(A.loc)
-				O.livingname = mob.name
-				O.ckey = ckey
-				O.patron = prefs.selected_patron
-				SSdroning.area_entered(get_area(O), O.client)
-			verbs -= /client/proc/descend
-		if("No")
-			usr << "You have second thoughts."
-
 /mob/verb/returntolobby()
 	set name = "{RETURN TO LOBBY}"
 	set category = "Options"
@@ -63,7 +32,6 @@
 		return
 
 	M.key = key
-	client.verbs -= /client/proc/descend
 	qdel(src)
 	return
 

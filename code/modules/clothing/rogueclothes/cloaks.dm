@@ -474,6 +474,10 @@
 	detail_tag = "_det"
 	detail_color = CLOTHING_PURPLE
 
+/obj/item/clothing/cloak/lordcloak/blue
+	detail_color = CLOTHING_BLACK
+	color = CLOTHING_PURPLE
+
 /obj/item/clothing/cloak/lordcloak/update_icon()
 	cut_overlays()
 	if(get_detail_tag())

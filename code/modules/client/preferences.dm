@@ -904,7 +904,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		dat += "<b>WAIT FOR ROUND START</b>"
 	else
-		dat += "<a href='byond://?src=[REF(N)];late_join=1'>JOINLATE</a>"
+		dat += "<a href='byond://?src=[REF(N)];late_join=1'>DUTY CALLS</a>"
 //	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 		dat += "</center>"
 

@@ -96,12 +96,6 @@
 				if(real_name in GLOB.outlawed_players)
 					yeae = FALSE
 
-		if(tris2take)
-			adjust_triumphs(tris2take)
-		else
-			if(get_triumphs() > 0)
-				adjust_triumphs(-1)
-
 		if(job == "King" || job == "Queen")
 			for(var/mob/living/carbon/human/HU in GLOB.player_list)
 				if(!HU.stat)

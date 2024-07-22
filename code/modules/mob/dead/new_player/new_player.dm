@@ -595,10 +595,10 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 			var/cat_color = SSjob.name_occupations[category[1]].selection_color //use the color of the first job in the category (the department head) as the category color
 			var/cat_name = ""
 			switch (SSjob.name_occupations[category[1]].department_flag)
-				if (NOBLEMEN)
-					cat_name = "Nobles"
-				if (PEASANTS)
-					cat_name = "Peasants"
+				if (REDSS)
+					cat_name = "Heartfelts"
+				if (BLUES)
+					cat_name = "Grenzelhofts"
 
 			dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 			dat += "<legend align='center' style='font-weight: bold; color: [cat_color]'>[cat_name]</legend>"

@@ -156,6 +156,9 @@
 #define ORPHAN		(1<<3)
 #define PRINCE		(1<<4)
 
+#define BLUES		(1<<6)
+#define REDSS		(1<<7)
+
 #define JCOLOR_NOBLE "#9c40bf"
 #define JCOLOR_MERCHANT "#c2b449"
 #define JCOLOR_SOLDIER "#b64949"

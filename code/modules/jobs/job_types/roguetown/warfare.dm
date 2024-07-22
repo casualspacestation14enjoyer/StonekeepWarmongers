@@ -5,8 +5,8 @@
 /datum/job/roguetown/warfare/red/lord
 	title = "Heartfelt Lord"
 	tutorial = "todo"
-	department_flag = NOBLEMEN
-	flag = LORD
+	department_flag = REDSS
+	flag = REDKING
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -49,7 +49,7 @@
 /datum/job/roguetown/warfare/red/soldier
 	title = "Heartfelt Infantry"
 	tutorial = "You're treated like shit. The run of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
-	department_flag = PEASANTS
+	department_flag = REDSS
 	flag = SOLDIER
 	total_positions = 99
 	spawn_positions = 10
@@ -105,8 +105,8 @@
 /datum/job/roguetown/warfare/blu/lord
 	title = "Grenzelhoft Lord"
 	tutorial = "todo"
-	department_flag = NOBLEMEN
-	flag = LORD
+	department_flag = BLUES
+	flag = BLUKING
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -145,7 +145,7 @@
 /datum/job/roguetown/warfare/blu/soldier
     title = "Grenzelhoft Infantry"
     tutorial = "You're treated like shit. The run of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
-    department_flag = PEASANTS
+    department_flag = BLUES
     flag = SOLDIER
     total_positions = 99
     spawn_positions = 10

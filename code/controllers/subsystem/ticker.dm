@@ -141,7 +141,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = 'sound/music/title.ogg'
+	login_music = 'sound/music/hellandback.ogg'
 
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase	= generate_code_phrase(return_list=TRUE)
@@ -205,23 +205,11 @@ SUBSYSTEM_DEF(ticker)
 				tipped = TRUE
 
 			if(timeLeft <= 0)
-				if(!checkreqroles())
-/*					if(failedstarts >= 13)
-						current_state = GAME_STATE_SETTING_UP
-						Master.SetRunLevel(RUNLEVEL_SETUP)
-						if(start_immediately)
-							fire()
-					else*/
-					current_state = GAME_STATE_STARTUP
-					start_at = world.time + 600
-					timeLeft = null
-					Master.SetRunLevel(RUNLEVEL_LOBBY)
-				else
-					send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/chat_announce_new_game))
-					current_state = GAME_STATE_SETTING_UP
-					Master.SetRunLevel(RUNLEVEL_SETUP)
-					if(start_immediately)
-						fire()
+				send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/chat_announce_new_game))
+				current_state = GAME_STATE_SETTING_UP
+				Master.SetRunLevel(RUNLEVEL_SETUP)
+				if(start_immediately)
+					fire()
 
 		if(GAME_STATE_SETTING_UP)
 			if(!setup())

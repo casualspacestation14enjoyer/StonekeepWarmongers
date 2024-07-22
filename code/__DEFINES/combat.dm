@@ -42,7 +42,7 @@
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
 #define HEALTH_THRESHOLD_FULLCRIT 0
-#define HEALTH_THRESHOLD_DEAD -20
+#define HEALTH_THRESHOLD_DEAD -50
 
 #define HEALTH_THRESHOLD_NEARDEATH -10 //Not used mechanically, but to determine if someone is so close to death they hear the other side
 

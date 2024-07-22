@@ -199,6 +199,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /obj/item/clothing/head/roguetown/crownred
 	name = "crown of Heartfelt"
 	icon_state = "vcrown"
+	item_state = "vcrown"
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
@@ -207,6 +208,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
 	icon_state = "vcrown_blu"
+	item_state = "vcrown_blu"
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null

@@ -25,7 +25,7 @@
 	equip_sound = 'sound/foley/gun_equip.ogg'
 	pickup_sound = 'sound/foley/gun_equip.ogg'
 	drop_sound = 'sound/foley/gun_drop.ogg'
-	dropshrink = 0.8
+	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo

@@ -27,6 +27,7 @@
 		"Humen"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	outfit = /datum/outfit/job/roguetown/redking
 
 /datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()

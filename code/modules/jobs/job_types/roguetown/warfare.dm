@@ -1,3 +1,15 @@
+/datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
+	. = ..()
+	var/obj/S = null
+	for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
+		if(sloc.name != title)
+			continue
+		S = sloc
+		sloc.used = TRUE
+		break
+	if(S)
+		S.JoinPlayerHere(M)
+
 /datum/job/roguetown/warfare/red
 	warfare_faction = RED_WARTEAM
 	selection_color = CLOTHING_RED

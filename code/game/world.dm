@@ -307,9 +307,8 @@ GLOBAL_VAR(restart_counter)
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 #ifdef MATURESERVER
-	s += "<big><b>STONEKEEP (18+) (MRP-HRP)</b></big></a><br>"
-	s += "<b>Immersive Dark Medieval Fantasy Roleplay<b><br>"
-	s += "<b>Whitelist Enabled: discord.gg/stonekeep</b></center><br>"
+	s += "<big><b>WARMONGERS</b></big></a><br>"
+	s += "<b>Immersive Dark Medieval Fantasy Musket Simulator<b><br>"
 	//s += "<b>Powerbottoms Welcome</b><br>"
 #else
 	s += "<big><b>ROGUEWORLD</b></big></a><br>"

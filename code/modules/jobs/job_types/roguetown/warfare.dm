@@ -28,6 +28,12 @@
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 
+/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
+	. = ..()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		C.redlord = H
+
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
 	jobtype = /datum/job/roguetown/warfare/red/lord
@@ -123,6 +129,12 @@
 	spawn_positions = 1
 	faction = "Station"
 	outfit = /datum/outfit/job/roguetown/bluking
+
+/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/H, mob/M, latejoin)
+	. = ..()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		C.blulord = H
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"

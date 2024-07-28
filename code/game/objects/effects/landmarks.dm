@@ -298,6 +298,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/heartfeltlord
 	name = "Heartfelt Lord"
 	icon_state = "arrow"
+	jobspawn_override = list("Heartfelt Lord")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/grenzelinfantry
@@ -309,6 +310,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/grenzellord
 	name = "Grenzelhoft Lord"
 	icon_state = "arrow"
+	jobspawn_override = list("Grenzelhoft Lord")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/fisher

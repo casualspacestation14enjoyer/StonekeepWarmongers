@@ -14,10 +14,13 @@
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
 	var/crownbearer = "John Roguetown"
 
+	var/mob/redlord = null
+	var/mob/blulord = null
+
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 5 // in minutes
+	var/warfare_start_time = 1 // in minutes
 
 	announce_span = "danger"
 	announce_text = "The"
@@ -27,5 +30,15 @@
 	begin_countDown()
 	
 /datum/game_mode/warfare/proc/begin_countDown()
+	if(SSticker.warfare_ready_to_die)
+		return
 	spawn(warfare_start_time MINUTES)
+		if(redlord == null)
+			to_chat(world, "We are waiting for the lord of Heartfelt to arrive.")
+			begin_countDown()
+			return
+		if(blulord == null)
+			to_chat(world, "We are waiting for the lord of Grenzelhoft to arrive.")
+			begin_countDown()
+			return
 		SSticker.ReadyToDie()

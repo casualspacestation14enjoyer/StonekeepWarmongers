@@ -865,6 +865,7 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	if(!warfare_ready_to_die)
 		to_chat(world, "The barriers have fallen, it is your turn to die now.")
+		warfare_ready_to_die = TRUE
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/tension2.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)

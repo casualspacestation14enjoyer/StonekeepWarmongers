@@ -164,16 +164,13 @@
 	..()
 
 /obj/structure/fluff/walldeco/customflag
-	name = "rockhill flag"
+	name = "flag of Heartfelt"
 	desc = ""
 	icon_state = "wallflag"
 
 /obj/structure/fluff/walldeco/customflag/Initialize()
 	..()
-	if(GLOB.lordprimary)
-		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
-	else
-		GLOB.lordcolor += src
+	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
 
 /obj/structure/fluff/walldeco/customflag/Destroy()
 	GLOB.lordcolor -= src

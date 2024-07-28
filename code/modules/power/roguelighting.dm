@@ -20,9 +20,8 @@
 			new type(target)
 	mode = GLOB.tod
 	GLOB.sunlights += src
-#ifndef FASTLOAD
 	update()
-#endif
+
 /obj/effect/sunlight/Destroy()
 	STOP_PROCESSING(SStodchange,src)
 	GLOB.sunlights -= src

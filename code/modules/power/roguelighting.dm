@@ -5,12 +5,8 @@
 	layer = BELOW_MOB_LAYER
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "electricity2"
-#ifndef TESTING
 	name = ""
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-#else
-	name = "sunlight"
-#endif
 	var/mode = "day"
 	light_depth = 0
 	light_height = 0

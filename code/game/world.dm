@@ -81,6 +81,9 @@ GLOBAL_VAR(restart_counter)
 		GLOB.restart_counter = text2num(trim(file2text(RESTART_COUNTER_PATH)))
 		fdel(RESTART_COUNTER_PATH)
 
+	if(prob(1))
+		name = "WARMONGRELS"
+
 	if(NO_INIT_PARAMETER in params)
 		return
 

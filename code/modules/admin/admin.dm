@@ -663,6 +663,20 @@
 
 	return 0
 
+/datum/admins/proc/readynow()
+	set category = "Server"
+	set desc="Start the round RIGHT NOW"
+	set name="Ready2Die Now"
+	if(!SSticker.warfare_ready_to_die)
+		SSticker.ReadyToDie()
+		log_admin("[usr.key] has started the game.")
+		SSblackbox.record_feedback("tally", "admin_verb", 1, "Ready2Die Now") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+		return 1
+	else
+		to_chat(usr, "<font color='red'>Error: Ready2DieNow: Game has already started.</font>")
+
+	return 0
+
 /datum/admins/proc/forcemode()
 	set category = "Server"
 	set name = "Force Gamemode"

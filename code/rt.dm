@@ -5,9 +5,9 @@
 #endif
 
 #ifdef FASTLOAD
-	#define FORCE_MAP "_maps/roguetest.json"
+	#define FORCE_MAP "_maps/bloodfort.json"
 #else
-	#define FORCE_MAP "_maps/roguetest.json"
+	#define FORCE_MAP "_maps/bloodfort.json"
 #endif
 
 //#define WARTIME

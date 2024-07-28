@@ -24,6 +24,8 @@ SUBSYSTEM_DEF(ticker)
 	var/round_end_sound						//music/jingle played when the world reboots
 	var/round_end_sound_sent = TRUE			//If all clients have loaded it
 
+	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
+
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
 	var/delay_end = 0						//if set true, the round will not restart on it's own
@@ -859,3 +861,13 @@ SUBSYSTEM_DEF(ticker)
 	update_everything_flag_in_db()
 
 	text2file(login_music, "data/last_round_lobby_music.txt")
+
+/datum/controller/subsystem/ticker/proc/ReadyToDie()
+	if(!warfare_ready_to_die)
+		to_chat(world, "The barriers have fallen, it is your turn to die now.")
+		for(var/mob/M in GLOB.player_list)
+			SEND_SOUND(M, 'sound/music/tension2.ogg')
+		for(var/obj/structure/warfarebarrier/WB in world)
+			qdel(WB)
+		for(var/obj/structure/warfarebarrier/red/WB in world)
+			qdel(WB)

@@ -459,3 +459,19 @@
 			return prob(10)
 		else
 			return !density
+
+/obj/structure/warfarebarrier
+	name = "barrier of fairness"
+	desc = "One made by Noc himself to get rid of injustice in war."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shield-old"
+	density = TRUE
+	move_resist = INFINITY
+	opacity = 0
+	anchored = TRUE
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | INDESTRUCTIBLE
+	max_integrity = INFINITY
+	CanAtmosPass = ATMOS_PASS_DENSITY
+
+/obj/structure/warfarebarrier/red
+	icon_state = "shield-red"

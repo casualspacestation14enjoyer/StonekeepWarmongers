@@ -223,7 +223,7 @@ GUEST_BAN
 #WEBCLIENT_ONLY_BYOND_MEMBERS
 
 ## Set to prevent anyone but those ckeys listed in config/whitelist.txt and config/admins.txt from joining your server
-USEWHITELIST
+#USEWHITELIST
 
 USEBLACKLIST
 

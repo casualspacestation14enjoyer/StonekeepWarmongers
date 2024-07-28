@@ -25,6 +25,14 @@
 	verbage_tp = "carpents"
 	craftsound = 'sound/foley/Building-01.ogg'
 
+/datum/crafting_recipe/roguetown/structure/barricade
+	name = "barricade"
+	result = /obj/structure/barricade/wooden/rogue
+	reqs = list(/obj/item/grown/log/tree/small = 1)
+	verbage = "carpent"
+	verbage_tp = "carpents"
+	craftsound = 'sound/foley/Building-01.ogg'
+
 /datum/crafting_recipe/roguetown/structure/door
 	name = "wooden door"
 	result = /obj/structure/mineral_door/wood/deadbolt

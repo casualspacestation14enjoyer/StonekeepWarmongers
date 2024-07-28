@@ -20,6 +20,7 @@
 "eK" = (/obj/structure/roguewindow/stained,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "eW" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "fj" = (/obj/structure/fluff/railing/wood{dir = 8},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
+"ft" = (/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/structure/closet/crate/chest,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "fC" = (/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/town)
 "fJ" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "fO" = (/obj/structure/fluff/railing/wood{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
@@ -84,6 +85,7 @@
 "uO" = (/obj/structure/throne,/obj/effect/landmark/start/heartfeltlord,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "uT" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
 "uU" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
+"vK" = (/obj/structure/flora/roguetree/stump,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/town)
 "vT" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword{pixel_x = -5},/obj/item/rogueweapon/sword,/obj/item/rogueweapon/sword{pixel_x = 5},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "wf" = (/obj/structure/fluff/walldeco/customflag{pixel_y = 32},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "wr" = (/obj/structure/fluff/walldeco/customflag{pixel_y = -32},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
@@ -181,6 +183,7 @@
 "Pr" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "Ps" = (/obj/structure/fluff/statue/gargoyle/candles,/turf/open/floor/rogue/carpet,/area/rogue/indoors/town)
 "PO" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town/roofs)
+"PR" = (/obj/structure/flora/roguetree/stump/log,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/town)
 "PU" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/town)
 "QF" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/bow{pixel_y = 2},/obj/item/gun/ballistic/revolver/grenadelauncher/bow{pixel_y = -2},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
 "QN" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/flail/sflail,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
@@ -272,23 +275,23 @@ INININININININININININININININININININININGgtgzJININININININININININININININININ
 ININININININwBINININwBINININwBININININININtgtgtgININININININwBINININwBINININwBININININININ
 INININININuUKMuUuUuUKMfCuUuUDuuUINININININtgtgtgINININININuUDufCuUuUKMuUfCuUKMuUINININININ
 uUuUuUuUuUfCuUuUfCfCfCfCuUfCfCuUuUuUqNwfbcSBSBSBuUEhLCuUuUfCuUuUuUuUfCuUfCuUfCuUuUfCfCuUuU
-uUuUuUuUfCfCfCfCuUuUuUuUfCfCuUuUBtfCfCuUuUSBSBSBuUuUuUfCuUuUuUuUuUfCAtuUfCfCuUuUBJfCfCuUuU
+uUuUuUuUfCfCfCfCuUuUuUuUfCfCuUuUBtfCfCuUuUSBSBSBuUuUuUfCuUuUBtuUuUfCAtuUfCfCuUuUBJfCfCuUuU
 uUfCBJuUfCfCuUuUAtuUfCfCuUuUfCfCfCuUuUuUfCSBSBSBuUuUuUfCfCfCuUfCfCuUuUfCuUuUfCfCfCuUuUuUfC
 uUfCfCfCuUuUfCfCuUfCfCuUuUfCfCfCfCuUuUfCuUSBBuSBiSfCuUfCfCfCfCuUuUuUfCfCuUfCuUuUfCuUuUuUuU
 uUuUuUfCfCuUfCuUfCfCuUBtuUfCuUfCuUuUfCuUuUSBSBSBfCuUfCuUBtuUfCuUuUfCfCuUuUuUuUfCfCAtuUuUuU
-uUfCuUfCfCfCfCuUfCfCfCfCfCfCuUuUuUuUuUAtiSSBSBSBuUfCfCfCuUuUuUfCuUuUuUfCfCuUfCuUfCuUuUfCuU
+uUfCuUfCfCBJfCuUfCfCfCfCfCfCuUuUuUuUuUAtiSSBSBSBuUfCfCfCuUuUuUfCuUuUuUfCfCuUfCBtfCuUuUfCuU
 fCuUuUfCfCuUuUuUuUfCuUfCfCuUuUfCfCfCuUuUfCSBSBSBuUfCuUuUuUuUfCfCfCfCuUfCfCfCfCuUuUuUuUfCfC
 fCuUuUuUfCfCuUfCfCghghghfCuUuUfCfCfCfCuUfCSBSBSBuUfCfCfCfCfCuUfCfCghghghuUfCfCuUuUuUfCfCfC
 aJJQaJJQaJPUPUaJaJghghghaJaJPUPUaJaJJQJQJQovovovJQJQaJJQJQPUPUaJJQghghghaJaJPUPUJQaJaJaJaJ
 ghGkGkghuUfCfCuUfCghghghuUbcfCfCbcuUfCfCeWSBOhSBQQuUuUuUiSfCfCbcuUghghghfCuUfCfCuUghGkGkgh
-vTfCfCfCuUfCfCfCuUfCDufCfCfCfCuUuUfCfCfCIOlISBlIQQfCuUuUfCfCfCuUfCfCDuuUfCfCfCfCfCfCfCfCIc
-oefCBESwfCfCfCfCfCuUfCfCfCuUfCfCfCfCfCfCuUSBSBSBuUfCfCuUfCfCfCfCfCfCfCfCfCfCfCfCfCSwzzfCHp
-oefCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCuUSBSBSBfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCHp
-ghdcHsghfCfCfCuUfCuUfCfCfCuUfCfCfCfCuUfCfCSBSBSBfCuUuUfCfCfCuUfCfCuUfCfCfCfCfCfCfCghHsdcgh
-QQuUfCfCfCuUuUfCfCuUuUuUfCuUuUuUfCfCuUuUeWSBSBSBgjuUuUfCfCuUuUfCuUuUuUfCfCuUuUuUfCuUfCfCeW
+vTfCfCfCuUfCfCvKuUfCDufCfCfCfCuUuUfCfCfCIOlISBlIQQfCuUuUfCfCfCuUfCfCDuuUfCfCfCfCfCfCfCfCIc
+oefCBESwfCBJfCfCfCuUfCvKfCuUfCfCfCfCBJfCuUSBSBSBuUfCfCuUBJfCfCfCfCfCfCfCfCfCfCBJfCSwzzfCHp
+oefCfCfCfCfCfCfCfCfCfCfCfCfCfCBJfCfCfCfCuUSBSBSBfCvKfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCHp
+ghdcHsghfCfCfCuUfCBtfCfCfCuUfCfCfCvKuUfCfCSBSBSBfCuUuUfCfCfCuUfCfCuUfCfCBJfCfCfCfCghHsdcgh
+QQuUfCfCvKuUuUfCfCuUuUuUfCuUuUuUfCfCuUuUeWSBSBSBgjuUuUfCfCuUAtfCuUuUuUfCfCuUuUuUfCuUfCfCeW
 QQbcuUfCuUbcuUuUfCuUuUfCfCfCuUbcuUfCfCbceWSBSBSBQQbcfCfCfCbcfCfCfCfCuUfCfCuUuUiSfCfCuUbcIO
-momomocimomomouUfCfCfCfCuUfCmomomocimomomoSBSBSBmomomocimomomouUuUfCfCfCfCuUmomomocimomomo
-KwfJTZpzTZfJyFfCfCfCfCfCfCuUKwfJTZpzTZfJyFSBSBSBKwfJTZpzTZfJyFuUuUfCfCfCfCfCKwfJTZpzTZfJyF
+momomocimomomouUfCfCfCfCuUfCmomomocimomomoSBSBSBmomomocimomomouUuUBJfCfCfCuUmomomocimomomo
+KwfJTZpzTZfJyFfCBJfCfCfCvKuUKwfJTZpzTZfJyFSBSBSBKwfJTZpzTZfJyFuUuUfCfCfCvKfCKwfJTZpzTZfJyF
 KwfJpzfJpzfJyFuUfCfCfCfCfCuUKwfJpzfJpzfJyFSBSBSBKwfJpzfJpzfJyFuUfCfCfCfCfCfCKwfJpzfJpzfJyF
 KwfJpzfJpzfJyFuUGWfCGWfCWxuUKwfJpzfJpzfJyFSBSBSBKwfJpzfJpzfJyFfCGWfCWxfCGWfCKwfJpzfJpzfJyF
 bmbmbmbmbmbmbmxmxmNAxmxmxmxmbmbmbmbmbmbmbmSBSBSBbmbmbmbmbmbmbmxmxmNAxmxmxmNAbmbmbmbmbmbmbm
@@ -308,11 +311,11 @@ FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjhHmpgThHOSErYUhHgTmphHkjkjFrFrFrFrFrFrFrFrFrFr
 FrFrFrFroRoRuUoRuUoRuUoRuUoRuUkjkjhHhHhHhHOSErYUhHhHhHhHkjkjuUoRuUoRuUoRuUoRuUoRoRFrFrFrFr
 FrFrFrFroRZGuUuUuUuUuUuUuUuUuUkjkjnbhHkjEzOSErYUqAkjhHgtkjkjuUuUuUuUuUuUuUuUuUJcoRFrFrFrFr
 FrFrFrFruUuUbcuUuUuUuUuUuUuUuUkjkjhHhHmphHOSErYUhHmphHhHkjkjuUuUuUuUuUuUuUuUbcuUuUFrFrFrFr
+FrFrFrFroRuUuUSBSBPRSBSBSBSBSBqthHhHhHhHhHOSErYUhHhHhHhHhHJESBSBSBSBSBPRSBSBuUuUoRFrFrFrFr
+FrFrFrFruUuUuUSBSBSBSBSBSBSBSBqthHhHhHhHhHOSErYUhHhHhHhHhHJESBSBPRSBSBSBSBSBuUuUuUFrFrFrFr
 FrFrFrFroRuUuUSBSBSBSBSBSBSBSBqthHhHhHhHhHOSErYUhHhHhHhHhHJESBSBSBSBSBSBSBSBuUuUoRFrFrFrFr
-FrFrFrFruUuUuUSBSBSBSBSBSBSBSBqthHhHhHhHhHOSErYUhHhHhHhHhHJESBSBSBSBSBSBSBSBuUuUuUFrFrFrFr
-FrFrFrFroRuUuUSBSBSBSBSBSBSBSBqthHhHhHhHhHOSErYUhHhHhHhHhHJESBSBSBSBSBSBSBSBuUuUoRFrFrFrFr
-FrFrFrFruUuUuUSBSBSBbcuUuUuUuUkjkjnbhHkjEzOSErYUqAkjhHgtkjkjuUuUuUuUbcSBSBSBuUuUuUFrFrFrFr
-FrFrFrFroRuUuUSBSBSBuUuUuUuUuUkjkjhHhHmphHOSErYUhHmphHhHkjkjuUuUuUuUuUSBSBSBuUuUoRFrFrFrFr
+FrFrFrFruUuUuUSBSBSBbcuUuUuUuUkjkjnbhHkjEzOSErYUqAkjhHgtkjkjuUuUuUuUbcSBSBPRuUuUuUFrFrFrFr
+FrFrFrFroRuUuUSBSBSBuUuUuUBtuUkjkjhHhHmphHOSErYUhHmphHhHkjkjuUuUuUuUuUSBSBSBuUuUoRFrFrFrFr
 FrFrFrFruUuUuUSBSBSBuUuUuUuUuUkjkjhHhHhHhHOSErYUhHhHhHhHkjkjuUuUuUuUuUSBSBSBuUuUuUFrFrFrFr
 kjkjkjkjkjeKkjxjxjxjkjeKkjeKkjkjkjkjeKkjkjdgdgdgkjkjeKkjkjkjkjeKkjeKkjxjxjxjkjeKkjkjkjkjkj
 kjkjkjkjyEFAhrFAFAFAhrFAyEFAFAFAyEFAFAyEhrFAFAFAhryEFAFAyEFAFAFAyEFAhrFAFAFAhrFAyEkjkjkjkj
@@ -382,7 +385,7 @@ kjEIEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHCRhHhHmphHhHhHmphHhHCRhHiTEIEIEIEIEIEIEIEIEIEI
 kjsxEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHhHhHhHhHhHhHhHhHhHhHhHhHiTEIEIEIEIEIEIEIEIEIEIEIEIEInokj
 kjEIEIEIEIEIEIEIEIEIEIEIEIEIEIcPhHhHhHhHhHhHhHhHhHhHhHhHhHiTEIEIEIEIEIEIEIEIEIEIEIEIEIEIkj
 kjkjkjkjkjkjLtkjkjLtkjkjLtkjkjkjkjkjkjkjkjiJiJiJkjkjkjkjkjkjkjkjLtkjkjLtkjkjLtkjkjkjkjkjkj
-FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXPsBFkjhHhHhHhHhHkjBFPspXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXPsBFkjfthHhHhHftkjBFPspXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIuepXpXpXhHhHhHhHhHhHhHpXpXpXFFUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXhHhHhHhHhHhHhHpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXkjlTMSUlcaQNkjpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr

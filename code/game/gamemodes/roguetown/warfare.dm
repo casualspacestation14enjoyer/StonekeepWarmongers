@@ -17,5 +17,15 @@
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
+	var/warfare_start_time = 5 // in minutes
+
 	announce_span = "danger"
 	announce_text = "The"
+
+/datum/game_mode/warfare/post_setup(report)
+	. = ..()
+	begin_countDown()
+	
+/datum/game_mode/warfare/proc/begin_countDown()
+	spawn(warfare_start_time MINUTES)
+		SSticker.ReadyToDie()

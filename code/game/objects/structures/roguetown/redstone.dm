@@ -55,6 +55,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	max_integrity = 5
 	density = TRUE
 	anchored = TRUE
+	w_class = WEIGHT_CLASS_HUGE // mechanical stuff is usually pretty heavy.
 	var/mode = 1 // 1 means repeat 5 times, 2 means random, 0 means indefinite but has chance to explode, 3 means indefinite no chance to explode
 	var/obj/structure/linked_thing // because redstone code is weird
 
@@ -182,6 +183,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	max_integrity = 45 // so it gets destroyed when used to explode a bomb
 	density = TRUE
 	anchored = TRUE
+	w_class = WEIGHT_CLASS_HUGE // mechanical stuff is usually pretty heavy.
 	var/obj/item/containment
 	var/obj/item/quiver/ammo // used if the contained item is a bow or crossbow
 

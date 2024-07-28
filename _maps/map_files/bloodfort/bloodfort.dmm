@@ -15,6 +15,7 @@
 "dS" = (/obj/effect/landmark/latejoin,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "dZ" = (/obj/structure/stairs/stone{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
 "es" = (/obj/structure/stairs/stone,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town)
+"eu" = (/obj/effect/landmark/mapGenerator/sunlights{endTurfX = 45; endTurfY = 75},/turf/open/transparent/openspace,/area/rogue)
 "ev" = (/obj/structure/stairs/stone/church{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/town)
 "eK" = (/obj/structure/roguewindow/stained,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "eW" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
@@ -79,13 +80,14 @@
 "tw" = (/obj/structure/fluff/statue/gargoyle,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "tz" = (/turf/closed/wall/mineral/rogue/wooddark/horizontal,/area/rogue/outdoors/town/roofs)
 "ue" = (/obj/structure/roguewindow/openclose{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
-"uo" = (/obj/effect/sunlight,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
+"uv" = (/obj/structure/warfarebarrier/red,/obj/structure/fluff/railing/wood{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "uO" = (/obj/structure/throne,/obj/effect/landmark/start/heartfeltlord,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "uT" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
 "uU" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "vT" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword{pixel_x = -5},/obj/item/rogueweapon/sword,/obj/item/rogueweapon/sword{pixel_x = 5},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "wf" = (/obj/structure/fluff/walldeco/customflag{pixel_y = 32},/turf/open/floor/rogue/grass,/area/rogue/outdoors/town)
 "wr" = (/obj/structure/fluff/walldeco/customflag{pixel_y = -32},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
+"wB" = (/turf/closed/wall/mineral/rogue/stonebrick/climbable,/area/rogue/outdoors/town)
 "wZ" = (/obj/structure/fluff/railing/wood,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "xj" = (/turf/open/floor/rogue/cobblerock,/area/rogue/indoors/town)
 "xm" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/town)
@@ -197,6 +199,7 @@
 "UI" = (/turf/open/transparent/openspace,/area/rogue/outdoors/town)
 "Ve" = (/turf/open/transparent/openspace,/area/rogue/outdoors/town/roofs)
 "Vh" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"Vk" = (/turf/open/transparent/openspace,/area/rogue)
 "VF" = (/turf/open/floor/rogue/wood,/area/rogue/outdoors/town/roofs)
 "Wb" = (/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
 "Wh" = (/obj/structure/fluff/railing/wood{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/town)
@@ -266,7 +269,7 @@ tgtgtgtgtgtgtgfXINININININCptgtgtgtgtgOvtgtgtgtgtgOvtgtgtgtgtgfXINININININCptgtg
 INININININtgtgfXINININININCptgtgINININININNININIINININININtgtgfXINININININCptgtgINININININ
 INININININININININININININININININININININTETETEINININININININININININININININININININININ
 INININININININININININININININININININININGgtgzJINININININININININININININININININININININ
-INININININININININININININININININININININtgtgtgINININININININININININININININININININININ
+ININININININwBINININwBINININwBININININININtgtgtgININININININwBINININwBINININwBININININININ
 INININININuUKMuUuUuUKMfCuUuUDuuUINININININtgtgtgINININININuUDufCuUuUKMuUfCuUKMuUINININININ
 uUuUuUuUuUfCuUuUfCfCfCfCuUfCfCuUuUuUqNwfbcSBSBSBuUEhLCuUuUfCuUuUuUuUfCuUfCuUfCuUuUfCfCuUuU
 uUuUuUuUfCfCfCfCuUuUuUuUfCfCuUuUBtfCfCuUuUSBSBSBuUuUuUfCuUuUuUuUuUfCAtuUfCfCuUuUBJfCfCuUuU
@@ -344,7 +347,7 @@ dDdDdDdDdDwZwZwZjeWbWbWbaIwZwZwZdDxTIoIoIoCxFUCxIoIoIoxTdDwZwZwZjeWbWbWbaIwZwZwZ
 dDdDdDLLdDWbWbWbWbWbWbWbWbWbWbCUdDIoIoIoRSrkrkrkfOIoIoIodDhFWbWbWbWbWbWbWbWbWbWbdDAudDdDdD
 dDIoxTIookWbWbWbWbWbWbWbWbWbWbWbVhIoIooARSrkrkrkfOoAIoIookWbWbWbWbWbWbWbWbWbWbWbVhIoxTIodD
 dDIoIoIodDWbWbWbWbWbWbWbWbWbWbWbdDIoIoIoRSrkrkrkfOIoIoIodDWbWbWbWbWbWbWbWbWbWbWbdDIoIoIodD
-dDdDYwdDdDWhWhWhWhWhWhWhWhWhWhWhdDEiIoIoIoCuCuCuIoIoIoEidDWhWhWhWhWhWhWhWhWhWhWhdDdDYwdDdD
+dDdDYwdDdDWhuvWhWhWhuvWhWhWhuvWhdDEiIoIoIoCuCuCuIoIoIoEidDWhuvWhWhWhuvWhWhWhuvWhdDdDYwdDdD
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIdDdDYwYwdDdDYwdDdDYwYwdDdDUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
@@ -383,7 +386,7 @@ FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXPsBFkjhHhHhHhHhHkjBFPspXkjUIUIUIUIUIUIUIUIUIUI
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIuepXpXpXhHhHhHhHhHhHhHpXpXpXFFUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXhHhHhHhHhHhHhHpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXkjlTMSUlcaQNkjpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
-FrFrFrFrUIUIUIUIuoUIUIUIUIUIUIuepXpXpXkjkjkjkjkjkjkjpXpXpXFFUIUIUIUIUIUIuoUIUIUIUIFrFrFrFr
+FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIuepXpXpXkjkjkjkjkjkjkjpXpXpXFFUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXkjBFpXpXpXBFkjpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIkjpXpXpXpXpXpXpXpXpXpXpXpXpXkjUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
 FrFrFrFrUIUIUIUIUIUIUIUIUIUIUIuepXpXpXpXpXpXpXpXpXpXpXpXpXFFUIUIUIUIUIUIUIUIUIUIUIFrFrFrFr
@@ -405,7 +408,7 @@ UIUIpHpHpHJykukukuUIUIUIytytytytytytytytytUIUIUIrlrlrlrlrlrlrlrlrlUIUIUIECECECJy
 UIUIpHpHpHJykukukuUIUIUIytytytytytytytytytYvYvYvrlrlrlrlrlrlrlrlrlUIUIUIECECECJyOVOVOVUIUI
 UIUIpHpHpHJtkukukuUIUIUIytytytytytytytytytUIUIUIrlrlrlrlrlrlrlrlrlUIUIUIECECECJtOVOVOVUIUI
 UIUIpHpHpHIqkukukuUIUIUIUIrCUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIrCUIUIUIUIECECECIqOVOVOVUIUI
-UIUIpHpHpHSqkukukuUIUIUIUIrCUIUIUIUIUIUIUIUIuoUIUIUIUIUIUIUIUIrCUIUIUIUIECECECSqOVOVOVUIUI
+UIUIpHpHpHSqkukukuUIUIUIUIrCUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIrCUIUIUIUIECECECSqOVOVOVUIUI
 UIUIpHpHpHIqkukukuUIUIUIUIrCUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIrCUIUIUIUIECECECIqOVOVOVUIUI
 UIUIpHpHpHJtkukukuUIUIUIidididididididididUIUIUIjWjWjWjWjWjWjWjWjWUIUIUIECECECJtOVOVOVUIUI
 UIUIpHpHpHJykukukuUIUIUIidididididididididYvYvYvjWjWjWjWjWjWjWjWjWUIUIUIECECECJyOVOVOVUIUI
@@ -427,7 +430,6 @@ UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIXAWhWhWhWhWhWhWhWhWhWhWhWhWhXAUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIdSUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
-UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIuoUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
@@ -443,4 +445,5 @@ UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
+VkeuUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI
 "}

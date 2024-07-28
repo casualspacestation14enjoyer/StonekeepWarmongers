@@ -106,6 +106,10 @@
 	climbdiff = 4
 	damage_deflection = 20
 
+/turf/closed/wall/mineral/rogue/stonebrick/climbable
+	wallclimb = TRUE
+	climbdiff = 3
+
 /turf/closed/wall/mineral/rogue/wood
 	name = "wall"
 	desc = "A rough-hewn wall of wood."

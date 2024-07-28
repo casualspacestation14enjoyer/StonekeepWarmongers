@@ -30,11 +30,7 @@
 
 /obj/effect/sunlight/New()
 	..()
-#ifdef TESTING
-	icon_state = "electricity2"
-#else
 	icon_state = null
-#endif
 
 /obj/effect/sunlight/proc/update()
 	if(mode == GLOB.tod)

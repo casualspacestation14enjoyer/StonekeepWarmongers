@@ -14,6 +14,8 @@
 	randomspread = 1
 	spread = 0
 	var/cocked = FALSE
+	var/rammed = FALSE
+	var/obj/item/ramrod/rod
 	bigboy = TRUE
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
@@ -28,6 +30,45 @@
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
 
+/obj/item/ramrod
+	name = "ram rod"
+	desc = ""
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "ramrod"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/Initialize()
+	. = ..()
+	var/obj/item/ramrod/rrod = new(src)
+	rod = rrod
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/ramrod))
+		if(chambered)
+			if(!rammed)
+				if(do_after(user, 3 SECONDS, TRUE, src))
+					to_chat(user, "<span class='info'>I ram \the [src].</span>")
+					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
+					rammed = TRUE
+	else
+		return ..()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/MiddleClick(mob/user, params)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(rod)
+			H.put_in_active_hand(rod)
+			rod = null
+			to_chat(user, "<span class='info'>I remove the ramrod from \the [src].</span>")
+			playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
+		else
+			if(istype(H.get_active_held_item(), /obj/item/ramrod))
+				var/obj/item/ramrod/rrod = H.get_active_held_item()
+				rrod.forceMove(src)
+				rod = rrod
+				to_chat(user, "<span class='info'>I put \the [rrod] into \the [src].</span>")
+				playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	icon_state = "longgun_b"
 	item_state = "longgun_b"
@@ -41,13 +82,15 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attack_right(mob/user)
 	. = ..()
-	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	if(cocked)
 		cocked = FALSE
 		to_chat(user, "<span class='warning'>I carefully de-cock \the [src].</span>")
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	else
-		cocked = TRUE
-		to_chat(user, "<span class='info'>I cock \the [src].</span>")
+		if(do_after(user, 1 SECOND, TRUE, src))
+			playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+			to_chat(user, "<span class='info'>I cock \the [src].</span>")
+			cocked = TRUE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	name = "barkiron"
@@ -88,6 +131,7 @@
 		return
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
+	rammed = FALSE // just in case
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
@@ -103,8 +147,11 @@
 			BB.damage = BB.damage * (user.STAPER / 10)
 	if(!cocked)
 		return
+	if(!rammed)
+		return
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
+	rammed = FALSE
 	sleep(3)
 	..()
 

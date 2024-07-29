@@ -18,7 +18,7 @@
 /obj/item/bomb/fire
 	name = "fire bomb"
 	light_impact = 2
-	flame_impact = 7
+	flame_impact = 5
 
 /obj/item/bomb/homemade
 	prob2fail = 30

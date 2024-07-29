@@ -677,6 +677,21 @@
 
 	return 0
 
+/datum/admins/proc/reinforcementsnow()
+	set category = "Server"
+	set desc="Start the round RIGHT NOW"
+	set name="Reinforcements Now"
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(!(W.reinforcementwave >= 5))
+		SSticker.SendReinforcements()
+		log_admin("[usr.key] has sent reinforcements")
+		SSblackbox.record_feedback("tally", "admin_verb", 1, "Reinforcements Now") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+		return 1
+	else
+		to_chat(usr, "<font color='red'>Error: NO.</font>")
+
+	return 0
+
 /datum/admins/proc/forcemode()
 	set category = "Server"
 	set name = "Force Gamemode"

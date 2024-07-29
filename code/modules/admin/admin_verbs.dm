@@ -141,6 +141,7 @@ GLOBAL_PROTECT(admin_verbs_server)
 	return list(
 	/datum/admins/proc/startnow,
 	/datum/admins/proc/readynow,
+	/datum/admins/proc/reinforcementsnow,
 	/datum/admins/proc/forcemode,
 	/datum/admins/proc/restart,
 	/datum/admins/proc/end_round,
@@ -245,6 +246,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/toggle_random_events,
 	/datum/admins/proc/startnow,
 	/datum/admins/proc/readynow,
+	/datum/admins/proc/reinforcementsnow,
 	/datum/admins/proc/restart,
 	/datum/admins/proc/delay,
 	/datum/admins/proc/toggleaban,

@@ -137,7 +137,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/family = FAMILY_NONE
 
-	var/crt = FALSE
+	var/crt = TRUE
 
 
 /datum/preferences/New(client/C)

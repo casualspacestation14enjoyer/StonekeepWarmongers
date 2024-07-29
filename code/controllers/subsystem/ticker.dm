@@ -872,3 +872,43 @@ SUBSYSTEM_DEF(ticker)
 			qdel(WB)
 		for(var/obj/structure/warfarebarrier/red/WB in world)
 			qdel(WB)
+
+/datum/controller/subsystem/ticker/proc/SendReinforcements()
+	var/datum/game_mode/warfare/W = mode
+	W.reinforcementwave++
+	var/list/reinforcementinas = list()
+	switch(W.reinforcementwave)
+		if(1)
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+		if(2)
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/flint"
+		if(3)
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/flint"
+		if(4)
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/fire"
+		if(5)
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/flint"
+	for(var/i in reinforcementinas)
+		var/typepath = text2path(i)
+		new typepath(get_turf(W.redforcements))
+		new typepath(get_turf(W.bluforcements))
+		to_chat(world, "Additional resources have been sent to both sides of this conflict.")
+		for(var/mob/M in GLOB.player_list)
+			SEND_SOUND(M, 'sound/music/tension2.ogg')

@@ -17,13 +17,16 @@
 	var/obj/effect/landmark/redforcements
 	var/obj/effect/landmark/bluforcements
 
+	var/reinforcementwave = 1 // max 5
+
 	var/mob/redlord = null
 	var/mob/blulord = null
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 1 // in minutes
+	var/warfare_start_time = 5 // in minutes
+	var/warfare_reinforcement_time = 10 // in minutes
 
 	announce_span = "danger"
 	announce_text = "The"
@@ -31,7 +34,15 @@
 /datum/game_mode/warfare/post_setup(report)
 	. = ..()
 	begin_countDown()
-	
+	reinforcements()
+
+/datum/game_mode/warfare/proc/reinforcements()
+	if(!(reinforcementwave >= 5))
+		spawn(warfare_reinforcement_time MINUTES)
+			SSticker.SendReinforcements()
+			reinforcements()
+	return
+
 /datum/game_mode/warfare/proc/begin_countDown()
 	if(SSticker.warfare_ready_to_die)
 		return

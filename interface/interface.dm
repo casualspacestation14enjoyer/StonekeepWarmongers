@@ -165,19 +165,17 @@ Hotkey-Mode: (hotkey-mode must be on)
 	if(!prefs)
 		return
 	if(prefs.crt == TRUE)
-		winset(src, "mapwindow.map", "zoom-mode=normal")
 		prefs.crt = FALSE
 		prefs.save_preferences()
 		to_chat(src, "CRT... OFF")
 		for(var/atom/movable/screen/scannies/S in screen)
 			S.alpha = 0
 	else
-		winset(src, "mapwindow.map", "zoom-mode=blur")
 		prefs.crt = TRUE
 		prefs.save_preferences()
 		to_chat(src, "CRT... ON")
 		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 70
+			S.alpha = 100
 
 /client/verb/changefps()
 	set category = "Options"

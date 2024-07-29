@@ -45,10 +45,9 @@
 	if(istype(A, /obj/item/ramrod))
 		if(chambered)
 			if(!rammed)
-				if(do_after(user, 3 SECONDS, TRUE, src))
-					to_chat(user, "<span class='info'>I ram \the [src].</span>")
-					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
-					rammed = TRUE
+				to_chat(user, "<span class='info'>I ram \the [src].</span>")
+				playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
+				rammed = TRUE
 	else
 		return ..()
 
@@ -87,10 +86,9 @@
 		to_chat(user, "<span class='warning'>I carefully de-cock \the [src].</span>")
 		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	else
-		if(do_after(user, 1 SECONDS, TRUE, src))
-			playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
-			to_chat(user, "<span class='info'>I cock \the [src].</span>")
-			cocked = TRUE
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		to_chat(user, "<span class='info'>I cock \the [src].</span>")
+		cocked = TRUE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	name = "barkiron"

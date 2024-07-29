@@ -32,21 +32,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Blue Reinforcements"
 	icon_state = "x2"
 
-/obj/effect/landmark/blureinforcement/Initialize()
-	. = ..()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-		C.bluforcements = src
-
 /obj/effect/landmark/redreinforcement
 	name = "Red Reinforcements"
 	icon_state = "x"
-
-/obj/effect/landmark/redreinforcement/Initialize()
-	. = ..()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-		C.redforcements = src
 
 /obj/effect/landmark/start
 	name = "start"

@@ -22,11 +22,11 @@
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
-	outfit = null
 	allowed_races = list(
 		"Humen"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	allowed_sexes = list(MALE)
 	outfit = /datum/outfit/job/roguetown/redking
 
 /datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
@@ -76,11 +76,7 @@
 	spawn_positions = 10
 	faction = "Station"
 	outfit = /datum/outfit/job/roguetown/redsoldier
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Dwarf"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 
 /datum/outfit/job/roguetown/redsoldier
@@ -133,6 +129,10 @@
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
+	allowed_races = list(
+		"Humen"
+	)
+	allowed_sexes = list(MALE)
 	outfit = /datum/outfit/job/roguetown/bluking
 
 /datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/H, mob/M, latejoin)
@@ -182,11 +182,7 @@
     spawn_positions = 10
     faction = "Station"
     outfit = /datum/outfit/job/roguetown/blusoldier
-    allowed_races = list(
-		"Humen",
-		"Elf",
-		"Dwarf"
-	)
+    allowed_races = ALL_RACES_LIST_NAMES
     allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 
 /datum/outfit/job/roguetown/blusoldier

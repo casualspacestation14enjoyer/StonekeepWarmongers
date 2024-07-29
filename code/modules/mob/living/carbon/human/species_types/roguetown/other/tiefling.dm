@@ -52,7 +52,7 @@
 	patreon_req = 0
 
 /datum/species/tieberian/check_roundstart_eligible()
-	return TRUE
+	return FALSE
 
 /datum/species/tieberian/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()

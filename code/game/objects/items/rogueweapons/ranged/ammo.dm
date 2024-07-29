@@ -280,7 +280,7 @@
 	stun = 1
 	hitscan = TRUE
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
-	embedchance = 35
+	embedchance = 60
 	woundclass = BCLASS_STAB
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"

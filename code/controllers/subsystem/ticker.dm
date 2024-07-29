@@ -875,6 +875,10 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
 	var/datum/game_mode/warfare/W = mode
+
+	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list
+	var/obj/effect/landmark/redreinforcement/red = locate(/obj/effect/landmark/redreinforcement) in GLOB.landmarks_list
+
 	W.reinforcementwave++
 	var/list/reinforcementinas = list()
 	switch(W.reinforcementwave)
@@ -905,10 +909,10 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/flint"
+	to_chat(world, "Additional resources have been sent to both sides of this conflict.")
+	for(var/mob/M in GLOB.player_list)
+		SEND_SOUND(M, 'sound/music/tension2.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
-		new typepath(get_turf(W.redforcements))
-		new typepath(get_turf(W.bluforcements))
-		to_chat(world, "Additional resources have been sent to both sides of this conflict.")
-		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/tension2.ogg')
+		new typepath(red.loc)
+		new typepath(blu.loc)

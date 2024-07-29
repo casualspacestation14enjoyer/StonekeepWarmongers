@@ -57,7 +57,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(rod)
-			H.put_in_active_hand(rod)
+			H.put_in_hands(rod)
 			rod = null
 			to_chat(user, "<span class='info'>I remove the ramrod from \the [src].</span>")
 			playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)

@@ -22,8 +22,8 @@
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 5 // in minutes
-	var/warfare_reinforcement_time = 10 // in minutes
+	var/warfare_start_time = 1 // in minutes
+	var/warfare_reinforcement_time = 5 // in minutes
 
 	announce_span = "danger"
 	announce_text = "The"

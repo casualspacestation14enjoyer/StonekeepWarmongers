@@ -38,6 +38,9 @@
 
 /datum/game_mode/warfare/proc/reinforcements()
 	if(!(reinforcementwave >= 5))
+		if(!SSticker.warfare_ready_to_die)
+			reinforcements()
+			return
 		spawn(warfare_reinforcement_time MINUTES)
 			SSticker.SendReinforcements()
 			reinforcements()

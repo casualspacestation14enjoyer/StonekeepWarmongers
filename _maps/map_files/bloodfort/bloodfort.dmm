@@ -37,6 +37,7 @@
 "hH" = (/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "hU" = (/turf/closed/wall/mineral/rogue/decowood,/area/rogue/indoors/town)
 "id" = (/turf/open/floor/rogue/rooftop{dir = 1},/area/rogue/outdoors/town/roofs)
+"ig" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "ix" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
 "iJ" = (/obj/structure/stairs/stone/church,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "iS" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
@@ -56,6 +57,7 @@
 "mY" = (/obj/machinery/light/rogue/lanternpost/fixed,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "nb" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "no" = (/obj/structure/fluff/statue/knight/interior/r,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
+"ob" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "oe" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/shield/wood{pixel_y = -7},/obj/item/rogueweapon/shield/wood,/obj/item/rogueweapon/shield/wood{pixel_y = 7},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "ok" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "ov" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
@@ -292,7 +294,7 @@ aJJQaJJQaJPUPUaJaJghghghaJaJPUPUaJaJJQJQJQovovovJQJQaJJQJQPUPUaJJQghghghaJaJPUPU
 ghGkGkghuUfCfCuUfCghghghuUbcfCfCbcuUfCfCeWSBOhSBQQuUuUuUiSfCfCbcuUghghghfCuUfCfCuUghGkGkgh
 vTfCfCfCuUfCfCvKuUfCDufCfCfCfCuUuUfCfCfCIOlISBlIQQfCuUuUfCfCfCuUfCfCDuuUfCfCfCfCfCfCfCfCIc
 oefCBESwfCBJfCfCfCuUfCvKfCuUfCfCfCfCBJfCuUSBSBSBuUfCfCuUBJfCfCfCfCfCfCfCfCfCfCBJfCSwzzfCHp
-oefCfCfCfCfCfCfCfCfCfCfCfCfCfCBJfCfCfCfCuUSBSBSBfCvKfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCHp
+oefCfCfCfCfCfCfCfCfCfCfCfCfCfCBJfCfCfCfCuUSBobSBfCvKfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCfCHp
 ghdcHsghfCfCfCuUfCBtfCfCfCuUfCfCfCvKuUfCfCSBSBSBfCuUuUfCfCfCuUfCfCuUfCfCBJfCfCfCfCghHsdcgh
 QQuUfCfCvKuUuUfCfCuUuUuUfCuUuUuUfCfCuUuUeWSBSBSBgjuUuUfCfCuUAtfCuUuUuUfCfCuUuUuUfCuUfCfCeW
 QQbcuUfCuUbcuUuUfCuUuUfCfCfCuUbcuUfCfCbceWSBSBSBQQbcfCfCfCbcfCfCfCfCuUfCfCuUuUiSfCfCuUbcIO
@@ -307,7 +309,7 @@ FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjgAcONwgAOSuOYUgANwcOgAkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjlcgAgAcQWHEroXcQgAgAsYkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEgAgAgAgAOSErYUgAgAgAgAqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEgAgAgAgAOSErYUgAgAgAgAqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEgAgAgAgAOSigYUgAgAgAgAqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEgAgAgAgAOSErYUgAgAgAgAqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjlcgAgAcQOSErYUcQgAgAsYkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjgAgAwrgAOSErYUgAwrgAgAkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr

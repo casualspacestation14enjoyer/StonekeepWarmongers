@@ -14,6 +14,9 @@
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
 	var/crownbearer = "John Roguetown"
 
+	var/obj/effect/landmark/redforcements
+	var/obj/effect/landmark/bluforcements
+
 	var/mob/redlord = null
 	var/mob/blulord = null
 

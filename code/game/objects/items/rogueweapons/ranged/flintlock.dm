@@ -87,7 +87,7 @@
 		to_chat(user, "<span class='warning'>I carefully de-cock \the [src].</span>")
 		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	else
-		if(do_after(user, 1 SECOND, TRUE, src))
+		if(do_after(user, 1 SECONDS, TRUE, src))
 			playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 			to_chat(user, "<span class='info'>I cock \the [src].</span>")
 			cocked = TRUE

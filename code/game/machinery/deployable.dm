@@ -70,13 +70,71 @@
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "woodenbarricade_r"
 	max_integrity = 60
+	proj_pass_rate = 70
 	bar_material = WOOD
 	drop_amount = 0
+
+/obj/item/sandbagkit
+	name = "kit of sand bags"
+	desc = "Bags of sand meant to be built to cover your sorry face."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "sandbag"
+	dropshrink = 0.8
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/sandbagkit/attack_right(mob/user)
+	. = ..()
+	var/turf/T = get_turf(user.loc)
+	if(!isfloorturf(T))
+		to_chat(user, "<span class='warning'>I need ground to plant this on!</span>")
+		return
+	for(var/obj/A in T)
+		if(istype(A, /obj/structure))
+			to_chat(user, "<span class='warning'>I need some free space to deploy a [src] here!</span>")
+			return
+		if(A.density && !(A.flags_1 & ON_BORDER_1))
+			to_chat(user, "<span class='warning'>There is already something here!</span>")
+			return
+	to_chat(user, "<span class='notice'>I begin deploying \the [src].</span>")
+	if(do_after(user, 5 SECONDS, TRUE, src))
+		var/obj/structure/barricade/sandbags/rogue/sb = new(T)
+		sb.dir = user.dir
+		qdel(src)
+
+/obj/structure/barricade/sandbags/rogue
+	name = "sand bags"
+	desc = "Bags of sand meant to cover your sorry face."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "sandbags"
+	max_integrity = 60
+	proj_pass_rate = 20
+	layer = ABOVE_ALL_MOB_LAYER
+	climbable = TRUE
+	climb_time = 20
+	smooth = SMOOTH_FALSE
+	canSmoothWith = list()
+	bar_material = SAND
+
+/obj/structure/barricade/sandbags/rogue/CanPass(atom/movable/mover, turf/target)
+	..()
+	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
+		return 1
+	if(get_dir(loc, target) == dir)
+		return 0
+	return 1
+
+/obj/structure/barricade/sandbags/rogue/CheckExit(atom/movable/mover as mob|obj, turf/target)
+	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
+		return 1
+	if(get_dir(mover.loc, target) == dir)
+		return 0
+	return 1
 
 /obj/structure/barricade/wooden/rogue/crude
 	name = "crude plank barricade"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "woodenbarricade_r2"
+	proj_pass_rate = 90
 	max_integrity = 40
 
 /obj/structure/barricade/wooden/attackby(obj/item/I, mob/user)
@@ -125,7 +183,6 @@
 	climbable = TRUE
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/obj/structure/barricade/sandbags, /turf/closed/wall, /turf/closed/wall/r_wall, /obj/structure/falsewall, /obj/structure/falsewall/reinforced, /turf/closed/wall/rust, /turf/closed/wall/r_wall/rust, /obj/structure/barricade/security)
-
 
 /obj/structure/barricade/security
 	name = "security barrier"

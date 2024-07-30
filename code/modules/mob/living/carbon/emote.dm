@@ -79,7 +79,7 @@
 						sound2play = sound('sound/vo/wc/felt/warcry_female_rare.ogg')
 					else
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg'))
-	playsound(user, sound2play, 6at0, TRUE, -2, ignore_walls = FALSE)
+	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
 	user.say(warcry)
 
 /mob/living/carbon/human/verb/emote_warcry()

@@ -12,6 +12,7 @@
 	can_buckle = TRUE
 	buckle_lying = FALSE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	layer = MOB_LAYER
 
 	ambushable = 1
 

@@ -68,6 +68,7 @@ GLOBAL_VAR(restart_counter)
 	load_psychokiller()
 
 	load_crownlist()
+	load_bypasslist() // Not to be mistaken by load_bypassage().
 
 	load_bypassage()
 

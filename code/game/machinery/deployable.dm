@@ -80,6 +80,7 @@
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sandbag"
 	dropshrink = 0.8
+	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/sandbagkit/attack_right(mob/user)
@@ -113,6 +114,8 @@
 	climb_time = 20
 	smooth = SMOOTH_FALSE
 	canSmoothWith = list()
+	attacked_sound = 'sound/foley/cloth_rip.ogg'
+	break_sound = 'sound/foley/cloth_rip.ogg'
 	bar_material = SAND
 
 /obj/structure/barricade/sandbags/rogue/CanPass(atom/movable/mover, turf/target)

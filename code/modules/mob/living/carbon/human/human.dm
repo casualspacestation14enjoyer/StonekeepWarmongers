@@ -904,7 +904,8 @@
 	if(client)
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
-			client.warfare_faction = w_faction
+			if(!check_bypasslist(client.ckey))
+				client.warfare_faction = w_faction
 			switch(w_faction)
 				if(RED_WARTEAM)
 					C.heartfelts |= client

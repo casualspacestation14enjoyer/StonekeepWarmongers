@@ -42,6 +42,51 @@
 		else
 			return "clap"
 
+/datum/emote/living/carbon/warcry
+	key = "warcry"
+	key_third_person = ""
+	message = "shouts a war cry!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/carbon/warcry/run_emote(mob/user, params, type_override, intentional, targetted)
+	. = ..()
+	var/warcry = "WAR!!!"
+	var/sound2play
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				warcry = "For honor! For truth! For Heartfelt!"
+				if(H.gender == MALE)
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_male_1.ogg','sound/vo/wc/felt/warcry_male_2.ogg'))
+				else
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/felt/warcry_female_rare.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_female_1.ogg','sound/vo/wc/felt/warcry_female_2.ogg'))
+			if(BLUE_WARTEAM)
+				warcry = "Glory in the stars!"
+				if(H.gender == MALE)
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_male_1.ogg','sound/vo/wc/gren/warcry_male_2.ogg'))
+				else
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/felt/warcry_female_rare.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg'))
+	playsound(user, sound2play, 6at0, TRUE, -2, ignore_walls = FALSE)
+	user.say(warcry)
+
+/mob/living/carbon/human/verb/emote_warcry()
+	set name = "WARCRY"
+	set category = "Noises"
+	emote("warcry", intentional = TRUE)
+
 /datum/emote/living/carbon/gnarl
 	key = "gnarl"
 	key_third_person = "gnarls"

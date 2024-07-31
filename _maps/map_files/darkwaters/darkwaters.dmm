@@ -1,0 +1,232 @@
+"aa" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"aI" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"aT" = (/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"bJ" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"bU" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"bY" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/pelt,/obj/effect/landmark/start/heartfeltinfantry,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"cd" = (/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"dn" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"dD" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass,/obj/item/rogueweapon/sword/cutlass{pixel_x = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"el" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/pelt,/obj/effect/landmark/start/heartfeltinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"eO" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"eT" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"fn" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"fE" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue)
+"gI" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"gO" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"gS" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue)
+"hB" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue)
+"hC" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/shield/wood{pixel_y = -7},/obj/item/rogueweapon/shield/wood,/obj/item/rogueweapon/shield/wood{pixel_y = 7},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"hP" = (/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"iX" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"jv" = (/obj/structure/table/wood/nice,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"kb" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"la" = (/obj/effect/landmark/observer_start,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"lb" = (/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"ll" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue)
+"lP" = (/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"nb" = (/obj/item/banner/blue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"om" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"pr" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue)
+"pQ" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"qc" = (/obj/structure/warfarebarrier/red,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"qf" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"qs" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"qt" = (/obj/structure/warfarebarrier,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"qC" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"qN" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue)
+"qY" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear{pixel_x = -22},/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear{pixel_x = -10},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"rd" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"ry" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"rE" = (/turf/closed/indestructible/wooddark,/area/rogue/outdoors/beach/boat)
+"sK" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"tX" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"uF" = (/obj/structure/table/wood/nice,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"uO" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = 4},/obj/item/quiver/bullets{pixel_x = -3},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"vc" = (/obj/structure/warfarebarrier,/turf/open/chasm,/area/rogue/outdoors/beach)
+"vj" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass{pixel_x = -1},/obj/item/rogueweapon/sword/cutlass{pixel_x = 3},/obj/item/rogueweapon/sword/cutlass{pixel_x = 7},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"vs" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"wu" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"xh" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"xv" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"xJ" = (/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"xW" = (/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"yE" = (/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"zC" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"zF" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Aj" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Am" = (/obj/structure/roguewindow,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach/boat)
+"Ap" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"As" = (/obj/structure/warfarebarrier/red,/turf/open/chasm,/area/rogue/outdoors/beach)
+"Ay" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"AJ" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue)
+"Bf" = (/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"By" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue)
+"Cr" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Dd" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Dy" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"EE" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"EG" = (/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"EO" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol{pixel_y = -8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Gm" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Ij" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Jh" = (/obj/structure/table/wood/nice,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"Jj" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"JE" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"JR" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Kt" = (/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue)
+"LB" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue)
+"LR" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue)
+"LT" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Mj" = (/turf/open/transparent/openspace,/area/rogue)
+"Mz" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"MK" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Nj" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue)
+"Ny" = (/obj/structure/fluff/railing/border{dir = 4},/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"NV" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"Pj" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"PB" = (/obj/effect/landmark/start/grenzellord{dir = 8},/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"Qd" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Qi" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Qk" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue)
+"Qq" = (/turf/open/floor/rogue/plank,/area/rogue)
+"Qv" = (/turf/open/chasm,/area/rogue/outdoors/beach)
+"QX" = (/obj/item/banner/red,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Re" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -4},/obj/item/quiver/bullets,/obj/item/quiver/bullets{pixel_x = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Rp" = (/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue)
+"RB" = (/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"RD" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/steel,/obj/item/rogueweapon/woodcut/steel{pixel_y = -6},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Sp" = (/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Tg" = (/obj/effect/landmark/start/heartfeltlord{dir = 8},/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"TR" = (/obj/structure/table/wood/nice,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"TU" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Uw" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace,/area/rogue)
+"UZ" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/warfarebarrier,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Vu" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue)
+"Vv" = (/turf/open/floor/rogue/plank,/area/rogue/outdoors/beach)
+"VR" = (/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"Wl" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"WF" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Xj" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue)
+"XE" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Yx" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"YK" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/spiked{pixel_y = 5},/obj/item/rogueweapon/mace/spiked{pixel_y = -2},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Zl" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+
+(1,1,1) = {"
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErErErErErErErErErErErErErErErErErErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErEEERerERBaIRBRBRBaIRBRBRBaIRBrERBRBaIRBRBrErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErEqYvjhCRBgOrERBRBRBRBRBRBRBRBRBRBRBrERBRBRBRBRBbYbYbYrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrEYKRBRBRBRBRBRBRBRBRBRBLTrErERBRBrERBRBRBRBRBrERBRBRBRBgOrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrEEERBRBRBRBRBRBRBRBRBRBLTrErERBgOrEgIRBQXRBgOrEgIGmbYbYbYrErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrERDRBRBRBRBRBRBRBRBRBRBLTrErERBRBrERBRBRBRBRBrERBRBRBRBgOrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErEqYvjhCRBgOrERBRBRBRBRBRBRBRBRBRBRBrERBRBRBRBRBelelelrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErEEERerERBqCRBRBRBqCRBRBRBqCRBrERBRBqCRBRBrErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+AsqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcrErErErErErErErErErErErErErErErErErErErErErErEqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqcqc
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+vcqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtrErErErErErErErErErErErErErErErErErErErErErErEqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqtqt
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErExhRerERBaIRBRBRBaIRBRBRBaIRBrERBRBaIRBRBrErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErEqYvjEERBgOrERBRBRBRBRBRBRBRBRBRBRBrERBRBRBRBRBryryryrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrERDRBRBRBRBRBRBRBRBRBRBLTrErERBRBrERBRBRBRBRBrERBRBRBRBgOrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrEEERBRBRBRBRBRBRBRBRBRBLTrErERBgOrEgIRBnbRBgOrEgITUJRJRJRrErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrEYKRBRBRBRBRBRBRBRBRBRBLTrErERBRBrERBRBRBRBRBrERBRBRBRBgOrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErEqYvjEERBgOrERBRBRBRBRBRBRBRBRBRBRBrERBRBRBRBRBJRJRJRrEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErExhRerERBqCRBRBRBqCRBRBRBqCRBrERBRBqCRBRBrErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTrErErErErErErErErErErErErErErErErErErErErErErEaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+QvaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaTaT
+"}
+(1,1,2) = {"
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKsKsKsKsKsKsKsKsKsKsKsKsKsKsKsKcdEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKsKsKWlxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJrErErEAmAmrErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKWlxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJwurExWxWxWkbrErErErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKWlxJxJxJxJxJxJxJIjxJxJxJfnBfBfBfxJxJxJIjxJxJxJqfrExWxWxWxWxWxWTRrEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGJExJxJxJxJxJxJxJxJxJrExJxJxJtXlblbwuxJxJxJrExJxJxJxJrExWxWxWTRxWxWxWAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJbUxJxJrErErExJxJNylblbwuxJxJrErErExJxJxJvsxWxWxWuFTgxWxWAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGJEWFWFxJxJxJxJxJxJxJrExJxJxJtXlblbwuxJxJxJrExJxJxJxJrExWxWxWTRxWxWxWAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdDdWFWFxJxJxJxJxJbJxJxJxJeOQiQiQixJxJxJbJxJxJxJaarExWxWxWxWxWxWTRrEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdDdWFWFWFWFxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJwurExWxWxWkbrErErErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+MKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKhPXEXEXEiXCrCrCrCrCrlPCrCrCrCrCrlPCrCrCrCrrErErEAmAmrErEMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMKMK
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdQdQdQdQdVvQdQdQdQdQdVvQdQdQdQdAjEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGVvEGEGEGEGEGVvEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGVvEGEGlaEGEGVvEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGVvEGEGEGEGEGVvEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKsKsKsKsKVvsKsKsKsKsKVvsKsKsKsKcdEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+zCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCZlyEyEyEeTUZUZUZUZUZMzUZUZUZUZUZMzUZUZUZUZrErErEAmAmrErEzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzCzC
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKWlDyDyDyDyxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJwurEVRVRVRrdrErErErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGqssKWlDyDyxJxJxJxJxJIjxJxJxJfnBfBfBfxJxJxJIjxJxJxJqfrEVRVRVRVRVRVRJhrEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGJEDyDyxJxJxJxJxJxJxJrExJxJxJtXlblbwuxJxJxJrExJxJxJxJrEVRVRVRJhVRVRVRAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJbUxJxJrErErExJxJNylblbwuxJxJrErErExJxJxJomVRVRVRjvPBVRVRAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGJExJxJxJxJxJxJxJxJxJrExJxJxJtXlblbwuxJxJxJrExJxJxJxJrEVRVRVRJhVRVRVRAmEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdDdxJxJxJxJxJxJxJbJxJxJxJeOQiQiQixJxJxJbJxJxJxJaarEVRVRVRVRVRVRJhrEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdDdxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJwurEVRVRVRrdrErErErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdQdQdDdxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJxJrErErEAmAmrErEEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGzFQdQdQdQdQdQdQdQdQdQdQdQdQdQdQdQdAjEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG
+"}
+(1,1,3) = {"
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjllqNqNqNqNqNqNqNqNKtMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblbNVxJxJxJxJxJxJxJxJNjqNKtMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblbpQAyaaxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblblblblbJjqfxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblbrElblblblblblblblblblbrElblblbNVxJxJxJxJxJxJxJxJuOUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblbrErErElblblblblblblblbrErErElblbNVxJSpxJxJbUxJxJxJdDUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblbrElblblblblblblblblblbrElblblbNVxJxJxJxJxJxJxJxJEOUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblblblblbpQaaxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblbJjPjqfxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+prprprprprprprprprprprprprprprprprprprprprprprprprprprprprprprprprYxYxYxYxYxYxYxYxYxYxYxYxYxYxYxdnCrCrCrCrlPCrCrCrXjVufEprprprprprprprprprprprprprpr
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjByhBhBhBhBQqhBhBhBLRMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjQqMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjQqMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjQqMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjllqNqNqNqNQqqNqNqNKtMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+gSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSgSxvxvxvxvxvxvxvxvxvxvxvxvxvxvxvApUZUZUZUZMzUZUZUZQkRpLBgSgSgSgSgSgSgSgSgSgSgSgSgSgS
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblbpQAyaaxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblblblblbJjqfxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblbrElblblblblblblblblblbrElblblbNVxJxJxJxJxJxJxJxJEOUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblbrErErElblblblblblblblbrErErElblbNVxJSpxJxJbUxJxJxJdDUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblbrElblblblblblblblblblbrElblblbNVxJxJxJxJxJxJxJxJuOUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblblblblbpQaaxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblblblblblbJjPjqfxJxJxJxJxJxJxJxJUwMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjlblblblblblblblblblblblblblblbNVxJxJxJxJxJxJxJxJAJhBLRMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjByhBhBhBhBhBhBhBhBLRMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+MjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMjMj
+"}

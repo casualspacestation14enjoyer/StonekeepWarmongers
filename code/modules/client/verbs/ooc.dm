@@ -3,6 +3,14 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 //client/verb/ooc(msg as text)
 
+/client/proc/getemojiforrank()
+	var/img = "normie"
+	if(check_bypasslist(ckey))
+		img = "zizo"
+	if(ckey == "helloiamjesus")
+		img = "psydon"
+	return img
+
 /client/verb/ooc(msg as text)
 	set name = "OOC" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite
 	set category = "OOC"
@@ -85,9 +93,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	for(var/client/C in GLOB.clients)
 		var/real_key = C.holder ? "([key])" : ""
 		if(C.prefs.chat_toggles & CHAT_OOC)
-			msg_to_send = "<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
+			msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
 			if(holder)
-				msg_to_send = "<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
+				msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 			to_chat(C, msg_to_send)
 
 //				if(!holder.fakekey || C.holder)
@@ -106,7 +114,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 //					to_chat(C, "<font color='[GLOB.OOC_COLOR]'><b><EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></b></font>")
 //				else
 //					to_chat(C, "<span class='ooc'><EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></span>")
-
 
 /client/proc/lobbyooc(msg as text)
 	set category = "OOC"
@@ -188,9 +195,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
 				continue
 
-			msg_to_send = "<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
+			msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
 			if(holder)
-				msg_to_send = "<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
+				msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 
 			to_chat(C, msg_to_send)
 

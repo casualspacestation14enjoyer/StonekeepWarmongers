@@ -10,7 +10,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	throw_speed = 0.5
 	var/light_impact = 4
-	var/flame_impact = 3
+	var/flame_impact = 1
 	var/fuze = 50
 	var/lit = FALSE
 	var/prob2fail = 23

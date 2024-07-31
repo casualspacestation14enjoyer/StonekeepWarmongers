@@ -49,6 +49,7 @@
 
 /datum/intent/shoot/musket
 	chargedrain = 0 //no drain to aim a gun
+	charging_slowdown = 4
 
 /datum/intent/shoot/musket/get_chargetime()
 	if(mastermob && chargetime)

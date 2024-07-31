@@ -62,11 +62,11 @@
 "oe" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/shield/wood{pixel_y = -7},/obj/item/rogueweapon/shield/wood,/obj/item/rogueweapon/shield/wood{pixel_y = 7},/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "ok" = (/obj/structure/mineral_door/wood/deadbolt{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "ov" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
-"oA" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"oA" = (/obj/structure/ladder,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "oB" = (/obj/structure/stairs/stone{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/outdoors)
 "oR" = (/obj/structure/flora/roguegrass/bush/wall/tall,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "oX" = (/obj/effect/landmark/start/heartfeltinfantry,/turf/open/floor/rogue/carpet/lord/right,/area/rogue/indoors/town)
-"pf" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
+"pf" = (/obj/structure/ladder,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "pw" = (/obj/structure/mineral_door/wood/deadbolt,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "pz" = (/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "pH" = (/turf/open/floor/rogue/rooftop{dir = 8},/area/rogue/outdoors/town/roofs)
@@ -171,7 +171,6 @@
 "Kw" = (/turf/closed/wall/mineral/rogue/tent{dir = 4},/area/rogue/indoors/town)
 "KL" = (/obj/structure/fluff/railing/wood{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors)
 "KM" = (/obj/structure/wallladder{dir = 1},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
-"Lb" = (/obj/structure/ladder,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "Lj" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "Lt" = (/obj/structure/roguewindow/openclose{dir = 1},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "LC" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
@@ -192,7 +191,7 @@
 "Pd" = (/turf/open/indestructible/hoteltile,/area/rogue/outdoors)
 "Pr" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "Ps" = (/obj/structure/fluff/statue/gargoyle/candles,/turf/open/floor/rogue/carpet,/area/rogue/indoors/town)
-"PO" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town/roofs)
+"PO" = (/obj/structure/ladder,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/town/roofs)
 "PR" = (/obj/structure/flora/roguetree/stump/log,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "PU" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "QF" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/bow{pixel_y = 2},/obj/item/gun/ballistic/revolver/grenadelauncher/bow{pixel_y = -2},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
@@ -201,7 +200,7 @@
 "Rr" = (/obj/structure/fluff/railing/wood,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors)
 "RS" = (/obj/structure/fluff/railing/wood{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "RT" = (/turf/closed/indestructible/wooddark,/area/rogue/outdoors)
-"Sq" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town/roofs)
+"Sq" = (/obj/structure/ladder,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/town/roofs)
 "Sw" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets,/obj/item/quiver/bullets,/obj/item/quiver/bullets,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "SB" = (/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "Tl" = (/obj/structure/stairs/stone{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/indoors/town)
@@ -228,7 +227,7 @@
 "YU" = (/turf/open/floor/rogue/carpet/lord/right,/area/rogue/indoors/town)
 "Zb" = (/obj/structure/fluff/railing/wood{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors)
 "ZG" = (/obj/structure/flora/roguetree/wise,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
-"ZW" = (/obj/structure/ladder/unbreakable,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
+"ZW" = (/obj/structure/ladder,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 "ZZ" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/indoors/town)
 
 (1,1,1) = {"
@@ -360,7 +359,7 @@ UIUIUIUIUIUIUIUIwZwZwZwZwZUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIwZwZwZwZwZUIUIUI
 UIUIUIUIUIUIUIUIoBWbWbWbhhUIUIUIdDdDBMBMdDdDdDdDdDBMBMdDdDUIUIUIoBWbWbWbhhUIUIUIUIUIUIUIUI
 dDdDdDdDdDwZwZwZjeWbWbWbaIwZwZwZdDxTIoIoIoCxFUCxIoIoIoxTdDwZwZwZjeWbWbWbaIwZwZwZdDdDdDdDdD
 dDdDdDLLdDWbWbWbWbWbWbWbWbWbWbCUdDIoIoIoRSrkrkrkfOIoIoIodDhFWbWbWbWbWbWbWbWbWbWbdDAudDdDdD
-dDIoxTIookWbWbWbWbWbWbWbWbWbWbWbVhIoIoLbRSrkrkrkfOLbIoIookWbWbWbWbWbWbWbWbWbWbWbVhIoxTIodD
+dDIoxTIookWbWbWbWbWbWbWbWbWbWbWbVhIoIooARSrkrkrkfOoAIoIookWbWbWbWbWbWbWbWbWbWbWbVhIoxTIodD
 dDIoIoIodDWbWbWbWbWbWbWbWbWbWbWbdDIoIoIoRSrkrkrkfOIoIoIodDWbWbWbWbWbWbWbWbWbWbWbdDIoIoIodD
 dDdDYwdDdDWhuvWhWhWhuvWhWhWhuvWhdDEiIoIoIoCuCuCuIoIoIoEidDWhuvWhWhWhuvWhWhWhuvWhdDdDYwdDdD
 UIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIdDdDYwYwdDdDYwdDdDYwYwdDdDUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUI

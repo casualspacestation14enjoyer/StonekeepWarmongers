@@ -67,13 +67,13 @@
 			if(RED_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))
 					C.whowon = RED_WARTEAM
-					C.crownbearer = H.real_name
+					C.crownbearer = H
 					SSticker.force_ending = TRUE
 					H.adjust_triumphs(5)
 			if(BLUE_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
 					C.whowon = BLUE_WARTEAM
-					C.crownbearer = H.real_name
+					C.crownbearer = H
 					SSticker.force_ending = TRUE
 					H.adjust_triumphs(5)
 

@@ -51,6 +51,13 @@
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 
+/datum/intent/shoot/musket/arc
+	chargedrain = 2 //no drain to aim a gun
+	charging_slowdown = 3
+
+/datum/intent/shoot/musket/arc/arc_check()
+	return TRUE
+
 /datum/intent/shoot/musket/get_chargetime()
 	if(mastermob && chargetime)
 		var/newtime = chargetime

@@ -54,6 +54,8 @@
 	if(client || mind)
 		SSticker.deaths++
 
+	ghostize(FALSE)
+
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 

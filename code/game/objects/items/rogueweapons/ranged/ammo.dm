@@ -297,3 +297,42 @@
 	possible_item_intents = list(/datum/intent/use)
 	max_integrity = 0
 	force = 20
+
+/obj/projectile/bullet/reusable/cannonball
+	name = "large lead ball"
+	desc = "A round lead ball. Complex and still spherical."
+	damage = 300
+	damage_type = BRUTE
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball_proj" // No one sees it anyway. I think.
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball
+	range = 30
+	jitter = 5
+	stun = 1
+	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
+	embedchance = 0
+	woundclass = BCLASS_SMASH
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
+	flag = "bullet"
+	armor_penetration = 100
+	speed = 0.4
+
+/obj/projectile/bullet/reusable/cannonball/on_hit(atom/target)
+	. = ..()
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
+		M.gib()
+	explosion(target, light_impact_range = 2, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+
+/obj/item/ammo_casing/caseless/rogue/cball
+	name = "large lead ball"
+	desc = "A round lead ball. Complex and still spherical."
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	projectile_type = /obj/projectile/bullet/reusable/cannonball
+	dropshrink = 0.5
+	icon_state = "cball"
+	caliber = "cannoball"
+	possible_item_intents = list(/datum/intent/use)
+	max_integrity = 0
+	force = 20

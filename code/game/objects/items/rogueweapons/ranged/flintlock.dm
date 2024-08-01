@@ -7,7 +7,7 @@
 	icon_state = "longgun"
 	item_state = "musket"
 	possible_item_intents = list(INTENT_GENERIC)
-	gripped_intents = list(/datum/intent/shoot/musket)
+	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc)
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -109,7 +109,7 @@
 	recoil = 8
 	randomspread = 2
 	spread = 3
-	possible_item_intents = list(/datum/intent/shoot/musket, INTENT_GENERIC)
+	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
@@ -161,6 +161,9 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
+	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
+		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
+		return
 	..()
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++

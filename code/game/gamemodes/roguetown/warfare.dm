@@ -12,7 +12,7 @@
 	enemy_minimum_age = 0
 
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
-	var/crownbearer = "John Roguetown"
+	var/mob/living/carbon/human/crownbearer = null
 
 	var/reinforcementwave = 1 // max 5
 
@@ -22,7 +22,7 @@
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 1 // in minutes
+	var/warfare_start_time = 5 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
 
 	announce_span = "danger"

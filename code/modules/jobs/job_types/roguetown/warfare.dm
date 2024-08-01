@@ -217,6 +217,42 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
+//// HEARTFELT NINJA ////
+
+/datum/advclass/red/ninja
+	name = "Heartfelt Ninja"
+	tutorial = "Assassins hired into the military, fighting for coin. Utilizing their stealth, knifework, and trusty pistol, they will kill all who oppose their masters."
+	outfit = /datum/outfit/job/roguetown/redninja
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redninja/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/tights/black
+	cloak = /obj/item/clothing/cloak/raincloak/mortus
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	gloves = /obj/item/clothing/gloves/roguetown/angle
+	backl = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/ammo_casing/caseless/rogue/bullet = 3)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
+		H.change_stat("speed", 2)
+
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -422,3 +458,32 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -6)
+
+////// JESTER //////
+
+datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
+	name = "Grenzelhoft Jester"
+	tutorial = "You don't remember how the hell you got pulled into a war, but you may as well make a mockery of it."
+	outfit = /datum/outfit/job/roguetown/blujester
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/blujester/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	shoes = /obj/item/clothing/shoes/roguetown/jester
+	pants = /obj/item/clothing/under/roguetown/tights
+	armor = /obj/item/clothing/suit/roguetown/shirt/jester
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	head = /obj/item/clothing/head/roguetown/jester
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
+		H.change_stat("speed", 6)

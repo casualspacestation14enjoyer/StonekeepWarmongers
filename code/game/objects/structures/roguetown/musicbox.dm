@@ -1,4 +1,4 @@
-#define MUSIC_TAV list("Song 3" = 'sound/music/jukeboxes/tav3.ogg')
+#define MUSIC_TAV list("Song 1" = 'sound/music/hellandback.ogg', "Song 2" = 'sound/music/nothingyoucando.ogg', "Song 3" = 'sound/music/lorddeath.ogg')
 
 /datum/looping_sound/musloop
 	mid_sounds = list()
@@ -22,13 +22,13 @@
 	return 1
 
 /obj/structure/roguemachine/musicbox
-	name = "wax music device"
-	desc = "A marvelous device invented to record sermons. By feeding it the right kind of insects, it now brings us strange music from another realm."
+	name = "music device"
+	desc = "A device more advanced due to the strides in technology. No longer made from wax and now uses ceramic disks with indents to make sound. This one is specially supplied to armies to listen to music to feel better about themselves."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
 	density = FALSE
 	max_integrity = 0
-	anchored = TRUE
+	anchored = FALSE
 	var/datum/looping_sound/musloop/soundloop
 	var/curfile
 	var/playing = FALSE

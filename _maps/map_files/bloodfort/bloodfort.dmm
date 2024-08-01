@@ -88,6 +88,10 @@
 "dD" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
+"dF" = (
+/obj/structure/roguemachine/musicbox,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "dS" = (
 /obj/effect/landmark/latejoin,
 /turf/open/transparent/openspace,
@@ -1079,6 +1083,10 @@
 /obj/structure/barricade/wooden/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"TX" = (
+/obj/structure/roguemachine/musicbox,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "TZ" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/wood,
@@ -3036,7 +3044,7 @@ SB
 lI
 SB
 SB
-SB
+dF
 SB
 SB
 SB
@@ -6515,7 +6523,7 @@ UI
 kj
 gA
 cQ
-gA
+TX
 gA
 gA
 cQ

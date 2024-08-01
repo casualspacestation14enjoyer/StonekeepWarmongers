@@ -102,6 +102,8 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define CTAG_BANDIT			"CAT_BANDIT"		// Bandit class - Tied to the bandit antag really	<- Disabled; bandits got stuck with class selection
 #define CTAG_CHALLENGE 		"CAT_CHALLENGE"  	// Challenge class - Meant to be free for everyone
 #define CTAG_MERCENARY		"CAT_MERCENARY"
+#define CTAG_REDSOLDIER		"CAT_REDSOLDIER"
+#define CTAG_BLUSOLDIER	    "CAT_BLUSOLDIER"
 
 /*
 	String category tags

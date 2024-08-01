@@ -481,6 +481,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	backr = /obj/item/rogue/instrument/accord
 	head = /obj/item/clothing/head/roguetown/jester
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -489,4 +490,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telljoke)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telltragedy)

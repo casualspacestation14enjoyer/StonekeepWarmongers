@@ -37,7 +37,7 @@
 	var/do_sound = FALSE
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	anvilrepair = /datum/skill/craft/armorsmithing
-	armor_class = ARMOR_CLASS_MEDIUM
+	armor_class = ARMOR_CLASS_LIGHT
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/Initialize()
@@ -53,7 +53,7 @@
 	desc = "A chain vest made of heavy iron rings. Good protection form against melee weaponry of all kind."
 	body_parts_covered = CHEST|GROIN|VITALS
 	armor = list("melee" = 100, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	armor_class = ARMOR_CLASS_MEDIUM
+	armor_class = ARMOR_CLASS_LIGHT
 	smeltresult = /obj/item/ingot/iron
 	anvilrepair = /datum/skill/craft/armorsmithing
 

@@ -106,7 +106,7 @@
 
 /obj/item/rogueweapon/huntingknife/cleaver/combat
 	force = 12
-	name = "knife"
+	name = "combat knife"
 	desc = "A short blade that even the weakest of hands can aspire to do harm with."
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver)
 	icon_state = "combatknife"

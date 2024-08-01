@@ -254,6 +254,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 		H.change_stat("speed", 2)
+		H.change_stat("endurance", 1)
 
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////

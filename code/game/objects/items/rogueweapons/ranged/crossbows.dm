@@ -50,6 +50,17 @@
 /datum/intent/shoot/musket
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
+	warnoffset = 20
+
+/datum/intent/shoot/musket/arc
+	name = "arc"
+	icon_state = "inarc"
+	chargedrain = 1
+	charging_slowdown = 3
+	warnoffset = 20
+
+/datum/intent/shoot/musket/arc/arc_check()
+	return TRUE
 
 /datum/intent/shoot/musket/get_chargetime()
 	if(mastermob && chargetime)

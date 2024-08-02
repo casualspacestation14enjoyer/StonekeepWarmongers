@@ -217,6 +217,87 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
+//// HEARTFELT NINJA ////
+
+/datum/advclass/red/ninja
+	name = "Heartfelt Ninja"
+	tutorial = "Assassins hired into the military, fighting for coin. Utilizing their stealth, knifework, and trusty pistol, they will kill all who oppose their masters."
+	outfit = /datum/outfit/job/roguetown/redninja
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redninja/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/tights/black
+	cloak = /obj/item/clothing/cloak/raincloak/mortus
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	gloves = /obj/item/clothing/gloves/roguetown/angle
+	backl = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/ammo_casing/caseless/rogue/bullet = 3)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
+		H.change_stat("speed", 2)
+		H.change_stat("endurance", 1)
+
+//// RIFLEMEN ////
+
+/datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
+	name = "Heartfelt Riflemen"
+	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	outfit = /datum/outfit/job/roguetown/redriflemen
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	cloak = /obj/item/clothing/cloak/stabard/guard/reddy
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/quiver/bullets
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.change_stat("perception", 2)
+		H.change_stat("strength", -3)
+		H.change_stat("endurance", -4)
+		H.change_stat("speed", -1)
+		H.change_stat("constitution", -3)
+
+
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -422,3 +503,78 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -6)
+
+////// JESTER //////
+
+datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
+	name = "Grenzelhoft Jester"
+	tutorial = "You don't remember how the hell you got pulled into a war, but you may as well make a mockery of it."
+	outfit = /datum/outfit/job/roguetown/blujester
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/blujester/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	shoes = /obj/item/clothing/shoes/roguetown/jester
+	pants = /obj/item/clothing/under/roguetown/tights
+	armor = /obj/item/clothing/suit/roguetown/shirt/jester
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	backr = /obj/item/rogue/instrument/accord
+	head = /obj/item/clothing/head/roguetown/jester
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
+		H.change_stat("speed", 6)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telljoke)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telltragedy)
+
+//// RIFLEMEN ////
+
+/datum/advclass/blu/riflemen
+	name = "Grenzelhoft Riflemen"
+	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	outfit = /datum/outfit/job/roguetown/bluriflemen
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/bluriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	cloak = /obj/item/clothing/cloak/stabard/guard/bluey
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/quiver/bullets
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.change_stat("perception", 2)
+		H.change_stat("strength", -3)
+		H.change_stat("endurance", -4)
+		H.change_stat("speed", -1)
+		H.change_stat("constitution", -3)

@@ -256,6 +256,44 @@
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
 
+//// RIFLEMEN ////
+
+/datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
+	name = "Heartfelt Riflemen"
+	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	outfit = /datum/outfit/job/roguetown/redriflemen
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	cloak = /obj/item/clothing/cloak/stabard/guard/reddy
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/quiver/bullets
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.change_stat("perception", 2)
+
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -494,3 +532,41 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.change_stat("speed", 6)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telljoke)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telltragedy)
+
+//// RIFLEMEN ////
+
+/datum/advclass/blu/riflemen
+	name = "Grenzelhoft Riflemen"
+	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	outfit = /datum/outfit/job/roguetown/bluriflemen
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/bluriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	cloak = /obj/item/clothing/cloak/stabard/guard/bluey
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltr = /obj/item/quiver/bullets
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.change_stat("perception", 2)

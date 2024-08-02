@@ -298,7 +298,7 @@
 /obj/item/rogueweapon/sword{
 	pixel_x = 5
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "mf" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -638,13 +638,6 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
-"BE" = (
-/obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "BF" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/carpet,
@@ -951,7 +944,7 @@
 /obj/item/rogueweapon/spear{
 	pixel_x = -10
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "Nw" = (
 /obj/structure/fluff/walldeco/customflag{
@@ -1103,14 +1096,10 @@
 /area/rogue/outdoors/town/roofs)
 "Ul" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/shield/tower/metal{
-	pixel_x = -3
-	},
-/obj/item/rogueweapon/shield/tower/metal,
-/obj/item/rogueweapon/shield/tower/metal{
-	pixel_x = 3
-	},
-/turf/open/floor/rogue/grass,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "Um" = (
 /obj/structure/fluff/walldeco/customflag{
@@ -1425,7 +1414,7 @@ uU
 aJ
 Gk
 fC
-BE
+zz
 fC
 Hs
 fC

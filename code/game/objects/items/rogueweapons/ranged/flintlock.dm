@@ -43,11 +43,15 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ramrod))
+		if(!user.is_holding(src))
+			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")
+			return
 		if(chambered)
 			if(!rammed)
-				to_chat(user, "<span class='info'>I ram \the [src].</span>")
-				playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
-				rammed = TRUE
+				if(do_after(user, 4 SECONDS, TRUE, src))
+					to_chat(user, "<span class='info'>I ram \the [src].</span>")
+					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
+					rammed = TRUE
 	else
 		return ..()
 
@@ -81,6 +85,9 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attack_right(mob/user)
 	. = ..()
+	if(!user.is_holding(src))
+		to_chat(user, "<span class='warning'>I need to hold \the [src] to cock it!</span>")
+		return
 	if(cocked)
 		cocked = FALSE
 		to_chat(user, "<span class='warning'>I carefully de-cock \the [src].</span>")

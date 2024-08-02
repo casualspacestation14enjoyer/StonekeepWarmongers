@@ -89,7 +89,6 @@
 	cloak = /obj/item/clothing/cloak/stabard/guard/reddy
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/quiver/bullets
@@ -195,7 +194,6 @@
 	cloak = /obj/item/clothing/cloak/stabard/guard/bluey
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/quiver/bullets

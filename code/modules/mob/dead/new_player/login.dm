@@ -73,5 +73,13 @@
 			var/usedkey = ckey(key)
 			if(usedkey in GLOB.anonymize)
 				usedkey = get_fake_key(usedkey)
-			var/list/thinz = list("takes a seat.", "settles in.", "joins the session", "joins the table.", "becomes a player.")
-			SEND_TEXT(world, "<span class='notice'>[usedkey] [pick(thinz)]</span>")
+			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
+			var/datum/game_mode/warfare/C = SSticker.mode
+			if(C.grenzels.len < C.heartfelts.len)
+				client.warfare_faction = BLUE_WARTEAM
+				C.grenzels += src.client
+				to_chat(src, "You've been assigned to the blue team.")
+			else
+				client.warfare_faction = RED_WARTEAM
+				C.heartfelts += src.client
+				to_chat(src, "You've been assigned to the red team.")

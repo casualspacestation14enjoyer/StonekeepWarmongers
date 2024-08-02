@@ -289,10 +289,14 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 		H.change_stat("perception", 2)
+		H.change_stat("strength", -3)
+		H.change_stat("endurance", -4)
+		H.change_stat("speed", -1)
+		H.change_stat("constitution", -3)
+
 
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
@@ -570,3 +574,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 		H.change_stat("perception", 2)
+		H.change_stat("strength", -3)
+		H.change_stat("endurance", -4)
+		H.change_stat("speed", -1)
+		H.change_stat("constitution", -3)

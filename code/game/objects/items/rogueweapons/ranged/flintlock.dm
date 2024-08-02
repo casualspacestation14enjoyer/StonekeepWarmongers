@@ -44,13 +44,15 @@
 	rod = rrod
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
+	var/ramtime = 5.5
+	ramtime = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2)
 	if(istype(A, /obj/item/ramrod))
 		if(!user.is_holding(src))
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")
 			return
 		if(chambered)
 			if(!rammed)
-				if(do_after(user, 4 SECONDS, TRUE, src))
+				if(do_after(user, ramtime SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
 					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
 					rammed = TRUE

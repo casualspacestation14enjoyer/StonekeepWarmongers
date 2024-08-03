@@ -20,6 +20,10 @@
 	light_impact = 2
 	flame_impact = 5
 
+/obj/item/bomb/fire/weak
+	name = "cheap fire bomb"
+	flame_impact = 3
+
 /obj/item/bomb/homemade
 	prob2fail = 30
 

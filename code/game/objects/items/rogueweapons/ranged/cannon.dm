@@ -31,10 +31,9 @@
 
 /obj/structure/cannon/proc/fire()
 	firing = TRUE
-	spawn(5 SECONDS)
-		loaded.fire_casing(get_step(src, dir), src, null, null, null, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
-		loaded = null
-		new /obj/effect/particle_effect/smoke(get_turf(src))
-		SSticker.musketsshot++ // ????
-		playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
-		firing = FALSE
+	loaded.fire_casing(get_step(src, dir), src, null, null, null, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
+	loaded = null
+	new /obj/effect/particle_effect/smoke(get_turf(src))
+	SSticker.musketsshot++ // ????
+	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
+	firing = FALSE

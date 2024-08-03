@@ -27,7 +27,7 @@ GLOBAL_VAR(string_filename_current_key)
 /proc/strings_subkey_lookup(match, group1)
 	return pick_list(GLOB.string_filename_current_key, group1)
 
-/proc/load_strings_file(filename, directory = "strings")
+/proc/load_strings_file(filename, directory = "string")
 	GLOB.string_filename_current_key = filename
 	if(filename in GLOB.string_cache)
 		return //no work to do

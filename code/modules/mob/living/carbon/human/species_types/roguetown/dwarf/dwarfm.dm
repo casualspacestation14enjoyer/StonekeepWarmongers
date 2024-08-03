@@ -108,20 +108,20 @@
 	if(unique)
 		if(gender == MALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/dwarf/dwarmm.txt") )
+				randname = pick( world.file2list("string/rt/names/dwarf/dwarmm.txt") )
 				if(!findname(randname))
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/dwarf/dwarmf.txt") )
+				randname = pick( world.file2list("string/rt/names/dwarf/dwarmf.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
-			randname = pick( world.file2list("strings/rt/names/dwarf/dwarmm.txt") )
+			randname = pick( world.file2list("string/rt/names/dwarf/dwarmm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("strings/rt/names/dwarf/dwarmf.txt") )
+			randname = pick( world.file2list("string/rt/names/dwarf/dwarmf.txt") )
 	return randname
 
 /datum/species/dwarf/mountain/random_surname()
-	return " [pick(world.file2list("strings/rt/names/dwarf/dwarmlast.txt"))]"
+	return " [pick(world.file2list("string/rt/names/dwarf/dwarmlast.txt"))]"

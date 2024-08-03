@@ -1,4 +1,4 @@
-#define ROUND_START_MUSIC_LIST "strings/round_start_sounds.txt"
+#define ROUND_START_MUSIC_LIST "string/round_start_sounds.txt"
 
 
 GLOBAL_VAR_INIT(round_timer, INITIAL_ROUND_TIMER)
@@ -618,8 +618,8 @@ SUBSYSTEM_DEF(ticker)
 	if(selected_tip)
 		m = selected_tip
 	else
-		var/list/randomtips = world.file2list("strings/tips.txt")
-//		var/list/memetips = world.file2list("strings/sillytips.txt")
+		var/list/randomtips = world.file2list("string/tips.txt")
+//		var/list/memetips = world.file2list("string/sillytips.txt")
 //		if(randomtips.len && prob(95))
 		m = pick(randomtips)
 //		else if(memetips.len)

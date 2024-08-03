@@ -204,7 +204,7 @@
 	if(in_range(user, src) || isobserver(user))
 		user.changeNext_move(CLICK_CD_MELEE)
 		var/m
-		var/list/verses = world.file2list("strings/bibble.txt")
+		var/list/verses = world.file2list("string/bibble.txt")
 		m = pick(verses)
 		if(m)
 			user.say(m)

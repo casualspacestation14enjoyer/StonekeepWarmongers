@@ -96,23 +96,23 @@
 	if(unique)
 		if(gender == MALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/elf/elfdm.txt") )
+				randname = pick( world.file2list("string/rt/names/elf/elfdm.txt") )
 				if(!findname(randname))
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/elf/elfdf.txt") )
+				randname = pick( world.file2list("string/rt/names/elf/elfdf.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
-			randname = pick( world.file2list("strings/rt/names/elf/elfdm.txt") )
+			randname = pick( world.file2list("string/rt/names/elf/elfdm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("strings/rt/names/elf/elfdf.txt") )
+			randname = pick( world.file2list("string/rt/names/elf/elfdf.txt") )
 	return randname
 
 /datum/species/elf/dark/random_surname()
-	return " [pick(world.file2list("strings/rt/names/elf/elfsnf.txt"))]"
+	return " [pick(world.file2list("string/rt/names/elf/elfsnf.txt"))]"
 
 /datum/species/elf/dark/get_accent_list()
 	return strings("french_replacement.json", "french")

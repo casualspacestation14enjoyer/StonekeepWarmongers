@@ -27,11 +27,11 @@
 		if(LR.on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
-			fire()
+			fire(user)
 	else
 		return ..()
 
-/obj/structure/cannon/proc/fire()
+/obj/structure/cannon/proc/fire(var/mob/firer)
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
@@ -41,7 +41,7 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
-	loaded.fire_casing(get_step(src, dir), src, null, null, null, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
+	loaded.fire_casing(get_step(src, dir), firer, null, null, null, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
 	loaded = null
 	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)

@@ -308,7 +308,8 @@
 		to_chat(world, "<span class='big bold'>[end_reason].</span>")
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
-			to_chat(world, "<span class='bold'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
+			if(C.timedmatch == FALSE)
+				to_chat(world, "<span class='bold'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
 		to_chat(world, "<span class='big bold'>Stalemate! Shame on both of you!</span>")
 		

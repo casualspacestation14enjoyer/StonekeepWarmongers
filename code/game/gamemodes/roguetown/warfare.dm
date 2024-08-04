@@ -25,6 +25,8 @@
 	var/warfare_start_time = 5 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
 
+	var/timedmatch = FALSE
+
 	announce_span = "danger"
 	announce_text = "The"
 

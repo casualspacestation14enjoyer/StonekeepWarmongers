@@ -793,7 +793,7 @@ SUBSYSTEM_DEF(ticker)
 	if(mode)
 		GLOB.master_mode = mode
 	else
-		GLOB.master_mode = "extended"
+		GLOB.master_mode = "warmode"
 	log_game("Saved mode is '[GLOB.master_mode]'")
 
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
@@ -872,6 +872,9 @@ SUBSYSTEM_DEF(ticker)
 			qdel(WB)
 		for(var/obj/structure/warfarebarrier/red/WB in world)
 			qdel(WB)
+		for(var/obj/structure/warfarestatue/WS in world)
+			WS.begincountdown()
+			
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
 	var/datum/game_mode/warfare/W = mode

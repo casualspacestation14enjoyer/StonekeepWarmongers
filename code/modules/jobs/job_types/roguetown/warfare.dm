@@ -94,7 +94,7 @@
 //// MUSKETEER ////
 
 /datum/advclass/red/musketeer
-	name = "Heartfelt Musketeer"
+	name = "Musketeer"
 	tutorial = "Common infantry. Poorly armored and unsuited for melee, but equipped and trained for musket combat."
 	outfit = /datum/outfit/job/roguetown/redsoldier
 	allowed_sexes = list(MALE, FEMALE)
@@ -139,7 +139,7 @@
 //// SAMURAI ////
 
 /datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
-	name = "Heartfelt Samurai"
+	name = "Samurai"
 	tutorial = "Elite and stalwart melee combatants. While great with swords and polearms, they are terrible with guns and are slow moving."
 	outfit = /datum/outfit/job/roguetown/redsamurai
 	allowed_sexes = list(MALE, FEMALE)
@@ -180,7 +180,7 @@
 //// SAPPER ////
 
 /datum/advclass/red/sapper
-	name = "Heartfelt Sapper"
+	name = "Sapper"
 	tutorial = "Military engineers that are well equipped for construction, while also being strong and able to swing an ax. However, they lack firearms or good training in them."
 	outfit = /datum/outfit/job/roguetown/redsapper
 	allowed_sexes = list(MALE, FEMALE)
@@ -219,7 +219,7 @@
 //// HEARTFELT NINJA ////
 
 /datum/advclass/red/ninja
-	name = "Heartfelt Ninja"
+	name = "Ninja"
 	tutorial = "Assassins hired into the military, fighting for coin. Utilizing their stealth, knifework, and trusty pistol, they will kill all who oppose their masters."
 	outfit = /datum/outfit/job/roguetown/redninja
 	allowed_sexes = list(MALE, FEMALE)
@@ -244,6 +244,8 @@
 	backpack_contents = list(/obj/item/ammo_casing/caseless/rogue/bullet = 3)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE) //average bow skills, for silent killings
+		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE) //ditto
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
@@ -258,7 +260,7 @@
 //// RIFLEMEN ////
 
 /datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Heartfelt Riflemen"
+	name = "Riflemen"
 	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
 	outfit = /datum/outfit/job/roguetown/redriflemen
 	allowed_sexes = list(MALE, FEMALE)
@@ -383,7 +385,7 @@
 //// MUSKETEER ////
 
 /datum/advclass/blu/musketeer
-	name = "Grenzelhoft Musketeer"
+	name = "Musketeer"
 	tutorial = "Common infantry. Poorly armored and unsuited for melee, but equipped and trained for musket combat."
 	outfit = /datum/outfit/job/roguetown/blusoldier
 	allowed_sexes = list(MALE, FEMALE)
@@ -427,7 +429,7 @@
 //// ZWEIHANDER ////
 
 /datum/advclass/blu/zweihander //High stamina, speed, and damage. However, no gun skills, and really not that well armored.
-	name = "Grenzelhoft Zweihander"
+	name = "Zweihander"
 	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity, though they lack skill with firearms, and are not very well armored."
 	outfit = /datum/outfit/job/roguetown/bluzweihander
 	allowed_sexes = list(MALE, FEMALE)
@@ -463,7 +465,7 @@
 ////// GRENADIER //////
 
 datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bombs, higher strength, and an axe with accompanying skill for it
-	name = "Grenzelhoft Grenadier"
+	name = "Grenadier"
 	tutorial = "Specialized heavy grenade throwers and axe wielders. Slow, but strong."
 	outfit = /datum/outfit/job/roguetown/blugrenadier
 	allowed_sexes = list(MALE, FEMALE)
@@ -486,7 +488,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/bomb/fire = 2, /obj/item/flint = 1)
+	backpack_contents = list(/obj/item/bomb/fire/weak = 3, /obj/item/flint = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -505,7 +507,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 ////// JESTER //////
 
 datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
-	name = "Grenzelhoft Jester"
+	name = "Jester"
 	tutorial = "You don't remember how the hell you got pulled into a war, but you may as well make a mockery of it."
 	outfit = /datum/outfit/job/roguetown/blujester
 	allowed_sexes = list(MALE, FEMALE)
@@ -538,7 +540,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 //// RIFLEMEN ////
 
 /datum/advclass/blu/riflemen
-	name = "Grenzelhoft Riflemen"
+	name = "Riflemen"
 	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
 	outfit = /datum/outfit/job/roguetown/bluriflemen
 	allowed_sexes = list(MALE, FEMALE)

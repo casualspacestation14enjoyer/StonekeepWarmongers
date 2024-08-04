@@ -10,7 +10,7 @@
 	var/progress_in_seconds = 0
 	var/purpose_fulfilled = FALSE
 	var/last_scream = 0
-	var/ascend_time = 660
+	var/ascend_time = 600 //10 minutes
 	var/half_way = FALSE
 
 /obj/structure/warfarestatue/Initialize(mapload)

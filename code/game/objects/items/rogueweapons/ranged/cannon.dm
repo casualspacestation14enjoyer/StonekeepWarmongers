@@ -34,7 +34,7 @@
 /obj/structure/cannon/proc/fire()
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
-		H.blur_eyes(1)
+		H.blur_eyes(4)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 5)
 		H.throw_at(turfa, 5, 1, null, FALSE)

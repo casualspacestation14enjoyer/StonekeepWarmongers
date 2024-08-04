@@ -80,8 +80,12 @@ GLOBAL_VAR_INIT(mobids, 1)
 			continue
 		var/datum/atom_hud/alternate_appearance/AA = v
 		AA.onNewMob(src)
-	set_nutrition(rand(NUTRITION_LEVEL_START_MIN, NUTRITION_LEVEL_START_MAX))
-	set_hydration(rand(HYDRATION_LEVEL_START_MIN, HYDRATION_LEVEL_START_MAX))
+	if(SSticker.warfare_ready_to_die)
+		set_nutrition(500)
+		set_hydration(750)
+	else // Make them have something to do at least aside from talking.
+		set_nutrition(350)
+		set_hydration(350)
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)

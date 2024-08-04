@@ -2407,10 +2407,7 @@ Slots: [job.spawn_positions]</span>
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
 
-	if(real_name in GLOB.chosen_names)
-		character.real_name = pref_species.random_name(gender)
-	else
-		character.real_name = real_name
+	character.real_name = real_name
 	character.name = character.real_name
 
 	character.gender = gender

@@ -90,6 +90,18 @@
 		ammo_list += A
 	update_icon()
 
+/obj/item/quiver/bullets
+	name = "ammunition pouch"
+	icon_state = "pouch_e"
+	item_state = "quiver"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+
+/obj/item/quiver/bullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "pouch"
+	else
+		icon_state = "pouch_e"
+
 /obj/item/quiver/bullets/Initialize()
 	..()
 	for(var/i in 1 to max_storage)

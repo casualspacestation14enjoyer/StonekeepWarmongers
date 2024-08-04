@@ -465,13 +465,24 @@
 	desc = "One made by Noc himself to get rid of injustice in war."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shield-old"
-	density = TRUE
 	move_resist = INFINITY
 	opacity = 0
 	anchored = TRUE
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | INDESTRUCTIBLE
 	max_integrity = INFINITY
 	CanAtmosPass = ATMOS_PASS_DENSITY
+
+/obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
+	..()
+	if(ishuman(mover))
+		return 0
+	return 1
+
+/obj/structure/warfarebarrier/CheckExit(atom/movable/mover as mob|obj, turf/target) // You're stuck, bitch.
+	..()
+	if(ishuman(mover))
+		return 0
+	return 1
 
 /obj/structure/warfarebarrier/red
 	icon_state = "shield-red"

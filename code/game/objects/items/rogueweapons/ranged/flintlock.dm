@@ -17,6 +17,7 @@
 	spread = 0
 	var/cocked = FALSE
 	var/rammed = FALSE
+	var/click_delay = 3
 	var/obj/item/ramrod/rod
 	bigboy = TRUE
 	can_parry = TRUE
@@ -112,6 +113,7 @@
 	recoil = 8
 	randomspread = 2
 	spread = 3
+	click_delay = 0.5
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_HIP
@@ -160,7 +162,7 @@
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
-	sleep(3)
+	sleep(click_delay)
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)

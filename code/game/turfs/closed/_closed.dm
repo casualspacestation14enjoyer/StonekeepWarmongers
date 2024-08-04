@@ -133,6 +133,9 @@
 			if(!istype(target, /turf/open/transparent/openspace))
 				to_chat(user, "<span class='warning'>I can't climb here.</span>")
 				return
+			if(istype(target, /obj/structure/warfarebarrier))
+				to_chat(user, "<span class='warning'>I can't climb here.</span>")
+				return
 			if(!L.can_zTravel(target, UP))
 				to_chat(user, "<span class='warning'>I can't climb there.</span>")
 				return

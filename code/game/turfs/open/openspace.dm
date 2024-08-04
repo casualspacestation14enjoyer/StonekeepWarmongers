@@ -119,6 +119,14 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		if(!target)
 			to_chat(user, "<span class='warning'>I can't climb there.</span>")
 			return
+		for(var/obj/i in target.contents)
+			if(istype(i, /obj/structure/warfarebarrier))
+				to_chat(user, "<span class='warning'>I can't climb here.</span>")
+				return
+		for(var/obj/i in src.contents)
+			if(istype(i, /obj/structure/warfarebarrier))
+				to_chat(user, "<span class='warning'>I can't climb here.</span>")
+				return
 		if(!user.can_zTravel(target, DOWN, src))
 			to_chat(user, "<span class='warning'>I can't climb here.</span>")
 			return

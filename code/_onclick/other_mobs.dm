@@ -145,7 +145,7 @@
 /obj/item/onkick(mob/user)
 	if(!ontable())
 		if(w_class < WEIGHT_CLASS_HUGE)
-			throw_at(get_ranged_target_turf(src, get_dir(user,src), 2), 2, 2, user, FALSE)
+			throw_at(get_ranged_target_turf(src, get_dir(user,src), 4), 4, 2, user, FALSE)
 
 /atom/proc/onbite(mob/user)
 	return
@@ -288,7 +288,7 @@
 							M.onkick(src)
 				else
 					A.onkick(src)
-				OffBalance(30)
+				OffBalance(5)
 				return
 			if(INTENT_JUMP)
 				if(istype(src.loc, /turf/open/water))
@@ -322,12 +322,12 @@
 				var/jrange
 				var/jextra = FALSE
 				if(m_intent == MOVE_INTENT_RUN)
-					OffBalance(30)
+					OffBalance(5)
 					jadded = 15
 					jrange = 3
 					jextra = TRUE
 				else
-					OffBalance(20)
+					OffBalance(5)
 					jadded = 10
 					jrange = 2
 				if(ishuman(src))

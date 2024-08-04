@@ -84,6 +84,8 @@ GLOBAL_VAR(restart_counter)
 
 	if(prob(1))
 		name = "WARMONGRELS"
+	else
+		name = "WARMONGERS"
 
 	if(NO_INIT_PARAMETER in params)
 		return
@@ -310,14 +312,10 @@ GLOBAL_VAR(restart_counter)
 /world/proc/update_status()
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
-#ifdef MATURESERVER
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Immersive Dark Medieval Fantasy Musket Simulator<b><br>"
 	//s += "<b>Powerbottoms Welcome</b><br>"
-#else
-	s += "<big><b>ROGUEWORLD</b></big></a><br>"
-	s += "<b>Fantasy Computer Survival Game</b></center><br>"
-#endif
+	
 //	s += "<img src=\"https://i.imgur.com/shj547T.jpg\"></a></center>"
 
 //	s += "! <b>UPDATE 4.4</b> 4/22/2022<br><br>"

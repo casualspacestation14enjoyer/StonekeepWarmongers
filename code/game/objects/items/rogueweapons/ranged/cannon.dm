@@ -7,8 +7,7 @@
 	icon_state = "cannona"
 	anchored = FALSE
 	density = TRUE
-	drag_slowdown = 2
-	density = FALSE // a 2x2 tile hitbox would be hell
+	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
@@ -47,3 +46,18 @@
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(2)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
+	name = "hand barkstone"
+	desc = "HOLY FUCK!"
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "cannona"
+	fire_sound = 'sound/misc/explode/explosion.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk/cannona
+	dropshrink = 0.5
+
+/obj/item/ammo_box/magazine/internal/shot/musk/cannona
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball
+	caliber = "cannoball"
+	max_ammo = 1
+	start_empty = TRUE

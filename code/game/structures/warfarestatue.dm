@@ -3,7 +3,7 @@
 	desc = "A massive, holy statue. Heartfeltians feel compelled to protect it, and Grenzelhoft to destroy it."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "psy" //ironic...
-	max_integrity = 500
+	max_integrity = 800
 	pixel_x = -32
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
 	var/active = FALSE

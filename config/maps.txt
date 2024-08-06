@@ -13,8 +13,13 @@ Format:
 	votable (is this map votable)
 endmap
 
-map roguetown
+map bloodfort
 	default
+	#voteweight 1.5
+	votable
+endmap
+
+map laststand
 	#voteweight 1.5
 	votable
 endmap

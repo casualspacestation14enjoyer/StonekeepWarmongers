@@ -202,6 +202,7 @@
 
 	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on him.</span>")
 	get_end_reason()
+	SSvote.initiate_vote("map", "Warmonger players")
 
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)

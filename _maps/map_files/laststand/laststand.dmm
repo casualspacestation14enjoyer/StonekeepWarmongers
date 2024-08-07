@@ -483,6 +483,10 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town)
+"mg" = (
+/obj/effect/landmark/blureinforcement,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "mq" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/blocks,
@@ -1191,6 +1195,10 @@
 /area/rogue/indoors/town)
 "Dr" = (
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/town)
+"DI" = (
+/obj/effect/landmark/redreinforcement,
+/turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town)
 "DL" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -4074,7 +4082,7 @@ lN
 lN
 lN
 lN
-lN
+mg
 lN
 lN
 lN
@@ -7917,7 +7925,7 @@ vS
 vS
 hN
 vS
-vS
+DI
 vS
 Wm
 Xs

@@ -352,6 +352,12 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
+"iI" = (
+/obj/structure/cannon{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "iK" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
@@ -422,6 +428,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town)
+"kP" = (
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "kY" = (
 /obj/structure/table/wood,
 /obj/machinery/light/rogue/torchholder/c,
@@ -883,6 +893,11 @@
 "vS" = (
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town)
+"wa" = (
+/obj/structure/flora/roguegrass,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "wg" = (
 /obj/structure/table/wood{
 	dir = 10;
@@ -1102,6 +1117,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
+"Ac" = (
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/indestructible,
+/area/rogue/outdoors)
 "Aj" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/blocks,
@@ -1806,6 +1825,10 @@
 "RQ" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"RY" = (
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon,
+/turf/open/indestructible,
 /area/rogue/outdoors)
 "Sd" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -3224,12 +3247,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+Ac
+Ac
+Ac
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3311,12 +3334,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+RY
+Ac
+RY
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3398,12 +3421,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+RY
+Ac
+RY
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3485,12 +3508,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+RY
+Ac
+RY
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3572,12 +3595,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+RY
+Ac
+RY
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3659,12 +3682,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+RY
+Ac
+RY
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3746,12 +3769,12 @@ Nl
 Nl
 Nl
 Nl
-Nl
-Nl
-Nl
-Nl
-Nl
-Nl
+Ac
+Ac
+Ac
+Ac
+Ac
+Ac
 Nl
 Nl
 Nl
@@ -3910,7 +3933,7 @@ Hr
 KN
 KN
 lN
-mA
+wa
 KN
 KN
 KN
@@ -4086,7 +4109,7 @@ mg
 lN
 lN
 lN
-lN
+iI
 lN
 "}
 (24,1,1) = {"
@@ -4261,7 +4284,7 @@ lN
 KN
 jI
 jI
-KN
+kP
 "}
 (26,1,1) = {"
 Nl
@@ -4431,7 +4454,7 @@ aY
 aY
 aY
 Sd
-KN
+kP
 lN
 qz
 KN

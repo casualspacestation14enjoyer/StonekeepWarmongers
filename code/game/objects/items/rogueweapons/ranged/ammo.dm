@@ -277,6 +277,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
 	range = 30
 	jitter = 5
+	eyeblur = 3
 	stun = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100

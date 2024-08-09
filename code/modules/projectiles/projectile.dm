@@ -188,6 +188,7 @@
 				new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
 			else
 				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
+				shake_camera(L, 5, 3)
 			L.add_splatter_floor(target_loca)
 
 	if(impact_effect_type && !hitscan)

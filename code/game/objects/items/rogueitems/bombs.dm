@@ -15,6 +15,11 @@
 	var/lit = FALSE
 	var/prob2fail = 23
 
+/obj/item/bomb/dropped(mob/user, silent)
+	. = ..()
+	if(lit)
+		explode()
+
 /obj/item/bomb/fire
 	name = "fire bomb"
 	light_impact = 2

@@ -23,3 +23,9 @@ map laststand
 	#voteweight 1.5
 	votable
 endmap
+
+map rogueworld
+	default
+	#voteweight 1.5
+	votable
+endmap

@@ -482,13 +482,13 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
+	beltr = /obj/item/gun/revolver/grenadelauncher/flintlock/pistol
 	beltl = /obj/item/rogueweapon/woodcut/steel
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	head = /obj/item/clothing/head/roguetown/helmet/kettle
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	head = /obj/item/clothing/head/roguetown/helmet/kettl
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/bomb/fire/weak = 3, /obj/item/flint = 1)
+	backpack_contents = list(/obj/item/bomb = 3, /obj/item/flint = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -522,11 +522,13 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	pants = /obj/item/clothing/under/roguetown/tights
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier, /obj/item/bomb, /obj/item/restraints/legcuffs/beartrap)
 	backr = /obj/item/rogue/instrument/accord
 	head = /obj/item/clothing/head/roguetown/jester
+	playsound(H, 'sound/foley/honk.ogg', 100, FALSE, 2)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)

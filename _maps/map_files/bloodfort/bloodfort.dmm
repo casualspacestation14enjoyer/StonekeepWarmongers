@@ -78,6 +78,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"df" = (
+/obj/structure/fermenting_barrel/beer,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "dg" = (
 /obj/structure/stairs/stone/church{
 	dir = 1
@@ -284,6 +288,18 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
+"jG" = (
+/obj/structure/closet/crate/chest,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "jW" = (
 /turf/open/floor/rogue/rooftop/green{
 	dir = 1
@@ -516,6 +532,18 @@
 	dir = 1
 	},
 /turf/open/transparent/openspace,
+/area/rogue/outdoors)
+"uL" = (
+/obj/structure/closet/crate/chest,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "uO" = (
 /obj/structure/throne,
@@ -1242,6 +1270,11 @@
 "XK" = (
 /obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Ya" = (
+/obj/structure/table/wood/plain,
+/obj/item/reagent_containers/food/snacks/rogue/prezzel,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Yc" = (
 /obj/structure/ladder,
@@ -3893,7 +3926,7 @@ fC
 BJ
 fC
 fC
-fC
+df
 NA
 "}
 (35,1,1) = {"
@@ -3970,7 +4003,7 @@ uU
 fC
 fC
 fC
-uU
+Ya
 xm
 "}
 (36,1,1) = {"
@@ -4047,7 +4080,7 @@ fC
 fC
 fC
 fC
-fC
+uL
 xm
 "}
 (37,1,1) = {"
@@ -6831,7 +6864,7 @@ gA
 gA
 gA
 sY
-gA
+jG
 kj
 kj
 hH

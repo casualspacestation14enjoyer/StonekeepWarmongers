@@ -172,7 +172,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 	set category = "ZIZO"
 
 	var/datum/game_mode/chaosmode/C = SSticker.mode
-	var/speak = input("What do you speak of?", "ROGUETOWN") as text|null
+	var/speak = input("What do you speak of?", "WARMONGERS") as text|null
 	if(!speak)
 		return
 	playsound_local(src, 'sound/vo/cult/skvor.ogg', 100)
@@ -248,7 +248,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 			if(path.circle == sigil_type)
 				rituals |= path.name
 
-		var/ritualnameinput = input(user, "Rituals", "ROGUETOWN") as null|anything in rituals
+		var/ritualnameinput = input(user, "Rituals", "WARMONGERS") as null|anything in rituals
 		testing("ritualnameinput [ritualnameinput]")
 		var/datum/ritual/pickritual
 		
@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 		to_chat(src, "<span class='danger'>My hands aren't bloody enough.</span>")
 		return
 
-	var/input = input("Sigil Type", "ROGUETOWN") as null|anything in runes
+	var/input = input("Sigil Type", "WARMONGERS") as null|anything in runes
 	if(!input)
 		return
 	
@@ -419,9 +419,9 @@ GLOBAL_LIST_EMPTY(ritualslist)
 		if(V.special_role == "Zizoid Lackey")
 			possible |= V.current
 
-	var/mob/living/carbon/human/choice = input(src, "Whom do you no longer have use for?", "ROGUETOWN") as null|anything in possible
+	var/mob/living/carbon/human/choice = input(src, "Whom do you no longer have use for?", "WARMONGERS") as null|anything in possible
 	if(choice)
-		var/alert = alert(src, "Are you sure?", "ROGUETOWN", "Yes", "Cancel")
+		var/alert = alert(src, "Are you sure?", "WARMONGERS", "Yes", "Cancel")
 		if(alert == "Yes")
 			visible_message("<span class='danger'>[src] reaches out, ripping up [choice]'s soul!</span>")
 			to_chat(choice, "<span class='userdanger'>I HAVE FAILED MY LEADER! I HAVE FAILED ZIZO! NOTHING ELSE BUT DEATH REMAINS FOR ME NOW!</span>")
@@ -473,7 +473,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 				to_chat(user.mind, "<span class='danger'>\"The veil is too strong to support more than three lackeys.\"</span>")
 				return
 			var/datum/antagonist/zizocultist/PR = user.mind.has_antag_datum(/datum/antagonist/zizocultist)
-			var/alert = alert(user, "YOU WILL BE SHOWN THE TRUTH. DO YOU RESIST? (Resisting: 1 TRI)", "ROGUETOWN", "Yield", "Resist")
+			var/alert = alert(user, "YOU WILL BE SHOWN THE TRUTH. DO YOU RESIST? (Resisting: 1 TRI)", "WARMONGERS", "Yield", "Resist")
 			H.anchored = TRUE
 			if(alert == "Yield")
 				to_chat(H.mind, "<span class='notice'>I see the truth now! It all makes so much sense! They aren't HERETICS! They want the BEST FOR US!</span>")
@@ -644,7 +644,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 
 /obj/item/pactofunity/attack_self(mob/user)
 	. = ..()
-	var/alert = alert(user, "Rip up the pact of unity?", "ROGUETOWN", "RIP", "Cancel")
+	var/alert = alert(user, "Rip up the pact of unity?", "WARMONGERS", "RIP", "Cancel")
 	if(alert == "RIP")
 		user.playsound_local(user, 'sound/foley/cloth_rip.ogg', 50)
 		to_chat(signed.mind, "<span class='userdanger'>I FAILED! MY LIFE DWINDLES!</span>")
@@ -665,7 +665,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 		return
 	if(!H.stat)
 		to_chat(user, "<span class='info'>I courteously offer \the [src] to [H].</span>")
-		if(alert(H, "Sign the pact with your blood?", "ROGUETOWN", "Yes", "No") != "Yes")
+		if(alert(H, "Sign the pact with your blood?", "WARMONGERS", "Yes", "No") != "Yes")
 			return
 		if(H.stat)
 			return
@@ -759,7 +759,7 @@ GLOBAL_LIST_EMPTY(ritualslist)
 	for(var/obj/item/paper/P in C.contents)
 		var/info = ""
 		info = sanitize(P.info)
-		var/input = stripped_input(user, "To whom do we send this message?", "ROGUETOWN")
+		var/input = stripped_input(user, "To whom do we send this message?", "WARMONGERS")
 		if(!input)
 			return
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)

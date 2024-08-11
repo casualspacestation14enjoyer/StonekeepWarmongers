@@ -220,7 +220,8 @@
 		return
 
 	if(user?.used_intent.arc_check())
-		target = get_turf(target)
+		if(SSticker.warfare_ready_to_die) // Dumb and stupid check for not allowing people to shoot past barriers of fairness.
+			target = get_turf(target)
 
 	//Exclude lasertag guns from the TRAIT_CLUMSY check.
 	if(clumsy_check)

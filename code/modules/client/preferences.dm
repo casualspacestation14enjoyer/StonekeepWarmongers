@@ -1901,7 +1901,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "Roguetown") as null|anything in crap
+					var/result = input(user, "Select a race", "WARMONGERS") as null|anything in crap
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -1920,7 +1920,7 @@ Slots: [job.spawn_positions]</span>
 
 				if("charflaw")
 					var/list/coom = GLOB.character_flaws.Copy()
-					var/result = input(user, "Select a flaw", "Roguetown") as null|anything in coom
+					var/result = input(user, "Select a flaw", "WARMONGERS") as null|anything in coom
 					if(result)
 						if(result == "Love-Fiend")
 							if(!user.can_do_sex())
@@ -2350,7 +2350,7 @@ Slots: [job.spawn_positions]</span>
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A HERO","ROGUETOWN") as null|anything in choices
+					var/choice = input(user, "CHOOSE A HERO","WARMONGERS") as null|anything in choices
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))

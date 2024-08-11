@@ -14,6 +14,8 @@
 
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
+		if(loaded)
+			return
 		user.visible_message("<span class='notice'>\The [user] begins loading \the [I] into \the [src].</span>")
 		if(!do_after(user, 5 SECONDS, TRUE, src))
 			return
@@ -41,7 +43,7 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
-	loaded.fire_casing(get_ranged_target_turf(src, dir, 30), firer, null, null, null, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
+	loaded.fire_casing(get_ranged_target_turf(src, dir, 30), firer, null, FALSE, FALSE, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), 0,  src)
 	loaded = null
 	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)

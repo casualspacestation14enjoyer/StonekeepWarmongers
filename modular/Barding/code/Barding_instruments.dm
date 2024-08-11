@@ -56,7 +56,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(!playing)
-		var/curfile = input(user, "Which song?", "Roguetown", name) as null|anything in song_list
+		var/curfile = input(user, "Which song?", "WARMONGERS", name) as null|anything in song_list
 		if(!user)
 			return
 		if(user.mind)
@@ -218,3 +218,46 @@
 	"Song 2" = 'modular/Barding/sound/instruments/drum (2).ogg',
 	"Song 3" = 'modular/Barding/sound/instruments/drum (3).ogg',
 	"Snare drum" = 'modular/Barding/sound/instruments/drum (4).ogg')
+
+/obj/item/rogue/signaltrumpet
+	name = "brass signaler"
+	desc = "Shout into the void and pray and hope someone hears you. Used by lost hunters or rich nobles to try and find rescue, proven to be ineffective that way due to the fact that bandits are generally faster than other hunters or nobles. Now has new use as a military device to signal troops orders over long distances."
+	var/attuned = "TEAM"
+	var/message_cooldown
+	icon = 'icons/obj/musician.dmi'
+	icon_state = "trumpet"
+
+/obj/item/rogue/signaltrumpet/attack_right(mob/user)
+	. = ..()
+	var/attunemet = input(user, "What military encoding do you want to use?", "WARMONGERS", "TEAM") as anything in list("TEAM", "UNIVERSAL")
+	attuned = attunemet
+	to_chat(user, "<span class='notice'>You decide to use \the \"[attuned]\" military encoding.</span>")
+
+/obj/item/rogue/signaltrumpet/attack_self(mob/user)
+	. = ..()
+	if(message_cooldown <= world.time)
+		message_cooldown = world.time + 20 SECONDS
+		var/message = stripped_input(user, "Shout your message, keep in mind one messsage can be so long.", "WARMONGERS", null, MAX_NAME_LEN) as text
+		message = sanitize(message)
+
+		if(attuned == "UNIVERSAL")
+			for(var/mob/M in GLOB.player_list)
+				if(M.can_hear())
+					to_chat(M, "<br><span class='alert'>[message]</span>")
+					M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+		else
+			if(istype(SSticker.mode, /datum/game_mode/warfare))
+				var/datum/game_mode/warfare/C = SSticker.mode
+				if(!ishuman(user))
+					return
+				var/mob/living/carbon/human/H = user
+				var/team
+				switch(H.warfare_faction)
+					if(BLUE_WARTEAM)
+						team = C.grenzels
+					if(RED_WARTEAM)
+						team = C.heartfelts
+				for(var/mob/M in team)
+					if(M.can_hear())
+						to_chat(M, "<br><span class='alert'>[message]</span>")
+						M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)

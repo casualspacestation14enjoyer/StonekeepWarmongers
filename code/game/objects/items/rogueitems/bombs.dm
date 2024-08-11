@@ -13,7 +13,36 @@
 	var/flame_impact = 1
 	var/fuze = 50
 	var/lit = FALSE
-	var/prob2fail = 23
+	var/prob2fail = 5
+
+
+/obj/item/bomb/smoke
+	name = "smoke bomb"
+	desc = "Smoke, in a bottle. You're not quite sure how this one works."
+	fuze = 25
+	light_impact = 0
+	flame_impact = 0
+
+/obj/item/bomb/smoke/explode(skipprob)
+	STOP_PROCESSING(SSfastprocess, src)
+	var/turf/T = get_turf(src)
+	if(T)
+		if(lit)
+			if(!skipprob && prob(prob2fail))
+				snuff()
+			else
+				var/datum/effect_system/smoke_spread/bad/smoke = new
+				smoke.set_up(4, src)
+				smoke.start()
+				playsound(src.loc, 'sound/items/firelight.ogg', 100)
+				qdel(smoke)
+		else
+			if(prob(prob2fail))
+				snuff()
+			else
+				playsound(T, 'sound/items/firesnuff.ogg', 100)
+				new /obj/item/shard (T)
+	qdel(src)
 
 /*
 /obj/item/bomb/dropped(mob/user, silent)

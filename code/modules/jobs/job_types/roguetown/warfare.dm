@@ -45,6 +45,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	head = /obj/item/clothing/head/roguetown/crownred
+	backl = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/heartfelt
@@ -53,6 +54,7 @@
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)
@@ -116,12 +118,11 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
-		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	else
 		head = /obj/item/clothing/head/roguetown/helmet
-		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -370,6 +371,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	head = /obj/item/clothing/head/roguetown/crownblu
+	backl = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/lordcloak
@@ -378,6 +380,7 @@
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)

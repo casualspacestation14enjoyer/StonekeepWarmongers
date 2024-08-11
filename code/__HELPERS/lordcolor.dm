@@ -34,11 +34,11 @@ GLOBAL_VAR(lordsecondary)
 "MAJENTA"="#962e5c")
 	var/prim
 	var/sec
-	var/choice = input(src, "Choose a Primary Color", "ROGUETOWN") as anything in lordcolors
+	var/choice = input(src, "Choose a Primary Color", "WARMONGERS") as anything in lordcolors
 	if(choice)
 		prim = lordcolors[choice]
 		lordcolors -= choice
-	choice = input(src, "Choose a Secondary Color", "ROGUETOWN") as anything in lordcolors
+	choice = input(src, "Choose a Secondary Color", "WARMONGERS") as anything in lordcolors
 	if(choice)
 		sec = lordcolors[choice]
 	if(!prim || !sec)

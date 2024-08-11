@@ -287,6 +287,24 @@
 	armor_penetration = 100
 	speed = 0.1
 
+/obj/projectile/bullet/fragment
+	name = "smaller lead ball"
+	desc = "Haha. You're not able to see this!"
+	damage = 25
+	damage_type = BRUTE
+	woundclass = BCLASS_BLUNT
+	range = 30
+	jitter = 5
+	eyeblur = 3
+	stun = 1
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
+	flag = "bullet"
+	armor_penetration = 100
+	speed = 0.5
+
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "lead ball"
 	desc = "A round lead shot, simple and spherical."
@@ -337,3 +355,10 @@
 	possible_item_intents = list(/datum/intent/use)
 	max_integrity = 0
 	force = 20
+
+/obj/item/ammo_casing/caseless/rogue/cball/grapeshot
+	name = "berryshot"
+	desc = "A large pouch of smaller lead balls. Not as complex and not as spherical."
+	icon_state = "grapeshot" // NEEDS SPRITE
+	dropshrink = 0.5
+	projectile_type = /obj/projectile/bullet/fragment

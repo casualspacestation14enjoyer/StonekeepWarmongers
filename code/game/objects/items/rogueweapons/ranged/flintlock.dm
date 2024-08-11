@@ -79,6 +79,8 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	icon_state = "longgun_b"
+	randomspread = 1
+	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)

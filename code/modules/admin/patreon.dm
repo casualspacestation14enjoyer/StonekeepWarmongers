@@ -246,7 +246,7 @@ GLOBAL_LIST_EMPTY(anonymize)
 	else
 		if(alert(src, "Enable Anonymize? This will hide your BYOND name from anyone except \
 		Dungeon Masters while playing here, useful for dealing with negative OOC bias or \
-		maintaining privacy from other BYOND users.", "ROGUETOWN", "YES", "NO") == "YES")
+		maintaining privacy from other BYOND users.", "WARMONGERS", "YES", "NO") == "YES")
 			if(GLOB.respawncounts[client.ckey])
 				to_chat(src, "<span class='warning'>You have already spawned.</span>")
 				return
@@ -284,10 +284,10 @@ GLOBAL_LIST_EMPTY(temporary_donators)
 	if(client)
 		if(client.patreonlevel())
 			return
-	var/name = input("Enter your patreon DISPLAY NAME exactly as it appears on Patreon.","ROGUETOWN") as text|null
+	var/name = input("Enter your patreon DISPLAY NAME exactly as it appears on Patreon.","WARMONGERS") as text|null
 	if(!name)
 		return
-	var/email = input("Enter your patreon EMAIL ADDRESS exactly as it appears on Patreon.","ROGUETOWN") as text|null
+	var/email = input("Enter your patreon EMAIL ADDRESS exactly as it appears on Patreon.","WARMONGERS") as text|null
 	if(!email)
 		return
 	if(!patreon_lookup(name) || !patreon_lookup(email) || !findtext(email, "@"))

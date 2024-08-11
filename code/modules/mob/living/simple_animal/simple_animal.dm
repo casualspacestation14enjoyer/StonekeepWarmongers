@@ -750,7 +750,7 @@ mob/living/simple_animal/handle_fire()
 	if(M.mind)
 		if(amt)
 			if(amt <= 3)
-				time2mount = 40 - (amt * 10)
+				time2mount = 40 - (amt * 20)
 			else
 				time2mount = 0 // Instant at Expert and above
 		else
@@ -831,9 +831,9 @@ mob/living/simple_animal/handle_fire()
 			if(user.mind)
 				var/amt = user.mind.get_skill_level(/datum/skill/misc/riding)
 				if(amt)
-					riding_datum.vehicle_move_delay -= 5
+					riding_datum.vehicle_move_delay -= 7
 				else
-					riding_datum.vehicle_move_delay -= 3
+					riding_datum.vehicle_move_delay -= 4
 			if(loc != oldloc)
 				var/obj/structure/mineral_door/MD = locate() in loc
 				if(MD && !MD.ridethrough)

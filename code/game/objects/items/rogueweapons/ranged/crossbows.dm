@@ -51,6 +51,7 @@
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
+	chargetime = 10
 
 /datum/intent/shoot/musket/arc
 	name = "arc"
@@ -67,10 +68,11 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 18
-		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3)
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3.5)
 		//per block
 		newtime = newtime + 20
-		newtime = newtime - (mastermob.STAPER)
+		// Perception aint gonna help you with loading a musket, bud
+		//newtime = newtime - (mastermob.STAPER)
 		if(newtime > 0)
 			return newtime
 		else

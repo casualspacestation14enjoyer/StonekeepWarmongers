@@ -159,7 +159,7 @@
 /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "coat of armor"
-	desc = "A lordly coat of armor."
+	desc = "A lordly coat of armor, made to be light and unrestrictive."
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
 	icon_state = "heartfelt"
 	item_state = "heartfelt"
@@ -167,10 +167,10 @@
 	allowed_sex = list(MALE)
 	nodismemsleeves = TRUE
 	blocking_behavior = null
-	max_integrity = 150
+	max_integrity = 100
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_MEDIUM
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/hand
 	slot_flags = ITEM_SLOT_ARMOR
@@ -417,6 +417,9 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
 	color = "#8747b1"
+
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
+	color = "#3c3a38"
 
 /obj/item/clothing/suit/roguetown/armor/workervest
 	name = "striped tunic"

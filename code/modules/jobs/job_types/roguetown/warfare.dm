@@ -18,9 +18,10 @@
 
 /datum/job/roguetown/warfare/red/lord
 	title = "Heartfelt Lord"
-	tutorial = "todo"
+	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. Thankfully, most of the enemy is tied up elsewhere, maybe you might have a chance of making it out alive today."
 	department_flag = REDSS
 	flag = REDKING
+	min_pq = -10
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -48,13 +49,16 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
 	pants = /obj/item/clothing/under/roguetown/tights/black
-	cloak = /obj/item/clothing/cloak/heartfelt
-	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
+	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
+	cloak = /obj/item/clothing/cloak/heartfelt
+	if(H.gender == FEMALE)
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red //females cant wear standard armor...
+		cloak = /obj/item/clothing/cloak/raincloak/red //ditto
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)
@@ -76,7 +80,7 @@
 
 /datum/job/roguetown/warfare/red/soldier
 	title = "Heartfelt Infantry"
-	tutorial = "You're treated like shit. The run of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
+	tutorial = "You're treated like shit. The runt of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
 	department_flag = REDSS
 	flag = SOLDIER
 	total_positions = 99
@@ -164,6 +168,13 @@
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	backr = /obj/item/rogueweapon/spear
 	gloves = /obj/item/clothing/gloves/roguetown/angle
+	if(H.dna?.species)
+		if(H.dna.species.id == "human")
+			armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/hand
+		else
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red //nonhumans cannot wear the standard armor
+	if(H.gender == FEMALE)
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red //females cant wear standard armor either...
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
@@ -235,7 +246,7 @@
 	..()
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
@@ -345,9 +356,10 @@
 
 /datum/job/roguetown/warfare/blu/lord
 	title = "Grenzelhoft Lord"
-	tutorial = "todo"
+	tutorial = "A middle-class noble with inspirations for something greater. You've been given charge of a small detachment and were sent directly into the meat grinder. They said it was to build experience, but you know better."
 	department_flag = BLUES
 	flag = BLUKING
+	min_pq = -10
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -375,7 +387,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/lordcloak
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	beltl = /obj/item/quiver/bullets
@@ -404,7 +416,7 @@
 
 /datum/job/roguetown/warfare/blu/soldier
 	title = "Grenzelhoft Infantry"
-	tutorial = "You're treated like shit. The run of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
+	tutorial = "You're treated like shit. The runt of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
 	department_flag = BLUES
 	flag = SOLDIER
 	total_positions = 99
@@ -485,7 +497,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
 	gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves
 	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
+	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
 	backr = /obj/item/rogueweapon/greatsword/zwei

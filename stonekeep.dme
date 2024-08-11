@@ -3234,6 +3234,7 @@
 #include "code\modules\spells\roguetown\monk.dm"
 #include "code\modules\spells\roguetown\priest.dm"
 #include "code\modules\spells\roguetown\spider.dm"
+#include "code\modules\spells\roguetown\warfare.dm"
 #include "code\modules\spells\roguetown\wizard.dm"
 #include "code\modules\spells\roguetown\acolyte\astrata.dm"
 #include "code\modules\spells\roguetown\acolyte\dendor.dm"

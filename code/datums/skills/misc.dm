@@ -37,3 +37,6 @@
 
 /datum/skill/misc/weaving
 	name = "Weaving"
+
+/datum/skill/misc/leadership
+	name = "Leadership"

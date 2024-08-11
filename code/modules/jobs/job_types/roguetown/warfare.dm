@@ -62,11 +62,13 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("intelligence", 3)
 		H.change_stat("endurance", 3)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 2)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 
 ////////////// RED SOLDIERS AND CLASSES /////////////////
 
@@ -280,7 +282,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	head = /obj/item/clothing/head/roguetown/fancyhat
+	head = /obj/item/clothing/head/roguetown/bardhat
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -297,6 +299,40 @@
 		H.change_stat("endurance", -4)
 		H.change_stat("speed", -1)
 		H.change_stat("constitution", -3)
+
+//// OFFICER ////
+
+/datum/advclass/red/officer
+	name = "Officer"
+	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery."
+	outfit = /datum/outfit/job/roguetown/redofficer
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/sword/rapier
+	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/quiver/bullets
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 3, TRUE)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+		H.change_stat("intelligence", 3)
 
 
 
@@ -351,11 +387,13 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("intelligence", 3)
 		H.change_stat("endurance", 3)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 2)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 
 
 
@@ -562,7 +600,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	head = /obj/item/clothing/head/roguetown/fancyhat
+	head = /obj/item/clothing/head/roguetown/bardhat
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -580,3 +618,37 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.change_stat("endurance", -4)
 		H.change_stat("speed", -1)
 		H.change_stat("constitution", -3)
+
+//// OFFICER ////
+
+/datum/advclass/blu/officer
+	name = "Officer"
+	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery."
+	outfit = /datum/outfit/job/roguetown/bluofficer
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/sword/rapier
+	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	head = /obj/item/clothing/head/roguetown/fancyhat
+	backr = /obj/item/quiver/bullets
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 3, TRUE)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+		H.change_stat("intelligence", 3)

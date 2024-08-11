@@ -223,3 +223,25 @@
 	name = "Divine Knowledge"
 	desc = "<span class='nicegreen'>Divine knowledge flows through me.</span>\n"
 	icon_state = "intelligence"
+
+/datum/status_effect/buff/inspired
+	id = "inspired"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired
+	effectedstats = list("speed" = 1,"constitution" = 1,"endurance" = 1)
+	duration = 2 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/inspired
+	name = "Inspired"
+	desc = "<span class='nicegreen'>I'm inspired to fight!</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/inspired/great
+	id = "inspired_great"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired/great
+	effectedstats = list("speed" = 1,"constitution" = 1,"endurance" = 1,"strength" = 1)
+	duration = 3 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/inspired/great
+	name = "Greatly Inspired"
+	desc = "<span class='nicegreen'>I feel very inspired to fight!</span>\n"
+	icon_state = "intelligence"

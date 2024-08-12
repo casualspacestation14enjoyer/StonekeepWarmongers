@@ -812,7 +812,12 @@ mob/living/simple_animal/handle_fire()
 		if(riding_datum.handle_ride(user, direction))
 			riding_datum.vehicle_move_delay = move_to_delay
 			if(user.m_intent == MOVE_INTENT_RUN)
-				riding_datum.vehicle_move_delay -= 1
+				if(user.mind)
+					var/amt = user.mind.get_skill_level(/datum/skill/misc/riding)
+					if(amt > 3) //for the future, if we give anyone expert skilled riding
+						riding_datum.vehicle_move_delay -= 0.5
+					else
+						riding_datum.vehicle_move_delay -= 1
 				if(loc != oldloc)
 					var/turf/open/T = loc
 					if(!do_footstep && T.footstep)
@@ -831,21 +836,27 @@ mob/living/simple_animal/handle_fire()
 			if(user.mind)
 				var/amt = user.mind.get_skill_level(/datum/skill/misc/riding)
 				if(amt)
-					riding_datum.vehicle_move_delay -= 7
-				else
-					riding_datum.vehicle_move_delay -= 4
+					riding_datum.vehicle_move_delay -= amt/2
+				riding_datum.vehicle_move_delay -= 4
 			if(loc != oldloc)
 				var/obj/structure/mineral_door/MD = locate() in loc
-				if(MD && !MD.ridethrough)
+				var/obj/structure/stairs/ST = locate() in loc
+				if(MD && !MD.ridethrough || ST)
 					if(isliving(user))
 						var/mob/living/L = user
 						var/strong_thighs = L.mind.get_skill_level((/datum/skill/misc/riding))
 						if(prob(60 - (strong_thighs * 10))) // Legendary riders do not fall!
-							unbuckle_mob(L)
-							L.Paralyze(50)
-							L.Stun(50)
-							playsound(L.loc, 'sound/foley/zfall.ogg', 100, FALSE)
-							L.visible_message("<span class='danger'>[L] falls off [src]!</span>")
+							if(MD)
+								unbuckle_mob(L)
+								L.Paralyze(50)
+								L.Stun(50)
+								playsound(L.loc, 'sound/foley/zfall.ogg', 100, FALSE)
+								L.visible_message("<span class='danger'>[L] falls off [src]!</span>")
+							else //stumbling on stairs is less punishing than hitting the top of a door
+								unbuckle_mob(L)
+								L.Stun(30)
+								L.visible_message("<span class='danger'>[L] is shaken off [src] as it stumbles from the stairs!</span>")
+
 
 /mob/living/simple_animal/buckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
 	. = ..()

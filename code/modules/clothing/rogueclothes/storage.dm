@@ -51,6 +51,11 @@
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 
+/obj/item/storage/belt/rogue/leather/bullet/PopulateContents()
+	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
+
 /obj/item/storage/belt/rogue/leather/plaquegold
 	name = "plaque belt"
 	icon_state = "goldplaque"

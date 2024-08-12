@@ -812,7 +812,12 @@ mob/living/simple_animal/handle_fire()
 		if(riding_datum.handle_ride(user, direction))
 			riding_datum.vehicle_move_delay = move_to_delay
 			if(user.m_intent == MOVE_INTENT_RUN)
-				riding_datum.vehicle_move_delay -= 1
+				if(user.mind)
+					var/amt = user.mind.get_skill_level(/datum/skill/misc/riding)
+					if(amt > 3) //for the future, if we give anyone expert skilled riding
+						riding_datum.vehicle_move_delay -= 0.5
+					else
+						riding_datum.vehicle_move_delay -= 1
 				if(loc != oldloc)
 					var/turf/open/T = loc
 					if(!do_footstep && T.footstep)

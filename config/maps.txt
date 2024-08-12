@@ -24,6 +24,11 @@ map laststand
 	votable
 endmap
 
+map murderfield
+	#voteweight 1.5
+	votable
+endmap
+
 map rogueworld
 	default
 	#voteweight 1.5

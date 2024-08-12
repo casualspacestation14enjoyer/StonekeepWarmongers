@@ -138,6 +138,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
@@ -184,6 +185,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 1)
@@ -249,13 +251,13 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
 	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/rogue/leather/bullet
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/ammo_casing/caseless/rogue/bullet = 3)
+	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/flint = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE) //average bow skills, for silent killings
@@ -343,6 +345,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
 
@@ -474,6 +477,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
@@ -509,6 +513,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.change_stat("strength", 2)
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 2)
@@ -665,5 +670,6 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)

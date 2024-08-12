@@ -243,7 +243,7 @@
 		if(attuned == "UNIVERSAL")
 			for(var/mob/M in GLOB.player_list)
 				if(M.can_hear())
-					to_chat(M, "<br><span class='alert'>[message]</span>")
+					to_chat(M, "<br><span class='alert'>Incoming universal message: [message]</span>")
 					M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 		else
 			if(istype(SSticker.mode, /datum/game_mode/warfare))
@@ -259,5 +259,5 @@
 						team = C.heartfelts
 				for(var/mob/M in team)
 					if(M.can_hear())
-						to_chat(M, "<br><span class='alert'>[message]</span>")
+						to_chat(M, "<br><span class='alert'>Incoming team message: [message]</span>")
 						M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)

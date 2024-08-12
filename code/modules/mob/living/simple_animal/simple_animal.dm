@@ -812,7 +812,7 @@ mob/living/simple_animal/handle_fire()
 		if(riding_datum.handle_ride(user, direction))
 			riding_datum.vehicle_move_delay = move_to_delay
 			if(user.m_intent == MOVE_INTENT_RUN)
-				riding_datum.vehicle_move_delay -= 0.5 //considering you cant run into walls, running shouldnt give that much of a bonus
+				riding_datum.vehicle_move_delay -= 1
 				if(loc != oldloc)
 					var/turf/open/T = loc
 					if(!do_footstep && T.footstep)

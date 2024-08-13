@@ -149,7 +149,7 @@
 		var/mob/living/L = usr
 		if(L.stat != DEAD)
 			if(alert("Are you done living?", "", "Yes", "No") == "Yes")
-				if(!L.succumb_timer || (world.time < L.succumb_timer + 30 SECONDS) )
+				if(!L.succumb_timer || (world.time < L.succumb_timer + 1 SECONDS) )
 					var/ttime =  round(((L.succumb_timer + 30 SECONDS) - world.time) / 10)
 					to_chat(L, "<span class='redtext'>I'm not dead enough yet. [ttime]</span>")
 				else

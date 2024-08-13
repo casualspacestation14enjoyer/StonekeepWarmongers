@@ -544,6 +544,11 @@
 		var/obj/item/hand_labeler/labeler = I
 		if(labeler.mode)
 			return FALSE
+	if(istype(I, /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock))
+		var/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/gun = I
+		if(gun.cocked && gun.rammed)
+			to_chat(M, "<span class='notice'>You can't place a primed firearm inside there, it will go off.</span>")
+			return FALSE
 //	. = TRUE //no afterattack
 	if(iscyborg(M))
 		return

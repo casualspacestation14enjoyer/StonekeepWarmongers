@@ -325,24 +325,26 @@
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj" // No one sees it anyway. I think.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball
-	range = 30
+	range = 999
 	jitter = 5
 	stun = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 0
+	dismemberment = 300
+	spread = 0
 	woundclass = BCLASS_SMASH
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 100
-	speed = 0.4
+	speed = 0.8
 
-/obj/projectile/bullet/reusable/cannonball/on_hit(atom/target)
-	. = ..()
+/obj/projectile/bullet/reusable/cannonball/on_hit(atom/target,blocked = FALSE)
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
 	explosion(target, light_impact_range = 2, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+	..(target, blocked)
 
 /obj/item/ammo_casing/caseless/rogue/cball
 	name = "large lead ball"
@@ -353,7 +355,9 @@
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)
-	max_integrity = 0
+	max_integrity = 1
+	randomspread = 0
+	variance = 0
 	force = 20
 
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot

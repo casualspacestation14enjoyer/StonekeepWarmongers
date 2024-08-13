@@ -30,10 +30,6 @@
 	dir = 1
 	},
 /area/rogue/outdoors)
-"bA" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors)
 "bM" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
@@ -116,6 +112,15 @@
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
+/area/rogue/outdoors)
+"hv" = (
+/obj/effect/landmark/mapGenerator/sunlights{
+	endTurfX = 45;
+	endTurfY = 85;
+	endTurfZ = 3;
+	startTurfZ = 3
+	},
+/turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "hL" = (
 /obj/structure/throne,
@@ -220,17 +225,21 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
-"lX" = (
-/obj/machinery/light/rogue/lanternpost/fixed{
-	dir = 1
-	},
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors)
 "mk" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
+/area/rogue/outdoors)
+"mz" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "mZ" = (
 /turf/closed/wall/mineral/rogue/wooddark,
@@ -273,6 +282,12 @@
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
+/area/rogue/outdoors)
+"oe" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "ok" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -353,6 +368,10 @@
 	dir = 1
 	},
 /turf/open/transparent/openspace,
+/area/rogue/outdoors)
+"qJ" = (
+/obj/machinery/light/rogue/lanternpost/fixed,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "rd" = (
 /turf/open/floor/rogue/twig,
@@ -476,12 +495,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
-"xb" = (
-/obj/machinery/light/rogue/lanternpost/fixed{
-	dir = 1
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "xt" = (
 /obj/structure/chair/stool/rogue{
 	dir = 1;
@@ -541,6 +554,18 @@
 /obj/structure/roguetent,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
+"Au" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/dirt/road{
+	dir = 1
+	},
+/area/rogue/outdoors)
 "AK" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
@@ -574,13 +599,6 @@
 /obj/item/quiver/bullets,
 /obj/item/quiver/bullets,
 /turf/open/floor/rogue/twig,
-/area/rogue/outdoors)
-"Cz" = (
-/obj/structure/flora/roguegrass,
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/rogue/grass{
-	dir = 1
-	},
 /area/rogue/outdoors)
 "CF" = (
 /obj/structure/table/wood/plain,
@@ -628,6 +646,13 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
+"FX" = (
+/obj/structure/flora/roguegrass,
+/obj/item/flashlight/flare/torch/metal,
+/turf/open/floor/rogue/grass{
+	dir = 1
+	},
+/area/rogue/outdoors)
 "Gi" = (
 /obj/structure/chair/stool/rogue{
 	pixel_y = 5
@@ -637,6 +662,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"GQ" = (
+/obj/machinery/light/rogue/lanternpost/fixed,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "GW" = (
 /obj/structure/flora/roguetree/stump/burnt,
 /turf/open/floor/rogue/dirt/road,
@@ -644,21 +673,6 @@
 "He" = (
 /obj/structure/fermenting_barrel/beer,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
-"Hs" = (
-/obj/effect/landmark/mapGenerator/sunlights{
-	endTurfX = 45;
-	endTurfY = 85;
-	endTurfZ = 3;
-	startTurfZ = 3
-	},
-/turf/open/transparent/openspace,
-/area/rogue/outdoors)
-"HL" = (
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/rogue/dirt/road{
-	dir = 1
-	},
 /area/rogue/outdoors)
 "HM" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -724,17 +738,9 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
-"JG" = (
-/obj/machinery/light/rogue/lanternpost/fixed,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors)
 "JM" = (
 /obj/structure/cannon,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors)
-"Kk" = (
-/obj/machinery/light/rogue/firebowl/standing,
-/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Kq" = (
 /obj/structure/table/wood,
@@ -794,10 +800,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/town/roofs)
-"MS" = (
-/obj/machinery/light/rogue/lanternpost/fixed,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "Nd" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,
 /turf/open/floor/rogue/dirt/road,
@@ -825,6 +827,18 @@
 	dir = 1
 	},
 /area/rogue/indoors/town)
+"On" = (
+/obj/item/flashlight/flare/torch/metal,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"OO" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"OW" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors)
 "Ph" = (
 /obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/grass,
@@ -853,6 +867,12 @@
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
+/area/rogue/outdoors)
+"QY" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "QZ" = (
 /turf/open/floor/rogue/cobblerock,
@@ -903,6 +923,12 @@
 	dir = 1;
 	pixel_x = 3
 	},
+/turf/open/floor/rogue/dirt/road{
+	dir = 1
+	},
+/area/rogue/outdoors)
+"UB" = (
+/obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
@@ -1059,10 +1085,6 @@
 /obj/structure/chair/stool/rogue{
 	pixel_x = -3
 	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
-"Zo" = (
-/obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Zt" = (
@@ -2729,7 +2751,7 @@ mZ
 mZ
 mZ
 KY
-Zo
+On
 KY
 wU
 wU
@@ -2747,9 +2769,9 @@ QA
 QA
 QZ
 QA
-HL
+UB
 Vi
-HL
+UB
 Vi
 NE
 QA
@@ -2796,7 +2818,7 @@ KY
 KY
 AK
 AK
-MS
+GQ
 QZ
 QZ
 QZ
@@ -2819,7 +2841,7 @@ ne
 KY
 KY
 AK
-Zo
+On
 KY
 QZ
 QZ
@@ -2835,7 +2857,7 @@ QA
 QZ
 QA
 NE
-Cz
+FX
 QA
 QA
 QA
@@ -2844,7 +2866,7 @@ dS
 Vi
 AK
 AK
-JG
+qJ
 AK
 AK
 AK
@@ -2870,7 +2892,7 @@ QZ
 QZ
 QZ
 KY
-Kk
+OW
 KY
 KY
 NL
@@ -2894,7 +2916,7 @@ KY
 KY
 AK
 AK
-JG
+qJ
 KY
 KY
 AK
@@ -2904,7 +2926,7 @@ mZ
 mZ
 wU
 KY
-Zo
+On
 Be
 KY
 KY
@@ -2912,7 +2934,7 @@ QZ
 ex
 KY
 KY
-KY
+mz
 "}
 (22,1,1) = {"
 QZ
@@ -2946,13 +2968,13 @@ QZ
 AK
 QZ
 QZ
-JG
+qJ
 QZ
 QZ
 QZ
 QZ
 AK
-xb
+QY
 KY
 KY
 QZ
@@ -2963,7 +2985,7 @@ KY
 AK
 AK
 KY
-JG
+qJ
 KY
 KY
 KY
@@ -3002,7 +3024,7 @@ iI
 QZ
 "}
 (23,1,1) = {"
-bA
+OO
 QZ
 QZ
 QZ
@@ -3086,7 +3108,7 @@ QZ
 QZ
 QZ
 QZ
-bA
+OO
 "}
 (24,1,1) = {"
 QZ
@@ -3148,7 +3170,7 @@ AK
 AK
 KY
 KY
-xb
+QY
 KY
 KY
 QZ
@@ -3196,12 +3218,12 @@ AK
 AK
 KY
 KY
-lX
+oe
 AK
 Bx
 KY
 KY
-xb
+QY
 AK
 KY
 AK
@@ -3218,7 +3240,7 @@ KY
 NL
 KY
 KY
-Kk
+OW
 KY
 QZ
 QZ
@@ -3251,7 +3273,7 @@ AK
 lQ
 AK
 KY
-Zo
+On
 KY
 wU
 wU
@@ -3264,15 +3286,15 @@ NZ
 "}
 (26,1,1) = {"
 ac
-QA
+Au
 Vi
 QZ
 QZ
 QA
-HL
+UB
 Vi
 QA
-HL
+UB
 Wr
 mZ
 mZ
@@ -3339,9 +3361,9 @@ lQ
 KY
 wU
 AK
-Zo
+On
 AK
-Zo
+On
 KY
 QZ
 KY
@@ -3358,7 +3380,7 @@ QA
 Vi
 NE
 NE
-HL
+UB
 QA
 QA
 mZ
@@ -3418,7 +3440,7 @@ KY
 AK
 Bx
 AK
-lX
+oe
 AK
 AK
 AK
@@ -9004,7 +9026,7 @@ Qv
 Qv
 Qv
 Qv
-Hs
+hv
 "}
 (2,1,3) = {"
 Qv

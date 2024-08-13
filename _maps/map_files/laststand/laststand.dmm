@@ -363,6 +363,10 @@
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
+"iw" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "iD" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -660,6 +664,15 @@
 "pc" = (
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
+"pk" = (
+/obj/effect/landmark/mapGenerator/sunlights{
+	endTurfX = 45;
+	endTurfY = 85;
+	endTurfZ = 3;
+	startTurfZ = 3
+	},
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "pm" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/structure/closet/crate/roguecloset/inn/south{
@@ -1323,15 +1336,6 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
-"El" = (
-/obj/effect/landmark/mapGenerator/sunlights{
-	endTurfX = 45;
-	endTurfY = 85;
-	endTurfZ = 3;
-	startTurfZ = 3
-	},
-/turf/open/transparent/openspace,
-/area/rogue/outdoors)
 "EA" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -4732,7 +4736,7 @@ Wa
 Wa
 Wa
 aY
-KN
+iw
 lN
 lN
 qm
@@ -5868,7 +5872,7 @@ KN
 qY
 mA
 jI
-KN
+iw
 "}
 (43,1,1) = {"
 Nl
@@ -5954,7 +5958,7 @@ EA
 KN
 ad
 KN
-KN
+iw
 KN
 "}
 (44,1,1) = {"
@@ -10133,7 +10137,7 @@ yk
 yk
 yk
 yk
-El
+pk
 "}
 (2,1,3) = {"
 BB

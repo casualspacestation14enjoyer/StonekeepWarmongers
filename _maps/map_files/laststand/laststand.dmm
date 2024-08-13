@@ -815,10 +815,6 @@
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
-"tc" = (
-/obj/effect/sunlight/ultra,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors)
 "td" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/c,
@@ -1327,6 +1323,15 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
+"El" = (
+/obj/effect/landmark/mapGenerator/sunlights{
+	endTurfX = 45;
+	endTurfY = 85;
+	endTurfZ = 3;
+	startTurfZ = 3
+	},
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "EA" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -10128,7 +10133,7 @@ yk
 yk
 yk
 yk
-yk
+El
 "}
 (2,1,3) = {"
 BB
@@ -11984,7 +11989,7 @@ yk
 yk
 yk
 yk
-tc
+yk
 yk
 yk
 yk
@@ -12083,7 +12088,7 @@ yk
 yk
 yk
 yk
-tc
+yk
 yk
 yk
 yk

@@ -30,6 +30,10 @@
 	dir = 1
 	},
 /area/rogue/outdoors)
+"bA" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "bM" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
@@ -116,10 +120,6 @@
 "hL" = (
 /obj/structure/throne,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors)
-"if" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "ih" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -220,6 +220,12 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
+"lX" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "mk" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt/road{
@@ -310,10 +316,6 @@
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
-"qp" = (
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "qz" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -395,10 +397,6 @@
 /obj/effect/landmark/start/grenzellord,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
-"sG" = (
-/obj/machinery/light/rogue/firebowl/standing,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors)
 "sH" = (
 /obj/structure/well,
 /turf/open/floor/rogue/dirt/road{
@@ -424,12 +422,6 @@
 "ue" = (
 /obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors)
-"uj" = (
-/obj/machinery/light/rogue/lanternpost/fixed{
-	dir = 1
-	},
-/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "un" = (
 /obj/structure/rack/rogue,
@@ -457,10 +449,6 @@
 /obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
-"wp" = (
-/obj/effect/sunlight/ultra,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors)
 "wt" = (
 /obj/effect/landmark/blureinforcement,
 /turf/open/floor/rogue/cobblerock,
@@ -487,6 +475,12 @@
 "wU" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"xb" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "xt" = (
 /obj/structure/chair/stool/rogue{
@@ -581,6 +575,13 @@
 /obj/item/quiver/bullets,
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors)
+"Cz" = (
+/obj/structure/flora/roguegrass,
+/obj/item/flashlight/flare/torch/metal,
+/turf/open/floor/rogue/grass{
+	dir = 1
+	},
+/area/rogue/outdoors)
 "CF" = (
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/food/snacks/rogue/meat/salami/slice,
@@ -627,13 +628,6 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
-"FS" = (
-/obj/structure/flora/roguegrass,
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/rogue/grass{
-	dir = 1
-	},
-/area/rogue/outdoors)
 "Gi" = (
 /obj/structure/chair/stool/rogue{
 	pixel_y = 5
@@ -643,12 +637,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
-"GS" = (
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/rogue/dirt/road{
-	dir = 1
-	},
-/area/rogue/outdoors)
 "GW" = (
 /obj/structure/flora/roguetree/stump/burnt,
 /turf/open/floor/rogue/dirt/road,
@@ -657,11 +645,20 @@
 /obj/structure/fermenting_barrel/beer,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
-"Hz" = (
-/obj/machinery/light/rogue/lanternpost/fixed{
+"Hs" = (
+/obj/effect/landmark/mapGenerator/sunlights{
+	endTurfX = 45;
+	endTurfY = 85;
+	endTurfZ = 3;
+	startTurfZ = 3
+	},
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
+"HL" = (
+/obj/item/flashlight/flare/torch/metal,
+/turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
-/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "HM" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -679,10 +676,6 @@
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/food/snacks/rogue/raisinbreadslice,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
-"Ij" = (
-/obj/effect/sunlight/ultra,
-/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
 "Il" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -731,9 +724,17 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"JG" = (
+/obj/machinery/light/rogue/lanternpost/fixed,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "JM" = (
 /obj/structure/cannon,
 /turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Kk" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Kq" = (
 /obj/structure/table/wood,
@@ -793,16 +794,12 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/town/roofs)
-"MQ" = (
+"MS" = (
 /obj/machinery/light/rogue/lanternpost/fixed,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Nd" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
-"Ne" = (
-/obj/effect/sunlight/ultra,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "NE" = (
@@ -939,10 +936,6 @@
 	dir = 1
 	},
 /area/rogue/outdoors)
-"Vk" = (
-/obj/machinery/light/rogue/lanternpost/fixed,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors)
 "Vl" = (
 /obj/structure/warfarebarrier,
 /turf/open/floor/rogue/cobblerock,
@@ -957,10 +950,6 @@
 	pixel_x = 5
 	},
 /turf/open/floor/rogue/twig,
-/area/rogue/outdoors)
-"VE" = (
-/obj/effect/sunlight/ultra,
-/turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "VP" = (
 /obj/structure/table/wood/plain,
@@ -1026,10 +1015,6 @@
 /obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
-"XC" = (
-/obj/effect/sunlight/ultra,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors)
 "XE" = (
 /obj/structure/rack/rogue,
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow{
@@ -1074,6 +1059,10 @@
 /obj/structure/chair/stool/rogue{
 	pixel_x = -3
 	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"Zo" = (
+/obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Zt" = (
@@ -1510,7 +1499,7 @@ Kv
 KY
 KY
 Kv
-AK
+Bx
 wU
 wU
 AK
@@ -1590,7 +1579,7 @@ AK
 Bx
 AK
 KY
-AK
+Bx
 Bx
 Kv
 KY
@@ -1667,7 +1656,7 @@ AK
 wU
 AK
 AK
-AK
+Bx
 AK
 AK
 Bx
@@ -1753,7 +1742,7 @@ AK
 jj
 bM
 AK
-AK
+Bx
 KY
 AK
 AK
@@ -1763,7 +1752,7 @@ AK
 AK
 KY
 AK
-AK
+Bx
 AK
 AK
 KY
@@ -1839,13 +1828,13 @@ AK
 AK
 AK
 wU
-AK
-AK
-wU
-AK
+Bx
 AK
 wU
+Bx
 AK
+wU
+Bx
 AK
 KY
 KY
@@ -1936,7 +1925,7 @@ AK
 KY
 KY
 AK
-AK
+Bx
 KY
 AK
 tZ
@@ -2007,7 +1996,7 @@ KY
 KY
 jj
 AK
-XC
+AK
 Kv
 Bx
 AK
@@ -2019,7 +2008,7 @@ AK
 AK
 Bx
 AK
-AK
+Bx
 KY
 KY
 AK
@@ -2077,7 +2066,7 @@ AK
 KY
 AK
 AK
-XC
+AK
 AK
 KY
 AK
@@ -2165,7 +2154,7 @@ AK
 Be
 AK
 AK
-AK
+Bx
 AK
 KY
 KY
@@ -2189,7 +2178,7 @@ Bx
 AK
 wU
 AK
-AK
+Bx
 AK
 AK
 bM
@@ -2207,7 +2196,7 @@ wU
 AK
 KY
 KY
-Ne
+KY
 AK
 Kv
 KY
@@ -2423,7 +2412,7 @@ KY
 AK
 Kv
 AK
-AK
+Bx
 KY
 KY
 KY
@@ -2552,7 +2541,7 @@ AK
 KY
 KY
 KY
-AK
+Bx
 AK
 wU
 AK
@@ -2696,7 +2685,7 @@ KY
 KY
 AK
 AK
-AK
+Bx
 KY
 KY
 KY
@@ -2740,7 +2729,7 @@ mZ
 mZ
 mZ
 KY
-qp
+Zo
 KY
 wU
 wU
@@ -2758,9 +2747,9 @@ QA
 QA
 QZ
 QA
-GS
+HL
 Vi
-GS
+HL
 Vi
 NE
 QA
@@ -2781,9 +2770,9 @@ KY
 KY
 KY
 AK
+Bx
 AK
-AK
-AK
+Bx
 AK
 KY
 KY
@@ -2807,7 +2796,7 @@ KY
 KY
 AK
 AK
-MQ
+MS
 QZ
 QZ
 QZ
@@ -2830,7 +2819,7 @@ ne
 KY
 KY
 AK
-qp
+Zo
 KY
 QZ
 QZ
@@ -2846,7 +2835,7 @@ QA
 QZ
 QA
 NE
-FS
+Cz
 QA
 QA
 QA
@@ -2855,7 +2844,7 @@ dS
 Vi
 AK
 AK
-Vk
+JG
 AK
 AK
 AK
@@ -2881,7 +2870,7 @@ QZ
 QZ
 QZ
 KY
-sG
+Kk
 KY
 KY
 NL
@@ -2905,7 +2894,7 @@ KY
 KY
 AK
 AK
-Vk
+JG
 KY
 KY
 AK
@@ -2915,7 +2904,7 @@ mZ
 mZ
 wU
 KY
-qp
+Zo
 Be
 KY
 KY
@@ -2957,13 +2946,13 @@ QZ
 AK
 QZ
 QZ
-Vk
+JG
 QZ
 QZ
 QZ
 QZ
 AK
-Hz
+xb
 KY
 KY
 QZ
@@ -2974,7 +2963,7 @@ KY
 AK
 AK
 KY
-Vk
+JG
 KY
 KY
 KY
@@ -3013,10 +3002,10 @@ iI
 QZ
 "}
 (23,1,1) = {"
-if
+bA
 QZ
 QZ
-wp
+QZ
 QZ
 wN
 QZ
@@ -3094,10 +3083,10 @@ QZ
 QZ
 wt
 QZ
-wp
 QZ
 QZ
-if
+QZ
+bA
 "}
 (24,1,1) = {"
 QZ
@@ -3159,7 +3148,7 @@ AK
 AK
 KY
 KY
-Hz
+xb
 KY
 KY
 QZ
@@ -3207,12 +3196,12 @@ AK
 AK
 KY
 KY
-uj
+lX
 AK
 Bx
 KY
 KY
-Hz
+xb
 AK
 KY
 AK
@@ -3229,7 +3218,7 @@ KY
 NL
 KY
 KY
-sG
+Kk
 KY
 QZ
 QZ
@@ -3238,7 +3227,7 @@ QZ
 QZ
 QZ
 KY
-AK
+Bx
 AK
 AK
 AK
@@ -3262,7 +3251,7 @@ AK
 lQ
 AK
 KY
-qp
+Zo
 KY
 wU
 wU
@@ -3280,10 +3269,10 @@ Vi
 QZ
 QZ
 QA
-GS
+HL
 Vi
 QA
-GS
+HL
 Wr
 mZ
 mZ
@@ -3327,7 +3316,7 @@ KY
 KY
 AK
 AK
-AK
+Bx
 AK
 Kv
 Kv
@@ -3350,9 +3339,9 @@ lQ
 KY
 wU
 AK
-qp
+Zo
 AK
-qp
+Zo
 KY
 QZ
 KY
@@ -3369,7 +3358,7 @@ QA
 Vi
 NE
 NE
-GS
+HL
 QA
 QA
 mZ
@@ -3429,7 +3418,7 @@ KY
 AK
 Bx
 AK
-uj
+lX
 AK
 AK
 AK
@@ -3561,7 +3550,7 @@ AK
 AK
 Bx
 AK
-AK
+Bx
 AK
 AK
 Bx
@@ -3639,7 +3628,7 @@ Vi
 Kv
 KY
 wU
-AK
+Bx
 AK
 KY
 Bx
@@ -3658,7 +3647,7 @@ KY
 KY
 KY
 KY
-AK
+Bx
 AK
 KY
 AK
@@ -3673,7 +3662,7 @@ AK
 Bx
 AK
 AK
-AK
+Bx
 AK
 AK
 AK
@@ -3774,7 +3763,7 @@ Bx
 KY
 AK
 AK
-AK
+Bx
 AK
 KY
 AK
@@ -3840,12 +3829,12 @@ KY
 KY
 KY
 AK
-AK
+Bx
 AK
 AK
 KY
 Kv
-AK
+Bx
 AK
 bM
 AK
@@ -3926,10 +3915,10 @@ KY
 KY
 KY
 KY
+Bx
 AK
 AK
-AK
-AK
+Bx
 AK
 Kv
 AK
@@ -4017,7 +4006,7 @@ AK
 KY
 AK
 KY
-AK
+Bx
 AK
 Kv
 AK
@@ -4094,8 +4083,8 @@ AK
 wU
 AK
 AK
-Ne
-AK
+KY
+Bx
 AK
 KY
 AK
@@ -4105,10 +4094,10 @@ AK
 GW
 AK
 AK
+Bx
 AK
 AK
-AK
-AK
+Bx
 wU
 AK
 Bx
@@ -4162,7 +4151,7 @@ AK
 AK
 KY
 wU
-AK
+Bx
 AK
 AK
 KY
@@ -4171,7 +4160,7 @@ AK
 Kv
 AK
 AK
-XC
+AK
 AK
 KY
 KY
@@ -4644,7 +4633,7 @@ KY
 AK
 AK
 Kv
-Ij
+Kv
 KY
 AK
 KY
@@ -5889,7 +5878,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 BG
@@ -5999,7 +5988,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -6289,7 +6278,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -6575,7 +6564,7 @@ Lj
 Lj
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -7541,7 +7530,7 @@ Lj
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 pj
@@ -7792,7 +7781,7 @@ Lj
 Lj
 Lj
 Qv
-VE
+Qv
 Qv
 Lj
 Lj
@@ -8114,7 +8103,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -8176,7 +8165,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -9015,7 +9004,7 @@ Qv
 Qv
 Qv
 Qv
-Qv
+Hs
 "}
 (2,1,3) = {"
 Qv
@@ -9529,7 +9518,7 @@ yT
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -9947,7 +9936,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -10092,7 +10081,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -10327,7 +10316,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -11719,7 +11708,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -11947,7 +11936,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -12007,7 +11996,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv
@@ -12056,7 +12045,7 @@ Qv
 Qv
 Qv
 Qv
-VE
+Qv
 Qv
 Qv
 Qv

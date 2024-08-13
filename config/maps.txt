@@ -29,6 +29,11 @@ map murderfield
 	votable
 endmap
 
+map darkwaters
+	#voteweight 1.5
+	votable
+endmap
+
 map rogueworld
 	default
 	#voteweight 1.5

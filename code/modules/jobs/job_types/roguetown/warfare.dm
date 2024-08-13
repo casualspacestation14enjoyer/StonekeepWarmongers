@@ -1,5 +1,5 @@
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
-	. = ..()
+	..()
 	var/obj/S = null
 	for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
 		if(sloc.name != title)
@@ -9,6 +9,16 @@
 		break
 	if(S)
 		S.JoinPlayerHere(M)
+	
+	if(H)
+		var/mob/living/carbon/human/HU = H
+		switch(HU.warfare_faction)
+			if(RED_WARTEAM)
+				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'
+			if(BLUE_WARTEAM)
+				HU.speech_sound = 'sound/vo/speech_grenzelhoft.ogg'
+		if(HAS_TRAIT(HU, TRAIT_NOBLE))
+			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
 ///////////////////////////// RED ///////////////////////////////////////
 
@@ -75,6 +85,7 @@
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 2)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
 ////////////// RED SOLDIERS AND CLASSES /////////////////
 
@@ -412,6 +423,7 @@
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 2)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
 
 

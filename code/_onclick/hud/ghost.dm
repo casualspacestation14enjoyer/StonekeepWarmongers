@@ -72,12 +72,6 @@
 	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/grain
-	using.hud = src
-	static_inventory += using
-	if(owner.client?.prefs?.wnoise == FALSE)
-		grain.alpha = 0
-
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies

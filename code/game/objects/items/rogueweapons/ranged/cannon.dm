@@ -43,7 +43,7 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
-	loaded.fire_casing(get_ranged_target_turf(src, dir, 30), firer, null, null, null, ran_zone(), 0, src)
+	loaded.fire_casing(get_ranged_target_turf(get_turf(src), dir, 30), firer, null, null, null, ran_zone(), 0, src)
 	loaded = null
 	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)

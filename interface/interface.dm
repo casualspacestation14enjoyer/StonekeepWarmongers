@@ -177,6 +177,24 @@ Hotkey-Mode: (hotkey-mode must be on)
 		for(var/atom/movable/screen/scannies/S in screen)
 			S.alpha = 100
 
+/client/verb/staticmode()
+	set category = "Options"
+	set name = "ToggleStatic"
+	if(!prefs)
+		return
+	if(prefs.wnoise == TRUE)
+		prefs.wnoise = FALSE
+		prefs.save_preferences()
+		to_chat(src, "NOISE... OFF")
+		for(var/atom/movable/screen/grain/G in screen)
+			G.alpha = 0
+	else
+		prefs.wnoise = TRUE
+		prefs.save_preferences()
+		to_chat(src, "NOISE... ON (Why?)")
+		for(var/atom/movable/screen/grain/G in screen)
+			G.alpha = 150
+	
 /client/verb/changefps()
 	set category = "Options"
 	set name = "ChangeFPS"

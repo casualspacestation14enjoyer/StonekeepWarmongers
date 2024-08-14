@@ -313,7 +313,8 @@ GLOBAL_VAR(restart_counter)
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
-	s += "<b>Immersive Dark Medieval Fantasy Musket Simulator<b><br>"
+	s += "<b>Fantasy PvP Musket-based Team Shooter<b><br>"
+	s += "You've been <b>enlisted</b>, fight for your country."
 	//s += "<b>Powerbottoms Welcome</b><br>"
 	
 //	s += "<img src=\"https://i.imgur.com/shj547T.jpg\"></a></center>"
@@ -322,9 +323,9 @@ GLOBAL_VAR(restart_counter)
 #ifdef MATURESERVER
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-		s += "<b>GAME STATUS:</b> IN LOBBY"
+		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
 	else
-		s += "<b>GAME STATUS:</b> PLAYING"
+		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
 #endif
 	status = s
 	return s

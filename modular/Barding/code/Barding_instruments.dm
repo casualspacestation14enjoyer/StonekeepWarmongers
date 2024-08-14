@@ -237,7 +237,7 @@
 	. = ..()
 	if(message_cooldown <= world.time)
 		message_cooldown = world.time + 20 SECONDS
-		var/message = stripped_input(user, "Shout your message, keep in mind one messsage can be so long.", "WARMONGERS", null, MAX_NAME_LEN) as text
+		var/message = stripped_input(user, "Shout your message, keep in mind one messsage can be so long.", "WARMONGERS", null, MAX_NAME_LEN)
 		message = sanitize(message)
 
 		if(attuned == "UNIVERSAL")

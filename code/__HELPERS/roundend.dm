@@ -367,8 +367,6 @@
 	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [musketsshot]"
 	shit += "<br><font color='#9b6937'><span class='bold'>Deaths:</span></font> [deaths]"
 	shit += "<br><font color='#af2323'><span class='bold'>Blood spilt:</span></font> [round(blood_lost / 100, 1)]L"
-	shit += "<br><font color='#36959c'><span class='bold'>TRIUMPH(s) Awarded:</span></font> [tri_gained]"
-	shit += "<br><font color='#a02fa4'><span class='bold'>TRIUMPH(s) Stolen:</span></font> [tri_lost * -1]"
 //	if(cuckers.len)
 //		shit += "<br><font color='#4e488a'><span class='bold'>Adulterers:</span></font> "
 //		for(var/x in cuckers.len)

@@ -99,7 +99,8 @@
 	grain = new /atom/movable/screen/grain
 	grain.hud = src
 	static_inventory += grain
-
+	if(owner.client?.prefs?.wnoise == FALSE)
+		grain.alpha = 0
 
 	reads = new /atom/movable/screen/read
 	reads.hud = src

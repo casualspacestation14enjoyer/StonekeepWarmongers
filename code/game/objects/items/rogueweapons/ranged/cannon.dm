@@ -37,14 +37,20 @@
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
+		H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 75, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 5)
 		H.throw_at(turfa, 5, 1, null, FALSE)
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
-	loaded.fire_casing(get_ranged_target_turf(get_turf(src), dir, 30), firer, null, null, null, ran_zone(), 0, src)
-	loaded = null
+	if(!loaded)
+		return
+	var/obj/projectile/fired_projectile = new loaded.projectile_type(get_turf(src))
+	fired_projectile.firer = src
+	fired_projectile.fired_from = src
+	fired_projectile.fire(dir2angle(dir))
+	QDEL_NULL(loaded)
 	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(2)

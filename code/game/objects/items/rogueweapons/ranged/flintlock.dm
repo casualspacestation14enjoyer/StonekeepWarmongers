@@ -172,6 +172,7 @@
 		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
 		return
 	..()
+	user.playsound_local(get_turf(user), 'sound/foley/tinnitus.ogg', 60, FALSE) // muh realism or something
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 

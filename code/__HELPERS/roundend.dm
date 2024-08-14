@@ -306,7 +306,7 @@
 			end_reason = "The [C.whowon] win yet another conflict! Glory!"
 
 	if(end_reason)
-		to_chat(world, "<span class='big bold'>[end_reason].</span>")
+		to_chat(world, "<span class='big bold'>[end_reason]</span>")
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
 			if(!C.timedmatch)

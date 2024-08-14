@@ -335,6 +335,7 @@
 	woundclass = BCLASS_SMASH
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
+	hitscan = FALSE
 	armor_penetration = 100
 	speed = 0.8
 

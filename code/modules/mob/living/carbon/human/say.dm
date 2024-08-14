@@ -157,4 +157,4 @@
 		dna.species.send_voice(src)
 
 /datum/species/proc/send_voice(mob/living/carbon/human/H)
-	playsound(get_turf(H), 'sound/misc/talk.ogg', 100, FALSE, -1)
+	playsound(get_turf(H), 'sound/blank.ogg', 100, FALSE, -1)

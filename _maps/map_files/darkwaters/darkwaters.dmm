@@ -1,4 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/machinery/light/rogue/torchholder/c,
+/obj/structure/teambarrrier/red,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "am" = (
 /obj/structure/rack/rogue,
 /obj/item/quiver/bullets{
@@ -182,6 +187,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach)
+"ma" = (
+/obj/structure/teambarrrier/blue,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "mK" = (
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach)
@@ -263,6 +272,13 @@
 /obj/structure/warfarebarrier,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach)
+"rB" = (
+/obj/machinery/light/rogue/torchholder{
+	dir = 1
+	},
+/obj/structure/teambarrrier/red,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "rK" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -669,6 +685,10 @@
 /area/rogue/outdoors/beach/boat)
 "Wk" = (
 /obj/structure/warfarestatue,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"WB" = (
+/obj/structure/teambarrrier/red,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "WP" = (
@@ -2623,11 +2643,11 @@ Uf
 SN
 us
 us
-Ze
-Ze
-Ze
-Ze
-Ze
+ma
+ma
+ma
+ma
+ma
 us
 us
 Uf
@@ -2725,13 +2745,13 @@ Uf
 Uf
 Uf
 us
-Ib
-Ze
+ae
+WB
 us
 us
 us
-Ze
-AM
+WB
+rB
 us
 UQ
 Uf
@@ -2806,7 +2826,7 @@ us
 Ze
 Ze
 Ze
-Xe
+fX
 Ze
 Ze
 Ze
@@ -2820,7 +2840,7 @@ us
 Ze
 Ze
 Ze
-fX
+Xe
 Ze
 Ze
 Ze

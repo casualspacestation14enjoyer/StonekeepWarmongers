@@ -105,6 +105,11 @@
 	dropshrink = 0.75
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/sword/long/reskin
+	name = "zweihander"
+	desc = "Sometimes known as a doppelhander or beidhander, this weapon's size is so impressive that it's handling properties are more akin to that of a polearm than a sword."
+	icon_state = "steelzwei"
+
 /obj/item/rogueweapon/sword/long/death
 	color = CLOTHING_BLACK
 

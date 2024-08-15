@@ -31,7 +31,7 @@
 			if(!skipprob && prob(prob2fail))
 				snuff()
 			else
-				var/datum/effect_system/smoke_spread/bad/smoke = new
+				var/datum/effect_system/smoke_spread/smoke = new
 				smoke.set_up(4, src)
 				smoke.start()
 				playsound(src.loc, 'sound/items/firelight.ogg', 100)

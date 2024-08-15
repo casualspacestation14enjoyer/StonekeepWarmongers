@@ -71,7 +71,7 @@
 		cloak = /obj/item/clothing/cloak/raincloak/red //ditto
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
@@ -177,8 +177,6 @@
 	beltl = /obj/item/rogueweapon/sword/sabre
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/helmet/sallet
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	backr = /obj/item/rogueweapon/spear
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	if(H.dna?.species)
 		if(H.dna.species.id == "human")
@@ -409,7 +407,7 @@
 	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
@@ -516,7 +514,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
-	backr = /obj/item/rogueweapon/greatsword/zwei
+	backr = /obj/item/rogueweapon/sword/long/reskin
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)

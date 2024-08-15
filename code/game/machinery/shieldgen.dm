@@ -472,17 +472,59 @@
 	max_integrity = INFINITY
 	CanAtmosPass = ATMOS_PASS_DENSITY
 
-/obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
+/obj/structure/teambarrrier // allows only people of defined team past
+	name = "barrier of better fairness"
+	desc = "You're not meant to see this."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shield-old"
+	move_resist = INFINITY
+	opacity = 0
+	anchored = TRUE
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | INDESTRUCTIBLE
+	max_integrity = INFINITY
+	CanAtmosPass = ATMOS_PASS_DENSITY
+	var/team
+
+/obj/structure/teambarrrier/red
+	team = "red"
+	icon_state = "impact_laser"
+	
+/obj/structure/teambarrrier/blue
+	team = "blue"
+	icon_state = "impact_laser_blue"
+
+/obj/structure/teambarrrier/Initialize()
+	. = ..()
+	invisiblity = INVISIBILITY_MAXIMUM
+	switch(team)
+		if("red")
+			team = RED_WARTEAM
+		if("blue")
+			team = BLUE_WARTEAM
+
+/obj/structure/teambarrrier/CanPass(atom/movable/mover, turf/target)
 	..()
 	if(ishuman(mover))
-		return 0
-	return 1
+		var/mob/living/carbon/human/H = mover
+		if(H.warfare_faction == team)
+			return 1
+	return 0
+
+/obj/structure/teambarrrier/CheckExit()
+	..()
+	if(ishuman(mover))
+		var/mob/living/carbon/human/H = mover
+		if(H.warfare_faction == team)
+			return 1
+	return 0
+
+/obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
+	..()
+	return 0
 
 /obj/structure/warfarebarrier/CheckExit(atom/movable/mover as mob|obj, turf/target) // You're stuck, bitch.
 	..()
-	if(ishuman(mover))
-		return 0
-	return 1
+	return 0
 
 /obj/structure/warfarebarrier/red
 	icon_state = "shield-red"

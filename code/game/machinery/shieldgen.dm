@@ -495,7 +495,7 @@
 
 /obj/structure/teambarrrier/Initialize()
 	. = ..()
-	invisiblity = INVISIBILITY_MAXIMUM
+	invisibility = INVISIBILITY_MAXIMUM
 	switch(team)
 		if("red")
 			team = RED_WARTEAM
@@ -510,7 +510,7 @@
 			return 1
 	return 0
 
-/obj/structure/teambarrrier/CheckExit()
+/obj/structure/teambarrrier/CheckExit(atom/movable/mover as mob|obj)
 	..()
 	if(ishuman(mover))
 		var/mob/living/carbon/human/H = mover

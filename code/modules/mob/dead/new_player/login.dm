@@ -75,11 +75,5 @@
 				usedkey = get_fake_key(usedkey)
 			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
 			var/datum/game_mode/warfare/C = SSticker.mode
-			if(C.grenzels.len < C.heartfelts.len)
-				client.warfare_faction = BLUE_WARTEAM
-				C.grenzels += src.client
-				to_chat(src, "You've been assigned to the blue team.")
-			else
-				client.warfare_faction = RED_WARTEAM
-				C.heartfelts += src.client
-				to_chat(src, "You've been assigned to the red team.")
+			client.warfare_faction = pick(RED_WARTEAM, BLUE_WARTEAM)
+			to_chat(src, "GLORY TO \THE [uppertext(client.warfare_faction)]!")

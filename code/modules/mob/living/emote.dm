@@ -24,10 +24,6 @@
 	if(isliving(user))
 		var/mob/living/L = user
 		var/area/C = get_area(user)
-		if(!(istype(C, /area/rogue/indoors/town/church/chapel)))
-			if(!(istype(C, /area/rogue/underworld)))
-				to_chat(user, "<span class='danger'>I should go to the Chapel!</span>")
-				return		
 		var/msg = input("Whisper your prayer:", "Prayer") as text|null
 		if(msg)
 			L.whisper(msg)

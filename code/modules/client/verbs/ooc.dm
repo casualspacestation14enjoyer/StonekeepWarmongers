@@ -326,6 +326,16 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set category = "Options"
 	stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
+/client/verb/reloading()
+	set name = "RELOADING"
+	set category = "HELP"
+	to_chat(usr, "Reloading a flintlock is easy! Take a bullet from your ball pouch, if you have one (rclick), put in bullet (lclick), cock musket (rclick with hand not holding musket), middleclick musket to get ramrod, ram musket, middleclick to put back, click musket to wield, shoot,  done you just killed a man! Good job!")
+
+/client/verb/playing()
+	set name = "PLAYING"
+	set category = "HELP"
+	to_chat(usr, "Playing the game is... well. Easy. If you're on Last Stand or Dark Waters your aim as Heartfelt is to protect your statue. As Grenzelhoft to destroy it. On Blood Fort, kill the opposing lord, get his crown and sit on the Throne of Heartfelt to win!")
+
 /proc/CheckJoinDate(ckey)
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
 	if(!http)

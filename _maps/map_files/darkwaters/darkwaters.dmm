@@ -497,6 +497,7 @@
 /area/rogue/outdoors/beach/boat)
 "Ie" = (
 /obj/machinery/light/rogue/torchholder/l,
+/obj/structure/roguemachine/musicbox,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "IR" = (

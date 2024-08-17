@@ -236,6 +236,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town)
+"fr" = (
+/obj/structure/roguemachine/musicbox,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "fw" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/natural/stone,
@@ -1726,6 +1730,10 @@
 /area/rogue/indoors/town)
 "MJ" = (
 /obj/machinery/light/rogue/hearth,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"ML" = (
+/obj/structure/roguemachine/musicbox,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "MR" = (
@@ -4393,7 +4401,7 @@ KN
 KN
 mA
 mA
-KN
+ML
 lN
 KN
 jI
@@ -8234,7 +8242,7 @@ BB
 Xj
 VQ
 hl
-hl
+fr
 hl
 hl
 hl

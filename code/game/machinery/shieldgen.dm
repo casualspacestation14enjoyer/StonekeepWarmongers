@@ -508,6 +508,8 @@
 		var/mob/living/carbon/human/H = mover
 		if(H.warfare_faction == team)
 			return 1
+		else
+			return 0
 	if(isliving(mover))
 		return 1
 	return 0
@@ -518,6 +520,8 @@
 		var/mob/living/carbon/human/H = mover
 		if(H.warfare_faction == team)
 			return 1
+		else
+			return 0
 	if(isliving(mover))
 		return 1
 	return 0

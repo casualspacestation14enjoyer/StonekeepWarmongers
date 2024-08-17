@@ -508,6 +508,8 @@
 		var/mob/living/carbon/human/H = mover
 		if(H.warfare_faction == team)
 			return 1
+	if(isliving(mover))
+		return 1
 	return 0
 
 /obj/structure/teambarrrier/CheckExit(atom/movable/mover as mob|obj)
@@ -516,6 +518,8 @@
 		var/mob/living/carbon/human/H = mover
 		if(H.warfare_faction == team)
 			return 1
+	if(isliving(mover))
+		return 1
 	return 0
 
 /obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)

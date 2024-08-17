@@ -76,4 +76,3 @@
 			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
 			var/datum/game_mode/warfare/C = SSticker.mode
 			client.warfare_faction = pick(RED_WARTEAM, BLUE_WARTEAM)
-			to_chat(src, "GLORY TO [uppertext("\the")][uppertext(client.warfare_faction)]!")

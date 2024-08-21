@@ -358,7 +358,36 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
 
+//// MEDIC ////
 
+/datum/advclass/red/medic
+	name = "Medic"
+	tutorial = "You like saving lives and keeping people in line. That's why you got this job."
+	outfit = /datum/outfit/job/roguetown/redmedic
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/cranker
+	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	cloak = /obj/item/clothing/cloak/apron/cook/medical
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.change_stat("speed", 8)
+		H.change_stat("strength", -4)
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -683,3 +712,35 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
+
+//// MEDIC ////
+
+/datum/advclass/blu/medic
+	name = "Medic"
+	tutorial = "You like saving lives and keeping people in line. That's why you got this job."
+	outfit = /datum/outfit/job/roguetown/blumedic
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = 99
+
+/datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	H.cmode_music = 'sound/music/cmode_medic.ogg'
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/cranker
+	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	cloak = /obj/item/clothing/cloak/apron/cook/medical
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.change_stat("speed", 8)
+		H.change_stat("strength", -4)

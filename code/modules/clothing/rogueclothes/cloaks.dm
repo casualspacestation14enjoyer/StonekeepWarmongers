@@ -569,6 +569,16 @@
 	body_parts_covered = GROIN
 	boobed = FALSE
 
+/obj/item/clothing/cloak/apron/cook/medical
+	name = "doctor apron"
+	desc = ""
+	icon_state = "apron_medical"
+	item_state = "apron_medical"
+
+/obj/item/clothing/cloak/apron/cook/medical/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
 /*
 /obj/item/clothing/cloak/apron/waist/ComponentInitialize()
 	. = ..()

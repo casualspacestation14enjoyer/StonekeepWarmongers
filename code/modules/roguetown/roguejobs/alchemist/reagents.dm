@@ -9,16 +9,15 @@
 	alpha = 173
 
 /datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/M)
-	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
-		M.blood_volume = min(M.blood_volume+50, BLOOD_VOLUME_MAXIMUM)
-	else
-		//can overfill you with blood, but at a slower rate
-		M.blood_volume = min(M.blood_volume+10, BLOOD_VOLUME_MAXIMUM)
-	M.adjustBruteLoss(-2*REM, 0)
-	M.adjustFireLoss(-2*REM, 0)
-	M.adjustOxyLoss(-1, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1*REM)
-	M.adjustCloneLoss(-1*REM, 0)
+	for(var/obj/item/bodypart/bodypart as anything in M.bodyparts)
+		if(bodypart.heal_damage(50, 50))
+			M.update_damage_overlays()
+		if(bodypart.heal_wounds(50))
+			M.update_damage_overlays()
+	M.adjustToxLoss(-50)
+	M.adjustOxyLoss(-50)
+	M.blood_volume += BLOOD_VOLUME_SURVIVE
+
 	..()
 	. = 1
 

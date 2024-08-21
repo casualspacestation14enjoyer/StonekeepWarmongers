@@ -74,5 +74,4 @@
 			if(usedkey in GLOB.anonymize)
 				usedkey = get_fake_key(usedkey)
 			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
-			var/datum/game_mode/warfare/C = SSticker.mode
 			client.warfare_faction = pick(RED_WARTEAM, BLUE_WARTEAM)

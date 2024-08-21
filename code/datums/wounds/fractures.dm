@@ -76,7 +76,7 @@
 	ADD_TRAIT(affected, TRAIT_DISFIGURED, "[type]")
 	if(paralysis)
 		ADD_TRAIT(affected, TRAIT_NO_BITE, "[type]")
-		ADD_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
+		//ADD_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
 		if(iscarbon(affected))
 			var/mob/living/carbon/carbon_affected = affected
 			carbon_affected.update_disabled_bodyparts()
@@ -88,7 +88,7 @@
 	REMOVE_TRAIT(affected, TRAIT_DISFIGURED, "[type]")
 	if(paralysis)
 		REMOVE_TRAIT(affected, TRAIT_NO_BITE, "[type]")
-		REMOVE_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
+		//REMOVE_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
 		if(iscarbon(affected))
 			var/mob/living/carbon/carbon_affected = affected
 			carbon_affected.update_disabled_bodyparts()
@@ -161,12 +161,12 @@
 /datum/wound/fracture/mouth/on_mob_gain(mob/living/affected)
 	. = ..()
 	ADD_TRAIT(affected, TRAIT_NO_BITE, "[type]")
-	ADD_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
+	//ADD_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
 
 /datum/wound/fracture/mouth/on_mob_loss(mob/living/affected)
 	. = ..()
 	REMOVE_TRAIT(affected, TRAIT_NO_BITE, "[type]")
-	REMOVE_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
+	//REMOVE_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
 
 /datum/wound/fracture/neck
 	name = "cervical fracture"
@@ -182,7 +182,7 @@
 
 /datum/wound/fracture/neck/on_mob_gain(mob/living/affected)
 	. = ..()
-	ADD_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
+	//ADD_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
 	if(iscarbon(affected))
 		var/mob/living/carbon/carbon_affected = affected
 		carbon_affected.update_disabled_bodyparts()
@@ -191,7 +191,7 @@
 
 /datum/wound/fracture/neck/on_mob_loss(mob/living/affected)
 	. = ..()
-	REMOVE_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
+	//REMOVE_TRAIT(affected, TRAIT_PARALYSIS, "[type]")
 	if(iscarbon(affected))
 		var/mob/living/carbon/carbon_affected = affected
 		carbon_affected.update_disabled_bodyparts()

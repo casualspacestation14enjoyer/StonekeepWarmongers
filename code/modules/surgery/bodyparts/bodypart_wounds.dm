@@ -227,7 +227,7 @@
 	var/resistance = HAS_TRAIT(owner, TRAIT_CRITICAL_RESISTANCE)
 	if(user && dam)
 		if(user.goodluck(2))
-			dam += 10
+			dam += 5
 	if((bclass in GLOB.cbt_classes) && (zone_precise == BODY_ZONE_PRECISE_GROIN))
 		var/cbt_multiplier = 1
 		if(user && HAS_TRAIT(user, TRAIT_NUTCRACKER))
@@ -240,7 +240,7 @@
 	if((bclass in GLOB.fracture_bclasses) && (zone_precise != BODY_ZONE_PRECISE_STOMACH))
 		used = round(damage_dividend * 20 + (dam / 6), 1)
 		if(user && istype(user.rmb_intent, /datum/rmb_intent/strong))
-			used += 10
+			used += 5
 		if(HAS_TRAIT(src, TRAIT_BRITTLE))
 			used += 10
 		var/fracture_type = /datum/wound/fracture/chest
@@ -252,9 +252,9 @@
 		used = round(damage_dividend * 20 + (dam / 4), 1)
 		if(user)
 			if((bclass in GLOB.artery_strong_bclasses) && istype(user.rmb_intent, /datum/rmb_intent/strong))
-				used += 10
+				used += 5
 			else if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
-				used += 10
+				used += 5
 		if(prob(used))
 			if((zone_precise == BODY_ZONE_PRECISE_STOMACH) && !resistance)
 				attempted_wounds += /datum/wound/slash/disembowel

@@ -68,7 +68,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	/// Amount we heal passively while sleeping
 	var/sleep_healing = 1
 	/// Amount we heal passively, always
-	var/passive_healing = 0
+	var/passive_healing = 5
 	/// Embed chance if this wound allows embedding
 	var/embed_chance = 0
 
@@ -272,7 +272,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		return FALSE
 	var/old_overlay = mob_overlay
 	mob_overlay = sewn_overlay
-	bleed_rate = sewn_bleed_rate
+	bleed_rate = 0
 	clotting_rate = sewn_clotting_rate
 	clotting_threshold = sewn_clotting_threshold
 	woundpain = sewn_woundpain
@@ -280,7 +280,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	disabling = FALSE
 	can_sew = FALSE
 	sleep_healing = max(sleep_healing, 1)
-	passive_healing = max(passive_healing, 1)
+	passive_healing = 30
 	if(mob_overlay != old_overlay)
 		owner?.update_damage_overlays()
 	return TRUE

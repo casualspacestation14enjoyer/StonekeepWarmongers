@@ -424,6 +424,7 @@
 
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	head = /obj/item/clothing/head/roguetown/crownblu
@@ -476,6 +477,7 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
+		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")

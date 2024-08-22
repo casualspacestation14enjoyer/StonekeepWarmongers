@@ -17,7 +17,10 @@
 	var/reinforcementwave = 1 // max 5
 
 	var/mob/redlord = null
+	var/obj/item/redcrown = null
+
 	var/mob/blulord = null
+	var/obj/item/blucrown = null
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
@@ -46,12 +49,18 @@
 /datum/game_mode/warfare/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
+		CHECK_TICK
 		if(SSticker.warfare_ready_to_die)
 			break
 		if(!redlord)
+			sleep(1 MINUTES)
 			continue
+		CHECK_TICK
 		if(!blulord)
+			sleep(1 MINUTES)
 			continue
+		CHECK_TICK
 		to_chat(world, "Both sides are present. We will begin in [warfare_start_time] minutes.")
 		sleep(warfare_start_time MINUTES)
 		SSticker.ReadyToDie()
+		CHECK_TICK

@@ -200,7 +200,7 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on him.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on us.</span>")
 	get_end_reason()
 	SSvote.initiate_vote("map", "The God of War")
 
@@ -208,7 +208,7 @@
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			C.mob.playsound_local(C.mob, 'sound/music/credits.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/music/nothingyoucando.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)

@@ -205,6 +205,11 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	dynamic_hair_suffix = null
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/head/roguetown/crownred/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	W.redcrown = src
+
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
 	icon_state = "vcrown_blu"
@@ -213,6 +218,11 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
 	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/roguetown/crownblu/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	W.blucrown = src
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"

@@ -694,6 +694,38 @@
 
 	return 0
 
+/datum/admins/proc/readoutlords()
+	set category = "Debug"
+	set name = "Readout Lords"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	if(W.blulord)
+		to_chat(usr, "blu lord found: [W.blulord.real_name]")
+	else
+		to_chat(usr, "blu lord not found")
+
+	if(W.redlord)
+		to_chat(usr, "red lord found: [W.redlord.real_name]")
+	else
+		to_chat(usr, "red lord not found")
+		
+/datum/admins/proc/recallcrown()
+	set category = "Debug"
+	set name = "Recall Crown"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	var/pick = input(usr, "Which crown do you recall?", "WARMONGERS") as null|anything in list("Red","Blue")
+
+	if(!pick)
+		return
+	
+	if(pick == "Red")
+		W.redcrown.forceMove(get_turf(usr))
+		to_chat(usr, "Red crown moved succesfully.")
+	if(pick == "Blue")
+		W.blucrown.forceMove(get_turf(usr))
+		to_chat(usr, "Blue crown moved succesfully.")
+
 /datum/admins/proc/forcemode()
 	set category = "Server"
 	set name = "Force Gamemode"

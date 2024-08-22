@@ -3,6 +3,14 @@
 	associated_faith = /datum/faith/divine_pantheon
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
+/datum/patron/divine/psydon // stupid shit that wont be seen lol
+	name = "Psydon"
+	domain = "The Weeper"
+	desc = "The Weeper. He weeps."
+	flaws = "None."
+	worshippers = "Grenzelhoftians"
+	sins = "Not killing HEARTFELT."
+
 /datum/patron/divine/astrata
 	name = "Astrata"
 	domain = "Goddess of Order, the Sun Queen"

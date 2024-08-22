@@ -494,7 +494,8 @@
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town)
 "rC" = (
-/turf/open/floor/rogue/plank,
+/obj/structure/plank,
+/turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "rI" = (
 /obj/machinery/light/rogue/chand,
@@ -1303,7 +1304,8 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
 "Yv" = (
-/turf/open/floor/rogue/plank/h,
+/obj/structure/plank/h,
+/turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "Yw" = (
 /obj/structure/warfarebarrier/red,

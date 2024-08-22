@@ -423,7 +423,8 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach/boat)
 "Bn" = (
-/turf/open/floor/rogue/plank,
+/obj/structure/plank,
+/turf/open/transparent/openspace,
 /area/rogue/outdoors/beach)
 "Bt" = (
 /obj/structure/warfarebarrier,

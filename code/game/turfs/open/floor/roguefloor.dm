@@ -770,5 +770,18 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/woodland.wav'
 
+/obj/structure/plank // better version of the plank that can be broken
+	name = "plank"
+	icon = 'icons/turf/roguefloor.dmi'
+	icon_state = "plank"
+	anchored = TRUE
+	density = FALSE
+	max_integrity = 35
+	layer = ABOVE_OPEN_TURF_LAYER
+	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
+
+/obj/structure/plank/h
+	icon_state = "plank2"
+
 /turf/open/floor/rogue/plank/h
 	icon_state = "plank2"

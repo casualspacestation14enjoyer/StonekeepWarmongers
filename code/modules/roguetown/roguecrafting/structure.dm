@@ -364,6 +364,15 @@
 	craftsound = 'sound/foley/Building-01.ogg'
 	skillcraft = /datum/skill/craft/engineering
 
+/datum/crafting_recipe/roguetown/structure/plank
+	name = "plank"
+	result = /obj/structure/plank
+	reqs =  list(/obj/item/grown/log/tree/small = 1)
+	verbage = "construct"
+	verbage_tp = "constructs"
+	craftsound = 'sound/foley/Building-01.ogg'
+	skillcraft = /datum/skill/craft/carpentry
+
 /datum/crafting_recipe/roguetown/structure/pressureplate
 	name = "pressure plate"
 	result = /obj/structure/pressure_plate

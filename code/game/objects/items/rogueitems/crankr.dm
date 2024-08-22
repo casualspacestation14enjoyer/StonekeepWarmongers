@@ -18,6 +18,9 @@
 
 /obj/item/cranker/MiddleClick(mob/user, params)
 	. = ..()
+	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
+		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
+		return
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
@@ -35,6 +38,9 @@
 
 /obj/item/cranker/attack_right(mob/user)
 	. = ..()
+	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
+		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
+		return
 	if(open)
 		to_chat(user, "<span class='danger'>You can't crank the [src] if it's open, you'll spill everything.</span>")
 		return
@@ -53,6 +59,9 @@
 	to_chat(user, "<span class='info'>The product is ready.</span>")
 	
 /obj/item/cranker/attackby(obj/item/I, mob/user, params)
+	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
+		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
+		return ..()
 	if(istype(I, /obj/item/bodypart))
 		var/obj/item/bodypart/BI = I
 		to_chat(user, "<span class='info'>I put \the [BI] into the [src].</span>")
@@ -67,4 +76,3 @@
 		bootle.forceMove(src)
 		pot = bootle
 		return
-	return ..()

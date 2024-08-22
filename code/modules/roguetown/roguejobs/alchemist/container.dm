@@ -6,6 +6,8 @@
 //////////////////////////
 
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	name = "bottle of health"
+	desc = "A label on it says to feed it to people suffering from their guts leaving their body. Quite spectacular."
 	list_reagents = list(/datum/reagent/medicine/healthpot = 72)
 
 /obj/item/reagent_containers/glass/bottle/rogue/manapot

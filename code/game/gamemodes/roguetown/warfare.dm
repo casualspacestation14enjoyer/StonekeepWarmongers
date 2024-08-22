@@ -23,7 +23,7 @@
 	var/list/grenzels = list()
 
 	var/warfare_start_time = 5 // in minutes
-	var/warfare_reinforcement_time = 5 // in minutes
+	var/warfare_reinforcement_time = 3 // in minutes
 
 	var/timedmatch = FALSE
 
@@ -33,28 +33,25 @@
 /datum/game_mode/warfare/post_setup(report)
 	. = ..()
 	begin_countDown()
-	reinforcements()
 
 /datum/game_mode/warfare/proc/reinforcements()
-	if(!(reinforcementwave >= 5))
-		if(!SSticker.warfare_ready_to_die)
-			reinforcements()
-			return
-		spawn(warfare_reinforcement_time MINUTES)
-			SSticker.SendReinforcements()
-			reinforcements()
-	return
+	set waitfor = 0
+	while(1)
+		if((reinforcementwave >= 5))
+			break
+		sleep(warfare_reinforcement_time MINUTES)
+		testing("Sending reinforcement loop works")
+		SSticker.SendReinforcements()
 
 /datum/game_mode/warfare/proc/begin_countDown()
-	if(SSticker.warfare_ready_to_die)
-		return
-	spawn(warfare_start_time MINUTES)
-		if(redlord == null)
-			to_chat(world, "We are waiting for the lord of Heartfelt to arrive.")
-			begin_countDown()
-			return
-		if(blulord == null)
-			to_chat(world, "We are waiting for the lord of Grenzelhoft to arrive.")
-			begin_countDown()
-			return
+	set waitfor = 0
+	while(1)
+		if(SSticker.warfare_ready_to_die)
+			break
+		if(!redlord)
+			continue
+		if(!blulord)
+			continue
+		to_chat(world, "Both sides are present. We will begin in [warfare_start_time] minutes.")
+		sleep(warfare_start_time MINUTES)
 		SSticker.ReadyToDie()

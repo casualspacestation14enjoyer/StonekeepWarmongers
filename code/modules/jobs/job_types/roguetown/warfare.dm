@@ -376,6 +376,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
 	shoes = /obj/item/clothing/shoes/roguetown/boots
+	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
@@ -384,8 +385,10 @@
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
 		H.change_stat("speed", 8)
 		H.change_stat("strength", -4)
 
@@ -740,7 +743,9 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
 		H.change_stat("speed", 8)
 		H.change_stat("strength", -4)

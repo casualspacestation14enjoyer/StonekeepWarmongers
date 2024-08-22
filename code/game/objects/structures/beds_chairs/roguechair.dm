@@ -281,7 +281,9 @@
 	icon_state = "sleepingcloth"
 	attacked_sound = 'sound/foley/cloth_rip.ogg'
 	break_sound = 'sound/foley/cloth_rip.ogg'
-	sleepy = 0.5
+	sleepy = 5
+	anchored = FALSE
+	density = FALSE
 
 /obj/structure/bed/rogue/sleepingbag/MiddleClick(mob/user, params)
 	..()
@@ -294,7 +296,7 @@
 	name = "roll of sleepcloth"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sleepingcloth_rolled"
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/sleepingbag/MiddleClick(mob/user, params)
 	..()

@@ -865,9 +865,11 @@ SUBSYSTEM_DEF(ticker)
 	text2file(login_music, "data/last_round_lobby_music.txt")
 
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
+	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
 		to_chat(world, "The barriers have fallen, it is your turn to die now.")
 		warfare_ready_to_die = TRUE
+		W.reinforcements()
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/tension2.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)

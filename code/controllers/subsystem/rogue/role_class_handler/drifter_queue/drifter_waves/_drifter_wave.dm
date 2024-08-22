@@ -81,7 +81,6 @@
 */
 /datum/drifter_wave/proc/pre_drifter_wave()
 	var/datum/job/target_job = SSjob.GetJob(job_rank)
-	target_job.drifter_wave_attachment = src
 
 /*
 	Occurs after character creation

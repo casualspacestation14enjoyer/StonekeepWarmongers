@@ -56,6 +56,11 @@
 	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
 	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
 
+/obj/item/storage/belt/rogue/leather/medic/PopulateContents()
+	new /obj/item/sleepingbag(src)
+	new /obj/item/sleepingbag(src)
+	new /obj/item/sleepingbag(src)
+
 /obj/item/storage/belt/rogue/leather/plaquegold
 	name = "plaque belt"
 	icon_state = "goldplaque"
@@ -246,7 +251,7 @@
 /obj/item/storage/backpack/rogue/satchel/surgbag
 	name = "surgery bag"
 	desc = "Contains all the phreakish devices one needs to cut a person up."
-	slot_flags = null
+	slot_flags = ITEM_SLOT_BACK
 	item_state = "doctorbag"
 	icon_state = "doctorbag"
 	attack_verb = list("beats", "bludgeons")

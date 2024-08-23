@@ -791,8 +791,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/end_party()
 	set category = "GameMaster"
-	set name = "EndPlaytest"
-	set hidden = 1
+	set name = "MakeFinalRound"
 	if(!holder)
 		return
 	if(!SSticker.end_party)

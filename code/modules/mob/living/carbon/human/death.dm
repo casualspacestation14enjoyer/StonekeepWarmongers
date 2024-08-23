@@ -58,14 +58,16 @@
 
 		if(SSjob.GetJob(job).type == /datum/job/roguetown/warfare/red/lord)
 			testing("Red lord is dead!")
-			for(var/X in C.heartfelts)
-				var/mob/living/carbon/human/H = X
-				H.add_stress(/datum/stressevent/deadlord)
+			for(var/client/X in C.heartfelts)
+				var/mob/living/carbon/V = X.mob
+				to_chat(V, "<span class='warning'>Our lord is dead!</span>")
+				V.add_stress(/datum/stressevent/deadlord)
 		if(SSjob.GetJob(job).type == /datum/job/roguetown/warfare/blu/lord)
 			testing("Blue lord is dead!")
-			for(var/X in C.grenzels)
-				var/mob/living/carbon/human/H = X
-				H.add_stress(/datum/stressevent/deadlord)
+			for(var/client/X in C.grenzels)
+				var/mob/living/carbon/V = X.mob
+				to_chat(V, "<span class='warning'>Our lord is dead!</span>")
+				V.add_stress(/datum/stressevent/deadlord)
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)
 	var/obj/item/organ/heart/H = getorganslot(ORGAN_SLOT_HEART)

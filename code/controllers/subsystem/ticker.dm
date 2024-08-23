@@ -459,9 +459,14 @@ SUBSYSTEM_DEF(ticker)
 //	SSshuttle.emergency.startTime = world.time
 //	SSshuttle.emergency.setTimer(ROUNDTIMERBOAT)
 
+	CHECK_TICK
+
 	SSdbcore.SetRoundStart()
 
+	to_chat(world, "<span class='notice'><B>This is the final round [station_name()], it's either now or never! FIGHT FOR YOUR TEAM, DON'T LET THEM WIN!</B></span>")
 	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
+
+	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
 		C.mob.playsound_local(C.mob, 'sound/misc/roundstart.ogg', 100, FALSE)
@@ -469,6 +474,7 @@ SUBSYSTEM_DEF(ticker)
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING
 
+	CHECK_TICK
 
 	Master.SetRunLevel(RUNLEVEL_GAME)
 /*
@@ -478,7 +484,11 @@ SUBSYSTEM_DEF(ticker)
 			var/datum/holiday/holiday = SSevents.holidays[holidayname]
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
 */
+
+	CHECK_TICK
+
 	PostSetup()
+	CHECK_TICK
 	log_game("GAME SETUP: postsetup success")
 
 	return TRUE

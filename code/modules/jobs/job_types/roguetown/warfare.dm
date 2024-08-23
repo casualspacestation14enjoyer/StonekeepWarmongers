@@ -737,6 +737,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
 	shoes = /obj/item/clothing/shoes/roguetown/boots
+	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot

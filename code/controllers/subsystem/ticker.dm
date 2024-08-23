@@ -463,7 +463,8 @@ SUBSYSTEM_DEF(ticker)
 
 	SSdbcore.SetRoundStart()
 
-	to_chat(world, "<span class='notice'><B>This is the final round [station_name()], it's either now or never! FIGHT FOR YOUR TEAM, DON'T LET THEM WIN!</B></span>")
+	if(end_party)
+		to_chat(world, "<span class='notice'><B>This is the final round [station_name()], it's either now or never! FIGHT FOR YOUR TEAM, DON'T LET THEM WIN!</B></span>")
 	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
 
 	CHECK_TICK

@@ -69,6 +69,8 @@
 		else if(user.used_intent.blade_class == BCLASS_CUT)
 			if(!pristine_blade && (total_dam < affecting.max_damage * 0.8))
 				return 0
+		else if(user.used_intent.blade_class == BCLASS_STAB)
+			return 0
 		else
 			return 0
 

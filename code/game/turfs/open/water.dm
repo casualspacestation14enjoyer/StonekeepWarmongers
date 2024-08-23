@@ -401,7 +401,7 @@
 	. = ..()
 	if(isliving(AM))
 		if(!river_processing)
-			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 1s, TIMER_STOPPABLE)
+			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 1 SECONDS, TIMER_STOPPABLE)
 
 /turf/open/water/river/proc/process_river()
 	river_processing = null

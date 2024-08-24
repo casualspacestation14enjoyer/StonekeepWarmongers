@@ -784,7 +784,8 @@ mob/living/simple_animal/handle_fire()
 				else
 					time2mount = 0 // Instant at Master and above
 			else
-				time2mount = 50
+				to_chat(M, "<span class='warning'>I do not know how to ride this.</span>")
+				return
 
 		if(!move_after(M,time2mount, target = src))
 			return

@@ -18,6 +18,8 @@
 	var/total_slots_occupied = 0
 	var/min_pq = -100
 
+	var/reinforcements_wave = 1 // a way to unlock classes by time, or something. if 1 it means playable at all times
+
 	var/horse = FALSE
 	var/vampcompat = TRUE
 
@@ -67,6 +69,7 @@
 /datum/advclass/proc/check_requirements(mob/living/carbon/human/H)
 
 	var/list/local_allowed_sexes = list()
+	var/datum/game_mode/warfare/W = SSticker.mode
 	if(length(allowed_sexes))
 		local_allowed_sexes |= allowed_sexes
 
@@ -87,7 +90,7 @@
 		if(!(get_playerquality(H.client.ckey) >= min_pq))
 			return FALSE
 
-	if(prob(pickprob))
+	if(W.reinforcementwave >= reinforcements_wave)
 		return TRUE
 
 // Basically the handler has a chance to plus up a class, heres a generic proc you can override to handle behavior related to it.

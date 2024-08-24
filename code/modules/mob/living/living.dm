@@ -183,17 +183,6 @@
 	if(m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M))
 		if(isliving(M))
 			var/mob/living/L = M
-			if(STACON > L.STACON)
-				if(STASTR > L.STASTR)
-					L.Knockdown(1)
-				else
-					Knockdown(1)
-			if(STACON < L.STACON)
-				Knockdown(30)
-			if(STACON == L.STACON)
-				L.Knockdown(1)
-				Knockdown(30)
-			Immobilize(30)
 			var/playsound = FALSE
 			if(apply_damage(15, BRUTE, "head", run_armor_check("head", "melee", damage = 20)))
 				playsound = TRUE
@@ -1932,9 +1921,9 @@
 
 	var/_x = T.x-loc.x
 	var/_y = T.y-loc.y
-	if(_x > 7 || _x < -7)
+	if(_x > 9 || _x < -9)
 		return
-	if(_y > 7 || _y < -7)
+	if(_y > 9 || _y < -9)
 		return
 	hide_cone()
 	var/ttime = 10

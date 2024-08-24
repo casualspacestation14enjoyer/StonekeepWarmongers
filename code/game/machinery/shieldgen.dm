@@ -512,6 +512,8 @@
 			return 0
 	if(isliving(mover))
 		return 1
+	if(istype(mover, /obj/projectile))
+		return 1
 	return 0
 
 /obj/structure/teambarrrier/CheckExit(atom/movable/mover as mob|obj)
@@ -523,6 +525,8 @@
 		else
 			return 0
 	if(isliving(mover))
+		return 1
+	if(istype(mover, /obj/projectile))
 		return 1
 	return 0
 

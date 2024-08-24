@@ -121,7 +121,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = 99
-	reinforcements_wave = 1
+	reinforcements_wave = 0
 
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -213,7 +213,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = 99
-	reinforcements_wave = 1
+	reinforcements_wave = 0
 
 /datum/outfit/job/roguetown/redsapper/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -373,7 +373,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = 99
-	reinforcements_wave = 1
+	reinforcements_wave = 0
 
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -498,7 +498,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = 99
-	reinforcements_wave = 1
+	reinforcements_wave = 0
 
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -738,7 +738,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = 99
-	reinforcements_wave = 1
+	reinforcements_wave = 0
 
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()

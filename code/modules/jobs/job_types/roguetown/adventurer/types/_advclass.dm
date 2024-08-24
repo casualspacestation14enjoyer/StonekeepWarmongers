@@ -18,7 +18,7 @@
 	var/total_slots_occupied = 0
 	var/min_pq = -100
 
-	var/reinforcements_wave = 1 // a way to unlock classes by time, or something. if 1 it means playable at all times
+	var/reinforcements_wave = 0 // a way to unlock classes by time, or something. if 0 it means playable at all times
 
 	var/horse = FALSE
 	var/vampcompat = TRUE
@@ -82,15 +82,15 @@
 	if(length(allowed_ages) && !(H.age in allowed_ages))
 		return FALSE
 
-	if(maximum_possible_slots > -1)
-		if(total_slots_occupied >= maximum_possible_slots)
-			return FALSE
-
 	if(min_pq != -100) // If someone sets this we actually do the check.
 		if(!(get_playerquality(H.client.ckey) >= min_pq))
 			return FALSE
 
 	if(W.reinforcementwave >= reinforcements_wave)
+		testing()
+		return TRUE
+
+	if(prob(pickprob))
 		return TRUE
 
 // Basically the handler has a chance to plus up a class, heres a generic proc you can override to handle behavior related to it.

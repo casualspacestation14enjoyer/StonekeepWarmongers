@@ -109,7 +109,8 @@
 	icon_state = "sandbags"
 	max_integrity = 60
 	proj_pass_rate = 20
-	layer = ABOVE_ALL_MOB_LAYER
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 	climbable = TRUE
 	climb_time = 20
 	smooth = SMOOTH_FALSE

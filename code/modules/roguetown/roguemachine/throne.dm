@@ -63,6 +63,8 @@
 	var/mob/living/carbon/human/H = M
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
+		if(C.crownbearer == H)
+			return // Gets rid of people farming triumphs
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))

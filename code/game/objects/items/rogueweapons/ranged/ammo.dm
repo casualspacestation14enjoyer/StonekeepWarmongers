@@ -270,12 +270,12 @@
 /obj/projectile/bullet/reusable/bullet
 	name = "lead ball"
 	desc = "A round lead shot, simple and spherical."
-	damage = 90
+	damage = 110
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
-	range = 30
+	range = 50
 	jitter = 5
 	eyeblur = 3
 	stun = 1
@@ -284,7 +284,7 @@
 	woundclass = BCLASS_STAB
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
-	armor_penetration = 100
+	armor_penetration = 75
 	speed = 0.1
 
 /obj/projectile/bullet/fragment

@@ -204,6 +204,10 @@
 	get_end_reason()
 	SSvote.initiate_vote("map", "The God of War")
 
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		C.award_triumphs()
+
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)

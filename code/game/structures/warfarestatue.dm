@@ -1,16 +1,18 @@
 /obj/structure/warfarestatue
 	name = "Sanctified Statue"
-	desc = "A massive, holy statue. Heartfeltians feel compelled to protect it, and Grenzelhoft to destroy it."
+	desc = "A massive, holy statue. Heartfeltians feel compelled to protect it, and Grenzelhoftians to destroy it."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "psy" //ironic...
 	max_integrity = 800
 	pixel_x = -32
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
 	var/active = FALSE
 	var/progress_in_seconds = 0
 	var/purpose_fulfilled = FALSE
 	var/last_scream = 0
-	var/ascend_time = 600 //10 minutes
+	var/ascend_time = 10 MINUTES
 	var/half_way = FALSE
 
 /obj/structure/warfarestatue/Initialize(mapload)

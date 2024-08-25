@@ -107,11 +107,6 @@
 
 			// Time to do some picking, make sure we got things in the list we dealin with
 			if(local_insert_sortlist.len)
-				// Make sure we aren't going to attempt to pick more than what we even have avail
-				if(class_cat_alloc_attempts[SORT_CAT_KEY] > local_insert_sortlist.len)
-					testing("class cat alloc attempts is greater than sortlist")
-					//class_cat_alloc_attempts[SORT_CAT_KEY] = local_insert_sortlist.len
-
 				
 				for(var/i in 1 to class_cat_alloc_attempts[SORT_CAT_KEY])
 					testing("[rolled_classes[local_insert_sortlist[i]]] equals zero")

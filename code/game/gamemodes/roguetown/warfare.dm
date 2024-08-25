@@ -37,6 +37,18 @@
 	. = ..()
 	begin_countDown()
 
+/datum/game_mode/warfare/proc/award_triumphs()
+	if(whowon == BLUE_WARTEAM)
+		for(var/client/C in grenzels)
+			if(ishuman(C.mob))
+				var/mob/living/carbon/human/H = C.mob
+				H.adjust_triumphs(1)
+	if(whowon == RED_WARTEAM)
+		for(var/client/C in heartfelts)
+			if(ishuman(C.mob))
+				var/mob/living/carbon/human/H = C.mob
+				H.adjust_triumphs(1)
+
 /datum/game_mode/warfare/proc/reinforcements()
 	set waitfor = 0
 	while(1)

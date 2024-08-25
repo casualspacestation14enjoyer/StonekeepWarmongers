@@ -312,7 +312,7 @@
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
@@ -676,7 +676,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)

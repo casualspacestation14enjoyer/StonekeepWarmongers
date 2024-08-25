@@ -55,7 +55,7 @@
 	QDEL_NULL(bp)
 	sleep(10)
 	playsound(get_turf(user), "wetbreak", 100, TRUE, -5)
-	pot.reagents.add_reagent(/datum/reagent/medicine/healthpot, pot.reagents.maximum_volume)
+	pot.reagents.add_reagent(/datum/reagent/medicine/healthpot, 15)
 	to_chat(user, "<span class='info'>The product is ready.</span>")
 	
 /obj/item/cranker/attackby(obj/item/I, mob/user, params)

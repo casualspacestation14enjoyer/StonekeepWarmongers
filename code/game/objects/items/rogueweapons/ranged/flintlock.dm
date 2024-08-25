@@ -110,7 +110,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "pistol"
-	item_state = "gun"
+	item_state = "pistol"
 	bigboy = FALSE
 	recoil = 8
 	randomspread = 2

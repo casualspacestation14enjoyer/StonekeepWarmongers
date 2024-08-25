@@ -3,19 +3,19 @@
 	description = "Gradually regenerates all types of damage."
 	reagent_state = LIQUID
 	color = "#ff0000"
-	taste_description = "red"
+	taste_description = "health and grind up bodyparts"
 	overdose_threshold = 0
-	metabolization_rate = 20 * REAGENTS_METABOLISM
+	metabolization_rate = 5 * REAGENTS_METABOLISM
 	alpha = 173
 
 /datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/M)
 	for(var/obj/item/bodypart/bodypart as anything in M.bodyparts)
-		if(bodypart.heal_damage(50, 50))
+		if(bodypart.heal_damage(25, 30))
 			M.update_damage_overlays()
-		if(bodypart.heal_wounds(50))
+		if(bodypart.heal_wounds(30))
 			M.update_damage_overlays()
-	M.adjustToxLoss(-50)
-	M.adjustOxyLoss(-50)
+	M.adjustToxLoss(-30)
+	M.adjustOxyLoss(-30)
 	M.blood_volume += BLOOD_VOLUME_SURVIVE
 
 	..()

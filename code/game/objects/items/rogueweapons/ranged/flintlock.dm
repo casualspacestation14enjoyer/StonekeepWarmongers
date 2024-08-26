@@ -162,7 +162,7 @@
 			BB.accuracy += (user.STAPER - 8) * 4 //each point of perception above 8 increases standard accuracy by 4.
 			BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
 		if(user.STAPER > 10)
-			BB.damage = BB.damage * (user.STAPER / 10) * damfactor
+			BB.damage = BB.damage * (user.STAPER / 10)
 		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3) //+3 accuracy per level in crossbows
 	if(!cocked)
 		return

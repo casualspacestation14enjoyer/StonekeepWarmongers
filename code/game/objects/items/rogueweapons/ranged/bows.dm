@@ -68,7 +68,7 @@
 			BB.damage = BB.damage
 			BB.embedchance = 100
 			BB.accuracy += 15 //fully aiming bow makes your accuracy better.
-			BB.damage = BB.damage * (user.STAPER / 10) * damfactor
+			BB.damage = BB.damage * (user.STAPER / 10)
 		if(user.STAPER > 8)
 			BB.accuracy += (user.STAPER - 8) * 4 //each point of perception above 8 increases standard accuracy by 4.
 			BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.

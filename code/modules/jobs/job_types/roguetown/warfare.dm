@@ -647,6 +647,8 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.change_stat("speed", 6)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telljoke)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telltragedy)
+	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 
 //// RIFLEMEN ////
 

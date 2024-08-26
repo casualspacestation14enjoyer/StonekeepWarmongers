@@ -10,6 +10,7 @@
 #define TRAIT_HATEWOMEN				"Ladykiller"
 #define TRAIT_GOODLOVER				"Fabled Lover"
 #define TRAIT_NOBLE					"Noble Blooded"
+#define TRAIT_JESTER				"Jester Blooded"
 #define TRAIT_EMPATH					"Empath"
 #define TRAIT_BREADY					"Battleready"
 #define TRAIT_MEDIUMARMOR				"Maille Training"
@@ -67,6 +68,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_HEAVYARMOR = "I can move freely in heavy armor.",
 	TRAIT_DODGEEXPERT = "I can dodge easly while only wearing light armor.",
 	TRAIT_VILLAIN = "I am a devious, conniving villain!",
+	TRAIT_JESTER = "I AM JESTER BLOODED! HONK HONK!!! HAHAHAHAHAAAAAAAAAA!"
 	TRAIT_SOUL_EXAMINE = "<span class='deadsay'>I know when someone's soul has departed.</span>",
 	TRAIT_CYCLOPS_RIGHT = "<span class='warning'>My right eye has been poked out...</span>",
 	TRAIT_LEECHIMMUNE = "Leeches are reluctant to bite me.",

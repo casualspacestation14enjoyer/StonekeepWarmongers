@@ -54,8 +54,7 @@
 	ghostize(FALSE)
 
 	if(HAS_TRAIT(src, TRAIT_JESTER))
-		playsound(H, 'sound/foley/honk.ogg', 100, FALSE, -5)
-		gib(TRUE, FALSE, TRUE, TRUE)
+		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
 
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode

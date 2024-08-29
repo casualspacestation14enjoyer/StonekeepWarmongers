@@ -1524,13 +1524,8 @@
 /atom/movable/screen/splash/proc/Fade(out, qdel_after = TRUE)
 	if(QDELETED(src))
 		return
-	if(out)
-		animate(src, alpha = 0, time = 30)
-	else
-		alpha = 0
-		animate(src, alpha = 255, time = 30)
 	if(qdel_after)
-		QDEL_IN(src, 30)
+		qdel(src)
 
 /atom/movable/screen/splash/Destroy()
 	if(holder)

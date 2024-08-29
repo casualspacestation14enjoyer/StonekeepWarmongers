@@ -11,10 +11,11 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		img = "admin"
 		if(check_badminlist(ckey))
 			img = "badmin"
-	if(get_playerquality(ckey) <= -25)
+	if(get_playerquality(ckey) <= -10)
 		img = "zizo"
 	if(ckey == "helloiamjesus")
-		img = "psydon"
+		if(holder)
+			img = "psydon"
 	return img
 
 /client/proc/getemojiforfaction()

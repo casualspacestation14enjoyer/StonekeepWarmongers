@@ -484,8 +484,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 		SSjob.SendToLateJoin(character)
 		testing("basedtest 7")
 //		if(!arrivals_docked)
-		var/atom/movable/screen/splash/Spl = new(character.client, TRUE)
-		Spl.Fade(TRUE)
 //			character.playsound_local(get_turf(character), 'sound/blank.ogg', 25)
 
 		character.update_parallax_teleport()

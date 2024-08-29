@@ -129,7 +129,7 @@ GLOBAL_LIST_EMPTY(fake_ckeys)
 			return X
 	var/foundname
 	while(!foundname)
-		var/looker = "[capitalize(pick(GLOB.first_names))] [pick(GLOB.ooctitle)]"
+		var/looker = "[pick(GLOB.ooctitle)] [pick(world.file2list("string/rt/names/human/humnorm.txt"))]"
 		var/found
 		for(var/X in GLOB.fake_ckeys)
 			if(X == looker)

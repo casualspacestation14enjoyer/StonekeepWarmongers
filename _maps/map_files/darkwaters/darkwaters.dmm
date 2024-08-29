@@ -54,6 +54,7 @@
 /obj/item/sandbagkit,
 /obj/item/sandbagkit,
 /obj/item/sandbagkit,
+/obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "dU" = (
@@ -92,6 +93,11 @@
 /area/rogue/outdoors/beach/boat)
 "fX" = (
 /obj/effect/landmark/redreinforcement,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"fZ" = (
+/obj/structure/rack/rogue,
+/obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "gh" = (
@@ -298,7 +304,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/beach/boat)
 "us" = (
-/turf/closed/indestructible/wooddark,
+/turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/beach/boat)
 "uu" = (
 /obj/structure/rack/rogue,
@@ -1906,7 +1912,7 @@ SN
 Uf
 us
 Ar
-SS
+fZ
 op
 us
 Uf

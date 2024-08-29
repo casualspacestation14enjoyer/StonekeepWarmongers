@@ -135,6 +135,11 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 			return FALSE
 	return TRUE
 
+/datum/wound/proc/do_blood_effect()
+	var/splatter_dir = turn(owner.dir, 180)
+	var/turf/target_loca = get_turf(owner)
+	new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
+
 /// Returns whether or not this wound can be applied while this other wound is present
 /datum/wound/proc/can_stack_with(datum/wound/other)
 	return TRUE
@@ -159,6 +164,8 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 			affected.owner.next_attack_msg += " [message]"
 	if(!silent)
 		var/sounding = get_sound_effect(affected.owner, affected)
+		if(bleed_rate)
+			do_blood_effect()
 		if(sounding)
 			playsound(affected.owner, sounding, 100, vary = FALSE)
 	return TRUE

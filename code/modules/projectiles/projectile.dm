@@ -184,17 +184,16 @@
 
 	var/mob/living/L = target
 
-	if(blocked != 100) // not completely blocked
-		if(damage && L.blood_volume && damage_type == BRUTE)
-			var/splatter_dir = dir
-			if(starting)
-				splatter_dir = get_dir(starting, target_loca)
-			if(isalien(L))
-				new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
-			else
-				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
-				shake_camera(L, 3, 3)
-			L.add_splatter_floor(target_loca)
+	if(damage && L.blood_volume && damage_type == BRUTE)
+		var/splatter_dir = dir
+		if(starting)
+			splatter_dir = get_dir(starting, target_loca)
+		if(isalien(L))
+			new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
+		else
+			new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
+			shake_camera(L, 3, 3)
+		L.add_splatter_floor(target_loca)
 
 	if(impact_effect_type && !hitscan)
 		new impact_effect_type(target_loca, hitx, hity)

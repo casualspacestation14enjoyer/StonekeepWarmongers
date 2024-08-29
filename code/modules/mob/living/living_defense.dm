@@ -73,7 +73,7 @@
 	if(limb_hit)
 		organ_hit_text = " in \the [parse_zone(limb_hit)]"
 	if(def_zone == BODY_ZONE_HEAD)
-		apply_damage(100, BRUTE, BODY_ZONE_HEAD)
+		apply_damage(150, BRUTE, BODY_ZONE_HEAD)
 		playsound(src, "headcrush", 100, vary = FALSE)
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()

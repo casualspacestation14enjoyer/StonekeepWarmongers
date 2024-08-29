@@ -334,6 +334,8 @@
 					used += 10
 		var/artery_type = /datum/wound/artery
 		if(zone_precise == BODY_ZONE_PRECISE_NECK)
+			if(owner.resting)
+				used += 50 // easier to execute a man laying down
 			artery_type = /datum/wound/artery/neck
 		if(prob(used))
 			attempted_wounds += artery_type

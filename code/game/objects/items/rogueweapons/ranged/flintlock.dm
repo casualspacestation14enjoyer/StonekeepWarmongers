@@ -17,7 +17,7 @@
 	spread = 0
 	var/cocked = FALSE
 	var/rammed = FALSE
-	var/click_delay = 3
+	var/click_delay = 2
 	var/obj/item/ramrod/rod
 	bigboy = TRUE
 	can_parry = TRUE
@@ -32,6 +32,7 @@
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
+	var/ramtime = 5.5
 
 /obj/item/ramrod
 	name = "ram rod"
@@ -45,15 +46,15 @@
 	rod = rrod
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
-	var/ramtime = 5.5
-	ramtime = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2)
+	var/tt = ramtime
+	tt = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2)
 	if(istype(A, /obj/item/ramrod))
 		if(!user.is_holding(src))
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")
 			return
 		if(chambered)
 			if(!rammed)
-				if(do_after(user, ramtime SECONDS, TRUE, src))
+				if(do_after(user, tt SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
 					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
 					rammed = TRUE
@@ -115,11 +116,12 @@
 	recoil = 8
 	randomspread = 2
 	spread = 3
-	click_delay = 0.5
+	click_delay = 2.4
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
+	ramtime = 3.4
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/attack_self(mob/living/user)
 	return
@@ -179,7 +181,6 @@
 		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
 		return
 	..()
-	user.playsound_local(get_turf(user), 'sound/foley/tinnitus.ogg', 60, FALSE) // muh realism or something
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 

@@ -745,7 +745,6 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	H.cmode_music = 'sound/music/cmode_medic.ogg'
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue

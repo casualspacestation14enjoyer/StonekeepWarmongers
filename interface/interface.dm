@@ -150,7 +150,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 	if(prefs)
 		if(prefs.crt == TRUE)
 			to_chat(src, "CRT mode is on.")
-			winset(src, "mapwindow.map", "zoom-mode=blur")
+			winset(src, "mapwindow.map", "zoom-mode=distort")
 			return
 	if(winget(src, "mapwindow.map", "zoom-mode") == "normal")
 		to_chat(src, "Pixel-perfect... OK")
@@ -158,42 +158,6 @@ Hotkey-Mode: (hotkey-mode must be on)
 	else
 		to_chat(src, "Anti-aliased... OK")
 		winset(src, "mapwindow.map", "zoom-mode=normal")
-
-/client/verb/crtmode()
-	set category = "Options"
-	set name = "ToggleCRT"
-	if(!prefs)
-		return
-	if(prefs.crt == TRUE)
-		prefs.crt = FALSE
-		prefs.save_preferences()
-		to_chat(src, "CRT... OFF")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 0
-	else
-		prefs.crt = TRUE
-		prefs.save_preferences()
-		to_chat(src, "CRT... ON")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 100
-
-/client/verb/staticmode()
-	set category = "Options"
-	set name = "ToggleStatic"
-	if(!prefs)
-		return
-	if(prefs.wnoise == TRUE)
-		prefs.wnoise = FALSE
-		prefs.save_preferences()
-		to_chat(src, "NOISE... OFF")
-		for(var/atom/movable/screen/grain/G in screen)
-			G.alpha = 0
-	else
-		prefs.wnoise = TRUE
-		prefs.save_preferences()
-		to_chat(src, "NOISE... ON (Why?)")
-		for(var/atom/movable/screen/grain/G in screen)
-			G.alpha = 150
 	
 /client/verb/changefps()
 	set category = "Options"

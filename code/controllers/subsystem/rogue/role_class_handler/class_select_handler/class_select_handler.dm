@@ -201,7 +201,7 @@
 	data += "<body>"
 
 	//Class href fill-in
-	data += "<div id='top_handwriting'> The stars align... </div>"
+	data += "<div id='top_handwriting'>What division would you fit best?</div>"
 	data += "<div id='class_select_box_div'>"
 	var/mob/living/carbon/human/H = linked_client.mob
 	if(!H.job)
@@ -281,8 +281,8 @@
 				<span class="title_shit">Description:</span> <span class="post_title_shit">[cur_picked_class.tutorial]</span>
 			</div>
 				<div id='button_div'>
-					<a class='class_desc_YES_LINK' href='?src=\ref[src];yes_to_class_select=1;special_class=0;'>This is my background</a><br>
-					<a class='bottom_buttons' href='?src=\ref[src];no_to_class_select=1'>I reject this background</a>
+					<a class='class_desc_YES_LINK' href='?src=\ref[src];yes_to_class_select=1;special_class=0;'>This division suits me.</a><br>
+					<a class='bottom_buttons' href='?src=\ref[src];no_to_class_select=1'>I don't want to be this one.</a>
 				</div>
 			</div>
 		</body>

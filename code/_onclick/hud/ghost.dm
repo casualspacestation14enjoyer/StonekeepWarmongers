@@ -75,8 +75,7 @@
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	if(owner.client?.prefs?.crt == TRUE)
-		scannies.alpha = 70
+	scannies.alpha = 70
 
 	using = new /atom/movable/screen/ghost/orbit/rogue()
 	using.hud = src
@@ -109,14 +108,11 @@
 	using = new /atom/movable/screen/grain
 	using.hud = src
 	static_inventory += using
-	if(owner.client?.prefs?.wnoise == FALSE)
-		grain.alpha = 0
 
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	if(owner.client?.prefs?.crt == TRUE)
-		scannies.alpha = 70
+	scannies.alpha = 70
 
 /datum/hud/eye/show_hud(version = 0, mob/viewmob)
 	// don't show this HUD if observing; show the HUD of the observee
@@ -145,11 +141,8 @@
 	using = new /atom/movable/screen/grain
 	using.hud = src
 	static_inventory += using
-	if(owner.client?.prefs?.wnoise == FALSE)
-		grain.alpha = 0
 
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	if(owner.client?.prefs?.crt == TRUE)
-		scannies.alpha = 70
+	scannies.alpha = 70

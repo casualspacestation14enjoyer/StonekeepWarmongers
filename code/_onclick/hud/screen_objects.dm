@@ -1907,7 +1907,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 150
+	alpha = 45
 //	layer = 20.5
 //	plane = 20
 	layer = 13

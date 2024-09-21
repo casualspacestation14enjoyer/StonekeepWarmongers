@@ -73,5 +73,5 @@
 			var/usedkey = ckey(key)
 			if(usedkey in GLOB.anonymize)
 				usedkey = get_fake_key(usedkey)
-			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
+			SEND_TEXT(world, "<span class='notice'>[usedkey] gets drafted.</span>")
 			client.warfare_faction = pick(RED_WARTEAM, BLUE_WARTEAM)

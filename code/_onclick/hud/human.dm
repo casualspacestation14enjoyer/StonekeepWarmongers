@@ -99,8 +99,6 @@
 	grain = new /atom/movable/screen/grain
 	grain.hud = src
 	static_inventory += grain
-	if(owner.client?.prefs?.wnoise == FALSE)
-		grain.alpha = 0
 
 	reads = new /atom/movable/screen/read
 	reads.hud = src
@@ -117,8 +115,7 @@
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	if(owner.client?.prefs?.crt == TRUE)
-		scannies.alpha = 70
+	scannies.alpha = 70
 
 	action_intent = new /atom/movable/screen/act_intent/rogintent
 	action_intent.hud = src

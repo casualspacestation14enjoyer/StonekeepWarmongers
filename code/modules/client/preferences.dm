@@ -205,14 +205,14 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "Character Sheet"
+			used_title = "Draft Notice"
 
 			// Top-level menu table
 			dat += "<table style='width: 100%; line-height: 20px;'>"
 			// FIRST ROW
 			dat += "<tr>"
 			dat += "<td style='width:33%;text-align:left'>"
-			dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;'>Change Character</a>"
+			dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a>"
 			dat += "</td>"
 
 

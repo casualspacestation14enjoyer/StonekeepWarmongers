@@ -1334,8 +1334,6 @@
 	if(!hud?.mymob)
 		return
 
-	icon_state = "[hud.mymob.gender == "male" ? "m" : "f"]-zone_sel"
-
 	if(hud.mymob.stat != DEAD && ishuman(hud.mymob))
 		var/mob/living/carbon/human/H = hud.mymob
 		for(var/X in H.bodyparts)
@@ -1343,7 +1341,7 @@
 			if(BP.body_zone in H.get_missing_limbs())
 				continue
 			if(HAS_TRAIT(H, TRAIT_NOPAIN))
-				var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]")
+				var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]")
 				limby.color = "#78a8ba"
 				. += limby
 				continue
@@ -1351,19 +1349,18 @@
 			if(damage > BP.max_damage)
 				damage = BP.max_damage
 			var/comparison = (damage/BP.max_damage)
-			. += mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]") //apply healthy limb
+			. += mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]") //apply healthy limb
 			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]w-[BP.body_zone]") //apply wounded overlay
 			limby.alpha = (comparison*255)*2
 			. += limby
 			if(BP.get_bleed_rate())
-				. += mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]-bleed") //apply healthy limb
+				. += mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]-bleed") //apply healthy limb
 		for(var/X in H.get_missing_limbs())
-			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[X]") //missing limb
+			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "m-[X]") //missing limb
 			limby.color = "#2f002f"
 			. += limby
 
-	. += mutable_appearance(overlay_icon, "[hud.mymob.gender == "male" ? "m" : "f"]_[hud.mymob.zone_selected]")
-//	. += mutable_appearance(overlay_icon, "height_arrow[hud.mymob.aimheight]")
+	. += mutable_appearance(overlay_icon, "m_[hud.mymob.zone_selected]")
 
 /atom/movable/screen/zone_sel/alien
 	icon = 'icons/mob/screen_alien.dmi'

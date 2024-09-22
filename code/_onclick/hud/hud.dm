@@ -106,7 +106,7 @@ GLOBAL_LIST_INIT(available_ui_styles, sortList(list(
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	scannies.alpha = 70
+	scannies.alpha = 130
 
 /datum/hud/Destroy()
 	if(mymob.hud_used == src)

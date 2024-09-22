@@ -586,7 +586,7 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	assets = list(
 		"pterra.ttf" = 'interface/fonts/pterra.ttf',
 		"chiseld.ttf" = 'interface/fonts/chiseld.ttf',
-		"blackmoor.ttf" = 'interface/fonts/blackmoor.ttf',
+		"vinerhand.ttf" = 'interface/fonts/vinerhand.ttf',
 		"handwrite.ttf" = 'interface/fonts/handwrite.ttf',
 		"book1.ttf" = 'interface/fonts/book1.ttf',
 		"book2.ttf" = 'interface/fonts/book1.ttf',

@@ -1487,7 +1487,6 @@
 
 /atom/movable/screen/splash
 	icon = 'icons/blank_title.png'
-	icon_state = ""
 	screen_loc = "1,1"
 	layer = SPLASHSCREEN_LAYER+1
 	plane = SPLASHSCREEN_PLANE
@@ -1496,7 +1495,7 @@
 
 /atom/movable/screen/splash/credits
 	icon = 'icons/fullblack.dmi'
-	icon_state = ""
+	icon_state = null
 	screen_loc = ui_backhudl
 	layer = SPLASHSCREEN_LAYER
 	fucme = FALSE
@@ -1524,8 +1523,13 @@
 /atom/movable/screen/splash/proc/Fade(out, qdel_after = TRUE)
 	if(QDELETED(src))
 		return
+	if(out)
+		animate(src, alpha = 0, time = 30, flags = ANIMATION_PARALLEL)
+	else
+		alpha = 0
+		animate(src, alpha = 255, time = 30, flags = ANIMATION_PARALLEL)
 	if(qdel_after)
-		qdel(src)
+		QDEL_IN(src, 30)
 
 /atom/movable/screen/splash/Destroy()
 	if(holder)
@@ -1907,7 +1911,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 45
+	alpha = 70
 //	layer = 20.5
 //	plane = 20
 	layer = 13

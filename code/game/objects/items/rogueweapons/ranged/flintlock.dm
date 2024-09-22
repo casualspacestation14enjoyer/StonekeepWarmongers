@@ -26,8 +26,9 @@
 	cartridge_wording = "ball"
 	recoil = 4
 	load_sound = 'sound/foley/nockarrow.ogg'
-	fire_sound = 'sound/combat/Ranged/muskshoot.ogg'
-	equip_sound = 'sound/foley/gun_equip.ogg'
+	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
+	fire_sound_volume = 125
+	equip_sound	 = 'sound/foley/gun_equip.ogg'
 	pickup_sound = 'sound/foley/gun_equip.ogg'
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7

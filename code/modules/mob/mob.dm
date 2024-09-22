@@ -81,11 +81,8 @@ GLOBAL_VAR_INIT(mobids, 1)
 		var/datum/atom_hud/alternate_appearance/AA = v
 		AA.onNewMob(src)
 	if(SSticker.warfare_ready_to_die)
-		set_nutrition(500)
-		set_hydration(750)
-	else // Make them have something to do at least aside from talking.
-		set_nutrition(350)
-		set_hydration(350)
+		set_nutrition(450)
+		set_hydration(600)
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)

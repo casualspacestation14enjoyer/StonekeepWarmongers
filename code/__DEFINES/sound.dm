@@ -88,6 +88,8 @@
 
 #define AMB_TOWNDAY list('sound/ambience/townday.ogg')
 
+#define AMB_WARFARE list('sound/music/dreadfulstench.ogg')
+
 #define AMB_MOUNTAIN list('sound/ambience/MOUNTAIN (1).ogg',\
 						'sound/ambience/MOUNTAIN (2).ogg')
 

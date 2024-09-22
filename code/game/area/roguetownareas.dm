@@ -20,8 +20,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	name = "indoors rt"
 	icon_state = "indoors"
 	ambientrain = RAIN_IN
-	ambientsounds = AMB_INGEN
-	ambientnight = AMB_INGEN
+	ambientsounds = AMB_WARFARE
+	ambientnight = AMB_WARFARE
 	spookysounds = SPOOKY_GEN
 	spookynight = SPOOKY_GEN
 	droning_sound = 'sound/music/area/indoor.ogg'
@@ -49,8 +49,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	outdoors = TRUE
 	ambientrain = RAIN_OUT
 //	ambientsounds = list('sound/ambience/wamb.ogg')
-	ambientsounds = AMB_TOWNDAY
-	ambientnight = AMB_TOWNNIGHT
+	ambientsounds = AMB_WARFARE
+	ambientnight = AMB_WARFARE
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_GEN
 	droning_sound = 'sound/music/area/townstreets.ogg'
@@ -349,14 +349,14 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/indoors/town
 	name = "indoors"
 	icon_state = "blueold"
-	droning_sound = 'sound/music/area/indoor.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/dreadfulstench.ogg'
+	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
+	droning_sound_night = 'sound/music/dreadfulstench.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 
 /area/rogue/outdoors/exposed/town
 	icon_state = "town"
-	droning_sound = 'sound/music/area/towngen.ogg'
+	droning_sound = 'sound/music/dreadfulstench.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
 

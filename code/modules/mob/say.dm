@@ -1,22 +1,33 @@
 //Speech verbs.
 
 
-/mob/verb/say_verb()
+/mob/verb/say_verb(mgs as text)
 	set name = "Say"
 	set category = "IC"
 	set hidden = 1
 
-	var/message = input(usr, "", "say") as text|null
-	// If they don't type anything just drop the message.
-	set_typing_indicator(FALSE)
-	if(!length(message))
-		return
-	if(GLOB.say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
-		return
-	if(message)
+	if(!mgs)
+		var/message = input(usr, "", "say") as text|null
+		// If they don't type anything just drop the message.
 		set_typing_indicator(FALSE)
-		say(message)
+		if(!length(message))
+			return
+		if(GLOB.say_disabled)	//This is here to try to identify lag problems
+			to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+			return
+		if(message)
+			set_typing_indicator(FALSE)
+			say(message)
+	else
+		set_typing_indicator(FALSE)
+		if(!length(mgs))
+			return
+		if(GLOB.say_disabled)	//This is here to try to identify lag problems
+			to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+			return
+		if(mgs)
+			set_typing_indicator(FALSE)
+			say(mgs)
 
 ///Whisper verb
 /mob/verb/whisper_verb(message as text)

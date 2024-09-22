@@ -307,7 +307,7 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		if(C.whowon)
-			end_reason = "The [C.whowon] win yet another conflict! Glory!"
+			end_reason = "The [C.whowon] win yet another conflict."
 
 	if(end_reason)
 		to_chat(world, "<span class='big bold'>[end_reason]</span>")
@@ -316,7 +316,13 @@
 			if(!C.timedmatch)
 				to_chat(world, "<span class='bold'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
-		to_chat(world, "<span class='big bold'>Stalemate! Shame on both of you!</span>")
+		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")
+
+	for(var/client/C in GLOB.clients)
+		if(end_reason)
+			C.showtext(end_reason)
+		else
+			C.showtext("STALEMATE. HOW SHAMEFUL.")
 		
 /datum/controller/subsystem/ticker/proc/gamemode_report()
 	var/list/all_teams = list()

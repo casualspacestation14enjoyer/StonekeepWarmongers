@@ -649,6 +649,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	var/musicfading = 0
 
 /mob/living/proc/intro_area(area/A)
+	return
+	/*
 	if(!mind)
 		return
 	if(A.first_time_text in mind.areas_entered)
@@ -669,6 +671,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	playsound_local(src, 'sound/misc/area.ogg', 100, FALSE)
 	animate(T, alpha = 255, time = 10, easing = EASE_IN)
 	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), 35)
+	*/
 
 /mob/living/proc/clear_area_text(atom/movable/screen/A)
 	if(!A)

@@ -115,7 +115,7 @@
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	scannies.alpha = 70
+	scannies.alpha = 130
 
 	action_intent = new /atom/movable/screen/act_intent/rogintent
 	action_intent.hud = src

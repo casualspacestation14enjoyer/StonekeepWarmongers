@@ -12,6 +12,7 @@
 	
 	if(H)
 		var/mob/living/carbon/human/HU = H
+		HU.client.color = "#ffaaff"
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'

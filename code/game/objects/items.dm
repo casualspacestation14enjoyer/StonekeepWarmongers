@@ -1199,7 +1199,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	wdefense = wdefense + 3
 	update_transform()
 	to_chat(user, "<span class='notice'>I wield [src] with both hands.</span>")
-	playsound(loc, pick('sound/combat/weaponr1.ogg','sound/combat/weaponr2.ogg'), 100, TRUE)
+	if(!wieldsound)
+		playsound(loc, pick('sound/combat/weaponr1.ogg','sound/combat/weaponr2.ogg'), 100, TRUE)
 	var/obj/item/twohanded/offhand/O = new(user) ////Let's reserve his other hand~
 	O.name = "[name] - offhand"
 	O.wielded = TRUE

@@ -10,6 +10,7 @@
 	experimental_onback = FALSE
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc)
+	wieldsound = 'sound/combat/musket_wield.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -27,8 +28,8 @@
 	recoil = 4
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
-	fire_sound_volume = 125
-	equip_sound	 = 'sound/foley/gun_equip.ogg'
+	fire_sound_volume = 500
+	equip_sound = 'sound/foley/gun_equip.ogg'
 	pickup_sound = 'sound/foley/gun_equip.ogg'
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
@@ -36,8 +37,9 @@
 	var/ramtime = 5.5
 
 /obj/item/ramrod
-	name = "ram rod"
+	name = "ramming rod"
 	desc = ""
+	drop_sound = 'sound/combat/ramrod_pickup.ogg' // lol
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "ramrod"
 
@@ -55,9 +57,9 @@
 			return
 		if(chambered)
 			if(!rammed)
+				playsound(src.loc, 'sound/combat/ramrod_working.ogg', 100, FALSE, -3)
 				if(do_after(user, tt SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
-					playsound(src.loc, 'sound/foley/nockarrow.ogg', 100, FALSE)
 					rammed = TRUE
 	else
 		return ..()
@@ -77,7 +79,7 @@
 				rrod.forceMove(src)
 				rod = rrod
 				to_chat(user, "<span class='info'>I put \the [rrod] into \the [src].</span>")
-				playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
+				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	icon_state = "longgun_b"
@@ -132,6 +134,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/update_icon()
 	icon_state = "[initial(icon_state)][wielded]"
+	item_state = "[initial(item_state)][wielded]"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attack_self(mob/living/user)
 	if(!wielded)

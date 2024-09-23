@@ -1,4 +1,5 @@
 /obj/item
+	var/wieldsound = null
 	var/list/onprop = list()
 //#ifdef TESTSERVER
 	var/force_reupdate_inhand = TRUE

@@ -92,9 +92,9 @@
 
 /obj/item/quiver/bullets
 	name = "ammunition pouch"
-	icon_state = "pouch_e"
+	icon_state = "sack_rope"
 	item_state = "quiver"
-	icon = 'icons/roguetown/clothing/storage.dmi'
+	icon = 'icons/roguetown/items/misc.dmi'
 
 /obj/item/quiver/bullets/update_icon()
 	if(ammo_list.len)

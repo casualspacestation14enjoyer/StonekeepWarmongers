@@ -331,7 +331,7 @@
 
 /datum/advclass/red/officer
 	name = "Officer"
-	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery."
+	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery. You personally have won 30 medals, in addition the men speak that you have low blood sugar. Make them regret that!"
 	outfit = /datum/outfit/job/roguetown/redofficer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -698,7 +698,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 
 /datum/advclass/blu/officer
 	name = "Officer"
-	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery."
+	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery. You personally have won 30 medals, in addition the men speak that you have low blood sugar. Make them regret that!"
 	outfit = /datum/outfit/job/roguetown/bluofficer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES

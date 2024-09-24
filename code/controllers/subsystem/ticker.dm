@@ -875,7 +875,7 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
-		to_chat(world, "The barriers have fallen, it is your turn to die now.")
+		to_chat(world, pick("I'M READY TO FUCKING DIE NOW!!!","FOR THE CROWN! FOR THE EMPIRE!","I WILL DIE FOR THE LORD!","...do I really want to die here?"))
 		warfare_ready_to_die = TRUE
 		W.reinforcements()
 		for(var/mob/M in GLOB.player_list)
@@ -885,8 +885,7 @@ SUBSYSTEM_DEF(ticker)
 		for(var/obj/structure/warfarebarrier/red/WB in world)
 			qdel(WB)
 		for(var/obj/structure/warfarestatue/WS in world)
-			WS.begincountdown()
-			
+			WS.begincountdown()	
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
 	var/datum/game_mode/warfare/W = mode
@@ -924,9 +923,9 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/flint"
-	to_chat(world, "Additional resources have been sent to both sides of this conflict.")
+	to_chat(world, "<span class='info'>REINFORCEMENTS... MORE BLOOD TO SPILL...</span>")
 	for(var/mob/M in GLOB.player_list)
-		SEND_SOUND(M, 'sound/music/tension2.ogg')
+		SEND_SOUND(M, 'sound/music/reinforcemets.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
 		new typepath(red.loc)

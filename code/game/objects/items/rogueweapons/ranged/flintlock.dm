@@ -50,7 +50,36 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
 	var/tt = ramtime
-	tt = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2)
+	tt = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2.5)
+
+	var/mob/living/carbon/human/U
+	if(ishuman(user))
+		U = user
+	
+	for(var/atom/T in get_step(src, NORTH))
+		if(ishuman(T))
+			var/mob/living/carbon/human/H = T
+			if(H.warfare_faction == U.warfare_faction)
+				ramtime = ramtime - 0.5
+
+	for(var/atom/T in get_step(src, SOUTH))
+		if(ishuman(T))
+			var/mob/living/carbon/human/H = T
+			if(H.warfare_faction == U.warfare_faction)
+				ramtime = ramtime - 0.5
+
+	for(var/atom/T in get_step(src, EAST))
+		if(ishuman(T))
+			var/mob/living/carbon/human/H = T
+			if(H.warfare_faction == U.warfare_faction)
+				ramtime = ramtime - 0.5
+
+	for(var/atom/T in get_step(src, WEST))
+		if(ishuman(T))
+			var/mob/living/carbon/human/H = T
+			if(H.warfare_faction == U.warfare_faction)
+				ramtime = ramtime - 0.5
+
 	if(istype(A, /obj/item/ramrod))
 		if(!user.is_holding(src))
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")
@@ -85,7 +114,7 @@
 	icon_state = "longgun_b"
 	randomspread = 1
 	spread = 0.5
-	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver)
+	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()

@@ -25,6 +25,7 @@ SUBSYSTEM_DEF(ticker)
 	var/round_end_sound_sent = TRUE			//If all clients have loaded it
 
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
+	var/warfare_techlevel = 1						// 1 flintlocks. 2 repeaters. 3 not yet implemeneted lol
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -889,6 +890,24 @@ SUBSYSTEM_DEF(ticker)
 			qdel(WB)
 		for(var/obj/structure/warfarestatue/WS in world)
 			WS.begincountdown()	
+
+/proc/GetMainGunForWarfare()
+	switch(warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(3)
+			return null
+
+/proc/GetSidearmForWarfare()
+	switch(warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol // replace with revolver soon
+		if(3)
+			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
 	var/datum/game_mode/warfare/W = mode

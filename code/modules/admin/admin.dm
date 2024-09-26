@@ -679,6 +679,26 @@
 
 	return 0
 
+/datum/admins/proc/settechlevel()
+	set category = "GameMaster"
+	set name = "Set Techlevel"
+
+	if(SSticker.warfare_techlevel)
+		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS)", "WARMONGERS", "1") as anything in list("1","2","3")
+		if(inss)
+			switch(inns)
+				if("1")
+					SSticker.warfare_techlevel = 1
+				if("2")		
+					SSticker.warfare_techlevel = 2
+				if("3")
+					SSticker.warfare_techlevel = 3
+			SSblackbox.record_feedback("tally", "admin_verb", 1, "SetTechLevel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+			log_admin("[usr.key] has set the tech level to [inss]")
+			return 1
+			
+	return 0
+
 /datum/admins/proc/reinforcementsnow()
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"

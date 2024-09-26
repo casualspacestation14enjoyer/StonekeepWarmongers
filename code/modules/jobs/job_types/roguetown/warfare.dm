@@ -61,7 +61,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
@@ -135,7 +135,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	r_hand = GetMainGunForWarfare()
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
@@ -265,7 +265,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather/bullet
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -348,7 +348,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/rapier
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
 	backr = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -440,7 +440,7 @@
 	cloak = /obj/item/clothing/cloak/lordcloak
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
@@ -512,7 +512,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	r_hand = GetMainGunForWarfare()
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
@@ -591,7 +591,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/woodcut/steel
 	backr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
@@ -715,7 +715,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/rapier
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
 	backr = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black

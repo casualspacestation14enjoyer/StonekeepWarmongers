@@ -1169,6 +1169,7 @@
 #include "code\game\objects\items\rogueweapons\ranged\cannon.dm"
 #include "code\game\objects\items\rogueweapons\ranged\crossbows.dm"
 #include "code\game\objects\items\rogueweapons\ranged\flintlock.dm"
+#include "code\game\objects\items\rogueweapons\ranged\repeatergun.dm"
 #include "code\game\objects\items\stacks\bscrystal.dm"
 #include "code\game\objects\items\stacks\cash.dm"
 #include "code\game\objects\items\stacks\medical.dm"

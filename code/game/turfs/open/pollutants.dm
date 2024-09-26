@@ -105,7 +105,7 @@
 
 /datum/pollutant/rot
 	color = "#76b418"
-	reagents_on_breathe = list(/datum/reagent/miasmagas = 1)
+	reagents_on_breathe = list(/datum/reagent/miasmagas = 10)
 
 /datum/pollutant/steam
 	color = "#ffffff"

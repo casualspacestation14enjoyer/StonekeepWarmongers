@@ -86,6 +86,8 @@
 */
 
 /turf/handle_mouseover(location,control,params)
+	return TRUE
+	/*
 	var/mob/p = usr
 	if(p.client)
 		if(!p.client.mouseovertext)
@@ -104,11 +106,14 @@
 		p.client.mouseovertext.movethis(PM)
 		p.client.screen |= p.client.mouseovertext
 	return TRUE
+	*/
 
 /turf/open
 	nomouseover = TRUE
 
 /turf/open/handle_mouseover(location, control, params)
+	return TRUE
+	/*
 	var/mob/p = usr
 	if(p.client)
 		if(!p.client.mouseovertext)
@@ -125,8 +130,11 @@
 		p.client.mouseovertext.movethis(PM)
 		p.client.screen |= p.client.mouseovertext
 	return TRUE
+	*/
 
 /mob/handle_mouseover(location,control,params)
+	return TRUE
+	/*
 	var/mob/p = usr
 	if(p.client)
 		if(!p.client.mouseovertext)
@@ -155,6 +163,7 @@
 		p.client.mouseovertext.movethis(PM)
 		p.client.screen |= p.client.mouseovertext
 	return TRUE
+	*/
 
 /atom/movable/screen
 	nomouseover = TRUE

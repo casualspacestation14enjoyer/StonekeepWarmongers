@@ -1,6 +1,34 @@
 GLOBAL_LIST_INIT(bum_quotes, world.file2list("string/rt/bumlines.txt"))
 GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 
+/mob/living/carbon/human/species/human/northern/bum/propsoldier
+	aggressive=0
+	mode = AI_IDLE
+	faction = list("grenzie", "station")
+	ambushable = FALSE
+	dodgetime = 30
+	flee_in_pain = TRUE
+	possible_rmb_intents = list()
+
+	wander = FALSE
+
+/mob/living/carbon/human/species/human/northern/bum/propsoldier/heartfelt
+	faction = list("heartie", "station")
+
+/mob/living/carbon/human/species/human/northern/bum/propsoldier/after_creation() // for screenshots and such
+	QDEL_NULL(sexcon)
+	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+	equipOutfit(new /datum/outfit/job/roguetown/blusoldier)
+
+/mob/living/carbon/human/species/human/northern/bum/propsoldier/heartfelt/after_creation() // for screenshots and such
+	QDEL_NULL(sexcon)
+	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+	equipOutfit(new /datum/outfit/job/roguetown/redsoldier)
+
 /mob/living/carbon/human/species/human/northern/bum
 	aggressive=0
 	mode = AI_IDLE
@@ -11,6 +39,10 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 	possible_rmb_intents = list()
 
 	wander = FALSE
+
+/mob/living/carbon/human/species/human/northern/bum/death(gibbed)
+	. = ..()
+	mode = AI_OFF
 
 /mob/living/carbon/human/species/human/northern/bum/ambush
 	aggressive=1

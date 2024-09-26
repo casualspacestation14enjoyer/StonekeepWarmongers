@@ -62,6 +62,7 @@
 		ammo_list -= O
 		O.forceMove(user.loc)
 		user.put_in_hands(O)
+		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)
 		update_icon()
 		return TRUE
 
@@ -92,15 +93,15 @@
 
 /obj/item/quiver/bullets
 	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "sack_rope"
 	item_state = "quiver"
-	icon = 'icons/roguetown/items/misc.dmi'
 
 /obj/item/quiver/bullets/update_icon()
 	if(ammo_list.len)
-		icon_state = "pouch"
+		icon_state = "sack_rope"
 	else
-		icon_state = "pouch_e"
+		icon_state = "sack_rope"
 
 /obj/item/quiver/bullets/Initialize()
 	..()

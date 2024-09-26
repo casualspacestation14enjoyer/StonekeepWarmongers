@@ -318,11 +318,14 @@
 	else
 		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")
 
+
+	/*
 	for(var/client/C in GLOB.clients)
 		if(end_reason)
 			C.showtext(end_reason)
 		else
 			C.showtext("STALEMATE. HOW SHAMEFUL.")
+	*/
 		
 /datum/controller/subsystem/ticker/proc/gamemode_report()
 	var/list/all_teams = list()

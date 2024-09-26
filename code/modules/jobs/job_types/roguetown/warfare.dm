@@ -135,7 +135,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
@@ -512,11 +512,11 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	if(prob(70))
-		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
-		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+		head = /obj/item/clothing/head/roguetown/helmet
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)

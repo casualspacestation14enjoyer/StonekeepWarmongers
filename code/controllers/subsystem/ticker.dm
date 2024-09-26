@@ -464,13 +464,16 @@ SUBSYSTEM_DEF(ticker)
 	SSdbcore.SetRoundStart()
 
 	if(end_party)
-		to_chat(world, "<span class='notice'><B>This is the final round [station_name()], it's either now or never! FIGHT FOR YOUR TEAM, DON'T LET THEM WIN!</B></span>")
+		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
 
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
-		C.mob.playsound_local(C.mob, 'sound/misc/roundstart.ogg', 100, FALSE)
+		if(end_party)
+			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
+		else
+			C.mob.playsound_local(C.mob, 'sound/vote_start.ogg', 70, FALSE)
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING

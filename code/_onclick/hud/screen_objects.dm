@@ -1015,10 +1015,6 @@
 	var/icon_x = text2num(PL["icon-x"])
 	var/icon_y = text2num(PL["icon-y"])
 	var/choice = get_zone_at(icon_x, icon_y)
-	if(ismob(hud.mymob))
-		var/mob/M = hud.mymob
-		if(M.gender == FEMALE)
-			choice = get_zone_at(icon_x, icon_y, FEMALE)
 	if (!choice)
 		return 1
 
@@ -1040,11 +1036,6 @@
 	var/icon_y = text2num(PL["icon-y"])
 	var/choice = get_zone_at(icon_x, icon_y)
 	choice = "m_[choice]"
-	if(ismob(hud.mymob))
-		var/mob/M = hud.mymob
-		if(M.gender == FEMALE)
-			choice = get_zone_at(icon_x, icon_y, FEMALE)
-			choice = "f_[choice]"
 
 	if(hovering == choice)
 		return
@@ -1350,7 +1341,7 @@
 				damage = BP.max_damage
 			var/comparison = (damage/BP.max_damage)
 			. += mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]") //apply healthy limb
-			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]w-[BP.body_zone]") //apply wounded overlay
+			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "mw-[BP.body_zone]") //apply wounded overlay
 			limby.alpha = (comparison*255)*2
 			. += limby
 			if(BP.get_bleed_rate())

@@ -211,7 +211,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<table style='width: 100%; line-height: 20px;'>"
 			// FIRST ROW
 			dat += "<tr>"
-			dat += "<td style='width:33%;text-align:left'>"
+			dat += "<td style='width:33%;text-align:center'>"
 			dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a>"
 			dat += "</td>"
 
@@ -221,7 +221,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=triumph_buy_menu'>Triumph Buy</a>"
 			dat += "</td>"
 
-			dat += "<td style='width:33%;text-align:right'>"
+			dat += "<td style='width:33%;text-align:center'>"
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a>"
 			dat += "</td>"
 			dat += "</tr>"
@@ -233,7 +233,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=job;task=menu'>Class Selection</a>"
+			dat += "<a href='?_src_=prefs;preference=job;task=menu'>DON'T WORRY, WE DON'T BITE.</a>"
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"

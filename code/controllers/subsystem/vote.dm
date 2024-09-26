@@ -249,7 +249,7 @@ SUBSYSTEM_DEF(vote)
 		var/vp = CONFIG_GET(number/vote_period)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nClick <a href='?src=[REF(src)]'>here</a> to place your vote.\nYou have [DisplayTimeText(vp)] to vote.</font>")
 		for(var/mob/M in GLOB.player_list)
-			M.playsound_local(M, 'sound/vote_start.ogg', 75)
+			M.playsound_local(M, 'sound/timestop.ogg', 75)
 		time_remaining = round(vp/10)
 //		for(var/c in GLOB.clients)
 //			var/client/C = c

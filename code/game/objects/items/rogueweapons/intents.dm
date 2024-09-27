@@ -292,7 +292,7 @@
 	no_early_release = FALSE
 	noaa = TRUE
 	charging_slowdown = 2
-	warnoffset = 20
+	warnoffset = 2
 
 /datum/intent/shoot/prewarning()
 	if(masteritem && mastermob)

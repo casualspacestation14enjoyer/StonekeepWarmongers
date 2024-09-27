@@ -892,7 +892,7 @@ SUBSYSTEM_DEF(ticker)
 			WS.begincountdown()	
 
 /proc/GetMainGunForWarfare()
-	switch(warfare_techlevel)
+	switch(SSticker.warfare_techlevel)
 		if(1)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 		if(2)
@@ -901,7 +901,7 @@ SUBSYSTEM_DEF(ticker)
 			return null
 
 /proc/GetSidearmForWarfare()
-	switch(warfare_techlevel)
+	switch(SSticker.warfare_techlevel)
 		if(1)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 		if(2)

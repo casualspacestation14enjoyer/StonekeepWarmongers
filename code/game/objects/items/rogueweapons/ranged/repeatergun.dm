@@ -7,7 +7,7 @@
 	icon_state = "repeatergun"
 	item_state = "musket"
 	possible_item_intents = list(INTENT_GENERIC)
-	gripped_intents = list(/datum/intent/shoot, /datum/intent/shoot/musket/arc)
+	gripped_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc)
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	wieldsound = 'sound/combat/musket_wield.ogg'
@@ -16,6 +16,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	bolt_type = BOLT_TYPE_STANDARD
 	semi_auto = FALSE
+	casing_ejector = FALSE
+	internal_magazine = TRUE
+	tac_reloads = FALSE
 	randomspread = 1
 	spread = 0
 	bigboy = TRUE
@@ -32,6 +35,10 @@
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
+	var/flunked = FALSE
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/chamber_round(spin_cylinder)
+	return
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_right(mob/user)
 	if(chambered)
@@ -41,7 +48,11 @@
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round()
 	if(B)
 		playsound(user, 'sound/foley/trap_arm.ogg', 100)
-		chambered = B
+		if(flunked)
+			chambered = B
+			flunked = FALSE
+		else
+			flunked = TRUE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/dropped(mob/user)
 	. = ..()
@@ -76,6 +87,7 @@
 		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
 		return
 	..()
+	chambered = null
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 

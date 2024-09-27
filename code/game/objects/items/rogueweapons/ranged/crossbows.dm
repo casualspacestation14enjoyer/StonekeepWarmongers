@@ -53,6 +53,12 @@
 	warnoffset = 20
 	chargetime = 10
 
+/datum/intent/shoot/musket/peter
+	chargedrain = 0 //no drain to aim a gun
+	charging_slowdown = 4
+	warnoffset = 20
+	chargetime = 3
+
 /datum/intent/shoot/musket/arc
 	name = "arc"
 	icon_state = "inarc"

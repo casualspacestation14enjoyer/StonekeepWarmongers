@@ -686,7 +686,7 @@
 	if(SSticker.warfare_techlevel)
 		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS)", "WARMONGERS", "1") as anything in list("1","2","3")
 		if(inss)
-			switch(inns)
+			switch(inss)
 				if("1")
 					SSticker.warfare_techlevel = 1
 				if("2")		

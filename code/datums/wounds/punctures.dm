@@ -39,6 +39,19 @@
 	sewn_clotting_threshold = 0.25
 	sew_threshold = 100
 
+/datum/wound/puncture/large/on_bodypart_gain(obj/item/bodypart/affected)
+	..()
+	var/mob/living/carbon/human/H
+	if(ishuman(owner))
+		H = owner
+	if(istype(affected, /obj/item/bodypart/chest))
+		if(prob(70))
+			H.adjustOrganLoss(ORGAN_SLOT_LUNGS, 60)
+			H.adjustOxyLoss(50)
+		if(prob(45))
+			H.adjustOrganLoss(ORGAN_SLOT_HEART, 60)
+			H.adjustOxyLoss(50)
+
 /datum/wound/puncture/drilling
 	name = "drilling"
 	check_name = "<span class='bloody'><B>DRILLING</B></span>"

@@ -24,9 +24,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientnight = AMB_WARFARE
 	spookysounds = SPOOKY_GEN
 	spookynight = SPOOKY_GEN
-	droning_sound = 'sound/music/area/indoor.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/dreadfulstench.ogg'
+	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
+	droning_sound_night = 'sound/music/dreadfulstench.ogg'
 	plane = INDOOR_PLANE
 	converted_type = /area/rogue/outdoors
 
@@ -53,9 +53,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientnight = AMB_WARFARE
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_GEN
-	droning_sound = 'sound/music/area/townstreets.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/music/dreadfulstench.ogg'
+	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
+	droning_sound_night = 'sound/music/dreadfulstench.ogg'
 	converted_type = /area/rogue/indoors/shelter
 
 /area/rogue/indoors/shelter

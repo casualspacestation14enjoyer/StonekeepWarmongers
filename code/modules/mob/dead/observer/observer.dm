@@ -403,6 +403,7 @@ Works together with spawning an observer, noted above.
 		if(!bnw)
 			return ghost
 		ghost.add_client_colour(/datum/client_colour/monochrome)
+		ghost.returntolobby()
 		return ghost
 
 /mob/living/carbon/human/ghostize(can_reenter_corpse = 1, force_respawn = FALSE, drawskip = FALSE)

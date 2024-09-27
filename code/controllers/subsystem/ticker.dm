@@ -879,7 +879,7 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
-		to_chat(world, pick("I'M READY TO FUCKING DIE NOW!!!","FOR THE CROWN! FOR THE EMPIRE!","I WILL DIE FOR THE LORD!","...do I really want to die here?"))
+		to_chat(world, pick("I'M READY TO FUCKING DIE NOW!!!","FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!","...do I really want to die here?"))
 		warfare_ready_to_die = TRUE
 		W.reinforcements()
 		for(var/mob/M in GLOB.player_list)

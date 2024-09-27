@@ -36,7 +36,7 @@
 			target_pixel_x = -16
 			target_pixel_y = -16
 			layer = ABOVE_MOB_LAYER
-	animate(src, pixel_x = target_pixel_x, pixel_y = target_pixel_y, alpha = 12, time = duration)
+	animate(src, pixel_x = target_pixel_x, pixel_y = target_pixel_y, alpha = 40, time = duration)
 /*
 /obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, set_dir)
 	if(set_dir in GLOB.diagonals)

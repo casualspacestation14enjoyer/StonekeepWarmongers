@@ -45,7 +45,7 @@
 		return
 	if(!do_after(user, 1 SECONDS, TRUE, src))
 		return
-	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round()
+	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)
 		playsound(user, 'sound/foley/trap_arm.ogg', 100)
 		if(flunked)

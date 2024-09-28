@@ -68,7 +68,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	/// Amount we heal passively while sleeping
 	var/sleep_healing = 1
 	/// Amount we heal passively, always
-	var/passive_healing = 5
+	var/passive_healing = 0
 	/// Embed chance if this wound allows embedding
 	var/embed_chance = 0
 

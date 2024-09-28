@@ -305,6 +305,7 @@
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "destruct"
+	max_integrity = 999999
 	anchored = TRUE
 	climbable = FALSE
 	density = TRUE

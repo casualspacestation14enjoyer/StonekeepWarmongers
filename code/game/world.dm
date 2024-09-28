@@ -261,10 +261,8 @@ GLOBAL_VAR(restart_counter)
 //	else
 //	to_chat(world, "<span class='boldannounce'><b><u><a href='byond://winset?command=.reconnect'>CLICK TO RECONNECT</a></u></b></span>")
 
-	var/round_end_sound = pick('sound/roundend/crushthesnake.ogg',
-	'sound/roundend/hatredofgrenzel.ogg',
-	'sound/roundend/stickittotheman.ogg',
-	'sound/roundend/warspeech.ogg')
+	var/round_end_sound = pick('sound/warmongers.ogg',
+	'sound/becauseinwarpeopledie.ogg')
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue

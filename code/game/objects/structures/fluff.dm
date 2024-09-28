@@ -302,7 +302,7 @@
 
 /obj/structure/fluff/ponr
 	name = "Grenzelhofts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS THIS! But if you're a Heartfelt... Eh, sure. Why not."
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "destruct"
 	anchored = TRUE
@@ -334,7 +334,7 @@
 
 /obj/structure/fluff/ponr/red
 	name = "Heartfelts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
 	team = RED_WARTEAM
 
 /obj/structure/fluff/standingflag

@@ -76,6 +76,10 @@ SUBSYSTEM_DEF(ticker)
 
 	//**ROUNDEND STATS**
 	var/deaths = 0			//total deaths in the round
+
+	var/heartfelt_deaths = 0
+	var/grenzelhoft_deaths = 0
+
 	var/blood_lost = 0
 	var/tri_gained = 0
 	var/tri_lost = 0
@@ -945,6 +949,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/flint"
+			SSticker.warfare_techlevel = 2
 	to_chat(world, "<span class='info'>REINFORCEMENTS... MORE BLOOD TO SPILL...</span>")
 	for(var/mob/M in GLOB.player_list)
 		SEND_SOUND(M, 'sound/music/reinforcemets.ogg')

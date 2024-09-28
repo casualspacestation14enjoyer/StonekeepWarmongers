@@ -38,10 +38,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
-"bX" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "bZ" = (
 /obj/machinery/light/rogue/hearth,
 /turf/open/floor/rogue/dirt/road,
@@ -127,8 +123,12 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "hL" = (
-/obj/structure/throne,
+/obj/effect/landmark/observer_start,
 /turf/open/floor/rogue/cobble,
+/area/rogue/outdoors)
+"hS" = (
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "ih" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -188,6 +188,10 @@
 /obj/effect/landmark/start/grenzelinfantry,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"kc" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town)
 "kv" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/shield/wood{
@@ -218,6 +222,10 @@
 	dir = 1
 	},
 /area/rogue/outdoors)
+"kU" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "lQ" = (
 /obj/structure/warfarebarrier,
 /obj/structure/fluff/railing/fence{
@@ -234,6 +242,11 @@
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
+/area/rogue/outdoors)
+"mn" = (
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "mz" = (
 /obj/structure/closet/crate/chest,
@@ -440,6 +453,10 @@
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
+"tz" = (
+/obj/structure/fluff/ponr,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "tO" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood,
@@ -508,6 +525,12 @@
 "wU" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"xm" = (
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/grass{
+	dir = 1
+	},
 /area/rogue/outdoors)
 "xt" = (
 /obj/structure/chair/stool/rogue{
@@ -721,6 +744,10 @@
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"HX" = (
+/obj/structure/fluff/ponr/red,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "Ie" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/wool,
@@ -896,6 +923,13 @@
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"Qj" = (
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/grass{
+	dir = 1
+	},
+/area/rogue/outdoors)
 "Qo" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1
@@ -983,6 +1017,10 @@
 	dir = 1
 	},
 /area/rogue/outdoors)
+"Um" = (
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town)
 "UB" = (
 /obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/dirt/road{
@@ -1122,6 +1160,17 @@
 "Yr" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"Yx" = (
+/obj/machinery/light/rogue/torchholder/c,
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"YK" = (
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/dirt/road{
+	dir = 1
+	},
 /area/rogue/outdoors)
 "YL" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -2376,7 +2425,7 @@ IR
 IR
 IR
 IR
-ih
+Yx
 QZ
 KY
 KY
@@ -2393,7 +2442,7 @@ wI
 jg
 LS
 Ya
-Ya
+Um
 jg
 QA
 dS
@@ -2648,11 +2697,11 @@ KY
 mZ
 Sr
 mZ
-QZ
+hS
 Vi
 QA
 jg
-Ya
+Um
 UK
 dO
 jg
@@ -2724,7 +2773,7 @@ IR
 IR
 IR
 IR
-ih
+Yx
 AK
 QZ
 AK
@@ -2733,7 +2782,7 @@ KY
 "}
 (19,1,1) = {"
 kR
-QA
+YK
 Sz
 QZ
 QX
@@ -2917,7 +2966,7 @@ FX
 QA
 QA
 QA
-Vi
+xm
 dS
 Vi
 AK
@@ -2980,7 +3029,7 @@ zw
 mZ
 mZ
 mZ
-wU
+mn
 KY
 On
 Be
@@ -3081,7 +3130,7 @@ QZ
 "}
 (23,1,1) = {"
 OO
-QZ
+HX
 QZ
 QZ
 QZ
@@ -3119,7 +3168,7 @@ KY
 KY
 KY
 KY
-bX
+KY
 NL
 NL
 hL
@@ -3163,7 +3212,7 @@ wt
 QZ
 QZ
 QZ
-QZ
+tz
 OO
 "}
 (24,1,1) = {"
@@ -3264,7 +3313,7 @@ QA
 mk
 QA
 QA
-NE
+Qj
 mZ
 mZ
 mZ
@@ -3327,7 +3376,7 @@ KY
 AK
 AK
 lQ
-AK
+kU
 KY
 On
 KY
@@ -3592,7 +3641,7 @@ KY
 IR
 WF
 Ya
-Ya
+kc
 IR
 KY
 AK
@@ -3851,7 +3900,7 @@ AK
 lQ
 KY
 IR
-Ya
+kc
 Ya
 IM
 IR

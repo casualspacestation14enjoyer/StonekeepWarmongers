@@ -411,6 +411,11 @@ Works together with spawning an observer, noted above.
 		if(can_reenter_corpse == FALSE)
 			if(!src.client.holder) // Dumb and stupid hack to get rid of false positives added into death count via aghosting. Or something.
 				SSticker.deaths++
+				switch(warfare_faction)
+					if(RED_WARTEAM)
+						SSticker.heartfelt_deaths++
+					if(BLUE_WARTEAM)
+						SSticker.grenzelhoft_deaths++
 		if(mind.has_antag_datum(/datum/antagonist/zombie))
 			if(force_respawn)
 				mind.remove_antag_datum(/datum/antagonist/zombie)

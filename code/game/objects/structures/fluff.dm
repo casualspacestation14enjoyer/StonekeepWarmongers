@@ -300,6 +300,57 @@
 	icon_state = "border"
 	passcrawl = FALSE
 
+/obj/structure/fluff/ponr
+	name = "Grenzelhofts Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS THIS! But if you're a Heartfelt... Eh, sure. Why not."
+	icon = 'icons/shamelessly_stolen.dmi'
+	icon_state = "destruct"
+	anchored = TRUE
+	climbable = FALSE
+	density = TRUE
+	opacity = FALSE
+	var/team = BLUE_WARTEAM
+
+/obj/structure/fluff/ponr/attack_hand(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H
+	if(ishuman(user))
+		H = user
+	switch(team)
+		if(BLUE_WARTEAM)
+			if(H.warfare_faction == RED_WARTEAM)
+				if(istype(SSticker.mode, /datum/game_mode/warfare))
+					var/datum/game_mode/warfare/C = SSticker.mode
+					C.whowon = RED_WARTEAM
+					SSticker.force_ending = TRUE
+					H.adjust_triumphs(5)
+		if(RED_WARTEAM)
+			if(H.warfare_faction == BLUE_WARTEAM)
+				if(istype(SSticker.mode, /datum/game_mode/warfare))
+					var/datum/game_mode/warfare/C = SSticker.mode
+					C.whowon = BLUE_WARTEAM
+					SSticker.force_ending = TRUE
+					H.adjust_triumphs(5)
+
+/obj/structure/fluff/ponr/red
+	name = "Heartfelts Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
+	team = RED_WARTEAM
+
+/obj/structure/fluff/standingflag
+	name = "standing flag"
+	desc = "A stand showing the heraldry coat of arms of the Grenzelhoft royal family. A shame you can't see it, it's really detailed and cool looking. A real shame you only see is a mess, truly!"
+	icon = 'icons/shamelessly_stolen.dmi'
+	icon_state = "blueflag"
+	anchored = TRUE
+	climbable = FALSE
+	density = TRUE
+	opacity = FALSE
+
+/obj/structure/fluff/standingflag/red
+	desc = "A stand showing the heraldry coat of arms of the Heartfelt royal family. Probably for the better you can't see it well, it's fucking awful. Like, completely an insult to everything you stand for."
+	icon_state = "redflag"
+
 /obj/structure/fluff/railing/fence
 	name = "palisade"
 	desc = ""

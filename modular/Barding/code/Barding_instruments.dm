@@ -224,8 +224,8 @@
 	desc = "Shout into the void and pray and hope someone hears you. Used by lost hunters or rich nobles to try and find rescue, proven to be ineffective that way due to the fact that bandits are generally faster than other hunters or nobles. Now has new use as a military device to signal troops orders over long distances."
 	var/attuned = "TEAM"
 	var/message_cooldown
-	icon = 'icons/obj/musician.dmi'
-	icon_state = "trumpet"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "horn"
 
 /obj/item/rogue/signaltrumpet/attack_right(mob/user)
 	. = ..()

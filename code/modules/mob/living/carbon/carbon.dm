@@ -522,7 +522,6 @@
 		stat("CON: [STACON]")
 		stat("END: [STAEND]")
 		stat("SPD: [STASPD]")
-		stat("PATRON: [patron]")
 
 /mob/living/carbon/Stat()
 	..()

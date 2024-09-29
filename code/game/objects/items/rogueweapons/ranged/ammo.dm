@@ -279,7 +279,7 @@
 	range = 50
 	jitter = 5
 	eyeblur = 3
-	stun = 1
+	immobilize = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
 	woundclass = BCLASS_STAB

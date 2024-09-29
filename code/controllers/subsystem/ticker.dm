@@ -27,6 +27,8 @@ SUBSYSTEM_DEF(ticker)
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
 	var/warfare_techlevel = 1						// 1 flintlocks. 2 repeaters. 3 not yet implemeneted lol
 
+	var/oneteammode = null
+
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
 	var/delay_end = 0						//if set true, the round will not restart on it's own
@@ -886,6 +888,7 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, pick("I'M READY TO FUCKING DIE NOW!!!","FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!","...do I really want to die here?"))
 		warfare_ready_to_die = TRUE
 		W.reinforcements()
+		W.begin_autobalance_loop()
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/tension2.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)

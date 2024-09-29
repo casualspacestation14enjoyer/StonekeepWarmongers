@@ -679,6 +679,17 @@
 
 	return 0
 
+/datum/admins/proc/oneteammode()
+	set category = "GameMaster"
+	set name = "One Team Mode"
+
+	if(SSticker.oneteammode)
+		SSticker.oneteammode = null
+		to_chat(usr, "off")
+	else
+		SSticker.oneteammode = BLUE_WARTEAM
+		to_chat(usr, "on")
+
 /datum/admins/proc/settechlevel()
 	set category = "GameMaster"
 	set name = "Set Techlevel"

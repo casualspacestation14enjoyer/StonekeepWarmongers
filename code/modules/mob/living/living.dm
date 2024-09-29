@@ -202,7 +202,7 @@
 					Immobilize(10)
 					H.Immobilize(20)
 					playsound(H, 'sound/combat/hits/bladed/genstab (3).ogg', 100, FALSE, -1)
-					chest.add_wound(/datum/wound/puncture/large, FALSE, FALSE)
+					chest.add_wound(/datum/wound/puncture, FALSE, FALSE)
 					bayoneted = TRUE
 			visible_message("<span class='warning'>[src] charges into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>", "<span class='warning'>I charge into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>")
 			return TRUE

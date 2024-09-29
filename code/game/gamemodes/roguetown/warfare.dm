@@ -49,6 +49,15 @@
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
 
+/datum/game_mode/warfare/proc/begin_autobalance_loop()
+	set waitfor = 0
+	while(1)
+		sleep(1)
+		if(SSticker.oneteammode)
+			break
+		for(var/mob/dead/new_player/P in GLOB.player_list)
+			P.autobalance()
+
 /datum/game_mode/warfare/proc/reinforcements()
 	set waitfor = 0
 	while(1)

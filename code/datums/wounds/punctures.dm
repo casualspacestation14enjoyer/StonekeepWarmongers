@@ -46,11 +46,11 @@
 		H = owner
 	if(istype(affected, /obj/item/bodypart/chest))
 		if(prob(70))
-			H.adjustOrganLoss(ORGAN_SLOT_LUNGS, 60)
-			H.adjustOxyLoss(50)
+			H.adjustOrganLoss(ORGAN_SLOT_LUNGS, 40)
+			H.adjustOxyLoss(20)
 		if(prob(45))
-			H.adjustOrganLoss(ORGAN_SLOT_HEART, 60)
-			H.adjustOxyLoss(50)
+			H.adjustOrganLoss(ORGAN_SLOT_HEART, 40)
+			H.adjustOxyLoss(20)
 
 /datum/wound/puncture/drilling
 	name = "drilling"

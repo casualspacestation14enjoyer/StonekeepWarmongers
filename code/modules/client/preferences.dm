@@ -210,61 +210,20 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			// Top-level menu table
 			dat += "<table style='width: 100%; line-height: 20px;'>"
 			// FIRST ROW
-			dat += "<tr>"
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a>"
-			dat += "</td>"
-
-
-			dat += "<td style='width:33%;text-align:center'>"
-			if(SStriumphs.triumph_buys_enabled)
-				dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=triumph_buy_menu'>Triumph Buy</a>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a>"
-			dat += "</td>"
-			dat += "</tr>"
-
-
-			// NEXT ROW
-			dat += "<tr>"
 			dat += "<td style='width:33%;text-align:left'>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=job;task=menu'>DON'T WORRY, WE DON'T BITE.</a>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:right'>"
-			dat += "</td>"
-			dat += "</tr>"
-
-			// ANOTHA ROW
-			dat += "<tr style='padding-top: 0px;padding-bottom:0px'>"
-			dat += "<td style='width:33%;text-align:left'>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			//dat += "<a href='?_src_=prefs;preference=antag;task=menu'>Villain Selection</a>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:right'>"
-			dat += "</td>"
-			dat += "</tr>"
-
-			// ANOTHER ROW HOLY SHIT WE FINALLY A GOD DAMN GRID NOW! WHOA!
-			dat += "<tr style='padding-top: 0px;padding-bottom:0px'>"
-			dat += "<td style='width:33%; text-align:left'>"
+			dat += "<a href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a><br>"
 			dat += "<a href='?_src_=prefs;preference=playerquality;task=menu'><b>KARMA:</b></a> [get_playerquality(user.ckey, text = TRUE)]"
 			dat += "</td>"
 
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=triumphs;task=menu'><b>TRIUMPHS:</b></a> [user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "None"]"
+			dat += "<td style='width:33%;text-align:right'>"
+			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
+			dat += "[user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "NULLA"] <a><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
-			dat += "<td style='width:33%;text-align:right'>"
-			dat += "</td>"
+			usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
+			dat += "<div style='text-align: center;float:center;'>"
+			dat += "<a href='?_src_=prefs;preference=wisdom;task=menu><img class='ninetysskull' src='ss13_32.png'></a>"
+			dat += "</div>"
 
 			dat += "</table>"
 
@@ -272,8 +231,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<center><h2>Quirk Setup</h2>"
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
-
-
 
 			// Encapsulating table
 			dat += "<table width = '100%'>"
@@ -321,11 +278,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_AGE_ANTAG]'>When Antagonist: [(randomise[RANDOM_AGE_ANTAG]) ? "Yes" : "No"]</A>"
 
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
-			dat += "<b>Flaw:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
-			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
-			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
-			dat += "<b>Patron:</b> <a href='?_src_=prefs;preference=patron;task=input'>[selected_patron?.name || "FUCK!"]</a><BR>"
-//			dat += "<b>Family:</b> <a href='?_src_=prefs;preference=family'>Unknown</a><BR>" // Disabling until its working
+			dat += "<b>Flaw:</b> <a>IT DOESN'T MATTER</a><BR>"
+			dat += "<b>Faith:</b> <a>THE GODS ARE DEAD</a><BR>"
+			dat += "<b>Patron:</b> <a>AND IT IS OUR FAULT</a><BR>"
 			dat += "<b>Dominance:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "Left-handed" : "Right-handed"]</a><BR>"
 
 /*
@@ -1452,7 +1407,6 @@ Slots: [job.spawn_positions]</span>
 				SetChoices(user)
 		return 1
 
-
 	else if(href_list["preference"] == "trait")
 		switch(href_list["task"])
 			if("close")
@@ -1521,6 +1475,13 @@ Slots: [job.spawn_positions]</span>
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
+
+	else if(href_list["preference"] == "wisdom")
+		var/list/randomtips = world.file2list("string/tips.txt")
+		var/m
+		m = pick(randomtips)
+		if(m)
+			to_chat(usr, "<span class='purple'>Make sure to remember: \"[html_encode(m)]\"</span>")
 
 	else if(href_list["preference"] == "keybinds")
 		switch(href_list["task"])

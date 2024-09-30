@@ -563,7 +563,8 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"try4.png" = 'icons/roguetown/misc/try4.png',
 		"try4_border.png" = 'icons/roguetown/misc/try4_border.png',
 		"slop_menustyle2.css" = 'html/browser/slop_menustyle2.css',
-		"gragstar.gif" = 'icons/roguetown/misc/gragstar.gif'
+		"gragstar.gif" = 'icons/roguetown/misc/gragstar.gif',
+		"stamp.png" = 'icons/stamp.png' // not used at all in class menu layout but theres no QC in my repo so might aswell make my job FUCKING easier
 	)
 
 /datum/asset/simple/stonekeep_triumph_buy_menu_slop_layout

@@ -90,6 +90,10 @@
 			if(!P.nodamage && P.damage < src.health && isliving(P.firer))
 				retaliate(P.firer)
 
+	if(def_zone == BODY_ZONE_HEAD || def_zone == BODY_ZONE_PRECISE_SKULL)
+		adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+		flash_color(src, flash_color = "#FF0000", flash_time = 4 SECONDS)
+
 	if(dna && dna.species)
 		var/spec_return = dna.species.bullet_act(P, src, def_zone)
 		if(spec_return)

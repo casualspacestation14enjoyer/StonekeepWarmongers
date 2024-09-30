@@ -57,10 +57,6 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 	if(client.is_new_player())
 		return
 
-	if(SSticker.HasRoundStarted())
-		src << browse(null, "window=lobby_window")
-		return
-
 	var/list/dat = list("<center>")
 
 	var/time_remaining = SSticker.GetTimeLeft()
@@ -122,8 +118,6 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 		src << browse(popup.get_content(), "window=lobby_window") //dont update the size or annoyingly refresh
 		qdel(popup)
 		return
-	else
-		popup.open(FALSE)
 
 /mob/dead/proc/server_hop()
 	set category = "OOC"

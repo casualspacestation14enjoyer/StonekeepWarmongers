@@ -208,7 +208,16 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			used_title = "Draft Notice"
 
 			// Top-level menu table
+
 			dat += "<table style='width: 100%; line-height: 20px;'>"
+
+			usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
+			dat += "<div style='text-align:center;'>"
+			dat += "<a href='?_src_=prefs;preference=wisdom;task=menu'>"
+			dat += "<img class='ninetysskull' src='ss13_32.png'>"
+			dat += "</a>"
+			dat += "</div>"
+
 			// FIRST ROW
 			dat += "<td style='width:33%;text-align:left'>"
 			dat += "<a href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a><br>"
@@ -219,11 +228,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
 			dat += "[user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "NULLA"] <a><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
-
-			usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
-			dat += "<div style='text-align: center;float:center;'>"
-			dat += "<a href='?_src_=prefs;preference=wisdom;task=menu><img class='ninetysskull' src='ss13_32.png'></a>"
-			dat += "</div>"
 
 			dat += "</table>"
 

@@ -286,7 +286,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>Faith:</b> <a>THE GODS ARE DEAD</a><BR>"
 			dat += "<b>Patron:</b> <a>AND IT IS OUR FAULT</a><BR>"
 			dat += "<b>Dominance:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "Left-handed" : "Right-handed"]</a><BR>"
-
 /*
 			dat += "<br><br><b>Special Names:</b><BR>"
 			var/old_group
@@ -867,6 +866,13 @@ GLOBAL_LIST_EMPTY(chosen_names)
 		dat += "<a href='byond://?src=[REF(N)];late_join=1'>DUTY CALLS</a>"
 //	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 		dat += "</center>"
+
+	usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
+	dat += "<div style='text-align:center;'>"
+	dat += "<a href='?_src_=prefs;preference=mongers;task=menu'>"
+	dat += "<img class='ninetysskull' src='ss13_32.png'>"
+	dat += "</a>"
+	dat += "</div>"
 
 
 	if(user.client.is_new_player())
@@ -1479,6 +1485,11 @@ Slots: [job.spawn_positions]</span>
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
+
+	else if(href_list["preference"] == "mongers")
+		usr.playsound_local(usr, 'sound/warmongers.ogg', 65, FALSE)
+		sleep(2 SECONDS)
+		usr.playsound_local(usr, 'sound/becauseinwarpeopledie.ogg', 65, FALSE)
 
 	else if(href_list["preference"] == "wisdom")
 		var/list/randomtips = world.file2list("string/tips.txt")

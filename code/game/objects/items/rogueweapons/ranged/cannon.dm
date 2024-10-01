@@ -29,15 +29,27 @@
 		if(LR.on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
-			fire(user)
+			fire()
 	else
 		return ..()
 
-/obj/structure/cannon/proc/fire(var/mob/firer)
+/obj/structure/cannon/fire_act(added, maxstacks)
+	if(!loaded)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
+
+/obj/structure/cannon/spark_act()
+	if(!loaded)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
+
+/obj/structure/cannon/proc/fire()
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
-		H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 75, FALSE)
+		H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 5)
 		H.throw_at(turfa, 5, 1, null, FALSE)
@@ -64,6 +76,9 @@
 	fire_sound = 'sound/misc/explode/explosion.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk/cannona
 	dropshrink = 0.5
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon/update_icon()
+	icon_state = "cannona"
 
 /obj/item/ammo_box/magazine/internal/shot/musk/cannona
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball

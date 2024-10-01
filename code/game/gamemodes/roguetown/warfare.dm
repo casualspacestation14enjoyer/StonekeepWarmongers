@@ -52,15 +52,18 @@
 /datum/game_mode/warfare/proc/begin_autobalance_loop()
 	set waitfor = 0
 	while(1)
-		sleep(1)
+		CHECK_TICK
 		if(SSticker.oneteammode)
 			break
+		CHECK_TICK
 		for(var/mob/dead/new_player/P in GLOB.player_list)
+			CHECK_TICK
 			P.autobalance()
 
 /datum/game_mode/warfare/proc/reinforcements()
 	set waitfor = 0
 	while(1)
+		CHECK_TICK
 		if((reinforcementwave >= 5))
 			break
 		sleep(warfare_reinforcement_time MINUTES)

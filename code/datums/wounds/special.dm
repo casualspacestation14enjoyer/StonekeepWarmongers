@@ -185,8 +185,6 @@
 /datum/wound/facial/disfigurement/nose/on_mob_gain(mob/living/affected)
 	. = ..()
 	ADD_TRAIT(affected, TRAIT_MISSING_NOSE, "[type]")
-	if(HAS_TRAIT(affected, TRAIT_CRITICAL_WEAKNESS))
-		affected.death()
 
 /datum/wound/facial/disfigurement/nose/on_mob_loss(mob/living/affected)
 	. = ..()

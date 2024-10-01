@@ -220,6 +220,7 @@
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
 //	ADD_TRAIT(src, TRAIT_NOBREATH, TRAIT_GENERIC)
 //	blue breathes underwater, need a new specific one for this maybe organ cheque
 //	ADD_TRAIT(src, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
@@ -302,8 +303,6 @@
 				r_hand = /obj/item/rogueweapon/sword/iron
 			else
 				r_hand = /obj/item/rogueweapon/mace/spiked
-			if(prob(30))
-				l_hand = /obj/item/rogueweapon/shield/wood
 			if(prob(23))
 				r_hand = /obj/item/rogueweapon/huntingknife/stoneknife
 				l_hand = /obj/item/rogueweapon/huntingknife/stoneknife
@@ -325,7 +324,6 @@
 				r_hand = /obj/item/rogueweapon/mace/spiked
 			if(prob(20))
 				r_hand = /obj/item/rogueweapon/flail
-			l_hand = /obj/item/rogueweapon/shield/wood
 
 
 ////

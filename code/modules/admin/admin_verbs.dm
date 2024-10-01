@@ -541,13 +541,15 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Drop Bomb"
 	set desc = ""
 
-	var/list/choices = list("Small Bomb (1, 2, 3, 3)", "Medium Bomb (2, 3, 4, 4)", "Big Bomb (3, 5, 7, 5)", "Maxcap", "Custom Bomb")
+	var/list/choices = list("Roguebomb","Small Bomb (1, 2, 3, 3)", "Medium Bomb (2, 3, 4, 4)", "Big Bomb (3, 5, 7, 5)", "Maxcap", "Custom Bomb")
 	var/choice = input("What size explosion would you like to produce? NOTE: You can do all this rapidly and in an IC manner (using cruise missiles!) with the Config/Launch Supplypod verb. WARNING: These ignore the maxcap") as null|anything in choices
 	var/turf/epicenter = mob.loc
 
 	switch(choice)
 		if(null)
 			return 0
+		if("Roguebomb")
+			explosion(epicenter, light_impact_range = 4, flame_range = 1, TRUE, TRUE, smoke=TRUE)
 		if("Small Bomb (1, 2, 3, 3)")
 			explosion(epicenter, 1, 2, 3, 3, TRUE, TRUE)
 		if("Medium Bomb (2, 3, 4, 4)")

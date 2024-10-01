@@ -51,6 +51,9 @@
 /datum/wound/artery/neck/on_mob_gain(mob/living/affected)
 	. = ..()
 	ADD_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
+	affected.adjustOxyLoss(25)
+	if(HAS_TRAIT(affected, TRAIT_CRITICAL_WEAKNESS))
+		affected.death()
 
 /datum/wound/artery/neck/on_mob_loss(mob/living/affected)
 	. = ..()

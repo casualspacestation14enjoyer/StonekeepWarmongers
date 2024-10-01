@@ -381,7 +381,7 @@
 	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [musketsshot]"
 	shit += "<br><font color='#680000'><span class='bold'>Heartfelt Deaths:</span></font> [heartfelt_deaths]"
 	shit += "<br><font color='#001a68'><span class='bold'>Grenzelhoft Deaths:</span></font> [grenzelhoft_deaths]"
-	shit += "<br><font color='#463019'><span class='bold'>Total Deaths:</span></font> [deaths]"
+	shit += "<br><font color='#000000'><span class='bold'>Total Deaths:</span></font> [deaths]"
 	shit += "<br><font color='#af2323'><span class='bold'>Blood spilt:</span></font> [round(blood_lost / 100, 1)]L"
 //	if(cuckers.len)
 //		shit += "<br><font color='#4e488a'><span class='bold'>Adulterers:</span></font> "

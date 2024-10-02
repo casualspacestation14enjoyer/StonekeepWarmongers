@@ -21,6 +21,23 @@
 	Adds an instance of colour_type to the mob's client_colours list
 	colour_type - a typepath (subtyped from /datum/client_colour)
 */
+
+/mob/verb/test1()
+	set category = "Options"
+
+	add_client_colour(/datum/client_colour/sepia)
+
+/mob/verb/test2()
+	set category = "Options"
+
+	add_client_colour(/datum/client_colour/inversed)
+
+/mob/verb/test3()
+	set category = "Options"
+
+	add_client_colour(/datum/client_colour/monochrome)
+	
+
 /mob/proc/add_client_colour(colour_type)
 	if(!ispath(colour_type, /datum/client_colour))
 		return
@@ -29,7 +46,6 @@
 	client_colours |= CC
 	sortTim(client_colours, GLOBAL_PROC_REF(cmp_clientcolour_priority))
 	update_client_colour()
-
 
 /*
 	Removes an instance of colour_type from the mob's client_colours list
@@ -102,6 +118,13 @@
 /datum/client_colour/monochrome
 	colour = list(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
 	priority = INFINITY //we can't see colors anyway!
+
+/datum/client_colour/sepia
+	colour = list(0.393,0.349,0.272,0, 0.769,0.686,0.534,0, 0.189,0.168,0.131,0, 0,0,0,1, 0,0,0,0)
+
+/datum/client_colour/inversed
+	colour = list(-1,0,0,0, 0,-1,0,0, 0,0,-1,0, 0,0,0,1, 1,1,1,0)
+	priority = INFINITY
 
 /datum/client_colour/test1
 	colour = list(1,1,1,0.5, 1,1,1,0.5, 1,1,1,0.5)

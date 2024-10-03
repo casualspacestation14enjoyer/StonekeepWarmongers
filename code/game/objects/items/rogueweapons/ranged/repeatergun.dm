@@ -37,13 +37,18 @@
 	associated_skill = /datum/skill/combat/flintlocks
 	var/flunked = FALSE
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/examine(mob/user)
+	..()
+	if(chambered)
+		to_chat(user, "It is loaded.")
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/chamber_round(spin_cylinder)
 	return
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_right(mob/user)
 	if(chambered)
 		return
-	if(!do_after(user, 1 SECONDS, TRUE, src))
+	if(!do_after(user, 0.5 SECONDS, TRUE, src))
 		return
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)
@@ -87,7 +92,7 @@
 		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
 		return
 	..()
-	chambered = null
+	QDEL_NULL(chambered)
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 

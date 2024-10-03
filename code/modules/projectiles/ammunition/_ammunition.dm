@@ -47,7 +47,7 @@
 	desc = ""
 
 //proc to magically refill a casing with a new projectile
-/obj/item/ammo_casing/proc/newshot() //For energy weapons, syringe gun, shotgun shells and wands (!).
+/obj/item/ammo_casing/proc/newshot() //For energy weapons, syringe gun, shotgun shells and wands (ᛣ).
 	if(!BB)
 		BB = new projectile_type(src, src)
 

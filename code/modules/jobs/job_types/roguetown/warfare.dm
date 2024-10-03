@@ -394,8 +394,9 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
-		H.change_stat("speed", 8)
-		H.change_stat("strength", -9)
+		H.change_stat("speed", 4)
+		H.change_stat("intelligence", 3)
+		H.change_stat("strength", -4)
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -760,5 +761,6 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
-		H.change_stat("speed", 8)
-		H.change_stat("strength", -9)
+		H.change_stat("speed", 4)
+		H.change_stat("intelligence", 3)
+		H.change_stat("strength", -4)

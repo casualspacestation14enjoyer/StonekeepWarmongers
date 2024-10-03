@@ -56,10 +56,6 @@
 	if(has_wound(/datum/wound/dislocation))
 		bodypart_status += "[src] is dislocated."
 	var/location_accessible = TRUE
-	if(owner)
-		location_accessible = get_location_accessible(owner, body_zone)
-		if(!observer_privilege && !location_accessible)
-			bodypart_status += "Obscured by clothing."
 	var/owner_ref = owner ? REF(owner) : REF(src)
 	if(observer_privilege || location_accessible)
 		if(skeletonized)
@@ -78,22 +74,19 @@
 		if(brute >= DAMAGE_PRECISION)
 			switch(brute/max_damage)
 				if(0.75 to INFINITY)
-					bodypart_status += "[src] is [heavy_brute_msg]."
+					bodypart_status += "ᛣ [src] is [heavy_brute_msg]."
 				if(0.25 to 0.75)
-					bodypart_status += "[src] is [medium_brute_msg]."
+					bodypart_status += "ᛣ [src] is [medium_brute_msg]."
 				else
-					bodypart_status += "[src] is [light_brute_msg]."
+					bodypart_status += "ᛣ [src] is [light_brute_msg]."
 		if(burn >= DAMAGE_PRECISION)
 			switch(burn/max_damage)
 				if(0.75 to INFINITY)
-					bodypart_status += "[src] is [heavy_burn_msg]."
+					bodypart_status += "ᛣ [src] is [heavy_burn_msg]."
 				if(0.25 to 0.75)
-					bodypart_status += "[src] is [medium_burn_msg]."
+					bodypart_status += "ᛣ [src] is [medium_burn_msg]."
 				else
-					bodypart_status += "[src] is [light_burn_msg]."
-
-		if(!location_accessible)
-			bodypart_status += "Obscured by clothing."
+					bodypart_status += "ᛣ [src] is [light_burn_msg]."
 
 		if(bandage || length(wounds))
 			bodypart_status += "<B>Wounds:</B>"
@@ -101,7 +94,7 @@
 				var/usedclass = "notice"
 				if(bandage.return_blood_DNA())
 					usedclass = "bloody"
-				bodypart_status += "<a href='?src=[owner_ref];bandage=[REF(bandage)];bandaged_limb=[REF(src)]' class='[usedclass]'>Bandaged</a>"
+				bodypart_status += "<a href='?src=[owner_ref];bandage=[REF(bandage)];bandaged_limb=[REF(src)]' class='[usedclass]'>ᛉ Bandaged</a>"
 			if(!bandage || observer_privilege)
 				for(var/datum/wound/wound as anything in wounds)
 					bodypart_status += wound.get_visible_name(user)
@@ -112,7 +105,7 @@
 	if(length(embedded_objects))
 		bodypart_status += "<B>Embedded objects:</B>"
 		for(var/obj/item/embedded as anything in embedded_objects)
-			bodypart_status += "<a href='?src=[owner_ref];embedded_object=[REF(embedded)];embedded_limb=[REF(src)]'>[embedded.name]</a>"
+			bodypart_status += "<a href='?src=[owner_ref];embedded_object=[REF(embedded)];embedded_limb=[REF(src)]'>ᛣ [embedded.name]</a>"
 	
 	return bodypart_status
 
@@ -122,7 +115,7 @@
 
 	var/list/status = get_injury_status(user, advanced)
 	if(!length(status))
-		examination += "<span class='green'>OK</span>"
+		examination += "<span class='green'>ᛉ OK</span>"
 	else
 		examination += status.Join(" | ")
 
@@ -171,9 +164,9 @@
 	var/bleed_rate = get_bleed_rate()
 	if(bleed_rate)
 		if(bleed_rate > 1) //Totally arbitrary value
-			status += "<span class='bloody'><B>BLEEDING</B></span>"
+			status += "<span class='bloody'><B>ᛣ BLEEDING</B></span>"
 		else
-			status += "<span class='bloody'>BLEEDING</span>"
+			status += "<span class='bloody'>ᛣ BLEEDING</span>"
 	
 	var/list/wound_strings = list()
 	for(var/datum/wound/wound as anything in wounds)
@@ -183,9 +176,9 @@
 	status += wound_strings
 
 	if(skeletonized)
-		status += "<span class='dead'>SKELETON</span>"
+		status += "<span class='dead'>ᛣ SKELETON</span>"
 	else if(rotted)
-		status += "<span class='necrosis'>NECROSIS</span>"
+		status += "<span class='necrosis'>ᛣ NECROSIS</span>"
 
 	var/owner_ref = owner ? REF(owner) : REF(src)
 	for(var/obj/item/embedded as anything in embedded_objects)
@@ -201,7 +194,7 @@
 			status += "<a href='?src=[owner_ref];bandaged_limb=[REF(src)];bandage=[REF(bandage)]' class='info'>[uppertext(bandage.name)]</a>"
 
 	if(disabled)
-		status += "<span class='deadsay'>CRIPPLED</span>"
+		status += "<span class='deadsay'>ᛣᛣᛣ CRIPPLED ᛣᛣᛣ</span>"
 
 	return status
 

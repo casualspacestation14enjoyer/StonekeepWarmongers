@@ -340,7 +340,7 @@
 
 /obj/structure/fluff/standingflag
 	name = "standing flag"
-	desc = "A stand showing the heraldry coat of arms of the Grenzelhoft royal family. A shame you can't see it, it's really detailed and cool looking. A real shame you only see is a mess, truly!"
+	desc = "A stand showing the heraldry coat of arms of the Grenzelhoft royal family. A shame you can't see it, it's really detailed and cool looking. A real shame the only thing you see is a mess, truly!"
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "blueflag"
 	anchored = TRUE

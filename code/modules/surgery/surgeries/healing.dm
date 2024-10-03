@@ -71,11 +71,6 @@
 		else //less healing bonus for the dead since they're expected to have lots of damage to begin with (to make TW into defib not TOO simple)
 			urhealedamt_brute += round((target.getBruteLoss()/ (missinghpbonus*5)),0.1)
 			urhealedamt_burn += round((target.getFireLoss()/ (missinghpbonus*5)),0.1)
-	if(!get_location_accessible(target, target_zone))
-		urhealedamt_brute *= 0.55
-		urhealedamt_burn *= 0.55
-		umsg += " as best as you can while they have clothing on"
-		tmsg += " as best as they can while [target] has clothing on"
 	target.heal_bodypart_damage(urhealedamt_brute,urhealedamt_burn)
 	display_results(user, target, "<span class='notice'>[umsg].</span>",
 		"[tmsg].",

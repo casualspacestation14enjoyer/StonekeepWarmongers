@@ -111,9 +111,6 @@
 	if(stringamt < 1)
 		to_chat(user, "<span class='warning'>The needle has no thread left!</span>")
 		return
-	if(!get_location_accessible(patient, check_zone(doctor.zone_selected)))
-		to_chat(doctor, "<span class='warning'>Something in the way.</span>")
-		return FALSE
 	var/list/sewable
 	var/obj/item/bodypart/affecting
 	if(iscarbon(patient))
@@ -141,7 +138,7 @@
 	while(!QDELETED(target_wound) && !QDELETED(src) && \
 		!QDELETED(user) && (target_wound.sew_progress < target_wound.sew_threshold) && \
 		stringamt >= 1)
-		if(!do_after(doctor, 20, target = patient))
+		if(!do_after(doctor, 5, target = patient))
 			break
 		playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 		target_wound.sew_progress = min(target_wound.sew_progress + moveup, target_wound.sew_threshold)
@@ -172,5 +169,5 @@
 
 /obj/item/needle/blessed
 	name = "blessed needle"
-	desc = "<span class='hierophant'>A needle blessed by the ordained of the Church. A coveted item.</span>"
+	desc = ""
 	infinite = TRUE

@@ -22,7 +22,7 @@
 #else
 	name = "WARMONGERS"
 #endif
-	fps = 60
+	fps = 30
 #ifdef FIND_REF_NO_CHECK_TICK
 	loop_checks = FALSE
 #endif

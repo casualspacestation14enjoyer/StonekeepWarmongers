@@ -1000,7 +1000,7 @@
 
 /atom/movable/screen/zone_sel
 	name = "damage zone"
-	icon_state = "m-zone_sel"
+	icon_state = "" //"m-zone_sel"
 	screen_loc = rogueui_targetdoll
 	var/overlay_icon = 'icons/mob/roguehud64.dmi'
 	var/static/list/hover_overlays_cache = list()

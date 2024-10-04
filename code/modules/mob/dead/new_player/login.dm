@@ -75,7 +75,7 @@
 				usedkey = get_fake_key(usedkey)
 			SEND_TEXT(world, "<span class='notice'>[usedkey] gets drafted.</span>")
 			if(SSticker.oneteammode)
-				client.warfare_faction = SSticker.oneteammode
+				client.warfare_faction = BLUE_WARTEAM
 
 /mob/dead/new_player/proc/autobalance()
 	var/datum/game_mode/warfare/W = SSticker.mode

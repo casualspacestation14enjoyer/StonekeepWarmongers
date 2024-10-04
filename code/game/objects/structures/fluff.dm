@@ -317,6 +317,8 @@
 	var/mob/living/carbon/human/H
 	if(ishuman(user))
 		H = user
+	if(!do_after(user, 10 SECONDS, TRUE, src))
+		return
 	switch(team)
 		if(BLUE_WARTEAM)
 			if(H.warfare_faction == RED_WARTEAM)

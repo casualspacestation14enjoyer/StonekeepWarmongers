@@ -13,6 +13,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/muted = 0
 	var/last_ip
 	var/last_id
+	var/is_bordered = 0
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
@@ -880,7 +881,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	winshow(user, "stonekeep_prefwin", TRUE)
 	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>[used_title]</div>", 700, 530)
-	popup.set_window_options("can_close=0")
+	popup.set_window_options("can_close=0;can_minimize=0;border=0;titlebar=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	update_preview_icon()
@@ -1496,7 +1497,7 @@ Slots: [job.spawn_positions]</span>
 		var/m
 		m = pick(randomtips)
 		if(m)
-			to_chat(usr, "<span class='purple'>Make sure to remember: \"[html_encode(m)]\"</span>")
+			to_chat(usr, "<span class='notice'>Make sure to remember: \"[html_encode(m)]\"</span>")
 
 	else if(href_list["preference"] == "keybinds")
 		switch(href_list["task"])

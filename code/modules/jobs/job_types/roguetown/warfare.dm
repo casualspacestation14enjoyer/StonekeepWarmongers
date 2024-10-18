@@ -21,6 +21,34 @@
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
+// Captain Verbs
+
+/mob/living/carbon/human/proc/warfare_announce()
+	set name = "Announce!"
+	set category = "LORD"
+	var/ann = input(usr, "ANNOUNCE TO YOUR FLOCK!", "WARMONGERS") as null|text
+
+	if(ann)
+		for(var/mob/living/carbon/human/M in GLOB.player_list)
+			if(M.warfare_faction != src.warfare_faction)
+				continue
+			if(M.can_hear())
+				to_chat(M, "<br><span class='alert'>THE WORTHY LORD SAYS: \"[ann]\"</span>")
+				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+
+/mob/living/carbon/human/proc/warfare_command()
+	set name = "Command!"
+	set category = "LORD"
+	var/ann = input(usr, "COMMAND YOUR FLOCK!", "WARMONGERS") as null|text
+
+	if(ann)
+		for(var/mob/living/carbon/human/M in GLOB.player_list)
+			if(M.warfare_faction != src.warfare_faction)
+				continue
+			if(M.can_hear())
+				to_chat(M, "<br><span class='alert'>THE WORTHY LORD COMMANDS: \"[ann]\"</span>")
+				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+
 ///////////////////////////// RED ///////////////////////////////////////
 
 /datum/job/roguetown/warfare/red
@@ -44,6 +72,10 @@
 
 /datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
+	H.verbs += list(
+		/mob/living/carbon/human/proc/warfare_announce,
+		/mob/living/carbon/human/proc/warfare_command
+	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		C.redlord = H
@@ -64,7 +96,6 @@
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
 	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	cloak = /obj/item/clothing/cloak/heartfelt
 	if(H.gender == FEMALE)
@@ -419,6 +450,10 @@
 
 /datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
+	H.verbs += list(
+		/mob/living/carbon/human/proc/warfare_announce,
+		/mob/living/carbon/human/proc/warfare_command
+	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		C.blulord = H
@@ -442,7 +477,6 @@
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	backpack_contents = list(/obj/item/rogue/signaltrumpet=1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
@@ -460,8 +494,6 @@
 		H.change_stat("perception", 2)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
-
-
 
 /////// BLU SOLDIERS AND CLASSES /////////////////
 

@@ -55,6 +55,7 @@
 
 /datum/outfit/job/roguetown/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
+	to_chat(H, "<span class='info'>[jobtype.tutorial]</span>")
 	if(H.mind)
 		if(H.ckey)
 			if(check_crownlist(H.ckey))

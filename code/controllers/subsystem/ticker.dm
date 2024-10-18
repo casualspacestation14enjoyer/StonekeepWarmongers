@@ -27,7 +27,8 @@ SUBSYSTEM_DEF(ticker)
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
 	var/warfare_techlevel = 1						// 1 flintlocks. 2 repeaters. 3 not yet implemeneted lol
 
-	var/oneteammode = null
+	var/oneteammode = FALSE
+	var/deathmatch = FALSE
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -472,6 +473,10 @@ SUBSYSTEM_DEF(ticker)
 
 	if(end_party)
 		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
+	if(oneteammode)
+		to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
+	if(deathmatch)
+		to_chat(world, "<span class='notice'><B>It's a civil war! Grenzelhofts fight Grenzelhofts... Madness! KILL THEM ALL! DON'T LET THEM BECOME THE NEW KING! Heartfelts watch in awe and laughter, their enemy is hilarious!</B></span>")
 	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
 
 	CHECK_TICK

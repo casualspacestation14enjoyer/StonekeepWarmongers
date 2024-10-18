@@ -684,10 +684,23 @@
 	set name = "One Team Mode"
 
 	if(SSticker.oneteammode)
-		SSticker.oneteammode = null
+		SSticker.oneteammode = FALSE
 		to_chat(usr, "off")
 	else
-		SSticker.oneteammode = BLUE_WARTEAM
+		SSticker.oneteammode = TRUE
+		to_chat(usr, "on")
+
+/datum/admins/proc/deathmatch()
+	set category = "GameMaster"
+	set name = "Deathmatch"
+
+	to_chat(usr, "DONT FORGET TO TURN ON ONE TEAM MODE TOO IDIOT")
+
+	if(SSticker.deathmatch)
+		SSticker.deathmatch = FALSE
+		to_chat(usr, "off")
+	else
+		SSticker.deathmatch = TRUE
 		to_chat(usr, "on")
 
 /datum/admins/proc/settechlevel()

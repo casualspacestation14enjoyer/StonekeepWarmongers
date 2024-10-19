@@ -51,13 +51,13 @@
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
-	chargetime = 10
+	chargetime = 7
 
 /datum/intent/shoot/musket/peter
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
-	chargetime = 3
+	chargetime = 4
 
 /datum/intent/shoot/musket/arc
 	name = "arc"
@@ -74,7 +74,7 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 18
-		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3.5)
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 4)
 		//per block
 		newtime = newtime + 20
 		// Perception aint gonna help you with loading a musket, bud
@@ -133,8 +133,7 @@
 			..()
 		else
 			to_chat(user, "<span class='warning'>I need to cock the crossbow first.</span>")
-
-
+			
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
 		if(user.client.chargedprog >= 100)

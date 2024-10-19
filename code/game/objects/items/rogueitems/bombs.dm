@@ -10,7 +10,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	throw_speed = 0.5
 	var/light_impact = 4
-	var/flame_impact = 1
+	var/flame_impact = 0
 	var/fuze = 50
 	var/lit = FALSE
 	var/prob2fail = 5
@@ -39,6 +39,30 @@
 		qdel(smoke)
 	qdel(src)
 
+/obj/item/bomb/poison
+	name = "poison bomb"
+	desc = "GAAS!!!"
+	icon_state = "poison_bomb"
+	fuze = 25
+	light_impact = 0
+	flame_impact = 0
+
+/obj/item/bomb/poison/process()
+	. = ..()
+	STOP_PROCESSING(SSfastprocess, src)
+	return
+
+/obj/item/bomb/poison/explode(skipprob)
+	STOP_PROCESSING(SSfastprocess, src)
+	var/turf/T = get_turf(src)
+	if(T)
+		var/datum/effect_system/smoke_spread/bad/smoke = new
+		smoke.set_up(3, src)
+		smoke.start()
+		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		qdel(smoke)
+	qdel(src)
+
 /*
 /obj/item/bomb/dropped(mob/user, silent)
 	. = ..()
@@ -50,12 +74,12 @@
 	name = "fire bomb"
 	desc = "Dangerous fire in a ceramic coating."
 	icon_state = "firebomb"
-	light_impact = 2
-	flame_impact = 4
+	light_impact = 0
+	flame_impact = 2
 
 /obj/item/bomb/fire/weak
 	name = "cheap fire bomb"
-	flame_impact = 3
+	flame_impact = 1
 
 /obj/item/bomb/homemade
 	prob2fail = 30
@@ -78,7 +102,7 @@
 /obj/item/bomb/proc/light()
 	if(!lit)
 		START_PROCESSING(SSfastprocess, src)
-		icon_state = "bbomb-lit"
+		icon_state = "[initial(icon_state)]-lit"
 		lit = TRUE
 		playsound(src.loc, 'sound/items/firelight.ogg', 100)
 		if(ismob(loc))

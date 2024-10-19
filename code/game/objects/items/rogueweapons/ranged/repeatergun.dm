@@ -40,7 +40,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/examine(mob/user)
 	. = ..()
 	if(chambered)
-		. += "It is loaded."
+		. += "<span class='info'>It is loaded.</span>"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/chamber_round(spin_cylinder)
 	return

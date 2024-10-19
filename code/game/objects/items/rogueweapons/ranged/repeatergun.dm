@@ -38,26 +38,37 @@
 	var/flunked = FALSE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/examine(mob/user)
-	..()
+	. = ..()
 	if(chambered)
-		to_chat(user, "It is loaded.")
+		. += "It is loaded."
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/chamber_round(spin_cylinder)
 	return
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_right(mob/user)
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/proc/reloadact(mob/user)
 	if(chambered)
 		return
 	if(!do_after(user, 0.5 SECONDS, TRUE, src))
 		return
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)
-		playsound(user, 'sound/foley/trap_arm.ogg', 100)
 		if(flunked)
 			chambered = B
 			flunked = FALSE
+			to_chat(user, "<span class='info'>I pull the lever back up, chambering \the [src].</span>")
+			playsound(user, 'sound/foley/trap_arm.ogg', 75)
 		else
 			flunked = TRUE
+			to_chat(user, "<span class='info'>I pull the lever down, preparing to chamber \the [src].</span>")
+			playsound(user, 'sound/foley/trap.ogg', 75)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_right(mob/user)
+	. = ..()
+	reloadact(user)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/rmb_self(mob/user)
+	. = ..()
+	reloadact(user)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/dropped(mob/user)
 	. = ..()

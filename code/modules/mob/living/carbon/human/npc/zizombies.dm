@@ -20,6 +20,9 @@
 	flee_in_pain = FALSE
 	wander = FALSE
 
+/mob/living/carbon/human/species/zizombie/death(gibbed)
+	. = ..()
+	mode = AI_OFF
 
 mob/living/carbon/human/species/zizombie/ambush/after_creation()
 	..()

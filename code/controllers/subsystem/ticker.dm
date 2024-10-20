@@ -151,7 +151,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg')
+	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/fallenangel.ogg')
 
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase	= generate_code_phrase(return_list=TRUE)
@@ -933,34 +933,29 @@ SUBSYSTEM_DEF(ticker)
 	var/list/reinforcementinas = list()
 	switch(W.reinforcementwave)
 		if(1)
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/obj/item/bomb/homemade"
+			reinforcementinas += "/obj/item/bomb/fire/weak"
 		if(2)
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/bomb/fire/weak"
+			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/flint"
 		if(3)
-			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/bomb/poison"
 		if(4)
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb/poison"
 		if(5)
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/bomb/smoke"
+			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb/poison"
 			SSticker.warfare_techlevel = 2
-	to_chat(world, "<span class='info'>REINFORCEMENTS... MORE BLOOD TO SPILL...</span>")
+	to_chat(world, "<span class='info'>Reinforcements...</span>")
 	for(var/mob/M in GLOB.player_list)
 		SEND_SOUND(M, 'sound/music/reinforcemets.ogg')
 	for(var/i in reinforcementinas)

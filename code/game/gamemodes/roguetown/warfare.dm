@@ -26,7 +26,7 @@
 	var/list/grenzels = list()
 
 	var/warfare_start_time = 5 // in minutes
-	var/warfare_reinforcement_time = 3 // in minutes
+	var/warfare_reinforcement_time = 5 // in minutes
 
 	var/timedmatch = FALSE
 
@@ -73,15 +73,14 @@
 /datum/game_mode/warfare/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
+		sleep(1 MINUTES)
 		CHECK_TICK
 		if(SSticker.warfare_ready_to_die)
 			break
 		if(!redlord)
-			sleep(1 MINUTES)
 			continue
 		CHECK_TICK
 		if(!blulord)
-			sleep(1 MINUTES)
 			continue
 		CHECK_TICK
 		to_chat(world, "Both sides are present. We will begin in [warfare_start_time] minutes.")

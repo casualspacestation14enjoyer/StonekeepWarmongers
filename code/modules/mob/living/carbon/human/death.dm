@@ -64,14 +64,14 @@
 			for(var/client/X in C.heartfelts)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='warning'>Our lord is dead!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/lorddeath.ogg', 80, FALSE, pressure_affected = FALSE)
+				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
 			testing("Blue lord is dead!")
 			for(var/client/X in C.grenzels)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='warning'>Our lord is dead!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/lorddeath.ogg', 80, FALSE, pressure_affected = FALSE)
+				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)
@@ -108,7 +108,7 @@
 			for(var/mob/living/carbon/human/HU in GLOB.player_list)
 				if(!HU.stat)
 					if(is_in_roguetown(HU))
-						HU.playsound_local(get_turf(HU), 'sound/music/lorddeath.ogg', 80, FALSE, pressure_affected = FALSE)
+						HU.playsound_local(get_turf(HU), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
 
 //		if(yeae)
 //			if(mind)

@@ -483,7 +483,7 @@ SUBSYSTEM_DEF(ticker)
 
 	for(var/client/C in GLOB.clients)
 		if(oneteammode || deathmatch)
-			C.warfare_faction = BLUE_WARTEAM
+			C.warfare_faction = "Grenzelhofts"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else

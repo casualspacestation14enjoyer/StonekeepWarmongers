@@ -19,6 +19,7 @@
 	casing_ejector = FALSE
 	internal_magazine = TRUE
 	tac_reloads = FALSE
+	max_integrity = 600
 	randomspread = 1
 	spread = 0
 	bigboy = TRUE
@@ -96,6 +97,12 @@
 			spread = 150 - (150 * (user.client.chargedprog / 100))
 	else
 		spread = 0
+	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
+		var/obj/projectile/BB = CB.BB
+		if(user.client)
+			if(user.client.chargedprog >= 100)
+				BB.accuracy += 20 //better accuracy for fully aiming
+		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 1.5)
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)

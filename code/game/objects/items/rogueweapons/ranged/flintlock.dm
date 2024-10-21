@@ -15,7 +15,8 @@
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	randomspread = 1
-	spread = 0
+	spread = 5
+	max_integrity = 600 // having your gun broken while parrying sucks
 	var/cocked = FALSE
 	var/rammed = FALSE
 	var/click_delay = 2
@@ -146,7 +147,7 @@
 	item_state = "pistol"
 	bigboy = FALSE
 	recoil = 8
-	randomspread = 2
+	randomspread = 1
 	spread = 3
 	click_delay = 2.4
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
@@ -192,13 +193,8 @@
 		var/obj/projectile/BB = CB.BB
 		if(user.client)
 			if(user.client.chargedprog >= 100)
-				BB.accuracy += 15 //better accuracy for fully aiming
-		if(user.STAPER > 8)
-			BB.accuracy += (user.STAPER - 4) * 4
-			BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
-		if(user.STAPER > 10)
-			BB.damage = BB.damage * (user.STAPER / 10)
-		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 5)
+				BB.accuracy += 20 //better accuracy for fully aiming
+		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 1.5)
 	if(!cocked)
 		return
 	if(!rammed)

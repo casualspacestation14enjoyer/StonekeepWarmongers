@@ -120,7 +120,7 @@
 // revolver
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
-	name = "revolvashot"
+	name = "revolleyer"
 	desc = "This gun iterates on the hypothetical design of the same dwarven gunsmith that created the levershot. The design, found inside his basement after his suicide (by his own invention, a levershot) was then stolen and passed off as someone elses a week after his death. He was called out by the wife of the dwarven engineer and murdered by said wife. The wife was not jailed under the dwarven lawcode as this exact scenario was covered by the writers of the New Dwarven Federation Constitution."
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -170,7 +170,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/proc/reloadact(mob/user)
 	if(chambered)
 		return
-	if(!do_after(user, 1 SECONDS, TRUE, src))
+	if(!do_after(user, 1.5 SECONDS, TRUE, src))
 		return
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)

@@ -919,7 +919,7 @@ SUBSYSTEM_DEF(ticker)
 		if(1)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 		if(2)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol // replace with revolver soon
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
 		if(3)
 			return null
 

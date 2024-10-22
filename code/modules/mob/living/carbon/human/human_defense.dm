@@ -98,6 +98,9 @@
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
 		adjustBruteLoss(25)
 		flash_color(src, flash_color = "#FF0000", flash_time = 4 SECONDS)
+		var/obj/item/clothing/head/hed = head
+		if(hed)
+			hed.forceMove(get_step(src, turn(dir, 180)))
 
 	if(dna && dna.species)
 		var/spec_return = dna.species.bullet_act(P, src, def_zone)

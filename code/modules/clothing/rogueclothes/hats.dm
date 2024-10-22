@@ -398,6 +398,10 @@
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	will_hide = HIDEEARS
 
+/obj/item/clothing/head/roguetown/helmet/kettle/pickl
+	desc = "A pickelhaube, standard issue of the Grenzelhoft Imperiate. On it is a Psycross, with the words \"And by this sign you shall conquer\" etched onto it."
+	icon_state = "picklehat"
+
 /obj/item/clothing/head/roguetown/helmet/sallet
 	name = "sallet"
 	icon_state = "sallet"

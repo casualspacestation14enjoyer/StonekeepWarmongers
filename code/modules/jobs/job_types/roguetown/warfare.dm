@@ -544,10 +544,7 @@
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	r_hand = GetMainGunForWarfare()
-	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/kettle
-	else
-		head = /obj/item/clothing/head/roguetown/helmet
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)

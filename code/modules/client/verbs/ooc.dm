@@ -27,8 +27,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				img = "heartfelt"
 			if(BLUE_WARTEAM)
 				img = "skull"
-			else
-				img = "normie"
 	return img
 
 /client/verb/ooc(msg as text)

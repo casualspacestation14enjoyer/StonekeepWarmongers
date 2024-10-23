@@ -892,9 +892,10 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
-		to_chat(world, pick("I'M READY TO FUCKING DIE NOW!!!","FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!","...do I really want to die here?"))
+		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!"))
+		if(!(oneteammode || deathmatch))
+			W.reinforcements()
 		warfare_ready_to_die = TRUE
-		W.reinforcements()
 		//W.begin_autobalance_loop()
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/tension2.ogg')

@@ -125,11 +125,13 @@
 
 /obj/effect/particle_effect/smoke/bad
 	lifetime = 8
+	color = "#afaf5e"
 
 /obj/effect/particle_effect/smoke/bad/smoke_mob(mob/living/carbon/M)
 	if(..())
 		//M.drop_all_held_items()
-		M.adjustOxyLoss(15)
+		M.adjustOxyLoss(25)
+		M.adjustFireLoss(10)
 		M.emote("cough")
 		return 1
 

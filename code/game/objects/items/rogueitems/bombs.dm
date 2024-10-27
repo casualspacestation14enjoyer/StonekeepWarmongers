@@ -1,4 +1,3 @@
-
 /obj/item/bomb
 	name = "bottle bomb"
 	desc = "Dangerous explosion, in a bottle."
@@ -13,11 +12,17 @@
 	var/flame_impact = 0
 	var/fuze = 50
 	var/lit = FALSE
-	var/prob2fail = 5
+	var/prob2fail = 0
+
+/obj/item/bomb/Crossed(atom/movable/AM, oldloc)
+	if(ishuman(AM))
+		if(lit)
+			explode()
+	return ..()
 
 /obj/item/bomb/smoke
 	name = "smoke bomb"
-	desc = "Smoke, in a sphere. You're not quite sure how this one works."
+	desc = "Heat over fire to pop the lid, when at a sufficient temperature or when exposed to sufficient air it will pop into smoke."
 	icon_state = "smoke_bomb"
 	fuze = 25
 	light_impact = 0
@@ -41,7 +46,7 @@
 
 /obj/item/bomb/poison
 	name = "poison bomb"
-	desc = "GAAS!!!"
+	desc = "Vile brimstone powder mixed with barkpowder inside a ceramic coating, heat over fire to begin an exothermic reaction gradually increasing pressure until releasing poisonous smoke."
 	icon_state = "poison_bomb"
 	fuze = 25
 	light_impact = 0
@@ -79,6 +84,7 @@
 
 /obj/item/bomb/fire/weak
 	name = "cheap fire bomb"
+	desc = "This out seems to kinda suck."
 	flame_impact = 1
 
 /obj/item/bomb/homemade

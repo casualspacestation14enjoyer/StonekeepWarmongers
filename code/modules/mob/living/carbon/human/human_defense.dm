@@ -94,9 +94,8 @@
 		if(ishuman(P.firer))
 			var/mob/living/carbon/human/PFF = P.firer
 			to_chat(PFF, "<span class='userdanger'>Headshot!</span>")
-			PFF.playsound_local(get_turf(PFF), 'sound/misc/triumph.ogg', 55, FALSE, pressure_affected = FALSE)
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
-		adjustBruteLoss(25)
+		adjustBruteLoss(35)
 		flash_color(src, flash_color = "#FF0000", flash_time = 4 SECONDS)
 		var/obj/item/clothing/head/hed = head
 		if(hed)

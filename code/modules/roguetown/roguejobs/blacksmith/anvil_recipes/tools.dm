@@ -64,6 +64,12 @@
 	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
 	created_item = /obj/item/rogueweapon/hoe
 
+/datum/anvil_recipe/tools/thresher
+	name = "thresher (+2s)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/thresher
+
 /datum/anvil_recipe/tools/pitchfork
 	name = "pitchfork (+2s)"
 	req_bar = /obj/item/ingot/iron

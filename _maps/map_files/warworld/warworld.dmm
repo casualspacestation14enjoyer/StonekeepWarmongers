@@ -234,7 +234,7 @@
 	endTurfX = 128;
 	endTurfY = 128;
 	endTurfZ = 2;
-	startTurfZ = 3
+	startTurfZ = 1
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/woods)

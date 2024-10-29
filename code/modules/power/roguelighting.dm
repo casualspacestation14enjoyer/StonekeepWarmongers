@@ -263,9 +263,9 @@
 						foundstab = TRUE
 						break
 				if(foundstab)
-					var/prob2spoil = 33
+					var/prob2spoil = 21
 					if(user.mind.get_skill_level(/datum/skill/craft/cooking))
-						prob2spoil = 1
+						prob2spoil = 0
 					user.visible_message("<span class='notice'>[user] starts to cook [W] over [src].</span>")
 					for(var/i in 1 to 6)
 						if(do_after(user, 30, target = src))

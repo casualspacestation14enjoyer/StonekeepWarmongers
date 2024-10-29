@@ -1,5 +1,6 @@
 #define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
 #define RED_WARTEAM "Heartfelts" // Heartfelt
+#define PILGRIM_WARTEAM "Pilgrims" // Warworld
 
 /datum/game_mode/warfare
 	name = "warmode"
@@ -53,7 +54,7 @@
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
-		if(SSticker.oneteammode)
+		if(SSticker.oneteammode || SSticker.warworld)
 			break
 		CHECK_TICK
 		for(var/mob/dead/new_player/P in GLOB.player_list)

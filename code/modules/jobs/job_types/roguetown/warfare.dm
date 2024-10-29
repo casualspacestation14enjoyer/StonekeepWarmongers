@@ -49,6 +49,45 @@
 				to_chat(M, "<br><span class='alert'>THE WORTHY LORD COMMANDS: \"[ann]\"</span>")
 				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
+/////////////////////////// WARWORLD /////////////////////////////////////
+
+/datum/job/roguetown/warfare/warworld
+	warfare_faction = PILGRIM_WARTEAM
+	selection_color = CLOTHING_WHITE
+
+/datum/job/roguetown/warfare/warworld/pilgrim
+	title = "Colonizer"
+	tutorial = "You're fucking scum, prisoners feeding off the taxes of the Empire. In a rare coordinated event by both the goverments of Heartfelt and Grenzelhoft you're being shipped off to newly found land. You're not expected to return. You're not expected to do anything. You're expected to die. This island is your prison now, your tomb, welcome home."
+	department_flag = REDSS
+	flag = SOLDIER
+	min_pq = -999
+	total_positions = 999
+	spawn_positions = 999
+	faction = "Station"
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	outfit = /datum/outfit/job/roguetown/pilgrim_warworld
+
+/datum/outfit/job/roguetown/pilgrim_warworld
+	name = "Colonizer"
+	jobtype = /datum/job/roguetown/warfare/warworld/pilgrim
+
+/datum/outfit/job/roguetown/pilgrim_warworld/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	belt = /obj/item/storage/belt/rogue/leather
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/engineering, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/tailor, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/masonry, 2, TRUE)
+
 ///////////////////////////// RED ///////////////////////////////////////
 
 /datum/job/roguetown/warfare/red

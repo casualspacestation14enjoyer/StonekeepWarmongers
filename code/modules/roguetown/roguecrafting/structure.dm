@@ -110,7 +110,6 @@
 	name = "great furnace"
 	result = /obj/machinery/light/rogue/smelter/great
 	reqs = list(/obj/item/ingot/iron = 2,
-				/obj/item/riddleofsteel = 1,
 				/obj/item/rogueore/coal = 1)
 	verbage = "build"
 	verbage_tp = "builds"
@@ -496,3 +495,18 @@
 	skillcraft = /datum/skill/craft/carpentry
 	wallcraft = TRUE
 	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/structure/well
+	name = "well"
+	result = /obj/structure/well
+	reqs = list(/obj/item/natural/stone = 2)
+	skillcraft = /datum/skill/craft/masonry
+	craftdiff = 1
+
+/datum/crafting_recipe/roguetown/structure/well/TurfCheck(mob/user, turf/T)
+	if(isclosedturf(T))
+		return
+	if(istype(T, /turf/open/transparent/openspace))
+		if(istype(get_step_multiz(T, DOWN), /turf/open/water))
+			return TRUE
+	return

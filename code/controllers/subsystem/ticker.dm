@@ -29,6 +29,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/oneteammode = FALSE
 	var/deathmatch = FALSE
+	var/warworld = FALSE
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -484,6 +485,8 @@ SUBSYSTEM_DEF(ticker)
 	for(var/client/C in GLOB.clients)
 		if(oneteammode || deathmatch)
 			C.warfare_faction = "Grenzelhofts"
+		if(warworld)
+			C.warfare_faction = "Pilgrims"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else

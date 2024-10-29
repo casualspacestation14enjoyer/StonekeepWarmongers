@@ -53,9 +53,8 @@
 
 /datum/job/roguetown/warfare/warworld
 	warfare_faction = PILGRIM_WARTEAM
-	selection_color = CLOTHING_WHITE
 
-/datum/job/roguetown/warfare/warworld/pilgrim
+/datum/job/roguetown/warfare/warworld/colonizer
 	title = "Colonizer"
 	tutorial = "You're fucking scum, prisoners feeding off the taxes of the Empire. In a rare coordinated event by both the goverments of Heartfelt and Grenzelhoft you're being shipped off to newly found land. You're not expected to return. You're not expected to do anything. You're expected to die. This island is your prison now, your tomb, welcome home."
 	department_flag = PEASANTS
@@ -65,13 +64,13 @@
 	faction = "Station"
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	outfit = /datum/outfit/job/roguetown/pilgrim_warworld
+	outfit = /datum/outfit/job/roguetown/pilgrimwarworld
 
-/datum/outfit/job/roguetown/pilgrim_warworld
+/datum/outfit/job/roguetown/pilgrimwarworld
 	name = "Colonizer"
-	jobtype = /datum/job/roguetown/warfare/warworld/pilgrim
+	jobtype = /datum/job/roguetown/warfare/warworld/colonizer
 
-/datum/outfit/job/roguetown/pilgrim_warworld/pre_equip(mob/living/carbon/human/H, visualsOnly)
+/datum/outfit/job/roguetown/pilgrimwarworld/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random

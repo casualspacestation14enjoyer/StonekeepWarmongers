@@ -162,6 +162,10 @@ GLOBAL_LIST_INIT(blue_positions, list(
 	"Grenzelhoft Infantry"
 	))
 
+GLOBAL_LIST_INIT(warworld_positions, list(
+	"Colonizer"
+))
+
 GLOBAL_LIST_INIT(test_positions, list(
 	"Tester"
 	))

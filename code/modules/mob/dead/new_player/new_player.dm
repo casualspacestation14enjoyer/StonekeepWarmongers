@@ -558,8 +558,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	var/column_counter = 0
 
 	var/list/omegalist = list()
-	omegalist += list(GLOB.red_positions)
-	omegalist += list(GLOB.blue_positions)
+	if(SSticker.warworld)
+		omegalist += list(GLOB.warworld_positions)
+	else
+		omegalist += list(GLOB.red_positions)
+		omegalist += list(GLOB.blue_positions)
 
 	if(istype(SSticker.mode, /datum/game_mode/chaosmode))
 		var/datum/game_mode/chaosmode/C = SSticker.mode
@@ -593,6 +596,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 					cat_name = "Heartfelts"
 				if (BLUES)
 					cat_name = "Grenzelhofts"
+				if (PEASANTS)
+					cat_name = "Filth"
 
 			dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 			dat += "<legend align='center' style='font-weight: bold; color: [cat_color]'>[cat_name]</legend>"

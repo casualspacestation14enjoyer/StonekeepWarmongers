@@ -23,6 +23,10 @@
 /obj/item/natural/stone,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/woods)
+"db" = (
+/obj/structure/ladder,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
 "dk" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/under/cave)
@@ -47,6 +51,13 @@
 "dZ" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"el" = (
+/obj/machinery/light/rogue/torchholder{
+	icon_state = "torchwall1";
+	dir = 4
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "eE" = (
 /obj/structure/flora/roguetree,
 /turf/open/water/swamp,
@@ -85,6 +96,12 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
+"hn" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/old,
+/obj/structure/ladder,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "hE" = (
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/blocks,
@@ -92,6 +109,10 @@
 "hO" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/blocks,
+/area/rogue/under/cave)
+"hP" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "hS" = (
 /obj/structure/flora/newtree,
@@ -108,9 +129,16 @@
 "jg" = (
 /turf/open/water/river,
 /area/rogue/outdoors/woods)
+"jj" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "ks" = (
 /turf/closed/mineral/rogue/salt,
 /area/rogue/outdoors/woods)
+"lq" = (
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "lw" = (
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/dirt,
@@ -238,6 +266,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/woods)
+"xg" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "ze" = (
 /obj/structure/flora/roguetree,
 /turf/open/water/cleanshallow,
@@ -303,6 +337,10 @@
 "Ei" = (
 /turf/open/water,
 /area/rogue/outdoors/woods)
+"EI" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/closed/mineral/random/rogue/high,
+/area/rogue/under/cave)
 "FN" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt,
@@ -374,6 +412,11 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods)
+"KN" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "Lf" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/dirt/road,
@@ -416,6 +459,11 @@
 /obj/structure/flora/newtree,
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods)
+"Pe" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "Pg" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/sigil/NE,
@@ -9161,7 +9209,7 @@ RH
 RH
 RH
 RH
-RH
+lq
 RH
 RH
 RH
@@ -9291,9 +9339,9 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
+lq
+lq
+el
 RH
 RH
 RH
@@ -9422,10 +9470,10 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
+lq
+jj
+lq
+lq
 RH
 RH
 RH
@@ -9553,9 +9601,9 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
+lq
+KN
+lq
 RH
 RH
 RH
@@ -9683,10 +9731,10 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
+lq
+lq
+lq
+lq
 RH
 RH
 RH
@@ -9814,9 +9862,9 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
+lq
+lq
+lq
 RH
 RH
 RH
@@ -9945,8 +9993,8 @@ RH
 RH
 RH
 RH
-RH
-RH
+lq
+jj
 RH
 RH
 RH
@@ -10074,10 +10122,10 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
+lq
+lq
+lq
+lq
 RH
 RH
 RH
@@ -10203,11 +10251,11 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
-RH
+el
+lq
+lq
+lq
+lq
 RH
 RH
 RH
@@ -10330,15 +10378,15 @@ RH
 RH
 RH
 RH
+lq
+jj
 RH
+lq
+lq
+jj
+lq
 RH
-RH
-RH
-RH
-RH
-RH
-RH
-RH
+lq
 RH
 RH
 RH
@@ -10461,13 +10509,13 @@ RH
 RH
 RH
 RH
+lq
 RH
-RH
-RH
-RH
-RH
-RH
-RH
+lq
+Pe
+Pe
+hP
+lq
 RH
 RH
 RH
@@ -10592,14 +10640,14 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
-RH
-RH
-RH
-RH
+lq
+lq
+hn
+jj
+lq
+lq
+jj
+lq
 RH
 RH
 RH
@@ -10722,15 +10770,15 @@ RH
 RH
 RH
 RH
-RH
-RH
-RH
-RH
-RH
-RH
-RH
-RH
-Hx
+lq
+lq
+lq
+jj
+jj
+jj
+hP
+EI
+lq
 Hx
 Hx
 Hx
@@ -10851,14 +10899,14 @@ RH
 RH
 RH
 RH
+lq
+jj
+lq
 RH
+lq
+lq
 RH
-RH
-RH
-RH
-RH
-RH
-RH
+lq
 RH
 Hx
 Hx
@@ -10981,12 +11029,12 @@ RH
 RH
 RH
 RH
+Pe
+xg
+lq
 RH
 RH
-RH
-RH
-RH
-RH
+lq
 RH
 RH
 RH
@@ -11110,13 +11158,13 @@ RH
 RH
 RH
 RH
+lq
+jj
 RH
 RH
 RH
 RH
-RH
-RH
-RH
+lq
 RH
 RH
 RH
@@ -11240,7 +11288,7 @@ RH
 RH
 RH
 RH
-RH
+lq
 RH
 RH
 RH
@@ -11369,8 +11417,8 @@ RH
 RH
 RH
 RH
-RH
-RH
+el
+lq
 RH
 RH
 RH
@@ -11498,8 +11546,8 @@ RH
 RH
 RH
 RH
-RH
-RH
+lq
+lq
 RH
 RH
 RH
@@ -11628,7 +11676,7 @@ RH
 RH
 RH
 RH
-RH
+lq
 RH
 RH
 RH
@@ -11757,7 +11805,7 @@ Yp
 RH
 RH
 RH
-RH
+lq
 RH
 RH
 RH
@@ -26973,11 +27021,11 @@ JT
 JT
 JT
 JT
-JT
+GK
 JT
 dZ
 JT
-JT
+XS
 JT
 JT
 JT
@@ -27235,7 +27283,7 @@ JT
 JT
 JT
 JT
-dZ
+db
 JT
 JT
 JT
@@ -27493,11 +27541,11 @@ JT
 JT
 JT
 QW
+XS
 JT
 JT
 JT
-JT
-JT
+GK
 JT
 JT
 JT
@@ -43614,11 +43662,11 @@ Ja
 Ja
 Ja
 Ja
-Ja
-Ja
-Ja
-Ja
-Ja
+Vu
+Vu
+Vu
+Vu
+Vu
 Ja
 Ja
 Ja
@@ -43744,11 +43792,11 @@ Ja
 Ja
 Ja
 Ja
-Ja
-Ja
-Ja
-Ja
-Ja
+Vu
+Vu
+Vu
+Vu
+Vu
 Ja
 Ja
 Ja
@@ -43874,11 +43922,11 @@ Ja
 Ja
 Ja
 Ja
-Ja
-Ja
-Ja
-Ja
-Ja
+Vu
+Vu
+Vu
+Vu
+Vu
 Ja
 Ja
 Ja
@@ -44004,11 +44052,11 @@ Ja
 Ja
 Ja
 Ja
-Ja
-Ja
-Ja
-Ja
-Ja
+Vu
+Vu
+Vu
+Vu
+Vu
 Ja
 Ja
 Ja
@@ -44134,11 +44182,11 @@ Ja
 Ja
 Ja
 Ja
-Ja
-Ja
-Ja
-Ja
-Ja
+Vu
+Vu
+Vu
+Vu
+Vu
 Ja
 Ja
 Ja

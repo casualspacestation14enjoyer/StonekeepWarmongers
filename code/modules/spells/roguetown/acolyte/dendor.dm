@@ -62,6 +62,6 @@
 	var/turf/T = user.loc
 	for(var/X in GLOB.cardinals)
 		var/turf/TT = get_step(T, X)
-		if(!isclosedturf(TT) && !locate(/obj/structure/glowshroom) in TT)
-			new /obj/structure/glowshroom(TT)
+		if(!isclosedturf(TT) && !locate(/obj/structure/kneestingers) in TT)
+			new /obj/structure/kneestingers(TT)
 	return TRUE

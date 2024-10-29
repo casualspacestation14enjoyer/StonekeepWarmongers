@@ -289,6 +289,14 @@
 	speed = 0.1
 	accuracy = 55
 
+/obj/projectile/bullet/reusable/bullet/wood
+	damage = 35
+	armor_penetration = 30
+
+/obj/projectile/bullet/reusable/bullet/iron
+	damage = 50
+	armor_penetration = 90
+
 /obj/projectile/bullet/fragment
 	name = "smaller lead ball"
 	desc = "Haha. You're not able to see this!"
@@ -318,6 +326,16 @@
 	possible_item_intents = list(/datum/intent/use)
 	max_integrity = 0
 	force = 20
+
+/obj/item/ammo_casing/caseless/rogue/bullet/iron
+	name = "iron ball"
+	desc = "A round iron shot, simple and spherical. Not as malleable as lead though."
+	projectile_type = /obj/projectile/bullet/reusable/bullet/iron
+
+/obj/item/ammo_casing/caseless/rogue/bullet/wood
+	name = "wooden ball"
+	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But I did hear of you, so that's something."
+	projectile_type = /obj/projectile/bullet/reusable/bullet/wood
 
 /obj/projectile/bullet/reusable/cannonball
 	name = "large lead ball"

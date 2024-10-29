@@ -591,7 +591,7 @@
 /turf/closed/mineral/random/rogue
 //	layer = ABOVE_MOB_LAYER
 	name = "rock"
-	desc = "seems barren"
+	desc = "Barren rock."
 	icon = 'icons/turf/roguewall.dmi'
 	icon_state = "minrandbad"
 	smooth = SMOOTH_TRUE | SMOOTH_MORE
@@ -609,7 +609,7 @@
 /turf/closed/mineral/random/rogue/med
 	icon_state = "minrandmed"
 	mineralChance = 50
-	mineralSpawnChanceList = list(/turf/closed/mineral/rogue/salt = 25, /turf/closed/mineral/rogue/iron = 25, /turf/closed/mineral/rogue/coal = 25)
+	mineralSpawnChanceList = list(/turf/closed/mineral/rogue/salt = 25, /turf/closed/mineral/rogue/copper = 25, /turf/closed/mineral/rogue/coal = 25)
 
 /turf/closed/mineral/random/rogue/high
 	icon_state = "minrandhigh"
@@ -621,7 +621,7 @@
 /turf/closed/mineral/rogue
 //	layer = ABOVE_MOB_LAYER
 	name = "rock"
-	desc = "seems barren"
+	desc = "Barren rock."
 	icon = 'icons/turf/roguewall.dmi'
 	icon_state = "rockyash"
 	smooth = SMOOTH_TRUE | SMOOTH_MORE
@@ -640,7 +640,7 @@
 	spread = 0
 
 /turf/closed/mineral/rogue/gold
-	desc = "seems rich in gold"
+	desc = "It seems to be rich in gold ore."
 	icon_state = "mingold"
 	mineralType = /obj/item/rogueore/gold
 	rockType = /obj/item/natural/rock/gold
@@ -648,7 +648,7 @@
 	spread = 3
 
 /turf/closed/mineral/rogue/salt
-	desc = "seems rich in salt"
+	desc = "It seems to be rich in salt crystals."
 	icon_state = "mingold"
 	mineralType = /obj/item/reagent_containers/powder/salt
 	rockType = /obj/item/natural/rock/salt
@@ -656,15 +656,23 @@
 	spread = 3
 
 /turf/closed/mineral/rogue/iron
-	desc = "seems rich in iron"
+	desc = "It seems to be rich in iron ore."
 	icon_state = "mingold"
 	mineralType = /obj/item/rogueore/iron
 	rockType = /obj/item/natural/rock/iron
 	spreadChance = 5
 	spread = 3
 
+/turf/closed/mineral/rogue/copper
+	desc = "It seems to be rich in copper ore."
+	icon_state = "mingold"
+	mineralType = /obj/item/rogueore/copper
+	rockType = /obj/item/natural/rock/copper
+	spreadChance = 5
+	spread = 3
+
 /turf/closed/mineral/rogue/coal
-	desc = "seems rich in coal"
+	desc = "It seems to be rich in coal clumps."
 	icon_state = "mingold"
 	mineralType = /obj/item/rogueore/coal
 	rockType = /obj/item/natural/rock/coal
@@ -673,7 +681,7 @@
 
 /turf/closed/mineral/rogue/bedrock
 	name = "rock"
-	desc = "seems too hard"
+	desc = "It is too hard to mine."
 	icon_state = "rockyashbed"
 //	smooth_icon = 'icons/turf/walls/hardrock.dmi'
 	max_integrity = 900

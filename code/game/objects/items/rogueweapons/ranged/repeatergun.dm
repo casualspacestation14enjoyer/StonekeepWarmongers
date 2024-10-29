@@ -41,6 +41,9 @@
 	associated_skill = /datum/skill/combat/flintlocks
 	var/flunked = FALSE
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/repeater/empty
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter/startempty
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/examine(mob/user)
 	. = ..()
 	if(chambered)
@@ -117,6 +120,9 @@
 	max_ammo = 6
 	start_empty = FALSE
 
+/obj/item/ammo_box/magazine/internal/shot/peter/startempty
+	start_empty = TRUE
+
 // revolver
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
@@ -155,6 +161,9 @@
 	pickup_sound = 'sound/foley/gun_equip.ogg'
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	associated_skill = /datum/skill/combat/flintlocks
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/empty
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter/startempty
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/examine(mob/user)
 	. = ..()

@@ -8,6 +8,20 @@
 						/obj/item/flashlight/flare/torch/metal,
 						/obj/item/flashlight/flare/torch/metal)
 
+/datum/anvil_recipe/tools/balls
+	name = "iron balls"
+	req_bar = /obj/item/ingot/iron
+	created_item = list(/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron)
+
 /datum/anvil_recipe/tools/pan
 	name = "Frypan"
 	req_bar = /obj/item/ingot/iron

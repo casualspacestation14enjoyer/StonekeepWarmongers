@@ -117,5 +117,8 @@
 /obj/item/natural/rock/coal
 	mineralType = /obj/item/rogueore/coal
 
+/obj/item/natural/rock/copper
+	mineralType = /obj/item/rogueore/copper
+
 /obj/item/natural/rock/salt
 	mineralType = /obj/item/reagent_containers/powder/salt

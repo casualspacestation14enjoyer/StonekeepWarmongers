@@ -315,7 +315,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 
 /datum/crafting_recipe/roguetown/levershot
 	name = "levershot"
-	result = /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/empty
 	reqs = list(/obj/item/roguegear = 2,
 				/obj/item/flint = 1,
 				/obj/item/ingot/steel = 2,
@@ -325,7 +325,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 
 /datum/crafting_recipe/roguetown/revolver
 	name = "revolleyer"
-	result = /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/empty
 	reqs = list(/obj/item/roguegear = 2,
 				/obj/item/flint = 1,
 				/obj/item/ingot/steel = 1,
@@ -388,6 +388,23 @@ datum/crafting_recipe/roguetown/poisonbolt
 	/datum/reagent/water = 50)
 	tools = list(/obj/item/rogueweapon/huntingknife)
 	structurecraft = /obj/structure/fluff/dryingrack
+	craftdiff = 1
+
+/datum/crafting_recipe/roguetown/woodenbullets
+	name = "wooden balls x10"
+	result = list(/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood,
+				/obj/item/ammo_casing/caseless/rogue/bullet/wood)
+	reqs = list(/obj/item/grown/log/tree/small = 1,
+	/datum/reagent/water = 50)
+	tools = list(/obj/item/rogueweapon/huntingknife)
 	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/readingscroll

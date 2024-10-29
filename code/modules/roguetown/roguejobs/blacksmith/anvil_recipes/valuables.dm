@@ -1,6 +1,21 @@
 /datum/anvil_recipe/valuables
 	appro_skill = /datum/skill/craft/blacksmithing
 
+/datum/anvil_recipe/valuables/mintgold
+	name = "mint gold coins (10)"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/roguecoin/gold/ten
+	
+/datum/anvil_recipe/valuables/mintiron
+	name = "mint iron coins (10)"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/roguecoin/silver/ten
+
+/datum/anvil_recipe/valuables/mintcopper
+	name = "mint copper coins (10)"
+	req_bar = /obj/item/ingot/copper
+	created_item = /obj/item/roguecoin/copper/ten
+
 /datum/anvil_recipe/valuables/gold
 	name = "gold statue"
 	req_bar = /obj/item/ingot/gold

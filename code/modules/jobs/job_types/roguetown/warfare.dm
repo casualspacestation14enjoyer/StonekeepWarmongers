@@ -58,11 +58,10 @@
 /datum/job/roguetown/warfare/warworld/pilgrim
 	title = "Colonizer"
 	tutorial = "You're fucking scum, prisoners feeding off the taxes of the Empire. In a rare coordinated event by both the goverments of Heartfelt and Grenzelhoft you're being shipped off to newly found land. You're not expected to return. You're not expected to do anything. You're expected to die. This island is your prison now, your tomb, welcome home."
-	department_flag = REDSS
-	flag = SOLDIER
-	min_pq = -999
-	total_positions = 999
-	spawn_positions = 999
+	department_flag = PEASANTS
+	flag = ADVENTURER
+	total_positions = 99
+	spawn_positions = 10
 	faction = "Station"
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)

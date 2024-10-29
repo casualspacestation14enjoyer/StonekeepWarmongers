@@ -769,6 +769,7 @@
 	fueluse = 15 MINUTES
 	bulb_colour = "#da5e21"
 	cookonme = TRUE
+	max_integrity = 20
 
 /obj/machinery/light/rogue/campfire/process()
 	..()

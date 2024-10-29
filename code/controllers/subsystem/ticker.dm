@@ -472,6 +472,8 @@ SUBSYSTEM_DEF(ticker)
 
 	SSdbcore.SetRoundStart()
 
+	if(warworld)
+		to_chat(world, "<span class='notice'><B>It's a world of war out there and here we are starving away at a fucking island.</B></span>")
 	if(end_party)
 		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 	if(oneteammode)

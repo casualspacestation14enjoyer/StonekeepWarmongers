@@ -26,12 +26,23 @@
 "dk" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/under/cave)
+"dn" = (
+/obj/effect/landmark/start/colonizer{
+	icon_state = "arrow";
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "dJ" = (
 /obj/effect/landmark/start/colonizer{
 	icon_state = "arrow";
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"dP" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bull,
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "dZ" = (
 /turf/open/floor/rogue/dirt/road,
@@ -47,6 +58,12 @@
 "fC" = (
 /turf/closed/mineral/random/rogue,
 /area/rogue/under/cave)
+"gw" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/goat{
+	name = "only gote of this isle"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "gC" = (
 /turf/open/water,
 /area/rogue/under/cave)
@@ -80,6 +97,10 @@
 /obj/structure/flora/newtree,
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods)
+"iH" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bull,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
 "iT" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/grass,
@@ -110,6 +131,10 @@
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/water/swamp,
 /area/rogue/outdoors/woods)
+"nH" = (
+/obj/effect/landmark/start/colonizer,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
 "nS" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods)
@@ -117,6 +142,14 @@
 /obj/structure/flora/newtree,
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
+"oF" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/cow,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
+"pd" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "pD" = (
 /turf/closed/mineral/rogue/salt,
@@ -134,6 +167,13 @@
 /turf/open/water/river{
 	dir = 4
 	},
+/area/rogue/outdoors/woods)
+"rl" = (
+/obj/effect/landmark/start/colonizer{
+	icon_state = "arrow";
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "rt" = (
 /turf/open/floor/rogue/blocks,
@@ -162,6 +202,14 @@
 /obj/effect/decal/cleanable/sigil/NW,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave)
+"uw" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/chicken,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
+"uR" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/cow,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "ve" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/blocks,
@@ -176,6 +224,19 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/ladder,
 /turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/woods)
+"wN" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
+"wV" = (
+/obj/effect/landmark/mapGenerator/sunlights{
+	endTurfX = 128;
+	endTurfY = 128;
+	endTurfZ = 2;
+	startTurfZ = 3
+	},
+/turf/open/transparent/openspace,
 /area/rogue/outdoors/woods)
 "ze" = (
 /obj/structure/flora/roguetree,
@@ -246,6 +307,10 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
+"Gp" = (
+/obj/effect/landmark/start/colonizer,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "GI" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/dirt,
@@ -314,6 +379,10 @@
 "Ls" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave)
+"LB" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/cow,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
 "Ny" = (
 /obj/structure/flora/newtree,
 /turf/closed/wall/mineral/rogue/stone/moss,
@@ -330,6 +399,10 @@
 /obj/effect/decal/cleanable/sigil/S,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave)
+"Oz" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bull,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/woods)
 "OH" = (
 /obj/structure/flora/newtree,
 /obj/structure/flora/newtree,
@@ -346,6 +419,10 @@
 /obj/effect/decal/cleanable/sigil/NE,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave)
+"Ps" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/bull,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "PB" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/sigil/E,
@@ -368,6 +445,10 @@
 "RH" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/under/cave)
+"Sg" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saigabuck,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "Sr" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/dirt/road,
@@ -439,6 +520,10 @@
 "YD" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/woods)
+"YG" = (
+/obj/effect/landmark/start/colonizer,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "Zd" = (
 /obj/item/natural/stone,
@@ -17914,7 +17999,7 @@ gX
 HR
 HR
 HR
-HR
+gw
 HR
 HR
 HR
@@ -19111,7 +19196,7 @@ HR
 XS
 XS
 XS
-JT
+Gp
 dZ
 JT
 gX
@@ -22612,7 +22697,7 @@ TS
 nD
 JT
 dZ
-JT
+FN
 JT
 gQ
 gQ
@@ -22740,7 +22825,7 @@ TS
 TS
 TS
 TS
-JT
+Ja
 dZ
 JT
 JT
@@ -23391,7 +23476,7 @@ gX
 gX
 JT
 JT
-dZ
+Ja
 JT
 JT
 JT
@@ -23606,7 +23691,7 @@ gQ
 "}
 (51,1,2) = {"
 VS
-dZ
+nH
 dZ
 TS
 TS
@@ -23651,9 +23736,9 @@ QW
 JT
 JT
 JT
-dZ
+AN
 JT
-JT
+Ja
 JT
 JT
 JT
@@ -24386,7 +24471,7 @@ gQ
 "}
 (57,1,2) = {"
 VS
-dZ
+nH
 dZ
 dZ
 JT
@@ -24708,7 +24793,7 @@ JT
 QW
 Dj
 JT
-dZ
+pd
 JT
 JT
 JT
@@ -25048,7 +25133,7 @@ dZ
 dZ
 JT
 JT
-JT
+dP
 JT
 JT
 dZ
@@ -25285,7 +25370,7 @@ JT
 HR
 HR
 HR
-HR
+Ps
 HR
 gX
 gX
@@ -25311,7 +25396,7 @@ JT
 JT
 JT
 JT
-dZ
+iH
 JT
 JT
 JT
@@ -25412,7 +25497,7 @@ dZ
 JT
 QW
 JT
-HR
+oF
 HR
 HR
 HR
@@ -25542,7 +25627,7 @@ dZ
 dZ
 dZ
 dZ
-HR
+oF
 HR
 HR
 HR
@@ -25577,7 +25662,7 @@ JT
 JT
 JT
 JT
-HR
+Ps
 JT
 lw
 lw
@@ -25673,8 +25758,8 @@ QW
 QW
 dZ
 HR
-HR
-HR
+Ps
+oF
 HR
 HR
 HR
@@ -26009,7 +26094,7 @@ QW
 QW
 JT
 dZ
-HR
+Ps
 HR
 HR
 gX
@@ -26062,7 +26147,7 @@ QW
 JT
 QW
 dZ
-HR
+oF
 gX
 HR
 gX
@@ -26071,7 +26156,7 @@ HR
 HR
 HR
 HR
-JT
+dn
 gQ
 "}
 (70,1,2) = {"
@@ -26263,7 +26348,7 @@ JT
 HR
 nS
 nS
-nS
+Oz
 nS
 nS
 nS
@@ -26527,7 +26612,7 @@ QW
 JT
 JT
 JT
-nS
+Oz
 dZ
 HR
 HR
@@ -27214,7 +27299,7 @@ HR
 GK
 GK
 GK
-HR
+YG
 HR
 HR
 gX
@@ -27379,7 +27464,7 @@ QW
 QW
 QW
 JT
-JT
+dP
 JT
 JT
 JT
@@ -27470,7 +27555,7 @@ HR
 HR
 HR
 HR
-Ei
+HR
 HR
 HR
 HR
@@ -27640,7 +27725,7 @@ QW
 QW
 JT
 JT
-JT
+dP
 JT
 JT
 QW
@@ -28806,7 +28891,7 @@ gQ
 "}
 (91,1,2) = {"
 gQ
-JT
+Gp
 JT
 JT
 JT
@@ -28817,7 +28902,7 @@ QW
 JT
 JT
 dZ
-JT
+dP
 JT
 JT
 JT
@@ -29191,7 +29276,7 @@ HR
 HR
 HR
 HR
-HR
+rl
 gQ
 "}
 (94,1,2) = {"
@@ -29211,7 +29296,7 @@ JT
 JT
 gX
 JT
-JT
+dP
 JT
 JT
 JT
@@ -29819,8 +29904,8 @@ HR
 HR
 HR
 HR
-HR
-HR
+uw
+uw
 HR
 Jg
 WC
@@ -29947,7 +30032,7 @@ nS
 nS
 nS
 HR
-HR
+uw
 HR
 HR
 HR
@@ -30208,7 +30293,7 @@ HR
 nS
 HR
 HR
-HR
+uw
 HR
 HR
 gX
@@ -30366,7 +30451,7 @@ gQ
 "}
 (103,1,2) = {"
 gQ
-JT
+Gp
 JT
 JT
 JT
@@ -30491,7 +30576,7 @@ HR
 HR
 HR
 HR
-HR
+rl
 gQ
 "}
 (104,1,2) = {"
@@ -30583,7 +30668,7 @@ Jl
 HR
 HR
 HR
-HR
+uw
 HR
 HR
 HR
@@ -30674,7 +30759,7 @@ gX
 gX
 gX
 HR
-HR
+oF
 HR
 HR
 HR
@@ -30804,7 +30889,7 @@ gX
 gX
 gX
 HR
-HR
+oF
 HR
 fB
 fB
@@ -30847,7 +30932,7 @@ HR
 HR
 HR
 HR
-HR
+uw
 HR
 gX
 gX
@@ -30973,9 +31058,9 @@ gX
 gX
 HR
 HR
+uw
 HR
-HR
-HR
+uw
 HR
 HR
 HR
@@ -31151,7 +31236,7 @@ QW
 QW
 QW
 QW
-JT
+dP
 JT
 JT
 JT
@@ -31175,7 +31260,7 @@ gX
 gX
 HR
 HR
-HR
+oF
 HR
 gX
 gX
@@ -31394,7 +31479,7 @@ QW
 QW
 gX
 HR
-HR
+Sg
 HR
 HR
 HR
@@ -31435,7 +31520,7 @@ HR
 HR
 HR
 HR
-HR
+oF
 HR
 gX
 gX
@@ -31688,7 +31773,7 @@ HR
 HR
 HR
 HR
-HR
+oF
 HR
 HR
 HR
@@ -31714,7 +31799,7 @@ gX
 gX
 gX
 JT
-HR
+oF
 HR
 HR
 HR
@@ -31848,7 +31933,7 @@ HR
 HR
 HR
 HR
-HR
+oF
 HR
 HR
 HR
@@ -31858,7 +31943,7 @@ gX
 gX
 gX
 HR
-HR
+oF
 HR
 HR
 gX
@@ -31916,7 +32001,7 @@ HR
 HR
 HR
 HR
-HR
+wN
 HR
 HR
 gX
@@ -32044,7 +32129,7 @@ QW
 QW
 HR
 HR
-HR
+Sg
 HR
 HR
 HR
@@ -32249,7 +32334,7 @@ gX
 gX
 HR
 HR
-HR
+oF
 HR
 HR
 gX
@@ -32304,9 +32389,9 @@ QW
 QW
 HR
 HR
+wN
 HR
-HR
-HR
+Sg
 HR
 HR
 gX
@@ -32563,7 +32648,7 @@ JT
 QW
 JT
 HR
-HR
+Sg
 HR
 HR
 HR
@@ -32693,10 +32778,10 @@ JT
 JT
 JT
 HR
+wN
 HR
 HR
-HR
-HR
+wN
 HR
 HR
 HR
@@ -32836,10 +32921,10 @@ gQ
 "}
 (122,1,2) = {"
 gQ
+Gp
 JT
-JT
-JT
-JT
+uR
+uR
 JT
 JT
 JT
@@ -32860,9 +32945,9 @@ QW
 QW
 QW
 JT
-JT
-JT
-JT
+Gp
+Gp
+Gp
 JT
 QW
 QW
@@ -32970,8 +33055,8 @@ JT
 JT
 JT
 dZ
-dZ
-HR
+LB
+oF
 HR
 dZ
 JT
@@ -33595,9 +33680,9 @@ XS
 WC
 WC
 JT
-JT
-JT
-JT
+Gp
+Gp
+Gp
 XS
 XS
 XS
@@ -34003,7 +34088,7 @@ Ja
 Ja
 Ja
 Ja
-Ja
+wV
 "}
 (3,1,3) = {"
 Ja

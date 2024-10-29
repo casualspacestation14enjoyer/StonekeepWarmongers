@@ -170,7 +170,7 @@
 //GOLD
 /obj/item/roguecoin/gold
 	name = "zenar"
-	desc = "A gold coin bearing the symbol of the Taurus and the pre-kingdom psycross. These were in the best condition of the provincial gold mints, the rest were melted down."
+	desc = "Gold coins are very outdated these days, when they stopped being minted in the mainlands jewelers offered to buy them to make more expensive jewelry, you'll find them in collections of old-timers or rarely in circulation. They're still seen in use in isolated communities and colonies."
 	icon_state = "g1"
 	sellprice = 10
 	base_type = CTYPE_GOLD
@@ -179,17 +179,17 @@
 
 // SILVER
 /obj/item/roguecoin/silver
-	name = "ziliqua"
-	desc = "An ancient silver coin still in use due to their remarkable ability to last the ages."
+	name = "haeler"
+	desc = "The successor to the zenny that succeeded in getting silver out of financial use and instead using the abundant iron. The haeler and zilliquae are completely identical apart from material composition which aided in the transition as the zilliquae was a very important symbol."
 	icon_state = "s1"
 	sellprice = 5
 	base_type = CTYPE_SILV
-	plural_name = "ziliquae"
+	plural_name = "haelere"
 
 // COPPER
 /obj/item/roguecoin/copper
 	name = "zenny"
-	desc = "A brand-new bronze coin minted by the capital in an effort to be rid of the financial use of silver."
+	desc = "Even though silver was phased out of economical use the zenny is still being used to measure out the differece between financial transactions, such as special discounts or items not worth more than 5 mammon."
 	icon_state = "c1"
 	sellprice = 1
 	base_type = CTYPE_COPP
@@ -206,6 +206,18 @@
 /obj/item/roguecoin/gold/pile/Initialize()
 	. = ..()
 	set_quantity(rand(4,19))
+
+/obj/item/roguecoin/copper/ten/Initialize()
+	. = ..()
+	set_quantity(10)
+
+/obj/item/roguecoin/gold/ten/Initialize()
+	. = ..()
+	set_quantity(10)
+
+/obj/item/roguecoin/silver/ten/Initialize()
+	. = ..()
+	set_quantity(10)
 
 #undef CTYPE_GOLD
 #undef CTYPE_SILV

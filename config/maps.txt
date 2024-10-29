@@ -34,6 +34,10 @@ map darkwaters
 	votable
 endmap
 
+map warworld
+	#voteweight 1.5
+endmap
+
 map rogueworld
 	default
 	#voteweight 1.5

@@ -313,6 +313,53 @@ datum/crafting_recipe/roguetown/poisonbolt
 	craftdiff = 1
 	skillcraft = /datum/skill/craft/engineering
 
+/datum/crafting_recipe/roguetown/levershot
+	name = "levershot"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+	reqs = list(/obj/item/roguegear = 2,
+				/obj/item/flint = 1,
+				/obj/item/ingot/steel = 2,
+				/obj/item/grown/log/tree/small = 2)
+	craftdiff = 3
+	skillcraft = /datum/skill/craft/engineering
+
+/datum/crafting_recipe/roguetown/revolver
+	name = "revolleyer"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+	reqs = list(/obj/item/roguegear = 2,
+				/obj/item/flint = 1,
+				/obj/item/ingot/steel = 1,
+				/obj/item/grown/log/tree/small = 1)
+	craftdiff = 3
+	skillcraft = /datum/skill/craft/engineering
+
+/datum/crafting_recipe/roguetown/barksteel
+	name = "barksteel"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	reqs = list(/obj/item/roguegear = 1,
+				/obj/item/flint = 2,
+				/obj/item/ingot/steel = 1,
+				/obj/item/grown/log/tree/small = 2)
+	craftdiff = 2
+	skillcraft = /datum/skill/craft/engineering
+
+/datum/crafting_recipe/roguetown/barksteelbayonet
+	name = "barksteel (attach bayonet)"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	reqs = list(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+				/obj/item/rogueweapon/huntingknife/cleaver/combat)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/barkiron
+	name = "barkiron"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	reqs = list(/obj/item/roguegear = 1,
+				/obj/item/flint = 1,
+				/obj/item/ingot/iron = 2,
+				/obj/item/grown/log/tree/small = 1)
+	craftdiff = 1
+	skillcraft = /datum/skill/craft/engineering
+
 /datum/crafting_recipe/roguetown/handmadebow
 	name = "wooden bow"
 	result = list(/obj/item/gun/ballistic/revolver/grenadelauncher/bow)

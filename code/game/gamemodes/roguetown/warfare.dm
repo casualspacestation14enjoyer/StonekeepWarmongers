@@ -35,7 +35,8 @@
 	announce_text = "The"
 
 /datum/game_mode/warfare/post_setup(report)
-	begin_countDown()
+	if(!SSticker.warworld)
+		begin_countDown()
 	..()
 
 /datum/game_mode/warfare/proc/award_triumphs()

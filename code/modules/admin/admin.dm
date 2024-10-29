@@ -679,6 +679,19 @@
 
 	return 0
 
+/datum/admins/proc/warworld()
+	set category = "GameMaster"
+	set name = "Warworld"
+
+	if(SSticker.warworld)
+		SSticker.warworld = FALSE
+		world.name = "WARMONGERS"
+		to_chat(usr, "off")
+	else
+		SSticker.warworld = TRUE
+		world.name = "WARWORLD"
+		to_chat(usr, "on")
+
 /datum/admins/proc/oneteammode()
 	set category = "GameMaster"
 	set name = "One Team Mode"

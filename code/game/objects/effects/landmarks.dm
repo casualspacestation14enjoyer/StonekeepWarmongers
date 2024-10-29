@@ -321,6 +321,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Grenzelhoft Lord")
 	delete_after_roundstart = FALSE
 
+/obj/effect/landmark/start/colonizer
+	name = "Colonizer"
+	icon_state = "arrow"
+	jobspawn_override = list("Colonizer")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/fisher
 	name = "Fisher"
 	icon_state = "arrow"

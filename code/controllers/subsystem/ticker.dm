@@ -894,6 +894,8 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
+	if(warworld)
+		return
 	if(!warfare_ready_to_die)
 		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!"))
 		if(!(oneteammode || deathmatch))
@@ -928,6 +930,8 @@ SUBSYSTEM_DEF(ticker)
 			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
+	if(warworld)
+		return
 	var/datum/game_mode/warfare/W = mode
 
 	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list

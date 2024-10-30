@@ -164,7 +164,7 @@
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
 /area/rogue/outdoors/woods)
 "nD" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/water/swamp,
 /area/rogue/outdoors/woods)
 "nH" = (

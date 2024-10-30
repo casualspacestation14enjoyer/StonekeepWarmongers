@@ -565,7 +565,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "vK" = (
-/obj/structure/flora/roguetree/stump,
+/obj/structure/table/wood/treestump,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "vT" = (
@@ -691,7 +691,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "At" = (
-/obj/structure/flora/roguetree/stump,
+/obj/structure/table/wood/treestump,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Au" = (
@@ -713,7 +713,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
 "Bt" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Bu" = (
@@ -725,7 +725,7 @@
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "BJ" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "BM" = (
@@ -1115,7 +1115,7 @@
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/town/roofs)
 "PR" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "PU" = (

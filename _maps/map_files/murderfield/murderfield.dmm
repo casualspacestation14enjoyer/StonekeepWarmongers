@@ -450,7 +450,7 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "ty" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
 "tz" = (
@@ -462,7 +462,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
 "tU" = (
-/obj/structure/flora/roguetree/stump/burnt,
+/obj/structure/table/wood/treestump/burnt,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
 "tZ" = (
@@ -685,7 +685,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Eb" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "Eh" = (
@@ -733,7 +733,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "GW" = (
-/obj/structure/flora/roguetree/stump/burnt,
+/obj/structure/table/wood/treestump/burnt,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "He" = (
@@ -920,7 +920,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "PR" = (
-/obj/structure/flora/roguetree/stump/log,
+/obj/structure/chair/bench/ancientlog,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Qj" = (
@@ -1154,7 +1154,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
 "Yq" = (
-/obj/structure/flora/roguetree/stump/burnt,
+/obj/structure/table/wood/treestump/burnt,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Yr" = (

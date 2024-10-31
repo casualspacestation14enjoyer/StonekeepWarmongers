@@ -119,6 +119,13 @@
 	anchored = TRUE
 	density = TRUE
 
+/obj/structure/underworld/carriage/abandoned
+	name = "abandoned structure"
+	desc = "What it could've been we will never know."
+	icon_state = "carriage"
+
+/obj/structure/underworld/carriage/abandoned/attack_hand()
+	return
 
 /obj/structure/underworld/carriage/Initialize()
 	..()

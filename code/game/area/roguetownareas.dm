@@ -155,6 +155,14 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	first_time_text = "THE MURDERWOOD"
 	converted_type = /area/rogue/indoors/shelter/woods
 
+/area/rogue/outdoors/woods/deathlands
+	name = "Rotting Body of Dendoria"
+	first_time_text = "Rotting Body of Dendoria"
+
+/area/rogue/outdoors/woods/wastelands
+	name = "Deadman's Domain"
+	first_time_text = "Deadman's Domain"
+
 /area/rogue/indoors/shelter/woods
 	icon_state = "woods"
 	droning_sound = 'sound/music/area/forest.ogg'

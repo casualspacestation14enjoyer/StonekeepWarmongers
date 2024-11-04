@@ -638,7 +638,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 				dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
-	var/datum/browser/popup = new(src, "latechoices", "ARE YOU READY TO ENLIST?", 295, 620)
+	var/datum/browser/popup = new(src, "latechoices", "Which side will you fight for?", 295, 620)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(jointext(dat, ""))
 	popup.open(FALSE) // 0 is passed to open so that it doesn't use the onclose() proc
@@ -686,14 +686,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	return
 
 /mob/living/carbon/human/after_creation()
-/* NO SEX
-#ifdef MATURESERVER
 	if(gender == MALE)
 		sexcon = new/datum/sex_controller/male(src)
 	else
 		sexcon = new/datum/sex_controller/female(src)
-#endif
-*/
+
 	if(dna?.species)
 		dna.species.after_creation(src)
 	roll_stats()

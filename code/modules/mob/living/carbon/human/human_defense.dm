@@ -90,16 +90,16 @@
 			if(!P.nodamage && P.damage < src.health && isliving(P.firer))
 				retaliate(P.firer)
 
-	if(def_zone == BODY_ZONE_HEAD || def_zone == BODY_ZONE_PRECISE_SKULL)
-		if(ishuman(P.firer))
-			var/mob/living/carbon/human/PFF = P.firer
-			to_chat(PFF, "<span class='userdanger'>Headshot!</span>")
+	if(def_zone == BODY_ZONE_HEAD)
+		to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
 		adjustBruteLoss(35)
-		flash_color(src, flash_color = "#FF0000", flash_time = 4 SECONDS)
 		var/obj/item/clothing/head/hed = head
 		if(hed)
-			hed.forceMove(get_step(src, turn(dir, 180)))
+			hed.forceMove(get_step(M, turn(dir, 180)))
+			hed.dropped()
+			head = null
+			update_inv_head()
 
 	if(dna && dna.species)
 		var/spec_return = dna.species.bullet_act(P, src, def_zone)

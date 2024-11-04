@@ -14,6 +14,7 @@
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	wieldsound = 'sound/combat/musket_wield.ogg'
+	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -111,7 +112,7 @@
 		return
 	..()
 	QDEL_NULL(chambered)
-	new /obj/effect/particle_effect/smoke(get_turf(user))
+	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 
 /obj/item/ammo_box/magazine/internal/shot/peter // petah.. the saiga is here.
@@ -137,6 +138,7 @@
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	wieldsound = 'sound/combat/musket_wield.ogg'
+	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
@@ -219,6 +221,6 @@
 		return
 	..()
 	QDEL_NULL(chambered)
-	new /obj/effect/particle_effect/smoke(get_turf(user))
+	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 	update_icon()

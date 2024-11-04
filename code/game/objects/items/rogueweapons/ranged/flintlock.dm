@@ -30,12 +30,14 @@
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
 	fire_sound_volume = 500
-	equip_sound = 'sound/foley/gun_equip.ogg'
-	pickup_sound = 'sound/foley/gun_equip.ogg'
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
 	var/ramtime = 5.5
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
+	. = ..()
+	playsound(loc, 'sound/foley/gun_equip.ogg', 100, TRUE)
 
 /obj/item/ramrod
 	name = "ramming rod"

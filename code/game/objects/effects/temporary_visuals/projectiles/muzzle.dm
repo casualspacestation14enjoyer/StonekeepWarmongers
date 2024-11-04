@@ -2,6 +2,9 @@
 	name = "muzzle flash"
 	icon = 'icons/obj/projectiles_muzzle.dmi'
 
+/obj/effect/projectile/muzzle/bullet
+	icon_state = "muzzle_bullet"
+
 /obj/effect/projectile/muzzle/laser
 	icon_state = "muzzle_laser"
 

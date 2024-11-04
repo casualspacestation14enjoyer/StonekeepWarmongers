@@ -153,7 +153,6 @@
 	return TRUE
 
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*click*</span>")
 	playsound(src, dry_fire_sound, 30, TRUE)
 
 

@@ -52,9 +52,9 @@
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 
 /obj/item/storage/belt/rogue/leather/bullet/PopulateContents()
-	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
-	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
-	new /obj/item/ammo_casing/caseless/rogue/bullet(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
 
 /obj/item/storage/belt/rogue/leather/medic/PopulateContents()
 	new /obj/item/sleepingbag(src)

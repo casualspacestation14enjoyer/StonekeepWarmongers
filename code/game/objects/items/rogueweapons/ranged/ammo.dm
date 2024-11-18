@@ -271,7 +271,7 @@
 /obj/projectile/bullet/reusable/bullet
 	name = "lead ball"
 	desc = "A round lead shot, simple and spherical."
-	damage = 110
+	damage = 140
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -294,7 +294,7 @@
 	armor_penetration = 30
 
 /obj/projectile/bullet/reusable/bullet/iron
-	damage = 50
+	damage = 65
 	armor_penetration = 90
 
 /obj/projectile/bullet/fragment
@@ -306,9 +306,8 @@
 	range = 30
 	jitter = 5
 	eyeblur = 3
-	stun = 1
 	icon = 'icons/roguetown/weapons/ammo.dmi'
-	icon_state = "musketball_proj"
+	icon_state = "woodenball_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
@@ -334,8 +333,10 @@
 
 /obj/item/ammo_casing/caseless/rogue/bullet/wood
 	name = "wooden ball"
-	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But I did hear of you, so that's something."
-	projectile_type = /obj/projectile/bullet/reusable/bullet/wood
+	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But it does shatter when it's fired, so that's something."
+	pellets = 12
+	variance = 35
+	projectile_type = /obj/projectile/bullet/fragment
 
 /obj/projectile/bullet/reusable/cannonball
 	name = "large lead ball"
@@ -384,6 +385,8 @@
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
 	name = "berryshot"
 	desc = "A large pouch of smaller lead balls. Not as complex and not as spherical."
-	icon_state = "grapeshot" // NEEDS SPRITE
-	dropshrink = 0.5
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "rucksack"
+	pellets = 6
+	variance = 15
 	projectile_type = /obj/projectile/bullet/fragment

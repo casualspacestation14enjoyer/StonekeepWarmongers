@@ -109,3 +109,39 @@
 		var/obj/item/ammo_casing/caseless/rogue/bullet/A = new()
 		ammo_list += A
 	update_icon()
+
+/obj/item/quiver/ironbullets
+	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "sack_rope"
+	item_state = "quiver"
+
+/obj/item/quiver/ironbullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "sack_rope"
+	else
+		icon_state = "sack_rope"
+
+/obj/item/quiver/ironbullets/Initialize()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/iron/A = new()
+		ammo_list += A
+	update_icon()
+
+/obj/item/quiver/woodbullets
+	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "sack_rope"
+	item_state = "quiver"
+
+/obj/item/quiver/woodbullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "sack_rope"
+	else
+		icon_state = "sack_rope"
+
+/obj/item/quiver/woodbullets/Initialize()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/wood/A = new()
+		ammo_list += A
+	update_icon()

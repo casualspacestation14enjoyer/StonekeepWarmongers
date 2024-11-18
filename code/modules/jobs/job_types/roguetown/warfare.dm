@@ -301,7 +301,7 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -416,7 +416,7 @@
 	beltl = /obj/item/rogueweapon/sword/rapier
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
-	backr = /obj/item/quiver/bullets
+	backr = /obj/item/quiver/ironbullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
@@ -658,7 +658,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/woodcut/steel
-	backr = /obj/item/quiver/bullets
+	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
 	backl = /obj/item/storage/backpack/rogue/backpack
@@ -780,7 +780,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltl = /obj/item/rogueweapon/sword/rapier
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
-	backr = /obj/item/quiver/bullets
+	backr = /obj/item/quiver/ironbullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

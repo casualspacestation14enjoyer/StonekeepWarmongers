@@ -298,12 +298,12 @@
 	armor_penetration = 90
 
 /obj/projectile/bullet/fragment
-	name = "smaller lead ball"
+	name = "fragment"
 	desc = "Haha. You're not able to see this!"
-	damage = 25
+	damage = 10
 	damage_type = BRUTE
-	woundclass = BCLASS_BLUNT
-	range = 30
+	woundclass = BCLASS_STAB
+	range = 50
 	jitter = 5
 	eyeblur = 3
 	icon = 'icons/roguetown/weapons/ammo.dmi'
@@ -311,8 +311,8 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
-	armor_penetration = 100
-	speed = 0.5
+	armor_penetration = 40
+	speed = 1.5
 
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "lead ball"
@@ -334,7 +334,8 @@
 /obj/item/ammo_casing/caseless/rogue/bullet/wood
 	name = "wooden ball"
 	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But it does shatter when it's fired, so that's something."
-	pellets = 12
+	icon_state = "woodenball"
+	pellets = 7
 	variance = 35
 	projectile_type = /obj/projectile/bullet/fragment
 

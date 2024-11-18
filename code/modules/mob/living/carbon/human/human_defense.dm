@@ -96,7 +96,7 @@
 		adjustBruteLoss(35)
 		var/obj/item/clothing/head/hed = head
 		if(hed)
-			hed.forceMove(get_step(M, turn(dir, 180)))
+			hed.forceMove(get_step(src, turn(dir, 180)))
 			hed.dropped()
 			head = null
 			update_inv_head()

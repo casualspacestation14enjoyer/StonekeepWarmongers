@@ -899,7 +899,7 @@ SUBSYSTEM_DEF(ticker)
 	if(warworld)
 		return
 	if(!warfare_ready_to_die)
-		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I WILL DIE FOR THE LORD!"))
+		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!"))
 		if(!(oneteammode || deathmatch))
 			W.reinforcements()
 		warfare_ready_to_die = TRUE

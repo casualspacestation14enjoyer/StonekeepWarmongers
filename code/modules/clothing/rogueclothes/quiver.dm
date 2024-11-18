@@ -123,6 +123,7 @@
 		icon_state = "sack_rope"
 
 /obj/item/quiver/ironbullets/Initialize()
+	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bullet/iron/A = new()
 		ammo_list += A
@@ -141,6 +142,7 @@
 		icon_state = "sack_rope"
 
 /obj/item/quiver/woodbullets/Initialize()
+	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bullet/wood/A = new()
 		ammo_list += A

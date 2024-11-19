@@ -123,12 +123,11 @@
 					if(!HAS_TRAIT(HU, TRAIT_VILLAIN))
 						if(HU.dna?.species && dna?.species)
 							if(HU.dna.species.id == dna.species.id)
-								var/mob/living/carbon/D = HU
-								if(D.has_flaw(/datum/charflaw/addiction/maniac))
-									D.add_stress(/datum/stressevent/viewdeathmaniac)
-									D.sate_addiction()
+								if(HU.has_flaw(/datum/charflaw/addiction/maniac))
+									HU.add_stress(/datum/stressevent/viewdeathmaniac)
+									HU.sate_addiction()
 								else
-									D.add_stress(/datum/stressevent/viewdeath)
+									HU.add_stress(/datum/stressevent/viewdeath)
 
 	. = ..()
 

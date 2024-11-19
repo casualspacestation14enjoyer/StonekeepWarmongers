@@ -7,7 +7,7 @@
     range = 7
     warnie = "sydwarning"
     sound = 'sound/magic/inspire_02.ogg'
-    invocation = "Fight with all you got!"
+    invocation = "FIGHT WITH ALL YOU GOT!"
     invocation_type = "shout"
     associated_skill = /datum/skill/misc/leadership
     antimagic_allowed = TRUE
@@ -24,8 +24,10 @@
                 isenemy = TRUE
             if(!isenemy)
                 if( 4 < user.mind.get_skill_level(/datum/skill/misc/leadership))
+                    invocation = "FIGHT WITH ALL YOU GOT!"
                     H.apply_status_effect(/datum/status_effect/buff/inspired/great) //yes, you can stack inspirations from different levels of leadership
                 else
+                    invocation = "CHARGE!"
                     H.apply_status_effect(/datum/status_effect/buff/inspired)
                 H.visible_message("<span class='info'>[H] looks more eager to fight!</span>", "<span class='notice'>I feel inspired to fight!</span>")
     ..()

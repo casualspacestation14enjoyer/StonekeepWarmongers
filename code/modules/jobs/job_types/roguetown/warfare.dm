@@ -49,6 +49,24 @@
 				to_chat(M, "<br><span class='alert'>THE WORTHY LORD COMMANDS: \"[ann]\"</span>")
 				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
+/mob/living/carbon/human/proc/warfare_inspire()
+	set name = "MASS INSPIRE (3 TRI)"
+	set category = "LORD"
+	var/ann = alert(usr, "ARE YOU SURE?", "WARMONGERS", "Yes", "No")
+	var/mob/living/carbon/human/H = usr
+
+	if(ann == "Yes")
+		if(H.get_triumphs() < 3)
+			to_chat(H, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+			return
+		H.adjust_triumphs(-3)
+		for(var/mob/living/carbon/human/M in GLOB.player_list)
+			if(M.warfare_faction != src.warfare_faction)
+				continue
+			M.apply_status_effect(/datum/status_effect/buff/inspired)
+			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
+			M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+
 /////////////////////////// WARWORLD /////////////////////////////////////
 
 /datum/job/roguetown/warfare/warworld
@@ -111,7 +129,8 @@
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
-		/mob/living/carbon/human/proc/warfare_command
+		/mob/living/carbon/human/proc/warfare_command,
+		/mob/living/carbon/human/proc/warfare_inspire
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
@@ -489,7 +508,8 @@
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
-		/mob/living/carbon/human/proc/warfare_command
+		/mob/living/carbon/human/proc/warfare_command,
+		/mob/living/carbon/human/proc/warfare_inspire
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode

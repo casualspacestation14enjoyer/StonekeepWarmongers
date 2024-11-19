@@ -227,7 +227,7 @@
 /datum/status_effect/buff/inspired
 	id = "inspired"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired
-	effectedstats = list("speed" = 2,"constitution" = 1,"endurance" = 1)
+	effectedstats = list("speed" = 3,"constitution" = 1,"endurance" = 1)
 	duration = 2 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired
@@ -238,7 +238,7 @@
 /datum/status_effect/buff/inspired/great
 	id = "inspired_great"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired/great
-	effectedstats = list("speed" = 3,"constitution" = 3,"endurance" = 3,"strength" = 4)
+	effectedstats = list("speed" = 4,"constitution" = 4,"endurance" = 4,"strength" = 5)
 	duration = 3 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired/great

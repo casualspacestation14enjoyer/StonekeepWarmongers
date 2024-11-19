@@ -1712,15 +1712,16 @@
 			already_printed = list()
 			to_chat(M, "*--------*")
 		if(modifiers["right"])
-			if(M.get_triumphs() <= 0)
-				to_chat(M, "<span class='warning'>I haven't TRIUMPHED.</span>")
+			if(M.get_triumphs() < 2)
+				to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
 				return
-			if(alert("Do you want to remember a TRIUMPH?", "", "Yes", "No") == "Yes")
+			if(alert("FIGHT WITH ALL YOU GOT?!", "", "Yes", "No") == "Yes")
 				var/mob/living/carbon/V = M
 				if(V.add_stress(/datum/stressevent/triumph))
-					M.adjust_triumphs(-1)
-					M.playsound_local(M, 'sound/misc/notice (2).ogg', 100, FALSE)
-
+					M.adjust_triumphs(-2)
+					M.apply_status_effect(/datum/status_effect/buff/inspired)
+					M.playsound_local(M, 'sound/magic/inspire_02.ogg', 100, FALSE)
+					M.visible_message("<span class='info'>[M] looks more eager to fight!</span>", "<span class='notice'>I feel inspired to fight!</span>")
 
 /atom/movable/screen/rmbintent
 	name = "alt intents"

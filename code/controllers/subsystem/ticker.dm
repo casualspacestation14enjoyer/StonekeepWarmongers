@@ -965,9 +965,9 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
 			SSticker.warfare_techlevel = 2
-	to_chat(world, "<span class='info'>Reinforcements...</span>")
+	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
 	for(var/mob/M in GLOB.player_list)
-		SEND_SOUND(M, 'sound/music/reinforcemets.ogg')
+		SEND_SOUND(M, 'sound/music/traitor.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
 		new typepath(red.loc)

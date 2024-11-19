@@ -326,14 +326,14 @@
 					var/datum/game_mode/warfare/C = SSticker.mode
 					C.whowon = RED_WARTEAM
 					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+					H.adjust_triumphs(1)
 		if(RED_WARTEAM)
 			if(H.warfare_faction == BLUE_WARTEAM)
 				if(istype(SSticker.mode, /datum/game_mode/warfare))
 					var/datum/game_mode/warfare/C = SSticker.mode
 					C.whowon = BLUE_WARTEAM
 					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+					H.adjust_triumphs(1)
 
 /obj/structure/fluff/ponr/red
 	name = "Heartfelts Point of No Return"

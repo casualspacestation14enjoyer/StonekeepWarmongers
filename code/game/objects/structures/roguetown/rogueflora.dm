@@ -142,7 +142,7 @@
 /obj/structure/table/wood/treestump
 	name = "tree stump"
 	desc = "Someone cut this tree down."
-	icon = 'icons/roguetown/misc/tree.dmi'
+	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "t1stump"
 	max_integrity = 100
 	climb_time = 0

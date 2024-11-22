@@ -37,6 +37,15 @@
 		SSdroning.kill_droning(client)
 		SSdroning.kill_loop(client)
 		SSdroning.kill_rain(client)
+		src.playsound_local(src, 'sound/misc/deth.ogg', 100)
+
+		var/atom/movable/screen/gameover/hog/H = new()
+		H.layer = SPLASHSCREEN_LAYER+0.1
+		client.screen += H
+		H.Fade()
+		mob_timers["lastdied"] = world.time
+		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 100)
+		add_client_colour(/datum/client_colour/monochrome)
 
 	if(mind)
 		if(!gibbed)
@@ -51,7 +60,7 @@
 			zombie_check()
 	*/
 
-	ghostize(FALSE)
+	ghostize()
 
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)

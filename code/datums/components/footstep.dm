@@ -111,7 +111,7 @@
             if(used_footsteps.len)
                 used_sound = pick(used_footsteps)
         last_sound = used_sound
-        playsound(T, used_sound, GLOB.footstep[T.footstep][2], FALSE, GLOB.footstep[T.footstep][3] + e_range)
+        playsound(T, used_sound, 20, FALSE, GLOB.footstep[T.footstep][3] + e_range)
     else
         //SANITY CHECK, WILL NOT PLAY A SOUND IF THE LIST IS INVALID
         if(!GLOB.barefootstep[T.barefootstep] || (LAZYLEN(GLOB.barefootstep[T.barefootstep]) < 3))

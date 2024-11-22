@@ -1,4 +1,4 @@
-#define MUSIC_TAV list("Song" = 'sound/music/dreadfulstench.ogg', "Song" = 'sound/music/fallenangel.ogg', "Guide" = 'sound/music/reloading.ogg')
+#define MUSIC_TAV list("Song" = 'sound/music/dreadfulstench.ogg', "Song 2" = 'sound/music/fallenangel.ogg', "Song 3" = 'sound/music/practiceofwar.ogg', "Guide" = 'sound/music/reloading.ogg')
 
 /datum/looping_sound/musloop
 	mid_sounds = list()

@@ -355,7 +355,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/flint = 1)
+	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/flint = 1, /obj/item/caltrop = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE) //average bow skills, for silent killings
@@ -716,13 +716,14 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	pants = /obj/item/clothing/under/roguetown/tights
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier, /obj/item/bomb)
+	beltr = /obj/item/caltrop
+	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier)
 	backr = /obj/item/rogue/instrument/accord
 	head = /obj/item/clothing/head/roguetown/jester
 	playsound(H, 'sound/foley/honk.ogg', 100, FALSE, 2)
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -730,10 +731,53 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telljoke)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/telltragedy)
 	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+
+/obj/item/caltrop
+	name = "caltrop"
+	desc = "Grenzels call it a caltrop, Heartfeltians on the other hand a tetsubishi. Both are the same thing, they just have different names. One sane, the second a random mess of letters."
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "tetsubishi"
+	w_class = WEIGHT_CLASS_TINY
+	slot_flags = ITEM_SLOT_HIP
+	embedding = list("embedded_unsafe_removal_time" = 40, "embedded_pain_chance" = 40, "embedded_pain_multiplier" = 1, "embed_chance" = 100, "embedded_fall_chance" = 0)
+
+/obj/item/caltrop/Crossed(AM as mob|obj)
+	if(isturf(loc))
+		if(isliving(AM))
+			var/mob/living/L = AM
+			var/snap = TRUE
+			if(istype(L.buckled, /obj/vehicle))
+				var/obj/vehicle/ridden_vehicle = L.buckled
+				if(!ridden_vehicle.are_legs_exposed)
+					return ..()
+
+			if(L.throwing)
+				return ..()
+
+			if(L.movement_type & (FLYING|FLOATING))
+				return ..()
+
+			var/def_zone = BODY_ZONE_CHEST
+			if(ishuman(L))
+				var/mob/living/carbon/human/C = L
+				if(C.mobility_flags & MOBILITY_STAND)
+					def_zone = pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+					var/obj/item/bodypart/BP = C.get_bodypart(def_zone)
+					if(BP)
+						add_mob_blood(C)
+						if(!BP.is_object_embedded(src))
+							BP.add_embedded_object(src)
+						C.emote("agony")
+			else if(isanimal(L))
+				var/mob/living/simple_animal/SA = L
+				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.
+					snap = FALSE
+			if(snap)
+				L.apply_damage(50, BRUTE, def_zone)
+				L.Stun(20)
+	..()
 
 //// RIFLEMEN ////
 

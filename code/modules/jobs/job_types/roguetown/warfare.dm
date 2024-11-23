@@ -249,7 +249,7 @@
 //// SAMURAI ////
 
 /datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
-	name = "Samurai"
+	name = "Zamurai"
 	tutorial = "Elite and stalwart melee combatants. While great with swords and polearms, they are terrible with guns and are slow moving."
 	outfit = /datum/outfit/job/roguetown/redsamurai
 	allowed_sexes = list(MALE, FEMALE)
@@ -373,6 +373,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
+	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 
 //// RIFLEMEN ////
 
@@ -736,6 +737,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 		H.change_stat("speed", 6)
 	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 
 /obj/item/caltrop
 	name = "caltrop"

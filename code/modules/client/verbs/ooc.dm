@@ -327,6 +327,45 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set category = "Options"
 	stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
+/client/verb/reloading()
+	set name = "RELOADING"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Reloading a flintlock is easy!<BR>"
+	contents += "--------------</center><BR>"
+	contents += "Take a bullet from your ball pouch, if you have one (rclick), put in bullet (lclick), cock musket (rclick with hand not holding musket), middleclick musket to get ramrod, ram musket, middleclick to put back, click musket to wield, shoot,  done you just killed a man! Good job!"
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
+/client/verb/playing()
+	set name = "PLAYING"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Playing the game!<BR>"
+	contents += "--------------</center><BR>"
+	contents += "Playing the game is... well. Easy. If you're on Last Stand or Dark Waters your aim as Heartfelt is to protect your statue. As Grenzelhoft to destroy it. On Blood Fort, kill the opposing lord, get his crown and sit on the Throne of Heartfelt to win!"
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
+/client/verb/medicating()
+	set name = "MEDICINE"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Dr. Urist's Discount Medical School<BR>"
+	contents += "--------------</center><BR>"
+	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more health potions. Put in a limb and a bottle. Crank it with RMB and then open it with MMB, then use MMB again to unscrew the potion from it; which is now filled with a new health potion!"
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
 /proc/CheckJoinDate(ckey)
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
 	if(!http)

@@ -50,13 +50,13 @@
 
 /datum/emote/living/carbon/warcry/run_emote(mob/user, params, type_override, intentional, targetted)
 	. = ..()
-	var/warcry = "WAR!!!"
+	//var/warcry = "WAR!!!"
 	var/sound2play
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				warcry = "For honor! For truth! For Heartfelt!"
+				//warcry = "For honor! For Heartfelt!"
 				if(H.gender == MALE)
 					if(prob(1))
 						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
@@ -68,7 +68,7 @@
 					else
 						sound2play = sound(pick('sound/vo/wc/felt/warcry_female_1.ogg','sound/vo/wc/felt/warcry_female_2.ogg'))
 			if(BLUE_WARTEAM)
-				warcry = "Glory in the stars!"
+				//warcry = "Glory in the stars!"
 				if(H.gender == MALE)
 					if(prob(1))
 						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
@@ -80,7 +80,20 @@
 					else
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg'))
 	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
-	user.say(warcry)
+	user.shoutbubble()
+	
+	//user.say(warcry)
+
+/mob/proc/shoutbubble()
+	var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)
+	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+
+	var/list/listening = view(6,src)
+	var/list/speech_bubble_recipients = list()
+	for(var/mob/M in listening)
+		speech_bubble_recipients.Add(M.client)
+
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
 
 /mob/living/carbon/human/verb/emote_warcry()
 	set name = "WARCRY"

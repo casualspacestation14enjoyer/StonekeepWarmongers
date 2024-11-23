@@ -29,6 +29,7 @@
 	var/ann = input(usr, "ANNOUNCE TO YOUR FLOCK!", "WARMONGERS") as null|text
 
 	if(ann)
+		shoutbubble()
 		for(var/mob/living/carbon/human/M in GLOB.player_list)
 			if(M.warfare_faction != src.warfare_faction)
 				continue
@@ -42,6 +43,7 @@
 	var/ann = input(usr, "COMMAND YOUR FLOCK!", "WARMONGERS") as null|text
 
 	if(ann)
+		shoutbubble()
 		for(var/mob/living/carbon/human/M in GLOB.player_list)
 			if(M.warfare_faction != src.warfare_faction)
 				continue
@@ -60,6 +62,7 @@
 			to_chat(H, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
 			return
 		H.adjust_triumphs(-3)
+		H.shoutbubble()
 		for(var/mob/living/carbon/human/M in GLOB.player_list)
 			if(M.warfare_faction != src.warfare_faction)
 				continue

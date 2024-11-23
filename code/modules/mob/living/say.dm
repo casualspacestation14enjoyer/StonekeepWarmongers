@@ -340,7 +340,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
 	if(speech_sound)
-		playsound(I, speech_sound, 75, FALSE, -1)
+		playsound(I, speech_sound, 65, FALSE, -1)
 
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
 

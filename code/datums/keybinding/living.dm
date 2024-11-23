@@ -75,7 +75,18 @@
 	M.mode()
 	return TRUE
 
+/datum/keybinding/living/warcry
+	hotkey_keys = list("ShiftG")
+	classic_keys = list("ShiftG")
+	name = "warcry"
+	full_name = "WARCRY"
+	description = "It's fun."
 
+/datum/keybinding/living/warcry/down(client/user)
+	var/mob/M = user.mob
+	if(!ishuman(M))
+		return
+	M.emote("warcry", intentional = TRUE)
 
 /datum/keybinding/living/drop_item
 	hotkey_keys = list("Z")

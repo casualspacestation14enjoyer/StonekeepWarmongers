@@ -93,11 +93,10 @@
 	if(def_zone == BODY_ZONE_HEAD)
 		to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
-		adjustBruteLoss(35)
+		adjustBruteLoss(45)
 		var/obj/item/clothing/head/hed = head
 		if(hed)
-			hed.forceMove(get_step(src, turn(dir, 180)))
-			hed.dropped()
+			transferItemToLoc(hed, get_step(src, turn(dir, 180)))
 			head = null
 			update_inv_head()
 

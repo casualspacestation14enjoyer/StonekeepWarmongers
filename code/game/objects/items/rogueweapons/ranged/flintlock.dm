@@ -97,7 +97,6 @@
 		return ..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/MiddleClick(mob/user, params)
-	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(rod)
@@ -126,7 +125,6 @@
 	update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attack_right(mob/user)
-	. = ..()
 	if(!user.is_holding(src))
 		to_chat(user, "<span class='warning'>I need to hold \the [src] to cock it!</span>")
 		return

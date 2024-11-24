@@ -48,6 +48,13 @@
 		add_client_colour(/datum/client_colour/monochrome)
 
 	if(mind)
+		if(!client.holder) // Dumb and stupid hack to get rid of false positives added into death count via aghosting. Or something.
+			SSticker.deaths++
+			switch(warfare_faction)
+				if(RED_WARTEAM)
+					SSticker.heartfelt_deaths++
+				if(BLUE_WARTEAM)
+					SSticker.grenzelhoft_deaths++
 		if(!gibbed)
 			var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
 			if(VD)

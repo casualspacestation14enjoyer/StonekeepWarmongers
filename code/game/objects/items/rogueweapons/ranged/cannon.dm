@@ -1,6 +1,6 @@
 // immovable cannons. no hand cannons, sorry. (jk)
 
-/obj/structure/cannon
+/obj/structure/cannon // cannon
 	name = "barkstone"
 	desc = "A large weapon mainly hoisted on warships."
 	icon = 'icons/roguetown/misc/structure.dmi'
@@ -65,7 +65,7 @@
 	QDEL_NULL(loaded)
 	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
-	sleep(2)
+	sleep(4)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes

@@ -20,7 +20,7 @@
         var/isenemy = FALSE
         if(ishuman(user))
             var/mob/living/carbon/human/U = user
-            if(U.warfare_faction != H.warfare_faction)
+            if(U.warfare_faction != H.warfare_faction || H.stat == DEAD)
                 isenemy = TRUE
             if(!isenemy)
                 if( 4 < user.mind.get_skill_level(/datum/skill/misc/leadership))

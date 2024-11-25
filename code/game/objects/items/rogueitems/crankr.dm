@@ -1,6 +1,6 @@
 /obj/item/cranker
 	name = "CRANKeR"
-	desc = "A strange skull-shaped medical device used to grind up bodyparts to make a liquid capable of healing all sorts of injuries. Rumored to be enchanted by Pestra themselves."
+	desc = "A strange skull-shaped medical device used to grind up bodyparts to make a liquid capable of healing all sorts of injuries."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "cranker"
 	w_class = WEIGHT_CLASS_SMALL

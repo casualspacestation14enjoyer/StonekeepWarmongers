@@ -385,7 +385,7 @@
 
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
 	name = "berryshot"
-	desc = "A large pouch of smaller lead balls. Not as complex and not as spherical."
+	desc = "A large pouch of smaller lead balls. Not as complex nor spherical."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "rucksack"
 	pellets = 6

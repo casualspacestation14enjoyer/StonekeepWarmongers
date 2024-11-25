@@ -378,7 +378,7 @@
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)
-	max_integrity = 1
+	max_integrity = 100
 	randomspread = 0
 	variance = 0
 	force = 20

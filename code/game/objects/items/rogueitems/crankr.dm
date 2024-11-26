@@ -36,8 +36,9 @@
 		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)
 		return
 
-/obj/item/cranker/attack_right(mob/user)
+/obj/item/cranker/attack_right(mob/living/carbon/human/user)
 	. = ..()
+	var/datum/game_mode/warfare/C = SSticker.mode
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return
@@ -57,6 +58,11 @@
 	playsound(get_turf(user), "wetbreak", 100, TRUE, -5)
 	pot.reagents.add_reagent(/datum/reagent/medicine/healthpot, 15)
 	to_chat(user, "<span class='info'>The product is ready.</span>")
+	switch(user.warfare_faction)
+		if(RED_WARTEAM)
+			C.red_bonus++
+		if(BLUE_WARTEAM)
+			C.blu_bonus++
 	
 /obj/item/cranker/attackby(obj/item/I, mob/user, params)
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)

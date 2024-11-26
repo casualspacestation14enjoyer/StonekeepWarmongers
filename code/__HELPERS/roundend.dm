@@ -314,7 +314,7 @@
 		to_chat(world, "This battle was futile. This world is already gone. What I fought for was lost the day I took up arms. No salvation can come through this fight.")
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
-			if(!C.timedmatch)
+			if(!C.timedmatch && C.crownbearer)
 				to_chat(world, "<span class='info'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
 		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")

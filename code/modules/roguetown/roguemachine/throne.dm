@@ -71,13 +71,13 @@
 					C.whowon = RED_WARTEAM
 					C.crownbearer = H
 					SSticker.force_ending = TRUE
-					H.adjust_triumphs(1)
+					H.adjust_triumphs(5)
 			if(BLUE_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
 					C.whowon = BLUE_WARTEAM
 					C.crownbearer = H
 					SSticker.force_ending = TRUE
-					H.adjust_triumphs(1)
+					H.adjust_triumphs(5)
 
 /obj/structure/throne/post_unbuckle_mob(mob/living/M)
 	..()

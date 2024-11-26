@@ -17,11 +17,13 @@
 		if(loaded)
 			return
 		user.visible_message("<span class='notice'>\The [user] begins loading \the [I] into \the [src].</span>")
+		playsound(src, 'sound/combat/cannon_loading.ogg', 75)
 		if(!do_after(user, 5 SECONDS, TRUE, src))
 			return
 		I.forceMove(src)
 		loaded = I
 		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
+		playsound(src, 'sound/foley/trap_arm.ogg', 100)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
 		if(!loaded)
@@ -49,7 +51,8 @@
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
-		H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
+		if(prob(30))
+			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
 		H.throw_at(turfa, 2, 1, null, FALSE)

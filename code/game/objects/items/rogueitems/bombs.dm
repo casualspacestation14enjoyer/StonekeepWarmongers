@@ -82,6 +82,23 @@
 	light_impact = 0
 	flame_impact = 2
 
+/obj/item/bomb/fire/explode(skipprob)
+	STOP_PROCESSING(SSfastprocess, src)
+	var/turf/T = get_turf(src)
+	if(T)
+		if(lit)
+			if(!skipprob && prob(prob2fail))
+				snuff()
+			else
+				explosion(T, light_impact_range = light_impact, flame_range = flame_impact, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		else
+			if(prob(prob2fail))
+				snuff()
+			else
+				playsound(T, 'sound/items/firesnuff.ogg', 100)
+				new /obj/item/shard (T)
+	qdel(src)
+
 /obj/item/bomb/fire/weak
 	name = "cheap fire bomb"
 	desc = "This out seems to kinda suck."

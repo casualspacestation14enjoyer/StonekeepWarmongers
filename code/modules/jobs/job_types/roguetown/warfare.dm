@@ -1,3 +1,10 @@
+#define WARMONGERS_SHIPPABLES		list("FIVE SMOKE BOMBS",\
+									"GAS BOMBS",\
+									"BOMBS",\
+									"FIRE BOMB",\
+									"WOODEN BULLETS",\
+									"TWO HEALTH POTIONS")
+
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	..()
 	var/obj/S = null
@@ -70,6 +77,48 @@
 			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
 			M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
+/mob/living/carbon/human/proc/warfare_shop()
+	set name = "REINFORCEMENT BONUSES"
+	set category = "LORD"
+	var/mob/living/carbon/human/H = usr
+	var/datum/game_mode/warfare/C = SSticker.mode
+	var/shoppin = input(usr, "BUY NOW!!!", "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!") as null|anything in WARMONGERS_SHIPPABLES
+	if(!shoppin)
+		return
+	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
+		return
+	switch(H.warfare_faction)
+		if(RED_WARTEAM)
+			if(C.red_bonus >= 1)
+				C.red_bonus--
+			else
+				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				return
+		if(BLUE_WARTEAM)
+			if(C.blu_bonus >= 1)
+				C.blu_bonus--
+			else
+				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				return
+	switch(shoppin)
+		if("FIVE SMOKE BOMBS")
+			new /obj/item/bomb/smoke(H.loc)
+			new /obj/item/bomb/smoke(H.loc)
+			new /obj/item/bomb/smoke(H.loc)
+			new /obj/item/bomb/smoke(H.loc)
+			new /obj/item/bomb/smoke(H.loc)
+		if("GAS BOMB")
+			new /obj/item/bomb/poison(H.loc)
+		if("BOMB")
+			new /obj/item/bomb(H.loc)
+		if("FIRE BOMB")
+			new /obj/item/bomb/fire(H.loc)
+		if("WOODEN BULLETS")
+			new /obj/item/quiver/woodbullets(H.loc)
+		if("TWO HEALTH POTIONS")
+			new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(H.loc)
+			new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(H.loc)
+
 /////////////////////////// WARWORLD /////////////////////////////////////
 
 /datum/job/roguetown/warfare/warworld
@@ -133,7 +182,8 @@
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
 		/mob/living/carbon/human/proc/warfare_command,
-		/mob/living/carbon/human/proc/warfare_inspire
+		/mob/living/carbon/human/proc/warfare_inspire,
+		/mob/living/carbon/human/proc/warfare_shop
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
@@ -515,7 +565,8 @@
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
 		/mob/living/carbon/human/proc/warfare_command,
-		/mob/living/carbon/human/proc/warfare_inspire
+		/mob/living/carbon/human/proc/warfare_inspire,
+		/mob/living/carbon/human/proc/warfare_shop
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode

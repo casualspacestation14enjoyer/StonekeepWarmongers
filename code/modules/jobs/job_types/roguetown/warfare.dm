@@ -2,8 +2,8 @@
 									"GAS BOMBS",\
 									"BOMBS",\
 									"FIRE BOMB",\
-									"WOODEN BULLETS",\
-									"TWO HEALTH POTIONS")
+									"WOODEN BALLS",\
+									"LEAD BALLS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	..()
@@ -82,10 +82,8 @@
 	set category = "LORD"
 	var/mob/living/carbon/human/H = usr
 	var/datum/game_mode/warfare/C = SSticker.mode
-	var/shoppin = input(usr, "BUY NOW!!!", "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!") as null|anything in WARMONGERS_SHIPPABLES
+	var/shoppin = input(usr, "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in WARMONGERS_SHIPPABLES
 	if(!shoppin)
-		return
-	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
 		return
 	switch(H.warfare_faction)
 		if(RED_WARTEAM)
@@ -100,6 +98,8 @@
 			else
 				to_chat(H, "<span class='info'>Insufficient points.</span>")
 				return
+	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
+		return
 	switch(shoppin)
 		if("FIVE SMOKE BOMBS")
 			new /obj/item/bomb/smoke(H.loc)
@@ -113,11 +113,10 @@
 			new /obj/item/bomb(H.loc)
 		if("FIRE BOMB")
 			new /obj/item/bomb/fire(H.loc)
-		if("WOODEN BULLETS")
+		if("WOODEN BALLS")
 			new /obj/item/quiver/woodbullets(H.loc)
-		if("TWO HEALTH POTIONS")
-			new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(H.loc)
-			new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(H.loc)
+		if("LEAD BALLS")
+			new /obj/item/quiver/bullets(H.loc)
 
 /////////////////////////// WARWORLD /////////////////////////////////////
 

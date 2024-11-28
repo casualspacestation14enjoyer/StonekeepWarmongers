@@ -26,7 +26,7 @@
 	desc = "A device more advanced due to the strides in technology. No longer made from wax and now uses ceramic disks with indents to make sound. This one is specially supplied to armies to listen to music to feel better about themselves."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
-	density = FALSE
+	density = TRUE
 	max_integrity = 0
 	anchored = FALSE
 	var/datum/looping_sound/musloop/soundloop

@@ -2,7 +2,7 @@
 /datum/component/chasm
 	var/turf/target_turf
 	var/fall_message = "GAH! Ah... where are you?"
-	var/oblivion_message = "You stumble and stare into the abyss before you. It stares back, and you fall into the enveloping dark."
+	var/oblivion_message = "You get lost in the abyss of the ocean."
 
 	var/static/list/falling_atoms = list() // Atoms currently falling into chasms
 	var/static/list/forbidden_types = typecacheof(list(

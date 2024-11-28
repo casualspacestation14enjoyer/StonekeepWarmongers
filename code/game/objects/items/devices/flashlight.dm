@@ -333,7 +333,7 @@
 	light_color = "#da8c45"
 	on_damage = 2
 	flags_1 = null
-	possible_item_intents = list(/datum/intent/hit, /datum/intent/use)
+	possible_item_intents = list(/datum/intent/use)
 	slot_flags = ITEM_SLOT_HIP
 	var/datum/looping_sound/torchloop/soundloop
 	var/should_self_destruct = TRUE //added for torch burnout

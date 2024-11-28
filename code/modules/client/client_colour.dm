@@ -22,6 +22,7 @@
 	colour_type - a typepath (subtyped from /datum/client_colour)
 */
 
+/*
 /mob/verb/test1()
 	set category = "Options"
 
@@ -36,7 +37,7 @@
 	set category = "Options"
 
 	add_client_colour(/datum/client_colour/monochrome)
-	
+*/
 
 /mob/proc/add_client_colour(colour_type)
 	if(!ispath(colour_type, /datum/client_colour))

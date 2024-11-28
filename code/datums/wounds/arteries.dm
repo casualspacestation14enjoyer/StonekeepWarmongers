@@ -42,7 +42,7 @@
 	crit_message = "Blood sprays from %VICTIM's throat!"
 	whp = 100
 	sewn_whp = 25
-	bleed_rate = 50
+	bleed_rate = 60
 	sewn_bleed_rate = 0.5
 	woundpain = 60
 	sewn_woundpain = 30

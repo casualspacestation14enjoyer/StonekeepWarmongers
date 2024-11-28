@@ -17,13 +17,13 @@
 		if(loaded)
 			return
 		user.visible_message("<span class='notice'>\The [user] begins loading \the [I] into \the [src].</span>")
-		playsound(src, 'sound/combat/cannon_loading.ogg', 75)
+		playsound(src, 'sound/combat/cannon_loading.ogg', 35)
 		if(!do_after(user, 5 SECONDS, TRUE, src))
 			return
 		I.forceMove(src)
 		loaded = I
 		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
-		playsound(src, 'sound/foley/trap_arm.ogg', 100)
+		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
 		if(!loaded)

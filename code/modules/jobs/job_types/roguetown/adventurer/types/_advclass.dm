@@ -17,6 +17,7 @@
 	var/maximum_possible_slots = 999
 	var/total_slots_occupied = 0
 	var/min_pq = -100
+	var/max_pq = -100
 
 	var/reinforcements_wave = 9 // a way to unlock classes by time, or something. if 0 it means playable at all times
 
@@ -84,6 +85,10 @@
 
 	if(min_pq != -100) // If someone sets this we actually do the check.
 		if(!(get_playerquality(H.client.ckey) >= min_pq))
+			return FALSE
+	
+	if(max_pq != -100) // If someone sets this we actually do the check.
+		if(!(get_playerquality(H.client.ckey) <= max_pq))
 			return FALSE
 
 	if(W.reinforcementwave >= reinforcements_wave)

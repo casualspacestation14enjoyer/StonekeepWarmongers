@@ -99,8 +99,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		return
 
 	if(ic_blocked)
-		//The filter warning message shows the sanitized message though.
-		to_chat(src, "<span class='danger'>hey, you can't say that! >:(</span>")
+		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
+		src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))
 		return
 

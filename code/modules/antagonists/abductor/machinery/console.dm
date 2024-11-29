@@ -172,19 +172,16 @@
 		return
 
 	for(var/obj/machinery/abductor/pad/p in GLOB.machines)
-		if(p.team_number == team_number)
-			pad = p
-			break
+		pad = p
+		break
 
 	for(var/obj/machinery/abductor/experiment/e in GLOB.machines)
-		if(e.team_number == team_number)
-			experiment = e
-			e.console = src
+		experiment = e
+		e.console = src
 
 	for(var/obj/machinery/computer/camera_advanced/abductor/c in GLOB.machines)
-		if(c.team_number == team_number)
-			camera = c
-			c.console = src
+		camera = c
+		c.console = src
 
 /obj/machinery/abductor/console/proc/AddSnapshot(mob/living/carbon/human/target)
 	if(target.anti_magic_check(FALSE, FALSE, TRUE, 0))

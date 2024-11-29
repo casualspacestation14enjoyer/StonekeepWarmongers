@@ -15,6 +15,7 @@
 	blood_overlay_type = "armor"
 	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 15, "rad" = 15, "fire" = 70, "acid" = 70)
 	actions_types = list(/datum/action/item_action/hands_free/activate)
+	slot_flags = ITEM_SLOT_ARMOR
 	allowed = list(
 		/obj/item/abductor,
 		/obj/item/abductor/baton,
@@ -158,8 +159,53 @@
 	else
 		. = TRUE
 
+/obj/item/abductor/cloaker
+	name = "MULTIFICATOR-2118"
+	icon_state = "silencer"
+	var/cloaked = FALSE
+	var/datum/action/innate/dash/invisible/jaunt
+
+/obj/item/abductor/cloaker/Initialize()
+	. = ..()
+	jaunt = new(src)
+
+/obj/item/abductor/cloaker/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	jaunt.Teleport(user, target)
+
+/obj/item/abductor/cloaker/rmb_self(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		var/obj/effect/landmark/observer_start/O = locate(/obj/effect/landmark/observer_start) in GLOB.landmarks_list
+		to_chat(H, "<span class='notice'>Now teleporting.</span>")
+		playsound(H, 'sound/magic/magnet.ogg', 75, TRUE)
+		if(cloaked)
+			H.forceMove(O.loc)
+			playsound(O.loc, 'sound/magic/vlightning.ogg', 75, TRUE)
+		else
+			new /obj/effect/temp_visual/teleport_abductor/shorter(O.loc)
+			playsound(O.loc, 'sound/magic/vlightning.ogg', 75, TRUE)
+			sleep(20)
+			H.forceMove(O.loc)
+
+/obj/item/abductor/cloaker/attack_self(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(!cloaked)
+			cloaked = TRUE
+			to_chat(H, "<span class='info'>YOU ARE NOW: CLOAKED</span>")
+			H.invisibility = 50
+			playsound(H, 'sound/magic/whiteflame.ogg', 75, TRUE)
+			new /obj/effect/temp_visual/dir_setting/ninja/cloak(get_turf(H), H.dir)
+		else
+			cloaked = FALSE
+			to_chat(H, "<span class='info'>YOU ARE NOW: UNCLOAKED</span>")
+			H.invisibility = 0
+			playsound(H, 'sound/magic/whiteflame.ogg', 75, TRUE)
+			new /obj/effect/temp_visual/dir_setting/ninja(get_turf(H), H.dir)
+
 /obj/item/abductor/gizmo
-	name = "science tool"
+	name = "SCC-2"
 	desc = ""
 	icon_state = "gizmo_scan"
 	item_state = "silencer"
@@ -285,7 +331,7 @@
 				r.broadcasting = 0 //goddamned headset hacks
 
 /obj/item/abductor/mind_device
-	name = "mental interface device"
+	name = "MENTALa-00"
 	desc = "A dual-mode tool for directly communicating with sentient brains. It can be used to send a direct message to a target, \
 			or to send a command to a test subject with a charged gland."
 	icon_state = "mind_device_message"
@@ -360,7 +406,7 @@
 		if(QDELETED(L) || L.stat == DEAD)
 			return
 
-		to_chat(L, "<span class='hear'>I hear a voice in my head saying: </span><span class='abductor'>[message]</span>")
+		to_chat(L, "<span class='hear'>I hear a voice in my head saying: </span><span class='info'>[message]</span>")
 		to_chat(user, "<span class='notice'>I send the message to my target.</span>")
 		log_directed_talk(user, L, message, LOG_SAY, "abductor whisper")
 
@@ -373,14 +419,19 @@
 	fail_message = "<span class='abductor'>\
 		Firing error, please contact Command.</span>"
 
+/*
 /obj/item/firing_pin/abductor/pin_auth(mob/living/user)
 	. = isabductor(user)
+*/
 
 /obj/item/gun/energy/alien
-	name = "alien pistol"
+	name = "ZETAn-2829"
 	desc = ""
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
 	pin = /obj/item/firing_pin/abductor
+	charge_delay = 0
+	selfcharge = 1
+	fire_delay = 0
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
@@ -431,7 +482,7 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 #define BATON_MODES 4
 
 /obj/item/abductor/baton
-	name = "advanced baton"
+	name = "BATN-53"
 	desc = ""
 	var/mode = BATON_STUN
 	icon_state = "wonderprodStun"

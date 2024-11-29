@@ -14,6 +14,24 @@
 	var/phasein = /obj/effect/temp_visual/dir_setting/ninja/phase
 	var/phaseout = /obj/effect/temp_visual/dir_setting/ninja/phase/out
 
+/datum/action/innate/dash/invisible
+	phasein = null
+	phaseout = null
+	current_charges = 3
+	max_charges = 3
+	charge_rate = 90
+	recharge_sound = null
+	
+/datum/action/innate/dash/invisible/Teleport(mob/user, atom/target)
+	if(!IsAvailable())
+		return
+	var/turf/T = get_turf(target)
+	if(target in view(user.client.view, user))
+		user.forceMove(T)
+		playsound(T, dash_sound, 25, TRUE)
+		current_charges--
+		addtimer(CALLBACK(src, PROC_REF(charge)), charge_rate)
+
 /datum/action/innate/dash/Grant(mob/user, obj/dasher)
 	. = ..()
 	dashing_item = dasher

@@ -336,7 +336,7 @@
 	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But it does shatter when it's fired, so that's something."
 	icon_state = "woodenball"
 	pellets = 7
-	variance = 35
+	variance = 25
 	projectile_type = /obj/projectile/bullet/fragment
 
 /obj/projectile/bullet/reusable/cannonball

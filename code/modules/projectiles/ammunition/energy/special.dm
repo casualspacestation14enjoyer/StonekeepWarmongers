@@ -10,7 +10,7 @@
 /obj/item/ammo_casing/energy/declone
 	projectile_type = /obj/projectile/energy/declone
 	select_name = "declone"
-	fire_sound = 'sound/blank.ogg'
+	fire_sound = 'sound/items/stunmace_hit (1).ogg'
 
 /obj/item/ammo_casing/energy/declone/weak
 	projectile_type = /obj/projectile/energy/declone/weak

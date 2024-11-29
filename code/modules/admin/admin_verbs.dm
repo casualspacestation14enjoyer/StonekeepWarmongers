@@ -94,6 +94,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/cmd_admin_check_player_exp, /* shows players by playtime */
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
+	/client/proc/join_as_martyr,
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/deadchat,
 	/client/proc/toggleprayers,
@@ -796,6 +797,43 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
+
+/client/proc/join_as_martyr()
+	set category = "GameMaster"
+	set name = "Join as the Alien Observer"
+	if(!holder)
+		return
+
+	var/mob/living/carbon/human/species/human/northern/H = new()
+	H.color = "#000000"
+	H.real_name = "OMEGA-[rand(1,9999)]"
+	H.gender = MALE
+	H.facial_hairstyle = "Shaved"
+	H.hairstyle = "Skinhead"
+	H.obscure_species = TRUE
+
+	H.update_hair()
+	H.update_body()
+	H.update_body_parts()
+	H.update_mutations_overlay()
+
+	var/mob/adminmob = src.mob
+	H.ckey = src.ckey
+	if( isobserver(adminmob) )
+		qdel(adminmob)
+
+	H.STASTR = 20
+	H.STASPD = 20
+	H.STACON = 20
+	H.STAEND = 20
+
+	ADD_TRAIT(H, TRAIT_ABDUCTOR_TRAINING, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING, TRAIT_GENERIC)
+	var/obj/item/implant/abductor/beamplant = new /obj/item/implant/abductor(H)
+	beamplant.implant(H)
+	for(var/obj/effect/landmark/abductor/LM in GLOB.landmarks_list)
+		H.forceMove(LM.loc)
+		break
 
 /client/proc/end_party()
 	set category = "GameMaster"

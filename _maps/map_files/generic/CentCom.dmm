@@ -1479,6 +1479,13 @@
 /obj/item/reagent_containers/glass/cup/skull,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors)
+"go" = (
+/obj/structure/closet/abductor,
+/obj/item/storage/backpack/rogue/satchel/surgbag,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "gD" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/tile{
@@ -1579,6 +1586,10 @@
 "lw" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"lO" = (
+/obj/structure/table/optable/abductor,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "mp" = (
 /obj/structure/roguewindow/openclose{
 	icon_state = "woodwindowdir";
@@ -1671,6 +1682,10 @@
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
 	},
+/area/rogue/indoors)
+"ot" = (
+/obj/effect/landmark/abductor/agent,
+/turf/open/floor/white,
 /area/rogue/indoors)
 "oV" = (
 /obj/machinery/anvil/crafted,
@@ -1823,10 +1838,14 @@
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
-"sZ" = (
-/obj/structure/toilet,
-/turf/closed,
-/area/rogue)
+"th" = (
+/obj/structure/table/abductor,
+/obj/item/abductor/gizmo,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/white,
+/area/rogue/indoors)
 "tN" = (
 /turf/closed,
 /area/rogue/under)
@@ -1855,6 +1874,10 @@
 "uU" = (
 /obj/structure/bed/rogue/inn/hay,
 /turf/open/floor/rogue/cobble,
+/area/rogue/indoors)
+"vb" = (
+/obj/machinery/abductor/console,
+/turf/open/floor/white,
 /area/rogue/indoors)
 "vf" = (
 /obj/structure/table/wood{
@@ -1917,6 +1940,14 @@
 "xy" = (
 /obj/structure/bed/rogue,
 /turf/open/floor/rogue/hexstone,
+/area/rogue/indoors)
+"xB" = (
+/obj/structure/table/abductor,
+/obj/item/abductor/baton,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/white,
 /area/rogue/indoors)
 "xI" = (
 /obj/structure/closet/crate/roguecloset,
@@ -2043,6 +2074,14 @@
 	},
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods)
+"Cg" = (
+/obj/structure/table/abductor,
+/obj/item/abductor/mind_device,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/white,
+/area/rogue/indoors)
 "Cv" = (
 /obj/item/paper{
 	name = "dusty parchment";
@@ -2080,6 +2119,10 @@
 "DA" = (
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/dwarfin)
+"Ej" = (
+/obj/machinery/light,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "Eq" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -2094,12 +2137,24 @@
 "Ev" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/dwarfin)
+"EF" = (
+/obj/structure/table/abductor,
+/obj/item/abductor/cloaker,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "Fo" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/structure/fermenting_barrel/water,
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
 	},
+/area/rogue/indoors)
+"Fy" = (
+/obj/machinery/abductor/pad,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/white,
 /area/rogue/indoors)
 "FJ" = (
 /obj/item/roguebin/water,
@@ -2148,6 +2203,9 @@
 	icon_state = "chess"
 	},
 /area/rogue/indoors)
+"Hv" = (
+/turf/open/floor/white,
+/area/rogue/indoors)
 "HQ" = (
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/rogue/dirt/road,
@@ -2171,6 +2229,13 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue)
+"Ja" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/abductor/experiment,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "Jb" = (
 /obj/structure/lever/wall{
 	redstone_id = "banditforge"
@@ -2415,6 +2480,9 @@
 /obj/item/paper/scroll,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"TG" = (
+/turf/closed/indestructible/oldshuttle,
+/area/rogue/indoors)
 "TH" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/ruinedwood{
@@ -2524,6 +2592,13 @@
 /obj/structure/flora/roguetree,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
+"WX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/bed/rogue,
+/turf/open/floor/white,
+/area/rogue/indoors)
 "Xj" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/outdoors)
@@ -2539,10 +2614,29 @@
 /obj/item/candle/skull/lit,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors)
+"Xt" = (
+/obj/structure/table/abductor,
+/obj/item/storage/backpack/holding{
+	name = "STORE-8"
+	},
+/obj/item/storage/backpack/holding{
+	name = "STORE-8"
+	},
+/obj/item/storage/backpack/holding{
+	name = "STORE-8"
+	},
+/turf/open/floor/white,
+/area/rogue/indoors)
 "XC" = (
 /obj/effect/proc_holder/spell/invoked/heal,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"XN" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/white,
+/area/rogue/indoors)
 "XV" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 1;
@@ -6700,7 +6794,7 @@ bX
 bX
 rQ
 rQ
-sZ
+rQ
 rQ
 rQ
 rQ
@@ -10742,15 +10836,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
 Iw
 Iw
 Iw
@@ -10872,15 +10966,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+Hv
+Hv
+WX
+WX
+WX
+Hv
+Hv
+TG
 Iw
 Iw
 Iw
@@ -11002,15 +11096,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+Ja
+Hv
+Hv
+Hv
+Hv
+Hv
+Ej
+TG
 Iw
 Iw
 Iw
@@ -11132,15 +11226,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+vb
+Hv
+Hv
+Hv
+Hv
+Hv
+Hv
+TG
 Iw
 Iw
 Iw
@@ -11262,15 +11356,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+Fy
+Hv
+Hv
+lO
+ot
+Hv
+Ej
+TG
 Iw
 Iw
 Iw
@@ -11392,15 +11486,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+go
+Hv
+Hv
+Hv
+Hv
+Hv
+Hv
+TG
 Iw
 Iw
 Iw
@@ -11522,15 +11616,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+XN
+Hv
+Hv
+Hv
+Hv
+Hv
+Ej
+TG
 Iw
 Iw
 Iw
@@ -11652,15 +11746,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+Hv
+Xt
+Cg
+th
+xB
+EF
+Hv
+TG
 Iw
 Iw
 Iw
@@ -11782,15 +11876,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
 Iw
 Iw
 Iw

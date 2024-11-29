@@ -34,6 +34,9 @@
 	if(name == "Unknown" || name == "Unknown Man" || name == "Unknown Woman")
 		obscure_name = TRUE
 
+	if(obscure_species)
+		race_name = "incomprehensible thing"
+
 	if(isobserver(user))
 		obscure_name = FALSE
 

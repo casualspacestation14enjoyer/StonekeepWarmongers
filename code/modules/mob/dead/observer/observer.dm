@@ -86,22 +86,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 
 	if(!loc.Exit(src, T))
 		return
-
-	if(istype(T))
-		if(T.density)
-			return
-		for(var/obj/structure/O in T)
-/*			if(istype(O, /obj/structure/fluff/psycross))
-				go2hell()
-				next_gmove = world.time + 30
-				return*/
-			if(O.density && !O.climbable)
-				if(!misting)
-					return
-		for(var/obj/item/reagent_containers/powder/salt/S in T)
-//			go2hell()
-//			next_gmove = world.time + 30
-			return
+		
 	. = ..()
 
 /mob/dead/observer/screye
@@ -392,18 +377,11 @@ Works together with spawning an observer, noted above.
 		else
 			ghost = new(src)
 		ghost.ghostize_time = world.time
-		var/bnw = TRUE
-		if(client)
-			if(client.holder)
-				if(check_rights_for(client,R_WATCH))
-					bnw = FALSE
 		SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
 		ghost.can_reenter_corpse = can_reenter_corpse
 		ghost.key = key
-		if(!bnw)
-			return ghost
 		ghost.add_client_colour(/datum/client_colour/monochrome)
-		ghost.returntolobby()
+		//ghost.returntolobby()
 		return ghost
 
 /mob/living/carbon/human/ghostize(can_reenter_corpse = 1, force_respawn = FALSE, drawskip = FALSE)

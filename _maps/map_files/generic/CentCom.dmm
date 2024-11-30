@@ -1933,6 +1933,18 @@
 /obj/effect/proc_holder/spell/invoked/heal,
 /turf/open/floor/rogue/blocks,
 /area/rogue)
+"xr" = (
+/obj/docking_port/stationary{
+	dir = 1;
+	dwidth = 9;
+	height = 6;
+	id = "supply_home";
+	json_key = "cargo";
+	name = "CentCom";
+	width = 17
+	},
+/turf/closed,
+/area/rogue)
 "xt" = (
 /obj/structure/fluff/psycross/crafted,
 /turf/open/floor/rogue/dirt,
@@ -16024,7 +16036,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+xr
 rQ
 rQ
 rQ

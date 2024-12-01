@@ -409,7 +409,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/flint = 1, /obj/item/caltrop = 1)
+	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/flint = 1, /obj/item/rogue/caltrop = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE) //average bow skills, for silent killings
@@ -493,6 +493,7 @@
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
 	backr = /obj/item/quiver/ironbullets
+	backl = /obj/item/rogue/musicpack/heartfelt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
@@ -777,9 +778,8 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	pants = /obj/item/clothing/under/roguetown/tights
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/caltrop
+	beltr = /obj/item/rogue/caltrop
 	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier)
-	backr = /obj/item/rogue/instrument/accord
 	head = /obj/item/clothing/head/roguetown/jester
 	playsound(H, 'sound/foley/honk.ogg', 100, FALSE, 2)
 	if(H.mind)
@@ -796,7 +796,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 
-/obj/item/caltrop
+/obj/item/rogue/caltrop
 	name = "caltrop"
 	desc = "Grenzels call it a caltrop, Heartfeltians on the other hand a tetsubishi. Both are the same thing, they just have different names. One sane, the second a random mess of letters."
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -805,7 +805,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	slot_flags = ITEM_SLOT_HIP
 	embedding = list("embedded_unsafe_removal_time" = 40, "embedded_pain_chance" = 40, "embedded_pain_multiplier" = 1, "embed_chance" = 100, "embedded_fall_chance" = 0)
 
-/obj/item/caltrop/Crossed(AM as mob|obj)
+/obj/item/rogue/caltrop/Crossed(AM as mob|obj)
 	if(isturf(loc))
 		if(isliving(AM))
 			var/mob/living/L = AM
@@ -909,6 +909,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
 	backr = /obj/item/quiver/ironbullets
+	backl = /obj/item/rogue/musicpack
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

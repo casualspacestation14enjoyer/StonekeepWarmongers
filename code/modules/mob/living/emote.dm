@@ -385,7 +385,7 @@
 	var/offset = 4  // Height of the bop
 	ping_sound_through_walls(user.loc)
 	for (var/i = 1 to repeats)
-		user.pixel_y = start_y + 4  // Move up
+		user.pixel_y = start_y + offset  // Move up
 		sleep(2)
 		user.pixel_y = start_y  // Move down
 		sleep(2)

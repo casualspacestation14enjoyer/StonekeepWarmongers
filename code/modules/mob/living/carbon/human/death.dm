@@ -88,6 +88,13 @@
 		G.playsound_local(src, 'sound/misc/deth.ogg', 100)
 
 		var/atom/movable/screen/gameover/hog/H = new()
+		var/list/iconstato = list(
+			"hog"=90,
+			"mortis"=50,
+			"ashbaby"=1 // warmongers is a serious game about the horrors of war
+		)
+		var/chosen = pickweight(iconstato)
+		H.icon_state = chosen
 		H.layer = SPLASHSCREEN_LAYER+0.5
 		G.client.screen += H
 		H.Fade()

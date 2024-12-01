@@ -52,7 +52,7 @@
 	if(playing)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	var/selection = input(user, "Select a song.", "Wax Device") as null|anything in music_tracks
+	var/selection = input(user, "Select a song.", "Music Device") as null|anything in music_tracks
 	if(!selection)
 		return
 	if(!Adjacent(user))

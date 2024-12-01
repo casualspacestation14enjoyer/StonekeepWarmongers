@@ -148,3 +148,32 @@
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	sewrepair = TRUE
+
+// warmongers masks
+
+/obj/item/clothing/mask/rogue/snipermask
+	name = "sharpshooting mask"
+	desc = "Man and rifle, a marksman and a scout revealed."
+	icon_state = "snipermask"
+	item_state = "snipermask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/platemask
+	name = "plated mask"
+	desc = "Move between the lines, a soldier breaking the confines."
+	icon_state = "platemask"
+	item_state = "platemask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/chainmask
+	name = "chained mask"
+	desc = "Alone, moving undetected."
+	icon_state = "chainmask"
+	item_state = "chainmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP

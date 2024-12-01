@@ -279,6 +279,7 @@
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
 		head = /obj/item/clothing/head/roguetown/helmet
+		mask = /obj/item/clothing/mask/rogue/chainmask
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -450,6 +451,7 @@
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/bardhat
+	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -523,6 +525,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
+	mask = /obj/item/clothing/mask/rogue/platemask
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
@@ -658,6 +661,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	r_hand = GetMainGunForWarfare()
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
+	mask = /obj/item/clothing/mask/rogue/chainmask
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -862,6 +866,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/bardhat
+	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -936,6 +941,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
+	mask = /obj/item/clothing/mask/rogue/platemask
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot

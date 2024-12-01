@@ -225,6 +225,61 @@
 		CP.rmb_show(user)
 		return TRUE
 
+/obj/item/rogue/musicpack
+	name = "musicpack device"
+	desc = "It goes on your back. Use your middle finger to reach into the hole to turn it on."
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	icon_state = "musicbackpack"
+	item_state = "musicbackpack"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK_L
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	var/datum/looping_sound/musloop/soundloop
+	var/curfile
+	var/playing = FALSE
+	var/curvol = 70
+	var/list/songs = list("Song 1" = 'sound/music/jukeboxes/grenz_music1.ogg',
+	"Song 2" = 'sound/music/jukeboxes/grenz_music2.ogg'
+	)
+
+/obj/item/rogue/musicpack/Initialize()
+	soundloop = new(list(src), FALSE)
+	. = ..()
+
+/obj/item/rogue/musicpack/attack_right(mob/user)
+	if(!user.ckey)
+		return
+	if(playing)
+		return
+	user.changeNext_move(CLICK_CD_MELEE)
+	var/selection = input(user, "Select a song.", "Music Device") as null|anything in songs
+	if(!selection)
+		return
+	if(!Adjacent(user))
+		return
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+	playing = FALSE
+	soundloop.stop()
+	curfile = songs[selection]
+	update_icon()
+
+/obj/item/rogue/musicpack/MiddleClick(mob/user, params)
+	user.changeNext_move(CLICK_CD_MELEE)
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+	if(!playing)
+		if(curfile)
+			playing = TRUE
+			soundloop.mid_sounds = list(curfile)
+			soundloop.cursound = null
+			soundloop.volume = curvol
+			soundloop.start()
+	else
+		playing = FALSE
+		soundloop.stop()
+	update_icon()
 
 /obj/item/storage/backpack/rogue/backpack
 	name = "backpack"

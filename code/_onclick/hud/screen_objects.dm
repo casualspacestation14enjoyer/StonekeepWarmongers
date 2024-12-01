@@ -1548,6 +1548,9 @@
 	icon_state = "hog"
 	alpha = 0
 
+/atom/movable/screen/gameover/hog/baby
+	icon_state = "ashbaby"
+
 /atom/movable/screen/gameover/hog/Fade(out = FALSE, qdel_after = FALSE)
 	if(QDELETED(src))
 		return

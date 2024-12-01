@@ -81,6 +81,7 @@
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg'))
 	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
 	user.shoutbubble()
+	ping_sound(user)
 	
 	//user.say(warcry)
 

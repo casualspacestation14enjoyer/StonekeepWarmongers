@@ -245,6 +245,11 @@
 	"Song 2" = 'sound/music/jukeboxes/grenz_music2.ogg'
 	)
 
+/obj/item/rogue/musicpack/heartfelt
+	songs = list("Song 1" = 'sound/music/jukeboxes/heart_music1.ogg',
+	"Song 2" = 'sound/music/jukeboxes/heart_music2.ogg'
+	)
+
 /obj/item/rogue/musicpack/Initialize()
 	soundloop = new(list(src), FALSE)
 	. = ..()

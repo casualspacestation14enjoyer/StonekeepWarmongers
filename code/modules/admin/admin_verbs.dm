@@ -827,8 +827,11 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	H.STACON = 20
 	H.STAEND = 20
 
+	to_chat(H, "<span class='info'>This is a role for scaring people IC and kidnapping griefers and shit.</span>")
+
 	ADD_TRAIT(H, TRAIT_ABDUCTOR_TRAINING, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
 	var/obj/item/implant/abductor/beamplant = new /obj/item/implant/abductor(H)
 	beamplant.implant(H)
 	for(var/obj/effect/landmark/abductor/LM in GLOB.landmarks_list)

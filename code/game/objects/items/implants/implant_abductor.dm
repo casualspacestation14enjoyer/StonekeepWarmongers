@@ -21,6 +21,9 @@
 	new /obj/effect/temp_visual/dir_setting/ninja(get_turf(imp_in), imp_in.dir)
 	for(var/obj/effect/landmark/abductor/LM in GLOB.landmarks_list)
 		imp_in.forceMove(LM.loc)
+		if(imp_in.pulling)
+			new /obj/effect/temp_visual/dir_setting/ninja(get_turf(imp_in.pulling), imp_in.pulling.dir)
+			imp_in.pulling.forceMove(LM.loc)
 		break
 
 /obj/item/implant/abductor/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)

@@ -267,7 +267,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				if(gender == MALE)
 					dispGender = "M"
 				else if(gender == FEMALE)
-					dispGender = "W"
+					dispGender = "F"
 				else
 					dispGender = "O"
 				dat += "<b>SEX:</b> <a href='?_src_=prefs;preference=gender'>[dispGender]</a><BR>"

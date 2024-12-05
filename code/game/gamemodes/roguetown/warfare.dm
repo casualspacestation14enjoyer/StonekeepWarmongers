@@ -1,6 +1,5 @@
 #define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
 #define RED_WARTEAM "Heartfelts" // Heartfelt
-#define PILGRIM_WARTEAM "Pilgrims" // Warworld
 
 /datum/game_mode/warfare
 	name = "warmode"
@@ -37,8 +36,6 @@
 	announce_text = "The"
 
 /datum/game_mode/warfare/post_setup(report)
-	if(!SSticker.warworld)
-		begin_countDown()
 	..()
 
 /datum/game_mode/warfare/proc/award_triumphs()
@@ -57,7 +54,7 @@
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
-		if(SSticker.oneteammode || SSticker.warworld)
+		if(SSticker.oneteammode)
 			break
 		CHECK_TICK
 		for(var/mob/dead/new_player/P in GLOB.player_list)

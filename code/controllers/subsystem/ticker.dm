@@ -29,7 +29,6 @@ SUBSYSTEM_DEF(ticker)
 
 	var/oneteammode = FALSE
 	var/deathmatch = FALSE
-	var/warworld = FALSE
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -472,8 +471,6 @@ SUBSYSTEM_DEF(ticker)
 
 	SSdbcore.SetRoundStart()
 
-	if(warworld)
-		to_chat(world, "<span class='notice'><B>It's a world of war out there and here we are starving away at a fucking island.</B></span>")
 	if(end_party)
 		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 	if(oneteammode)
@@ -487,8 +484,6 @@ SUBSYSTEM_DEF(ticker)
 	for(var/client/C in GLOB.clients)
 		if(oneteammode || deathmatch)
 			C.warfare_faction = "Grenzelhofts"
-		if(warworld)
-			C.warfare_faction = "Pilgrims"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
@@ -896,8 +891,6 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
-	if(warworld)
-		return
 	if(!warfare_ready_to_die)
 		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!"))
 		if(!(oneteammode || deathmatch))
@@ -932,8 +925,6 @@ SUBSYSTEM_DEF(ticker)
 			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
-	if(warworld)
-		return
 	var/datum/game_mode/warfare/W = mode
 
 	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list

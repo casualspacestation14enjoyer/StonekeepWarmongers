@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	name = "barksteel"
-	desc = "Alternative names include 'firebow' for Elven militaries and something along the lines of 'Musker' for Dwarven militias."
+	desc = "Alternative names include 'firebow' and something along the lines of 'Musker' for Dwarven militias."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -9,12 +9,11 @@
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	possible_item_intents = list(INTENT_GENERIC)
-	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc)
+	gripped_intents = list(/datum/intent/shoot/musket/rifle)
 	wieldsound = 'sound/combat/musket_wield.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
-	randomspread = 1
 	spread = 5
 	max_integrity = 600 // having your gun broken while parrying sucks
 	var/cocked = FALSE
@@ -30,6 +29,7 @@
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
 	fire_sound_volume = 500
+	vary_fire_sound = TRUE
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
@@ -114,7 +114,6 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	icon_state = "longgun_b"
-	randomspread = 1
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 
@@ -147,7 +146,6 @@
 	item_state = "pistol"
 	bigboy = FALSE
 	recoil = 8
-	randomspread = 1
 	spread = 3
 	click_delay = 2.4
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)

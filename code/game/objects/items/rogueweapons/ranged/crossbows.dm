@@ -53,6 +53,12 @@
 	warnoffset = 20
 	chargetime = 7
 
+/datum/intent/shoot/musket/rifle
+	chargedrain = 0 //no drain to aim a gun
+	charging_slowdown = 9
+	warnoffset = 20
+	chargetime = 4
+
 /datum/intent/shoot/musket/peter
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4

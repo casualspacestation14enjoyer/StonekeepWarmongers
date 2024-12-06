@@ -40,7 +40,7 @@
 	playsound(loc, 'sound/foley/gun_equip.ogg', 100, TRUE)
 
 /obj/item/rogue/ramrod
-	name = "ramming rod"
+	name = "rod of ramming"
 	desc = ""
 	drop_sound = 'sound/combat/ramrod_pickup.ogg' // lol
 	icon = 'icons/roguetown/items/misc.dmi'

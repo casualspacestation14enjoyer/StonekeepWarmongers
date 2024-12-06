@@ -19,7 +19,7 @@
 	var/cocked = FALSE
 	var/rammed = FALSE
 	var/click_delay = 2
-	var/obj/item/ramrod/rod
+	var/obj/item/rogue/ramrod/rod
 	bigboy = TRUE
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
@@ -39,7 +39,7 @@
 	. = ..()
 	playsound(loc, 'sound/foley/gun_equip.ogg', 100, TRUE)
 
-/obj/item/ramrod
+/obj/item/rogue/ramrod
 	name = "ramming rod"
 	desc = ""
 	drop_sound = 'sound/combat/ramrod_pickup.ogg' // lol
@@ -48,7 +48,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/Initialize()
 	. = ..()
-	var/obj/item/ramrod/rrod = new(src)
+	var/obj/item/rogue/ramrod/rrod = new(src)
 	rod = rrod
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
@@ -83,7 +83,7 @@
 			if(H.warfare_faction == U.warfare_faction)
 				ramtime = ramtime - 0.5
 
-	if(istype(A, /obj/item/ramrod))
+	if(istype(A, /obj/item/rogue/ramrod))
 		if(!user.is_holding(src))
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")
 			return
@@ -105,8 +105,8 @@
 			to_chat(user, "<span class='info'>I remove the ramrod from \the [src].</span>")
 			playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 		else
-			if(istype(H.get_active_held_item(), /obj/item/ramrod))
-				var/obj/item/ramrod/rrod = H.get_active_held_item()
+			if(istype(H.get_active_held_item(), /obj/item/rogue/ramrod))
+				var/obj/item/rogue/ramrod/rrod = H.get_active_held_item()
 				rrod.forceMove(src)
 				rod = rrod
 				to_chat(user, "<span class='info'>I put \the [rrod] into \the [src].</span>")

@@ -85,6 +85,10 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
+"vm" = (
+/obj/effect/landmark/redreinforcement,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "vv" = (
 /obj/structure/warfarebarrier,
 /turf/closed/mineral/random/rogue/high,
@@ -139,6 +143,10 @@
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
 /turf/open/floor/rogue/dirt,
+/area/rogue/outdoors)
+"FA" = (
+/obj/effect/landmark/blureinforcement,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "FT" = (
 /obj/structure/fermenting_barrel/beer,
@@ -239,6 +247,7 @@
 /area/rogue/outdoors)
 "NZ" = (
 /obj/effect/decal/remains/human,
+/obj/effect/landmark/observer_start,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Oi" = (
@@ -1759,7 +1768,7 @@ AM
 AM
 fG
 BL
-JS
+FA
 vH
 dS
 JS
@@ -1840,7 +1849,7 @@ BL
 BL
 BL
 sF
-JS
+vm
 HP
 JS
 JS

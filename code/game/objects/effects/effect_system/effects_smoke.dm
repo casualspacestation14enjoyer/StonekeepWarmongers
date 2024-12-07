@@ -130,8 +130,7 @@
 /obj/effect/particle_effect/smoke/bad/smoke_mob(mob/living/carbon/M)
 	if(..())
 		//M.drop_all_held_items()
-		M.adjustOxyLoss(25)
-		M.adjustFireLoss(10)
+		M.adjustFireLoss(25)
 		M.emote("cough")
 		return 1
 

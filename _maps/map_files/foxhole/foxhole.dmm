@@ -157,6 +157,10 @@
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"G" = (
+/obj/structure/warfarebarrier/red,
+/turf/closed/mineral/random/rogue/high,
+/area/rogue/outdoors)
 "H" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
@@ -212,6 +216,10 @@
 /obj/effect/landmark/start/heartfeltinfantry,
 /obj/structure/bed/rogue/sleepingbag,
 /turf/open/floor/rogue/dirt,
+/area/rogue/outdoors)
+"R" = (
+/obj/structure/warfarebarrier,
+/turf/closed/mineral/random/rogue/high,
 /area/rogue/outdoors)
 "S" = (
 /obj/structure/closet/crate/chest,
@@ -275,6 +283,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -296,8 +305,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -342,6 +350,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -363,8 +372,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -409,6 +417,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -430,8 +439,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -476,6 +484,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -497,8 +506,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -543,6 +551,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -564,8 +573,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -610,6 +618,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -631,8 +640,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -677,6 +685,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -698,8 +707,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -744,6 +752,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -765,8 +774,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -811,6 +819,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -832,8 +841,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -878,6 +886,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -899,8 +908,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -945,6 +953,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -966,8 +975,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -1012,6 +1020,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -1033,8 +1042,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -1079,6 +1087,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -1100,8 +1109,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -1146,6 +1154,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -1167,8 +1176,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -1213,6 +1221,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -1234,8 +1243,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -1280,7 +1288,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1302,7 +1310,7 @@ a
 r
 r
 a
-a
+R
 a
 a
 a
@@ -1347,7 +1355,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1369,7 +1377,7 @@ r
 r
 a
 a
-a
+R
 a
 a
 a
@@ -1414,12 +1422,12 @@ a
 a
 a
 a
+G
 a
 a
 a
 a
 a
-a
 r
 a
 r
@@ -1436,7 +1444,7 @@ r
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1481,29 +1489,29 @@ a
 a
 a
 a
+G
+a
+a
+a
+a
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
+r
 a
 a
 a
 a
 a
-r
-r
-r
-r
-r
-r
-r
-r
-r
-r
-r
-r
-a
-a
-a
-a
-a
-a
+R
 a
 a
 a
@@ -1548,7 +1556,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1570,7 +1578,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1615,7 +1623,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1637,7 +1645,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1682,7 +1690,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1704,7 +1712,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1749,7 +1757,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1771,7 +1779,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1816,7 +1824,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -1838,7 +1846,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1883,7 +1891,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 r
@@ -1905,7 +1913,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -1950,7 +1958,7 @@ a
 a
 a
 a
-a
+G
 a
 r
 r
@@ -1972,7 +1980,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2017,7 +2025,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2039,7 +2047,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2084,7 +2092,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2106,7 +2114,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2151,7 +2159,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2173,7 +2181,7 @@ a
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2218,7 +2226,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2240,7 +2248,7 @@ r
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2285,7 +2293,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2307,7 +2315,7 @@ r
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2352,7 +2360,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2374,7 +2382,7 @@ r
 a
 a
 a
-a
+R
 a
 a
 a
@@ -2419,7 +2427,7 @@ a
 a
 a
 a
-a
+G
 a
 a
 a
@@ -2441,7 +2449,7 @@ a
 r
 a
 a
-a
+R
 a
 a
 a
@@ -2486,6 +2494,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2507,8 +2516,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2553,6 +2561,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2574,8 +2583,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2620,6 +2628,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2641,8 +2650,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2687,6 +2695,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2708,8 +2717,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2754,6 +2762,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2775,8 +2784,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2821,6 +2829,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2842,8 +2851,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2888,6 +2896,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2909,8 +2918,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -2955,6 +2963,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -2976,8 +2985,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -3022,6 +3030,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -3043,8 +3052,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -3089,6 +3097,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -3110,8 +3119,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -3156,6 +3164,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -3177,8 +3186,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a
@@ -3223,6 +3231,7 @@ a
 a
 a
 a
+G
 a
 a
 a
@@ -3244,8 +3253,7 @@ a
 a
 a
 a
-a
-a
+R
 a
 a
 a

@@ -148,10 +148,6 @@ Hotkey-Mode: (hotkey-mode must be on)
 	set name = "IconScaling"
 	set category = "Options"
 	if(prefs)
-		if(prefs.crt == TRUE)
-			to_chat(src, "CRT mode is on.")
-			winset(src, "mapwindow.map", "zoom-mode=distort")
-			return
 	if(winget(src, "mapwindow.map", "zoom-mode") == "normal")
 		to_chat(src, "Pixel-perfect... OK")
 		winset(src, "mapwindow.map", "zoom-mode=distort")

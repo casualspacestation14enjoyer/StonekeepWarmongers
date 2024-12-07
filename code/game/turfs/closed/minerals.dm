@@ -604,7 +604,7 @@
 	baseturfs = list(/turf/open/floor/rogue/naturalstone)
 	mineralSpawnChanceList = list(/turf/closed/mineral/rogue/salt = 15)
 	mineralChance = 30
-	max_integrity = 400
+	max_integrity = 200
 
 /turf/closed/mineral/random/rogue/med
 	icon_state = "minrandmed"

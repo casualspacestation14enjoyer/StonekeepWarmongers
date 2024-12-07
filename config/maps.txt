@@ -38,3 +38,8 @@ map darkwaters-ponr
 	#voteweight 1.5
 	votable
 endmap
+
+map foxhole
+	#voteweight 1.5
+	votable
+endmap

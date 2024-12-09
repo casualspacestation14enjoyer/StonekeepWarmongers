@@ -88,6 +88,21 @@
 		return
 	M.emote("warcry", intentional = TRUE)
 
+/datum/keybinding/living/wield
+	hotkey_keys = list("G")
+	classic_keys = list("G")
+	name = "togglewield"
+	full_name = "Toggle Wield"
+	description = "It's self explanatory."
+
+/datum/keybinding/living/wield/down(client/user)
+	if(!ishuman(user.mob))
+		return
+	var/mob/living/carbon/human/H = user.mob
+	var/obj/item/I = H.get_active_held_item()
+	if(I)
+		I.attack_hand(H)
+
 /datum/keybinding/living/drop_item
 	hotkey_keys = list("Z")
 	classic_keys = list("Z")
@@ -137,23 +152,6 @@
 	else
 		M.toggle_rogmove_intent(MOVE_INTENT_SNEAK)
 	return TRUE
-
-
-/datum/keybinding/living/submit
-	hotkey_keys = list("ShiftX")
-	name = "yield"
-	full_name = "Yield"
-	description = "Yield to your enemy, which may save your life or end it quicker."
-
-/datum/keybinding/living/submit/down(client/user)
-	if(!isliving(user))
-		return
-	var/mob/living/L = user.mob
-	if(L.doing)
-		L.doing = 0
-	L.submit()
-	return TRUE
-
 
 /datum/keybinding/living/resist
 	hotkey_keys = list("X")

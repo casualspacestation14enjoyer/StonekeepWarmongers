@@ -3,7 +3,8 @@
 									"BOMBS",\
 									"FIRE BOMB",\
 									"WOODEN BALLS",\
-									"LEAD BALLS")
+									"LEAD BALLS",\
+									"LARGE LEAD BALLS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	..()
@@ -117,6 +118,10 @@
 			new /obj/item/quiver/woodbullets(H.loc)
 		if("LEAD BALLS")
 			new /obj/item/quiver/bullets(H.loc)
+		if("LARGE LEAD BALLS")
+			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
+			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
+			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
 
 ///////////////////////////// RED ///////////////////////////////////////
 

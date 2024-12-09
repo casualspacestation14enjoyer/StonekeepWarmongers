@@ -374,7 +374,6 @@
 	desc = "A round lead ball. Complex and still spherical."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	projectile_type = /obj/projectile/bullet/reusable/cannonball
-	dropshrink = 0.5
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)

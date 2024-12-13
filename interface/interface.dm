@@ -147,7 +147,6 @@ Hotkey-Mode: (hotkey-mode must be on)
 /client/verb/set_stretch()
 	set name = "IconScaling"
 	set category = "Options"
-	if(prefs)
 	if(winget(src, "mapwindow.map", "zoom-mode") == "normal")
 		to_chat(src, "Pixel-perfect... OK")
 		winset(src, "mapwindow.map", "zoom-mode=distort")

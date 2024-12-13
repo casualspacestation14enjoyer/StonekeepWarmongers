@@ -310,12 +310,10 @@ GLOBAL_VAR(restart_counter)
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Fantasy PvP Musket-based Team Shooter<b><br>"
-	s += "You've been <b>enlisted</b>, fight for your country.<br>"
-	//s += "<b>Powerbottoms Welcome</b><br>"
+	s += "You've been <b>drafted</b>, fight for the crown.<br>"
 	
-//	s += "<img src=\"https://i.imgur.com/shj547T.jpg\"></a></center>"
+	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
 
-//	s += "! <b>UPDATE 4.4</b> 4/22/2022<br><br>"
 #ifdef MATURESERVER
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)

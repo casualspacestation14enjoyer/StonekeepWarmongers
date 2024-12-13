@@ -934,9 +934,11 @@ SUBSYSTEM_DEF(ticker)
 	var/list/reinforcementinas = list()
 	switch(W.reinforcementwave)
 		if(1)
-			reinforcementinas += "/obj/item/bomb/homemade"
+			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire/weak"
 		if(2)
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire/weak"
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/flint"
@@ -944,7 +946,10 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb"
 		if(4)
+			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"

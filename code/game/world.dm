@@ -311,16 +311,15 @@ GLOBAL_VAR(restart_counter)
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Fantasy PvP Musket-based Team Shooter<b><br>"
 	s += "You've been <b>drafted</b>, fight for the crown.<br>"
-	
-	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
 
-#ifdef MATURESERVER
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
 	else
 		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
-#endif
+
+	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
+	
 	status = s
 	return s
 /*

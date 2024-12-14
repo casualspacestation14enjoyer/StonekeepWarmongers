@@ -50,6 +50,10 @@
 	description = "The Lords accidentally recruited goblins instead of humens."
 */
 
+/datum/round_aspect/cripplefight
+	name = "Cripple Fight"
+	description = "Sadly, due to a previous skirmish everyone has their legs crippled. Thankfully we have been provided with wheelchairs!"
+
 /datum/round_aspect/supplypoints
 	name = "Favors in the Right Places"
 	description = "Because the Lords both have favors to the Quartermaster of Enigma, they both get five supply points on the start of the battle."

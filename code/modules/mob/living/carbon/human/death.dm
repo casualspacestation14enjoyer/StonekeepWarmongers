@@ -113,6 +113,9 @@
 			M.go_out()
 
 	dna.species.spec_death(gibbed, src)
+	
+	if(aspect_chosen(/datum/round_aspect/exploding))
+		gib(TRUE)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

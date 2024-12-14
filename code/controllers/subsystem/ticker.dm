@@ -19,6 +19,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null
+	var/datum/round_aspect/round_aspect = null
 
 	var/login_music							//music played in pregame lobby
 	var/round_end_sound						//music/jingle played when the world reboots
@@ -324,6 +325,19 @@ SUBSYSTEM_DEF(ticker)
 	var/isroguefight = FALSE
 	var/isrogueworld = FALSE
 
+proc/aspect_chosen(var/datum/round_aspect/aspect)
+	if(istype(SSticker.round_aspect, aspect))
+		return TRUE
+
+/datum/controller/subsystem/ticker/proc/pickaspect()
+	var/list/possibilities = list()
+	for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
+		var/datum/round_aspect/A = thing
+		possibilities += A
+	var/chosen = pick(possibilities)
+	round_aspect = new chosen
+	round_aspect.apply()
+
 /datum/controller/subsystem/ticker/proc/setup()
 	message_admins("<span class='boldannounce'>Starting game...</span>")
 	var/init_start = world.timeofday
@@ -470,6 +484,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	SSdbcore.SetRoundStart()
+	pickaspect()
 
 	if(end_party)
 		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
@@ -477,7 +492,10 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
 	if(deathmatch)
 		to_chat(world, "<span class='notice'><B>It's a civil war! Grenzelhofts fight Grenzelhofts... Madness! KILL THEM ALL! DON'T LET THEM BECOME THE NEW KING! Heartfelts watch in awe and laughter, their enemy is hilarious!</B></span>")
-	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
+	to_chat(world, "<span class='notice'>♔ Praise the Crown! ♔</span>")
+	spawn(10)
+		to_chat(world, "<span class='notice'>This round's aspect is: [round_aspect.name]</span>")
+		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
 
 	CHECK_TICK
 
@@ -896,7 +914,6 @@ SUBSYSTEM_DEF(ticker)
 		if(!(oneteammode || deathmatch))
 			W.reinforcements()
 		warfare_ready_to_die = TRUE
-		//W.begin_autobalance_loop()
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/tension2.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)

@@ -21,6 +21,16 @@
 	
 	if(H)
 		var/mob/living/carbon/human/HU = H
+
+		if(aspect_chosen(/datum/round_aspect/nomood))
+			ADD_TRAIT(HU, TRAIT_NOMOOD, TRAIT_GENERIC)
+
+		if(aspect_chosen(/datum/round_aspect/squishyhumans))
+			HU.STACON = 6
+
+		if(aspect_chosen(/datum/round_aspect/goblino))
+			HU.set_species(/datum/species/goblin)
+
 		//HU.add_client_colour(/datum/client_colour/sepia)
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
@@ -159,6 +169,9 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		C.redlord = H
+
+	if(aspect_chosen(/datum/round_aspect/stronglords))
+		H.STASTR = 20
 
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
@@ -546,6 +559,9 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		C.blulord = H
+
+	if(aspect_chosen(/datum/round_aspect/stronglords))
+		H.STASTR = 20
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"

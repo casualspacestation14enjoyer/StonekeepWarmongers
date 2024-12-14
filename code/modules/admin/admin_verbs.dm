@@ -797,7 +797,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
-
+ 
 /client/proc/join_as_martyr()
 	set category = "GameMaster"
 	set name = "Join as the Alien Observer"

@@ -36,7 +36,8 @@
 	announce_text = "The"
 
 /datum/game_mode/warfare/post_setup(report)
-	..()
+	begin_countDown()
+	return ..()
 
 /datum/game_mode/warfare/proc/award_triumphs()
 	if(whowon == BLUE_WARTEAM)

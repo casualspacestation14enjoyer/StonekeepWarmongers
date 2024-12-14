@@ -3,6 +3,7 @@
 									"BOMBS",\
 									"FIRE BOMB",\
 									"WOODEN BALLS",\
+									"CROWN POINTER",\
 									"LEAD BALLS",\
 									"LARGE LEAD BALLS")
 
@@ -79,7 +80,7 @@
 			M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
 /mob/living/carbon/human/proc/warfare_shop()
-	set name = "REINFORCEMENT BONUSES"
+	set name = "REDEEM SUPPORT POINTS"
 	set category = "LORD"
 	var/mob/living/carbon/human/H = usr
 	var/datum/game_mode/warfare/C = SSticker.mode
@@ -110,8 +111,11 @@
 			new /obj/item/bomb/smoke(H.loc)
 		if("GAS BOMB")
 			new /obj/item/bomb/poison(H.loc)
-		if("BOMB")
+		if("BOMBS")
 			new /obj/item/bomb(H.loc)
+			new /obj/item/bomb(H.loc)
+		if("CROWN POINTER")
+			new /obj/item/pinpointer/crown(H.loc)
 		if("FIRE BOMB")
 			new /obj/item/bomb/fire(H.loc)
 		if("WOODEN BALLS")

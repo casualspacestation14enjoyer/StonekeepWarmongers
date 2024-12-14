@@ -190,6 +190,46 @@
 	A.other_pair = B
 	B.other_pair = A
 
+/obj/item/pinpointer/crown
+	name = "POINTER"
+	desc = "Where do we go? Heed the call of war."
+	icon_state = "crownpointer"
+	icon_suffix = "_hunter"
+	dropshrink = 0.6
+	var/team
+
+/obj/item/pinpointer/crown/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/clothing/head/roguetown/crownblu))
+		team = BLUE_WARTEAM
+		say("I HAVE ACQUIRED THE SMELL OF THE GRENZELHOFTS. TRACKING HEARTFELT SCUM'S CROWN!")
+		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
+	if(istype(I, /obj/item/clothing/head/roguetown/crownred))
+		team = RED_WARTEAM
+		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
+		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
+
+/obj/item/pinpointer/crown/scan_for_target()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	switch(team)
+		if(RED_WARTEAM)
+			target = W.blucrown
+		if(BLUE_WARTEAM)
+			target = W.redcrown
+
+/obj/item/pinpointer/crown/toggle_on()
+	if(!team)
+		playsound(src, 'sound/misc/machineno.ogg', 50, TRUE)
+		say("THERE'S TWO SMELLS OF CROWNS! THIS IS CONFUSING, WHICH ONE DO I TRACK?!")
+		return
+	active = !active
+	playsound(src, 'sound/misc/machinevomit.ogg', 50, TRUE)
+	if(active)
+		START_PROCESSING(SSfastprocess, src)
+	else
+		target = null
+		STOP_PROCESSING(SSfastprocess, src)
+	update_icon()
+
 /obj/item/pinpointer/shuttle
 	name = "fugitive pinpointer"
 	desc = ""

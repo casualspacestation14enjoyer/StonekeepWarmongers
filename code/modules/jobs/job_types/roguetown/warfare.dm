@@ -8,7 +8,7 @@
 									"LARGE LEAD BALLS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
-	..()
+	. = ..()
 	var/obj/S = null
 	for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
 		if(sloc.name != title)
@@ -21,9 +21,6 @@
 	
 	if(H)
 		var/mob/living/carbon/human/HU = H
-
-		if(aspect_chosen(/datum/round_aspect/nomood))
-			ADD_TRAIT(HU, TRAIT_NOMOOD, TRAIT_GENERIC)
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
@@ -233,6 +230,8 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
+		if(aspect_chosen(/datum/round_aspect/nomood))
+			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
@@ -621,6 +620,8 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
+		if(aspect_chosen(/datum/round_aspect/nomood))
+			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
 		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM

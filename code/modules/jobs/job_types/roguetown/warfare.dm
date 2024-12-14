@@ -28,8 +28,10 @@
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
 
+		/*
 		if(aspect_chosen(/datum/round_aspect/goblino))
 			HU.set_species(/datum/species/goblin)
+		*/
 
 		//HU.add_client_colour(/datum/client_colour/sepia)
 		switch(HU.warfare_faction)

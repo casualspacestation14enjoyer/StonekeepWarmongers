@@ -95,6 +95,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
 	/client/proc/join_as_martyr,
+	/client/proc/forceaspect,
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/deadchat,
 	/client/proc/toggleprayers,
@@ -798,6 +799,22 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
  
+/client/proc/forceaspect()
+	set category = "GameMaster"
+	set name = "Force Aspect"
+	if(!holder)
+		return
+
+	var/list/possibilities = list()
+	for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
+		var/datum/round_aspect/A = thing
+		possibilities += A
+	var/chosen = input(usr, "Choose", "WARMONGERS") as null|anything in possibilities
+	if(chosen)
+		SSticker.round_aspect = new chosen
+		SSticker.forcing_aspect = TRUE
+		SSticker.round_aspect.apply()
+
 /client/proc/join_as_martyr()
 	set category = "GameMaster"
 	set name = "Join as the Alien Observer"

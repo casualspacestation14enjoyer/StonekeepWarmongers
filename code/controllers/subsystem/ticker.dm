@@ -20,6 +20,7 @@ SUBSYSTEM_DEF(ticker)
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null
 	var/datum/round_aspect/round_aspect = null
+	var/forcing_aspect = FALSE
 
 	var/login_music							//music played in pregame lobby
 	var/round_end_sound						//music/jingle played when the world reboots
@@ -330,13 +331,15 @@ proc/aspect_chosen(var/datum/round_aspect/aspect)
 		return TRUE
 
 /datum/controller/subsystem/ticker/proc/pickaspect()
-	var/list/possibilities = list()
-	for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
-		var/datum/round_aspect/A = thing
-		possibilities += A
-	var/chosen = pick(possibilities)
-	round_aspect = new chosen
-	round_aspect.apply()
+	if(!forcing_aspect)
+		var/list/possibilities = list()
+		for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
+			var/datum/round_aspect/A = thing
+			possibilities += A
+		possibilities = shuffle(possibilities)
+		var/chosen = pick(possibilities)
+		round_aspect = new chosen
+		round_aspect.apply()
 
 /datum/controller/subsystem/ticker/proc/setup()
 	message_admins("<span class='boldannounce'>Starting game...</span>")

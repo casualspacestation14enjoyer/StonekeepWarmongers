@@ -103,21 +103,27 @@
 	var/shoppin = input(usr, "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in WARMONGERS_SHIPPABLES
 	if(!shoppin)
 		return
+	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
+		playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+		return
 	switch(H.warfare_faction)
 		if(RED_WARTEAM)
 			if(C.red_bonus >= 1)
 				C.red_bonus--
+				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
+				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 				to_chat(H, "<span class='info'>Insufficient points.</span>")
 				return
 		if(BLUE_WARTEAM)
 			if(C.blu_bonus >= 1)
 				C.blu_bonus--
+				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
+				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 				to_chat(H, "<span class='info'>Insufficient points.</span>")
 				return
-	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
-		return
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	switch(shoppin)
 		if("FIVE SMOKE BOMBS")
 			new /obj/item/bomb/smoke(H.loc)

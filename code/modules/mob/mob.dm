@@ -546,38 +546,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 	if(I)
 		I.attack_self(src)
 		update_inv_hands()
-
-/**
-  * Get the notes of this mob
-  *
-  * This actually gets the mind datums notes
-  */
-/mob/verb/memory()
-	set name = "Notes"
-	set category = "Memory"
-	set desc = ""
-	if(mind)
-		mind.show_memory(src)
-//	else
-//		to_chat(src, "You don't have a mind datum for some reason, so you can't look at your notes, if you had any.")
-
-/**
-  * Add a note to the mind datum
-  */
-/mob/verb/add_memory(msg as message)
-	set name = "AddNote"
-	set category = "Memory"
-	if(mind)
-		if (world.time < memory_throttle_time)
-			return
-		memory_throttle_time = world.time + 5 SECONDS
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
-		msg = sanitize(msg)
-
-		mind.store_memory(msg)
-//	else
-//		to_chat(src, "You don't have a mind datum for some reason, so you can't add a note to it.")
-
+		
 /**
   * Allows you to respawn, abandoning your current mob
   *
@@ -736,30 +705,17 @@ GLOBAL_VAR_INIT(mobids, 1)
 /mob/Stat()
 	..()
 	// && check_rights(R_ADMIN,0)
-	if(client && client.holder)
-		if(statpanel("Status"))
-			if (client)
-				stat(null, "Ping: [round(client.lastping, 1)]ms (Average: [round(client.avgping, 1)]ms)")
+	if(client)
+		if(statpanel("RoundInfo"))
+			stat("Round ID: [GLOB.rogue_round_id]")
 			stat(null, "Map: [SSmapping.config?.map_name || "Loading..."]")
 			var/datum/map_config/cached = SSmapping.next_map_config
 			if(cached)
 				stat(null, "Next Map: [cached.map_name]")
-			stat(null, "Round ID: [GLOB.rogue_round_id ? GLOB.rogue_round_id : "NULL"]")
-//			stat(null, "Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
-			stat(null, "Round Time: [gameTimestamp("hh:mm:ss", world.time - SSticker.round_start_time)] [world.time - SSticker.round_start_time]")
-			stat(null, "Round TrueTime: [worldtime2text()] [world.time]")
-			stat(null, "TimeOfDay: [GLOB.tod]")
-			stat(null, "IC Time: [station_time_timestamp()] [station_time()]")
-			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
-			if(SSshuttle.emergency)
-				var/ETA = SSshuttle.emergency.getModeStr()
-				if(ETA)
-					stat(null, "[ETA] [SSshuttle.emergency.getTimerStr()]")
-	if(client)
-		if(statpanel("RoundInfo"))
-			stat("Round ID: [GLOB.rogue_round_id]")
 			stat("Round Time: [gameTimestamp("hh:mm:ss", world.time - SSticker.round_start_time)] [world.time - SSticker.round_start_time]")
-			stat("TimeOfDay: [GLOB.tod]")
+			stat("Time: [uppertext(GLOB.tod)]")
+			if(SSticker.round_aspect)
+				stat("Aspect: [SSticker.round_aspect.name]")
 
 	if(client && client.holder && check_rights(R_ADMIN,0))
 		if(statpanel("MC"))

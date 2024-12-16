@@ -1916,7 +1916,7 @@
 	name = ""
 	screen_loc = ui_backhudl
 	mouse_opacity = 0
-	alpha = 0
+	alpha = 128
 	layer = 24
 	plane = 24
 	blend_mode = BLEND_MULTIPLY

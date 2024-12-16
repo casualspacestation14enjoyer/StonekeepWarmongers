@@ -408,7 +408,11 @@
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if(on_fire)
-		to_chat(M, "<span class='warning'>I can't put [p_them()] out with just my bare hands!</span>")
+		visible_message("<span class='notice'>[src] pats the flames on [M] to extinguish them.</span>")
+		fire_stacks -= 5
+		sleep(30)
+		if(fire_stacks <= 0)
+			ExtinguishMob(TRUE)
 		return
 
 //	if(!(mobility_flags & MOBILITY_STAND))

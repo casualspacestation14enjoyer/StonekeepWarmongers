@@ -1675,7 +1675,7 @@
 		if(modifiers["left"])
 			if(M.charflaw)
 				to_chat(M, "*----*")
-				to_chat(M, "<span class='info'>[M.charflaw.desc]</span>")
+				to_chat(M, "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>")
 			to_chat(M, "*--------*")
 			var/list/already_printed = list()
 			for(var/datum/stressevent/S in M.positive_stressors)

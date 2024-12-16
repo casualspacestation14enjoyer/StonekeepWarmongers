@@ -279,6 +279,7 @@
 	else
 		head = /obj/item/clothing/head/roguetown/helmet
 		mask = /obj/item/clothing/mask/rogue/chainmask
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -318,6 +319,7 @@
 	beltl = /obj/item/rogueweapon/sword/sabre
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/helmet/sallet
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	if(H.dna?.species)
 		if(H.dna.species.id == "human")
@@ -358,6 +360,7 @@
 /datum/outfit/job/roguetown/redsapper/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard/reddy
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
@@ -405,6 +408,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/bullet
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = GetSidearmForWarfare()
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -450,6 +454,7 @@
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/bardhat
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	if(H.mind)
@@ -491,6 +496,7 @@
 	beltl = /obj/item/rogueweapon/sword/rapier
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
 	backl = /obj/item/rogue/musicpack/heartfelt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -526,6 +532,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	mask = /obj/item/clothing/mask/rogue/platemask
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
@@ -666,6 +673,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	r_hand = GetMainGunForWarfareGrenzelhoft()
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	mask = /obj/item/clothing/mask/rogue/chainmask
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
@@ -704,6 +712,7 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
 	backr = /obj/item/rogueweapon/sword/long/reskin
 	if(H.mind)
@@ -746,6 +755,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(/obj/item/bomb = 3, /obj/item/flint = 1)
 	if(H.mind)
@@ -785,6 +795,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltr = /obj/item/rogue/caltrop
 	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier)
 	head = /obj/item/clothing/head/roguetown/jester
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	playsound(H, 'sound/foley/honk.ogg', 100, FALSE, 2)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
@@ -870,6 +881,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/bardhat
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
 	if(H.mind)
@@ -912,6 +924,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	beltl = /obj/item/rogueweapon/sword/rapier
 	beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/fancyhat
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
 	backl = /obj/item/rogue/musicpack
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -947,6 +960,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	mask = /obj/item/clothing/mask/rogue/platemask
+	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot

@@ -16,3 +16,4 @@
 	fillsounds = list('sound/items/fillcup.ogg')
 	poursounds = list('sound/items/fillbottle.ogg')
 	sewrepair = TRUE
+	list_reagents = list(/datum/reagent/water = 64)

@@ -54,9 +54,9 @@
 
 	if(stress != oldstress)
 		if(stress > oldstress)
-			to_chat(src, "<span class='red'>ᛣ I gain stress. ᛣ</span>")
+			to_chat(src, "<span class='red'>ᛣ Life sucks. ᛣ</span>")
 		else
-			to_chat(src, "<span class='green'>ᛉ I gain peace. ᛉ</span>")
+			to_chat(src, "<span class='green'>ᛉ A moment of peace in a war that never ends. ᛉ</span>")
 		for(var/datum/status_effect/stress/i in status_effects)
 			remove_status_effect(i)
 		switch(stress)

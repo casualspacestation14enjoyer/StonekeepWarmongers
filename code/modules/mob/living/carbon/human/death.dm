@@ -81,7 +81,7 @@
 
 	var/mob/dead/observer/rogue/G = ghostize()
 
-	if(G.client)
+	if(G?.client)
 		SSdroning.kill_droning(G.client)
 		SSdroning.kill_loop(G.client)
 		SSdroning.kill_rain(G.client)

@@ -122,6 +122,9 @@
 		for(var/datum/antagonist/A in mind.antag_datums)
 			A.on_life(src)
 
+	if(getFireLoss() >= HEALTH_THRESHOLD_DEAD)
+		dust(TRUE, TRUE)
+
 	. = ..()
 	name = get_visible_name()
 

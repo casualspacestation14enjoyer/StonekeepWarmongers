@@ -273,7 +273,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	r_hand = GetMainGunForWarfare()
+	r_hand = GetMainGunForWarfareHeartfelt()
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
 	else
@@ -664,7 +664,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	r_hand = GetMainGunForWarfare()
+	r_hand = GetMainGunForWarfareGrenzelhoft()
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 	mask = /obj/item/clothing/mask/rogue/chainmask
 	if(H.mind)
@@ -871,7 +871,7 @@ datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though an
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/bardhat
 	mask = /obj/item/clothing/mask/rogue/snipermask
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)

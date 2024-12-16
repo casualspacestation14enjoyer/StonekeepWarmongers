@@ -35,6 +35,9 @@
 	associated_skill = /datum/skill/combat/flintlocks
 	var/ramtime = 5.5
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
+	icon_state = "ironbarkmarksman"
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
 	. = ..()
 	playsound(loc, 'sound/foley/gun_equip.ogg', 100, TRUE)
@@ -116,6 +119,9 @@
 	icon_state = "longgun_b"
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
+	icon_state = "ironbarker"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()

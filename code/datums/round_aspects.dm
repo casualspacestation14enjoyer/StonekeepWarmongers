@@ -50,6 +50,10 @@
 	description = "The Lords accidentally recruited goblins instead of humens."
 */
 
+/datum/round_aspect/starvingmarvins
+	name = "Starvin' Marvins"
+	description = "Sadly, it's like old WARMONGERS all over again! Everyone is hungry and thirsty at the start of the round!"
+
 /datum/round_aspect/cripplefight
 	name = "Cripple Fight"
 	description = "Sadly, due to a previous skirmish everyone has their legs crippled. Thankfully we have been provided with wheelchairs!"

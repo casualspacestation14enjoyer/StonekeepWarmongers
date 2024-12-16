@@ -80,9 +80,9 @@ GLOBAL_VAR_INIT(mobids, 1)
 			continue
 		var/datum/atom_hud/alternate_appearance/AA = v
 		AA.onNewMob(src)
-	if(SSticker.warfare_ready_to_die)
+	if(!(SSticker.warfare_ready_to_die) && aspect_chosen(/datum/round_aspect/starvingmarvins))
 		set_nutrition(450)
-		set_hydration(600)
+		set_hydration(500)
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)

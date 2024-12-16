@@ -926,10 +926,19 @@ proc/aspect_chosen(var/datum/round_aspect/aspect)
 		for(var/obj/structure/warfarestatue/WS in world)
 			WS.begincountdown()	
 
-/proc/GetMainGunForWarfare()
+/proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)
 		if(1)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(3)
+			return null
+
+/proc/GetMainGunForWarfareGrenzelhoft()
+	switch(SSticker.warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
 		if(2)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(3)

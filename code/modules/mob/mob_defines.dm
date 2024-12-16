@@ -100,8 +100,8 @@
 	/// Jitteryness level of the mob
 	var/jitteriness = 0//Carbon
 	/// Hunger level of the mob
-	var/nutrition = NUTRITION_LEVEL_START_MIN // randomised in Initialize
-	var/hydration = HYDRATION_LEVEL_START_MIN
+	var/nutrition = 700 // randomised in Initialize
+	var/hydration = 1000
 	/// Satiation level of the mob
 	var/satiety = 0//Carbon
 

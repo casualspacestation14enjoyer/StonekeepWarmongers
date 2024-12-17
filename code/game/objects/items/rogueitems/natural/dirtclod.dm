@@ -51,7 +51,7 @@
 	var/dirtamt = 5
 	icon = 'icons/roguetown/items/natural.dmi'
 	climbable = FALSE
-	density = FALSE
+	density = TRUE
 	climb_offset = 10
 
 /obj/structure/fluff/clodpile/attackby(obj/item/W, mob/user, params)

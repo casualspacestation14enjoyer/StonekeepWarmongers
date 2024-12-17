@@ -462,7 +462,7 @@
 
 /obj/structure/warfarebarrier
 	name = "barrier of fairness"
-	desc = "One made by Noc himself to get rid of injustice in war."
+	desc = "One made by the God of War himself to get rid of injustice in war."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shield-old"
 	move_resist = INFINITY

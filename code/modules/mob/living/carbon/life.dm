@@ -850,8 +850,8 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		if(chest.get_damage() >= chest.max_damage)
 			chest.cremation_progress += 999
 			if(chest.cremation_progress >= 19)
-		//		visible_message("<span class='warning'>[src]'s body crumbles into a pile of ash!</span>")
-		//		dust(TRUE, TRUE)
+				visible_message("<span class='warning'>[src]'s body crumbles into a pile of ash!</span>")
+				dust(TRUE, TRUE)
 				chest.skeletonized = TRUE
 				if(ishuman(src))
 					var/mob/living/carbon/human/H = src

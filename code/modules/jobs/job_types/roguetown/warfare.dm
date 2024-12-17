@@ -23,8 +23,8 @@
 		var/mob/living/carbon/human/HU = H
 
 		if(check_bypasslist(H.ckey))
-			if(!H.wear_neck)
-				H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/psicross/noc(H), SLOT_NECK)
+			if(!HU.wear_neck)
+				HU.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/psicross/noc(HU), SLOT_NECK)
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6

@@ -193,7 +193,7 @@
 /mob/living/carbon/human/get_punch_dmg()
 	var/damage = 12
 
-	var/used_str = STASTR
+	var/used_str = STASTR + 5
 
 	if(domhand)
 		used_str = get_str_arms(used_hand)

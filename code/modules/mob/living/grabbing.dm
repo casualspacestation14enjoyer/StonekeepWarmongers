@@ -182,13 +182,31 @@
 	var/mob/living/carbon/C = grabbed
 	var/armor_block = C.run_armor_check(limb_grabbed, "melee")
 	var/damage = user.get_punch_dmg()
-	playsound(C.loc, "genblunt", 100, FALSE, -1)
 	C.next_attack_msg.Cut()
-	C.apply_damage(damage, BRUTE, limb_grabbed, armor_block)
-	limb_grabbed.bodypart_attacked_by(BCLASS_TWIST, damage, user, sublimb_grabbed, crit_message = TRUE)
-	C.visible_message("<span class='danger'>[user] twists [C]'s [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", \
-					"<span class='userdanger'>[user] twists my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)
-	to_chat(user, "<span class='warning'>I twist [C]'s [parse_zone(sublimb_grabbed)].[C.next_attack_msg.Join()]</span>")
+	if(damage >= 25)
+		if(limb_grabbed.drop_limb())
+			C.visible_message("<span class='danger'>[user] rips off [C]'s [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", \
+				"<span class='userdanger'>[user] rips off my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)
+			user.stop_pulling(TRUE)
+			user.put_in_active_hand(limb_grabbed, TRUE, TRUE)
+
+			var/obj/item/bodypart/affecting = C.get_bodypart(BODY_ZONE_CHEST)
+			if(affecting && limb_grabbed.dismember_wound)
+				affecting.add_wound(limb_grabbed.dismember_wound)
+
+			C.emote("painscream")
+			limb_grabbed.add_mob_blood(C)
+			SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
+			C.add_stress(/datum/stressevent/dismembered)
+			to_chat(user, "<span class='warning'>I rip off [C]'s [parse_zone(sublimb_grabbed)].[C.next_attack_msg.Join()]</span>")
+			playsound(C.loc, "headcrush", 100, FALSE, -1)
+	else
+		playsound(C.loc, "genblunt", 100, FALSE, -1)
+		C.apply_damage(damage, BRUTE, limb_grabbed, armor_block)
+		limb_grabbed.bodypart_attacked_by(BCLASS_TWIST, damage, user, sublimb_grabbed, crit_message = TRUE)
+		C.visible_message("<span class='danger'>[user] twists [C]'s [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", \
+						"<span class='userdanger'>[user] twists my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)
+		to_chat(user, "<span class='warning'>I twist [C]'s [parse_zone(sublimb_grabbed)].[C.next_attack_msg.Join()]</span>")
 	C.next_attack_msg.Cut()
 	log_combat(user, C, "limbtwisted [sublimb_grabbed] ")
 

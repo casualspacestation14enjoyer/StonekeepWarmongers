@@ -759,7 +759,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/bomb = 3, /obj/item/flint = 1)
+	backpack_contents = list(/obj/item/bomb = 3, /obj/item/flint = 1, /obj/item/rogueweapon/shovel = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)

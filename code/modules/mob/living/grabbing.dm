@@ -183,7 +183,7 @@
 	var/armor_block = C.run_armor_check(limb_grabbed, "melee")
 	var/damage = user.get_punch_dmg()
 	C.next_attack_msg.Cut()
-	if(damage >= 25)
+	if(damage >= 25 || prob(3))
 		if(limb_grabbed.drop_limb())
 			C.visible_message("<span class='danger'>[user] rips off [C]'s [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", \
 				"<span class='userdanger'>[user] rips off my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)

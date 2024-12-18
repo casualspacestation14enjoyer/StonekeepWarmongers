@@ -66,12 +66,8 @@ GLOBAL_VAR(restart_counter)
 	load_nameban()
 
 	load_psychokiller()
-
-	load_crownlist()
 	load_bypasslist() // Not to be mistaken by load_bypassage().
-
 	load_bypassage()
-
 	load_patreons()
 
 //	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000

@@ -733,7 +733,7 @@
 
 ////// GRENADIER //////
 
-datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bombs, higher strength, and an axe with accompanying skill for it
+/datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bombs, higher strength, and an axe with accompanying skill for it
 	name = "Grenadier"
 	tutorial = "Specialized heavy grenade throwers and axe wielders. Slow, but strong."
 	outfit = /datum/outfit/job/roguetown/blugrenadier
@@ -777,7 +777,7 @@ datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bom
 
 ////// JESTER //////
 
-datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
+/datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
 	name = "Jester"
 	tutorial = "You don't remember how the hell you got pulled into a war, but you may as well make a mockery of it."
 	outfit = /datum/outfit/job/roguetown/blujester

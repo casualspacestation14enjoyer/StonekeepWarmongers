@@ -349,11 +349,11 @@
 	icon_state = "explosion"
 	pixel_x = -32
 	pixel_y = -32
-	duration = 8
+	duration = 39
 
 /obj/effect/temp_visual/explosion/fast
 	icon_state = "explosionfast"
-	duration = 4
+	duration = 13
 
 /obj/effect/temp_visual/blob
 	name = "blob"

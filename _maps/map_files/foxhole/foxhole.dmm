@@ -60,6 +60,14 @@
 /obj/structure/bed/rogue/sleepingbag,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"so" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/rogueweapon/tongs,
+/obj/item/rogueweapon/hammer,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "sv" = (
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/dirt,
@@ -80,6 +88,10 @@
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
+"tx" = (
+/obj/machinery/light/rogue/forge,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "uH" = (
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -98,6 +110,28 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"vR" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "AM" = (
 /turf/closed/mineral/random/rogue/high,
@@ -137,6 +171,10 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Eh" = (
+/obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "Fs" = (
@@ -230,6 +268,10 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
+"Ma" = (
+/obj/item/roguebin/water/gross,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "Nl" = (
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
@@ -286,6 +328,10 @@
 /area/rogue/outdoors)
 "Ty" = (
 /turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/outdoors)
+"Uc" = (
+/obj/machinery/anvil,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "Vs" = (
 /obj/structure/fluff/ponr/red,
@@ -827,8 +873,8 @@ AM
 AM
 AM
 AM
-Xw
-Xw
+Uc
+tx
 AM
 Xw
 BL
@@ -893,7 +939,7 @@ AM
 AM
 AM
 AM
-Xw
+Ma
 Xw
 Xw
 Xw
@@ -960,7 +1006,7 @@ AM
 AM
 AM
 AM
-Xw
+Eh
 Xw
 Xw
 Xw
@@ -1027,7 +1073,7 @@ AM
 AM
 AM
 AM
-Xw
+vR
 Xw
 Xw
 BL
@@ -1094,7 +1140,7 @@ AM
 AM
 AM
 AM
-Xw
+so
 Xw
 BL
 BL
@@ -1113,8 +1159,8 @@ Xw
 Xw
 JS
 Bz
-Xw
-AM
+tx
+Uc
 AM
 AM
 AM
@@ -1183,7 +1229,7 @@ JS
 JS
 JS
 Xw
-AM
+Ma
 AM
 AM
 AM
@@ -1250,7 +1296,7 @@ JS
 ou
 FT
 Hk
-Xw
+Eh
 AM
 AM
 AM
@@ -1317,7 +1363,7 @@ Zi
 JS
 JS
 JS
-Xw
+vR
 AM
 AM
 AM
@@ -1384,7 +1430,7 @@ BL
 uH
 JS
 Xw
-Xw
+so
 AM
 AM
 AM

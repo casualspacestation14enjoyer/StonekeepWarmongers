@@ -44,6 +44,10 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town)
+"bq" = (
+/obj/structure/fluff/grindwheel,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town)
 "bD" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -284,6 +288,10 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town)
+"go" = (
+/obj/machinery/anvil,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "gI" = (
 /obj/structure/table/church{
 	dir = 1;
@@ -294,6 +302,32 @@
 /area/rogue/indoors/town)
 "gN" = (
 /turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"gP" = (
+/obj/machinery/light/rogue/forge,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town)
+"gT" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "hj" = (
 /obj/machinery/light/rogue/torchholder/r,
@@ -571,8 +605,34 @@
 "mX" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/outdoors)
+"nc" = (
+/obj/machinery/light/rogue/forge,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "nd" = (
 /turf/open/floor/rogue/carpet/lord/right,
+/area/rogue/indoors/town)
+"nj" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 "nk" = (
 /obj/structure/stairs{
@@ -674,6 +734,10 @@
 /obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
+"pb" = (
+/obj/structure/fluff/grindwheel,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "pc" = (
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
@@ -988,6 +1052,11 @@
 /obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"wd" = (
+/obj/machinery/light/rogue/torchholder/c,
+/obj/machinery/anvil,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town)
 "wg" = (
 /obj/structure/table/wood{
 	dir = 10;
@@ -1783,6 +1852,10 @@
 "Nl" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/outdoors)
+"Nq" = (
+/obj/item/roguebin/water/gross,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "Nx" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/wool,
@@ -2095,6 +2168,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"TW" = (
+/obj/structure/fluff/grindwheel,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "Ua" = (
 /obj/machinery/light/rogue/hearth,
 /turf/open/floor/rogue/ruinedwood{
@@ -2163,6 +2240,15 @@
 	layer = 2.81
 	},
 /turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town)
+"VO" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/rogueweapon/tongs,
+/obj/item/rogueweapon/hammer,
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 "VQ" = (
 /obj/effect/decal/cobbleedge{
@@ -2240,6 +2326,10 @@
 /area/rogue/outdoors)
 "ZF" = (
 /turf/closed/wall/mineral/rogue/craftstone,
+/area/rogue/indoors/town)
+"ZY" = (
+/obj/item/roguebin/water/gross,
+/turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 
 (1,1,1) = {"
@@ -3368,10 +3458,10 @@ KN
 jI
 KN
 lN
-KN
-jI
-jI
-KN
+nc
+go
+pb
+Nq
 "}
 (14,1,1) = {"
 Nl
@@ -3632,7 +3722,7 @@ lN
 KN
 KN
 KN
-KN
+TW
 "}
 (17,1,1) = {"
 Nl
@@ -3717,9 +3807,9 @@ aY
 KN
 lN
 lN
-KN
 bO
 KN
+gT
 "}
 (18,1,1) = {"
 Nl
@@ -6945,7 +7035,7 @@ eA
 BB
 BB
 BB
-qp
+gP
 Xs
 Xs
 Xs
@@ -7032,7 +7122,7 @@ eA
 BB
 BB
 BB
-ER
+wd
 Xs
 Xs
 Xs
@@ -7119,7 +7209,7 @@ eA
 BB
 BB
 BB
-qp
+ZY
 Xs
 Xs
 Xs
@@ -7293,7 +7383,7 @@ yk
 BB
 BB
 BB
-qp
+bq
 Xs
 Xs
 Xs
@@ -7380,7 +7470,7 @@ yk
 BB
 BB
 BB
-qp
+nj
 Xs
 Xs
 Xs
@@ -7467,7 +7557,7 @@ yk
 BB
 BB
 BB
-ER
+VO
 Xs
 Xs
 Xs

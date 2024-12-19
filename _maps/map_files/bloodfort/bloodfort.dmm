@@ -57,6 +57,7 @@
 /area/rogue/outdoors/town/roofs)
 "cO" = (
 /obj/machinery/light/rogue/torchholder/c,
+/obj/machinery/anvil,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town)
 "cP" = (
@@ -737,6 +738,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"BW" = (
+/obj/structure/plank,
+/turf/closed/wall/mineral/rogue/decostone,
+/area/rogue/outdoors)
 "Cc" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/transparent/openspace,
@@ -773,6 +778,31 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"DI" = (
+/obj/structure/closet/crate/chest,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/item/ingot/steel,
+/obj/structure/fluff/walldeco/customflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "Eh" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = 32
@@ -856,6 +886,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"Gq" = (
+/obj/structure/fluff/grindwheel,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "GD" = (
 /obj/structure/stairs/stone/church{
 	dir = 4
@@ -1055,6 +1089,7 @@
 /obj/structure/fluff/walldeco/customflag{
 	pixel_y = 32
 	},
+/obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town)
 "NA" = (
@@ -1234,6 +1269,19 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"Vb" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/rogueweapon/tongs,
+/obj/item/rogueweapon/hammer,
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
+"Vc" = (
+/obj/machinery/light/rogue/forge,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town)
 "Ve" = (
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town/roofs)
@@ -6112,7 +6160,7 @@ cz
 "}
 (18,1,2) = {"
 kj
-gA
+Vc
 lc
 gA
 gA
@@ -6651,7 +6699,7 @@ UI
 "}
 (25,1,2) = {"
 kj
-gA
+Gq
 cQ
 TX
 gA
@@ -6728,7 +6776,7 @@ cz
 "}
 (26,1,2) = {"
 kj
-Nw
+DI
 gA
 gA
 gA
@@ -6805,7 +6853,7 @@ cz
 "}
 (27,1,2) = {"
 kj
-cO
+Vb
 gA
 gA
 gA
@@ -9700,8 +9748,8 @@ Jt
 yt
 yt
 yt
-UI
-wZ
+rC
+rC
 Wb
 Wb
 Wb
@@ -9752,14 +9800,14 @@ cw
 pX
 cw
 Lt
-UI
-UI
-UI
-Fr
-Fr
-UI
-UI
-UI
+rC
+rC
+rC
+BW
+BW
+rC
+rC
+rC
 id
 id
 id
@@ -10214,14 +10262,14 @@ pX
 cw
 pX
 Lt
-UI
-UI
-UI
-Fr
-Fr
-UI
-UI
-UI
+rC
+rC
+rC
+BW
+BW
+rC
+rC
+rC
 jW
 jW
 jW
@@ -10316,8 +10364,8 @@ Jt
 rl
 rl
 rl
-UI
-wZ
+rC
+rC
 Wb
 Wb
 Wb

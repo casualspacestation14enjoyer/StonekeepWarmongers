@@ -121,7 +121,7 @@
 		if(prob(1))
 			for(var/mob/M in GLOB.player_list)
 				SEND_SOUND(M, 'sound/death_alarm.ogg')
-		Jitter(10)
+		do_jitter_animation(10)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

@@ -85,7 +85,7 @@
 	update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/update_icon()
-	icon_state = "[initial(icon_state)][wielded]"
+	//icon_state = "[initial(icon_state)][wielded]"
 	item_state = "[initial(item_state)][wielded]"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/attack_self(mob/living/user)

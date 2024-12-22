@@ -130,9 +130,11 @@
 				if(painpercent >= 40)
 					if(prob(probby))
 						emote("painscream")
+						Jitter(10)
 						stuttering += 5
 					else
 						emote("painmoan")
+						Jitter(5)
 						stuttering += 5
 				else
 					if(painpercent >= 80)

@@ -712,8 +712,9 @@ GLOBAL_VAR_INIT(mobids, 1)
 			var/datum/map_config/cached = SSmapping.next_map_config
 			if(cached)
 				stat(null, "Next Map: [cached.map_name]")
-			stat("Round Time: [gameTimestamp("hh:mm:ss", world.time - SSticker.round_start_time)] [world.time - SSticker.round_start_time]")
-			stat("Time: [uppertext(GLOB.tod)]")
+			stat("Round Time: [gameTimestamp("hh:mm", world.time - SSticker.round_start_time)]")
+			if(GLOB.tod)
+				stat("Time: [uppertext(GLOB.tod)]")
 			if(SSticker.round_aspect)
 				stat("Aspect: [SSticker.round_aspect.name]")
 

@@ -116,12 +116,6 @@
 	
 	if(aspect_chosen(/datum/round_aspect/exploding))
 		gib(TRUE)
-		
-	spawn(2 SECONDS)
-		if(prob(1))
-			for(var/mob/M in GLOB.player_list)
-				SEND_SOUND(M, 'sound/death_alarm.ogg')
-		do_jitter_animation(10)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

@@ -178,7 +178,6 @@ GLOBAL_VAR(restart_counter)
 	start_log(GLOB.tgui_log)
 	start_log(GLOB.character_list_log)
 
-	GLOB.changelog_hash = md5('html/changelog.html') //for telling if the changelog has changed recently
 	if(fexists(GLOB.config_error_log))
 		fcopy(GLOB.config_error_log, "[GLOB.log_directory]/config_error.log")
 		fdel(GLOB.config_error_log)
@@ -258,10 +257,12 @@ GLOBAL_VAR(restart_counter)
 //	to_chat(world, "<span class='boldannounce'><b><u><a href='byond://winset?command=.reconnect'>CLICK TO RECONNECT</a></u></b></span>")
 
 	var/round_end_sound = 'sound/warmongers.ogg'
+	var/quote = pick("When you see a rattlesnake poised to bite, you do not wait until he has struck to crush him.", "If the Grenzelhoft invaded the Zed's hell I would make at least a favorable reference to the devil in Royal Council House.", "Isn't it dreadful? Here we are, two officers of the Grenzelhoft general staff discussing how best to murder our commander-in-chief.", "I ask you, do you want total war? If necessary, do you want a war more total and radical than anything we can yet imagine?")
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue
 		thing << sound(round_end_sound)
+		thing << quote
 
 	to_chat(world, "<B>You will be reconnected in a few seconds.</B>")
 	Master.Shutdown()	//run SS shutdowns? rtchange

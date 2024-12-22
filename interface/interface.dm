@@ -75,18 +75,6 @@
 		to_chat(src, "<span class='danger'>The Github URL is not set in the server configuration.</span>")
 	return
 
-/client/verb/changelog()
-	set name = "Changelog"
-	set category = "OOC"
-	set hidden = 1
-//	var/datum/asset/changelog = get_asset_datum(/datum/asset/simple/changelog)
-//	changelog.send(src)
-	src << browse('html/changelog.html', "window=changes;size=675x650")
-	if(prefs.lastchangelog != GLOB.changelog_hash)
-		prefs.lastchangelog = GLOB.changelog_hash
-		prefs.save_preferences()
-		winset(src, "infowindow.changelog", "font-style=;")
-
 /client/verb/hotkeys_help()
 	set name = "zHelp-Controls"
 	set category = "Options"

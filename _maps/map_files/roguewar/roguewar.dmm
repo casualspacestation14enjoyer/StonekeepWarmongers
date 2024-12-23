@@ -1,15 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ab" = (
-/obj/structure/fluff/railing/fence{
-	icon_state = "fence";
-	dir = 1
-	},
-/obj/structure/fluff/railing/fence{
-	icon_state = "fence";
-	dir = 4
-	},
-/turf/open/floor/rogue/woodturned,
-/area/rogue)
 "aA" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
@@ -175,6 +164,9 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue)
+"gy" = (
+/turf/closed/wall/mineral/rogue/wooddark/vertical,
+/area/rogue)
 "gK" = (
 /obj/structure/fluff/walldeco/wallshield,
 /turf/open/floor/rogue/dirt/road,
@@ -226,6 +218,9 @@
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue)
+"if" = (
+/turf/closed/wall/mineral/rogue/wooddark/horizontal,
+/area/rogue)
 "in" = (
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue)
@@ -256,10 +251,6 @@
 "je" = (
 /obj/structure/bed/rogue,
 /turf/open/floor/rogue/twig,
-/area/rogue)
-"jr" = (
-/obj/structure/ladder,
-/turf/open/floor/rogue/woodturned,
 /area/rogue)
 "jA" = (
 /obj/machinery/light/rogue/torchholder{
@@ -369,14 +360,6 @@
 /obj/structure/fluff/statue/gargoyle,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
-"mJ" = (
-/obj/structure/fluff/railing/fence{
-	icon_state = "fence";
-	dir = 1
-	},
-/obj/structure/closet/crate/chest,
-/turf/open/floor/rogue/woodturned,
-/area/rogue)
 "mM" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 4
@@ -427,6 +410,17 @@
 "op" = (
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue)
+"or" = (
+/obj/structure/fluff/railing/fence{
+	icon_state = "fence";
+	dir = 1
+	},
+/obj/structure/fluff/railing/fence{
+	icon_state = "fence";
+	dir = 4
+	},
+/turf/open/floor/rogue/rooftop,
+/area/rogue)
 "ot" = (
 /obj/structure/bookcase,
 /obj/structure/bookcase,
@@ -475,7 +469,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
 "pm" = (
-/turf/closed,
+/obj/structure/ladder,
+/turf/open/floor/rogue/rooftop,
 /area/rogue)
 "px" = (
 /obj/machinery/light/rogue/firebowl,
@@ -528,6 +523,13 @@
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/grass,
 /area/rogue)
+"qt" = (
+/obj/structure/fluff/railing/fence{
+	icon_state = "fence";
+	dir = 4
+	},
+/turf/open/floor/rogue/rooftop,
+/area/rogue)
 "qC" = (
 /obj/structure/bed/rogue,
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -543,13 +545,6 @@
 "qI" = (
 /obj/structure/mineral_door/wood,
 /turf/closed/wall/mineral/rogue/wood,
-/area/rogue)
-"qN" = (
-/obj/structure/fluff/railing/fence{
-	icon_state = "fence";
-	dir = 1
-	},
-/turf/open/floor/rogue/woodturned,
 /area/rogue)
 "rK" = (
 /obj/structure/fluff/walldeco/wantedposter/r,
@@ -754,6 +749,13 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/woodturned,
+/area/rogue)
+"zv" = (
+/obj/structure/fluff/railing/fence{
+	icon_state = "fence";
+	dir = 1
+	},
+/turf/open/floor/rogue/rooftop,
 /area/rogue)
 "zC" = (
 /turf/open/floor/rogue/blocks/newstone,
@@ -1211,8 +1213,20 @@
 /obj/structure/ladder,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue)
+"NM" = (
+/obj/structure/fluff/railing/fence{
+	icon_state = "fence";
+	dir = 1
+	},
+/obj/structure/closet/crate/chest,
+/turf/open/floor/rogue/rooftop,
+/area/rogue)
 "NT" = (
 /obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/twig,
+/area/rogue)
+"Oh" = (
+/obj/structure/mineral_door/wood/deadbolt,
 /turf/open/floor/rogue/twig,
 /area/rogue)
 "OD" = (
@@ -1352,7 +1366,7 @@
 /area/rogue)
 "Tj" = (
 /obj/structure/stairs,
-/turf/open/transparent/openspace,
+/turf/open/floor/rogue/twig,
 /area/rogue)
 "Tu" = (
 /obj/structure/mineral_door/wood/fancywood,
@@ -1440,13 +1454,6 @@
 /obj/item/roguebin,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
-"VZ" = (
-/obj/structure/fluff/railing/fence{
-	icon_state = "fence";
-	dir = 4
-	},
-/turf/open/floor/rogue/woodturned,
-/area/rogue)
 "Wg" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -1455,9 +1462,15 @@
 /obj/structure/mineral_door/bars,
 /turf/open/floor/rogue/carpet,
 /area/rogue)
+"WF" = (
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/rogue)
 "WI" = (
 /obj/structure/bars/passage,
 /turf/open/floor/rogue/carpet,
+/area/rogue)
+"WS" = (
+/turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue)
 "Xb" = (
 /obj/structure/flora/roguetree,
@@ -1936,7 +1949,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -4060,7 +4073,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -5284,7 +5297,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -7562,7 +7575,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -8773,7 +8786,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -9701,14 +9714,14 @@ Jn
 Jn
 Xc
 Dw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+EO
 Tw
 Tw
 Tw
@@ -9845,7 +9858,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -9853,14 +9866,14 @@ Jn
 Jn
 Jn
 TQ
-lw
-ZG
-kz
-kz
-kz
-kz
-ZG
-lw
+EO
+WS
+if
+if
+if
+if
+WS
+EO
 Tw
 Tw
 Tw
@@ -10001,18 +10014,18 @@ Jn
 Jn
 Jn
 Jn
-lw
-lw
-lw
-lw
-lw
-kz
+WF
+EO
+EO
+EO
+EO
+gy
 bx
-aA
-aA
-JM
-kz
-lw
+zT
+zT
+Ia
+gy
+EO
 Tw
 Tw
 Tw
@@ -10158,13 +10171,13 @@ Jn
 aA
 Tw
 Tw
-kz
+gy
 zT
 zT
 zT
 Ia
-kz
-lw
+gy
+EO
 Hx
 Tw
 Tw
@@ -10283,14 +10296,14 @@ Hx
 Tw
 aA
 aA
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+WF
 Jn
 Jn
 Jn
@@ -10310,13 +10323,13 @@ Jn
 aA
 Tw
 Tw
-kz
+gy
 zT
 zT
 zT
 je
-kz
-lw
+gy
+EO
 Tw
 Tw
 Tw
@@ -10435,7 +10448,7 @@ pg
 Tw
 Tw
 aA
-lw
+EO
 Tw
 Tw
 Tw
@@ -10462,13 +10475,13 @@ Jn
 aA
 wP
 Tw
-kz
+gy
 zT
 zT
 zT
 zT
-kz
-lw
+gy
+EO
 Tw
 Tw
 Tw
@@ -10587,24 +10600,24 @@ Tw
 Tw
 Tw
 aA
-lw
+EO
 aA
 aA
 aA
 aA
 aA
-lw
-KX
-KX
-KX
-KX
-lw
-KX
+WF
 KX
 KX
 KX
 KX
 lw
+KX
+KX
+KX
+KX
+KX
+WF
 KX
 KX
 KX
@@ -10614,13 +10627,13 @@ lw
 aA
 wP
 Tw
-ZG
-kz
+WS
+if
 yQ
-kz
-kz
-ZG
-lw
+if
+if
+WS
+EO
 Tw
 Tw
 Tw
@@ -11195,7 +11208,7 @@ wP
 wP
 aA
 aA
-lw
+EO
 wP
 aA
 aA
@@ -11206,7 +11219,7 @@ KX
 KX
 KX
 KX
-lw
+WF
 KX
 KX
 KX
@@ -11228,7 +11241,7 @@ Tw
 Tw
 Tw
 Tw
-lw
+EO
 Tw
 Tw
 Tw
@@ -11347,7 +11360,7 @@ aA
 aA
 vK
 wP
-lw
+EO
 gk
 VC
 aA
@@ -11380,7 +11393,7 @@ Tw
 Tw
 Tw
 Tw
-lw
+EO
 wP
 Tw
 Tw
@@ -11499,7 +11512,7 @@ aA
 aA
 aA
 aA
-lw
+EO
 Tw
 aA
 aA
@@ -11532,7 +11545,7 @@ Tw
 Tw
 Tw
 Tw
-lw
+EO
 Tw
 Tw
 Tw
@@ -11651,7 +11664,7 @@ Tw
 Tw
 aA
 wP
-lw
+EO
 Tw
 aA
 aA
@@ -11684,7 +11697,7 @@ Tw
 Tw
 Tw
 Tw
-lw
+EO
 Tw
 Tw
 lw
@@ -11803,7 +11816,7 @@ Tw
 Tw
 aA
 wP
-lw
+EO
 Dp
 aA
 aA
@@ -11812,7 +11825,7 @@ Hx
 aA
 Jn
 Jn
-lw
+WF
 Jn
 Jn
 Jn
@@ -11826,17 +11839,17 @@ Jn
 Jn
 Jn
 lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+EO
+EO
 Tw
 Tw
 lw
@@ -11955,7 +11968,7 @@ Hx
 Tw
 Tw
 wP
-lw
+EO
 kz
 zT
 zT
@@ -11964,7 +11977,7 @@ kz
 kz
 Dw
 Jn
-lw
+WF
 Jn
 Jn
 Jn
@@ -12107,7 +12120,7 @@ Tw
 Tw
 Tw
 aA
-lw
+EO
 zT
 zT
 zT
@@ -12259,7 +12272,7 @@ Tw
 vS
 Tw
 aA
-lw
+EO
 zT
 zT
 zT
@@ -12274,7 +12287,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -12411,7 +12424,7 @@ Tw
 Hx
 Tw
 aA
-lw
+EO
 zT
 zT
 zT
@@ -12563,7 +12576,7 @@ pg
 Tw
 Tw
 aA
-lw
+EO
 zT
 zT
 zT
@@ -12572,7 +12585,7 @@ kz
 kz
 aA
 Jn
-lw
+WF
 Jn
 Jn
 Jn
@@ -12715,7 +12728,7 @@ Tw
 Tw
 Tw
 aA
-lw
+EO
 kz
 zT
 zT
@@ -12867,16 +12880,16 @@ Tw
 Hx
 Tw
 aA
-lw
+EO
 aA
 aA
 JM
 pg
-lw
-lw
-lw
-lw
-lw
+EO
+EO
+EO
+EO
+WF
 Jn
 Jn
 Jn
@@ -13019,12 +13032,12 @@ Tw
 Tw
 Tw
 aA
-lw
-lw
-lw
-lw
-lw
-lw
+EO
+EO
+EO
+EO
+EO
+EO
 Tw
 Dw
 Jn
@@ -13798,7 +13811,7 @@ Jn
 Jn
 Jn
 Jn
-lw
+WF
 Jn
 Jn
 Jn
@@ -14396,7 +14409,7 @@ Tw
 TQ
 Jn
 Jn
-Tw
+WF
 Jn
 Jn
 Jn
@@ -16536,7 +16549,7 @@ Jn
 Jn
 Jn
 Jn
-Jn
+WF
 Jn
 Jn
 Jn
@@ -29311,12 +29324,12 @@ ej
 ej
 ej
 ej
-kz
-kz
-kz
-kz
-kz
-kz
+WS
+if
+if
+if
+if
+WS
 ej
 ej
 ej
@@ -29463,12 +29476,12 @@ ej
 ej
 ej
 ej
-kp
+gy
 Tj
-kh
-kh
-kh
-kz
+zT
+zT
+zT
+gy
 ej
 ej
 ej
@@ -29615,12 +29628,12 @@ ej
 ej
 ej
 ej
-kz
-kh
-kh
-kh
-jr
-kz
+gy
+zT
+zT
+zT
+vL
+gy
 ej
 ej
 ej
@@ -29767,12 +29780,12 @@ ej
 ej
 ej
 ej
-kz
-kz
-yQ
-kz
-kz
-kz
+WS
+if
+Oh
+if
+if
+WS
 ej
 ej
 ej
@@ -29919,12 +29932,12 @@ ej
 ej
 ej
 ej
-kh
-kh
-kh
-kh
-kh
-kh
+up
+up
+up
+up
+up
+up
 ej
 ej
 ej
@@ -30071,12 +30084,12 @@ ej
 ej
 ej
 ej
-kh
-kh
-kh
-kh
-kh
-kh
+up
+up
+up
+up
+up
+up
 ej
 ej
 ej
@@ -48768,20 +48781,20 @@ ej
 ej
 ej
 ej
-kh
-pm
-pm
-pm
-pm
-pm
+up
+up
+zv
+up
+up
+up
 ej
 ej
-kh
-qN
-kh
-kh
-kh
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej
@@ -48920,20 +48933,20 @@ ej
 ej
 ej
 ej
-kh
-pm
-pm
-pm
-pm
-pm
+up
+up
+zv
+up
+up
+up
 ej
 ej
-kh
-qN
-kh
-kh
-kh
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej
@@ -49072,20 +49085,20 @@ ej
 ej
 ej
 ej
-qN
-pm
-pm
-pm
-pm
+zv
+zv
+up
+up
+up
 pm
 ej
 ej
-qN
-kh
-kh
-kh
-jr
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej
@@ -49224,20 +49237,20 @@ ej
 ej
 ej
 ej
-kh
-pm
-pm
-pm
-pm
-pm
+up
+up
+up
+NM
+up
+up
 ej
 ej
-kh
-kh
-mJ
-kh
-kh
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej
@@ -49376,20 +49389,20 @@ ej
 ej
 ej
 ej
-qN
-pm
-pm
-pm
-pm
-pm
+zv
+zv
+up
+up
+up
+up
 ej
 ej
-qN
-kh
-kh
-kh
-kh
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej
@@ -49528,20 +49541,20 @@ ej
 ej
 ej
 ej
-VZ
-pm
-pm
-pm
-pm
-pm
+qt
+qt
+qt
+qt
+or
+up
 ej
 ej
-VZ
-VZ
-VZ
-ab
-kh
-kh
+ej
+ej
+ej
+ej
+ej
+ej
 ej
 ej
 ej

@@ -473,7 +473,7 @@
 /area/rogue/indoors/town)
 "qD" = (
 /obj/singularity/academy,
-/turf/open/indestructible/hoteltile,
+/turf/open/floor/bronze,
 /area/rogue/outdoors)
 "qN" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -737,10 +737,6 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors)
-"BW" = (
-/obj/structure/plank,
-/turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/outdoors)
 "Cc" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -1135,7 +1131,7 @@
 	},
 /area/rogue/outdoors/town/roofs)
 "Pd" = (
-/turf/open/indestructible/hoteltile,
+/turf/open/floor/bronze,
 /area/rogue/outdoors)
 "Pr" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -9803,8 +9799,8 @@ Lt
 rC
 rC
 rC
-BW
-BW
+tg
+tg
 rC
 rC
 rC
@@ -10265,8 +10261,8 @@ Lt
 rC
 rC
 rC
-BW
-BW
+tg
+tg
 rC
 rC
 rC

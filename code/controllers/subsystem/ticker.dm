@@ -336,7 +336,6 @@ proc/aspect_chosen(var/datum/round_aspect/aspect)
 		for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
 			var/datum/round_aspect/A = thing
 			possibilities += A
-		possibilities = shuffle(possibilities)
 		var/chosen = pick(possibilities)
 		round_aspect = new chosen
 		round_aspect.apply()

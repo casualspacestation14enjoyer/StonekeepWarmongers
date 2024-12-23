@@ -24,6 +24,9 @@
 /mob/proc/rogstam_add(added as num)
 	return
 
+/mob/living/carbon/human/rogstam_add(added) // all my homies hate the blue bar
+	return TRUE
+
 /mob/living/rogstam_add(added as num)
 	if(HAS_TRAIT(src, TRAIT_NOROGSTAM))
 		return TRUE

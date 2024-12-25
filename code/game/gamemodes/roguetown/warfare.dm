@@ -18,11 +18,11 @@
 
 	var/mob/redlord = null
 	var/obj/item/redcrown = null
-	var/red_bonus = 0
+	var/red_bonus = 2
 
 	var/mob/blulord = null
 	var/obj/item/blucrown = null
-	var/blu_bonus = 0
+	var/blu_bonus = 2
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()

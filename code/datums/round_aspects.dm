@@ -40,11 +40,11 @@
 /datum/round_aspect/noguns/apply()
 	SSticker.warfare_techlevel = 3
 	
-/* People aren't ready for this.
 /datum/round_aspect/sexmongers
 	name = "SEXMONGERS"
 	description = "freeky.... Sex is enabled on the battlefield!"
 
+/* People aren't ready for this.
 /datum/round_aspect/goblino
 	name = "It's all goblins"
 	description = "The Lords accidentally recruited goblins instead of humens."

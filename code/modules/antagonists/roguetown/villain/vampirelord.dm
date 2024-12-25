@@ -200,6 +200,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	name = "crown of Heartfelt"
 	icon_state = "vcrown"
 	item_state = "vcrown"
+	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
@@ -214,6 +215,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	name = "crown of the Grenzelhofts"
 	icon_state = "vcrown_blu"
 	item_state = "vcrown_blu"
+	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null

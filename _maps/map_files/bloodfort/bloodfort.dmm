@@ -482,7 +482,6 @@
 	name = "blue"
 	},
 /obj/item/clothing/head/roguetown/jester,
-/obj/singularity/academy,
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town)
 "rC" = (

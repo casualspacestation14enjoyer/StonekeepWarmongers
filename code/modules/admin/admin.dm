@@ -770,6 +770,21 @@
 		W.blucrown.forceMove(get_turf(usr))
 		to_chat(usr, "Blue crown moved succesfully.")
 
+/datum/admins/proc/teleport2crown()
+	set category = "Debug"
+	set name = "TP2Crown"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	var/pick = input(usr, "Which crown?", "WARMONGERS") as null|anything in list("Red","Blue")
+
+	if(!pick)
+		return
+	
+	if(pick == "Red")
+		usr.forceMove(W.redcrown.loc)
+	if(pick == "Blue")
+		usr.forceMove(W.blucrown.loc)
+
 /datum/admins/proc/forcemode()
 	set category = "Server"
 	set name = "Force Gamemode"

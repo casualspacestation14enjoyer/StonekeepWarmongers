@@ -204,7 +204,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
-	resistance_flags = FIRE_PROOF
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/head/roguetown/crownred/Initialize()
 	. = ..()
@@ -219,7 +219,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
-	resistance_flags = FIRE_PROOF
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/head/roguetown/crownblu/Initialize()
 	. = ..()

@@ -207,6 +207,7 @@
 		team = RED_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
+	scan_for_target()
 
 /obj/item/pinpointer/crown/scan_for_target()
 	var/datum/game_mode/warfare/W = SSticker.mode

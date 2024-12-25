@@ -550,6 +550,8 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -978,3 +980,5 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)

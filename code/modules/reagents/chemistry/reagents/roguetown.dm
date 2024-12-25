@@ -10,7 +10,6 @@
 		if(M.has_flaw(/datum/charflaw/addiction/maniac))
 			M.add_stress(/datum/stressevent/miasmagasmaniac)
 		else
-			M.add_nausea(25)
 			M.add_stress(/datum/stressevent/miasmagas)
 	return ..()
 

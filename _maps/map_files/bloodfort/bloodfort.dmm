@@ -1017,25 +1017,11 @@
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
-"Lq" = (
-/obj/structure/mineral_door/wood/deadbolt{
-	dir = 4
-	},
-/obj/structure/teambarrrier/red,
-/turf/open/floor/rogue/wood/nosmooth,
-/area/rogue/indoors/town)
 "Lt" = (
 /obj/structure/roguewindow/openclose{
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors/town)
-"Lw" = (
-/obj/structure/mineral_door/wood/deadbolt{
-	dir = 8
-	},
-/obj/structure/teambarrrier/red,
-/turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/indoors/town)
 "LC" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -8605,7 +8591,7 @@ UI
 kj
 kj
 kj
-Lq
+ZZ
 kj
 kj
 kj
@@ -11377,7 +11363,7 @@ UI
 kj
 kj
 kj
-Lw
+JF
 kj
 kj
 kj

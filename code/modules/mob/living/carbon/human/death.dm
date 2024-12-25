@@ -98,6 +98,7 @@
 		H.layer = SPLASHSCREEN_LAYER+0.5
 		G.client.screen += H
 		H.Fade()
+		to_chat(G, "You've died! Don't worry, this happens all the time. Press the button that looks like a skull on the left side of your screen to respawn.")
 		mob_timers["lastdied"] = world.time
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
 		G.add_client_colour(/datum/client_colour/monochrome)

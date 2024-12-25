@@ -9,7 +9,6 @@
 "aJ" = (
 /obj/structure/fluff/railing/fence,
 /obj/structure/warfarebarrier,
-/obj/structure/teambarrrier/blue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "bc" = (
@@ -90,10 +89,6 @@
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
-"dr" = (
-/obj/structure/teambarrrier/blue,
-/turf/closed/wall/mineral/rogue/wooddark,
-/area/rogue/outdoors)
 "dD" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/indoors/town)
@@ -416,7 +411,6 @@
 /area/rogue/indoors/town)
 "ov" = (
 /obj/structure/warfarebarrier,
-/obj/structure/teambarrrier/blue,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "oA" = (
@@ -993,7 +987,6 @@
 "JQ" = (
 /obj/structure/fluff/railing/fence,
 /obj/structure/warfarebarrier,
-/obj/structure/teambarrrier/blue,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Kn" = (
@@ -1151,7 +1144,6 @@
 /area/rogue/outdoors)
 "PU" = (
 /obj/structure/warfarebarrier,
-/obj/structure/teambarrrier/blue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "QF" = (
@@ -2135,7 +2127,7 @@ fC
 fC
 fC
 gh
-dr
+gh
 gh
 fC
 uU
@@ -2212,7 +2204,7 @@ uU
 fC
 uU
 gh
-dr
+gh
 gh
 Du
 fC
@@ -2289,7 +2281,7 @@ Bt
 fC
 fC
 gh
-dr
+gh
 gh
 fC
 vK
@@ -3983,7 +3975,7 @@ fC
 uU
 fC
 gh
-dr
+gh
 gh
 fC
 fC
@@ -4060,7 +4052,7 @@ fC
 uU
 uU
 gh
-dr
+gh
 gh
 Du
 fC
@@ -4137,7 +4129,7 @@ uU
 fC
 fC
 gh
-dr
+gh
 gh
 uU
 fC

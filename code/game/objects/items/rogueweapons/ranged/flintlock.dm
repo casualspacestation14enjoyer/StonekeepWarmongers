@@ -9,7 +9,7 @@
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	possible_item_intents = list(INTENT_GENERIC)
-	gripped_intents = list(/datum/intent/shoot/musket/rifle)
+	gripped_intents = list(/datum/intent/shoot/musket/rifle, /datum/intent/shoot/musket/arc,)
 	wieldsound = 'sound/combat/musket_wield.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk
 	slot_flags = ITEM_SLOT_BACK

@@ -90,16 +90,6 @@
 			if(!P.nodamage && P.damage < src.health && isliving(P.firer))
 				retaliate(P.firer)
 
-	if(def_zone == BODY_ZONE_HEAD)
-		to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
-		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
-		adjustBruteLoss(45)
-		var/obj/item/clothing/head/hed = head
-		if(hed)
-			transferItemToLoc(hed, get_step(src, turn(dir, 180)))
-			head = null
-			update_inv_head()
-
 	if(dna && dna.species)
 		var/spec_return = dna.species.bullet_act(P, src, def_zone)
 		if(spec_return)

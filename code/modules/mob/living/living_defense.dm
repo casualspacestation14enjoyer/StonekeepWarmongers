@@ -72,9 +72,16 @@
 	var/limb_hit = check_limb_hit(def_zone)//to get the correct message info.
 	if(limb_hit)
 		organ_hit_text = " in \the [parse_zone(limb_hit)]"
-	if(def_zone == BODY_ZONE_HEAD)
-		apply_damage(150, BRUTE, BODY_ZONE_HEAD)
+	if(limb_hit == BODY_ZONE_HEAD)
+		to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
+		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
+		apply_damage(80, BRUTE, BODY_ZONE_HEAD)
 		playsound(src, "headcrush", 100, vary = FALSE)
+		var/obj/item/clothing/head/hed = head
+		if(hed)
+			transferItemToLoc(hed, get_step(src, turn(dir, 180)))
+			head = null
+			update_inv_head()
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(loc, pick(P.hitsound), volume, TRUE, -1)

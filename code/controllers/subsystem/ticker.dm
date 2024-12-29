@@ -326,7 +326,7 @@ SUBSYSTEM_DEF(ticker)
 	var/isroguefight = FALSE
 	var/isrogueworld = FALSE
 
-proc/aspect_chosen(var/datum/round_aspect/aspect)
+proc/aspect_chosen(/datum/round_aspect/aspect)
 	if(istype(SSticker.round_aspect, aspect))
 		return TRUE
 

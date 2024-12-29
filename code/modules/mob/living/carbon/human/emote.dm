@@ -132,7 +132,7 @@
 				message = "stomps their boot and throws their arms up in a holy salute to %t!"
 			else
 				message = "salutes."
-	..()
+	. = ..()
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"

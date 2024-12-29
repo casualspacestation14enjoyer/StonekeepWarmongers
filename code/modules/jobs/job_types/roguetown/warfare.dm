@@ -851,6 +851,7 @@
 						if(!BP.is_object_embedded(src))
 							BP.add_embedded_object(src)
 						C.emote("agony")
+						icon_state = "[icon_state]-bloody"
 			else if(isanimal(L))
 				var/mob/living/simple_animal/SA = L
 				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.

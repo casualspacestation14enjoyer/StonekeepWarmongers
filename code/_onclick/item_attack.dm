@@ -229,8 +229,8 @@
 		used_str++
 	if(istype(user.rmb_intent, /datum/rmb_intent/weak))
 		used_str--
-	//Your max STR is 20.
-	used_str = CLAMP(used_str, 1, 20)
+	//Your max STR is 40.
+	used_str = CLAMP(used_str, 1, 40)
 	if(used_str >= 11)
 		newforce = newforce + (newforce * ((used_str - 10) * 0.1))
 	else if(used_str <= 9)
@@ -325,9 +325,9 @@
 	* a rock wall or anything with DULLING_PICK blade_dulling
 	* flag. This is alot.
 	*/
-	newforce = (newforce * user.used_intent.damfactor) * dullfactor
+	newforce = (newforce * (user.used_intent.damfactor * 1.6)) * dullfactor
 	if(user.used_intent.get_chargetime() && user.client?.chargedprog < 100)
-		newforce = newforce * 0.5
+		newforce = newforce * 0.7
 	// newforce is rounded upto the nearest intiger.
 	newforce = round(newforce,1)
 	//This is returning the maximum of the arguments meaning this is to prevent negative values.

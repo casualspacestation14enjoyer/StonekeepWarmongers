@@ -1,7 +1,7 @@
 /obj/item/bomb
-	name = "bottle bomb"
-	desc = "Dangerous explosion, in a bottle."
-	icon_state = "bbomb"
+	name = "bomb"
+	desc = "Dangerous explosion."
+	icon_state = "sticknade"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	//dropshrink = 0
@@ -141,7 +141,7 @@
 		lit = FALSE
 		STOP_PROCESSING(SSfastprocess, src)
 		playsound(src.loc, 'sound/items/firesnuff.ogg', 100)
-		icon_state = "bbomb"
+		icon_state = initial(icon_state)
 		if(ismob(loc))
 			var/mob/M = loc
 			M.update_inv_hands()

@@ -77,11 +77,13 @@
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 30)
 		apply_damage(80, BRUTE, BODY_ZONE_HEAD)
 		playsound(src, "headcrush", 100, vary = FALSE)
-		var/obj/item/clothing/head/hed = head
-		if(hed)
-			transferItemToLoc(hed, get_step(src, turn(dir, 180)))
-			head = null
-			update_inv_head()
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			var/obj/item/clothing/head/hed = C.head
+			if(hed)
+				transferItemToLoc(hed, get_step(C, turn(dir, 180)))
+				C.head = null
+				C.update_inv_head()
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(loc, pick(P.hitsound), volume, TRUE, -1)

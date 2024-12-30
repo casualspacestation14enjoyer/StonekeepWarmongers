@@ -210,12 +210,11 @@
 	scan_for_target()
 
 /obj/item/pinpointer/crown/scan_for_target()
-	var/datum/game_mode/warfare/W = SSticker.mode
 	switch(team)
 		if(RED_WARTEAM)
-			target = W.blucrown
+			target = locate(/obj/item/clothing/head/roguetown/crownblu in world)
 		if(BLUE_WARTEAM)
-			target = W.redcrown
+			target = locate(/obj/item/clothing/head/roguetown/crownred in world)
 
 /obj/item/pinpointer/crown/toggle_on()
 	if(!team)

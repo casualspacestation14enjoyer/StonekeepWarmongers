@@ -88,3 +88,67 @@
 	caliber = "cannoball"
 	max_ammo = 1
 	start_empty = TRUE
+
+// artillery (fucking OP)
+
+/obj/structure/bombard
+	name = "bombardier"
+	desc = ""
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "cannona" // placeholder
+	anchored = FALSE
+	density = TRUE
+	max_integrity = 9999
+	drag_slowdown = 1 // If it took so long it would be not really fun.
+	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
+	var/plusx = 0
+	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
+
+/obj/structure/bombard/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
+		if(loaded)
+			return
+		user.visible_message("<span class='notice'>\The [user] begins loading \the [I] into \the [src].</span>")
+		playsound(src, 'sound/combat/cannon_loading.ogg', 35)
+		if(!do_after(user, 5 SECONDS, TRUE, src))
+			return
+		I.forceMove(src)
+		loaded = I
+		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
+		playsound(src, 'sound/foley/trap_arm.ogg', 65)
+	if(istype(I, /obj/item/flashlight/flare/torch))
+		var/obj/item/flashlight/flare/torch/LR = I
+		if(!loaded)
+			return
+		if(LR.on)
+			playsound(src.loc, 'sound/items/firelight.ogg', 100)
+			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
+			fire()
+	else
+		return ..()
+
+/obj/structure/bombard/proc/fire()
+	for(var/mob/living/carbon/H in hearers(7, src))
+		shake_camera(H, 6, 5)
+		H.blur_eyes(4)
+		if(prob(30))
+			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
+	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
+		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
+		H.throw_at(turfa, 2, 1, null, FALSE)
+		H.take_overall_damage(45)
+		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
+	flick("cannona_fire", src)
+	if(!loaded)
+		return
+	QDEL_NULL(loaded)
+	SSticker.musketsshot++ // ????
+
+	var/oldx = x
+	var/newx = oldx + plusx
+
+	src.x = newx
+
+	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
+	sleep(4)
+	new /obj/effect/particle_effect/smoke(get_turf(src))

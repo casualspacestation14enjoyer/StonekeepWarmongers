@@ -212,9 +212,9 @@
 /obj/item/pinpointer/crown/scan_for_target()
 	switch(team)
 		if(RED_WARTEAM)
-			target = locate(/obj/item/clothing/head/roguetown/crownblu in world)
+			target = locate(/obj/item/clothing/head/roguetown/crownblu) in world
 		if(BLUE_WARTEAM)
-			target = locate(/obj/item/clothing/head/roguetown/crownred in world)
+			target = locate(/obj/item/clothing/head/roguetown/crownred) in world
 
 /obj/item/pinpointer/crown/toggle_on()
 	if(!team)

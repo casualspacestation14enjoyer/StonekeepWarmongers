@@ -52,6 +52,7 @@
 	can_buckle = 1
 	pixel_x = -32
 	max_integrity = 999999
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	buckle_lying = FALSE
 
 /obj/structure/throne/post_buckle_mob(mob/living/M)

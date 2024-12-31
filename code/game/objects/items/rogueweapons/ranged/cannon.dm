@@ -101,7 +101,7 @@
 	max_integrity = 9999
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
-	var/plusx = 0
+	var/plusy = 0
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
@@ -144,10 +144,10 @@
 	QDEL_NULL(loaded)
 	SSticker.musketsshot++ // ????
 
-	var/oldx = x
-	var/newx = oldx + plusx
+	var/oldy = y
+	var/newy = oldy + plusy
 
-	var/turf/epicenter = locate(newx,y,z)
+	var/turf/epicenter = locate(x,newy,z)
 	var/obj/effect/warning/G = new(epicenter)
 
 	spawn(5 SECONDS)

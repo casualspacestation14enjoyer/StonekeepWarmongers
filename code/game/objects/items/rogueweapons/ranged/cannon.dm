@@ -93,7 +93,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = ""
+	desc = "Artillerija!"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "cannona" // placeholder
 	anchored = FALSE
@@ -101,8 +101,14 @@
 	max_integrity = 9999
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
-	var/plusy = 0
+	var/plusy = 0 // no pussy jokes.
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
+
+/obj/structure/bombard/attack_right(mob/user)
+	. = ..()
+	var/agka = input(user, "Insert plus Y coordinate (negatives allowed)", "WARMONGERS") as null|num
+	if(agka)
+		plusy = agka
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))

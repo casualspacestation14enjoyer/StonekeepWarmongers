@@ -5,7 +5,8 @@
 									"WOODEN BALLS",\
 									"CROWN POINTER",\
 									"LEAD BALLS",\
-									"LARGE LEAD BALLS")
+									"LARGE LEAD BALLS",\
+									"BOMBARDIER")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
@@ -154,6 +155,8 @@
 			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
 			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
 			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
+		if("BOMBARDIER")
+			new /obj/structure/bombard(H.loc)
 
 ///////////////////////////// RED ///////////////////////////////////////
 

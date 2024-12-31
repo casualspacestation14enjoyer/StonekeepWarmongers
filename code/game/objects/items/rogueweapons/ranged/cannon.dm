@@ -58,7 +58,7 @@
 		H.throw_at(turfa, 4, 1, null, FALSE)
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
-	flick("cannona_fire", src)
+	flick("cannona_firea", src)
 	if(!loaded)
 		return
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(get_turf(src))
@@ -95,7 +95,7 @@
 	name = "bombardier"
 	desc = "Artillerija!"
 	icon = 'icons/roguetown/misc/structure.dmi'
-	icon_state = "cannona" // placeholder
+	icon_state = "bombardier"
 	anchored = FALSE
 	density = TRUE
 	max_integrity = 9999
@@ -146,7 +146,7 @@
 		H.throw_at(turfa, 3, 1, null, FALSE)
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
-	flick("cannona_fire", src)
+	flick("bombardier_firea", src)
 	SSticker.musketsshot++ // ????
 
 	var/oldy = y

@@ -150,7 +150,7 @@
 	var/turf/epicenter = locate(newx,y,z)
 	var/obj/effect/warning/G = new(epicenter)
 
-	spawn(3 SECONDS)
+	spawn(5 SECONDS)
 		qdel(G)
 		explosion(epicenter, heavy_impact_range = 2, light_impact_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
 

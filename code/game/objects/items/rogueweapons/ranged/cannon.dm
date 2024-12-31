@@ -93,7 +93,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = "Artillerija!"
+	desc = "Artiljerija! Load in a bomb and set the azirath, then light."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
 	anchored = FALSE

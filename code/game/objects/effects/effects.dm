@@ -68,3 +68,7 @@
 
 /obj/effect/dummy/singularity_act()
 	return
+
+/obj/effect/warning
+	name = "GET OUT! NOW!"
+	icon_state = "trap"

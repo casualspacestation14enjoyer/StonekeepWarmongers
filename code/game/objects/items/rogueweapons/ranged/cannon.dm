@@ -55,7 +55,7 @@
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
-		H.throw_at(turfa, 2, 1, null, FALSE)
+		H.throw_at(turfa, 4, 1, null, FALSE)
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
@@ -135,7 +135,7 @@
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 	for(var/mob/living/carbon/human/H in get_step(src, turn(dir, 180)))
 		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
-		H.throw_at(turfa, 2, 1, null, FALSE)
+		H.throw_at(turfa, 3, 1, null, FALSE)
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
@@ -147,7 +147,12 @@
 	var/oldx = x
 	var/newx = oldx + plusx
 
-	src.x = newx
+	var/turf/epicenter = locate(newx,y,z)
+	var/obj/effect/warning/G = new(epicenter)
+
+	spawn(3 SECONDS)
+		qdel(G)
+		explosion(epicenter, heavy_impact_range = 2, light_impact_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
 
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(4)

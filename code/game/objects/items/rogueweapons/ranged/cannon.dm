@@ -102,16 +102,18 @@
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
-	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
+	var/obj/item/bomb/loaded
 
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
-	var/agka = input(user, "Insert plus Y coordinate (negatives allowed)", "WARMONGERS") as null|num
+	var/agka = input(user, "Insert plus azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
 	if(agka)
 		plusy = agka
+		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
+		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
+	if(istype(I, /obj/item/bomb))
 		if(loaded)
 			return
 		user.visible_message("<span class='notice'>\The [user] begins loading \the [I] into \the [src].</span>")
@@ -145,9 +147,6 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_fire", src)
-	if(!loaded)
-		return
-	QDEL_NULL(loaded)
 	SSticker.musketsshot++ // ????
 
 	var/oldy = y
@@ -158,7 +157,10 @@
 
 	spawn(5 SECONDS)
 		qdel(G)
-		explosion(epicenter, heavy_impact_range = 2, light_impact_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		loaded.forceMove(epicenter)
+		loaded.light()
+		loaded.explode(TRUE)
+		QDEL_NULL(loaded)
 
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(4)

@@ -128,6 +128,8 @@
 		var/obj/item/flashlight/flare/torch/LR = I
 		if(!loaded)
 			return
+		if(!SSticker.warfare_ready_to_die)
+			return
 		if(LR.on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")

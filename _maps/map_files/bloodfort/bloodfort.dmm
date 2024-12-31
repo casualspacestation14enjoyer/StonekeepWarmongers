@@ -7,8 +7,10 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
 "aJ" = (
-/obj/structure/fluff/railing/fence,
 /obj/structure/warfarebarrier,
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "bc" = (
@@ -586,6 +588,16 @@
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/indoors/town)
+"wt" = (
+/obj/structure/warfarebarrier,
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "wB" = (
 /turf/closed/wall/mineral/rogue/stonebrick/climbable,
 /area/rogue/outdoors)
@@ -981,8 +993,10 @@
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/indoors/town)
 "JQ" = (
-/obj/structure/fluff/railing/fence,
 /obj/structure/warfarebarrier,
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "Kn" = (
@@ -1074,7 +1088,6 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
 "NI" = (
-/obj/structure/barricade/wooden/rogue,
 /obj/structure/warfarebarrier/red,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
@@ -1096,6 +1109,16 @@
 	pixel_y = -32
 	},
 /turf/open/floor/rogue/cobble,
+/area/rogue/outdoors)
+"OP" = (
+/obj/structure/warfarebarrier,
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
+/obj/structure/fluff/railing/fence{
+	dir = 4
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "OS" = (
 /turf/open/floor/rogue/carpet/lord/left,
@@ -2950,7 +2973,7 @@ uU
 iS
 fC
 fC
-JQ
+OP
 eW
 IO
 uU
@@ -3258,7 +3281,7 @@ fC
 uU
 uU
 uU
-JQ
+wt
 QQ
 QQ
 uU
@@ -6477,9 +6500,9 @@ Oa
 Oa
 Oa
 Oa
-KL
-UI
-dD
+rC
+rC
+Io
 Cx
 rk
 rk
@@ -6554,7 +6577,7 @@ Oa
 Oa
 Oa
 Oa
-KL
+UI
 UI
 dD
 FU
@@ -6631,9 +6654,9 @@ Oa
 Oa
 Oa
 Oa
-KL
-UI
-dD
+rC
+rC
+Io
 Cx
 rk
 rk
@@ -8480,9 +8503,9 @@ pH
 pH
 pH
 pH
-UI
-UI
-wZ
+rC
+rC
+rC
 Wb
 zn
 Wb
@@ -11560,9 +11583,9 @@ OV
 OV
 OV
 OV
-UI
-UI
-wZ
+rC
+rC
+rC
 Wb
 dZ
 Wb

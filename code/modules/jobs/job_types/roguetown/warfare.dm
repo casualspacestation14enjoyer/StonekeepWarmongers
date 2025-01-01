@@ -882,6 +882,8 @@
 							loaded_bomb.forceMove(get_turf(C))
 							loaded_bomb.light()
 							loaded_bomb.explode()
+							QDEL_NULL(loaded_bomb)
+							loaded_bomb = null
 			else if(isanimal(L))
 				var/mob/living/simple_animal/SA = L
 				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.

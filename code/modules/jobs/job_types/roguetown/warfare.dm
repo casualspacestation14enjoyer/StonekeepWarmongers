@@ -6,7 +6,8 @@
 									"CROWN POINTER",\
 									"LEAD BALLS",\
 									"LARGE LEAD BALLS",\
-									"BOMBARDIER")
+									"BOMBARDIER",\
+									"TETSUBISHI CALTROPS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
@@ -157,6 +158,10 @@
 			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
 		if("BOMBARDIER")
 			new /obj/structure/bombard(H.loc)
+		if("TETSUBISHI CALTROPS")
+			new /obj/item/rogue/caltrop(H.loc)
+			new /obj/item/rogue/caltrop(H.loc)
+			new /obj/item/rogue/caltrop(H.loc)
 
 ///////////////////////////// RED ///////////////////////////////////////
 
@@ -825,9 +830,25 @@
 	desc = "Grenzels call it a caltrop, Heartfeltians on the other hand a tetsubishi. Both are the same thing, they just have different names. One sane, the second a random mess of letters."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "tetsubishi"
+	var/obj/item/bomb/loaded_bomb = null
 	w_class = WEIGHT_CLASS_TINY
 	slot_flags = ITEM_SLOT_HIP
 	embedding = list("embedded_unsafe_removal_time" = 40, "embedded_pain_chance" = 40, "embedded_pain_multiplier" = 1, "embed_chance" = 100, "embedded_fall_chance" = 0)
+
+/obj/item/rogue/caltrop/attackby(obj/item/I, mob/user, params)
+	. = ..()
+	if(istype(I, /obj/item/bomb))
+		I.forceMove(src)
+		loaded_bomb = I
+		to_chat(user, "<span class='notice'>You attach \the [I] on \the [src].</span>")
+		icon_state = "mine"
+		playsound(src, 'sound/foley/trap_arm.ogg', 65)
+
+/obj/item/rogue/caltrop/bombed/Initialize()
+	. = ..()
+	var/obj/item/bomb/B = new(src)
+	loaded_bomb = B
+	icon_state = "mine"
 
 /obj/item/rogue/caltrop/Crossed(AM as mob|obj)
 	if(isturf(loc))
@@ -857,6 +878,10 @@
 							BP.add_embedded_object(src)
 						C.emote("agony")
 						icon_state = "[icon_state]-bloody"
+						if(loaded_bomb)
+							loaded_bomb.forceMove(get_turf(C))
+							loaded_bomb.light()
+							loaded_bomb.explode()
 			else if(isanimal(L))
 				var/mob/living/simple_animal/SA = L
 				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.

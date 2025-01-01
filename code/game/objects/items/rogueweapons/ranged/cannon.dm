@@ -129,6 +129,7 @@
 		if(!loaded)
 			return
 		if(!SSticker.warfare_ready_to_die)
+			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		if(LR.on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)

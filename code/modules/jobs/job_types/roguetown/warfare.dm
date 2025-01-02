@@ -33,7 +33,7 @@
 
 		if(aspect_chosen(/datum/round_aspect/cripplefight))
 			var/datum/brain_trauma/severe/paralysis/paraplegic/T = new()
-			var/obj/vehicle/ridden/wheelchair/wheels = new(get_turf(HU))
+			var/obj/vehicle/ridden/wheelchair/wheels = new(HU.loc)
 
 			HU.gain_trauma(T, TRAUMA_RESILIENCE_ABSOLUTE)
 			wheels.buckle_mob(HU)

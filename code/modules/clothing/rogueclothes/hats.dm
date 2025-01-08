@@ -196,6 +196,11 @@
 	icon_state = "fancy_hat"
 	item_state = "fancyhat"
 
+/obj/item/clothing/head/roguetown/offitser
+	name = "officer cap"
+	icon_state = "officerhat"
+	item_state = "officerhat"
+
 /obj/item/clothing/head/roguetown/bardhat
 	name = "hat"
 	icon_state = "bardhat"

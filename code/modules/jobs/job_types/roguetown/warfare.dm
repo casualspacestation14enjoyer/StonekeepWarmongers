@@ -960,7 +960,7 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/rapier
 	beltr = GetSidearmForWarfare()
-	head = /obj/item/clothing/head/roguetown/fancyhat
+	head = /obj/item/clothing/head/roguetown/offitser
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
 	backl = /obj/item/rogue/musicpack

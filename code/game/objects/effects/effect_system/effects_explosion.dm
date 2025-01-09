@@ -10,7 +10,7 @@
 
 /obj/effect/particle_effect/expl_particles/LateInitialize()
 	var/direct = pick(GLOB.alldirs)
-	var/steps_amt = pick(1;25,2;50,3,4;200)
+	var/steps_amt = DOOM_random() % 50 + 1
 	for(var/j in 1 to steps_amt)
 		step(src, direct)
 		sleep(1)

@@ -8,4 +8,4 @@
 	flag = "bullet"
 	hitsound_wall = "ricochet"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
-	muzzle_type = /obj/effect/projectile/muzzle/bullet
+	muzzle_type = /obj/effect/temp_visual/dir_setting/firing_effect

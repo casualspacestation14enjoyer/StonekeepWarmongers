@@ -165,8 +165,8 @@
 		hitx = target.pixel_x + p_x - 16
 		hity = target.pixel_y + p_y - 16
 	else
-		hitx = target.pixel_x + rand(-8, 8)
-		hity = target.pixel_y + rand(-8, 8)
+		hitx = target.pixel_x + rand(-19, 19)
+		hity = target.pixel_y + rand(-19, 19)
 
 	if(!nodamage && (damage_type == BRUTE || damage_type == BURN) && iswallturf(target_loca) && prob(75))
 		var/turf/closed/wall/W = target_loca

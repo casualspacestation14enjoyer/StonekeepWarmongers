@@ -733,6 +733,7 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat
+	mask = /obj/item/clothing/mask/rogue/platemask
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
 	backr = /obj/item/rogueweapon/sword/long/reskin
@@ -776,6 +777,7 @@
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	mask = /obj/item/clothing/mask/rogue/platemask
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(/obj/item/bomb = 3, /obj/item/flint = 1, /obj/item/rogueweapon/shovel = 1)

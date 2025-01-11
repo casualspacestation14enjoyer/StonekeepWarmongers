@@ -59,7 +59,7 @@
 		if(MOVE_INTENT_SNEAK)
 			mod = 6
 	var/spdchange = (10-STASPD)*0.1
-	spdchange = clamp(spdchange, -0.5, 1)  //if this is not clamped, jesters can run faster than they should.
+	//spdchange = clamp(spdchange, -0.5, 1)  //if this is not clamped, jesters can run faster than they should.
 	mod = mod+spdchange
 	//maximum speed is achieved at 15 speed.
 	add_movespeed_modifier(MOVESPEED_ID_MOB_WALK_RUN_CONFIG_SPEED, TRUE, 100, override = TRUE, multiplicative_slowdown = mod)

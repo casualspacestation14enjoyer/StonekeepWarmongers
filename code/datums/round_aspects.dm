@@ -10,6 +10,10 @@
 	name = "Nothing!"
 	description = "Normality above all."
 
+/datum/round_aspect/secret // does nothing, but people will be gaslighted into thinking it does
+	name = "Secret!"
+	description = "This round aspect is secret!"
+
 /datum/round_aspect/futurewar
 	name = "The Future of Warfare"
 	description = "These levershots are the future!"

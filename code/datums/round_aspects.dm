@@ -33,12 +33,9 @@
 	name = "Explosive Death"
 	description = "A terrible curse has descended upon us! If we die we explode!"
 
-/datum/round_aspect/noguns // wow
-	name = "Oops! No guns!"
-	description = "A terrible logistics disaster caused all of us to be without firearms."
-
-/datum/round_aspect/noguns/apply()
-	SSticker.warfare_techlevel = 3
+/datum/round_aspect/noreloading
+	name = "God of War's Blessing"
+	description = "We are blessed!"
 	
 /datum/round_aspect/sexmongers
 	name = "SEXMONGERS"
@@ -57,6 +54,18 @@
 /datum/round_aspect/cripplefight
 	name = "Cripple Fight"
 	description = "Sadly, due to a previous skirmish everyone has their legs crippled. Thankfully we have been provided with wheelchairs!"
+
+/datum/round_aspect/monkwarfare
+	name = "Monkers"
+	description = "Everyone on the battlefield is a natural in hand-to-hand combat."
+
+/datum/round_aspect/kicking
+	name = "Kicking Nuts"
+	description = "Every soldier attended their mandatory testicular warfare class."
+
+/datum/round_aspect/explodeatwill
+	name = "Explode at Will"
+	description = "Shouting your war cry causes you to explode due to a bomb inside your anus."
 
 /datum/round_aspect/supplypoints
 	name = "Favors in the Right Places"

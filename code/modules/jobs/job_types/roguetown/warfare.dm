@@ -31,6 +31,9 @@
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
 
+		if(aspect_chosen(/datum/round_aspect/kicking))
+			ADD_TRAIT(HU, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+
 		if(aspect_chosen(/datum/round_aspect/cripplefight))
 			var/datum/brain_trauma/severe/paralysis/paraplegic/T = new()
 			var/obj/vehicle/ridden/wheelchair/wheels = new(HU.loc)
@@ -259,6 +262,8 @@
 		var/mob/living/carbon/human/H = L
 		if(aspect_chosen(/datum/round_aspect/nomood))
 			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+		if(aspect_chosen(/datum/round_aspect/monkwarfare))
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
@@ -656,6 +661,8 @@
 		var/mob/living/carbon/human/H = L
 		if(aspect_chosen(/datum/round_aspect/nomood))
 			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+		if(aspect_chosen(/datum/round_aspect/monkwarfare))
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM

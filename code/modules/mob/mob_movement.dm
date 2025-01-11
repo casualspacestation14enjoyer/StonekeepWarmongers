@@ -154,7 +154,7 @@
 //	if(mob.m_intent == MOVE_INTENT_RUN) //backpedal and strafe slowdown for quick intent
 	if(L.fixedeye || L.tempfixeye)
 		if(L.dir != direct)
-			add_delay += 2
+			//add_delay += 2
 			if(L.m_intent == MOVE_INTENT_RUN)
 				L.toggle_rogmove_intent(MOVE_INTENT_WALK)
 	else

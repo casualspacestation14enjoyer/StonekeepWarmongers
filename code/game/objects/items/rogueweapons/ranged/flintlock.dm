@@ -86,6 +86,9 @@
 			if(H.warfare_faction == U.warfare_faction)
 				ramtime = ramtime - 0.5
 
+	if(aspect_chosen(/datum/round_aspect/noreloading))
+		ramtime = 0.1
+
 	if(istype(A, /obj/item/rogue/ramrod))
 		if(!user.is_holding(src))
 			to_chat(user, "<span class='warning'>I need to hold \the [src] to ram it!</span>")

@@ -79,7 +79,10 @@ GLOBAL_VAR(restart_counter)
 		fdel(RESTART_COUNTER_PATH)
 
 	if(prob(1))
-		name = "WARMONGRELS"
+		if(prob(1))
+			name = "super pregnancy sex simulator ojh my gawd"
+		else
+			name = "WARMONGRELS"
 	else
 		name = "WARMONGERS"
 

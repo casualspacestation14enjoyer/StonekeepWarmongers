@@ -416,7 +416,9 @@
 	color = "#a32121"
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
-	color = "#8747b1"
+	color = "#ffffff"
+	icon_state = "grenzcoat"
+	item_state = "grenzcoat"
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	color = "#3c3a38"

@@ -74,6 +74,15 @@
 	if(BP)
 		testing("projwound")
 		var/newdam = P.damage * (100-blocked)/100
+		if(istype(BP, /obj/item/bodypart/head))
+			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
+			playsound(src, "headcrush", 100, vary = FALSE)
+			newdam = newdam * 2
+			var/obj/item/clothing/head/hed = head
+			if(hed)
+				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
+				head = null
+				update_inv_head()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE
 

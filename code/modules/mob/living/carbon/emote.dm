@@ -50,13 +50,13 @@
 
 /datum/emote/living/carbon/warcry/run_emote(mob/user, params, type_override, intentional, targetted)
 	. = ..()
-	//var/warcry = "WAR!!!"
+	var/warcry = "WAR!!!"
 	var/sound2play
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				//warcry = "For honor! For Heartfelt!"
+				warcry = "For honor! For Heartfelt!"
 				if(H.gender == MALE)
 					if(prob(1))
 						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
@@ -68,7 +68,7 @@
 					else
 						sound2play = sound(pick('sound/vo/wc/felt/warcry_female_1.ogg','sound/vo/wc/felt/warcry_female_2.ogg'))
 			if(BLUE_WARTEAM)
-				//warcry = "Glory in the stars!"
+				warcry = "Glory in the stars!"
 				if(H.gender == MALE)
 					if(prob(1))
 						sound2play = sound('sound/vo/wc/felt/warcry_male_rare.ogg')
@@ -82,8 +82,13 @@
 	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
 	user.shoutbubble()
 	ping_sound(user)
-	
-	//user.say(warcry)
+
+	if(aspect_chosen(/datum/round_aspect/explodeatwill))
+		user.say(warcry)
+		spawn(2 SECONDS)
+			var/obj/item/bomb/B = new(get_turf(user))
+			B.light()
+			B.explode(TRUE)
 
 /mob/proc/shoutbubble()
 	var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)

@@ -195,3 +195,18 @@
 				return list("shrink" = 0.7,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
 				return list("shrink" = 0.7,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+
+//...............Kaizoku Content..................
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
+	name = "hankyu bow"
+	desc = "A smaller version of the asymmetrical bow named Yumi. It must be shot overhead, and it is perfect for horseback use."  
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "hankyubow"
+	item_state = "hankyubow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/long/yumi
+	name = "yumi bow"
+	desc = "The asymmetrical and elegant piece of Kyudo warfare, hard-hitting and powerful, bringing fear to orcish hordes and demons on a whim."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "yumibow"
+	item_state = "yumibow"

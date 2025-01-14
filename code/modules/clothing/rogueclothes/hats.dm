@@ -198,8 +198,13 @@
 
 /obj/item/clothing/head/roguetown/offitser
 	name = "officer cap"
+	desc = "Standard issue for officers in the Grenzelhoft Imperiate."
 	icon_state = "officerhat"
 	item_state = "officerhat"
+	flags_inv = HIDEHAIR
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 
 /obj/item/clothing/head/roguetown/bardhat
 	name = "hat"
@@ -405,7 +410,35 @@
 
 /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 	desc = "A pickelhaube, standard issue of the Grenzelhoft Imperiate. On it is a Psycross, with the words \"And by this sign you shall conquer\" etched onto it."
+	name = "pickelhaube"
 	icon_state = "picklehat"
+	will_cover = HEAD|HAIR|EARS
+	will_hide = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
+	desc = "A new design by the Grenzelhoft Imperiate. Provides excellent head protection, especially to the back of the neck."
+	name = "stahlhelm"
+	icon_state = "steelhelm"
+	will_cover = HEAD|HAIR|EARS
+	will_hide = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/roguetown/helmet/hussarhelm
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
+	name = "hussar helm"
+	desc = "A helmet worn by Grenzelhoftian cavalry, provides excellent protection without sacrificing vision."
+	will_cover = HEAD|HAIR|NOSE
+	icon_state = "hussarhelm"
+	sleevetype = null
+	sleeved = null
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
+	dynamic_hair_suffix = "+generic"
+	bloody_icon_state = "helmetblood"
+	anvilrepair = /datum/skill/craft/armorsmithing
+	blocksound = PLATEHIT
+	max_integrity = 200
 
 /obj/item/clothing/head/roguetown/helmet/sallet
 	name = "sallet"
@@ -889,3 +922,89 @@
 		ADD_TRAIT(user, TRAIT_NOSTINK,"Dead Nose")
 	else
 		REMOVE_TRAIT(user, TRAIT_NOSTINK,"Dead Nose")
+
+//.................Kaizoku Content...................
+/obj/item/clothing/head/roguetown/heartfelt
+	name = "heartfelt zunari kabuto"
+	desc = "An Etchu Zunari kabuto with Heartfelt markings. It lacks a demonic \
+	mask for intimidation purposes - yet remains just as effective, besides showing \
+	the incredible artistic value that upholds Heartfelt's culture."
+	body_parts_covered = HEAD|HAIR|EARS //maskless, protects less of the face.
+	flags_inv = HIDEEARS
+	icon_state = "heartfelt_kabuto"
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	emote_environment = 3
+
+/obj/item/clothing/head/roguetown/shinobi_zukin
+	name = "shinobi hood"
+	icon_state = "shinobi_zukin"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	desc = "A hood worn by members of Shinobi clans to conceal their identity and blend into the shadows. Unsuitable for espionage for being too obvious."
+	icon = 'icons/roguetown/clothing/head.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
+	name = "kaizoku hat"
+	desc = "A distinguished hat with three sides of the brim turned up and laced, \
+	forming a triangle. Usually used by the Fog Island's privateer navy - or rich fellows on Heartfelt."
+	icon_state = "tricorn"
+
+/obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku/heartfelt
+	color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/head/roguetown/helmet/jingasa //the same as a Kettle. Just don't want the 64x64 bits.
+	name = "jingasa"
+	desc = "A metal gasa in conical shape. Mainly worn by Ashigarus, it protects against \
+	arrows and direct blow. Most efficient together with padding underneath due to the \
+	large space for the helmet to move after hit, easing impact."
+	icon_state = "jingasa"
+	flags_inv = HIDEEARS
+	icon = 'icons/roguetown/clothing/head.dmi'
+	bloody_icon_state = "helmetblood_big"
+	flags_inv = HIDEEARS
+	smeltresult = /obj/item/ash
+	flags_inv = HIDEEARS
+
+/obj/item/clothing/head/roguetown/helmet/zijinguan
+	name = "zijinguan" //This is actually a ming dynasty helmet
+	desc = "A cheaper version of the Myrmidon helmet that dates back to the age of guardianship, \
+	yet still remains efficient. This helmet has became the symbol of abyssariad military culture \
+	of the commoner class alongside the jingasa."
+	icon_state = "zijinguan"
+	flags_inv = HIDEEARS
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	detail_tag = "_detail"
+	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/roguetown/helmet/skullcap/rattan
+	name = "tengpai dou"
+	icon_state = "rattan_helmet"
+	desc = "A cheap abyssariad helmet made from stripped, oil boiled rattan and iron. \
+	Used only by militia and the humble LinYou raiders. Less protective, but can be easily repaired."
+	flags_inv = HIDEEARS
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	body_parts_covered = HEAD|HAIR|EARS
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	sewrepair = TRUE
+
+/obj/item/clothing/head/roguetown/tengai/gasa
+	name = "gasa"
+	icon_state = "gasa"
+	desc = "A conical straw hat used to protect from the sun and rain."
+	flags_inv = HIDEEARS
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64

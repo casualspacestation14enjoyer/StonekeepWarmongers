@@ -205,3 +205,22 @@
 	color = null
 	blocksound = PLATEHIT
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+//....................Kaizoku Content...................
+/obj/item/clothing/shoes/roguetown/boots/armor/suneate
+	name = "suneate boots"
+	desc = "Armored suneate made from steel offering heavy protection against both melee and ranged attacks."
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	icon_state = "suneate"
+	item_state = "suneate"
+
+/obj/item/clothing/shoes/roguetown/boots/jikatabi
+	name = "jikatabi"
+	desc = "A standard tabi that keeps the toes flexible and healthy, avoiding calluses of long expeditions. However, it looks rather goofy for the non-islanders."
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	icon_state = "jikatabi"
+	item_state = "jikatabi"

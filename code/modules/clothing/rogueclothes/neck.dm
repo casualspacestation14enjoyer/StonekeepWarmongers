@@ -244,3 +244,17 @@
 	icon_state = "surgcollar"
 	item_state = "surgcollar"
 	sellprice = 15
+
+//................Kaizoku Update.................
+/obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
+	name = "karuta zukin"
+	desc = "A protective hood composed of rectangular plates sewn onto a fabric backing, offering a more solid \
+	defense while remaining flexible."
+	icon_state = "karuta_zukin"
+	item_state = "karuta_zukin"
+	icon = 'icons/roguetown/clothing/neck.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/neck.dmi'
+	adjustable = CAN_CADJUST
+
+/obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/heartfelt
+    color = CLOTHING_HEARTFELT

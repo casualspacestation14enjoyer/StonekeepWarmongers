@@ -417,8 +417,11 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
 	color = "#ffffff"
+	name = "officers coat"
+	desc = "A heavy dark coat worn by officers of the Grenzelhoft Imperiate."
 	icon_state = "grenzcoat"
 	item_state = "grenzcoat"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	color = "#3c3a38"
@@ -509,6 +512,14 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	boobed = TRUE
 	max_integrity = 400
 
+/obj/item/clothing/suit/roguetown/armor/plate/half/hussar
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "hussar cuirass"
+	desc = "A cuirass belonging to a Grenzelhoftian Hussar. Such armor has two wings placed on its back, to add to its intimidation factor. The sight of a hundred Hussars is sometimes enough to turn the tide of battle."
+	icon_state = "hussarplate"
+	item_state = "hussarplate"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	max_integrity = 400
 
 /obj/item/clothing/suit/roguetown/armor/rare
 	icon = 'icons/roguetown/topadd/takyon/Racial_Armour.dmi'
@@ -623,3 +634,88 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 		AddComponent(/datum/component/squeak, list('sound/foley/footsteps/armor/fullplate (1).ogg',\
 													'sound/foley/footsteps/armor/fullplate (2).ogg',\
 													'sound/foley/footsteps/armor/fullplate (3).ogg'), 100)
+
+//..............Kaizoku Content.................
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad
+	name = "abyssariad kikko gusoku"
+	desc = "The Heartfelt design reforged in the ways of Fog Islands to better supply quick-moving zamurai cavalry, replacing the heavier and costier O-Yoroi lamellar."
+	body_parts_covered = CHEST|GROIN|VITALS|LEGS //does not protect the arms. Countering the Brigandine that protects the arms, but not legs.
+	icon_state = "kikkoabyssal"
+	item_state = "kikkoabyssal"
+	sellprice = 65 //not unique.
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
+    color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
+	name = "yoroi hitatare"
+	desc = "A traditional Abyssariad padded robe with wide sleeves, made to be worn beneath armor. It is comfortable and thick, but not very protective compared to a ruankai, but can be used all the time without raising suspicion."
+	icon_state = "yoroihitatare"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	var/picked = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
+    color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
+	name = "shozoku"
+	desc = "The main garment used by Ninjas and Kunoichis to blend into the night. Not viable during daylight, but it is easy to store anywhere, and any time."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "shinobi"
+	item_state = "shinobi"
+	blocksound = SOFTHIT
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
+	name = "kusari katabira"
+	desc = "Or simply 'single-layer chainmail robe', this armor is made of riveted steel rings  \
+	patched together with slim plates protecting elbows. The armor reaches down to the legs and arms."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "kusari"
+	item_state = "kusari"
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand
+	name = "heartfelt kikko coat"
+	desc = "A coat of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
+	icon_state = "heartfelt_kikkocoat"
+	item_state = "heartfelt_kikkocoat"
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand/female
+	name = "heartfelt kikko dress"
+	desc = "A dress of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
+	icon_state = "heartfelt_kikkodress"
+	item_state = "heartfelt_kikkodress"	
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
+	name = "heartfelt kikko gusoku"
+	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of hexagon plates, for important nobility."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "heartfelt_kikko"
+	item_state = "heartfelt_kikko"
+	allowed_sex = list(MALE,FEMALE)
+	color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
+	name = "san mai-do"
+	desc = "A cheap cuirass with three main plates riveted together with cloth. Flexible and dynamic, integral for many poor footsoldiers"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "sanmaido"	
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/rattan //New armor; Iron-to-steel tier.
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "rattan armor"
+	desc = "A flexible and durable full body coat made from oil-boiled rattan and layered iron wires. Used by LinYou Raiders, it can be easily repaired."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "rattan"
+	item_state = "rattan"

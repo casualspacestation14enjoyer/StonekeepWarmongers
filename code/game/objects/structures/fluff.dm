@@ -317,6 +317,9 @@
 	var/mob/living/carbon/human/H
 	if(ishuman(user))
 		H = user
+	if(H.warfare_faction == team)
+		to_chat(H, "<span class='info'>This belongs to us.</span>")
+		return
 	if(!do_after(user, 10 SECONDS, TRUE, src))
 		return
 	switch(team)

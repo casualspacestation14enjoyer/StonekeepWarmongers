@@ -33,7 +33,8 @@
 
 		if(aspect_chosen(/datum/round_aspect/kicking))
 			ADD_TRAIT(HU, TRAIT_NUTCRACKER, TRAIT_GENERIC)
-
+			
+		/*
 		if(aspect_chosen(/datum/round_aspect/cripplefight))
 			var/datum/brain_trauma/severe/paralysis/paraplegic/T = new()
 			var/obj/vehicle/ridden/wheelchair/wheels = new(HU.loc)
@@ -41,7 +42,7 @@
 			HU.gain_trauma(T, TRAUMA_RESILIENCE_ABSOLUTE)
 			wheels.buckle_mob(HU)
 
-		/*
+		
 		if(aspect_chosen(/datum/round_aspect/goblino))
 			HU.set_species(/datum/species/goblin)
 		*/

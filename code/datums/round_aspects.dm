@@ -43,7 +43,7 @@
 	
 /datum/round_aspect/sexmongers
 	name = "SEXMONGERS"
-	description = "freeky.... Sex is enabled on the battlefield!"
+	description = "freeky...."
 
 /* People aren't ready for this.
 /datum/round_aspect/goblino

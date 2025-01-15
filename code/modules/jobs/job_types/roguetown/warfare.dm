@@ -210,7 +210,6 @@
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
-	head = /obj/item/clothing/head/roguetown/crownred
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
@@ -220,6 +219,8 @@
 	beltl = /obj/item/rogueweapon/sword/sabre/piandao/dec
 	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
 	cloak = /obj/item/clothing/cloak/heartfelt
+	if(SSmapping.config.map_name == "LD-Bloodfort")
+		head = /obj/item/clothing/head/roguetown/crownred
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
@@ -661,16 +662,19 @@
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/crownblu
 	backl = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
-	cloak = /obj/item/clothing/cloak/lordcloak
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/quiver/bullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	if(SSmapping.config.map_name == "LD-Bloodfort")
+		cloak = /obj/item/clothing/cloak/lordcloak
+		head = /obj/item/clothing/head/roguetown/crownblu
+	else
+		head = /obj/item/clothing/head/roguetown/commander
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)

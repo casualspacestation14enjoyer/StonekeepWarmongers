@@ -917,7 +917,7 @@ SUBSYSTEM_DEF(ticker)
 			W.reinforcements()
 		warfare_ready_to_die = TRUE
 		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/tension2.ogg')
+			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
 		for(var/obj/structure/warfarebarrier/red/WB in world)

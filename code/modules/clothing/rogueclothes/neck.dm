@@ -255,6 +255,3 @@
 	icon = 'icons/roguetown/clothing/neck.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/neck.dmi'
 	adjustable = CAN_CADJUST
-
-/obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/heartfelt
-    color = CLOTHING_HEARTFELT

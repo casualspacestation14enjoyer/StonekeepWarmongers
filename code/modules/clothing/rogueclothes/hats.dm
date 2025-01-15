@@ -206,6 +206,16 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 
+/obj/item/clothing/head/roguetown/commander //Will probably go unused, crown required for win conditions
+	name = "lords hat"
+	desc = "A hat commonly worn by commanders in the Grenzelhoft Imperiate, decorated with a shining gold skull."
+	icon_state = "grenzcommhat"
+	item_state = "grenzcommhat"
+	flags_inv = HIDEHAIR
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
 /obj/item/clothing/head/roguetown/bardhat
 	name = "hat"
 	icon_state = "bardhat"

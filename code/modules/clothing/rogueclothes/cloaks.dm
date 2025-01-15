@@ -980,7 +980,7 @@
 
 /obj/item/clothing/cloak/jinbaori/reddy
 	detail_color = CLOTHING_HEARTFELT
-	detail_tag = "_spl2"
+	detail_tag = "_box"
 	picked = TRUE
 
 /obj/item/clothing/cloak/jinbaori/reddy/equipped(mob/user, slot)
@@ -997,3 +997,7 @@
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+
+/obj/item/clothing/cloak/raincloak/mino/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)

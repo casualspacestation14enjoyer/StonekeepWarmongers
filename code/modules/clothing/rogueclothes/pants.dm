@@ -212,9 +212,6 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 
-/obj/item/clothing/under/roguetown/trou/tobi/heartfelt
-    color = CLOTHING_HEARTFELT
-
 /obj/item/clothing/under/roguetown/trou/leather/shinobizubon
 	name = "shinobi zubon"
 	desc = "Traditional flexible pants with loose fit around the legs with hardened leather tied under the cloth and ankles to prevent snagging and noise."

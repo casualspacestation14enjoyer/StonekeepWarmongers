@@ -73,7 +73,7 @@
 #define CLOTHING_WHITE			"#ffffff"
 #define CLOTHING_ORANGE			"#bd6606"
 #define CLOTHING_MAJENTA		"#962e5c"
-#define CLOTHING_HEARTFELT		"#f21f1f"
+#define CLOTHING_HEARTFELT		"#f02f2f"
 
 #define CLOTHING_WET			"#bbbbbb"
 

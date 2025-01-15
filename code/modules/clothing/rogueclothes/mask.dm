@@ -189,9 +189,7 @@
 
 /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
 	name = "ogrun mask"
-	icon_state = "colourable_onimask"
+	icon_state = "c_menyoroi"
 	max_integrity = 200
 	desc = "A mask that glorifies a Ogrun warrior. It portrays the mostly perfect perception of the race, so efficiently it became the standards for Fog island military due to its intimidation value."
 
-/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni/heartfelt
-	color = CLOTHING_HEARTFELT		

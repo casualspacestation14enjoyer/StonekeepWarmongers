@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	name = "barksteel"
-	desc = "Alternative names include 'firebow' and something along the lines of 'Musker' for Dwarven militias."
+	desc = "A firearm without a bayonet, typically used by marksmen."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -34,6 +34,9 @@
 	dropshrink = 0.7
 	associated_skill = /datum/skill/combat/flintlocks
 	var/ramtime = 5.5
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
+	icon_state = "barotrauma1"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
 	icon_state = "ironbarkmarksman"
@@ -119,11 +122,13 @@
 				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-	icon_state = "longgun_b"
+	icon_state = "barotrauma_b0"
+	desc = "A firearm of Fogland design, provided to Heartfelt to fight the Grenzelhofts."
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
+	desc = "A weapon that is common in the ranks of the armies of Grenzelhoft, it gets the job done."
 	icon_state = "ironbarker"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)

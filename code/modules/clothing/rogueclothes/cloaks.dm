@@ -272,18 +272,10 @@
 	desc = "A tabard with the lord's heraldic colors. This one is worn typically by guards."
 	color = CLOTHING_RED
 	detail_tag = "_spl"
-	detail_color = CLOTHING_PURPLE
-
-/obj/item/clothing/cloak/stabard/guard/reddy
-	detail_color = CLOTHING_YELLOW
-	picked = TRUE
-
-/obj/item/clothing/cloak/stabard/guard/reddy/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+	detail_color = CLOTHING_BLUE
 
 /obj/item/clothing/cloak/stabard/guard/bluey // They're the blue team but they don't have blue clothing, too late to change now
-	detail_color = CLOTHING_PURPLE
+	detail_color = CLOTHING_BLUE
 	color = CLOTHING_BLACK
 	picked = TRUE
 
@@ -914,3 +906,98 @@
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
+
+//...............Kaizoku content................
+/obj/item/clothing/cloak/jinbaori
+	name = "jinbaori"
+	icon_state = "jinbaori"
+	alternate_worn_layer = TABARD_LAYER
+	body_parts_covered = CHEST|GROIN
+	boobed = TRUE
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	var/picked
+
+/obj/item/clothing/cloak/jinbaori/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/cloak/jinbaori/attack_right(mob/user)
+	if(picked)
+		return
+	var/the_time = world.time
+	var/design = input(user, "Select a design.","Tabard Design") as null|anything in list("None", "Split", "Quadrants", "Boxes", "Diamonds", "Middle-split")
+	if(!design)
+		return
+	if(world.time > (the_time + 30 SECONDS))
+		return
+	if(design == "Symbol")
+		design = null
+		design = input(user, "Select a symbol.","Tabard Design") as null|anything in list("chalice","psy","peace","z","imp","skull","widow","arrow")
+		if(!design)
+			return
+		design = "_[design]"
+	var/colorone = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
+	if(!colorone)
+		return
+	var/colortwo
+	if(design != "None")
+		colortwo = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
+		if(!colortwo)
+			return
+	if(world.time > (the_time + 30 SECONDS))
+		return
+	picked = TRUE
+	if(design != "None")
+		detail_tag = design
+	switch(design)
+		if("Split")
+			detail_tag = "_spl"
+		if("Quadrants")
+			detail_tag = "_quad"
+		if("Boxes")
+			detail_tag = "_box"
+		if("Diamonds")
+			detail_tag = "_dim"
+		if("Middle-split")
+			detail_tag = "_spl2"
+	color = clothing_color2hex(colorone)
+	if(colortwo)
+		detail_color = clothing_color2hex(colortwo)
+	update_icon()
+	if(ismob(loc))
+		var/mob/L = loc
+		L.update_inv_cloak()
+
+/obj/item/clothing/cloak/jinbaori/reddy
+	detail_color = CLOTHING_HEARTFELT
+	detail_tag = "_box"
+	picked = TRUE
+
+/obj/item/clothing/cloak/jinbaori/reddy/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+/obj/item/clothing/cloak/raincloak/mino
+	name = "mino cloak"
+	desc = "An abyssariad raincoat made out of straw that covers the entire body."
+	icon_state = "mino"
+	inhand_mod = FALSE
+	hoodtype = null
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+
+/obj/item/clothing/cloak/raincloak/mino/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)

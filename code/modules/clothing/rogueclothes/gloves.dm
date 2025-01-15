@@ -198,3 +198,12 @@
 	desc = "Improved grip for wielding disembowled organs."
 	icon_state = "surggloves"
 	item_state = "surggloves"
+
+//....................Kaizoku Update..............
+/obj/item/clothing/gloves/roguetown/leather/abyssal
+	name = "abyssal gloves"
+	desc = "Flexible, sturdy gloves of abyssariad making for horseback use to shield the hands against fast moving reins or grappling hook cables."
+	icon_state = "abyssalgloves"
+	sleeved = 'icons/roguetown/clothing/onmob/gloves.dmi'
+	icon = 'icons/roguetown/clothing/gloves.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/gloves.dmi'

@@ -201,3 +201,39 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+//....................Kaizoku Content...................
+/obj/item/clothing/under/roguetown/trou/tobi
+	name = "tobi pants"
+	desc = "Baggy pants of abyssariad design. Suitable for those who works the field and avoid horseback."
+	icon_state = "tobi"
+	item_state = "tobi"
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+
+/obj/item/clothing/under/roguetown/trou/leather/shinobizubon
+	name = "shinobi zubon"
+	desc = "Traditional flexible pants with loose fit around the legs with hardened leather tied under the cloth and ankles to prevent snagging and noise."
+	gender = PLURAL
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	icon_state = "shinobizubon"
+	item_state = "shinobizubon"
+	blocksound = SOFTHIT
+	blade_dulling = DULLING_BASHCHOP
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL	
+
+/obj/item/clothing/under/roguetown/tights/hakama
+	name = "hakama"
+	icon_state = "hakama"
+	alternate_worn_layer = SHOESLEEVE_LAYER
+	desc = "Suitable for the Abyssariad-cultured, in which large battle-skirts does not hurt their masculinity, differently of the frail Imperial counterpart."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+
+/obj/item/clothing/under/roguetown/tights/hakama/heartfelt
+    color = CLOTHING_HEARTFELT

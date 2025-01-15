@@ -455,3 +455,18 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+//..............Kaizoku Update...............
+/obj/item/clothing/suit/roguetown/shirt/looseshirt
+	name = "kimono jinbei"
+	desc = "A summer shirt that goes along with a tobi, used during the hot summers on Fog islands."
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	icon_state = "looseshirt"
+	item_state = "looseshirt"
+	boobed = TRUE
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS

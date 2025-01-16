@@ -1,20 +1,13 @@
 /obj/item/cranker
 	name = "CRANKeR"
-	desc = "A strange skull-shaped medical device used to grind up bodyparts to make a liquid capable of healing all sorts of injuries."
+	desc = "A strange skull-shaped medical device used to grind up bodyparts to make all sorts of things."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "cranker"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_HIP
-	var/open = FALSE
 	var/obj/item/bodypart/bp // bodypart to grind
+	var/datum/reagent/chosen_potion = /datum/reagent/medicine/healthpot
 	var/obj/item/reagent_containers/glass/bottle/rogue/pot // where to put the health potion
-
-/obj/item/cranker/update_icon()
-	. = ..()
-	if(open)
-		icon_state = "cranker-open"
-	else
-		icon_state = "cranker"
 
 /obj/item/cranker/MiddleClick(mob/user, params)
 	. = ..()
@@ -24,39 +17,50 @@
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
-	if(open && pot)
+	if(pot)
 		to_chat(user, "<span class='info'>I unscrew \the [pot] from the [src].</span>")
 		playsound(get_turf(user), 'sound/foley/grab.ogg', 100, FALSE, -2)
 		H.put_in_hands(pot)
 		pot = null
 		return
-	if(ishuman(user))
-		open = !open
-		update_icon()
-		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)
-		return
 
-/obj/item/cranker/attack_right(mob/living/carbon/human/user)
+/obj/item/cranker/attack_right(mob/user)
+	. = ..()
+	var/chosen = input(user, "What are we cooking today?", "WARMONGERS") as null|anything in list("HEALTH","DUST OF MOON","OZ","LOVE")
+	if(!chosen)
+		return
+	switch(chosen)
+		if("HEALTH")
+			chosen_potion = /datum/reagent/medicine/healthpot
+			to_chat(user, "<span class='info'>People will love you, but they will all know you're just a little too boring.</span>")
+		if("DUST OF MOON")
+			chosen_potion = /datum/reagent/moondust
+			to_chat(user, "<span class='info'>After all, you didn't want those bullets piercing your lungs anyway.</span>")
+		if("OZ")
+			chosen_potion = /datum/reagent/ozium
+			to_chat(user, "<span class='info'>Who doesn't love it? You'll be unbeatable.</span>")
+		if("LOVE")
+			chosen_potion = /datum/reagent/druqks
+			to_chat(user, "<span class='info'>Love defeats all hardship.</span>")
+
+/obj/item/cranker/attack_hand(mob/living/carbon/human/user)
 	. = ..()
 	var/datum/game_mode/warfare/C = SSticker.mode
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return
-	if(open)
-		to_chat(user, "<span class='danger'>You can't crank the [src] if it's open, you'll spill everything.</span>")
-		return
 	if(!bp)
-		to_chat(user, "<span class='danger'>You can't crank the [src] if there's nothing in it. You wouldn't want to damage the gears, do you?</span>")
+		to_chat(user, "<span class='warning'>You can't crank the [src] if there's nothing in it. You wouldn't want to damage the gears, would you?</span>")
 		return
 	if(!pot)
-		to_chat(user, "<span class='danger'>Where's the product gonna go? On the floor? Are you insane wasting this divine gift?</span>")
+		to_chat(user, "<span class='warning'>You're gonna need to attach a bottle, otherwise our divine gift will just go to waste.</span>")
 		return
 	playsound(get_turf(user), 'sound/neu/peppermill.ogg', 100, TRUE, -5)
 	flick("cranker-cranking", src)
 	QDEL_NULL(bp)
 	sleep(10)
 	playsound(get_turf(user), "wetbreak", 100, TRUE, -5)
-	pot.reagents.add_reagent(/datum/reagent/medicine/healthpot, 15)
+	pot.reagents.add_reagent(chosen_potion, 15)
 	to_chat(user, "<span class='info'>The product is ready.</span>")
 	switch(user.warfare_faction)
 		if(RED_WARTEAM)
@@ -78,7 +82,7 @@
 	if(istype(I, /obj/item/reagent_containers/glass/bottle/rogue))
 		var/obj/item/reagent_containers/glass/bottle/rogue/bootle = I
 		to_chat(user, "<span class='info'>I attach \the [bootle] into the [src].</span>")
-		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)
+		playsound(get_turf(user), 'sound/foley/torchfixtureput.ogg', 100, FALSE, -2)
 		bootle.forceMove(src)
 		pot = bootle
 		return

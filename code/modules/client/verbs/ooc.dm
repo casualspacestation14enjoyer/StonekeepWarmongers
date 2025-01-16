@@ -348,7 +348,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
 	contents += "<center>Dr. Urist's Discount Medical School<BR>"
 	contents += "--------------</center><BR>"
-	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more health potions. Put in a limb and a bottle. Crank it with RMB and then open it with MMB, then use MMB again to unscrew the potion from it; which is now filled with a new health potion! Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
+	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more drugs. Put in a limb and a bottle. Crank it by clicking it in your hand and then grab the potion you attached to it with MMB; which is now filled with cool new drugs! You can choose which drug to manufacture by using RMB. Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()

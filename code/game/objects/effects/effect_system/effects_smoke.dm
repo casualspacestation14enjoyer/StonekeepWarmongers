@@ -125,7 +125,7 @@
 
 /obj/effect/particle_effect/smoke/bad
 	lifetime = 8
-	color = "#afaf5e"
+	color = "#b7b750"
 
 /obj/effect/particle_effect/smoke/bad/smoke_mob(mob/living/carbon/M)
 	if(..())

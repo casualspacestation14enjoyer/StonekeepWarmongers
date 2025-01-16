@@ -83,6 +83,8 @@
 				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
 				head = null
 				update_inv_head()
+			else
+				newdam = newdam * 5 // no head armor? die.
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE
 

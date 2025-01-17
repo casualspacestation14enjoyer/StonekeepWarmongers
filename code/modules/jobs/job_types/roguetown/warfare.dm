@@ -175,7 +175,7 @@
 
 /datum/job/roguetown/warfare/red/lord
 	title = "Heartfelt Lord"
-	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. Thankfully, most of the enemy is tied up elsewhere, maybe you might have a chance of making it out alive today."
+	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. But not all is lost just yet, with supplies coming in from the Foglands you might be able to push the Grenzelhoft barbarians off this land."
 	department_flag = REDSS
 	flag = REDKING
 	min_pq = -10
@@ -244,7 +244,7 @@
 
 /datum/job/roguetown/warfare/red/soldier
 	title = "Heartfelt Infantry"
-	tutorial = "You're treated like shit. The runt of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
+	tutorial = "Every day feels as though its worst than the last, hope is dwindling and food is getting scarcer. You never wanted any of this, but even though no man wants war it will find him eventually regardless. You have two choices, die, or take up arms and drive these barbarians back into the sea! For Heartfelt!"
 	department_flag = REDSS
 	flag = SOLDIER
 	total_positions = 99
@@ -285,13 +285,13 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	cloak = /obj/item/clothing/cloak/jinbaori/reddy
 	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/kusari
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+	backr = GetMainGunForWarfareHeartfelt()
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/jingasa
@@ -317,7 +317,7 @@
 
 /datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
 	name = "Zamurai"
-	tutorial = "Elite and stalwart melee combatants. While great with swords and polearms, they are terrible with guns and are slow moving."
+	tutorial = "Elite and stalwart melee combatants. While great with swords and polearms, they forego the use of firearms entirely."
 	outfit = /datum/outfit/job/roguetown/redsamurai
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -360,7 +360,7 @@
 
 /datum/advclass/red/sapper
 	name = "Sapper"
-	tutorial = "Military engineers that are well equipped for construction, while also being strong and able to swing an ax. However, they lack firearms or good training in them."
+	tutorial = "Military engineers that are well equipped for construction, while also being strong enough to hold the line against incursions. Despite this they are not well armed when it comes to firearms."
 	outfit = /datum/outfit/job/roguetown/redsapper
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -407,7 +407,7 @@
 
 /datum/advclass/red/firelancer
 	name = "Firelancer"
-	tutorial = "Heartfelts answer to Grenzelhofts Grenadiers. The Firelance, formerly 'Widowmaker' is a strange, difficult to operate, and most importantly dangerous weapon. Only Firelancers are trained in their operation, so use it well."
+	tutorial = "Heartfelts answer to Grenzelhofts Grenadiers. The Firelance, formerly 'Widowmaker' is a strange, difficult to operate, and most importantly dangerous weapon. Only Firelancers are trained in their operation."
 	outfit = /datum/outfit/job/roguetown/firelancer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -452,7 +452,7 @@
 
 /datum/advclass/red/ninja
 	name = "Ninja"
-	tutorial = "Assassins hired into the military, fighting for coin. Utilizing their stealth, knifework, and trusty pistol, they will kill all who oppose their masters."
+	tutorial = "Assassins hired into the military, fighting for coin. Utilizing bows, bombs, and knives they strike unseen where the enemy expects them the least."
 	outfit = /datum/outfit/job/roguetown/redninja
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -494,8 +494,8 @@
 //// RIFLEMEN ////
 
 /datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Riflemen"
-	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	name = "Sharpshooter"
+	tutorial = "Far better trained compared to the common soldiery, and with a marksmans rifle as well. The only issue is lacking in melee combat even worse than Ashigaru."
 	outfit = /datum/outfit/job/roguetown/redriflemen
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -509,7 +509,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	cloak = /obj/item/clothing/cloak/raincloak/mino
 	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/kusari
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
@@ -517,6 +517,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
+	r_hand = GetMainGunForWarfareHeartfelt()
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/tengai/gasa
 	else
@@ -541,7 +542,7 @@
 
 /datum/advclass/red/officer
 	name = "Officer"
-	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery. You personally have won 30 medals, in addition the men speak that you have low blood sugar. Make them regret that!"
+	tutorial = "Officers of Heartfelt are expected to lead from the front, rousing the troops and braving bullets and blades alike in order to achieve victory."
 	outfit = /datum/outfit/job/roguetown/redofficer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -585,7 +586,7 @@
 
 /datum/advclass/red/medic
 	name = "Medic"
-	tutorial = "You like saving lives and keeping people in line. That's why you got this job."
+	tutorial = "The task of a Medic is a difficult one, with far more corpses than wounded soldiers. They do their bit regardless and ensure those who do survive will last longer."
 	outfit = /datum/outfit/job/roguetown/redmedic
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -627,7 +628,7 @@
 
 /datum/job/roguetown/warfare/blu/lord
 	title = "Grenzelhoft Lord"
-	tutorial = "A middle-class noble with inspirations for something greater. You've been given charge of a small detachment and were sent directly into the meat grinder. They said it was to build experience, but you know better."
+	tutorial = "A middle-class noble with aspirations for something greater. You've been given charge of a small detachment and sent directly into the meat grinder. You will either return to Grenzelhoft a conquerer, or not at all."
 	department_flag = BLUES
 	flag = BLUKING
 	min_pq = -10
@@ -698,7 +699,7 @@
 
 /datum/job/roguetown/warfare/blu/soldier
 	title = "Grenzelhoft Infantry"
-	tutorial = "You're treated like shit. The runt of the litter, garbage men and beggars drafted into yet another inresolvable conflict. But if you risk your life and get out of this mess, maybe you'll get a better life when you got back. At least the pay is good, but what use is it when a ball of lead is enough to put you back into your place?"
+	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the Emperor! For the One True God!"
 	department_flag = BLUES
 	flag = SOLDIER
 	total_positions = 99
@@ -726,7 +727,7 @@
 
 /datum/advclass/blu/musketeer
 	name = "Musketeer"
-	tutorial = "Common infantry. Poorly armored and unsuited for melee, but equipped and trained for musket combat."
+	tutorial = "The backbone of the army, musketeers are expected to fight at range, as their melee prowess is lacking compared to other divisions."
 	outfit = /datum/outfit/job/roguetown/blusoldier
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -746,7 +747,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
+	backr = GetMainGunForWarfareGrenzelhoft()
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	if(prob(70))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
@@ -773,7 +774,7 @@
 
 /datum/advclass/blu/zweihander //High stamina, speed, and damage. However, no gun skills, and really not that well armored.
 	name = "Zweihander"
-	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity, though they lack skill with firearms, and are not very well armored."
+	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity, but they are poorly armored, and unable to use firearms due to lack of training."
 	outfit = /datum/outfit/job/roguetown/bluzweihander
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -1011,8 +1012,8 @@
 //// RIFLEMEN ////
 
 /datum/advclass/blu/riflemen
-	name = "Riflemen"
-	tutorial = "Riflemen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
+	name = "Sharpshooter"
+	tutorial = "Marksmen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
 	outfit = /datum/outfit/job/roguetown/bluriflemen
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -1035,6 +1036,7 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
+	r_hand = GetMainGunForWarfareGrenzelhoft()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
@@ -1056,7 +1058,7 @@
 
 /datum/advclass/blu/officer
 	name = "Officer"
-	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery. You personally have won 30 medals, in addition the men speak that you have low blood sugar. Make them regret that!"
+	tutorial = "Officers who have been given good training in tactics, strategy, and inspiring the men, but are not as good at fighting as the common soldiery. Lead from the front and keep morale in the ranks."
 	outfit = /datum/outfit/job/roguetown/bluofficer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -1097,7 +1099,7 @@
 
 /datum/advclass/blu/medic
 	name = "Medic"
-	tutorial = "You like saving lives and keeping people in line. That's why you got this job."
+	tutorial = "Sanitaters feel like gravediggers, considering they deal with more corpses than wounded soldiers. Still, they do their part however they can."
 	outfit = /datum/outfit/job/roguetown/blumedic
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES

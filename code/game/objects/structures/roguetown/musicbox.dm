@@ -1,4 +1,4 @@
-#define MUSIC_TAV list("Song 1" = 'sound/music/jukeboxes/grenz_music1.ogg',"Song 2" = 'sound/music/jukeboxes/grenz_music2.ogg',"Song 3" = 'sound/music/jukeboxes/heart_music1.ogg',"Song 4" = 'sound/music/jukeboxes/heart_music2.ogg')
+#define MUSIC_TAV list("Memory Of Eora" = 'sound/music/jukeboxes/eora.ogg',"March Of Freemen" = 'sound/music/jukeboxes/marche.ogg',"Capital Of The World" = 'sound/music/jukeboxes/capital.ogg')
 
 /datum/looping_sound/musloop
 	mid_sounds = list()

@@ -677,7 +677,7 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	item_state = "shinobi"
 	blocksound = SOFTHIT
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
+/obj/item/clothing/suit/roguetown/armor/chainmail/kusari
 	name = "kusari katabira"
 	desc = "Or simply 'single-layer chainmail robe', this armor is made of riveted steel rings  \
 	patched together with slim plates protecting elbows. The armor reaches down to the legs and arms."

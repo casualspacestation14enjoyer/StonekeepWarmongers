@@ -241,14 +241,14 @@
 	var/curfile
 	var/playing = FALSE
 	var/curvol = 70
-	var/list/songs = list("Song 1" = 'sound/music/jukeboxes/grenz_music1.ogg',
-	"Song 2" = 'sound/music/jukeboxes/grenz_music2.ogg'
-	)
+	var/list/songs = list("The Knight's Song" = 'sound/music/jukeboxes/grenz_music1.ogg',
+	"Landsknecht und Würfel" = 'sound/music/jukeboxes/grenz_music2.ogg',
+	"Musketier Marsch" = 'sound/music/jukeboxes/grenz_music3.ogg')
 
 /obj/item/rogue/musicpack/heartfelt
-	songs = list("Song 1" = 'sound/music/jukeboxes/heart_music1.ogg',
-	"Song 2" = 'sound/music/jukeboxes/heart_music2.ogg'
-	)
+	songs = list("Faiāransā e no ōdo" = 'sound/music/jukeboxes/heart_music1.ogg',
+	"Shōri e no kōshin" = 'sound/music/jukeboxes/heart_music2.ogg',
+	"Shi ka haji ka" = 'sound/music/jukeboxes/heart_music3.ogg')
 
 /obj/item/rogue/musicpack/Initialize()
 	soundloop = new(list(src), FALSE)

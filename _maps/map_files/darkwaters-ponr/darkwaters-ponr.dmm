@@ -44,6 +44,14 @@
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
+"da" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -20
+	},
+/obj/item/rogueweapon/sword/uchigatana,
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/beach/boat)
 "dc" = (
 /obj/structure/rack/rogue,
 /obj/item/sandbagkit,
@@ -302,6 +310,14 @@
 /obj/structure/warfarebarrier/red,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach)
+"ti" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/mace/ararebo{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/mace/ararebo,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "ub" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/warfarebarrier/red,
@@ -402,9 +418,17 @@
 /area/rogue/outdoors/beach/boat)
 "zc" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_y = -20;
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_y = -10;
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10
+	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "Ar" = (
@@ -478,10 +502,34 @@
 /obj/structure/cannon,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
+"El" = (
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_x = -5;
+	pixel_y = -28
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_y = -20;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_y = -10;
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "ET" = (
 /obj/machinery/light/rogue/torchholder/r,
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"Fh" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/woodcut/changfu{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/woodcut/changfu,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "FI" = (
@@ -522,6 +570,28 @@
 	pixel_x = 5
 	},
 /turf/open/floor/rogue/wood,
+/area/rogue/outdoors/beach/boat)
+"Jp" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/spear/yari,
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -23
+	},
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"JF" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -23
+	},
+/obj/item/rogueweapon/sword/uchigatana,
+/turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "Ly" = (
 /obj/structure/fluff/statue/knight,
@@ -1913,9 +1983,9 @@ Uf
 Uf
 Uf
 us
-op
+ti
 dc
-Ar
+Fh
 us
 Uf
 UQ
@@ -1990,11 +2060,11 @@ Uf
 Uf
 Uf
 us
-uu
+Jp
 Ze
 Ze
 Ze
-uu
+Jp
 us
 UQ
 Uf
@@ -2029,11 +2099,11 @@ Uf
 Uf
 Uf
 us
-Xd
+JF
 Ze
 Ze
 Ze
-Xd
+JF
 us
 UQ
 UQ
@@ -2120,13 +2190,13 @@ Uf
 Uf
 SN
 us
-zc
+El
 Ze
 Ze
 Ze
 Ze
 Ze
-zc
+El
 us
 Uf
 Uf
@@ -8819,7 +8889,7 @@ As
 mO
 mO
 Tv
-Jk
+da
 WP
 mO
 mO

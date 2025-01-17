@@ -291,6 +291,25 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach/boat)
+"rQ" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/spear/yari,
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -23
+	},
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"sn" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/mace/ararebo{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/mace/ararebo,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "sQ" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -316,6 +335,14 @@
 	pixel_x = -10
 	},
 /turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"uC" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -20
+	},
+/obj/item/rogueweapon/sword/uchigatana,
+/turf/open/floor/rogue/wood,
 /area/rogue/outdoors/beach/boat)
 "vj" = (
 /obj/structure/barricade/sandbags/rogue{
@@ -398,9 +425,17 @@
 /area/rogue/outdoors/beach/boat)
 "zc" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_y = -20;
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_y = -10;
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10
+	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "Ar" = (
@@ -519,6 +554,14 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/beach/boat)
+"Kn" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/woodcut/changfu{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/woodcut/changfu,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
 "Ly" = (
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/carpet/red,
@@ -580,6 +623,22 @@
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
 /obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"Pj" = (
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_x = -5;
+	pixel_y = -28
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_y = -20;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_y = -10;
+	pixel_x = -5
+	},
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "PE" = (
@@ -693,6 +752,17 @@
 /area/rogue/outdoors/beach/boat)
 "Wk" = (
 /obj/structure/warfarestatue,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/outdoors/beach/boat)
+"Wl" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -23
+	},
+/obj/item/rogueweapon/sword/uchigatana,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "WB" = (
@@ -1897,9 +1967,9 @@ Uf
 Uf
 Uf
 us
-op
+sn
 dc
-Ar
+Kn
 us
 Uf
 UQ
@@ -1974,11 +2044,11 @@ Uf
 Uf
 Uf
 us
-uu
+rQ
 Ze
 Ze
 Ze
-uu
+rQ
 us
 UQ
 Uf
@@ -2013,11 +2083,11 @@ Uf
 Uf
 Uf
 us
-Xd
+Wl
 Ze
 Ze
 Ze
-Xd
+Wl
 us
 UQ
 UQ
@@ -2104,13 +2174,13 @@ Uf
 Uf
 SN
 us
-zc
+Pj
 Ze
 Ze
 Ze
 Ze
 Ze
-zc
+Pj
 us
 Uf
 Uf
@@ -8803,7 +8873,7 @@ As
 mO
 mO
 Tv
-Jk
+uC
 WP
 mO
 mO

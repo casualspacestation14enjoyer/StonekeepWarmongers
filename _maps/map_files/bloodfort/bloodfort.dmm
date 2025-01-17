@@ -337,13 +337,13 @@
 /area/rogue/outdoors)
 "lT" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword{
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/uchigatana{
 	pixel_x = -5
 	},
-/obj/item/rogueweapon/sword,
-/obj/item/rogueweapon/sword{
-	pixel_x = 5
-	},
+/obj/item/rogueweapon/sword/uchigatana,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "mf" = (
@@ -483,7 +483,6 @@
 /obj/effect/landmark/start{
 	name = "blue"
 	},
-/obj/item/clothing/head/roguetown/jester,
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town)
 "rC" = (
@@ -491,10 +490,21 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "rI" = (
-/obj/machinery/light/rogue/chand,
-/obj/item/clothing/shoes/roguetown/jester,
-/turf/open/transparent/openspace,
-/area/rogue/indoors/town)
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_x = -10;
+	pixel_y = -13
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
+	pixel_x = -8;
+	pixel_y = -25
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
+	pixel_x = -10;
+	pixel_y = -20
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "sx" = (
 /obj/structure/fluff/statue/knight/interior,
 /turf/open/floor/rogue/tile/masonic/inverted,
@@ -670,9 +680,18 @@
 /area/rogue/indoors/town)
 "zz" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{
+	pixel_x = -13;
+	pixel_y = -13
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
+	pixel_x = -15;
+	pixel_y = -26
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
+	pixel_x = -16;
+	pixel_y = -20
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "zE" = (
@@ -712,7 +731,7 @@
 /area/rogue/indoors/town)
 "AF" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/mace/steel/morningstar,
+/obj/item/rogueweapon/mace/steel/ararebo,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
 "Bt" = (
@@ -1061,14 +1080,14 @@
 /area/rogue/indoors/town)
 "MS" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/spear{
-	pixel_x = -22
-	},
-/obj/item/rogueweapon/spear,
-/obj/item/rogueweapon/spear{
+/obj/item/rogueweapon/spear/yari{
 	pixel_x = -10
 	},
-/turf/open/floor/rogue/tile,
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -23
+	},
+/obj/item/rogueweapon/spear/yari,
+/turf/closed,
 /area/rogue/indoors/town)
 "Nw" = (
 /obj/structure/fluff/walldeco/customflag{
@@ -1150,17 +1169,15 @@
 /area/rogue/outdoors)
 "QF" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/bow{
-	pixel_y = 2
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu{
+	pixel_y = -3
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/bow{
-	pixel_y = -2
-	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
 "QN" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/flail/sflail,
+/obj/item/rogueweapon/flail/sflail/kusarifundo,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "QQ" = (
@@ -1214,19 +1231,26 @@
 /area/rogue/indoors/town)
 "Uh" = (
 /obj/structure/rack/rogue,
-/obj/item/quiver/bolts{
-	pixel_x = -4
+/obj/item/quiver/arrows{
+	pixel_x = 10
 	},
-/obj/item/quiver/bolts{
-	pixel_x = 2
-	},
+/obj/item/quiver/arrows,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town/roofs)
 "Ul" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10;
+	pixel_y = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_y = -16;
+	pixel_x = -10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -9;
+	pixel_y = -23
+	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "Um" = (
@@ -1315,7 +1339,6 @@
 /area/rogue/indoors/town)
 "WQ" = (
 /obj/machinery/light/rogue/chand,
-/obj/item/clothing/suit/roguetown/shirt/jester,
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town)
 "WS" = (
@@ -4670,7 +4693,7 @@ fC
 aJ
 Gk
 fC
-zz
+rI
 fC
 Hs
 fC
@@ -9770,7 +9793,7 @@ kj
 rk
 rk
 rk
-rI
+WQ
 rk
 xn
 hH

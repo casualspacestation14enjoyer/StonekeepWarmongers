@@ -368,11 +368,83 @@
 				return list("shrink" = 0.7,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 //........Kaizoku Content........
-/obj/item/rogueweapon/polearm/firelance
+/obj/item/rogueweapon/spear/yari
+	name = "su yari"
+	desc = "A long, straight-headed spear of Abyssariad design, often used by sea raiders to fend off light cavalry on in-land offensives. Well know for the 'Yari wall' strategy and for being 'Yarimazing' among Abyssariads."
+	icon_state = "suyari"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	bigboy = TRUE
+	gripsprite = TRUE
+	smeltresult = /obj/item/ingot/iron
+	dropshrink = 0.8
+	blade_dulling = DULLING_BASHCHOP
+
+/obj/item/rogueweapon/spear/yari/katakama
+	name = "katakama yari"
+	desc = "An evolution of the su yari, recognizable for a single scythe-like tang perpendicular to the main point that allows for better defense against the likes of naginata."
+	icon = 'icons/roguetown/weapons/64.dmi'
+	wdefense = 5
+	smeltresult = /obj/item/ingot/iron
+	max_blade_int = 150
+	max_integrity = 400
+
+/obj/item/rogueweapon/spear/billhook/jumonji
+	name = "jumonji yari"
+	desc = "The design of the katakama yari taken to its logical conclusion, the jumonji yari features an elongated tang on each side that is the same length as the forward point. There is no polearms that offers better defense without harming efficiency."
+	icon_state = "jumonjiyari"
+
+/obj/item/rogueweapon/halberd/naginata
+	name = "naginata"
+	desc = "Its earliest form being a tachi blade mounted upon a long wooden pole, the naginata was the first polearm to come into widespread use by the Abyssariad, who developed the weapon in order to better combat Humen and Elven cavalry."
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "naginata"
+	dropshrink = 0.8
+
+/obj/item/rogueweapon/halberd/naginata/tsukushi //make two instead of only one
+	name = "tsukushi naginata"
+	desc = "A cheaper, easier to construct iron Naginata with a blade held by its guard instead of its tang. Likely developed from a scythe, the blade is easily found on poor, wandering monks."
+	force = 15
+	force_wielded = 25
+	icon_state = "surplusnaginata"
+	smeltresult = /obj/item/ingot/iron
+	dropshrink = 0.8
+	wdefense = 4
+
+/obj/item/rogueweapon/halberd/bisento //Giving the Bisento storeable 'back' because, otherwise, people will SUFFER spawning with it. Too bugged for my taste.
+	name = "bisento"
+	desc = "The Bisento is the direct evolution of the old, outdated Champion Guandao. Akin to a large cleaver or a broad axe."
+	icon_state = "bisento"
+	dropshrink = 0.8
+	icon = 'icons/roguetown/weapons/64.dmi'
+
+/obj/item/rogueweapon/spear/stone/obsidian //direct upgrade to the stone one.
+	name = "obsidian spear"
+	desc = "A spear with a surprisingly sharp edge from vulcanic glass. Used by Undine tribes."
+	icon_state = "obsidian_spear"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	smeltresult = /obj/item/ash
+	max_blade_int = 100
+
+/obj/item/rogueweapon/woodstaff/quarterstaff/bostaff
+	name = "bo staff"
+	desc = "the bo, or 'abyssariad quarterstaff', is a simple weapon used in martial arts to entrap, strike and sweep the enemy."
+	icon_state = "bostaff"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/spear/firelance
 	name = "sanctiflux firelance"
 	desc = "The new iteration of the ancient abyssariad 'Widowmaker'. Do not allow its simple design to fool you, it can easily kill its operator as quickly as any foe. \
-	Honestly, unless you're a Firelancer you shouldn't even think of using one of these things. And even then your chances are only slightly above average." //Hundred thousand march is the definition of champions. But after bloody apotheosis, its just anyone islander-cultured.
-	icon = 'icons/roguetown//weapons/64.dmi'
+	Honestly, unless you're a Firelancer you shouldn't even think of using one of these things. And even then your chances are only slightly above average."
+	icon = 'icons/roguetown/weapons/64.dmi'
 	icon_state = "firelance"
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -392,6 +464,7 @@
 	wlength = WLENGTH_LONG
 	sharpness = IS_BLUNT
 	minstr = 8
+	sellprice = 400
 
 	var/cocked = FALSE
 	var/lit = FALSE
@@ -399,7 +472,7 @@
 	var/fuel_source = FALSE
 	var/fuze = 30
 
-/obj/item/rogueweapon/polearm/firelance/proc/ignite(mob/living/user)
+/obj/item/rogueweapon/spear/firelance/proc/ignite(mob/living/user)
 	if(lit)
 		to_chat(user.loc, "<span class='warning'>The Firelance's fuse is already ignited and fierce as a bull.</span>")
 		return
@@ -425,7 +498,7 @@
 			lit = FALSE
 			update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/proc/flamefire(mob/living/user)
+/obj/item/rogueweapon/spear/firelance/proc/flamefire(mob/living/user)
 	if(!user)
 		return
 
@@ -463,7 +536,7 @@
 	fuel_source = FALSE // Consume  fuel after use
 	update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/dropped(mob/living/user)
+/obj/item/rogueweapon/spear/firelance/dropped(mob/living/user)
 	. = ..()
 	if(fuel_source)
 		if(HAS_TRAIT(user, TRAIT_FIRELANCER))
@@ -475,7 +548,7 @@
 			user.IgniteMob()
 			flamefire(user)
 
-/obj/item/rogueweapon/polearm/firelance/attack_self(mob/living/user)
+/obj/item/rogueweapon/spear/firelance/attack_self(mob/living/user)
 	if(lit) // safeguard
 		return
 	else
@@ -519,7 +592,7 @@
 			fuel_source = FALSE
 			update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/attackby(obj/item/I, mob/living/user)
+/obj/item/rogueweapon/spear/firelance/attackby(obj/item/I, mob/living/user)
 	if(!istype(I, /obj/item/sanctiflux))
 		to_chat(user, "<span class='warning'>[I] is not a valid fuel source!</span>")
 		return
@@ -537,13 +610,13 @@
 			to_chat(user, "<span class='info'>I press the gourd against the insertion hole. I just need to adjust the mechanisms so the automata within do the rest of the job.</span>")
 			..()
 
-/obj/item/rogueweapon/polearm/firelance/spark_act()
+/obj/item/rogueweapon/spear/firelance/spark_act()
 	ignite(usr)
 
-/obj/item/rogueweapon/polearm/firelance/fire_act()
+/obj/item/rogueweapon/spear/firelance/fire_act()
 	ignite(usr)
 
-/obj/item/rogueweapon/polearm/firelance/update_icon()
+/obj/item/rogueweapon/spear/firelance/update_icon()
 	if(lit)
 		icon_state = "firelance_lit"
 	else
@@ -598,75 +671,3 @@
 	if(isliving(AM))
 		var/mob/living/L = AM
 		L.fire_act(20, 40)
-
-/obj/item/rogueweapon/polearm/spear/yari
-	name = "su yari"
-	desc = "A long, straight-headed spear of Abyssariad design, often used by sea raiders to fend off light cavalry on in-land offensives. Well know for the 'Yari wall' strategy and for being 'Yarimazing' among Abyssariads."
-	icon_state = "suyari"
-	icon = 'icons/roguetown//weapons/64.dmi'
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
-	bigboy = TRUE
-	gripsprite = TRUE
-	smeltresult = /obj/item/ingot/iron
-	dropshrink = 0.8
-	blade_dulling = DULLING_BASHCHOP
-
-/obj/item/rogueweapon/polearm/spear/yari/katakama
-	name = "katakama yari"
-	desc = "An evolution of the su yari, recognizable for a single scythe-like tang perpendicular to the main point that allows for better defense against the likes of naginata."
-	icon_state = "katakamayari"
-	wdefense = 5
-	smeltresult = /obj/item/ingot/iron
-	max_blade_int = 150
-	max_integrity = 400
-
-/obj/item/rogueweapon/polearm/spear/billhook/jumonji
-	name = "jumonji yari"
-	desc = "The design of the katakama yari taken to its logical conclusion, the jumonji yari features an elongated tang on each side that is the same length as the forward point. There is no polearms that offers better defense without harming efficiency."
-	icon_state = "jumonjiyari"
-
-/obj/item/rogueweapon/polearm/halberd/naginata
-	name = "naginata"
-	desc = "Its earliest form being a tachi blade mounted upon a long wooden pole, the naginata was the first polearm to come into widespread use by the Abyssariad, who developed the weapon in order to better combat Humen and Elven cavalry."
-	icon = 'icons/roguetown//weapons/64.dmi'
-	icon_state = "naginata"
-	dropshrink = 0.8
-
-/obj/item/rogueweapon/polearm/halberd/naginata/tsukushi //make two instead of only one
-	name = "tsukushi naginata"
-	desc = "A cheaper, easier to construct iron Naginata with a blade held by its guard instead of its tang. Likely developed from a scythe, the blade is easily found on poor, wandering monks."
-	force = 15
-	force_wielded = 25
-	icon_state = "surplusnaginata"
-	smeltresult = /obj/item/ingot/iron
-	dropshrink = 0.8
-	wdefense = 4
-
-/obj/item/rogueweapon/polearm/halberd/bisento //Giving the Bisento storeable 'back' because, otherwise, people will SUFFER spawning with it. Too bugged for my taste.
-	name = "bisento"
-	desc = "The Bisento is the direct evolution of the old, outdated Champion Guandao. Akin to a large cleaver or a broad axe."
-	icon_state = "bisento"
-	dropshrink = 0.8
-	icon = 'icons/roguetown//weapons/64.dmi'
-
-/obj/item/rogueweapon/polearm/spear/stone/obsidian //direct upgrade to the stone one.
-	name = "obsidian spear"
-	desc = "A spear with a surprisingly sharp edge from vulcanic glass. Used by Undine tribes."
-	icon_state = "obsidian_spear"
-	icon = 'icons/roguetown//weapons/64.dmi'
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
-	smeltresult = /obj/item/ash
-	max_blade_int = 100
-
-/obj/item/rogueweapon/polearm/woodstaff/quarterstaff/bostaff
-	name = "bo staff"
-	desc = "the bo, or 'abyssariad quarterstaff', is a simple weapon used in martial arts to entrap, strike and sweep the enemy."
-	icon_state = "bostaff"
-	icon = 'icons/roguetown//weapons/64.dmi'
-	bigboy = TRUE	

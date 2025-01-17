@@ -19,12 +19,12 @@
 /area/rogue/outdoors)
 "ba" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/shield/wood{
-	pixel_y = -7
+/obj/item/rogueweapon/shield/rattan{
+	pixel_y = 10
 	},
-/obj/item/rogueweapon/shield/wood,
-/obj/item/rogueweapon/shield/wood{
-	pixel_y = 7
+/obj/item/rogueweapon/shield/rattan,
+/obj/item/rogueweapon/shield/rattan{
+	pixel_y = -10
 	},
 /turf/open/floor/rogue/twig{
 	dir = 1
@@ -136,7 +136,7 @@
 /area/rogue/outdoors)
 "io" = (
 /obj/structure/table/wood/plain,
-/obj/item/rogue/instrument/flute,
+/obj/item/rogue/instrument/accord,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "ip" = (
@@ -172,12 +172,12 @@
 /area/rogue/outdoors)
 "jx" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/sword{
-	pixel_x = -5
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -10
 	},
-/obj/item/rogueweapon/sword,
-/obj/item/rogueweapon/sword{
-	pixel_x = 5
+/obj/item/rogueweapon/sword/uchigatana,
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -23
 	},
 /turf/open/floor/rogue/twig{
 	dir = 1
@@ -413,7 +413,7 @@
 /area/rogue/outdoors)
 "rN" = (
 /obj/structure/table/wood/plain,
-/obj/item/rogue/instrument/guitar,
+/obj/item/rogue/instrument/flute,
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
@@ -1048,7 +1048,7 @@
 /area/rogue/outdoors)
 "UU" = (
 /obj/structure/table/wood,
-/obj/item/rogueweapon/sword/sabre/dec,
+/obj/item/rogueweapon/sword/sabre/piandao/dec,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
 "Vi" = (

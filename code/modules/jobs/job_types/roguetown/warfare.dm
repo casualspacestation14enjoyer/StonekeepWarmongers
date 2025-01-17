@@ -270,7 +270,7 @@
 //// MUSKETEER ////
 
 /datum/advclass/red/musketeer
-	name = "Ashigaru"
+	name = "Musketeer"
 	tutorial = "Common infantry. Poorly armored and unsuited for melee, but equipped and trained for musket combat."
 	outfit = /datum/outfit/job/roguetown/redsoldier
 	allowed_sexes = list(MALE, FEMALE)
@@ -451,7 +451,7 @@
 //// HEARTFELT NINJA ////
 
 /datum/advclass/red/ninja
-	name = "Shinobi"
+	name = "Ninja"
 	tutorial = "Assassins hired into the military, fighting for coin. Utilizing bows, bombs, and knives they strike unseen where the enemy expects them the least."
 	outfit = /datum/outfit/job/roguetown/redninja
 	allowed_sexes = list(MALE, FEMALE)
@@ -494,7 +494,7 @@
 //// RIFLEMEN ////
 
 /datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Sogekihei"
+	name = "Sharpshooter"
 	tutorial = "Far better trained compared to the common soldiery, and with a marksmans rifle as well. The only issue is lacking in melee combat even worse than Ashigaru."
 	outfit = /datum/outfit/job/roguetown/redriflemen
 	allowed_sexes = list(MALE, FEMALE)
@@ -1098,7 +1098,7 @@
 //// MEDIC ////
 
 /datum/advclass/blu/medic
-	name = "Sanitater"
+	name = "Medic"
 	tutorial = "Sanitaters feel like gravediggers, considering they deal with more corpses than wounded soldiers. Still, they do their part however they can."
 	outfit = /datum/outfit/job/roguetown/blumedic
 	allowed_sexes = list(MALE, FEMALE)

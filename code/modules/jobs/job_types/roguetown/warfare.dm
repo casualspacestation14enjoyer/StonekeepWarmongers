@@ -285,7 +285,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	cloak = /obj/item/clothing/cloak/jinbaori/reddy
 	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/kusari
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
@@ -334,7 +334,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/sword/short/wakizashi
-	backr = /obj/item/rogueweapon/polearm/halberd/naginata
+	backr = /obj/item/rogueweapon/halberd/naginata
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	head = /obj/item/clothing/head/roguetown/heartfelt
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
@@ -424,7 +424,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
 	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	backr = /obj/item/rogueweapon/polearm/firelance
+	backr = /obj/item/rogueweapon/spear/firelance
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltr = /obj/item/flint
 	beltl = /obj/item/rogueweapon/mace/ararebo
@@ -509,7 +509,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	cloak = /obj/item/clothing/cloak/raincloak/mino
 	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/kusari
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto

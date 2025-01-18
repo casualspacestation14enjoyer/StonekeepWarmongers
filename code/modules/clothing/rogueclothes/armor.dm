@@ -677,15 +677,15 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	item_state = "shinobi"
 	blocksound = SOFTHIT
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/kusari
-	name = "kusari katabira"
-	desc = "Or simply 'single-layer chainmail robe', this armor is made of riveted steel rings  \
-	patched together with slim plates protecting elbows. The armor reaches down to the legs and arms."
+/obj/item/clothing/suit/roguetown/armor/chainmail/tatami
+	name = "lamellae-tatami do"
+	desc = "a foldable, lightweight armor for convenient motion and manufacturing ease. \
+	It is made of rectangular steel lamellae sewn into chainmail and is a massforged armor. \
+	Considered the backbone of abyssariad military armor, often used below mirror-armor and o-yoroi."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "kusari"
-	item_state = "kusari"
+	icon_state = "laminartatami"
 
 /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand
 	name = "heartfelt kikko coat"

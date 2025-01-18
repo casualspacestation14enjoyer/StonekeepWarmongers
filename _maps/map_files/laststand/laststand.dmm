@@ -105,9 +105,18 @@
 /area/rogue/indoors/town)
 "cz" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock,
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10;
+	pixel_y = -11
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10;
+	pixel_y = -17
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
+	pixel_x = -10;
+	pixel_y = -23
+	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "cG" = (
@@ -355,12 +364,12 @@
 /area/rogue/indoors/town)
 "hF" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/spear{
-	pixel_x = -22
-	},
-/obj/item/rogueweapon/spear,
-/obj/item/rogueweapon/spear{
+/obj/item/rogueweapon/spear/yari{
 	pixel_x = -10
+	},
+/obj/item/rogueweapon/spear/yari,
+/obj/item/rogueweapon/spear/yari{
+	pixel_x = -22
 	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
@@ -522,7 +531,7 @@
 /area/rogue/indoors/town)
 "lr" = (
 /obj/structure/table/wood/fine,
-/obj/item/rogueweapon/sword/sabre/dec,
+/obj/item/rogueweapon/sword/sabre/piandao/dec,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
 "lx" = (
@@ -908,13 +917,13 @@
 "td" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/c,
-/obj/item/rogueweapon/sword{
-	pixel_x = -5
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -10
 	},
-/obj/item/rogueweapon/sword,
-/obj/item/rogueweapon/sword{
-	pixel_x = 5
+/obj/item/rogueweapon/sword/uchigatana{
+	pixel_x = -22
 	},
+/obj/item/rogueweapon/sword/uchigatana,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "tk" = (
@@ -1191,11 +1200,10 @@
 /area/rogue/outdoors)
 "ym" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/bow{
-	pixel_y = 2
-	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/bow{
-	pixel_y = -2
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu,
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu{
+	pixel_x = -5;
+	pixel_y = -3
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town)
@@ -1442,7 +1450,7 @@
 /area/rogue/indoors/town)
 "EI" = (
 /obj/structure/table/wood/plain,
-/obj/item/rogue/instrument/flute,
+/obj/item/rogue/instrument/accord,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "EJ" = (
@@ -1756,7 +1764,7 @@
 /obj/structure/table/wood/large/corner{
 	dir = 9
 	},
-/obj/item/rogue/instrument/guitar,
+/obj/item/rogue/instrument/flute,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town)
 "LV" = (
@@ -2026,7 +2034,7 @@
 /area/rogue/indoors/town)
 "Rk" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/head/roguetown/helmet/kettle,
+/obj/item/clothing/head/roguetown/helmet/jingasa,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "Ro" = (

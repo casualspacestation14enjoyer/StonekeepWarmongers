@@ -38,12 +38,12 @@
 			to_chat(user, "<span class='info'>After all, you didn't want those bullets piercing your lungs anyway.</span>")
 		if("OZ")
 			chosen_potion = /datum/reagent/ozium
-			to_chat(user, "<span class='info'>Who doesn't love it? You'll be unbeatable.</span>")
+			to_chat(user, "<span class='info'>Everyone loves it, who doesn't? You'll be unbeatable.</span>")
 		if("LOVE")
 			chosen_potion = /datum/reagent/druqks
 			to_chat(user, "<span class='info'>Love defeats all hardship.</span>")
 
-/obj/item/cranker/attack_hand(mob/living/carbon/human/user)
+/obj/item/cranker/attack_self(mob/living/carbon/human/user)
 	. = ..()
 	var/datum/game_mode/warfare/C = SSticker.mode
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)

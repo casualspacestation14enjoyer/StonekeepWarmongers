@@ -84,7 +84,9 @@
 				head = null
 				update_inv_head()
 			else
-				newdam = newdam * 5 // no head armor? die.
+				newdam = newdam * 5
+				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
+				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE
 

@@ -252,6 +252,10 @@
 /obj/effect/temp_visual/decoy/fading/halfsecond
 	duration = 5
 
+/obj/effect/temp_visual/decoy/fading/blood
+	color = COLOR_RED
+	duration = 10
+
 /obj/effect/temp_visual/small_smoke
 	icon_state = "smoke"
 	duration = 50

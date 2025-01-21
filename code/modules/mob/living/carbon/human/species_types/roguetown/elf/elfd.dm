@@ -66,7 +66,7 @@
 	C.grant_language(/datum/language/common)
 */
 /datum/species/elf/dark/check_roundstart_eligible()
-	return TRUE
+	return FALSE
 
 /datum/species/elf/dark/get_skin_list()
 	return sortList(list(

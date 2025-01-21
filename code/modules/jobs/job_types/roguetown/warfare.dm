@@ -59,7 +59,7 @@
 // Captain Verbs
 
 /mob/living/carbon/human/proc/warfare_announce()
-	set name = "Announce!"
+	set name = "ANNOUNCE!"
 	set category = "LORD"
 	var/ann = input(usr, "ANNOUNCE TO YOUR FLOCK!", "WARMONGERS") as null|text
 
@@ -73,7 +73,7 @@
 				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
 /mob/living/carbon/human/proc/warfare_command()
-	set name = "Command!"
+	set name = "COMMAND!"
 	set category = "LORD"
 	var/ann = input(usr, "COMMAND YOUR FLOCK!", "WARMONGERS") as null|text
 

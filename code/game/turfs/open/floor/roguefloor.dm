@@ -160,13 +160,20 @@
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	slowdown = 2
 	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue/grass)
+	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/dirt/sand)
 	neighborlay = "dirtedge"
 	var/muddy = FALSE
 	var/bloodiness = 20
 	var/obj/structure/closet/dirthole/holie
 	var/obj/machinery/crop/planted_crop
 	var/dirt_amt = 3
+
+/turf/open/floor/rogue/dirt/sand // Shut up.
+	name = "sand"
+	desc = "Precursor to glass, ancestor to rocks."
+	icon = 'icons/turf/snow.dmi'
+	icon_state = "snow_dug"
+
 /*
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)
 	var/returned = slowdown

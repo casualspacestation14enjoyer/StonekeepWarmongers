@@ -15,7 +15,7 @@ endmap
 
 map bloodfort
 	default
-	#voteweight 1.5
+	voteweight 0.5
 	votable
 endmap
 
@@ -40,6 +40,11 @@ map darkwaters-ponr
 endmap
 
 map foxhole
+	#voteweight 1.5
+	votable
+endmap
+
+map sandblasted
 	#voteweight 1.5
 	votable
 endmap

@@ -531,7 +531,9 @@
 	if(marked_datum && istype(marked_datum, /atom))
 		dat += "<A href='?src=[REF(src)];[HrefToken()];dupe_marked_datum=1'>Duplicate Marked Datum</A><br>"
 
-	usr << browse(dat, "window=admin2;size=240x280")
+	var/datum/browser/popup = new(usr, "gamepanel", "Game Panel", 420, 420)
+	popup.set_content(dat)
+	popup.open()
 	return
 
 /////////////////////////////////////////////////////////////////////////////////////////////////admins2.dm merge

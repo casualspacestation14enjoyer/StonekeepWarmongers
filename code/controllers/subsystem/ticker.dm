@@ -499,6 +499,15 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, "<span class='notice'>This round's aspect is: [round_aspect.name]</span>")
 		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
 
+	// handle setting the war mode for this round, this is retarded, but im too lazy to do it any other way
+	var/datum/game_mode/warfare/W = mode
+	if(findtext(SSmapping.config?.map_name, "PONR"))
+		W.warmode = GAMEMODE_PONR
+	if(findtext(SSmapping.config?.map_name, "LS"))
+		W.warmode = GAMEMODE_STAND
+	if(findtext(SSmapping.config?.map_name, "LD"))
+		W.warmode = GAMEMODE_LORD
+
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)

@@ -22,7 +22,7 @@
 /obj/structure/warfarestatue/proc/begincountdown()
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
-		C.timedmatch = TRUE
+		C.warmode = GAMEMODE_STAND
 		active = TRUE
 		for(var/X in C.heartfelts)
 			var/mob/living/carbon/human/H = X

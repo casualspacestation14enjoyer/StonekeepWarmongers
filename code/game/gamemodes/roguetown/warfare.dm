@@ -1,6 +1,3 @@
-#define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
-#define RED_WARTEAM "Heartfelts" // Heartfelt
-
 /datum/game_mode/warfare
 	name = "warmode"
 	config_tag = "warmode"
@@ -31,6 +28,7 @@
 	var/warfare_reinforcement_time = 5 // in minutes
 
 	var/timedmatch = FALSE
+	var/warmode = null
 
 	announce_span = "danger"
 	announce_text = "The"

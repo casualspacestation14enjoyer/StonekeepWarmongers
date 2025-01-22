@@ -204,9 +204,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 				timetojoin = 0
 		if(SSticker.round_start_time)
 			if(world.time < SSticker.round_start_time + timetojoin)
-				var/ttime = round((SSticker.round_start_time + timetojoin - world.time) / 10)
-				var/list/choicez = list("Not yet.", "You cannot join yet.", "It won't work yet.", "Please be patient.", "Try again later.", "Late-joining is not yet possible.")
-				to_chat(usr, "<span class='warning'>[pick(choicez)] ([ttime]).</span>")
+				var/list/choicez = list("Be patient.","Shit takes time.","FUCKING WAIT!")
+				to_chat(usr, "<span class='warning'>[pick(choicez)]</span>")
 				return
 
 		var/plevel = 0

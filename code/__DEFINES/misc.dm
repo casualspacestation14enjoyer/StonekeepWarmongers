@@ -4,6 +4,13 @@
 // #define EAST 4
 // #define WEST 8
 
+#define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
+#define RED_WARTEAM "Heartfelts" // Heartfelt
+
+#define GAMEMODE_PONR "Point of No Return"
+#define GAMEMODE_LORD "Lord Destruction"
+#define GAMEMODE_STAND "Last Stand"
+
 #define CORNERDIRS			list(SOUTHWEST,NORTHWEST,SOUTHEAST,NORTHEAST)
 
 #define TEXT_NORTH			"[NORTH]"

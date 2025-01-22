@@ -133,9 +133,9 @@
 	*/
 
 /mob/handle_mouseover(location,control,params)
-	return TRUE
-	/*
 	var/mob/p = usr
+	if(p == src)
+		return FALSE
 	if(p.client)
 		if(!p.client.mouseovertext)
 			p.client.genmouseobj()
@@ -156,14 +156,15 @@
 		var/mousecolor = "#c1aaaa"
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
-			if(H.voice_color)
-				if(H.name != "Unknown")
-					mousecolor = "#[H.voice_color]"
+			switch(H.warfare_faction)
+				if(BLUE_WARTEAM)
+					mousecolor = COLOR_BLUE
+				if(RED_WARTEAM)
+					mousecolor = COLOR_RED
 		p.client.mouseovertext.maptext = {"<span style='font-size:8pt;font-family:"Pterra";color:[mousecolor];text-shadow:0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;' class='center maptext '>[name]"}
 		p.client.mouseovertext.movethis(PM)
 		p.client.screen |= p.client.mouseovertext
 	return TRUE
-	*/
 
 /atom/movable/screen
 	nomouseover = TRUE

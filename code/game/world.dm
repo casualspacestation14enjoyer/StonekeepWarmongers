@@ -306,6 +306,7 @@ GLOBAL_VAR(restart_counter)
 	..()
 
 /world/proc/update_status()
+	var/datum/game_mode/warfare/W = SSticker.mode
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
@@ -317,6 +318,9 @@ GLOBAL_VAR(restart_counter)
 		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
 	else
 		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
+
+	if(W.warmode)
+		s += "<b>GAME MODE:</b> [W.warmode]"
 
 	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
 	

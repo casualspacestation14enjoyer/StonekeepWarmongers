@@ -113,6 +113,9 @@
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
+		to_chat(user, "<span class='warning'>It won't work, I need a bomb.</span>")
+		return
 	if(istype(I, /obj/item/bomb))
 		if(loaded)
 			return

@@ -20,6 +20,7 @@
 			new type(target)
 	mode = GLOB.tod
 	GLOB.sunlights += src
+	START_PROCESSING(SStodchange, src)
 	update()
 
 /obj/effect/sunlight/Destroy()

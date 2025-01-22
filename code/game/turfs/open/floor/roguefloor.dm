@@ -171,8 +171,13 @@
 /turf/open/floor/rogue/dirt/sand // Shut up.
 	name = "sand"
 	desc = "Precursor to glass, ancestor to rocks."
-	icon = 'icons/turf/snow.dmi'
-	icon_state = "snow_dug"
+	icon_state = "sand1"
+	canSmoothWith = list(/turf/open/floor/rogue/grass)
+	neighborlay = "sandedge"
+
+/turf/open/floor/rogue/dirt/sand/Initialize()
+	. = ..()
+	icon_state = "sand[rand(1,4)]"
 
 /*
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)

@@ -120,8 +120,9 @@
 	message_param = "salutes to %t."
 	restraint_check = TRUE
 
-/datum/emote/living/carbon/human/salute/run_emote(mob/user, params, type_override, intentional, targetted)
-	if(ishuman(user))
+/datum/emote/living/carbon/human/salute/can_run_emote(mob/user, status_check, intentional)
+	. = ..()
+	if(. && iscarbon(user))
 		var/mob/living/carbon/human/H = user
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
@@ -129,10 +130,7 @@
 				message_param = "puts a hand to their heart and then fully extends their right arm facing upward to %t!"
 			if(BLUE_WARTEAM)
 				message = "stomps their boot and throws their arms up in a holy salute!"
-				message = "stomps their boot and throws their arms up in a holy salute to %t!"
-			else
-				message = "salutes."
-	. = ..()
+				message_param = "stomps their boot and throws their arms up in a holy salute to %t!"
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"

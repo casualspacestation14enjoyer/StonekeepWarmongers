@@ -171,8 +171,10 @@
 /turf/open/floor/rogue/dirt/sand // Shut up.
 	name = "sand"
 	desc = "Precursor to glass, ancestor to rocks."
+	gender = PLURAL
 	icon_state = "sand"
-	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/dirt)
+	smooth = SMOOTH_TRUE | SMOOTH_MORE
+	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
 	neighborlay = "sandedge"
 
 /turf/open/floor/rogue/dirt/sand/Initialize()

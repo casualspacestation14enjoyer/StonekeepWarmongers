@@ -124,7 +124,6 @@
 	. = ..()
 	icon_state = "t[rand(1,4)]"
 
-
 /obj/structure/flora/roguetree/underworld
 	name = "screaming tree"
 	desc = "human faces everywhere."

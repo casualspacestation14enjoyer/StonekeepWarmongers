@@ -171,13 +171,13 @@
 /turf/open/floor/rogue/dirt/sand // Shut up.
 	name = "sand"
 	desc = "Precursor to glass, ancestor to rocks."
-	icon_state = "sand1"
-	canSmoothWith = list(/turf/open/floor/rogue/grass)
+	icon_state = "sand"
+	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/dirt)
 	neighborlay = "sandedge"
 
 /turf/open/floor/rogue/dirt/sand/Initialize()
+	dir = pick(GLOB.cardinals)
 	. = ..()
-	icon_state = "sand[rand(1,4)]"
 
 /*
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)

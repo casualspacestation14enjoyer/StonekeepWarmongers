@@ -620,6 +620,35 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 
+//// ELVEN SLAVE ////
+
+/datum/advclass/red/slave
+	name = "Elven Slave"
+	tutorial = "You got into this war either by force or a by treasonous act to your home, either way you're not coming back, they hate you, they all hate you."
+	outfit = /datum/outfit/job/roguetown/redslave
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = "Elf"
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+
+/datum/outfit/job/roguetown/redslave/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	r_hand = pick(/obj/item/rogueweapon/woodstaff,/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear/billhook,/obj/item/rogueweapon/spear/stone,/obj/item/rogueweapon/copperspear)
+	belt = /obj/item/storage/belt/rogue/leather/cloth
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
+		H.change_stat("speed", 2)
+		H.change_stat("intelligence", -3)
+		H.change_stat("strength", -3)
+
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
 /datum/job/roguetown/warfare/blu
@@ -1133,3 +1162,32 @@
 		H.change_stat("strength", -4)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
+
+//// ELVEN SLAVE ////
+
+/datum/advclass/blu/slave
+	name = "Elven Slave"
+	tutorial = "You got into this war either by force or a by treasonous act to your home, either way you're not coming back, they hate you, they all hate you."
+	outfit = /datum/outfit/job/roguetown/bluslave
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = "Elf"
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+
+/datum/outfit/job/roguetown/bluslave/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	r_hand = pick(/obj/item/rogueweapon/woodstaff,/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear/billhook,/obj/item/rogueweapon/spear/stone,/obj/item/rogueweapon/copperspear)
+	belt = /obj/item/storage/belt/rogue/leather/cloth
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
+		H.change_stat("speed", 2)
+		H.change_stat("intelligence", -3)
+		H.change_stat("strength", -1)

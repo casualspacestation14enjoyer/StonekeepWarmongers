@@ -418,7 +418,7 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
 	color = "#ffffff"
 	name = "officers coat"
-	desc = "A heavy dark coat worn by officers of the Grenzelhoft Imperiate."
+	desc = "A heavy dark coat worn by officers of the Grenzelhoft Imperiate, or anyone unlucky enough to get the clothes someone already probably died in."
 	icon_state = "grenzcoat"
 	item_state = "grenzcoat"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'

@@ -379,6 +379,11 @@
 			W.water_volume = 10
 			W.update_icon()
 			return
+		var/obj/structure/well/fountain/F = locate() in T
+		if(F)
+			new /obj/structure/well/fountain/bloody(T)
+			qdel(F)
+			return
 	var/obj/effect/decal/cleanable/blood/puddle/P = locate() in T
 	if(P)
 		P.blood_vol += amt

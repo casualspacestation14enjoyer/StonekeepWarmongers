@@ -408,10 +408,6 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 	color = "#3c3a38"
 
-/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
 	color = "#a32121"
 

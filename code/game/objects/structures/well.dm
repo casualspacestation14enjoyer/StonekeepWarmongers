@@ -18,8 +18,26 @@
 	desc = ""
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "fountain"
-	layer = BELOW_MOB_LAYER
-	layer = -0.1
+	bound_width = 64
+	layer = ABOVE_MOB_LAYER
+	plane = -1 // so people are actually BEHIND the fucking fountain because if we dont have this theyre drawn on top
+
+/obj/structure/well/fountain/bloody
+	name = "blood fountain"
+	icon_state = "fountain-b"
+
+/obj/structure/well/fountain/bloody/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/reagent_containers/glass/bucket/wooden))
+		var/obj/item/reagent_containers/glass/bucket/wooden/W = I
+		if(W.reagents.holder_full())
+			to_chat(user, "<span class='warning'>[W] is full.</span>")
+			return
+		if(do_after(user, 60, target = src))
+			var/list/waterl = list(/datum/reagent/blood = 100)
+			W.reagents.add_reagent_list(waterl)
+			to_chat(user, "<span class='notice'>I fill [W] from [src].</span>")
+			return
+	else ..()
 
 /obj/structure/well/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/reagent_containers/glass/bucket/wooden))

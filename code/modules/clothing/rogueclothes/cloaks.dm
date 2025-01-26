@@ -279,10 +279,6 @@
 	color = CLOTHING_BLACK
 	picked = TRUE
 
-/obj/item/clothing/cloak/stabard/guard/bluey/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
 /obj/item/clothing/cloak/stabard/guard/attack_right(mob/user)
 	if(picked)
 		return
@@ -566,10 +562,6 @@
 	desc = ""
 	icon_state = "apron_medical"
 	item_state = "apron_medical"
-
-/obj/item/clothing/cloak/apron/cook/medical/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
 /*
 /obj/item/clothing/cloak/apron/waist/ComponentInitialize()
@@ -983,10 +975,6 @@
 	detail_tag = "_box"
 	picked = TRUE
 
-/obj/item/clothing/cloak/jinbaori/reddy/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
 /obj/item/clothing/cloak/raincloak/mino
 	name = "mino cloak"
 	desc = "An abyssariad raincoat made out of straw that covers the entire body."
@@ -997,7 +985,3 @@
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
-
-/obj/item/clothing/cloak/raincloak/mino/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)

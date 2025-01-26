@@ -353,6 +353,12 @@
 		W.water_volume = 10
 		W.update_icon()
 		return
+
+	var/obj/structure/well/fountain/F = locate() in T
+	if(F)
+		new /obj/structure/well/fountain/bloody(T)
+		qdel(F)
+		return
 	new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
 
 /mob/living/proc/add_drip_floor(turf/T, amt)
@@ -372,6 +378,11 @@
 			W.water_maximum = 10
 			W.water_volume = 10
 			W.update_icon()
+			return
+		var/obj/structure/well/fountain/F = locate() in T
+		if(F)
+			new /obj/structure/well/fountain/bloody(T)
+			qdel(F)
 			return
 	var/obj/effect/decal/cleanable/blood/puddle/P = locate() in T
 	if(P)

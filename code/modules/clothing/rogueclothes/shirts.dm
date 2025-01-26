@@ -443,10 +443,6 @@
 				V.update_icon()
 		L.regenerate_icons()
 
-/obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare/equipped(mob/user, slot)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/update_icon()
 	cut_overlays()
 	if(get_detail_tag())

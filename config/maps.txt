@@ -48,3 +48,8 @@ map sandblasted
 	#voteweight 1.5
 	votable
 endmap
+
+map ziggurat
+	#voteweight 1.5
+	votable
+endmap

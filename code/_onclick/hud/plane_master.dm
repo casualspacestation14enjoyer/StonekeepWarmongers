@@ -71,7 +71,7 @@
 	filters = list()
 	if(istype(mymob) && mymob.client && mymob.client.prefs && mymob.client.prefs.ambientocclusion)
 		filters += AMBIENT_OCCLUSION
-		filters += filter(type="bloom", size = 4, offset = 0, threshold = "#282828")
+		//filters += filter(type="bloom", size = 4, offset = 0, threshold = "#282828")
 	if(istype(mymob) && mymob.eye_blurry)
 		filters += GAUSSIAN_BLUR(CLAMP(mymob.eye_blurry*0.1,0.6,3))
 	if(istype(mymob))
@@ -80,7 +80,7 @@
 			if(L.has_status_effect(/datum/status_effect/buff/druqks))
 				filters += filter(type="ripple",x=80,size=50,radius=0,falloff = 1)
 				var/F1 = filters[filters.len]
-				animate(F1, size=50, radius=480, time=4, loop=-1, flags=ANIMATION_PARALLEL)
+				//animate(F1, size=50, radius=480, time=4, loop=-1, flags=ANIMATION_PARALLEL)
 				filters += filter(type="color", color = list(0,0,1,0, 0,1,0,0, 1,0,0,0, 0,0,0,1, 0,0,0,0))
 				F1 = filters[filters.len-1]
 				animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)

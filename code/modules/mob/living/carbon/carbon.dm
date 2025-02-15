@@ -860,6 +860,8 @@
 		overlay_fullscreen("crit", /atom/movable/screen/fullscreen/crit, severity)
 		overlay_fullscreen("DD", /atom/movable/screen/fullscreen/crit/death)
 		overlay_fullscreen("DDZ", /atom/movable/screen/fullscreen/crit/zeth)
+	else if(IsUnconscious())
+		overlay_fullscreen("UNCON", /atom/movable/screen/fullscreen/crit/uncon)
 	else
 		if(succumb_timer)
 			succumb_timer = 0
@@ -867,6 +869,7 @@
 		clear_fullscreen("critvision")
 		clear_fullscreen("DD")
 		clear_fullscreen("DDZ")
+		clear_fullscreen("UNCON")
 	if(hud_used)
 		if(hud_used.stressies)
 			hud_used.stressies.update_icon()

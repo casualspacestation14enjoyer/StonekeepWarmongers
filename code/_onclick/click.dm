@@ -160,9 +160,9 @@
 		face_atom(A)
 		AltRightClickOn(A, params)
 		return
-//	if(modifiers["shift"] && modifiers["middle"])
-//		ShiftMiddleClickOn(A)
-//		return
+	if(modifiers["shift"] && modifiers["middle"])
+		ShiftMiddleClickOn(A)
+		return
 	if(modifiers["middle"])
 		MiddleClickOn(A, params)
 		return
@@ -553,10 +553,9 @@
 	. = SEND_SIGNAL(src, COMSIG_MOB_MIDDLECLICKON, A)
 	if(. & COMSIG_MOB_CANCEL_CLICKON)
 		return
-//	A.AltClick(src)
-//	else
-//		to_chat(src, "<span class='warning'>I need an empty hand to sort through the items here.</span>")
 
+/atom/proc/ShiftMiddleClick(mob/user, params)
+	return
 
 /*
 	Shift click

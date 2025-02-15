@@ -9,6 +9,10 @@
 	var/datum/reagent/chosen_potion = /datum/reagent/medicine/healthpot
 	var/obj/item/reagent_containers/glass/bottle/rogue/pot // where to put the health potion
 
+/obj/item/cranker/ShiftMiddleClick(mob/user, params)
+	. = ..()
+	// todo: tutorial for this bitch. doo the same thing with muskets to replace the HELP verb
+
 /obj/item/cranker/MiddleClick(mob/user, params)
 	. = ..()
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)

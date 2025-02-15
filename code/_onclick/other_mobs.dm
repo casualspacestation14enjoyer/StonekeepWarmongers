@@ -229,6 +229,10 @@
 			mind.attackedme[user.real_name] = world.time
 		log_combat(user, src, "bit")
 
+/mob/living/ShiftMiddleClickOn(atom/A, params)
+	..()
+	A.ShiftMiddleClick(src, params)
+
 /mob/living/MiddleClickOn(atom/A, params)
 	..()
 	if(!mmb_intent)

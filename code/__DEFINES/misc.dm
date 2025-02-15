@@ -7,6 +7,11 @@
 #define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
 #define RED_WARTEAM "Heartfelts" // Heartfelt
 
+#define WARMONGERS_TECHLEVEL_FLINTLOCKS 1
+#define WARMONGERS_TECHLEVEL_COWBOY 2
+#define WARMONGERS_TECHLEVEL_NONE 3
+#define WARMONGERS_TECHLEVEL_AUTO 4 // this is a joke mostly
+
 #define GAMEMODE_PONR "Point of No Return"
 #define GAMEMODE_LORD "Lord Destruction"
 #define GAMEMODE_STAND "Last Stand"

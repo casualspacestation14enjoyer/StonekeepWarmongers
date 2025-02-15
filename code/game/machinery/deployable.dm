@@ -52,8 +52,6 @@
 	else
 		return !density
 
-
-
 /////BARRICADE TYPES///////
 
 /obj/structure/barricade/wooden
@@ -107,12 +105,13 @@
 	desc = "Bags of sand meant to cover your sorry face."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sandbags"
-	max_integrity = 60
-	proj_pass_rate = 20
+	max_integrity = 50
+	proj_pass_rate = 15
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 	climbable = TRUE
-	climb_time = 20
+	climb_time = 5 SECONDS
+	climb_offset = -5
 	smooth = SMOOTH_FALSE
 	canSmoothWith = list()
 	attacked_sound = 'sound/foley/cloth_rip.ogg'
@@ -120,18 +119,20 @@
 	bar_material = SAND
 
 /obj/structure/barricade/sandbags/rogue/CanPass(atom/movable/mover, turf/target)
-	..()
-	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
+	if(locate(/obj/structure/barricade) in get_turf(mover))
 		return 1
-	if(get_dir(loc, target) == dir)
+	if(istype(mover, /obj/projectile))
+		if(!anchored)
+			return 1
+		var/obj/projectile/proj = mover
+		if(proj.firer && Adjacent(proj.firer))
+			return 1
+		if(prob(proj_pass_rate))
+			return 1
 		return 0
-	return 1
-
-/obj/structure/barricade/sandbags/rogue/CheckExit(atom/movable/mover as mob|obj, turf/target)
-	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
-		return 1
-	if(get_dir(mover.loc, target) == dir)
-		return 0
+	else
+		if(get_dir(loc, target) == dir)
+			return !density
 	return 1
 
 /obj/structure/barricade/wooden/rogue/crude

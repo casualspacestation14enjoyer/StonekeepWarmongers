@@ -19,7 +19,7 @@
 	description = "These levershots are the future!"
 
 /datum/round_aspect/futurewar/apply()
-	SSticker.warfare_techlevel = 2
+	SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 
 /datum/round_aspect/nomood
 	name = "Moodless"

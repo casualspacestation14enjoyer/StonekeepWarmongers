@@ -710,15 +710,17 @@
 	set name = "Set Techlevel"
 
 	if(SSticker.warfare_techlevel)
-		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS)", "WARMONGERS", "1") as anything in list("1","2","3")
+		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS, 4 AUTOMATIC HOLY SHIT)", "WARMONGERS", "1") as anything in list("1","2","3","4")
 		if(inss)
 			switch(inss)
 				if("1")
-					SSticker.warfare_techlevel = 1
+					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 				if("2")		
-					SSticker.warfare_techlevel = 2
+					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 				if("3")
-					SSticker.warfare_techlevel = 3
+					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
+				if("4")
+					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_AUTO
 			SSblackbox.record_feedback("tally", "admin_verb", 1, "SetTechLevel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			log_admin("[usr.key] has set the tech level to [inss]")
 			return 1

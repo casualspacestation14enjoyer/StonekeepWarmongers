@@ -27,7 +27,7 @@ SUBSYSTEM_DEF(ticker)
 	var/round_end_sound_sent = TRUE			//If all clients have loaded it
 
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
-	var/warfare_techlevel = 1						// 1 flintlocks. 2 repeaters. 3 not yet implemeneted lol
+	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 
 	var/oneteammode = FALSE
 	var/deathmatch = FALSE
@@ -936,27 +936,27 @@ SUBSYSTEM_DEF(ticker)
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)
-		if(1)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-		if(2)
+		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(3)
 			return null
 
 /proc/GetMainGunForWarfareGrenzelhoft()
 	switch(SSticker.warfare_techlevel)
-		if(1)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
-		if(2)
+		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(3)
 			return null
 
 /proc/GetSidearmForWarfare()
 	switch(SSticker.warfare_techlevel)
-		if(1)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
-		if(2)
+		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
 		if(3)
 			return null
@@ -997,7 +997,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
-			SSticker.warfare_techlevel = 2
+			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
 	for(var/mob/M in GLOB.player_list)
 		SEND_SOUND(M, 'sound/music/traitor.ogg')

@@ -8,6 +8,9 @@
 	pixel_y = 32
 
 /obj/structure/roguemachine/atm/attack_hand(mob/user)
+	to_chat(user, "<span class='warning'>The machine only hisses at me. It does not work.</span>")
+	playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+	/*
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
@@ -58,6 +61,7 @@
 		spawn(5)
 			say("New account created.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
+	*/
 
 /*
 /obj/structure/roguemachine/atm/attack_right(mob/user)
@@ -68,15 +72,5 @@
 */
 
 /obj/structure/roguemachine/atm/attackby(obj/item/P, mob/user, params)
-	if(ishuman(user))
-		if(istype(P, /obj/item/roguecoin))
-			var/mob/living/carbon/human/H = user
-			if(H in SStreasury.bank_accounts)
-				SStreasury.generate_money_account(P.get_real_price(), H)
-				qdel(P)
-				playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
-				return
-			else
-				say("No account found. Submit your fingers for inspection.")
-	return ..()
-
+	to_chat(user, "<span class='warning'>Now that's just silly, no?</span>")
+	return

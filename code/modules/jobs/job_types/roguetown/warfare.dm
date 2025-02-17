@@ -178,7 +178,7 @@
 	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. But not all is lost just yet, with supplies coming in from the Foglands you might be able to push the Grenzelhoft barbarians off this land."
 	department_flag = REDSS
 	flag = REDKING
-	min_pq = -10
+	min_pq = 0
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -550,6 +550,7 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
+	min_pq = -5
 
 /datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -661,7 +662,7 @@
 	tutorial = "A middle-class noble with aspirations for something greater. You've been given charge of a small detachment and sent directly into the meat grinder. You will either return to Grenzelhoft a conquerer, or not at all."
 	department_flag = BLUES
 	flag = BLUKING
-	min_pq = -10
+	min_pq = 0
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -1096,6 +1097,7 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
+	min_pq = -5
 
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()

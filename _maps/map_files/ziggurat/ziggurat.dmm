@@ -1398,6 +1398,13 @@
 /obj/item/roguegem/violet,
 /turf/open/floor/rogue/tile/masonic/spiral,
 /area/rogue/under)
+"Xt" = (
+/obj/item/roguestatue/gold{
+	name = "Centerpiece of the Garden of Good Gnomes";
+	desc = "What in the hells is it doing here?!"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/under)
 "Xv" = (
 /obj/machinery/light/rogue/torchholder/c,
 /obj/structure/fluff/statue/gargoyle,
@@ -5267,7 +5274,7 @@ YC
 YC
 YC
 YC
-RE
+Xt
 RE
 RE
 YC

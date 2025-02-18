@@ -678,7 +678,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	. = new_character
 	if(.)
 		new_character.key = key		//Manually transfer the key to log them in
-		new_character.can_do_sex()
 		new_character.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 		var/area/joined_area = get_area(new_character.loc)
 		if(joined_area)

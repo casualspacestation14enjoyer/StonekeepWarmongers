@@ -4,7 +4,7 @@
 	mid_sounds = list()
 	mid_length = 99999
 	volume = 50
-	extra_range = 5
+	extra_range = 7
 	persistent_loop = TRUE
 	var/stress2give = /datum/stressevent/music
 
@@ -32,7 +32,6 @@
 	var/datum/looping_sound/musloop/soundloop
 	var/curfile
 	var/playing = FALSE
-	var/curvol = 70
 	var/list/music_tracks
 
 /obj/structure/roguemachine/musicbox/Initialize()
@@ -63,7 +62,6 @@
 	curfile = music_tracks[selection]
 	update_icon()
 
-
 /obj/structure/roguemachine/musicbox/attack_hand(mob/living/user)
 	. = ..()
 	if(.)
@@ -75,7 +73,7 @@
 			playing = TRUE
 			soundloop.mid_sounds = list(curfile)
 			soundloop.cursound = null
-			soundloop.volume = curvol
+			soundloop.volume = 90
 			soundloop.start()
 	else
 		playing = FALSE

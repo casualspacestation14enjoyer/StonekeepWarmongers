@@ -17,6 +17,10 @@
 	ambushable = 1
 
 	var/footstep_type = FOOTSTEP_MOB_HUMAN
+	var/warfare_faction = null
+	var/obscure_species = FALSE
+
+	var/virginity = FALSE // holdover since i cant be bothered to fix every single runtime
 
 	var/last_sound //last emote so we have no doubles
 

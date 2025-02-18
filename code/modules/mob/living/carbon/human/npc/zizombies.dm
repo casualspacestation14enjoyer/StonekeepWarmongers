@@ -27,7 +27,7 @@
 mob/living/carbon/human/species/zizombie/ambush/after_creation()
 	..()
 	job = "Ambush zizombie"
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -142,7 +142,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 /mob/living/carbon/human/species/zizombie/after_creation()
 	..()
 	gender = MALE
-	QDEL_NULL(sexcon)
+	
 	if(src.dna && src.dna.species)
 		src.dna.species.soundpack_m = new /datum/voicepack/zombie/m()
 		var/obj/item/headdy = get_bodypart("head")
@@ -244,7 +244,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 
 /mob/living/carbon/human/species/zizombie/npc/peasant/after_creation()
 	..()
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -310,7 +310,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 ///////////////////////////////////////////////////////////// EVENTMIN ZIZOMBIES
 /mob/living/carbon/human/species/zizombie/npc/ambush/after_creation()
 	..()
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -352,7 +352,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 
 /mob/living/carbon/human/species/zizombie/npc/warrior/after_creation()
 	..()
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -439,7 +439,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 ///////////////////////////////////////////////////////////// EVENTMIN ZOMBIE MILITIA
 /mob/living/carbon/human/species/zizombie/npc/militiamen/after_creation()
 	..()
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -519,7 +519,7 @@ mob/living/carbon/human/species/zizombie/ambush/after_creation()
 ///////////////////////////////////////////////////////////// EVENTMIN ZOMBIE GRENZELHOFT MERCENARIES
 /mob/living/carbon/human/species/zizombie/npc/GRENZEL/after_creation()
 	..()
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)

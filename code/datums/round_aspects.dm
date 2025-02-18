@@ -40,10 +40,6 @@
 /datum/round_aspect/noreloading
 	name = "God of War's Blessing"
 	description = "We are blessed!"
-	
-/datum/round_aspect/sexmongers
-	name = "SEXMONGERS"
-	description = "freeky...."
 
 /* People aren't ready for this.
 /datum/round_aspect/goblino

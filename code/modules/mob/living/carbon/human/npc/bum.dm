@@ -16,14 +16,14 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 	faction = list("heartie", "station")
 
 /mob/living/carbon/human/species/human/northern/bum/propsoldier/after_creation() // for screenshots and such
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
 	equipOutfit(new /datum/outfit/job/roguetown/blusoldier)
 
 /mob/living/carbon/human/species/human/northern/bum/propsoldier/heartfelt/after_creation() // for screenshots and such
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -74,7 +74,7 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 /mob/living/carbon/human/species/human/northern/bum/after_creation()
 	..()
 	job = "Beggar"
-	QDEL_NULL(sexcon)
+	
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)

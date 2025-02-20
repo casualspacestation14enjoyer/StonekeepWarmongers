@@ -308,7 +308,7 @@
 	eyeblur = 3
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "woodenball_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet/wood
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 40
@@ -381,15 +381,6 @@
 	randomspread = 0
 	variance = 0
 	force = 20
-
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot
-	name = "berryshot"
-	desc = "A large pouch of smaller lead balls. Not as complex nor spherical."
-	icon = 'icons/roguetown/items/misc.dmi'
-	icon_state = "rucksack"
-	pellets = 6
-	variance = 15
-	projectile_type = /obj/projectile/bullet/fragment
 
 //...............Kaizoku Content...............
 /obj/projectile/bullet/reusable/arrow/poison/fog

@@ -603,8 +603,8 @@
 /obj/item/ammo_casing/caseless/rogue/cball,
 /obj/item/ammo_casing/caseless/rogue/cball,
 /obj/item/ammo_casing/caseless/rogue/cball,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/dirt/road{
 	dir = 1
 	},
@@ -1132,7 +1132,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "Xm" = (
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
+/obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "XE" = (

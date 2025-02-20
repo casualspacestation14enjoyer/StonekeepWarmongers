@@ -648,12 +648,12 @@
 /obj/item/ammo_casing/caseless/rogue/cball,
 /obj/item/ammo_casing/caseless/rogue/cball,
 /obj/item/ammo_casing/caseless/rogue/cball,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
-/obj/item/ammo_casing/caseless/rogue/cball/grapeshot,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "PE" = (

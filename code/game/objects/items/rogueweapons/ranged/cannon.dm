@@ -74,8 +74,6 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
 	name = "hand barkstone"
 	desc = "HOLY FUCK!"
-	icon = 'icons/roguetown/misc/structure.dmi'
-	icon_state = "cannona"
 	fire_sound = 'sound/misc/explode/explosion.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/musk/cannona
 	dropshrink = 0.5

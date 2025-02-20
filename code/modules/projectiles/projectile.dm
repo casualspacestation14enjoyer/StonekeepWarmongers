@@ -61,8 +61,8 @@
 	var/hitscan_light_intensity = 1.5
 	var/hitscan_light_range = 0.75
 	var/hitscan_light_color_override
-	var/muzzle_flash_intensity = 3
-	var/muzzle_flash_range = 1.5
+	var/muzzle_flash_intensity = 6
+	var/muzzle_flash_range = 3.5
 	var/muzzle_flash_color_override
 	var/impact_light_intensity = 3
 	var/impact_light_range = 2
@@ -410,8 +410,7 @@
 		var/atom/movable/thing = new muzzle_type
 		var/matrix/M = new
 		M.Turn(original_angle)
-		//thing.forceMove(get_step(firer, firer.dir))
-		thing.forceMove(firer.loc)
+		thing.forceMove(get_step(firer, firer.dir))
 		thing.transform = M
 		thing.color = color
 		thing.set_light(muzzle_flash_range, muzzle_flash_intensity, muzzle_flash_color_override? muzzle_flash_color_override : color)

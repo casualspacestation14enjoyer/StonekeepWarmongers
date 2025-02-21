@@ -253,6 +253,8 @@
 	duration = 5
 
 /obj/effect/temp_visual/decoy/fading/blood
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "floor2"
 	color = COLOR_RED
 	duration = 10
 

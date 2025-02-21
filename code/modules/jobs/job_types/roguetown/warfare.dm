@@ -379,7 +379,10 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/rattan
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltl = /obj/item/rogueweapon/battle/ono
+	if(H.dna.species.id == "dwarf")
+		beltl = /obj/item/rogueweapon/woodcut/pick
+	else
+		beltl = /obj/item/rogueweapon/battle/ono
 	beltr = GetSidearmForWarfare()
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backl = /obj/item/storage/backpack/rogue/backpack
@@ -908,7 +911,10 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/rogueweapon/woodcut/steel
+	if(H.dna.species.id == "dwarf")
+		beltl = /obj/item/rogueweapon/woodcut/pick
+	else
+		beltl = /obj/item/rogueweapon/woodcut/steel
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin

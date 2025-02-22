@@ -324,7 +324,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 1
 
 /datum/outfit/job/roguetown/redsamurai/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -815,7 +815,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 1
 
 /datum/outfit/job/roguetown/bluzweihander/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()

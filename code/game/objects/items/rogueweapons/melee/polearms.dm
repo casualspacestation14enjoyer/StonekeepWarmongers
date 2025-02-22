@@ -635,6 +635,12 @@
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "gourd"
 
+/obj/item/sanctiflux/fire_act()
+	var/obj/item/bomb/fire/F = new(get_turf(src))
+	F.lit = TRUE
+	F.explode(TRUE)
+	qdel(src)
+
 /obj/effect/oilspill
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

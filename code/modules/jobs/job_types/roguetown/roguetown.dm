@@ -56,7 +56,8 @@
 /datum/outfit/job/roguetown/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	var/datum/job/roguetown/J = SSjob.GetJob(H.job)
-	to_chat(H, "<span class='info'>[J.tutorial]</span>")
+	if(J.tutorial)
+		to_chat(H, "<span class='info'>[J.tutorial]</span>")
 	for(var/list_key in SStriumphs.post_equip_calls)
 		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]
 		thing.on_activate(H)

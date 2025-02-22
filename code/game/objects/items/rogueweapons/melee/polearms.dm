@@ -441,7 +441,7 @@
 	bigboy = TRUE
 
 /obj/item/rogueweapon/spear/firelance
-	name = "sanctiflux firelance"
+	name = "firelance"
 	desc = "The new iteration of the ancient abyssariad 'Widowmaker'. Do not allow its simple design to fool you, it can easily kill its operator as quickly as any foe. \
 	Honestly, unless you're a Firelancer you shouldn't even think of using one of these things. And even then your chances are only slightly above average."
 	icon = 'icons/roguetown/weapons/64.dmi'
@@ -478,7 +478,10 @@
 		return
 
 	if(!fuel_source)
-		to_chat(user.loc, "<span class='warning'>You cannot burn your enemies without a gourd with sanctiflux.</span>")
+		to_chat(user.loc, "<span class='warning'>There is none.</span>")
+		return
+
+	if(!cocked)
 		return
 
 	to_chat(src.loc, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
@@ -488,11 +491,14 @@
 	spawn(20) // 2 seconds
 		if(lit)
 			to_chat(src.loc, "<span class='warning'>The fuze reaches the composite, building deadly pressure.</span>")
+			playsound(src,'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
 	spawn(40) // 4 seconds
 		if(lit)
-			to_chat(src.loc, "<span class='danger'>The Firelance is about to release purifying death!</span>")
+			to_chat(src.loc, "<span class='danger'>The firelance is about to release purifying death!</span>")
+			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 	spawn(60) // 6 seconds
 		if(lit)
+			playsound(src.loc, 'sound/magic/fireball.ogg', 100)
 			flamefire(user)
 			fuel_source = FALSE
 			lit = FALSE
@@ -524,6 +530,7 @@
 				current_turf = locate(start.x + offset, start.y + (delta_y * distance), start.z)
 
 			if(current_turf)
+				sleep(rand()) // wait 0 or 1 second before doing shit
 				// Ignite the tile
 				new /obj/effect/oilspill(current_turf)
 				current_turf.hotspot_expose(500, 30, 1)
@@ -539,14 +546,10 @@
 /obj/item/rogueweapon/spear/firelance/dropped(mob/living/user)
 	. = ..()
 	if(fuel_source)
-		if(HAS_TRAIT(user, TRAIT_FIRELANCER))
-			to_chat(src, "<span class='info'>[user] lowered the [usr] with care, sensing the potential calamity bound within, aware of the cost from underestimating it.</span>")
-			return
-		else
-			to_chat(src, "<span class='info'>[user] dropped the [usr] with its gourd's cap unsealed, hissing quietly, as it tells the tales of widowmaking by doing the obvious.</span>")
-			user.adjust_fire_stacks(3)
-			user.IgniteMob()
-			flamefire(user)
+		to_chat(src, "<span class='info'>[user] dropped the [usr] with its gourd's cap unsealed, hissing quietly, as it tells the tales of widowmaking by doing the obvious.</span>")
+		user.adjust_fire_stacks(3)
+		user.IgniteMob()
+		flamefire(user)
 
 /obj/item/rogueweapon/spear/firelance/attack_self(mob/living/user)
 	if(lit) // safeguard
@@ -559,25 +562,18 @@
 			return
 
 		if(!cocked && !fuel_source)
-			if(HAS_TRAIT(user, TRAIT_FIRELANCER))
-				to_chat(user, "<span class='info'>You triggered the mechanism under the blades even without a gourd. No internal repair is needed.</span>")
-				cocked = TRUE
-				update_icon()
-				return
-			else
-				var/obj/item/bodypart/limb
-				var/list/limb_list = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
-				for(var/zone in limb_list)
-					limb = user.get_bodypart(zone)
-					if(limb)
-						playsound(src,'sound/misc/eat.ogg', rand(30,60), TRUE)
-						to_chat(user, "<span class='danger'>Without a gourd, [user]'s [limb] was accidentally snatched by jagged blades, bleeding before being severed!</span>")
-						limb.dismember()
-						qdel(limb)
-						user.emote("scream")
-						cocked = TRUE
-						update_icon()
-						return
+			var/obj/item/bodypart/limb
+			var/list/limb_list = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+			for(var/zone in limb_list)
+				limb = user.get_bodypart(zone)
+				if(limb)
+					playsound(src,'sound/misc/eat.ogg', rand(30,60), TRUE)
+					to_chat(user, "<span class='danger'>Without a gourd, [user]'s [limb] was accidentally snatched by jagged blades, bleeding before being severed!</span>")
+					limb.dismember()
+					user.emote("scream")
+					cocked = TRUE
+					update_icon()
+					return
 
 		if(!cocked && fuel_source)
 			to_chat(user, "<span class='info'>You start spinning the mechanisms, watching the jagged blades close. The weapon is now ready, but it needs to be lit.</span>")
@@ -588,6 +584,7 @@
 			return
 		else
 			to_chat(user, "<span class='warning'>Fuel spills due to misuse, rendering the weapon unprepared.</span>")
+			playsound(src,'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
 			cocked = FALSE
 			fuel_source = FALSE
 			update_icon()
@@ -602,6 +599,7 @@
 			return
 		if(cocked)
 			to_chat(user, "<span class='warning'>I shoved the gourd against the steel blades, almost cracking it. I cannot put the gourd inside if the blades are on the way.</span>")
+			playsound(src,'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
 			return
 		if(!cocked)
 			fuel_source = TRUE
@@ -633,7 +631,7 @@
 
 /obj/item/sanctiflux
 	name = "sanctiflux gourd"
-	desc = "The abyssariad answer to demonic corruption, purger of zizo and men, malum's essence in sanctifying form to branch with abyssal valors. An Abyssariad secret from Fog Islands."
+	desc = "A mystery from the Fog Islands, perverted into a weapon of mass annihalation."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "gourd"
 
@@ -648,6 +646,8 @@
 
 /obj/effect/oilspill/Initialize()
 	. = ..()
+	spawn(rand(1,3))
+		playsound(src.loc, 'sound/items/quench_barrel1.ogg', 100)
 	setDir(pick(GLOB.cardinals))
 	START_PROCESSING(SSfastprocess, src)
 	return

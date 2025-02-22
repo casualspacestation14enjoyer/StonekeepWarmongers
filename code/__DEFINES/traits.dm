@@ -32,7 +32,6 @@
 #define TRAIT_CYCLOPS_LEFT				"Cyclops (Left)" //poked left eye
 #define TRAIT_CYCLOPS_RIGHT				"Cyclops (Right)" //poked right eye
 #define TRAIT_LEECHIMMUNE				"Unleechable" //leeches wont attach in bog squares
-#define TRAIT_FIRELANCER				"Trained" //for firelance	
 
 #define TRAIT_MISSING_NOSE "Missing Nose" //halved stamina regeneration
 #define TRAIT_DISFIGURED "Disfigured"

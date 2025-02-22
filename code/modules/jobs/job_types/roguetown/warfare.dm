@@ -450,7 +450,6 @@
 		H.change_stat("strength", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	ADD_TRAIT(H, TRAIT_FIRELANCER, TRAIT_GENERIC)
 
 //// HEARTFELT NINJA ////
 

@@ -203,6 +203,7 @@
 /obj/item/organ/brain/on_life()
 	if(damage >= BRAIN_DAMAGE_DEATH) //rip
 		to_chat(owner, "<span class='danger'>The last spark of life in your brain fizzles out...</span>")
+		SEND_SOUND(owner, sound('sound/lobotomy.ogg', volume=50))
 		owner.death()
 		brain_death = TRUE
 

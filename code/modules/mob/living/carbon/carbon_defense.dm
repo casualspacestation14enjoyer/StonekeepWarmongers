@@ -86,6 +86,7 @@
 			else
 				newdam = newdam * 5
 				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
+				SEND_SOUND(src, 'sound/lobotomy.ogg')
 				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE

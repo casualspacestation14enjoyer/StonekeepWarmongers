@@ -1127,10 +1127,3 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		else
 			blacklisted = 0
 		return blacklisted
-
-/client/proc/commendsomeone(var/forced = FALSE)
-	set category = "OOC"
-	set name = "Commend"
-	set desc = "Make that one person you had Quality RolePlay with happy."
-
-	commendation_popup(forced)

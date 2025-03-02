@@ -170,7 +170,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(!can_speak_vocal(message))
 //		visible_message("<b>[src]</b> makes a muffled noise.")
-		to_chat(src, "<span class='warning'>I can't talk.</span>")
+//		to_chat(src, "<span class='warning'>I can't talk.</span>")
 		return
 
 	var/message_range = 7
@@ -364,6 +364,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 /mob/living/proc/can_speak_vocal(message) //Check AFTER handling of xeno and ling channels
 	if(HAS_TRAIT(src, TRAIT_MUTE))
+		if(SSticker.current_state == GAME_STATE_FINISHED)
+			client.lobbyooc(message)
 		return FALSE
 
 	if(is_muzzled())

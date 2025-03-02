@@ -180,9 +180,10 @@
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		H.mode = AI_OFF
+	/*
 	if(client)
 		client.verbs += /client/proc/lobbyooc
-		client.verbs += /client/proc/commendsomeone
+	*/
 
 /client/proc/show_game_over()
 	var/atom/movable/screen/splash/credits/S = new(src, FALSE)

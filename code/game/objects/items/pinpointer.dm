@@ -190,7 +190,7 @@
 	A.other_pair = B
 	B.other_pair = A
 
-/obj/item/pinpointer/crown
+/obj/item/pinpointer/crown // todo: FIX (special todo tag: warmongers)
 	name = "POINTER"
 	desc = "Where do we go? Heed the call of war."
 	icon_state = "crownpointer"

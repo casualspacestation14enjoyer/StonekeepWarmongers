@@ -51,8 +51,7 @@
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
 			purpose_fulfilled = TRUE
-			C.whowon = RED_WARTEAM
-			SSticker.force_ending = TRUE 
+			C.do_war_end(team=RED_WARTEAM)
 
 /obj/structure/warfarestatue/Destroy()
 	STOP_PROCESSING(SSprocessing, src)
@@ -60,8 +59,7 @@
 		to_chat(world, "<span class='danger'>The [src] was destroyed!</span>")
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
-			C.whowon = BLUE_WARTEAM
-			SSticker.force_ending = TRUE
+			C.do_war_end(team=BLUE_WARTEAM)
 	. = ..()
 
 /obj/structure/warfarestatue/examine(mob/user)

@@ -312,33 +312,34 @@
 	opacity = FALSE
 	var/team = BLUE_WARTEAM
 
+/obj/structure/fluff/ponr/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/fluff/ponr/process()
+	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
+		W.dismantle_wall()
+
 /obj/structure/fluff/ponr/attack_hand(mob/user)
 	. = ..()
 	var/mob/living/carbon/human/H
+	var/datum/game_mode/warfare/C = SSticker.mode
 	if(ishuman(user))
 		H = user
 	if(H.warfare_faction == team)
-		to_chat(H, "<span class='info'>This belongs to us.</span>")
+		if(C.crownbearer)
+			to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+			return
+		else if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
+			C.do_war_end(H, team)
+		else
+			to_chat(H, "<span class='info'>This belongs to us.</span>")
 		return
-	if(!do_after(user, 10 SECONDS, TRUE, src))
+	if(C.crownbearer == H)
 		return
-	switch(team)
-		if(BLUE_WARTEAM)
-			if(H.warfare_faction == RED_WARTEAM)
-				if(istype(SSticker.mode, /datum/game_mode/warfare))
-					var/datum/game_mode/warfare/C = SSticker.mode
-					C.whowon = RED_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
-		if(RED_WARTEAM)
-			if(H.warfare_faction == BLUE_WARTEAM)
-				if(istype(SSticker.mode, /datum/game_mode/warfare))
-					var/datum/game_mode/warfare/C = SSticker.mode
-					C.whowon = BLUE_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+
+	C.crownbearer = H
+	to_chat(world, "<span class='userdanger'>THE [uppertext(team)] FLAG HAS BEEN TAKEN.</span>")
 
 /obj/structure/fluff/ponr/red
 	name = "Heartfelts Point of No Return"

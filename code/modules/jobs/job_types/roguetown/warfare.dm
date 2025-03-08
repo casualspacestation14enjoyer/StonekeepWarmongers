@@ -3,7 +3,6 @@
 									"BOMBS",\
 									"FIRE BOMB",\
 									"WOODEN BALLS",\
-									"CROWN POINTER",\
 									"LEAD BALLS",\
 									"LARGE LEAD BALLS",\
 									"BOMBARDIER",\

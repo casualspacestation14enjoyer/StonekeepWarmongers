@@ -39,30 +39,27 @@
 			if(BLUE_WARTEAM)
 				SSticker.grenzelhoft_deaths++
 
-	/* No zombies in PvP.
-	if(!gibbed)
-		if(!is_in_roguetown(src))
-			zombie_check()
-	*/
-
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
 
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 
+		if(C.crownbearer == src)
+			C.crownbearer = null // stupid hack for PONR (ctf) gamemode
+
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/red/lord))
 			testing("Red lord is dead!")
 			for(var/client/X in C.heartfelts)
 				var/mob/living/carbon/human/V = X.mob
-				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
 				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
 			testing("Blue lord is dead!")
 			for(var/client/X in C.grenzels)
 				var/mob/living/carbon/human/V = X.mob
-				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
 				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 
@@ -98,7 +95,7 @@
 		H.layer = SPLASHSCREEN_LAYER+0.5
 		G.client.screen += H
 		H.Fade()
-		to_chat(G, "<span class='notice'>You've died! Don't worry, this happens all the time. Press the button that looks like a skull on the left side of your screen to respawn.</span>")
+		G.client.showtext("CLICK THE SKULL TO RESPAWN.")
 		mob_timers["lastdied"] = world.time
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
 		G.add_client_colour(/datum/client_colour/monochrome)

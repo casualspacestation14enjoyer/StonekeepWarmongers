@@ -69,16 +69,10 @@
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))
-					C.whowon = RED_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+					C.do_war_end(H, RED_WARTEAM)
 			if(BLUE_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
-					C.whowon = BLUE_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+					C.do_war_end(H, BLUE_WARTEAM)
 
 /obj/structure/throne/post_unbuckle_mob(mob/living/M)
 	..()

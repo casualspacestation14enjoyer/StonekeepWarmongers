@@ -74,7 +74,7 @@
 	if(BP)
 		testing("projwound")
 		var/newdam = P.damage * (100-blocked)/100
-		if(istype(BP, /obj/item/bodypart/head))
+		if(istype(BP, /obj/item/bodypart/head) && istype(P, /obj/projectile/bullet/reusable/bullet))
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
@@ -87,7 +87,7 @@
 			else
 				newdam = newdam * 5
 				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
-				SEND_SOUND(src, 'sound/lobotomy.ogg')
+				playsound_local(get_turf(src), 'sound/lobotomy.ogg', 50)
 				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE

@@ -309,7 +309,7 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		if(C.whowon)
-			end_reason = "The [C.whowon] win yet another conflict."
+			end_reason = "The [C.whowon] win yet another battle."
 
 	if(end_reason)
 		to_chat(world, "<span class='big bold'>[end_reason]</span>")
@@ -319,7 +319,7 @@
 			if(C.warmode != GAMEMODE_STAND && C.crownbearer)
 				to_chat(world, "<span class='info'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
-		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")
+		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>") // used only for admin shit... yet
 
 
 	/*

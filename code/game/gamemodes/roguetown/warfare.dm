@@ -49,6 +49,13 @@
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
 
+/datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy, var/team = BLUE_WARTEAM)
+	whowon = team
+	SSticker.force_ending = TRUE
+	if(crownguy)
+		crownbearer = crownguy
+		crownguy.adjust_triumphs(5)
+
 /datum/game_mode/warfare/proc/begin_autobalance_loop()
 	set waitfor = 0
 	while(1)

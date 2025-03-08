@@ -192,43 +192,36 @@
 
 /obj/item/pinpointer/crown // todo: FIX (special todo tag: warmongers)
 	name = "POINTER"
-	desc = "Where do we go? Heed the call of war."
+	desc = "Where do we go? Heed the call of war. It is foolish, it is only able to track the crown if it is on the same elevation."
 	icon_state = "crownpointer"
 	icon_suffix = "_hunter"
 	dropshrink = 0.6
 	var/team
+	var/obj/crown
 
 /obj/item/pinpointer/crown/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/clothing/head/roguetown/crownblu))
 		team = BLUE_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE GRENZELHOFTS. TRACKING HEARTFELT SCUM'S CROWN!")
+		crown = locate(/obj/item/clothing/head/roguetown/crownred)
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	if(istype(I, /obj/item/clothing/head/roguetown/crownred))
 		team = RED_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
+		crown = locate(/obj/item/clothing/head/roguetown/crownblu)
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	scan_for_target()
 
 /obj/item/pinpointer/crown/scan_for_target()
-	switch(team)
-		if(RED_WARTEAM)
-			target = locate(/obj/item/clothing/head/roguetown/crownblu) in world
-		if(BLUE_WARTEAM)
-			target = locate(/obj/item/clothing/head/roguetown/crownred) in world
+	target = crown
 
 /obj/item/pinpointer/crown/toggle_on()
 	if(!team)
 		playsound(src, 'sound/misc/machineno.ogg', 50, TRUE)
 		say("THERE'S TWO SMELLS OF CROWNS! THIS IS CONFUSING, WHICH ONE DO I TRACK?!")
 		return
-	active = !active
 	playsound(src, 'sound/misc/machinevomit.ogg', 50, TRUE)
-	if(active)
-		START_PROCESSING(SSfastprocess, src)
-	else
-		target = null
-		STOP_PROCESSING(SSfastprocess, src)
-	update_icon()
+	..()
 
 /obj/item/pinpointer/shuttle
 	name = "fugitive pinpointer"

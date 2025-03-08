@@ -6,6 +6,7 @@
 									"LEAD BALLS",\
 									"LARGE LEAD BALLS",\
 									"BOMBARDIER",\
+									"CROWN POINTER",\
 									"TETSUBISHI CALTROPS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)

@@ -10,7 +10,7 @@
 	T.layer = HUD_LAYER+2
 	T.plane = HUD_PLANE+2
 	T.maptext = {"<span style='vertical-align:top; text-align:center;
-				color: #820000; font-size: 400%;
+				color: #820000; font-size: 200%;
 				text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 				font-family: "Viner Hand ITC", "Pterra";'>[text]</span>"}
 	T.maptext_width = 205

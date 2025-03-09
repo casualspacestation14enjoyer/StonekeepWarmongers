@@ -339,7 +339,7 @@
 		return
 
 	C.crownbearer = H
-	to_chat(world, "<span class='userdanger'>THE [uppertext(team)] FLAG HAS BEEN TAKEN.</span>")
+	to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG TAKEN.</span>")
 
 /obj/structure/fluff/ponr/red
 	name = "Heartfelts Point of No Return"

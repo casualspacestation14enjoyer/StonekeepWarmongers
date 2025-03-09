@@ -940,7 +940,9 @@ SUBSYSTEM_DEF(ticker)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
-		if(3)
+		if(WARMONGERS_TECHLEVEL_AUTO)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
+		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
 /proc/GetMainGunForWarfareGrenzelhoft()
@@ -949,7 +951,9 @@ SUBSYSTEM_DEF(ticker)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
-		if(3)
+		if(WARMONGERS_TECHLEVEL_AUTO)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
+		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
 /proc/GetSidearmForWarfare()
@@ -958,7 +962,7 @@ SUBSYSTEM_DEF(ticker)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
-		if(3)
+		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()

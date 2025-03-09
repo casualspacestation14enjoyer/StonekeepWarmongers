@@ -38,7 +38,7 @@
 					shown_patreon_level = "Merchant"
 				if(5)
 					shown_patreon_level = "Lord"
-			to_chat(src, "<span class='info'>Donator Level: [shown_patreon_level]</span>")
+			//to_chat(src, "<span class='info'>Donator Level: [shown_patreon_level]</span>")
 
 	if(CONFIG_GET(flag/usewhitelist))
 		if(!client.whitelisted())

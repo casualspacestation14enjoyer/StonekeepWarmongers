@@ -224,3 +224,100 @@
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
 	update_icon()
+
+// STUPID
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine // fucking unbalanced bullshit that shouldnt exist.
+	name = "\improper Machine"
+	desc = "Something unholy."
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "doubleblunder"
+	item_state = "musket"
+	possible_item_intents = list(INTENT_GENERIC)
+	gripped_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc)
+	experimental_inhand = FALSE
+	experimental_onback = FALSE
+	wieldsound = 'sound/combat/musket_wield.ogg'
+	dry_fire_sound = 'sound/combat/Ranged/muskclick.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/peter
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	bolt_type = BOLT_TYPE_STANDARD
+	semi_auto = TRUE
+	casing_ejector = FALSE
+	burst_size = 2
+	fire_delay = 2
+	internal_magazine = TRUE
+	tac_reloads = FALSE
+	max_integrity = 600
+	randomspread = 1
+	spread = 0
+	bigboy = TRUE
+	can_parry = TRUE
+	pin = /obj/item/firing_pin
+	force = 10
+	cartridge_wording = "ball"
+	recoil = 4
+	load_sound = 'sound/foley/nockarrow.ogg'
+	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
+	fire_sound_volume = 500
+	equip_sound = 'sound/foley/gun_equip.ogg'
+	pickup_sound = 'sound/foley/gun_equip.ogg'
+	drop_sound = 'sound/foley/gun_drop.ogg'
+	dropshrink = 0.7
+	associated_skill = /datum/skill/combat/flintlocks
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/proc/reloadact(mob/user)
+	if(chambered)
+		return
+	if(!do_after(user, 2 SECONDS, TRUE, src))
+		return
+	to_chat(user, "<span class='info'>IT IS FILLED</span>")
+	magazine.complete_refill()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/attack_right(mob/user)
+	. = ..()
+	reloadact(user)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/rmb_self(mob/user)
+	. = ..()
+	reloadact(user)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachiner/dropped(mob/user)
+	. = ..()
+	if(wielded)
+		ungrip(user)
+	update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/update_icon()
+	//icon_state = "[initial(icon_state)][wielded]"
+	item_state = "[initial(item_state)][wielded]"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/attack_self(mob/living/user)
+	if(!wielded)
+		wield(user)
+		update_icon()
+	else
+		ungrip(user)
+		update_icon()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
+	if(user.client)
+		if(user.client.chargedprog >= 100)
+			spread = 0
+		else
+			spread = 150 - (150 * (user.client.chargedprog / 100))
+	else
+		spread = 0
+	..()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
+	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
+		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
+		return
+	..()
+	QDEL_NULL(chambered)
+	//new /obj/effect/particle_effect/smoke(get_turf(user))
+	SSticker.musketsshot++

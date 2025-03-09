@@ -95,7 +95,7 @@
 		H.layer = SPLASHSCREEN_LAYER+0.5
 		G.client.screen += H
 		H.Fade()
-		G.client.showtext("CLICK THE SKULL TO RESPAWN.")
+		G.client.showtext("CLICK SKULL TO RESPAWN.")
 		mob_timers["lastdied"] = world.time
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
 		G.add_client_colour(/datum/client_colour/monochrome)

@@ -86,8 +86,7 @@
 
 		var/atom/movable/screen/gameover/hog/H = new()
 		var/list/iconstato = list(
-			"hog"=90,
-			"mortis"=50,
+			"mong"=99,
 			"ashbaby"=1 // warmongers is a serious game about the horrors of war
 		)
 		var/chosen = pickweight(iconstato)

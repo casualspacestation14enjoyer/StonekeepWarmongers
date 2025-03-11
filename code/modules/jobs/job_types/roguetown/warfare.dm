@@ -495,6 +495,7 @@
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NINJA, TRAIT_GENERIC)
 
 //// RIFLEMEN ////
 

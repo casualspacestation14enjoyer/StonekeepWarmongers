@@ -42,6 +42,9 @@
 
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
+	
+	if(HAS_TRAIT(src, TRAIT_NINJA))
+		new /obj/effect/particle_effect/smoke(get_turf(user))
 
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode

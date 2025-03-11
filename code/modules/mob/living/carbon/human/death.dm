@@ -1,5 +1,6 @@
 /mob/living/carbon/human/gib_animation()
-	new /obj/effect/temp_visual/gib_animation(loc, "gibbed-h")
+	var/obj/effect/temp_visual/gib_animation/GA = new(loc, "gibbed-h")
+	animate(GA, transform = matrix()*2, alpha = 0, time = 10)
 
 /mob/living/carbon/human/dust_animation()
 	new /obj/effect/temp_visual/dust_animation(loc, "dust-h")
@@ -92,8 +93,8 @@
 		var/chosen = pickweight(iconstato)
 		H.icon_state = chosen
 		H.layer = SPLASHSCREEN_LAYER+0.5
+		H.alpha = 255
 		G.client.screen += H
-		H.Fade()
 		G.client.showtext("CLICK SKULL TO RESPAWN.")
 		mob_timers["lastdied"] = world.time
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)

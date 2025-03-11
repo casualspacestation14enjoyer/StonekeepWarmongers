@@ -159,7 +159,6 @@
 		stored_ammo -= ammo
 
 /obj/item/ammo_box/magazine/proc/delete_magazine()
-	var/turf_mag = get_turf(src)
 	for(var/obj/item/ammo in stored_ammo)
 		qdel(ammo)
 		stored_ammo -= ammo

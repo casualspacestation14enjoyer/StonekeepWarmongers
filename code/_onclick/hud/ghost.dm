@@ -39,7 +39,10 @@
 		if(G.isinhell)
 			return
 		if(G.client)
-			G.returntolobby()
+			G.playsound_local(get_turf(G), 'sound/magic/holyshield.ogg', 35)
+			animate(src, transform = matrix()*1.5, alpha = 0, time = 5) // looks cool
+			spawn(10)
+				G.returntolobby()
 
 /atom/movable/screen/ghost/reenter_corpse
 	name = "Reenter corpse"

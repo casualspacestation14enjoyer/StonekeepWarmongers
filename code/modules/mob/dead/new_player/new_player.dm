@@ -622,6 +622,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 				dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
+	playsound_local(get_turf(src), 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 	var/datum/browser/popup = new(src, "latechoices", "Which side will you fight for?", 295, 620)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(jointext(dat, ""))

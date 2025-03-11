@@ -60,6 +60,12 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/datum/spawners_menu/spawners_menu
 	var/ghostize_time = 0
 
+/mob/dead/observer/Stat()
+	..()
+	stat("GRENZELHOFT CASUALTIES: [SSticker.grenzelhoft_deaths]")
+	stat("HEARTFELT CASUALTIES: [SSticker.heartfelt_deaths]")
+	stat("TOTAL: [SSticker.deaths]")
+
 /mob/dead/observer/rogue
 //	see_invisible = SEE_INVISIBLE_LIVING
 	sight = 0

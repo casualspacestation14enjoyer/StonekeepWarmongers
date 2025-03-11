@@ -244,11 +244,11 @@
 	throw_icon.hud = src
 	hotkeybuttons += throw_icon
 
-	using = new /atom/movable/screen/restup()
-	using.icon = ui_style
-	using.screen_loc = rogueui_stance
-	using.hud = src
-	static_inventory += using
+	restup_icon = new /atom/movable/screen/restup()
+	restup_icon.icon = ui_style
+	restup_icon.screen_loc = rogueui_stance
+	restup_icon.hud = src
+	static_inventory += restup_icon
 
 	using = new /atom/movable/screen/restdown()
 	using.icon = ui_style

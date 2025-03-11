@@ -37,6 +37,7 @@ GLOBAL_LIST_INIT(available_ui_styles, sortList(list(
 	var/atom/movable/screen/pull_icon
 	var/atom/movable/screen/rest_icon
 	var/atom/movable/screen/throw_catch/throw_icon
+	var/atom/movable/screen/restup/restup_icon
 	var/atom/movable/screen/module_store_icon
 	var/atom/movable/screen/backhudl
 	var/atom/movable/screen/hsover

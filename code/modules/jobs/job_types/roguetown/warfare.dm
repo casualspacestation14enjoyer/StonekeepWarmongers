@@ -30,6 +30,7 @@
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
+			ADD_TRAIT(HU, TRAIT_BRITTLE, TRAIT_GENERIC)
 
 		if(aspect_chosen(/datum/round_aspect/kicking))
 			ADD_TRAIT(HU, TRAIT_NUTCRACKER, TRAIT_GENERIC)
@@ -202,6 +203,7 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
@@ -688,6 +690,7 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"

@@ -10,10 +10,6 @@
 	name = "Nothing!"
 	description = "Normality above all."
 
-/datum/round_aspect/secret // does nothing, but people will be gaslighted into thinking it does
-	name = "Secret!"
-	description = "This round aspect is secret!"
-
 /datum/round_aspect/futurewar
 	name = "The Future of Warfare"
 	description = "These levershots are the future!"
@@ -50,12 +46,6 @@
 /datum/round_aspect/starvingmarvins
 	name = "Starvin' Marvins"
 	description = "Sadly, it's like old WARMONGERS all over again! Everyone is hungry and thirsty at the start of the round!"
-
-/* People aren't ready for this.
-/datum/round_aspect/cripplefight
-	name = "Cripple Fight"
-	description = "Sadly, due to a previous skirmish everyone has their legs crippled. Thankfully we have been provided with wheelchairs!"
-*/
 
 /datum/round_aspect/monkwarfare
 	name = "Monkers"

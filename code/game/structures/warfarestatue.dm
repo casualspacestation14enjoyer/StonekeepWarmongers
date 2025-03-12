@@ -1,4 +1,4 @@
-/obj/structure/warfarestatue
+/obj/structure/warfarestatue // relic of old LAST STAND
 	name = "Sanctified Statue"
 	desc = "A massive, holy statue. Heartfeltians feel compelled to protect it, and Grenzelhoftians to destroy it."
 	icon = 'icons/roguetown/misc/96x96.dmi'

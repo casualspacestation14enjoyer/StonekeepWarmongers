@@ -106,6 +106,10 @@
 	set category = "Noises"
 	emote("warcry", intentional = TRUE)
 
+/mob/living/carbon/human/verb/emote_warcry_f1()
+	set name = ".warcry"
+	emote_warcry()
+
 /datum/emote/living/carbon/gnarl
 	key = "gnarl"
 	key_third_person = "gnarls"

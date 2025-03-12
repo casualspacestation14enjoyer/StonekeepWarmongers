@@ -1,5 +1,43 @@
 macro "default"
-
+	elem 
+		name = "CENTER+REP"
+		command = ".center"
+	elem 
+		name = "NORTHEAST+REP"
+		command = ".northeast"
+	elem 
+		name = "SOUTHEAST+REP"
+		command = ".southeast"
+	elem 
+		name = "SOUTHWEST+REP"
+		command = ".southwest"
+	elem 
+		name = "NORTHWEST+REP"
+		command = ".northwest"
+	elem 
+		name = "WEST+REP"
+		command = ".west"
+	elem 
+		name = "NORTH+REP"
+		command = ".north"
+	elem 
+		name = "EAST+REP"
+		command = ".east"
+	elem 
+		name = "SOUTH+REP"
+		command = ".south"
+	elem 
+		name = "CTRL+F1"
+		command = ".options"
+	elem 
+		name = "F1"
+		command = ".warcry"
+	elem 
+		name = "F2"
+		command = ".screenshot auto"
+	elem 
+		name = "SHIFT+F2"
+		command = ".screenshot"
 
 window "mainwindow"
 	elem "mainwindow"

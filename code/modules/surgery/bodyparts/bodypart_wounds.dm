@@ -277,9 +277,6 @@
 	var/total_dam = get_damage()
 	var/damage_dividend = (total_dam / max_damage)
 	var/resistance = HAS_TRAIT(owner, TRAIT_CRITICAL_RESISTANCE)
-	var/from_behind = FALSE
-	if(user && (owner.dir == turn(get_dir(owner,user), 180)))
-		from_behind = TRUE
 	if(user && dam)
 		if(user.goodluck(2))
 			dam += 10

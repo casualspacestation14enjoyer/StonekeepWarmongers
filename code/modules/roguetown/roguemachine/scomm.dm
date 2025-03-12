@@ -1,7 +1,7 @@
 
 /obj/structure/roguemachine/scomm
-	name = "SCOM"
-	desc = ""
+	name = "\improper bizzare machine"
+	desc = "A derelict of a former age. How did these things work anyway?"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "scomm1"
 	density = FALSE
@@ -23,24 +23,6 @@
 	pixel_y = 0
 	pixel_x = -32
 
-/obj/structure/roguemachine/scomm/examine(mob/user)
-	. = ..()
-	. += "<b>THE LAWS OF THE LAND:</b>"
-	if(!length(GLOB.laws_of_the_land))
-		. += "<span class='danger'>The land has no laws! <b>We are doomed!</b></span>"
-		return
-	if(!user.is_literate())
-		. += "<span class='warning'>Uhhh... I can't read them...</span>"
-		return
-	for(var/i in 1 to length(GLOB.laws_of_the_land))
-		. += "<span class='small'>[i]. [GLOB.laws_of_the_land[i]]</span>"
-
-/obj/structure/roguemachine/scomm/process()
-	if(world.time > next_decree)
-		next_decree = world.time + rand(3 MINUTES, 8 MINUTES)
-		if(GLOB.lord_decrees.len)
-			say("The King Decrees: [pick(GLOB.lord_decrees)]", spans = list("info"))
-
 /obj/structure/roguemachine/scomm/attack_hand(mob/living/user)
 	. = ..()
 	if(.)
@@ -49,28 +31,8 @@
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	listening = !listening
 	speaking = !speaking
-	to_chat(user, "<span class='info'>I [speaking ? "unmute" : "mute"] the SCOM.</span>")
+	to_chat(user, "<span class='info'>I press a [speaking ? "green" : "red"] button on the machine.</span>")
 	update_icon()
-
-/obj/structure/roguemachine/scomm/attack_right(mob/user)
-	if(.)
-		return
-	user.changeNext_move(CLICK_CD_MELEE)
-	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	var/canread = user.can_read(src, TRUE)
-	var/contents
-	if(SSticker.rulertype == "King")
-		contents += "<center>KING'S DECREES<BR>"
-	else
-		contents += "<center>QUEEN'S DECREES<BR>"
-	contents += "-----------<BR><BR></center>"
-	for(var/i = GLOB.lord_decrees.len to 1 step -1)
-		contents += "[i]. <span class='info'>[GLOB.lord_decrees[i]]</span><BR>"
-	if(!canread)
-		contents = stars(contents)
-	var/datum/browser/popup = new(user, "VENDORTHING", "", 370, 220)
-	popup.set_content(contents)
-	popup.open()
 
 /obj/structure/roguemachine/scomm/obj_break(damage_flag)
 	..()
@@ -125,37 +87,14 @@
 	if(H.voicecolor_override)
 		usedcolor = H.voicecolor_override
 	if(raw_message)
-		if(lowertext(raw_message) == "say laws")
-			dictate_laws()
-			return
 		for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
 			S.repeat_message(raw_message, src, usedcolor, message_language)
 		for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 			S.repeat_message(raw_message, src, usedcolor, message_language)
 
-/obj/structure/roguemachine/scomm/proc/dictate_laws()
-	if(dictating)
-		return
-	dictating = TRUE
-	repeat_message("THE LAWS OF THE LAND ARE...", tcolor = COLOR_RED)
-	INVOKE_ASYNC(src, PROC_REF(dictation))
-
-/obj/structure/roguemachine/scomm/proc/dictation()
-	if(!length(GLOB.laws_of_the_land))
-		sleep(2)
-		repeat_message("THE LAND HAS NO LAWS!", tcolor = COLOR_RED)
-		dictating = FALSE
-		return
-	for(var/i in 1 to length(GLOB.laws_of_the_land))
-		sleep(2)
-		repeat_message("[i]. [GLOB.laws_of_the_land[i]]", tcolor = COLOR_RED)
-	dictating = FALSE
-
 /proc/scom_announce(message)
 	for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
 		S.say(message, spans = list("info"))
-
-
 
 //SCOMSTONE                 SCOMSTONE
 

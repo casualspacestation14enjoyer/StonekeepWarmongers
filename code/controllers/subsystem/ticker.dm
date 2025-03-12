@@ -29,8 +29,7 @@ SUBSYSTEM_DEF(ticker)
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
 	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 
-	var/oneteammode = FALSE
-	var/deathmatch = FALSE
+	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -488,15 +487,14 @@ SUBSYSTEM_DEF(ticker)
 	SSdbcore.SetRoundStart()
 	pickaspect()
 
-	if(end_party)
-		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
-	if(oneteammode)
-		to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
-	if(deathmatch)
-		to_chat(world, "<span class='notice'><B>It's a civil war! Grenzelhofts fight Grenzelhofts... Madness! KILL THEM ALL! DON'T LET THEM BECOME THE NEW KING! Heartfelts watch in awe and laughter, their enemy is hilarious!</B></span>")
 	to_chat(world, "<span class='notice'>♔ Praise the Crown! ♔</span>")
+	spawn(15)
+		if(end_party)
+			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
+		if(oneteammode)
+			to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
 	spawn(10)
-		to_chat(world, "<span class='notice'>This round's aspect is: [round_aspect.name]</span>")
+		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
 		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
 
 	// handle setting the war mode for this round, this is retarded, but im too lazy to do it any other way
@@ -511,7 +509,7 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
-		if(oneteammode || deathmatch)
+		if(oneteammode)
 			C.warfare_faction = "Grenzelhofts"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
@@ -922,7 +920,7 @@ SUBSYSTEM_DEF(ticker)
 	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
 		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!"))
-		if(!(oneteammode || deathmatch))
+		if(!(oneteammode))
 			W.reinforcements()
 		warfare_ready_to_die = TRUE
 		for(var/mob/M in GLOB.player_list)

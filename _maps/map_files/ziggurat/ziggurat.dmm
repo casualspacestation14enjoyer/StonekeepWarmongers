@@ -799,6 +799,11 @@
 /obj/structure/fluff/ponr/red,
 /turf/open/floor/rogue/blocks/newstone,
 /area/rogue/indoors)
+"Ch" = (
+/mob/living/carbon/human/species/zizombie/npc/warrior,
+/obj/machinery/light/rogue/skullstick,
+/turf/open/floor/rogue/dirt/sand,
+/area/rogue/outdoors)
 "Cn" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -888,7 +893,7 @@
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/under)
 "EW" = (
-/obj/structure/fluff/psycross,
+/obj/structure/fluff/psycross/evil,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/under)
 "EY" = (
@@ -915,6 +920,10 @@
 	dir = 10
 	},
 /turf/open/transparent/openspace,
+/area/rogue/outdoors)
+"FW" = (
+/obj/machinery/light/rogue/skullstick,
+/turf/open/floor/rogue/dirt/sand,
 /area/rogue/outdoors)
 "Gi" = (
 /obj/structure/bars/pipe{
@@ -1000,6 +1009,12 @@
 "Ie" = (
 /turf/open/floor/rogue/tile/checker,
 /area/rogue/indoors)
+"It" = (
+/obj/structure/fluff/psycross/evil{
+	pixel_y = 18
+	},
+/turf/open/floor/rogue/tile/masonic/inverted,
+/area/rogue/under)
 "IR" = (
 /obj/structure/stairs/stone{
 	dir = 4
@@ -1190,6 +1205,12 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors)
+"OX" = (
+/obj/structure/fluff/psycross{
+	pixel_y = 22
+	},
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/under)
 "Pd" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -1571,7 +1592,7 @@ Ag
 Ag
 Ag
 Ft
-Ag
+FW
 Ag
 Ag
 Ft
@@ -1608,7 +1629,7 @@ nr
 Ag
 Ft
 Ag
-Ag
+FW
 Ag
 Ft
 Ag
@@ -1862,7 +1883,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 "}
@@ -1870,7 +1891,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 Ag
@@ -1977,7 +1998,7 @@ cB
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 Ag
@@ -2083,7 +2104,7 @@ YC
 YC
 Ag
 Ag
-Ag
+FW
 YC
 YC
 YC
@@ -3902,7 +3923,7 @@ YC
 YC
 YC
 YC
-EW
+It
 mW
 mW
 mW
@@ -4830,7 +4851,7 @@ PK
 cy
 YC
 YC
-dL
+OX
 tO
 tO
 tO
@@ -6830,7 +6851,7 @@ Ft
 Ag
 Ag
 Ag
-Ft
+Ch
 Ag
 Ag
 Ag
@@ -6937,7 +6958,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 Ag
@@ -6953,7 +6974,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 Ag
@@ -7048,7 +7069,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
+FW
 Ag
 Ag
 Ag
@@ -7080,6 +7101,7 @@ Ag
 Ag
 Ag
 Ag
+FW
 Ag
 Ag
 Ag
@@ -7097,8 +7119,7 @@ Ag
 Ag
 Ag
 Ag
-Ag
-Ag
+FW
 Ag
 Ag
 "}

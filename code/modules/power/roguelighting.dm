@@ -581,6 +581,16 @@
 		return
 	. = ..()
 
+/obj/machinery/light/rogue/skullstick
+	name = "flaming skull stick"
+	desc = "Barbaric."
+	icon = 'icons/roguetown/misc/tallstructure.dmi'
+	icon_state = "skullstick"
+	fueluse = 0
+	brightness = 10
+	density = TRUE
+	anchored = TRUE
+
 /obj/machinery/light/rogue/chand
 	name = "chandelier"
 	icon_state = "chand1"

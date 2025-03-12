@@ -751,7 +751,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/beach/boat)
 "Wk" = (
-/obj/structure/warfarestatue,
+/obj/structure/bloodstatue,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/outdoors/beach/boat)
 "Wl" = (

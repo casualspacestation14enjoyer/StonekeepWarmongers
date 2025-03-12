@@ -380,7 +380,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "hN" = (
-/obj/structure/warfarestatue,
+/obj/structure/bloodstatue,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town)
 "hR" = (

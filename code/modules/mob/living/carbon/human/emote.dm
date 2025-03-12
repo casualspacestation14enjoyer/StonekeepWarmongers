@@ -120,6 +120,15 @@
 	message_param = "salutes to %t."
 	restraint_check = TRUE
 
+/mob/living/carbon/human/verb/emote_salute()
+	set name = "SALUTE"
+	set category = "Emotes"
+	emote("salute", intentional = TRUE)
+
+/mob/living/carbon/human/verb/emote_salute_f2()
+	set name = ".salute"
+	emote_salute()
+
 /datum/emote/living/carbon/human/salute/can_run_emote(mob/user, status_check, intentional)
 	. = ..()
 	if(. && iscarbon(user))

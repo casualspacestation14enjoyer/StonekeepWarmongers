@@ -32,11 +32,14 @@ macro "default"
 	elem 
 		name = "F1"
 		command = ".warcry"
-	elem 
+	elem
 		name = "F2"
+		command = ".salute"
+	elem 
+		name = "F3"
 		command = ".screenshot auto"
 	elem 
-		name = "SHIFT+F2"
+		name = "SHIFT+F3"
 		command = ".screenshot"
 
 window "mainwindow"

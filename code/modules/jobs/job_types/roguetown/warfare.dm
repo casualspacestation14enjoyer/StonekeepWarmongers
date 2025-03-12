@@ -57,7 +57,10 @@
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
-// Captain Verbs
+// Lord Procs
+
+/proc/getlordtitle()
+	return pick("of Volfs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Volf", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Elves", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Heartfelt", "of Grenzelhoft")
 
 /mob/living/carbon/human/proc/warfare_announce()
 	set name = "ANNOUNCE!"
@@ -224,6 +227,8 @@
 	cloak = /obj/item/clothing/cloak/heartfelt
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		head = /obj/item/clothing/head/roguetown/crownred
+	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
+		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
@@ -715,6 +720,8 @@
 		head = /obj/item/clothing/head/roguetown/crownblu
 	else
 		head = /obj/item/clothing/head/roguetown/commander
+	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
+		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)

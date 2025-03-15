@@ -315,12 +315,12 @@ GLOBAL_VAR(restart_counter)
 
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
+		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER<br>"
 	else
-		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
+		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD<br>"
 
 	if(W.warmode)
-		s += "<b>GAME MODE:</b> [W.warmode]"
+		s += "<b>GAME MODE:</b> [W.warmode]<br>"
 
 	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
 	

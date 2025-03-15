@@ -327,11 +327,11 @@
 	if(ishuman(user))
 		H = user
 	if(H.warfare_faction == team)
-		if(C.crownbearer)
+		if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
+			C.do_war_end(H, team)
+		else if(C.crownbearer != H)
 			to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
 			return
-		else if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
-			C.do_war_end(H, team)
 		else
 			to_chat(H, "<span class='info'>This belongs to us.</span>")
 		return

@@ -1720,6 +1720,9 @@
 			if(alert("FIGHT WITH ALL YOU GOT?!", "", "Yes", "No") == "Yes")
 				var/mob/living/carbon/V = M
 				if(V.add_stress(/datum/stressevent/triumph))
+					if(M.get_triumphs() < 2)
+						to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+						return
 					M.adjust_triumphs(-2)
 					M.apply_status_effect(/datum/status_effect/buff/inspired)
 					M.playsound_local(M, 'sound/magic/inspire_02.ogg', 100, FALSE)

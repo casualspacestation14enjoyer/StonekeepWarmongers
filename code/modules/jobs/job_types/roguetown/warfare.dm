@@ -744,7 +744,7 @@
 
 /datum/job/roguetown/warfare/blu/soldier
 	title = "Grenzelhoft Infantry"
-	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the Emperor! For the One True God!"
+	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the KAISER! For the One True God!"
 	department_flag = BLUES
 	flag = SOLDIER
 	total_positions = 99

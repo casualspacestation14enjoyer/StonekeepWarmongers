@@ -255,8 +255,8 @@
 				used += 5
 			else if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
 				used += 5
-		if(prob(used))
-			if((zone_precise == BODY_ZONE_PRECISE_STOMACH) && !resistance)
+		if(prob(used + 10))
+			if((zone_precise == BODY_ZONE_PRECISE_STOMACH || zone_precise == BODY_ZONE_CHEST) && !resistance)
 				attempted_wounds += /datum/wound/slash/disembowel
 			attempted_wounds += /datum/wound/artery/chest
 

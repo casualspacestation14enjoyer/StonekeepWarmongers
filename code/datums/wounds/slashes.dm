@@ -41,9 +41,9 @@
 
 /datum/wound/slash/disembowel
 	name = "disembowelment"
-	check_name = "<span class='userdanger'><B>GUTS</B></span>"
+	check_name = "<span class='userdanger'><B>GUTS HANGING OUT</B></span>"
 	severity = WOUND_SEVERITY_FATAL
-	crit_message = "%VICTIM spills %P_THEIR organs!"
+	crit_message = "%VICTIM is gutted like a fish and their guts spill out!"
 	sound_effect = 'sound/combat/crit2.ogg'
 	whp = 100
 	sewn_whp = 35
@@ -59,6 +59,7 @@
 	var/static/list/affected_organs = list(
 		ORGAN_SLOT_STOMACH = 100,
 		ORGAN_SLOT_LIVER = 50,
+		ORGAN_SLOT_STOMACH_AID = 100
 	)
 
 /datum/wound/slash/disembowel/can_stack_with(datum/wound/other)

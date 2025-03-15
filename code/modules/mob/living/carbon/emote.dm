@@ -79,16 +79,16 @@
 						sound2play = sound('sound/vo/wc/gren/warcry_female_1.ogg')	//fuck it bro it was hard enough finding normal female voices to begin with
 					else
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg','sound/vo/wc/gren/warcry_female_3.ogg'))
+		if(aspect_chosen(/datum/round_aspect/explodeatwill))
+			user.say(warcry)
+			spawn(2 SECONDS)
+				var/obj/item/bomb/B = new(get_turf(user))
+				B.light()
+				B.explode(TRUE)
+				
 	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
 	user.shoutbubble()
 	ping_sound(user)
-
-	if(aspect_chosen(/datum/round_aspect/explodeatwill))
-		user.say(warcry)
-		spawn(2 SECONDS)
-			var/obj/item/bomb/B = new(get_turf(user))
-			B.light()
-			B.explode(TRUE)
 
 /mob/proc/shoutbubble()
 	var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)

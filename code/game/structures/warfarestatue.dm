@@ -1,3 +1,41 @@
+// TDM
+
+/obj/structure/bloodstatue // new LAST STAND
+	name = "Sanctified Statue"
+	desc = "A derelict of a former age. It demands blood."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "psy" //ironic...
+	pixel_x = -32
+	resistance_flags = INDESTRUCTIBLE
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+	var/stalemate_kills = 98
+	var/win_kills = 50
+
+/obj/structure/bloodstatue/Initialize()
+	. = ..()
+	START_PROCESSING(SSprocessing, src)
+
+/obj/structure/bloodstatue/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		C.warmode = GAMEMODE_STAND
+		to_chat(world, "<span class='danger'>Secure [win_kills] kills for your team to win!</span>")
+		SEND_SOUND(world, 'sound/misc/alert.ogg')
+
+/obj/structure/bloodstatue/process()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		if(SSticker.grenzelhoft_deaths >= win_kills)
+			C.do_war_end(null, RED_WARTEAM)
+			STOP_PROCESSING(SSprocessing, src)
+		if(SSticker.heartfelt_deaths >= win_kills)
+			C.do_war_end(null, BLUE_WARTEAM)
+			STOP_PROCESSING(SSprocessing, src)
+		if(SSticker.deaths >= stalemate_kills)
+			C.do_war_end()
+			STOP_PROCESSING(SSprocessing, src)
+
 /*
 /obj/structure/laststandstatue // relic of old LAST STAND
 	name = "Sanctified Statue"
@@ -82,41 +120,3 @@
 				to_chat(H, "<span class='danger'>The [src] is taking damage!</span>")
 			last_scream = world.time + 600
 */
-
-// TDM
-
-/obj/structure/bloodstatue // new LAST STAND
-	name = "Sanctified Statue"
-	desc = "A derelict of a former age. It demands blood."
-	icon = 'icons/roguetown/misc/96x96.dmi'
-	icon_state = "psy" //ironic...
-	pixel_x = -32
-	resistance_flags = INDESTRUCTIBLE
-	layer = ABOVE_MOB_LAYER
-	plane = GAME_PLANE_UPPER
-	var/stalemate_kills = 98
-	var/win_kills = 50
-
-/obj/structure/bloodstatue/Initialize()
-	. = ..()
-	START_PROCESSING(SSprocessing, src)
-
-/obj/structure/bloodstatue/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-		C.warmode = GAMEMODE_STAND
-		to_chat(world, "<span class='danger'>Secure [win_kills] kills for your team to win!</span>")
-		SEND_SOUND(world, 'sound/misc/alert.ogg')
-
-/obj/structure/bloodstatue/process()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-		if(SSticker.grenzelhoft_deaths >= win_kills)
-			C.do_war_end(null, RED_WARTEAM)
-			STOP_PROCESSING(SSprocessing, src)
-		if(SSticker.heartfelt_deaths >= win_kills)
-			C.do_war_end(null, BLUE_WARTEAM)
-			STOP_PROCESSING(SSprocessing, src)
-		if(SSticker.deaths >= stalemate_kills)
-			C.do_war_end(null, null)
-			STOP_PROCESSING(SSprocessing, src)

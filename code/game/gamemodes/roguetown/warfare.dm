@@ -49,7 +49,7 @@
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
 
-/datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy, var/team = BLUE_WARTEAM)
+/datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team
 	SSticker.force_ending = TRUE
 	if(crownguy)

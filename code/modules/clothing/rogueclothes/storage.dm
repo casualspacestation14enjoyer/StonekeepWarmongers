@@ -237,7 +237,7 @@
 	max_integrity = 300
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
-	var/datum/looping_sound/musloop/soundloop
+	var/datum/looping_sound/musloop/war/soundloop
 	var/curfile
 	var/playing = FALSE
 	var/curvol = 70

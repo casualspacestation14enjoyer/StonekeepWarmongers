@@ -46,6 +46,11 @@
 	if(HAS_TRAIT(src, TRAIT_NINJA))
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 
+	var/obj/item/IT = get_item_by_slot(ITEM_SLOT_BACK_L)
+	if(istype(IT, /obj/item/rogue/musicpack))
+		var/obj/item/rogue/musicpack/MP = IT
+		MP.soundloop.stop()
+
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 

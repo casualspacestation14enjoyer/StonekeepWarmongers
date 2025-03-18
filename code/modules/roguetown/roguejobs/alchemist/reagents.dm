@@ -5,14 +5,14 @@
 	color = "#ff0000"
 	taste_description = "health and grind up bodyparts"
 	overdose_threshold = 0
-	metabolization_rate = 5 * REAGENTS_METABOLISM
+	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
 /datum/reagent/medicine/healthpot/on_mob_life(mob/living/carbon/M)
 	for(var/obj/item/bodypart/bodypart as anything in M.bodyparts)
 		if(bodypart.heal_damage(15, 20))
 			M.update_damage_overlays()
-		if(bodypart.heal_wounds(10))
+		if(bodypart.heal_wounds(25))
 			M.update_damage_overlays()
 	M.adjustToxLoss(-10)
 	M.adjustOxyLoss(-10)

@@ -9,11 +9,17 @@
 	var/stress2give = /datum/stressevent/music
 
 /datum/looping_sound/musloop/on_hear_sound(mob/M)
-	. = ..()
 	if(stress2give)
 		if(isliving(M))
 			var/mob/living/carbon/L = M
 			L.add_stress(stress2give)
+
+/datum/looping_sound/musloop/war/on_hear_sound(mob/M)
+	if(stress2give)
+		if(isliving(M))
+			var/mob/living/carbon/L = M
+			L.add_stress(stress2give)
+			L.apply_status_effect(/datum/status_effect/buff/inspired)
 
 /client/AllowUpload(filename, filelength)
 	if(filelength >= 6485760)

@@ -92,7 +92,7 @@
 	playsound(owner.loc, 'sound/blank.ogg', 50, TRUE)
 	owner.do_jitter_animation(living_transformation_time)
 	owner.Stun(living_transformation_time)
-	to_chat(owner, "<span class='alertalien'>I are now a zombie! Do not seek to be cured, do not help any non-zombies in any way, do not harm my zombie brethren and spread the disease by killing others. You are a creature of hunger and violence.</span>")
+	to_chat(owner, "<span class='alertalien'>I am now a zombie! Do not seek to be cured, do not help any non-zombies in any way, do not harm my zombie brethren and spread the disease by killing others. You are a creature of hunger and violence.</span>")
 
 /obj/item/organ/zombie_infection/nodamage
 	causes_damage = FALSE

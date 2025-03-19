@@ -147,7 +147,7 @@
 
 
 	if (tr_flags & TR_DEFAULTMSG)
-		to_chat(O, "<B>I are now a monkey.</B>")
+		to_chat(O, "<B>I am now a monkey.</B>")
 
 	for(var/A in loc.vars)
 		if(loc.vars[A] == src)
@@ -322,7 +322,7 @@
 
 	O.a_intent = INTENT_HELP
 	if (tr_flags & TR_DEFAULTMSG)
-		to_chat(O, "<B>I are now a human.</B>")
+		to_chat(O, "<B>I am now a human.</B>")
 
 	transfer_observers_to(O)
 
@@ -459,7 +459,7 @@
 	new_xeno.a_intent = INTENT_HARM
 	new_xeno.key = key
 
-	to_chat(new_xeno, "<B>I are now an alien.</B>")
+	to_chat(new_xeno, "<B>I am now an alien.</B>")
 	. = new_xeno
 	qdel(src)
 
@@ -491,7 +491,7 @@
 	new_slime.a_intent = INTENT_HARM
 	new_slime.key = key
 
-	to_chat(new_slime, "<B>I are now a slime. Skreee!</B>")
+	to_chat(new_slime, "<B>I am now a slime. Skreee!</B>")
 	. = new_slime
 	qdel(src)
 
@@ -519,7 +519,7 @@
 	new_corgi.a_intent = INTENT_HARM
 	new_corgi.key = key
 
-	to_chat(new_corgi, "<B>I are now a Corgi. Yap Yap!</B>")
+	to_chat(new_corgi, "<B>I am now a Corgi. Yap Yap!</B>")
 	. = new_corgi
 	qdel(src)
 
@@ -545,7 +545,7 @@
 		mind.transfer_to(new_gorilla)
 	else
 		new_gorilla.key = key
-	to_chat(new_gorilla, "<B>I are now a gorilla. Ooga ooga!</B>")
+	to_chat(new_gorilla, "<B>I am now a gorilla. Ooga ooga!</B>")
 	. = new_gorilla
 	qdel(src)
 

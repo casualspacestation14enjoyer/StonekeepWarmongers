@@ -17,7 +17,7 @@
 	. = ..()
 
 /obj/machinery/computer/launchpad/attack_paw(mob/user)
-	to_chat(user, "<span class='warning'>I are too primitive to use this computer!</span>")
+	to_chat(user, "<span class='warning'>I am too primitive to use this computer!</span>")
 	return
 
 /obj/machinery/computer/launchpad/attackby(obj/item/W, mob/user, params)

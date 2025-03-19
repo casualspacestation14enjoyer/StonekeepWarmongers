@@ -153,7 +153,7 @@
 	minimum_distance = 1
 	retreat_distance = null
 	icon_state = "mining_drone"
-	to_chat(src, "<span class='info'>I are set to collect mode. You can now collect loose ore.</span>")
+	to_chat(src, "<span class='info'>I am set to collect mode. You can now collect loose ore.</span>")
 
 /mob/living/simple_animal/hostile/mining_drone/proc/SetOffenseBehavior()
 	mode = MINEDRONE_ATTACK
@@ -164,7 +164,7 @@
 	retreat_distance = 2
 	minimum_distance = 1
 	icon_state = "mining_drone_offense"
-	to_chat(src, "<span class='info'>I are set to attack mode. You can now attack from range.</span>")
+	to_chat(src, "<span class='info'>I am set to attack mode. You can now attack from range.</span>")
 
 /mob/living/simple_animal/hostile/mining_drone/AttackingTarget()
 	if(istype(target, /obj/item/stack/ore) && mode == MINEDRONE_COLLECT)

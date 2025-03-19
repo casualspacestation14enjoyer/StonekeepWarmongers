@@ -15,7 +15,7 @@
 	. = ..()
 
 /datum/antagonist/survivalist/greet()
-	to_chat(owner, "<B>I are the survivalist![greet_message]</B>")
+	to_chat(owner, "<B>I am the survivalist![greet_message]</B>")
 	owner.announce_objectives()
 
 /datum/antagonist/survivalist/guns

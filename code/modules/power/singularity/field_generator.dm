@@ -72,7 +72,7 @@ field_generator power level display
 	if(state == FG_WELDED)
 		if(get_dist(src, user) <= 1)//Need to actually touch the thing to turn it on
 			if(active >= FG_CHARGING)
-				to_chat(user, "<span class='warning'>I are unable to turn off [src] once it is online!</span>")
+				to_chat(user, "<span class='warning'>I am unable to turn off [src] once it is online!</span>")
 				return 1
 			else
 				user.visible_message("<span class='notice'>[user] turns on [src].</span>", \

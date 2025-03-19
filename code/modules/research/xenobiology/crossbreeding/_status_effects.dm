@@ -46,7 +46,7 @@
 		var/mob/living/carbon/human/H = owner
 		H.physiology.damage_resistance += 10
 	owner.visible_message("<span class='warning'>[owner] is suddenly covered in a strange, blue-ish gel!</span>",
-		"<span class='notice'>I are covered in a thick, rubbery gel.</span>")
+		"<span class='notice'>I am covered in a thick, rubbery gel.</span>")
 	return ..()
 
 /datum/status_effect/slimeskin/on_remove()

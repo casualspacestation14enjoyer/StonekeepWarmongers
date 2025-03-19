@@ -19,7 +19,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	var/fail_message = "<span class='notice'>The positronic brain buzzes quietly, and the golden lights fade away. Perhaps you could try again?</span>"
 	var/new_role = "Positronic Brain"
 	var/welcome_message = "<span class='warning'>ALL PAST LIVES ARE FORGOTTEN.</span>\n\
-	<b>I are a positronic brain, brought into existence aboard Space Station 13.\n\
+	<b>I am a positronic brain, brought into existence aboard Space Station 13.\n\
 	As a synthetic intelligence, you answer to all crewmembers and the AI.\n\
 	Remember, the purpose of your existence is to serve the crew and the station. Above all else, do no harm.</b>"
 	var/new_mob_message = "<span class='notice'>The positronic brain chimes quietly.</span>"

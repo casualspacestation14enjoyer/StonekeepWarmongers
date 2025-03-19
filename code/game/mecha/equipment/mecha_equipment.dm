@@ -53,7 +53,7 @@
 		attach(M)
 		user.visible_message("<span class='notice'>[user] attaches [src] to [M].</span>", "<span class='notice'>I attach [src] to [M].</span>")
 		return TRUE
-	to_chat(user, "<span class='warning'>I are unable to attach [src] to [M]!</span>")
+	to_chat(user, "<span class='warning'>I am unable to attach [src] to [M]!</span>")
 	return FALSE
 
 /obj/item/mecha_parts/mecha_equipment/proc/get_equip_info()

@@ -163,4 +163,4 @@
 				var/obj/item/organ/new_ears = new target_species.mutantears
 				new_ears.Insert(H, TRUE, FALSE)
 	if(!silent)
-		to_chat(H, "<span class='boldnotice'>I are no longer a cat.</span>")
+		to_chat(H, "<span class='boldnotice'>I am no longer a cat.</span>")

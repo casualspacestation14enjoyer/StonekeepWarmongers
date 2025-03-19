@@ -308,7 +308,7 @@ the new instance inside the host to be updated to the template's stats.
 	addtimer(CALLBACK(src, PROC_REF(notify_adapt_ready)), adaptation_cooldown)
 
 /mob/camera/disease/proc/notify_adapt_ready()
-	to_chat(src, "<span class='notice'>I are now ready to adapt again.</span>")
+	to_chat(src, "<span class='notice'>I am now ready to adapt again.</span>")
 	refresh_adaptation_menu()
 
 /mob/camera/disease/proc/refresh_adaptation_menu()

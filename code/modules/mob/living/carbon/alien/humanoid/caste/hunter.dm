@@ -35,7 +35,7 @@
 		return
 
 	if(pounce_cooldown > world.time)
-		to_chat(src, "<span class='alertalien'>I are too fatigued to pounce right now!</span>")
+		to_chat(src, "<span class='alertalien'>I am too fatigued to pounce right now!</span>")
 		return
 
 	if(!has_gravity() || !A.has_gravity())

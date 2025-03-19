@@ -27,7 +27,7 @@
 				return FALSE
 
 			user.visible_message("<span class='notice'>[user] is slicing apart the [name].</span>", \
-								"<span class='notice'>I are slicing apart the [name]...</span>")
+								"<span class='notice'>I am slicing apart the [name]...</span>")
 			if(W.use_tool(src, user, 40, volume=50))
 				user.visible_message("<span class='notice'>[user] slices apart the [name].</span>", \
 									"<span class='notice'>I slice apart the [name]!</span>")

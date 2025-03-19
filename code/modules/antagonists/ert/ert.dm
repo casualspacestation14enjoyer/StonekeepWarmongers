@@ -139,7 +139,7 @@
 	if(!ert_team)
 		return
 
-	to_chat(owner, "<B><font size=3 color=red>I are the [name].</font></B>")
+	to_chat(owner, "<B><font size=3 color=red>I am the [name].</font></B>")
 
 	var/missiondesc = ""
 	if(leader) //If Squad Leader
@@ -156,7 +156,7 @@
 	if(!ert_team)
 		return
 
-	to_chat(owner, "<B><font size=3 color=red>I are the [name].</font></B>")
+	to_chat(owner, "<B><font size=3 color=red>I am the [name].</font></B>")
 
 	var/missiondesc = ""
 	if(leader) //If Squad Leader

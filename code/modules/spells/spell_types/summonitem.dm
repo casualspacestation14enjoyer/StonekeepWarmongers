@@ -36,7 +36,7 @@
 
 			if(!marked_item)
 				if(hand_items)
-					message = "<span class='warning'>I aren't holding anything that can be marked for recall!</span>"
+					message = "<span class='warning'>I amn't holding anything that can be marked for recall!</span>"
 				else
 					message = "<span class='warning'>I must hold the desired item in your hands to mark it for recall!</span>"
 

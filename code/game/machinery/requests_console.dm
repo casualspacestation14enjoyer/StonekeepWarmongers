@@ -434,7 +434,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 				announceAuth = TRUE
 			else
 				announceAuth = FALSE
-				to_chat(user, "<span class='warning'>I are not authorized to send announcements!</span>")
+				to_chat(user, "<span class='warning'>I am not authorized to send announcements!</span>")
 			updateUsrDialog()
 		return
 	if (istype(O, /obj/item/stamp))

@@ -324,7 +324,7 @@
 	if(!B || !B.brainmob || !B.brainmob.mind)
 		return
 	B.brainmob.mind.transfer_to(src)
-	to_chat(src, "<span class='big bold'>I are a cak!</span><b> You're a harmless cat/cake hybrid that everyone loves. People can take bites out of you if they're hungry, but you regenerate health \
+	to_chat(src, "<span class='big bold'>I am a cak!</span><b> You're a harmless cat/cake hybrid that everyone loves. People can take bites out of you if they're hungry, but you regenerate health \
 	so quickly that it generally doesn't matter. You're remarkably resilient to any damage besides this and it's hard for you to really die at all. You should go around and bring happiness and \
 	free cake to the station!</b>")
 	var/new_name = stripped_input(src, "Enter my name, or press \"Cancel\" to stick with Keeki.", "Name Change")

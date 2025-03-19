@@ -130,7 +130,7 @@
 		for(var/obj/item/twohanded/required/chainsaw/doomslayer/chainsaw in L)
 			qdel(chainsaw)
 	else
-		to_chat(L, "<span class='warning'>I are not yet worthy of passing. Drag a severed head to the barrier to be allowed entry to the hall of champions.</span>")
+		to_chat(L, "<span class='warning'>I am not yet worthy of passing. Drag a severed head to the barrier to be allowed entry to the hall of champions.</span>")
 
 /obj/effect/landmark/shuttle_arena_safe
 	name = "hall of champions"

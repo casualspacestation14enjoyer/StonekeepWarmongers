@@ -29,7 +29,7 @@
 		QDEL_NULL(D)
 
 /datum/antagonist/monkey/greet()
-	to_chat(owner, "<b>I are a monkey now!</b>")
+	to_chat(owner, "<b>I am a monkey now!</b>")
 	to_chat(owner, "<b>Bite humans to infect them, follow the orders of the monkey leaders, and help fellow monkeys!</b>")
 	to_chat(owner, "<b>Ensure at least one infected monkey escapes on the Emergency Shuttle!</b>")
 	to_chat(owner, "<b><i>As an intelligent monkey, you know how to use technology and how to ventcrawl while wearing things.</i></b>")
@@ -115,7 +115,7 @@
 	. = ..()
 
 /datum/antagonist/monkey/leader/greet()
-	to_chat(owner, "<B><span class='notice'>I are the Jungle Fever patient zero!!</B></span>")
+	to_chat(owner, "<B><span class='notice'>I am the Jungle Fever patient zero!!</B></span>")
 	to_chat(owner, "<b>I have been planted onto this station by the Animal Rights Consortium.</b>")
 	to_chat(owner, "<b>Soon the disease will transform you into an ape. Afterwards, you will be able spread the infection to others with a bite.</b>")
 	to_chat(owner, "<b>While my infection strain is undetectable by scanners, any other infectees will show up on medical equipment.</b>")

@@ -49,7 +49,7 @@
 		. = is_convertable_to_cult(new_owner.current,cult_team)
 
 /datum/antagonist/cult/greet()
-	to_chat(owner, "<span class='danger'>I are a member of the cult!</span>")
+	to_chat(owner, "<span class='danger'>I am a member of the cult!</span>")
 	owner.current.playsound_local(get_turf(owner.current), 'sound/blank.ogg', 100, FALSE, pressure_affected = FALSE)//subject to change
 	owner.announce_objectives()
 
@@ -196,7 +196,7 @@
 	set_antag_hud(current, "cultmaster")
 
 /datum/antagonist/cult/master/greet()
-	to_chat(owner.current, "<span class='cultlarge'>I are the cult's Master</span>. As the cult's Master, you have a unique title and loud voice when communicating, are capable of marking \
+	to_chat(owner.current, "<span class='cultlarge'>I am the cult's Master</span>. As the cult's Master, you have a unique title and loud voice when communicating, are capable of marking \
 	targets, such as a location or a noncultist, to direct the cult to them, and, finally, you are capable of summoning the entire living cult to my location <b><i>once</i></b>.")
 	to_chat(owner.current, "Use these abilities to direct the cult to victory at any cost.")
 

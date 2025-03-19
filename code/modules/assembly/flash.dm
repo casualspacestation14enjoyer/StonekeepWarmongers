@@ -125,7 +125,7 @@
 				to_chat(user, "<span class='danger'>I blind [M] with the flash!</span>")
 				to_chat(M, "<span class='danger'>[user] blinds you with the flash!</span>")
 			else
-				to_chat(M, "<span class='danger'>I are blinded by [src]!</span>")
+				to_chat(M, "<span class='danger'>I am blinded by [src]!</span>")
 			M.Paralyze(rand(80,120))
 		else if(user)
 			visible_message("<span class='warning'>[user] fails to blind [M] with the flash!</span>")

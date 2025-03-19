@@ -37,7 +37,7 @@
 		var/datum/mapGenerator/G = new generator_path
 		if(istype(G, /datum/mapGenerator/repair/reload_station_map))
 			if(GLOB.reloading_map)
-				to_chat(c, "<span class='boldwarning'>I are already reloading an area! Please wait for it to fully finish loading before trying to load another!</span>")
+				to_chat(c, "<span class='boldwarning'>I am already reloading an area! Please wait for it to fully finish loading before trying to load another!</span>")
 				deselect_region()
 				return
 		G.defineRegion(cornerA, cornerB, 1)

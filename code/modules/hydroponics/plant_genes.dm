@@ -425,7 +425,7 @@
 			var/fraction = min(injecting_amount/G.reagents.total_volume, 1)
 			G.reagents.reaction(L, INJECT, fraction)
 			G.reagents.trans_to(L, injecting_amount)
-			to_chat(target, "<span class='danger'>I are pricked by [G]!</span>")
+			to_chat(target, "<span class='danger'>I am pricked by [G]!</span>")
 
 /datum/plant_gene/trait/smoke
 	name = "Gaseous Decomposition"

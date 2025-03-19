@@ -45,7 +45,7 @@
 	. = ..()
 
 /datum/antagonist/rev/greet()
-	to_chat(owner, "<span class='danger'>I are now a revolutionary! Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Help them kill the heads to win the revolution!</span>")
+	to_chat(owner, "<span class='danger'>I am now a revolutionary! Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Help them kill the heads to win the revolution!</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/rev/create_team(datum/team/revolution/new_team)
@@ -103,7 +103,7 @@
 	new_owner.add_antag_datum(src)
 	message_admins("[key_name_admin(admin)] has head-rev'ed [key_name_admin(new_owner)].")
 	log_admin("[key_name(admin)] has head-rev'ed [key_name(new_owner)].")
-	to_chat(new_owner.current, "<span class='danger'>I are a member of the revolutionaries' leadership now!</span>")
+	to_chat(new_owner.current, "<span class='danger'>I am a member of the revolutionaries' leadership now!</span>")
 
 /datum/antagonist/rev/head/get_admin_commands()
 	. = ..()
@@ -195,7 +195,7 @@
 /datum/antagonist/rev/farewell()
 	if(ishuman(owner.current) || ismonkey(owner.current))
 		owner.current.visible_message("<span class='deconversion_message'>[owner.current] looks like [owner.current.p_theyve()] just remembered [owner.current.p_their()] real allegiance!</span>", null, null, null, owner.current)
-		to_chat(owner, "<span class ='deconversion_message bold'>I are no longer a brainwashed revolutionary! Your memory is hazy from the time you were a rebel...the only thing you remember is the name of the one who brainwashed you....</span>")
+		to_chat(owner, "<span class ='deconversion_message bold'>I am no longer a brainwashed revolutionary! Your memory is hazy from the time you were a rebel...the only thing you remember is the name of the one who brainwashed you....</span>")
 	else if(issilicon(owner.current))
 		owner.current.visible_message("<span class='deconversion_message'>The frame beeps contentedly, purging the hostile memory engram from the MMI before initalizing it.</span>", null, null, null, owner.current)
 		to_chat(owner, "<span class='danger'>The frame's firmware detects and deletes your neural reprogramming! You remember nothing but the name of the one who flashed you.</span>")

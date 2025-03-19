@@ -188,7 +188,7 @@
 		blobber.key = C.key
 		SEND_SOUND(blobber, sound('sound/blank.ogg'))
 		SEND_SOUND(blobber, sound('sound/blank.ogg'))
-		to_chat(blobber, "<b>I are a blobbernaut!</b>")
+		to_chat(blobber, "<b>I am a blobbernaut!</b>")
 		to_chat(blobber, "You are powerful, hard to kill, and slowly regenerate near nodes and cores, <span class='cultlarge'>but will slowly die if not near the blob</span> or if the factory that made you is killed.")
 		to_chat(blobber, "You can communicate with other blobbernauts and overminds via <b>:b</b>")
 		to_chat(blobber, "Your overmind's blob reagent is: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")

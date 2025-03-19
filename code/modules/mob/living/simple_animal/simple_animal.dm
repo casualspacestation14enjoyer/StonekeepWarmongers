@@ -601,7 +601,7 @@ mob/living/simple_animal/handle_fire()
 		to_chat(src, "<span class='warning'>I can't do that right now!</span>")
 		return FALSE
 	if(be_close && !in_range(M, src))
-		to_chat(src, "<span class='warning'>I are too far away!</span>")
+		to_chat(src, "<span class='warning'>I am too far away!</span>")
 		return FALSE
 	if(!(no_dexterity || dextrous))
 		to_chat(src, "<span class='warning'>I don't have the dexterity to do this!</span>")

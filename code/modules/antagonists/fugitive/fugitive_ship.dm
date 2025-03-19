@@ -29,7 +29,7 @@
 /obj/machinery/fugitive_capture/proc/add_prisoner(mob/living/carbon/human/fugitive, datum/antagonist/fugitive/antag)
 	fugitive.forceMove(src)
 	antag.is_captured = TRUE
-	to_chat(fugitive, "<span class='danger'>I are thrown into a vast void of bluespace, and as you fall further into oblivion the comparatively small entrance to reality gets smaller and smaller until you cannot see it anymore. You have failed to avoid capture.</span>")
+	to_chat(fugitive, "<span class='danger'>I am thrown into a vast void of bluespace, and as you fall further into oblivion the comparatively small entrance to reality gets smaller and smaller until you cannot see it anymore. You have failed to avoid capture.</span>")
 	fugitive.ghostize(TRUE) //so they cannot suicide, round end stuff.
 
 /obj/machinery/computer/shuttle/hunter

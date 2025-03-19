@@ -207,7 +207,7 @@
 		signIncorrectly()
 		return 0
 	if (contractType == CONTRACT_REVIVE)
-		to_chat(user, "<span class='warning'>I are already alive, this contract would do nothing.</span>")
+		to_chat(user, "<span class='warning'>I am already alive, this contract would do nothing.</span>")
 		return 0
 	else
 		to_chat(user, "<span class='notice'>I quickly scrawl my name on the contract.</span>")

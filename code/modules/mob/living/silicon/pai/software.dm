@@ -213,7 +213,7 @@
 					if(iscarbon(card.loc))
 						CheckDNA(card.loc, src) //you should only be able to check when directly in hand, muh immersions?
 					else
-						to_chat(src, "<span class='warning'>I are not being carried by anyone!</span>")
+						to_chat(src, "<span class='warning'>I am not being carried by anyone!</span>")
 						return 0 // FALSE ? If you return here you won't call paiinterface() below
 
 			if("pdamessage")

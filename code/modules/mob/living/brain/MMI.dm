@@ -43,7 +43,7 @@
 			to_chat(user, "<span class='warning'>There's already a brain in the MMI!</span>")
 			return
 		if(!newbrain.brainmob)
-			to_chat(user, "<span class='warning'>I aren't sure where this brain came from, but you're pretty sure it's a useless brain!</span>")
+			to_chat(user, "<span class='warning'>I amn't sure where this brain came from, but you're pretty sure it's a useless brain!</span>")
 			return
 
 		if(!user.transferItemToLoc(O, src))

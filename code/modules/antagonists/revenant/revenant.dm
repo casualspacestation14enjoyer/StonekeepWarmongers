@@ -94,10 +94,10 @@
 
 /mob/living/simple_animal/revenant/Login()
 	..()
-	to_chat(src, "<span class='deadsay'><span class='big bold'>I are a revenant.</span></span>")
+	to_chat(src, "<span class='deadsay'><span class='big bold'>I am a revenant.</span></span>")
 	to_chat(src, "<b>My formerly mundane spirit has been infused with alien energies and empowered into a revenant.</b>")
-	to_chat(src, "<b>I are not dead, not alive, but somewhere in between. You are capable of limited interaction with both worlds.</b>")
-	to_chat(src, "<b>I are invincible and invisible to everyone but other ghosts. Most abilities will reveal you, rendering you vulnerable.</b>")
+	to_chat(src, "<b>I am not dead, not alive, but somewhere in between. You are capable of limited interaction with both worlds.</b>")
+	to_chat(src, "<b>I am invincible and invisible to everyone but other ghosts. Most abilities will reveal you, rendering you vulnerable.</b>")
 	to_chat(src, "<b>To function, you are to drain the life essence from humans. This essence is a resource, as well as my health, and will power all of my abilities.</b>")
 	to_chat(src, "<b><i>I do not remember anything of my past lives, nor will you remember anything about this one after my death.</i></b>")
 	to_chat(src, "<b>Be sure to read <a href=\"https://tgstation13.org/wiki/Revenant\">the wiki page</a> to learn more.</b>")
@@ -119,7 +119,7 @@
 		revealed = FALSE
 		incorporeal_move = INCORPOREAL_MOVE_JAUNT
 		invisibility = INVISIBILITY_REVENANT
-		to_chat(src, "<span class='revenboldnotice'>I are once more concealed.</span>")
+		to_chat(src, "<span class='revenboldnotice'>I am once more concealed.</span>")
 	if(unstun_time && world.time >= unstun_time)
 		unstun_time = 0
 		notransform = FALSE

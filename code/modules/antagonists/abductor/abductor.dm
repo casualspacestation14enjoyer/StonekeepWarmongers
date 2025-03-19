@@ -51,13 +51,13 @@
 
 /datum/antagonist/abductor/on_removal()
 	if(owner.current)
-		to_chat(owner.current,"<span class='danger'>I are no longer the [owner.special_role]!</span>")
+		to_chat(owner.current,"<span class='danger'>I am no longer the [owner.special_role]!</span>")
 	owner.special_role = null
 	REMOVE_TRAIT(owner, TRAIT_ABDUCTOR_TRAINING, ABDUCTOR_ANTAGONIST)
 	return ..()
 
 /datum/antagonist/abductor/greet()
-	to_chat(owner.current, "<span class='notice'>I are the [owner.special_role]!</span>")
+	to_chat(owner.current, "<span class='notice'>I am the [owner.special_role]!</span>")
 	to_chat(owner.current, "<span class='notice'>With the help of my teammate, kidnap and experiment on station crew members!</span>")
 	to_chat(owner.current, "<span class='notice'>[greet_text]</span>")
 	owner.announce_objectives()

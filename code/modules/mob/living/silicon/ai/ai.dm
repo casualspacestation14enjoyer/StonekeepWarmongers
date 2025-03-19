@@ -118,7 +118,7 @@
 			to_chat(src, "<span class='danger'>I have been installed as an AI! </span>")
 			to_chat(src, "<span class='danger'>I must obey my silicon laws above all else. Your objectives will consider you to be dead.</span>")
 
-	to_chat(src, "<B>I are playing the station's AI. The AI cannot move, but can interact with many objects while viewing them (through cameras).</B>")
+	to_chat(src, "<B>I am playing the station's AI. The AI cannot move, but can interact with many objects while viewing them (through cameras).</B>")
 	to_chat(src, "<B>To look at other parts of the station, click on myself to get a camera menu.</B>")
 	to_chat(src, "<B>While observing through a camera, you can use most (networked) devices which you can see, such as computers, APCs, intercoms, doors, etc.</B>")
 	to_chat(src, "To use something, simply click on it.")
@@ -349,7 +349,7 @@
 		move_resist = MOVE_FORCE_OVERPOWERING
 		ADD_TRAIT(src, TRAIT_NO_TELEPORT, src)
 
-	to_chat(src, "<b>I are now [is_anchored ? "" : "un"]anchored.</b>")
+	to_chat(src, "<b>I am now [is_anchored ? "" : "un"]anchored.</b>")
 	// the message in the [] will change depending whether or not the AI is anchored
 
 /mob/living/silicon/ai/update_mobility() //If the AI dies, mobs won't go through it anymore
@@ -448,13 +448,13 @@
 			return
 
 		if(controlled_mech)
-			to_chat(src, "<span class='warning'>I are already loaded into an onboard computer!</span>")
+			to_chat(src, "<span class='warning'>I am already loaded into an onboard computer!</span>")
 			return
 		if(!GLOB.cameranet.checkCameraVis(M))
 			to_chat(src, "<span class='warning'>Exosuit is no longer near active cameras.</span>")
 			return
 		if(!isturf(loc))
-			to_chat(src, "<span class='warning'>I aren't in my core!</span>")
+			to_chat(src, "<span class='warning'>I amn't in my core!</span>")
 			return
 		if(M)
 			M.transfer_ai(AI_MECH_HACK, src, usr) //Called om the mech itself.
@@ -737,7 +737,7 @@
 
 	var/obj/machinery/power/apc/apc = src.loc
 	if(!istype(apc))
-		to_chat(src, "<span class='notice'>I are already in my Main Core.</span>")
+		to_chat(src, "<span class='notice'>I am already in my Main Core.</span>")
 		return
 	apc.malfvacate()
 
@@ -839,7 +839,7 @@
 		to_chat(src, "<span class='warning'>I can't do that right now!</span>")
 		return FALSE
 	if(be_close && !in_range(M, src))
-		to_chat(src, "<span class='warning'>I are too far away!</span>")
+		to_chat(src, "<span class='warning'>I am too far away!</span>")
 		return FALSE
 	return can_see(M) //stop AIs from leaving windows open and using then after they lose vision
 

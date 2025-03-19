@@ -52,7 +52,7 @@
 /datum/action/innate/elite_attack/tentacle_patch
 	name = "Tentacle Patch"
 	button_icon_state = "tentacle_patch"
-	chosen_message = "<span class='boldwarning'>I are now attacking with a patch of tentacles.</span>"
+	chosen_message = "<span class='boldwarning'>I am now attacking with a patch of tentacles.</span>"
 	chosen_attack_num = TENTACLE_PATCH
 
 /datum/action/innate/elite_attack/spawn_children

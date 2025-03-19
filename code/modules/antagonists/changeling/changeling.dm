@@ -369,7 +369,7 @@
 
 /datum/antagonist/changeling/greet()
 	if (you_are_greet)
-		to_chat(owner.current, "<span class='boldannounce'>I are [changelingID], a changeling! You have absorbed and taken the form of a human.</span>")
+		to_chat(owner.current, "<span class='boldannounce'>I am [changelingID], a changeling! You have absorbed and taken the form of a human.</span>")
 	to_chat(owner.current, "<span class='boldannounce'>Use say \"[MODE_TOKEN_CHANGELING] message\" to communicate with your fellow changelings.</span>")
 	to_chat(owner.current, "<b>I must complete the following tasks:</b>")
 	owner.current.playsound_local(get_turf(owner.current), 'sound/blank.ogg', 100, FALSE, pressure_affected = FALSE)

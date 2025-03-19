@@ -265,7 +265,7 @@
 	S.mind.special_role = S.name
 	S.mind.add_antag_datum(antag_type)
 	to_chat(S, S.playstyle_string)
-	to_chat(S, "<B>I are currently not currently in the same plane of existence as the station. \
+	to_chat(S, "<B>I am currently not currently in the same plane of existence as the station. \
 	Ctrl+Click a blood pool to manifest.</B>")
 
 /obj/item/antag_spawner/slaughter_demon/laughter

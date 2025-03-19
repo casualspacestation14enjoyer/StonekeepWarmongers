@@ -476,7 +476,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				inserted_modify_id.assignment = "Unassigned"
 				playsound(src, 'sound/blank.ogg', 50, FALSE)
 			else
-				to_chat(usr, "<span class='alert'>I are not authorized to demote this position.</span>")
+				to_chat(usr, "<span class='alert'>I am not authorized to demote this position.</span>")
 		if ("reg")
 			if (authenticated)
 				var/t2 = inserted_modify_id

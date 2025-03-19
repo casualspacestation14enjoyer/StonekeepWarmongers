@@ -1218,7 +1218,7 @@
 			to_chat(user, "<span class='warning'>I need to be on solid ground to detach the beacon!</span>")
 		return
 	if(get_dist(user, beacon) <= 2) //beacon too close abort
-		to_chat(user, "<span class='warning'>I are too close to the beacon to teleport to it!</span>")
+		to_chat(user, "<span class='warning'>I am too close to the beacon to teleport to it!</span>")
 		return
 	if(is_blocked_turf(get_turf(beacon), TRUE))
 		to_chat(user, "<span class='warning'>The beacon is blocked by something, preventing teleportation!</span>")

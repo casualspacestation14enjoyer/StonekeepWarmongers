@@ -11,7 +11,7 @@
 	roundstart = FALSE
 	death = FALSE
 	mob_species = /datum/species/pod
-	flavour_text = "<span class='big bold'>I are a sentient ecosystem,</span><b> an example of the mastery over life that my creators possessed. Your masters, benevolent as they were, created uncounted \
+	flavour_text = "<span class='big bold'>I am a sentient ecosystem,</span><b> an example of the mastery over life that my creators possessed. Your masters, benevolent as they were, created uncounted \
 	seed vaults and spread them across the universe to every planet they could chart. You are in one such seed vault. Your goal is to cultivate and spread life wherever it will go while waiting \
 	for contact from my creators. Estimated time of last contact: Deployment, 5x10^3 millennia ago.</b>"
 	assignedrole = "Lifebringer"
@@ -44,7 +44,7 @@
 	anchored = FALSE
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
-	flavour_text = "<span class='big bold'>I are an ash walker.</span><b> Your tribe worships <span class='danger'>the Necropolis</span>. The wastes are sacred ground, its monsters a blessed bounty. \
+	flavour_text = "<span class='big bold'>I am an ash walker.</span><b> Your tribe worships <span class='danger'>the Necropolis</span>. The wastes are sacred ground, its monsters a blessed bounty. \
 	You have seen lights in the distance... they foreshadow the arrival of outsiders that seek to tear apart the Necropolis and its domain. Fresh sacrifices for my nest.</b>"
 	assignedrole = "Ash Walker"
 	var/datum/team/ashwalkers/team
@@ -87,7 +87,7 @@
 	roundstart = FALSE
 	death = FALSE
 	mob_species = /datum/species/shadow
-	flavour_text = "<span class='big bold'>I are cursed.</span><b> Years ago, you sacrificed the lives of my trusted friends and the humanity of myself to reach the Wish Granter. Though you \
+	flavour_text = "<span class='big bold'>I am cursed.</span><b> Years ago, you sacrificed the lives of my trusted friends and the humanity of myself to reach the Wish Granter. Though you \
 	did so, it has come at a cost: my very body rejects the light, dooming you to wander endlessly in this horrible wasteland.</b>"
 	assignedrole = "Exile"
 
@@ -124,7 +124,7 @@
 	var/has_owner = FALSE
 	var/can_transfer = TRUE //if golems can switch bodies to this new shell
 	var/mob/living/owner = null //golem's owner if it has one
-	flavour_text = "<span class='big bold'>I are a Free Golem.</span><b> Your family worships <span class='danger'>The Liberator</span>. In his infinite and divine wisdom, he set my clan free to \
+	flavour_text = "<span class='big bold'>I am a Free Golem.</span><b> Your family worships <span class='danger'>The Liberator</span>. In his infinite and divine wisdom, he set my clan free to \
 	travel the stars with a single declaration: \"Yeah go do whatever.\" Though you are bound to the one who created you, it is customary in my society to repeat those same words to newborn \
 	golems, so that no golem may ever be forced to serve again.</b>"
 
@@ -137,7 +137,7 @@
 	if(!mapload && A)
 		notify_ghosts("\A [initial(species.prefix)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_GOLEM)
 	if(has_owner && creator)
-		flavour_text = "<span class='big bold'>I are a Golem.</span><b> You move slowly, but are highly resistant to heat and cold as well as blunt trauma. You are unable to wear clothes, but can still use most tools. \
+		flavour_text = "<span class='big bold'>I am a Golem.</span><b> You move slowly, but are highly resistant to heat and cold as well as blunt trauma. You are unable to wear clothes, but can still use most tools. \
 		Serve [creator], and assist [creator.p_them()] in completing [creator.p_their()] goals at any cost.</b>"
 		owner = creator
 
@@ -306,7 +306,7 @@
 	roundstart = FALSE
 	random = TRUE
 	outfit = /datum/outfit/hotelstaff
-	flavour_text = "<span class='big bold'>I are a staff member of a top-of-the-line space hotel!</span><b> Cater to guests and <font size=6><b>DON'T</b></font> leave the hotel, lest the manager fire you for\
+	flavour_text = "<span class='big bold'>I am a staff member of a top-of-the-line space hotel!</span><b> Cater to guests and <font size=6><b>DON'T</b></font> leave the hotel, lest the manager fire you for\
 		dereliction of duty!</b>"
 	assignedrole = "Hotel Staff"
 
@@ -322,7 +322,7 @@
 	name = "hotel security sleeper"
 	mob_name = "hotel security member"
 	outfit = /datum/outfit/hotelstaff/security
-	flavour_text = "<span class='big bold'>I are a peacekeeper</span><b> assigned to this hotel to protect the interests of the company while keeping the peace between \
+	flavour_text = "<span class='big bold'>I am a peacekeeper</span><b> assigned to this hotel to protect the interests of the company while keeping the peace between \
 		guests and the staff. Do <font size=6>NOT</font> leave the hotel, as that is grounds for contract termination.</b>"
 	objectives = "Do not leave my assigned hotel. Try and keep the peace between staff and guests, non-lethal force heavily advised if possible."
 
@@ -415,7 +415,7 @@
 
 /obj/effect/mob_spawn/human/syndicate/battlecruiser
 	name = "Syndicate Battlecruiser Ship Operative"
-	flavour_text = "<span class='big bold'>I are a crewmember aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to follow my captain's orders, maintain the ship, and keep the engine running.</b></span> If you are not familiar with how the supermatter engine functions: <b>do not attempt to start it.</b><br>\
+	flavour_text = "<span class='big bold'>I am a crewmember aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to follow my captain's orders, maintain the ship, and keep the engine running.</b></span> If you are not familiar with how the supermatter engine functions: <b>do not attempt to start it.</b><br>\
 	<br>\
 	<span class='danger'><b>The armory is not a candy store, and my role is not to assault the station directly, leave that work to the assault operatives.</b></span></font>"
 	outfit = /datum/outfit/syndicate_empty/SBC
@@ -428,7 +428,7 @@
 
 /obj/effect/mob_spawn/human/syndicate/battlecruiser/assault
 	name = "Syndicate Battlecruiser Assault Operative"
-	flavour_text = "<span class='big bold'>I are an assault operative aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to follow my captain's orders, keep intruders out of the ship, and assault Space Station 13.</b></span> There is an armory, multiple assault ships, and beam cannons to attack the station with.<br>\
+	flavour_text = "<span class='big bold'>I am an assault operative aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to follow my captain's orders, keep intruders out of the ship, and assault Space Station 13.</b></span> There is an armory, multiple assault ships, and beam cannons to attack the station with.<br>\
 	<br>\
 	<span class='danger'><b>Work as a team with my fellow operatives and work out a plan of attack. If you are overwhelmed, escape back to my ship!</b></span></span>"
 	outfit = /datum/outfit/syndicate_empty/SBC/assault
@@ -446,7 +446,7 @@
 
 /obj/effect/mob_spawn/human/syndicate/battlecruiser/captain
 	name = "Syndicate Battlecruiser Captain"
-	flavour_text = "<span class='big bold'>I are the captain aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to oversee my crew, defend the ship, and destroy Space Station 13.</b></span> The ship has an armory, multiple ships, beam cannons, and multiple crewmembers to accomplish this goal.<br>\
+	flavour_text = "<span class='big bold'>I am the captain aboard the syndicate flagship: the SBC Starfury.</span><span class='big'> <span class='danger'><b>My job is to oversee my crew, defend the ship, and destroy Space Station 13.</b></span> The ship has an armory, multiple ships, beam cannons, and multiple crewmembers to accomplish this goal.<br>\
 	<br>\
 	<span class='danger'><b>As the captain, this whole operation falls on my shoulders.</b></span> You do not need to nuke the station, causing sufficient damage and preventing my ship from being destroyed will be enough.</span>"
 	outfit = /datum/outfit/syndicate_empty/SBC/assault/captain
@@ -474,7 +474,7 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>I are a security officer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	flavour_text = "<span class='big bold'>I am a security officer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
 	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in my gut as you climb out of my pod. \
 	Work as a team with my fellow survivors and do not abandon them.</b>"
@@ -499,7 +499,7 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>I are an engineer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	flavour_text = "<span class='big bold'>I am an engineer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
 	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in my gut as you climb out of my pod. \
 	Work as a team with my fellow survivors and do not abandon them.</b>"
@@ -524,7 +524,7 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>I are a scientist working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	flavour_text = "<span class='big bold'>I am a scientist working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
 	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in my gut as you climb out of my pod. \
 	Work as a team with my fellow survivors and do not abandon them.</b>"
@@ -552,7 +552,7 @@
 	anchored = TRUE
 	density = FALSE
 	show_flavour = FALSE //Flavour only exists for spawners menu
-	flavour_text = "<span class='big bold'>I are a space pirate.</span><b> The station refused to pay for my protection, protect the ship, siphon the credits from the station and raid it for even more loot.</b>"
+	flavour_text = "<span class='big bold'>I am a space pirate.</span><b> The station refused to pay for my protection, protect the ship, siphon the credits from the station and raid it for even more loot.</b>"
 	assignedrole = "Space Pirate"
 	var/rank = "Mate"
 

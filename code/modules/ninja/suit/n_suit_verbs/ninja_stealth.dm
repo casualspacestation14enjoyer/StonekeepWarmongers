@@ -20,7 +20,7 @@ Contents:
 		stealth = !stealth
 		animate(U, alpha = 50,time = 15)
 		U.visible_message("<span class='warning'>[U.name] vanishes into thin air!</span>", \
-						"<span class='notice'>I are now mostly invisible to normal detection.</span>")
+						"<span class='notice'>I am now mostly invisible to normal detection.</span>")
 
 
 /obj/item/clothing/suit/space/space_ninja/proc/cancel_stealth()
@@ -31,7 +31,7 @@ Contents:
 		stealth = !stealth
 		animate(U, alpha = 255, time = 15)
 		U.visible_message("<span class='warning'>[U.name] appears from thin air!</span>", \
-						"<span class='notice'>I are now visible.</span>")
+						"<span class='notice'>I am now visible.</span>")
 		return 1
 	return 0
 

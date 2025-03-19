@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	var/mob/living/silicon/ai/A = usr
 
 	if(A.stat == DEAD)
-		to_chat(A, "<span class='warning'>I are already dead!</span>")
+		to_chat(A, "<span class='warning'>I am already dead!</span>")
 		return
 
 	for(var/datum/AI_Module/AM in possible_modules)
@@ -695,7 +695,7 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	conveyor.masterAI = owner
 	playsound(T, 'sound/blank.ogg', 100, TRUE)
 	owner_AI.can_shunt = FALSE
-	to_chat(owner, "<span class='warning'>I are no longer able to shunt your core to APCs.</span>")
+	to_chat(owner, "<span class='warning'>I am no longer able to shunt your core to APCs.</span>")
 	adjust_uses(-1)
 
 /mob/living/silicon/ai/proc/remove_transformer_image(client/C, image/I, turf/T)

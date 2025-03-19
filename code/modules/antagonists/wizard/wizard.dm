@@ -126,7 +126,7 @@
 	H.equipOutfit(outfit_type)
 
 /datum/antagonist/wizard/greet()
-	to_chat(owner, "<span class='boldannounce'>I are the Space Wizard!</span>")
+	to_chat(owner, "<span class='boldannounce'>I am the Space Wizard!</span>")
 	to_chat(owner, "<B>The Space Wizards Federation has given you the following tasks:</B>")
 	owner.announce_objectives()
 	to_chat(owner, "You will find a list of available spells in my spell book. Choose my magic arsenal carefully.")
@@ -178,7 +178,7 @@
 	wiz_age = APPRENTICE_AGE_MIN
 
 /datum/antagonist/wizard/apprentice/greet()
-	to_chat(owner, "<B>I are [master.current.real_name]'s apprentice! You are bound by magic contract to follow [master.p_their()] orders and help [master.p_them()] in accomplishing [master.p_their()] goals.")
+	to_chat(owner, "<B>I am [master.current.real_name]'s apprentice! You are bound by magic contract to follow [master.p_their()] orders and help [master.p_them()] in accomplishing [master.p_their()] goals.")
 	owner.announce_objectives()
 
 /datum/antagonist/wizard/apprentice/register()
@@ -227,7 +227,7 @@
 	move_to_lair = FALSE
 
 /datum/antagonist/wizard/apprentice/imposter/greet()
-	to_chat(owner, "<B>I are an imposter! Trick and confuse the crew to misdirect malice from my handsome original!</B>")
+	to_chat(owner, "<B>I am an imposter! Trick and confuse the crew to misdirect malice from my handsome original!</B>")
 	owner.announce_objectives()
 
 /datum/antagonist/wizard/apprentice/imposter/equip_wizard()

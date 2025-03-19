@@ -40,7 +40,7 @@
 			to_chat(src, "<span class='danger'>There is a local station housing fugitives that the man is after, he wants them returned; dead or alive.</span>")
 			to_chat(src, "<span class='danger'>We will not be able to make ends meet without our cargo, so we must do as he says and capture them.</span>")
 
-	to_chat(owner, "<span class='boldannounce'>I are not an antagonist in that you may kill whomever you please, but you can do anything to ensure the capture of the fugitives, even if that means going through the station.</span>")
+	to_chat(owner, "<span class='boldannounce'>I am not an antagonist in that you may kill whomever you please, but you can do anything to ensure the capture of the fugitives, even if that means going through the station.</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/fugitive_hunter/create_team(datum/team/fugitive_hunters/new_team)

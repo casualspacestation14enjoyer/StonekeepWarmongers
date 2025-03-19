@@ -50,7 +50,7 @@
 
 	SSblackbox.record_feedback("nested tally", "changeling_powers", 1, list("Absorb DNA", "4"))
 	user.visible_message("<span class='danger'>[user] sucks the fluids from [target]!</span>", "<span class='notice'>We have absorbed [target].</span>")
-	to_chat(target, "<span class='danger'>I are absorbed by the changeling!</span>")
+	to_chat(target, "<span class='danger'>I am absorbed by the changeling!</span>")
 
 	if(!changeling.has_dna(target.dna))
 		changeling.add_new_profile(target)

@@ -31,7 +31,7 @@
 		to_chat(user, "<span class='warning'>Without the hivemind, you would be unfit to rule as queen!</span>")
 		return 0
 	if(node.recent_queen_death)
-		to_chat(user, "<span class='warning'>I are still too burdened with guilt to evolve into a queen.</span>")
+		to_chat(user, "<span class='warning'>I am still too burdened with guilt to evolve into a queen.</span>")
 		return 0
 	if(!get_alien_type(/mob/living/carbon/alien/humanoid/royal/queen))
 		var/mob/living/carbon/alien/humanoid/royal/queen/new_xeno = new (user.loc)

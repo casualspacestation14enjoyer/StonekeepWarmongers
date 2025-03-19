@@ -73,7 +73,7 @@
 		J.mybag=src
 		J.update_icon()
 	else
-		to_chat(user, "<span class='warning'>I are unable to fit my [name] into the [J.name].</span>")
+		to_chat(user, "<span class='warning'>I am unable to fit my [name] into the [J.name].</span>")
 		return
 
 /obj/item/storage/bag/trash/bluespace

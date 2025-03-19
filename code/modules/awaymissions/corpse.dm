@@ -37,7 +37,7 @@
 		to_chat(user, "<span class='warning'>This spawner is out of charges!</span>")
 		return
 	if(is_banned_from(user.key, banType))
-		to_chat(user, "<span class='warning'>I are jobanned!</span>")
+		to_chat(user, "<span class='warning'>I am jobanned!</span>")
 		return
 	if(QDELETED(src) || QDELETED(user))
 		return
@@ -324,7 +324,7 @@
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	flavour_text = "<span class='big bold'>I are a space doctor!</span>"
+	flavour_text = "<span class='big bold'>I am a space doctor!</span>"
 	assignedrole = "Space Doctor"
 
 /obj/effect/mob_spawn/human/doctor/alive/equip(mob/living/carbon/human/H)
@@ -379,7 +379,7 @@
 	name = "bartender sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	flavour_text = "<span class='big bold'>I are a space bartender!</span><b> Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect.</b>"
+	flavour_text = "<span class='big bold'>I am a space bartender!</span><b> Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect.</b>"
 	assignedrole = "Space Bartender"
 	id_job = "Bartender"
 
@@ -490,7 +490,7 @@
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	flavour_text = "<span class='big bold'>I are a Nanotrasen Commander!</span>"
+	flavour_text = "<span class='big bold'>I am a Nanotrasen Commander!</span>"
 
 /obj/effect/mob_spawn/human/nanotrasensoldier/alive
 	death = FALSE
@@ -500,7 +500,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = "nanotrasenprivate"
-	flavour_text = "<span class='big bold'>I are a Nanotrasen Private Security Officer!</span>"
+	flavour_text = "<span class='big bold'>I am a Nanotrasen Private Security Officer!</span>"
 
 
 /////////////////Spooky Undead//////////////////////

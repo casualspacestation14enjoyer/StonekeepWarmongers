@@ -64,7 +64,7 @@ datum/quirk/fan_clown
 	desc = ""
 	value = 1
 	mob_trait = TRAIT_FAN_CLOWN
-	gain_text = "<span class='notice'>I are a big fan of the Clown.</span>"
+	gain_text = "<span class='notice'>I am a big fan of the Clown.</span>"
 	lose_text = "<span class='danger'>The clown doesn't seem so great.</span>"
 	medical_record_text = "Patient reports being a big fan of the Clown."
 
@@ -82,7 +82,7 @@ datum/quirk/fan_mime
 	desc = ""
 	value = 1
 	mob_trait = TRAIT_FAN_MIME
-	gain_text = "<span class='notice'>I are a big fan of the Mime.</span>"
+	gain_text = "<span class='notice'>I am a big fan of the Mime.</span>"
 	lose_text = "<span class='danger'>The mime doesn't seem so great.</span>"
 	medical_record_text = "Patient reports being a big fan of the Mime."
 

@@ -25,7 +25,7 @@
 
 /datum/antagonist/obsessed/greet()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/blank.ogg', 100, FALSE, pressure_affected = FALSE)
-	to_chat(owner, "<span class='danger'>I are the Obsessed!</span>")
+	to_chat(owner, "<span class='danger'>I am the Obsessed!</span>")
 	to_chat(owner, "<B>The Voices have reached out to you, and are using you to complete their evil deeds.</B>")
 	to_chat(owner, "<B>I don't know their connection, but The Voices compel you to stalk [trauma.obsession], forcing them into a state of constant paranoia.</B>")
 	to_chat(owner, "<B>The Voices will retaliate if you fail to complete your tasks or spend too long away from your target.</B>")

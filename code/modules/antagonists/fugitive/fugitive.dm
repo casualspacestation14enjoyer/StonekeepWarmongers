@@ -30,7 +30,7 @@
 	objectives += survive
 
 /datum/antagonist/fugitive/greet(back_story)
-	to_chat(owner, "<span class='boldannounce'>I are the Fugitive!</span>")
+	to_chat(owner, "<span class='boldannounce'>I am the Fugitive!</span>")
 	backstory = back_story
 	switch(backstory)
 		if("prisoner")
@@ -53,7 +53,7 @@
 			to_chat(src, "<span class='danger'>Now you are hunted, with your fellow factory defects. Work together to stay free from the clutches of evil.</span>")
 			to_chat(src, "<span class='danger'>I also sense other silicon life on the station. Escaping would allow notifying S.E.L.F. to intervene... or you could free them myself...</span>")
 
-	to_chat(owner, "<span class='boldannounce'>I are not an antagonist in that you may kill whomever you please, but you can do anything to avoid capture.</span>")
+	to_chat(owner, "<span class='boldannounce'>I am not an antagonist in that you may kill whomever you please, but you can do anything to avoid capture.</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/fugitive/create_team(datum/team/fugitive/new_team)

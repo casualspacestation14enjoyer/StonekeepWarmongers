@@ -682,7 +682,7 @@
 		SM.mind.enslave_mind_to_creator(user)
 		SM.sentience_act()
 		to_chat(SM, "<span class='warning'>All at once it makes sense: you know what you are and who you are! Self awareness is yours!</span>")
-		to_chat(SM, "<span class='danger'>I are grateful to be self aware and owe [user.real_name] a great debt. Serve [user.real_name], and assist [user.p_them()] in completing [user.p_their()] goals at any cost.</span>")
+		to_chat(SM, "<span class='danger'>I am grateful to be self aware and owe [user.real_name] a great debt. Serve [user.real_name], and assist [user.p_them()] in completing [user.p_their()] goals at any cost.</span>")
 		if(SM.flags_1 & HOLOGRAM_1) //Check to see if it's a holodeck creature
 			to_chat(SM, "<span class='danger'>I also become depressingly aware that you are not a real creature, but instead a holoform. Your existence is limited to the parameters of the holodeck.</span>")
 		to_chat(user, "<span class='notice'>[SM] accepts [src] and suddenly becomes attentive and aware. It worked!</span>")
@@ -752,7 +752,7 @@
 	SM.sentience_act() //Same deal here as with sentience
 	user.death()
 	to_chat(SM, "<span class='notice'>In a quick flash, you feel my consciousness flow into [SM]!</span>")
-	to_chat(SM, "<span class='warning'>I are now [SM]. Your allegiances, alliances, and role is still the same as it was prior to consciousness transfer!</span>")
+	to_chat(SM, "<span class='warning'>I am now [SM]. Your allegiances, alliances, and role is still the same as it was prior to consciousness transfer!</span>")
 	SM.name = "[user.real_name]"
 	qdel(src)
 

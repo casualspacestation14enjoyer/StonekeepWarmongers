@@ -562,7 +562,7 @@
 	if(istype(I,/obj/item/pestle))
 		if(grinded)
 			if(user.getStaminaLoss() > 50)
-				to_chat(user, "<span class='warning'>I are too tired to work!</span>")
+				to_chat(user, "<span class='warning'>I am too tired to work!</span>")
 				return
 			to_chat(user, "<span class='notice'>I start grinding...</span>")
 			if((do_after(user, 25, target = src)) && grinded)

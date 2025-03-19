@@ -886,7 +886,7 @@
 	. = ..()
 	if ( get_dist(src, user) > 0 )
 		if ( !(issilicon(user) || IsAdminGhost(user)) )
-			to_chat(user, "<span class='warning'>I are too far away!</span>")
+			to_chat(user, "<span class='warning'>I am too far away!</span>")
 			user.unset_machine()
 			user << browse(null, "window=turretid")
 			return

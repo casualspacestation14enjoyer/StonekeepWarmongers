@@ -340,7 +340,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
-	backl = /obj/item/rogue/musicpack/heartfelt // Zamurai are mostly a unit only still trained because it boosts moral, they're a potent masculine figure in Heartfelt. Like lumberjacks!
+	backl = /obj/item/rogue/musicpack/heartfelt // ZamuraI am mostly a unit only still trained because it boosts moral, they're a potent masculine figure in Heartfelt. Like lumberjacks!
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/sword/short/wakizashi

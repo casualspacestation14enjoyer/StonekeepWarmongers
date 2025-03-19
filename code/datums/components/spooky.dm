@@ -49,7 +49,7 @@
 				new/obj/item/instrument/trombone/spectral(T)
 			else
 				to_chat(H, "<span class='boldwarning'>The spooky gods forgot to ship my instrument. Better luck next unlife.</span>")
-		to_chat(H, "<span class='boldnotice'>I are the spooky skeleton!</span>")
+		to_chat(H, "<span class='boldnotice'>I am the spooky skeleton!</span>")
 		to_chat(H, "<span class='boldnotice'>A new life and identity has begun. Help my fellow skeletons into bringing out the spooky-pocalypse. You haven't forgotten my past life, and are still beholden to past loyalties.</span>")
 		change_name(H)	//time for a new name!
 

@@ -71,7 +71,7 @@ Runes can either be invoked by one's self or with many different cultists. Each 
 	if(.)
 		return
 	if(!iscultist(user))
-		to_chat(user, "<span class='warning'>I aren't able to understand the words of [src].</span>")
+		to_chat(user, "<span class='warning'>I amn't able to understand the words of [src].</span>")
 		return
 	var/list/invokers = can_invoke(user)
 	if(invokers.len >= req_cultists)
@@ -88,7 +88,7 @@ Runes can either be invoked by one's self or with many different cultists. Each 
 		else if(construct_invoke || !iscultist(M)) //if you're not a cult construct we want the normal fail message
 			attack_hand(M)
 		else
-			to_chat(M, "<span class='warning'>I are unable to invoke the rune!</span>")
+			to_chat(M, "<span class='warning'>I am unable to invoke the rune!</span>")
 
 /obj/effect/rune/proc/conceal() //for talisman of revealing/hiding
 	visible_message("<span class='danger'>[src] fades away.</span>")
@@ -365,7 +365,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 
 	var/turf/T = get_turf(src)
 	if(is_away_level(T.z))
-		to_chat(user, "<span class='cult italic'>I are not in the right dimension!</span>")
+		to_chat(user, "<span class='cult italic'>I am not in the right dimension!</span>")
 		log_game("Teleport rune failed - user in away mission")
 		fail_invoke()
 		return
@@ -836,7 +836,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 			to_chat(user, "<span class='cultitalic'><b>The veil is not weak enough here to manifest spirits, you must be on station!</b></span>")
 			return
 		if(ghosts >= ghost_limit)
-			to_chat(user, "<span class='cultitalic'>I are sustaining too many ghosts to summon more!</span>")
+			to_chat(user, "<span class='cultitalic'>I am sustaining too many ghosts to summon more!</span>")
 			fail_invoke()
 			log_game("Manifest rune failed - too many summoned ghosts")
 			return list()
@@ -864,7 +864,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 		var/obj/structure/emergency_shield/invoker/N = new(T)
 		new_human.key = ghost_to_spawn.key
 		SSticker.mode.add_cultist(new_human.mind, 0)
-		to_chat(new_human, "<span class='cultitalic'><b>I are a servant of the Geometer. You have been made semi-corporeal by the cult of Nar'Sie, and you are to serve them at all costs.</b></span>")
+		to_chat(new_human, "<span class='cultitalic'><b>I am a servant of the Geometer. You have been made semi-corporeal by the cult of Nar'Sie, and you are to serve them at all costs.</b></span>")
 
 		while(!QDELETED(src) && !QDELETED(user) && !QDELETED(new_human) && (user in T))
 			if(user.stat || new_human.InCritical())
@@ -899,7 +899,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 				affecting.forceMove(get_turf(src)) //NO ESCAPE :^)
 			if(affecting.key)
 				affecting.visible_message("<span class='warning'>[affecting] slowly relaxes, the glow around [affecting.p_them()] dimming.</span>", \
-									 "<span class='danger'>I are re-united with my physical form. [src] releases its hold over you.</span>")
+									 "<span class='danger'>I am re-united with my physical form. [src] releases its hold over you.</span>")
 				affecting.Paralyze(40)
 				break
 			if(affecting.health <= 10)

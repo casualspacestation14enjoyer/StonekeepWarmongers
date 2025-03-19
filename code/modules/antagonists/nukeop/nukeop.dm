@@ -35,7 +35,7 @@
 
 /datum/antagonist/nukeop/greet()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/blank.ogg',100,0)
-	to_chat(owner, "<span class='notice'>I are a [nuke_team ? nuke_team.syndicate_name : "syndicate"] agent!</span>")
+	to_chat(owner, "<span class='notice'>I am a [nuke_team ? nuke_team.syndicate_name : "syndicate"] agent!</span>")
 	owner.announce_objectives()
 
 /datum/antagonist/nukeop/on_gain()
@@ -177,7 +177,7 @@
 
 /datum/antagonist/nukeop/leader/greet()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/blank.ogg',100,0)
-	to_chat(owner, "<B>I are the Syndicate [title] for this mission. You are responsible for the distribution of telecrystals and your ID is the only one who can open the launch bay doors.</B>")
+	to_chat(owner, "<B>I am the Syndicate [title] for this mission. You are responsible for the distribution of telecrystals and your ID is the only one who can open the launch bay doors.</B>")
 	to_chat(owner, "<B>If you feel you are not up to this task, give your ID to another operative.</B>")
 	to_chat(owner, "<B>In your hand you will find a special item capable of triggering a greater challenge for your team. Examine it carefully and consult with your fellow operatives before activating it.</B>")
 	owner.announce_objectives()

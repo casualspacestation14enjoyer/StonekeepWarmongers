@@ -96,7 +96,7 @@
 									direct = "weak"
 							temp += "[W.imp_in.name]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
-				temp += "<B>I are at \[[sr.x],[sr.y],[sr.z]\]</B> in orbital coordinates.<BR><BR><A href='byond://?src=[REF(src)];refresh=1'>Refresh</A><BR>"
+				temp += "<B>I am at \[[sr.x],[sr.y],[sr.z]\]</B> in orbital coordinates.<BR><BR><A href='byond://?src=[REF(src)];refresh=1'>Refresh</A><BR>"
 			else
 				temp += "<B><FONT color='red'>Processing Error:</FONT></B> Unable to locate orbital position.<BR>"
 		else

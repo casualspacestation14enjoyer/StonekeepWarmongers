@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY(parasites) //all currently existing/living guardians
 	var/range = 10 //how far from the user the spirit can be
 	var/toggle_button_type = /atom/movable/screen/guardian/ToggleMode/Inactive //what sort of toggle button the hud uses
 	var/datum/guardianname/namedatum = new/datum/guardianname()
-	var/playstyle_string = "<span class='holoparasite bold'>I are a standard Guardian. You shouldn't exist!</span>"
+	var/playstyle_string = "<span class='holoparasite bold'>I am a standard Guardian. You shouldn't exist!</span>"
 	var/magic_fluff_string = "<span class='holoparasite'>I draw the Coder, symbolizing bugs and errors. This shouldn't happen! Submit a bug report!</span>"
 	var/tech_fluff_string = "<span class='holoparasite'>BOOT SEQUENCE COMPLETE. ERROR MODULE LOADED. THIS SHOULDN'T HAPPEN. Submit a bug report!</span>"
 	var/carp_fluff_string = "<span class='holoparasite'>CARP CARP CARP SOME SORT OF HORRIFIC BUG BLAME THE CODERS CARP CARP CARP</span>"
@@ -126,8 +126,8 @@ GLOBAL_LIST_EMPTY(parasites) //all currently existing/living guardians
 	if(!summoner)
 		to_chat(src, "<span class='holoparasite bold'>For some reason, somehow, you have no summoner. Please report this bug immediately.</span>")
 		return
-	to_chat(src, "<span class='holoparasite'>I are <font color=\"[namedatum.colour]\"><b>[real_name]</b></font>, bound to serve [summoner.real_name].</span>")
-	to_chat(src, "<span class='holoparasite'>I are capable of manifesting or recalling to my master with the buttons on my HUD. You will also find a button to communicate with [summoner.p_them()] privately there.</span>")
+	to_chat(src, "<span class='holoparasite'>I am <font color=\"[namedatum.colour]\"><b>[real_name]</b></font>, bound to serve [summoner.real_name].</span>")
+	to_chat(src, "<span class='holoparasite'>I am capable of manifesting or recalling to my master with the buttons on my HUD. You will also find a button to communicate with [summoner.p_them()] privately there.</span>")
 	to_chat(src, "<span class='holoparasite'>While personally invincible, you will die if [summoner.real_name] does, and any damage dealt to you will have a portion passed on to [summoner.p_them()] as you feed upon [summoner.p_them()] to sustain myself.</span>")
 	to_chat(src, playstyle_string)
 

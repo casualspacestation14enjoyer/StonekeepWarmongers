@@ -115,7 +115,7 @@
 	var/reaction = rand(1,4)
 	switch(reaction)
 		if(1)
-			to_chat(owner, "<span class='warning'>I are paralyzed with fear!</span>")
+			to_chat(owner, "<span class='warning'>I am paralyzed with fear!</span>")
 			owner.Stun(70)
 			owner.Jitter(8)
 		if(2)

@@ -30,7 +30,7 @@
 	attack_verb_simple = "pinch"
 	environment_smash = ENVIRONMENT_SMASH_WALLS
 	attack_sound = 'sound/blank.ogg'
-	playstyle_string = "<b>I are a Proteon. Your abilities in combat are outmatched by most combat constructs, but you are still fast and nimble. Run metal and supplies, and cooperate with your fellow cultists.</b>"
+	playstyle_string = "<b>I am a Proteon. Your abilities in combat are outmatched by most combat constructs, but you are still fast and nimble. Run metal and supplies, and cooperate with your fellow cultists.</b>"
 
 /mob/living/simple_animal/hostile/construct/proteon/hostile //Style of mob spawned by trapped cult runes in the cleric ruin.
 	AIStatus = AI_ON

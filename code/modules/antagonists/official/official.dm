@@ -7,7 +7,7 @@
 	can_hijack = HIJACK_PREVENT
 
 /datum/antagonist/official/greet()
-	to_chat(owner, "<B><font size=3 color=red>I are a CentCom Official.</font></B>")
+	to_chat(owner, "<B><font size=3 color=red>I am a CentCom Official.</font></B>")
 	if (ert_team)
 		to_chat(owner, "Central Command is sending you to [station_name()] with the task: [ert_team.mission.explanation_text]")
 	else

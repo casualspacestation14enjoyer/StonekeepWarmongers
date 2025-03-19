@@ -130,7 +130,7 @@
 		return
 	if(isalien(owner)) //Different effects for aliens than humans
 		to_chat(owner, "<span class='danger'>My Queen has been struck down!</span>")
-		to_chat(owner, "<span class='danger'>I are struck with overwhelming agony! You feel confused, and my connection to the hivemind is severed.</span>")
+		to_chat(owner, "<span class='danger'>I am struck with overwhelming agony! You feel confused, and my connection to the hivemind is severed.</span>")
 		owner.emote("roar")
 		owner.Stun(200) //Actually just slows them down a bit.
 

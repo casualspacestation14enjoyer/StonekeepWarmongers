@@ -1020,7 +1020,7 @@
 
 	if(PL["right"] && ishuman(hud.mymob))
 		var/mob/living/carbon/human/H = hud.mymob
-		return H.check_limb_for_injuries(H, choice = check_zone(choice))
+		return H.check_for_injuries(H)
 	else
 		return set_selected_zone(choice, usr)
 

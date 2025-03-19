@@ -3,6 +3,8 @@
 
 	var/description = "Uh oh."
 
+	var/adminonly = FALSE // can only be forced by 'mins
+
 /datum/round_aspect/proc/apply()
 	return
 
@@ -67,3 +69,31 @@
 	var/datum/game_mode/warfare/W = SSticker.mode
 	W.blu_bonus = 5
 	W.red_bonus = 5
+
+/datum/round_aspect/superiorbreeds
+	name = "The Superior Breed"
+	description = "Saigas have twice as health or twice the speed!"
+
+/datum/round_aspect/rationsurplus
+	name = "Ration Surplus"
+	description = "A ration surplus on both sides has caused the soldiers to be quite well fed!"
+
+/datum/round_aspect/poorbastards
+	name = "Poor Bastards"
+	description = "We didn't have enough of a budget to pay Enigma for our firearms."
+
+/datum/round_aspect/poorbastards/apply()
+	SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
+
+/datum/round_aspect/attackofdead
+	name = "Attack of the Living Dead"
+	description = "When a person dies, it's not the end."
+
+/datum/round_aspect/whatthefuck
+	name = "What? Just... why?"
+	description = "When a person dies, they spawn... goblins?"
+	adminonly = TRUE
+
+/datum/round_aspect/veteranlords
+	name = "Veteran Affairs"
+	description = "The lords aren't wusses. They fought wars before."

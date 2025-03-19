@@ -210,6 +210,20 @@
 		H.STASTR = 20
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 
+	if(aspect_chosen(/datum/round_aspect/veteranlords))
+		H.change_stat("strength", 3)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
+		var/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
+		H.charflaw = new shit()
+		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
+			qdel(H.wear_mask)
+			mask = /obj/item/clothing/mask/rogue/eyepatch
+		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
+
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
 	jobtype = /datum/job/roguetown/warfare/red/lord
@@ -548,8 +562,9 @@
 		H.change_stat("perception", 4)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)
-		H.change_stat("speed", -1)
+		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -698,7 +713,21 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
+
+	if(aspect_chosen(/datum/round_aspect/veteranlords))
+		H.change_stat("strength", 3)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
+		var/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
+		H.charflaw = new shit()
+		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
+			qdel(H.wear_mask)
+			mask = /obj/item/clothing/mask/rogue/eyepatch
+		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"
@@ -1102,8 +1131,9 @@
 		H.change_stat("perception", 2)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)
-		H.change_stat("speed", -1)
+		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 
 //// OFFICER ////
 

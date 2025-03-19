@@ -358,3 +358,9 @@
 	var/obj/item/natural/saddle/S = new(src)
 	ssaddle = S
 	update_icon()
+	ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
+	if(aspect_chosen(/datum/round_aspect/superiorbreeds))
+		turns_per_move = 7
+		move_to_delay = 4
+		health = 200
+		maxHealth = 200

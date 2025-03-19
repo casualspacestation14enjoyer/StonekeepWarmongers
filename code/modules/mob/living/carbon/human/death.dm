@@ -40,6 +40,9 @@
 			if(BLUE_WARTEAM)
 				SSticker.grenzelhoft_deaths++
 
+	if(aspect_chosen(/datum/round_aspect/attackofdead))
+		zombie_check()
+
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
 	
@@ -122,6 +125,11 @@
 	
 	if(aspect_chosen(/datum/round_aspect/exploding))
 		gib(TRUE)
+	
+	if(aspect_chosen(/datum/round_aspect/whatthefuck))
+		gib(TRUE)
+		spawn(1 SECONDS)
+			new /mob/living/carbon/human/species/goblin/npc(get_turf(src))
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

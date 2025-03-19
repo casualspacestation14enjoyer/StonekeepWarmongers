@@ -334,7 +334,8 @@ SUBSYSTEM_DEF(ticker)
 		var/list/possibilities = list()
 		for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
 			var/datum/round_aspect/A = thing
-			possibilities += A
+			if(!A.adminonly)
+				possibilities += A
 		var/chosen = pick(possibilities)
 		round_aspect = new chosen
 		round_aspect.apply()
@@ -981,6 +982,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/fire/weak"
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/flint"
+			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 		if(3)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/fire"
@@ -992,6 +994,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
+			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 		if(5)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
@@ -999,7 +1002,6 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
-			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
 	for(var/mob/M in GLOB.player_list)
 		SEND_SOUND(M, 'sound/music/traitor.ogg')

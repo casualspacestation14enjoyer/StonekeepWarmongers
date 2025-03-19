@@ -12,6 +12,7 @@
 #define TRAIT_NOBLE					"Noble Blooded"
 #define TRAIT_JESTER				"Jester Blooded"
 #define TRAIT_NINJA					"Ninja Blooded"
+#define TRAIT_SNIPER				"Good Shot Placement"
 #define TRAIT_EMPATH					"Empath"
 #define TRAIT_BREADY					"Battleready"
 #define TRAIT_MEDIUMARMOR				"Maille Training"
@@ -70,6 +71,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_DODGEEXPERT = "I can dodge easly while only wearing light armor.",
 	TRAIT_VILLAIN = "I am a devious, conniving villain!",
 	TRAIT_JESTER = "I AM JESTER BLOODED! HONK HONK!!! HAHAHAHAHAAAAAAAAAA!",
+	TRAIT_SNIPER = "Helmets won't stop that lead ball getting inside your noggin, I'll make sure of that.",
 	TRAIT_NINJA = "I am an elite ninja of Heartfelt.",
 	TRAIT_SOUL_EXAMINE = "<span class='deadsay'>I know when someone's soul has departed.</span>",
 	TRAIT_CYCLOPS_RIGHT = "<span class='warning'>My right eye has been poked out...</span>",

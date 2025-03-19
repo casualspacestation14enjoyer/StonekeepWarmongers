@@ -197,6 +197,10 @@
 				if(istype(a_intent, /datum/intent/dagger/thrust) && G.wielded == TRUE)
 					var/mob/living/carbon/human/H = L
 					var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
+					if(H.rogue_sneaking)
+						dropItemToGround(G)
+						visible_message("<span class='warning'>[L] suplexes [src]'s bayonet charge and makes them drop their gun!")
+						return TRUE
 					H.emote("agony")
 					H.apply_damage(30, BRUTE, BODY_ZONE_CHEST)
 					Immobilize(10)

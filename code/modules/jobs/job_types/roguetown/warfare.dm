@@ -646,6 +646,7 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 
@@ -1213,6 +1214,7 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 

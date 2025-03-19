@@ -298,16 +298,15 @@
 		LAZYREMOVE(target.surgeries, target_zone)
 		return FALSE
 
-	var/speed_mod = get_speed_modifier(user, target, target_zone, tool, intent)
 	var/success_prob = max(get_success_probability(user, target, target_zone, tool, intent), 0)
 
-	var/modded_time = round(time * speed_mod, 1)
+	var/modded_time = 1
 	if(!do_after(user, modded_time, target = target))
 		LAZYREMOVE(target.surgeries, target_zone)
 		return FALSE
 
 	LAZYREMOVE(target.surgeries, target_zone)
-	var/success = !try_to_fail && ((iscyborg(user) && !silicons_obey_prob) || prob(success_prob)) && chem_check(target)
+	var/success = TRUE
 	if(success && success(user, target, target_zone, tool, intent))
 		if(repeating && can_do_step(user, target, target_zone, tool, intent, try_to_fail))
 			initiate(user, target, target_zone, tool, intent, try_to_fail)

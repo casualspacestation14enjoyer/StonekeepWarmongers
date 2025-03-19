@@ -194,7 +194,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
 
-/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -216,11 +216,11 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		var/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
+		var/datum/charflaw/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
 		H.charflaw = new shit()
 		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
 			qdel(H.wear_mask)
-			mask = /obj/item/clothing/mask/rogue/eyepatch
+			H.wear_mask = new /obj/item/clothing/mask/rogue/eyepatch
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
@@ -699,7 +699,7 @@
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
-/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -721,11 +721,11 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		var/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
+		var/datum/charflaw/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
 		H.charflaw = new shit()
 		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
 			qdel(H.wear_mask)
-			mask = /obj/item/clothing/mask/rogue/eyepatch
+			H.wear_mask = new /obj/item/clothing/mask/rogue/eyepatch
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 

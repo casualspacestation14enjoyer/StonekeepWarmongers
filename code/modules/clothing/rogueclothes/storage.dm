@@ -61,11 +61,6 @@
 	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
 	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
 
-/obj/item/storage/belt/rogue/leather/medic/PopulateContents()
-	new /obj/item/sleepingbag(src)
-	new /obj/item/sleepingbag(src)
-	new /obj/item/sleepingbag(src)
-
 /obj/item/storage/belt/rogue/leather/plaquegold
 	name = "plaque belt"
 	icon_state = "goldplaque"

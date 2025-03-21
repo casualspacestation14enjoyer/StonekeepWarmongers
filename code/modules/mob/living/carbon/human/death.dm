@@ -40,9 +40,6 @@
 			if(BLUE_WARTEAM)
 				SSticker.grenzelhoft_deaths++
 
-	if(aspect_chosen(/datum/round_aspect/attackofdead))
-		zombie_check()
-
 	if(HAS_TRAIT(src, TRAIT_JESTER))
 		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
 	
@@ -131,11 +128,17 @@
 		spawn(1 SECONDS)
 			new /mob/living/carbon/human/species/goblin/npc(get_turf(src))
 
+	if(aspect_chosen(/datum/round_aspect/attackofdead))
+		mind.add_antag_datum(/datum/antagonist/zombie)
+		spawn(10)
+			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
+			if(Z)
+				Z.wake_zombie()
+		return
+
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
-	if(is_devil(src))
-		INVOKE_ASYNC(is_devil(src), TYPE_PROC_REF(/datum/antagonist/devil, beginResurrectionCheck), src)
 
 /mob/living/carbon/human/proc/zombie_check()
 	if(!mind)

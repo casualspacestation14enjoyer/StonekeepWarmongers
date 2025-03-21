@@ -632,7 +632,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho
+	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
 	cloak = /obj/item/clothing/cloak/apron/cook/medical
@@ -1199,7 +1199,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black

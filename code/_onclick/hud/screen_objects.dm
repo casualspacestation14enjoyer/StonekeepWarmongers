@@ -1545,7 +1545,7 @@
 
 
 /atom/movable/screen/gameover/hog
-	icon_state = "hog"
+	icon_state = "mong"
 	alpha = 0
 
 /atom/movable/screen/gameover/hog/baby

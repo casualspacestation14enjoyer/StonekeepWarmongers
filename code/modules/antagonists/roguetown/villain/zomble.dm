@@ -32,7 +32,6 @@
 		TRAIT_NOPAIN,
 		TRAIT_NOBREATH,
 		TRAIT_TOXIMMUNE,
-		TRAIT_CHUNKYFINGERS,
 		TRAIT_NOSLEEP,
 		TRAIT_BASHDOORS,
 		TRAIT_SHOCKIMMUNE,
@@ -283,7 +282,7 @@
 	if(blood_volume)
 		mob_timers["puke"] = world.time
 		vomit(1, blood = TRUE, stun = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(wake_zombie)), 1 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(wake_zombie)), 2 SECONDS)
 	return zombie_antag
 
 /mob/living/carbon/human/proc/wake_zombie()

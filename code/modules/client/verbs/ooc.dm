@@ -355,6 +355,19 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	popup.set_content(contents)
 	popup.open()
 
+/client/verb/combat()
+	set name = "ADV. COMBAT"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Drill Sergeant Cockbottom's Basic Combat Training<BR>"
+	contents += "--------------</center><BR>"
+	contents += "Headshots most of the time do not deal lethal damage. If you hit a headshot as an untrained marksman, you will only knock the person's helmet off and cause some blunt force trauma. This rarely results in death by itself. If the target is not wearing a helmet or any other kind of headwear they will die instantly and you'll feel accoomplished. Another way to kill your opponent is to bayonet charge them. Wield your barksteel, change to STAB intent and RUN into your opponent. If you ever happen to be in the situation where you are the person being charged, switch to SNEAK intent to suplex the weapon out of their hands."
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
 /proc/CheckJoinDate(ckey)
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
 	if(!http)

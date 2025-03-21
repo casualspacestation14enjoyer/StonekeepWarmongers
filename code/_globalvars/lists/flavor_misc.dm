@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(female_clothing_icons)
 GLOBAL_LIST_EMPTY(dismembered_clothing_icons)
 
 	//radical shit
-GLOBAL_LIST_INIT(hit_appends, list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-GUH"))
+GLOBAL_LIST_INIT(hit_appends, list("-FUCK", "-ACK", "-SHIT", "-MOTHERFUCKER", "-DICKHEAD", "-WHUH?"))
 
 GLOBAL_LIST_INIT(scarySounds, list())
 

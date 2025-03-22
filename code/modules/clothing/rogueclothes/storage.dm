@@ -53,7 +53,7 @@
 
 /obj/item/storage/belt/rogue/leather/medic/PopulateContents()
 	new /obj/item/reagent_containers/glass/bottle/rogue(src)
-	new	/obj/item/reagent_containers/glass/bottle/rogue(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue(src)
 
 /obj/item/storage/belt/rogue/leather/bullet/PopulateContents()

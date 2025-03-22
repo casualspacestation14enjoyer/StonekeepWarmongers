@@ -110,6 +110,8 @@ SUBSYSTEM_DEF(vote)
 					text += "\n\t[option]"
 				if(mode == "endround")
 					winners = list("End Round")
+				if(mode == "stalemate")
+					winners = list("NO")
 			. = pick(winners)
 			text += "\n<b>Vote Result: [.]</b>"
 		else
@@ -155,6 +157,15 @@ SUBSYSTEM_DEF(vote)
 						log_game("LOG VOTE: ROUNDVOTEEND [REALTIMEOFDAY]")
 						to_chat(world, "\n<font color='purple'>15 minutes remain.</font>")
 						C.roundvoteend = TRUE
+			if("stalemate")
+				if(. == "NO")
+					to_chat(world, "\n<font color='purple'>More blood shall be spilled, then.</font>")
+				if(. == "YES")
+					to_chat(world, "\n<font color='purple'>I knew you were all cowards. Five minutes remain.</font>")
+					var/datum/game_mode/warfare/W = SSticker.mode
+					if(istype(W))
+						spawn(5 MINUTES)
+							W.do_war_end()
 	if(restart)
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)
@@ -224,6 +235,9 @@ SUBSYSTEM_DEF(vote)
 			if("endround")
 				initiator_key = pick("Zlod", "Sun King", "Gaia", "Aeon", "Gemini", "Aries")
 				choices.Add("Continue Playing","End Round")
+			if("stalemate")
+				initiator_key = "The God of War"
+				choices.Add("YES","NO")
 			else
 				return 0
 		mode = vote_type

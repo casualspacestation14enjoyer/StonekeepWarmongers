@@ -587,6 +587,19 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	SSticker.show_roundend_report(src, TRUE)
 
+/client/verb/stalemate()
+	set name = "Propose STALEMATE"
+	set category = "Options"
+	set desc = ""
+
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(istype(W))
+		if(W.stalematecooldown >= world.time)
+			to_chat(src, "\n<font color='red'>It is too early for that, try again later.</font>")
+		else
+			W.stalematecooldown = world.time + 10 MINUTES
+			SSvote.initiate_vote("stalemate", "The God of War")
+
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
 	set category = "Options"

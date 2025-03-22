@@ -2,6 +2,8 @@
 	. = ..()
 	create_reagents(1000)
 	update_body_parts() //to update the carbon's new bodyparts appearance
+	if(aspect_chosen(/datum/round_aspect/bloodybastards))
+		blood_volume = blood_volume * 2
 	GLOB.carbon_list += src
 
 /mob/living/carbon/Destroy()

@@ -97,3 +97,7 @@
 /datum/round_aspect/veteranlords
 	name = "Veteran Affairs"
 	description = "The lords aren't wusses. They fought wars before."
+
+/datum/round_aspect/bloodybastards
+	name = "Bloody Bastards"
+	description = "Everyone has more blood than usual."

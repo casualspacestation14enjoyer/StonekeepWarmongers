@@ -244,10 +244,12 @@
 		to_chat(usr, "<span class='warning'>You do not have the rights to start a vote.</span>")
 		return
 
-	var/type = input("What kind of vote?") as null|anything in list("End Round", "Map",  "Custom")
+	var/type = input("What kind of vote?") as null|anything in list("End Round", "Stalemate", "Map", "Custom")
 	switch(type)
 		if("End Round")
 			type = "endround"
+		if("Stalemate")
+			type = "stalemate"
 		if("Map")
 			type = "map"
 		if("Custom")

@@ -15,19 +15,20 @@
 
 	var/mob/redlord = null
 	var/obj/item/redcrown = null
-	var/red_bonus = 2
+	var/red_bonus = 2 // reinforcement points
 
 	var/mob/blulord = null
 	var/obj/item/blucrown = null
-	var/blu_bonus = 2
+	var/blu_bonus = 2 // reinforcement points
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
 	var/warfare_start_time = 5 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
-
-	var/timedmatch = FALSE
+	
+	var/stalematecooldown // a cooldown before another stalemate can be held
+	
 	var/warmode = null
 
 	announce_span = "danger"

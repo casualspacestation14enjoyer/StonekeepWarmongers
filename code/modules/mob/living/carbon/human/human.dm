@@ -64,6 +64,9 @@
 
 	setup_human_dna()
 
+	if(SSticker.godfight)
+		SEND_SOUND(src, sound('sound/music/combatcult.ogg'))
+
 	if(dna.species)
 		set_species(dna.species.type)
 

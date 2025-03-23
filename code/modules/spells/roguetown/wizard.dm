@@ -21,6 +21,15 @@
 	sparks_spread = 3
 	sparks_amt = 5
 
+/obj/effect/proc_holder/spell/invoked/projectile/lightningbolt/god
+	range = 8
+	releasedrain = 1
+	chargedrain = 1
+	chargetime = 1
+	charge_max = 1
+	invocation_type = "none"
+	sound = 'sound/vo/GOD/lightning.ogg'
+
 /obj/projectile/magic/lightning
 	name = "bolt of lightning"
 	tracer_type = /obj/effect/projectile/tracer/stun
@@ -216,6 +225,27 @@
 	movement_interrupt = TRUE
 	chargedloop = /datum/looping_sound/invokegen
 
+/obj/effect/proc_holder/spell/invoked/projectile/fireball/greater/god
+	range = 8
+	releasedrain = 1
+	chargedrain = 1
+	chargetime = 1
+	charge_max = 1
+	invocation_type = "none"
+	sound = 'sound/vo/GOD/fireandflame.ogg'
+
+/obj/effect/proc_holder/spell/invoked/projectile/fireball/greater/godboom
+	range = 8
+	overlay_state = "sacredflame"
+	releasedrain = 1
+	chargedrain = 1
+	chargetime = 1
+	charge_max = 1
+	invocation_type = "shout"
+	invocation = "EXPLODE!"
+	sound = 'sound/blank.ogg'
+	projectile_type = /obj/projectile/magic/aoe/fireball/rogue/great/boom
+
 /obj/projectile/magic/aoe/fireball/rogue/great
 	name = "fireball"
 	exp_heavy = 0
@@ -223,6 +253,12 @@
 	exp_flash = 2
 	exp_fire = 2
 	flag = "magic"
+
+/obj/projectile/magic/aoe/fireball/rogue/great/boom
+	exp_heavy = 1
+	exp_light = 2
+	exp_flash = 4
+	exp_fire = 1
 
 /obj/effect/proc_holder/spell/invoked/projectile/fetch
 	name = "Fetch"

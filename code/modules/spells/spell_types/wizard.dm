@@ -295,6 +295,14 @@
 	var/anti_magic_check = TRUE
 	var/repulse_force = MOVE_FORCE_EXTREMELY_STRONG
 
+/obj/effect/proc_holder/spell/aoe_turf/repulse/god
+	maxthrow = 5
+	range = 6
+	cooldown_min = 1
+	charge_max = 1
+	invocation_type = "none"
+	sound = 'sound/vo/GOD/getaway.ogg'
+
 /obj/effect/proc_holder/spell/aoe_turf/repulse/cast(list/targets,mob/user = usr, stun_amt = 5)
 	var/list/thrownatoms = list()
 	var/atom/throwtarget

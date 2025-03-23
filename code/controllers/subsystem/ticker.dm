@@ -30,6 +30,7 @@ SUBSYSTEM_DEF(ticker)
 	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 
 	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
+	var/godfight = FALSE
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 

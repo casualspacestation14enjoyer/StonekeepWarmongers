@@ -2373,6 +2373,7 @@
 #include "code\modules\mob\living\taste.dm"
 #include "code\modules\mob\living\update_icons.dm"
 #include "code\modules\mob\living\ventcrawling.dm"
+#include "code\modules\mob\living\WARGOD.dm"
 #include "code\modules\mob\living\brain\brain.dm"
 #include "code\modules\mob\living\brain\death.dm"
 #include "code\modules\mob\living\brain\emote.dm"

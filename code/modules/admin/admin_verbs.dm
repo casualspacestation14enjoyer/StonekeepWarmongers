@@ -95,6 +95,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
 	/client/proc/join_as_martyr,
+	/client/proc/godjoin,
 	/client/proc/forceaspect,
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/deadchat,
@@ -816,6 +817,19 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		SSticker.round_aspect = new chosen
 		SSticker.forcing_aspect = TRUE
 		SSticker.round_aspect.apply()
+
+/client/proc/godjoin()
+	set category = "GameMaster"
+	set name = "SPAWN GOD"
+	if(!holder)
+		return
+
+	var/mob/living/simple_animal/wargod/H = new(get_turf(mob))
+
+	var/mob/adminmob = src.mob
+	H.ckey = src.ckey
+	if( isobserver(adminmob) )
+		qdel(adminmob)
 
 /client/proc/join_as_martyr()
 	set category = "GameMaster"

@@ -319,7 +319,10 @@
 			if(C.warmode != GAMEMODE_STAND && C.crownbearer)
 				to_chat(world, "<span class='info'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
-		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>") // used only for admin shit... yet
+		if(SSticker.godfight)
+			to_chat(world, "<span class='big bold'>God is dead, and we killed him.</span>") // used only for admin shit... yet
+		else
+			to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>") // used only for admin shit... yet
 
 
 	/*

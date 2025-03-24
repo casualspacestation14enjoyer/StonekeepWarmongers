@@ -54,7 +54,7 @@
 		SSticker.godfight = TRUE
 		sleep(20)
 		for(var/mob/I in GLOB.mob_living_list)
-			I.client.showtext("GOD IS HERE")
+			I?.client?.showtext("GOD IS HERE")
 			SEND_SOUND(I, sound('sound/music/combatcult.ogg'))
 
 /mob/living/simple_animal/wargod/check_projectile_wounding(obj/projectile/P, def_zone)
@@ -78,9 +78,9 @@
 	anchored = TRUE
 
 	to_chat(world, "<span class='narsiesmall'>BESTED BY MY OWN CREATION? VIOLENCE?!</span>")
-	sleep(30)
+	sleep(50)
 	to_chat(world, "<span class='narsiesmall'>I DIDN'T MAKE THE METAL THAT YOU LAUNCH WITH UNHOLY POWDER ONLY TO BE PEPPERED BY UNTIL MY FORM FAILS!!!</span>")
-	sleep(30)
+	sleep(40)
 	to_chat(world, "<span class='narsiesmall'>I... </span>")
 	flick("GOD_acceptance",src)
 	sleep(40)

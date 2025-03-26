@@ -27,7 +27,8 @@
 
 /mob/living/simple_animal/wargod/Initialize()
 	. = ..()
-	filters += AMBIENT_OCCLUSION
+	resize = 1.25
+	update_transform()
 	invisibility = INVISIBILITY_MAXIMUM
 	ADD_TRAIT(src, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
@@ -47,14 +48,16 @@
 		sleep(10)
 		SEND_SOUND(world, sound('sound/vo/GOD/GOD_monologue.ogg'))
 		sleep(31 SECONDS)
+		for(var/mob/I in GLOB.player_list)
+			I?.client?.showtext("GOD IS HERE", 400)
 		SEND_SOUND(world, sound('sound/vo/GOD/GOD_is_here.ogg'))
 		to_chat(world, "<span class='narsie'>GOD IS HERE.</span>")
 		invisibility = 0
+		filters += filter(type = "drop_shadow", color = "#04080FAA", size = -10)
 		flick("GOD_appear",src)
 		SSticker.godfight = TRUE
 		sleep(20)
-		for(var/mob/I in GLOB.mob_living_list)
-			I?.client?.showtext("GOD IS HERE")
+		for(var/mob/I in GLOB.player_list)
 			SEND_SOUND(I, sound('sound/music/combatcult.ogg'))
 
 /mob/living/simple_animal/wargod/check_projectile_wounding(obj/projectile/P, def_zone)
@@ -79,11 +82,13 @@
 
 	to_chat(world, "<span class='narsiesmall'>BESTED BY MY OWN CREATION? VIOLENCE?!</span>")
 	sleep(50)
-	to_chat(world, "<span class='narsiesmall'>I DIDN'T MAKE THE METAL THAT YOU LAUNCH WITH UNHOLY POWDER ONLY TO BE PEPPERED BY UNTIL MY FORM FAILS!!!</span>")
+	to_chat(world, "<span class='redtext'>I DIDN'T MAKE THE METAL THAT YOU LAUNCH WITH UNHOLY POWDER ONLY TO BE PEPPERED BY IT UNTIL MY FORM FAILS!!!</span>")
 	sleep(40)
 	to_chat(world, "<span class='narsiesmall'>I... </span>")
 	flick("GOD_acceptance",src)
 	sleep(40)
+	icon_state = "GOD"
+	alpha = 150
 	to_chat(world, "<span class='notice'>Perhaps it is for the best. </span>")
 	sleep(40)
 	to_chat(world, "<span class='notice'>I was only a little boy when my father died in the war. My mother was sent soon after.</span>")
@@ -105,17 +110,28 @@
 	to_chat(world, "<span class='narsie'>SHIT!</span>")
 	SEND_SOUND(world, sound('sound/vo/GOD/GOD_invoke.ogg'))
 	sleep(40)
+	SEND_SOUND(world, sound('sound/music/tree.ogg', volume = 65))
 	to_chat(world, "<span class='notice'>...</span>")
 	sleep(35)
 	to_chat(world, "<span class='notice'>So many... died for nothing.</span>")
 	sleep(45)
 	to_chat(world, "<span class='notice'>Don't let him trick you again.</span>")
 	sleep(50)
+	alpha = 90
 	to_chat(world, "<span class='notice'>Let my essence birth a universe, where war prospers no more.</span>")
 	sleep(80)
-	SEND_SOUND(world, sound('sound/vo/GOD/GOD_death.ogg', volume = 35))
+	SEND_SOUND(world, sound('sound/vo/GOD/GOD_death.ogg', volume = 25))
+	SEND_SOUND(world, sound('sound/misc/jack_killing_2.ogg', volume = 30))
 	flick("GOD_die",src)
 	QDEL_IN(src, 15.3)
+
+	spawn(15.3)
+		SEND_SOUND(world, sound('sound/misc/hel.ogg'))
+		sleep(3)
+		SEND_SOUND(world, sound('sound/misc/heroin_rush.ogg'))
+
+	for(var/mob/I in GLOB.player_list)
+		I?.client?.showtext("God is dead.", 100)
 
 	sleep(10 SECONDS)
 	SSticker.force_ending = TRUE

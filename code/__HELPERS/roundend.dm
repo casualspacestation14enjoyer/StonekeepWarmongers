@@ -214,7 +214,10 @@
 		if(C.mob)
 			SSdroning.kill_droning(C)
 			SSvote.interface(C) // FORCE them to vote.
-			C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
+			if(godfight)
+				C.mob.playsound_local(C.mob, 'sound/music/tree.ogg', 100, FALSE)
+			else
+				C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)

@@ -4,13 +4,13 @@
 #define CREDIT_EASE_DURATION 22
 #define CREDITS_PATH 'icons/fullblack.dmi'
 
-/client/proc/showtext(var/text)
+/client/proc/showtext(var/text,var/size = 200)
 	var/atom/movable/screen/area_text/T = new()
 	src.screen += T
 	T.layer = HUD_LAYER+2
 	T.plane = HUD_PLANE+2
 	T.maptext = {"<span style='vertical-align:top; text-align:center;
-				color: #820000; font-size: 200%;
+				color: #820000; font-size: [size]%;
 				text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 				font-family: "Viner Hand ITC", "Pterra";'>[text]</span>"}
 	T.maptext_width = 205
@@ -18,6 +18,7 @@
 	T.maptext_x = 12
 	T.maptext_y = 64
 	animate(T, alpha = 255, time = 10, easing = EASE_IN)
+	addtimer(CALLBACK(mob, TYPE_PROC_REF(/mob/living, clear_area_text), T), 60)
 
 /client/proc/RollCredits()
 	set waitfor = FALSE

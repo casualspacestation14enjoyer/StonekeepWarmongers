@@ -52,10 +52,10 @@
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'
-				HU.cmode_music = 'sound/music/horror.ogg'
+				HU.cmode_music = 'sound/music/combatheartfelt.ogg'
 			if(BLUE_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_grenzelhoft.ogg'
-				HU.cmode_music = 'sound/music/horror.ogg'
+				HU.cmode_music = 'sound/music/combatgrenzelhoft.ogg'
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
@@ -515,6 +515,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NINJA, TRAIT_GENERIC)
 
@@ -610,6 +611,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 
 //// MEDIC ////
 
@@ -1018,6 +1020,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
@@ -1177,6 +1180,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 
 //// MEDIC ////
 

@@ -16,7 +16,7 @@
 			M.update_damage_overlays()
 	M.adjustToxLoss(-10)
 	M.adjustOxyLoss(-10)
-	M.blood_volume += BLOOD_VOLUME_SURVIVE
+	M.blood_volume += 25
 
 	..()
 	. = 1

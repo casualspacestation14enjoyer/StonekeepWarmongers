@@ -183,7 +183,6 @@
 	name = "steel half menpo"
 	icon_state = "steelhalfmenpo"
 	desc = "The lower part of a menpo portraying the maws of a Ogrun's head. It covers only the neck and the mouth, often used by warriors that cares about their sight."
-	body_parts_covered = NECK|MOUTH
 	flags_cover = HEADCOVERSMOUTH | MASKCOVERSMOUTH
 	flags_inv = HIDEFACIALHAIR|HIDEFACE
 

@@ -36,7 +36,7 @@
 	progress = CLAMP(progress, 0, goal)
 	last_progress = progress
 	bar.icon_state = "prog_bar_[round(((progress / goal) * 100), 5)]"
-	user.client.mouse_pointer_icon = GLOB.mouseicons_human[round(text2num("[((progress / goal) * 20)]"), 1)]
+	user.client?.mouse_pointer_icon = GLOB.mouseicons_human[round(text2num("[((progress / goal) * 20)]"), 1)]
 	if (!shown)
 		shown = TRUE
 
@@ -59,7 +59,7 @@
 	if(!bars.len)
 		LAZYREMOVE(user.progressbars, bar.loc)
 
-	user.client.mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+	user.client?.mouse_pointer_icon = file("icons/effects/mousemice/[user.client.mouse_icon_prefix].dmi")
 	animate(bar, alpha = 0, time = PROGRESSBAR_ANIMATION_TIME)
 	addtimer(CALLBACK(src, PROC_REF(remove_from_client)), PROGRESSBAR_ANIMATION_TIME, TIMER_CLIENT_TIME)
 	QDEL_IN(bar, PROGRESSBAR_ANIMATION_TIME * 2) //for garbage collection safety

@@ -202,6 +202,7 @@
 	unarmed = TRUE
 	noaa = FALSE
 	attack_verb = list("bites")
+	pointer = 'icons/effects/mousemice/human_bite.dmi'
 
 /datum/intent/jump
 	name = "jump"

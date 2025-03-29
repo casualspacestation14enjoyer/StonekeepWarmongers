@@ -612,6 +612,7 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
 	H.cmode_music = 'sound/music/combatspecial.ogg'
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////
 
@@ -1181,6 +1182,7 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
 	H.cmode_music = 'sound/music/combatspecial.ogg'
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////
 

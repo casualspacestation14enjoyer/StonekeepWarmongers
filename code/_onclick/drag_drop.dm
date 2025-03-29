@@ -44,6 +44,7 @@
 	var/chargedprog = 0
 	var/sections
 	var/lastplayed
+	var/mouse_icon_prefix = "human"
 	var/part
 	var/goal
 	var/progress
@@ -69,7 +70,7 @@
 	if(mob.stat != CONSCIOUS)
 		mob.atkswinging = null
 		charging = null
-		mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+		mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix].dmi")
 		return
 
 	if (mouse_down_icon)
@@ -118,10 +119,10 @@
 			if(mob.used_intent.get_chargetime() && !AD.blockscharging && !mob.in_throw_mode)
 				updateprogbar()
 			else
-				mouse_pointer_icon = 'icons/effects/mousemice/human_attack.dmi'
+				mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix]_attack.dmi")
 			return
 		else
-			mouse_pointer_icon = 'icons/effects/mousemice/human_looking.dmi'
+			mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix]_looking.dmi")
 			return
 	if (L["middle"]) //start charging a spell or readying a mmb intent
 		if(mob.next_move > world.time)
@@ -134,7 +135,7 @@
 				if(!S.cast_check(TRUE,mob))
 					return
 		if(!mob.mmb_intent)
-			mouse_pointer_icon = 'icons/effects/mousemice/human_looking.dmi'
+			mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix]_looking.dmi")
 		else
 			if(mob.mmb_intent.get_chargetime() && !AD.blockscharging)
 				updateprogbar()
@@ -156,7 +157,7 @@
 		if(mob.used_intent.get_chargetime() && !AD.blockscharging && !mob.in_throw_mode)
 			updateprogbar()
 		else
-			mouse_pointer_icon = 'icons/effects/mousemice/human_attack.dmi'
+			mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix]_attack.dmi")
 		return
 
 /mob
@@ -166,7 +167,7 @@
 	charging = 0
 //	mob.update_warning()
 
-	mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+	mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix].dmi")
 
 	if(mob.curplaying)
 		mob.curplaying.on_mouse_up()
@@ -197,7 +198,7 @@
 		chargedprog = 0
 		mob.atkswinging = null
 //		mob.update_warning()
-		mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+		mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix].dmi")
 		return
 
 	if (mouse_up_icon)
@@ -213,7 +214,7 @@
 				N.Click(location, control, params)
 		tcompare = null
 
-//	mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+//	mouse_pointer_icon = file("icons/effects/mousemice/[mouse_icon_prefix].dmi")
 
 	if(active_mousedown_item)
 		active_mousedown_item.onMouseUp(object, location, params, mob)

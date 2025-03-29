@@ -85,29 +85,6 @@
 						if(HU.dna.species.id == dna.species.id)
 							HU.add_stress(/datum/stressevent/viewdeath)
 
-	var/mob/dead/observer/rogue/G = ghostize()
-
-	if(G?.client)
-		SSdroning.kill_droning(G.client)
-		SSdroning.kill_loop(G.client)
-		SSdroning.kill_rain(G.client)
-		G.playsound_local(src, 'sound/misc/deth.ogg', 100)
-
-		var/atom/movable/screen/gameover/hog/H = new()
-		var/list/iconstato = list(
-			"mong"=99,
-			"ashbaby"=1 // warmongers is a serious game about the horrors of war
-		)
-		var/chosen = pickweight(iconstato)
-		H.icon_state = chosen
-		H.layer = SPLASHSCREEN_LAYER+0.5
-		H.alpha = 255
-		G.client.screen += H
-		G.client.showtext("CLICK SKULL TO RESPAWN.")
-		mob_timers["lastdied"] = world.time
-		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
-		G.add_client_colour(/datum/client_colour/monochrome)
-
 	. = ..()
 
 	dizziness = 0
@@ -134,7 +111,29 @@
 			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
 			if(Z)
 				Z.wake_zombie()
-		return
+	else
+		var/mob/dead/observer/rogue/G = ghostize()
+
+		if(G?.client)
+			SSdroning.kill_droning(G.client)
+			SSdroning.kill_loop(G.client)
+			SSdroning.kill_rain(G.client)
+			G.playsound_local(src, 'sound/misc/deth.ogg', 100)
+
+			var/atom/movable/screen/gameover/hog/H = new()
+			var/list/iconstato = list(
+				"mong"=99,
+				"ashbaby"=1 // warmongers is a serious game about the horrors of war
+			)
+			var/chosen = pickweight(iconstato)
+			H.icon_state = chosen
+			H.layer = SPLASHSCREEN_LAYER+0.5
+			H.alpha = 255
+			G.client.screen += H
+			G.client.showtext("CLICK SKULL TO RESPAWN.")
+			mob_timers["lastdied"] = world.time
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
+			G.add_client_colour(/datum/client_colour/monochrome)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

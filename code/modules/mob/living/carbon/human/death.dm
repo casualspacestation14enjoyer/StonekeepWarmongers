@@ -62,14 +62,14 @@
 			for(var/client/X in C.heartfelts)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 50, FALSE, pressure_affected = FALSE)
+				V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 20, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
 			testing("Blue lord is dead!")
 			for(var/client/X in C.grenzels)
 				var/mob/living/carbon/human/V = X.mob
 				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 50, FALSE, pressure_affected = FALSE)
+				V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 20, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)

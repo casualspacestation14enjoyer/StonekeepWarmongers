@@ -643,7 +643,7 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad
 	name = "abyssariad kikko gusoku"
 	desc = "The Heartfelt design reforged in the ways of Fog Islands to better supply quick-moving zamurai cavalry, replacing the heavier and costier O-Yoroi lamellar."
-	body_parts_covered = CHEST|GROIN|VITALS|LEGS //does not protect the arms. Countering the Brigandine that protects the arms, but not legs.
+	body_parts_covered = CHEST|VITALS //does not protect the arms. Countering the Brigandine that protects the arms, but not legs.
 	icon_state = "kikkoabyssal"
 	item_state = "kikkoabyssal"
 	sellprice = 65 //not unique.

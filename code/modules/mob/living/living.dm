@@ -1055,7 +1055,7 @@
 		client.charging = 0
 		client.chargedprog = 0
 		client.tcompare = null //so we don't shoot the attack off
-		client.mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+		client.mouse_pointer_icon = file("icons/effects/mousemice/[client.mouse_icon_prefix].dmi")
 	if(used_intent)
 		used_intent.on_mouse_up()
 	if(mmb_intent)
@@ -1924,22 +1924,43 @@
 		return
 	changeNext_move(CLICK_CD_MELEE)
 
-	var/_x = T.x-loc.x
-	var/_y = T.y-loc.y
-	if(_x > 9 || _x < -9)
-		return
-	if(_y > 9 || _y < -9)
-		return
+	if(HAS_TRAIT(src, TRAIT_OFFICER))
+		var/_x = 0
+		var/_y = 0
+		switch(dir)
+			if(NORTH)
+				_y = 10
+			if(EAST)
+				_x = 10
+			if(SOUTH)
+				_y = -10
+			if(WEST)
+				_x = -10
+		client.change_view(world.view + 6)
+
+		var/ttime = 10
+		if(STAPER > 5)
+			ttime = 10 - (STAPER - 5)
+			if(ttime < 0)
+				ttime = 0
+		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
+		hud_used?.show_hud(HUD_STYLE_NOHUD)
+	else
+		var/_x = T.x-loc.x
+		var/_y = T.y-loc.y
+		if(_x > 9 || _x < -9)
+			return
+		if(_y > 9 || _y < -9)
+			return
+		var/ttime = 10
+		if(STAPER > 5)
+			ttime = 10 - (STAPER - 5)
+			if(ttime < 0)
+				ttime = 0
+		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
 	hide_cone()
-	var/ttime = 10
-	if(STAPER > 5)
-		ttime = 10 - (STAPER - 5)
-		if(ttime < 0)
-			ttime = 0
 	if(m_intent != MOVE_INTENT_SNEAK)
 		visible_message("<span class='info'>[src] looks into the distance.</span>")
-	animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
-//	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(stop_looking))
 	update_cone_show()
 
 /mob/proc/look_down(turf/T)
@@ -1985,4 +2006,7 @@
 		client.pixel_y = 0
 	reset_perspective()
 	update_cone_show()
+	regenerate_icons()
+	client?.change_view(CONFIG_GET(string/default_view))
+	hud_used?.show_hud(HUD_STYLE_STANDARD)
 //	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)

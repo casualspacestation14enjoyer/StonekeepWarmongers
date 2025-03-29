@@ -160,6 +160,7 @@
 	zombie.update_a_intents()
 	zombie.aggressive = TRUE
 	zombie.mode = AI_IDLE
+	owner.current.client.mouse_icon_prefix = "zombie"
 
 	var/obj/item/organ/eyes/eyes = new /obj/item/organ/eyes/night_vision/zombie
 	eyes.Insert(zombie, drop_if_replaced = FALSE)

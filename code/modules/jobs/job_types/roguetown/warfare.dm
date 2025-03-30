@@ -493,7 +493,7 @@
 	head = /obj/item/clothing/head/roguetown/shinobi_zukin
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltr = /obj/item/quiver/arrows/fog
+	beltr = /obj/item/quiver/arrows
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin

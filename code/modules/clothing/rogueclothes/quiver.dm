@@ -84,13 +84,6 @@
 		ammo_list += A
 	update_icon()
 
-/obj/item/quiver/arrows/fog/Initialize()
-	..()
-	for(var/i in 1 to max_storage)
-		var/obj/item/ammo_casing/caseless/rogue/arrow/poison/fog/A = new()
-		ammo_list += A
-	update_icon()
-
 /obj/item/quiver/bolts/Initialize()
 	..()
 	for(var/i in 1 to max_storage)

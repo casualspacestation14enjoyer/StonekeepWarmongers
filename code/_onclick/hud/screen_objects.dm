@@ -1905,7 +1905,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 120
+	alpha = 75
 //	layer = 20.5
 //	plane = 20
 	layer = 13
@@ -1918,10 +1918,10 @@
 	name = ""
 	screen_loc = ui_backhudl
 	mouse_opacity = 0
-	alpha = 128
-	layer = 24
-	plane = 24
-	blend_mode = BLEND_MULTIPLY
+	alpha = 80
+	layer = 13
+	plane = 0
+	blend_mode = 3
 
 /atom/movable/screen/char_preview
 	name = "Me."

@@ -138,9 +138,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/family = FAMILY_NONE
 
-	var/crt = FALSE
-	var/wnoise = TRUE
-
+	var/visibility_accessibility = FALSE
 
 /datum/preferences/New(client/C)
 	parent = C

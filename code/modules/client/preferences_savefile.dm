@@ -170,8 +170,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["triumphs"]			>> triumphs
 	S["musicvol"]			>> musicvol
 	S["anonymize"]			>> anonymize
-	S["crt"]				>> crt
-	S["wnoise"]				>> wnoise
+	S["visibility_accessibility"] >> visibility_accessibility
 	S["mastervol"]			>> mastervol
 	S["lastclass"]			>> lastclass
 
@@ -259,8 +258,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["triumphs"], triumphs)
 	WRITE_FILE(S["musicvol"], musicvol)
 	WRITE_FILE(S["anonymize"], anonymize)
-	WRITE_FILE(S["crt"], crt)
-	WRITE_FILE(S["wnoise"], wnoise)
+	WRITE_FILE(S["visibility_accessibility"], visibility_accessibility)
 	WRITE_FILE(S["lastclass"], lastclass)
 	WRITE_FILE(S["mastervol"], mastervol)
 	WRITE_FILE(S["ooccolor"], ooccolor)

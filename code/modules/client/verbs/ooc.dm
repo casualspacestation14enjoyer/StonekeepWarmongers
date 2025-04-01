@@ -600,11 +600,38 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			W.stalematecooldown = world.time + 10 MINUTES
 			SSvote.initiate_vote("stalemate", "The God of War")
 
+/client/verb/accessibility()
+	set name = "Accessibility"
+	set category = "Options"
+	set desc = ""
+
+	if(!prefs)
+		return
+	if(prefs.visibility_accessibility == FALSE)
+		var/alerto = alert(src, "This toggle is used for disabling the screen effects of grain and CRT lines. If you disable this, the game may look like absolute dogshit in the visual department. Do you heed my warning, traveler?", "WARMONGERS", "Disable", "Keep it On")
+		if(alerto != "Disable")
+			to_chat(src, "AUTHENTIC MODE... PREVAILS")
+			return
+		prefs.visibility_accessibility = TRUE
+		prefs.save_preferences()
+		to_chat(src, "AUTHENTIC MODE... OFF")
+		for(var/atom/movable/screen/scannies/S in screen)
+			S.alpha = 0
+		for(var/atom/movable/screen/grain/S in screen)
+			S.alpha = 0
+	else
+		prefs.visibility_accessibility = FALSE
+		prefs.save_preferences()
+		to_chat(src, "AUTHENTIC MODE... ON")
+		for(var/atom/movable/screen/scannies/S in screen)
+			S.alpha = 80
+		for(var/atom/movable/screen/grain/S in screen)
+			S.alpha = 75
+
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
 	set category = "Options"
 	set desc = ""
-	set hidden = 1
 	if(!holder)
 		return
 	// Fetch aspect ratio

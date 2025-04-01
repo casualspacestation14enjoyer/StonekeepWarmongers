@@ -96,10 +96,6 @@
 
 	//Rogue Slots /////////////////////////////////
 
-	grain = new /atom/movable/screen/grain
-	grain.hud = src
-	static_inventory += grain
-
 	reads = new /atom/movable/screen/read
 	reads.hud = src
 	static_inventory += reads
@@ -115,7 +111,14 @@
 	scannies = new /atom/movable/screen/scannies
 	scannies.hud = src
 	static_inventory += scannies
-	scannies.alpha = 130
+
+	grain = new /atom/movable/screen/grain
+	grain.hud = src
+	static_inventory += grain
+
+	if(owner.client?.prefs?.visibility_accessibility == TRUE)
+		scannies.alpha = 0
+		grain.alpha = 0
 
 	action_intent = new /atom/movable/screen/act_intent/rogintent
 	action_intent.hud = src

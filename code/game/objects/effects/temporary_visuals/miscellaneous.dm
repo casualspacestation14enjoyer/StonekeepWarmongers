@@ -4,7 +4,7 @@
 	duration = 10
 	randomdir = FALSE
 	layer = BELOW_MOB_LAYER
-	plane = GAME_PLANE_FOV_HIDDEN
+	plane = GAME_PLANE_UPPER
 	var/splatter_type = "splatter"
 
 /obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, set_dir)
@@ -264,6 +264,17 @@
 
 /obj/effect/temp_visual/small_smoke/halfsecond
 	duration = 5
+
+/obj/effect/temp_visual/bloodmist
+	icon_state = "bloodmist"
+	duration = 10
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+
+/obj/effect/temp_visual/telefog
+	icon_state = "telefog"
+	duration = 13
+	plane = GAME_PLANE_UPPER
 
 /obj/effect/temp_visual/fire
 	icon = 'icons/effects/fire.dmi'

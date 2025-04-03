@@ -41,6 +41,10 @@
 	else
 		C.visible_message("<span class='danger'><B>The [src.name] is [pick("torn off", "sundered", "severed", "seperated", "unsewn")]!</B></span>")
 	C.emote("painscream")
+
+	var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(C))
+	animate(BM, transform = matrix()*2, alpha = 0, time = 10) // looks cool
+	
 	src.add_mob_blood(C)
 	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
 	C.add_stress(/datum/stressevent/dismembered)

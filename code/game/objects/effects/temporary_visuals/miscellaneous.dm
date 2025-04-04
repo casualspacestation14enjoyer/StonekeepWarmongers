@@ -267,7 +267,8 @@
 
 /obj/effect/temp_visual/bloodmist
 	icon_state = "bloodmist"
-	duration = 10
+	duration = 6
+	color = COLOR_MAROON
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 

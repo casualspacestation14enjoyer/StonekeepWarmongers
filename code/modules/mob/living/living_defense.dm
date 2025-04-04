@@ -56,9 +56,9 @@
 	if(!P.nodamage && on_hit_state != BULLET_ACT_BLOCK)
 		if(!apply_damage(P.damage, P.damage_type, def_zone, armor))
 			nodmg = TRUE
-			next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
-		apply_effects(P.stun, P.knockdown, P.unconscious, P.irradiate, P.slur, P.stutter, P.eyeblur, P.drowsy, armor, P.stamina, P.jitter, P.paralyze, P.immobilize)
+			next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 		if(!nodmg)
+			apply_effects(P.stun, P.knockdown, P.unconscious, P.irradiate, P.slur, P.stutter, P.eyeblur, P.drowsy, armor, P.stamina, P.jitter, P.paralyze, P.immobilize)
 			if(P.dismemberment)
 				check_projectile_dismemberment(P, def_zone,armor)
 			if(P.woundclass)
@@ -115,7 +115,7 @@
 			var/nodmg = FALSE
 			if(!apply_damage(I.throwforce, dtype, zone, armor))
 				nodmg = TRUE
-				next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+				next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 			if(!nodmg)
 				if(iscarbon(src))
 					var/obj/item/bodypart/affecting = get_bodypart(zone)

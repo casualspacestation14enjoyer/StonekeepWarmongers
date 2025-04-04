@@ -24,7 +24,7 @@
 				to_chat(usr, "<span class='info'><B>The heart is still beating.</B></span>")
 		else if(Adjacent(usr) && usr.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
 			usr.visible_message("<span class='info'>[usr] tries to hear [src]'s heartbeat.</span>")
-			if(do_after(usr, 30, needhand = 1, target = src))
+			if(do_after(usr, 10, needhand = 1, target = src))
 				if(stat == DEAD)
 					to_chat(usr, "<span class='info'><B>No heartbeat...</B>")
 				else

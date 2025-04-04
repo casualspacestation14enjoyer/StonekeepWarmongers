@@ -550,9 +550,8 @@
 	user.UnarmedAttack(AE,1,params)
 
 /mob/proc/ShiftMiddleClickOn(atom/A, params)
-	. = SEND_SIGNAL(src, COMSIG_MOB_MIDDLECLICKON, A)
-	if(. & COMSIG_MOB_CANCEL_CLICKON)
-		return
+	A.ShiftMiddleClick(src)
+	return
 
 /atom/proc/ShiftMiddleClick(mob/user, params)
 	return

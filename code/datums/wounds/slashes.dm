@@ -57,7 +57,7 @@
 	critical = TRUE
 	/// Organs we can disembowel associated with chance to disembowel
 	var/static/list/affected_organs = list(
-		ORGAN_SLOT_STOMACH = 100,
+		ORGAN_SLOT_STOMACH = 25,
 		ORGAN_SLOT_LIVER = 50,
 		ORGAN_SLOT_STOMACH_AID = 100
 	)
@@ -90,6 +90,7 @@
 	for(var/obj/item/organ/spilled as anything in spilled_organs)
 		spilled.Remove(owner)
 		spilled.forceMove(drop_location)
+		affected.add_embedded_object(spilled, TRUE)
 	if(istype(affected, /obj/item/bodypart/chest))
 		var/obj/item/bodypart/chest/cavity = affected
 		if(cavity.cavity_item)

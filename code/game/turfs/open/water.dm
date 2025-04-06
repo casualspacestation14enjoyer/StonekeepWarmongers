@@ -406,5 +406,5 @@
 /turf/open/water/river/proc/process_river()
 	river_processing = null
 	for(var/atom/movable/A in contents)
-		if((A.loc == src) && A.has_gravity())
+		if((A.loc == src) && A.has_gravity() && !A.pulledby && !HAS_TRAIT(A, TRAIT_RIVERSWIMMER))
 			A.ConveyorMove(dir)

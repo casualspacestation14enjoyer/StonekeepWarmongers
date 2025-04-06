@@ -366,7 +366,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 /mob/living/proc/can_speak_vocal(message) //Check AFTER handling of xeno and ling channels
 	if(HAS_TRAIT(src, TRAIT_MUTE))
 		if(SSticker.current_state == GAME_STATE_FINISHED)
-			client.lobbyooc(message)
+			client.lobbyooc("[html_decode(message)]")
 		return FALSE
 
 	if(is_muzzled())

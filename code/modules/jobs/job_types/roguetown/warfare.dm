@@ -209,6 +209,7 @@
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
+		ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 	if(aspect_chosen(/datum/round_aspect/veteranlords))
 		H.change_stat("strength", 3)
@@ -650,6 +651,7 @@
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 
@@ -716,6 +718,7 @@
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
+		ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 	if(aspect_chosen(/datum/round_aspect/veteranlords))
 		H.change_stat("strength", 3)
@@ -1221,6 +1224,7 @@
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 

@@ -14,6 +14,7 @@
 #define TRAIT_NINJA					"Ninja Blooded"
 #define TRAIT_OFFICER				"Officer Training"
 #define TRAIT_SNIPER				"Good Shot Placement"
+#define TRAIT_RIVERSWIMMER			"River Swimmer"
 #define TRAIT_EMPATH					"Empath"
 #define TRAIT_BREADY					"Battleready"
 #define TRAIT_MEDIUMARMOR				"Maille Training"
@@ -74,6 +75,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_JESTER = "I AM JESTER BLOODED! HONK HONK!!! HAHAHAHAHAAAAAAAAAA!",
 	TRAIT_OFFICER = "I know how to see the battlefield and judge it so I can improve our chances of winning.",
 	TRAIT_SNIPER = "Helmets won't stop that lead ball getting inside your noggin, I'll make sure of that.",
+	TRAIT_RIVERSWIMMER = "I am one Hell of a swimmer.",
 	TRAIT_NINJA = "I am an elite ninja of Heartfelt.",
 	TRAIT_SOUL_EXAMINE = "<span class='deadsay'>I know when someone's soul has departed.</span>",
 	TRAIT_CYCLOPS_RIGHT = "<span class='warning'>My right eye has been poked out...</span>",

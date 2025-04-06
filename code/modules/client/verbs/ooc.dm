@@ -131,7 +131,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 //				else
 //					to_chat(C, "<span class='ooc'><EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></span>")
 
-/client/proc/lobbyooc(msg as text)
+/client/proc/lobbyooc(msg as text) // broadcasts ONLY to people in lobby (but everyone if the game has finished)
 	set category = "OOC"
 	set name = "OOC"
 	set desc = "Talk with the other players."

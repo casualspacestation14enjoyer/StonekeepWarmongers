@@ -295,9 +295,6 @@
 				OffBalance(5)
 				return
 			if(INTENT_JUMP)
-				if(istype(src.loc, /turf/open/water))
-					to_chat(src, "<span class='warning'>I'm floating.</span>")
-					return
 				if(A == src || A == src.loc)
 					return
 				if(src.get_num_legs() < 2)

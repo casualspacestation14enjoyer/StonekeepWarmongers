@@ -472,6 +472,7 @@
 	max_integrity = INFINITY
 	CanAtmosPass = ATMOS_PASS_DENSITY
 
+/*
 /obj/structure/teambarrrier // allows only people of defined team past
 	name = "barrier of better fairness"
 	desc = "You're not meant to see this."
@@ -533,6 +534,7 @@
 	if(isobj(mover)) // i have no idea at this point
 		return 1
 	return 0
+*/
 
 /obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
 	..()

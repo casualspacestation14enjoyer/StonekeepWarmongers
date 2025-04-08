@@ -16,7 +16,7 @@
 "bR" = (/obj/structure/table/wood{icon_state = "longtable"},/obj/item/cooking/pan,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
 "bS" = (/obj/structure/roguewindow,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "bU" = (/obj/machinery/anvil,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
-"ce" = (/obj/structure/teambarrrier/red,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
+"ce" = (/obj/structure/fluff/statue/knightalt,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "cn" = (/obj/structure/table/church/m,/obj/item/reagent_containers/glass/cup/golden,/turf/open/floor/rogue/churchrough,/area/rogue/indoors/town)
 "cz" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_x = -10; pixel_y = -11},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_x = -10; pixel_y = -17},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_x = -10; pixel_y = -23},/turf/open/floor/rogue/carpet,/area/rogue/indoors/town)
 "cG" = (/obj/structure/mineral_door/wood/deadbolt{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
@@ -68,7 +68,7 @@
 "hN" = (/obj/structure/bloodstatue,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "hR" = (/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors)
 "hT" = (/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
-"hZ" = (/obj/structure/teambarrrier/red,/turf/open/floor/rogue/hexstone,/area/rogue/indoors/town)
+"hZ" = (/obj/structure/fluff/statue/knightalt/r,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
 "ib" = (/obj/structure/fluff/statue/knight/interior,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "ij" = (/turf/open/floor/rogue/twig,/area/rogue/outdoors)
 "im" = (/obj/structure/chair/stool/rogue{pixel_x = 3},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
@@ -90,7 +90,7 @@
 "kq" = (/obj/structure/fluff/walldeco/customflag{pixel_y = 32},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "kv" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
 "ky" = (/obj/item/ammo_casing/caseless/rogue/cball,/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/carpet,/area/rogue/indoors/town)
-"kG" = (/obj/structure/warfarebarrier,/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/teambarrrier/blue,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
+"kG" = (/obj/structure/warfarebarrier,/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "kJ" = (/obj/structure/rack/rogue/shelf/big,/obj/item/clothing/cloak/apron/cook{pixel_y = 17},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "kP" = (/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "kY" = (/obj/structure/table/wood,/obj/machinery/light/rogue/torchholder/c,/obj/item/clothing/ring/silver,/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
@@ -226,6 +226,7 @@
 "zJ" = (/turf/open/floor/rogue/churchrough,/area/rogue/indoors/town)
 "zK" = (/obj/structure/cannon,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "zP" = (/obj/structure/stairs/stone{icon_state = "stonestairs"},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
+"zQ" = (/obj/structure/fluff/statue/knightalt,/turf/open/floor/rogue/hexstone,/area/rogue/indoors/town)
 "zV" = (/obj/structure/chair/wood/rogue{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/indoors/town)
 "zY" = (/obj/structure/closet/crate/roguecloset/inn/south{pixel_y = 8},/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
 "Ac" = (/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/indestructible,/area/rogue/outdoors)
@@ -303,7 +304,6 @@
 "Kl" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "Km" = (/obj/structure/fermenting_barrel/beer,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
 "Kp" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
-"Ku" = (/obj/structure/teambarrrier/blue,/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors)
 "KG" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
 "KN" = (/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "KP" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
@@ -372,7 +372,7 @@
 "Sh" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/twig,/area/rogue/indoors/town)
 "Sn" = (/obj/structure/table/wood/large/corner{dir = 1},/turf/open/floor/rogue/blocks/stonered,/area/rogue/indoors/town)
 "So" = (/obj/structure/fluff/walldeco/customflag{pixel_y = 32},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
-"Sw" = (/obj/structure/warfarebarrier,/obj/structure/teambarrrier/blue,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
+"Sw" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "Sz" = (/obj/structure/table/wood/large/corner{dir = 5},/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,/turf/open/floor/rogue/blocks/stonered,/area/rogue/indoors/town)
 "SE" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/blocks/stonered,/area/rogue/indoors/town)
 "SN" = (/obj/structure/flora/roguegrass,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
@@ -492,7 +492,7 @@ KNKNKNjIjIjImwKNKNFqjIKNjIjImAKNmAKNHrKNKNlNlNlNKNKNHrKNKNjIjIjIdcKNKNKNjImAjIjI
 KNKNKNjIKNQeKNKNKNKNKNjIdcKNKNjIjIKNKNKNKNlNlNlNKNKNKNKNKNKNKNKNjIjIjIjIjIKNjIKNKNQejIKNKN
 KNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNlNlNlNKNKNKNKNKNmAjImAKNKNKNKNKNKNjIjIKNKNKNKNKN
 KNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNKNhRhRhRlNlNlNKNKNKNKNmAjIKNKNKNKNKNKNKNKNKNKNKNKNKNKNKN
-kGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGKuKuKuSwSwSwkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkG
+kGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGhRhRhRSwSwSwkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkGkG
 KNKNjImAKNKNKNKNKNKNjIKNjIKNKNKNKNKNhRhRhRlNlNlNjIKNKNKNKNKNKNKNKNKNKNjIjIjIjIjIKNKNKNKNKN
 aYaYaYaYaYKNKNjImAjIjIKNjIaYaYaYaYaYKNhGmAlNlNlNKNmAaYaYaYaYaYaYaYKNhRKNkekekekekeKNhRKNjI
 aYUNShUNaYjIaYaYaYaYaYjIjIaYUNShUNaYKNKNKNlNlNlNKNjIaYkYWaRoWaWfaYKNSdeyonXKzsXKQPTMnvjIKN
@@ -510,21 +510,21 @@ aYaYaYaYaYjImAaYaYaYaYaYNqjItQTWgTKNKNbOKNlNlNlNkPCcCchRSgOMwlhRKNjIeyEITMKNjIjI
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBXjhrXjzevSndXjhrXjBBrWnvrWjIjInvjIBBBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBUuVQVQzevSndVQVQUuBBwqjIjIrQjIrWjIBBBBBBBBBBBBBBBBBBBB
-BBBBqpqpqpERqpqpqpgPwdZYqpbqnjVOQqBBhThlhlzevSndhlhlhTBBjIjIFwlNFwjIrWBBBBBBBBBBBBBBBBBBBB
+BBBBqpqpqpERhZqpqpgPwdZYhZbqnjVOQqBBhThlhlzevSndhlhlhTBBjIjIFwlNFwjIrWBBBBBBBBBBBBBBBBBBBB
 BBBBoAXsXsXsXsXsXsXsXsXsXsXsXsXsXsBBhThlhlzehNndfrhlhTBBDLjIlNlNlNjImvBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsXsXsXsXsXsXsXsXsXsXsXsCEhlhlhlzevSndhlhlhlNNlNlNlNlNlNoNlNBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsXsXsXsXsXsXsXsXsXsXsXsBBmQhlhlzeDIndhlhlKlBBrWjIlNlNlNjIjIBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXssXqpqpqpqpqpsXqpqpqpQqBBhThThlzevSndhlhThTBBjIrWjIlNjIjIjIBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsBBBBBBBBBBTCBBBBBBBBBBBBBBDYBBWmWmWmBBDYBBBBBBBBBBQWBBBBBBBBBBBBBBBBBBBBBBBBBB
-BBBBNQXsXsXsBBpcqMpcpcpcpcpcpcpcKZBBBBhTBgXsXsXsBghTBBBBBBqpqpXsERqpqpBBBBBBBBBBBBBBBBBBBB
+BBBBNQXsXsXsBBpcqMpcpcpcpcpcpcpcKZBBBBhTBgXsXsXsBghTBBBBBBqphZXsERceqpBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsBBnxnxxQxQxQxQxQxQnxnxBBBBibhTXsXsXshTOKBBBBBBqpqpXsqpqpqpBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsBBnxnxLyBcKTSnjcSznxnxBBBBhThTXsXsXshThTBBBBBBMTqpXssXqpqpBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsBBYInxIhlTlTxlUFEDnxYIBBBBmQhTXsXsXshTKlBBBBBBMTXsXsqpqpqpBBBBBBBBBBBBBBBBBBBB
 BBBBoAXsXsXsBBnxnxrurururururunxnxBBBBibhTXsXsXshTOKBBBBBBMTqpXssXqpqpBBBBBBBBBBBBBBBBBBBB
 BBBBqpXsXsXsBBpcpcpcpcpcpcpcpcpcpcBBBBhThTXsXsXshThTBBBBBBlJlJXslJlJlJBBBBBBBBBBBBBBBBBBBB
 BBBBBBXsXsXsBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBWmWmWmBBBBBBBBBBqpqpXsqpqpqpBBBBBBBBBBBBBBBBBBBB
-BBmCekXsXsXsERXsXsqpXsERqpqpqpXsemqpqpqpBBXsXsXsBBlKGORJBBBBBBTLBBBBBBBBBBBBBBBBBBBBBBBBBB
-BBmCmCXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsemXsXsXsekmCmCmCBBqpMXXsERqpqpBBBBBBBBBBBBBBBBBBBB
+BBmCekXsXsXsERXsXsceXsERqpqpqpzQemqpqpqpBBXsXsXsBBlKGORJBBBBBBTLBBBBBBBBBBBBBBBBBBBBBBBBBB
+BBmCmCXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsemXsXsXsekmCmCmCBBqpMXXsERceqpBBBBBBBBBBBBBBBBBBBB
 BBmCmCXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsXsmCmCmCmCaCXsXsXsqpqpqpBBBBBBBBBBBBBBBBBBBB
 BBmCBBXsXsXsBBqpqpqpqpXsXsqpqpqpqpqpqpqpBBXsXsXsBBmCmCmCBBqpMXqpqpqpqpBBBBBBBBBBBBBBBBBBBB
 BBBBBBVqVqVqBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBVqVqvkBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -603,7 +603,7 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGfORORerBBqpXsqpBBqlORORyBBBykykykykykBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBqpXsqpBBBBBBBBBBBBykykykykykBBBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBqpXsqpBBBBBBBBykykykykykykykBBBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBqpXsqpBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBcehZceBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBqpXsqpBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBIpqpXsqpERqpqpqpqpHYqpBBwkUrQflrBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBByJqpXsqpqpqpqpqpnqrSOvBBwVwVyqwVBBBBBBBBBBBBBBBBBB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBqpqpXsXsXsXsXsXsnqrSOvdHeNeNeNeNBBBBBBBBBBBBBBBBBB

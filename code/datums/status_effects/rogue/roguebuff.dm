@@ -245,3 +245,16 @@
 	name = "Greatly Inspired"
 	desc = "<span class='nicegreen'>I feel very inspired to fight!</span>\n"
 	icon_state = "intelligence"
+
+/datum/status_effect/buff/spawn_protection
+	id = "spawnprotect"
+	alert_type = null
+	duration = 250
+
+/datum/status_effect/buff/spawn_protection/on_apply()
+	owner.status_flags |= GODMODE
+	return ..()
+
+/datum/status_effect/buff/spawn_protection/on_remove()
+	owner.status_flags &= ~GODMODE
+	to_chat(owner, "<span class='info'>Your moment of spawn protection invulnerability has ended.</span>")

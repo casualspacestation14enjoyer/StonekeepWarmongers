@@ -12,9 +12,9 @@
 #define WARMONGERS_TECHLEVEL_NONE 3
 #define WARMONGERS_TECHLEVEL_AUTO 4 // this is a joke mostly
 
-#define GAMEMODE_PONR "Point of No Return (CTF)"
+#define GAMEMODE_PONR "Capture the Flag"
 #define GAMEMODE_LORD "Lord Destruction"
-#define GAMEMODE_STAND "Last Stand (TDM)"
+#define GAMEMODE_STAND "TDM"
 
 #define CORNERDIRS			list(SOUTHWEST,NORTHWEST,SOUTHEAST,NORTHEAST)
 

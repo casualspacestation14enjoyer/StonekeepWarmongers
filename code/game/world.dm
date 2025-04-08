@@ -311,7 +311,6 @@ GLOBAL_VAR(restart_counter)
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Fantasy PvP Musket-based Top-down Shooter<b><br>"
-	s += "You've been <b>drafted</b>, fight for the crown.<br>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER<br>"

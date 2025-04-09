@@ -787,7 +787,7 @@
 	if(H.advsetup)
 		alpha = 0
 		icon = 'icons/mob/advsetup.dmi'
-		animate(src, alpha = 255, time = 30)
+		animate(src, alpha = 255, time = 15)
 
 /atom/movable/screen/advsetup/Click(location,control,params)
 	if(!hud)

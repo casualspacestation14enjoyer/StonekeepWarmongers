@@ -35,9 +35,6 @@
 	if(. && (mode != AI_OFF))
 		handle_ai()
 
-	if(advsetup)
-		Stun(50)
-
 	if(mind)
 		for(var/datum/antagonist/A in mind.antag_datums)
 			A.on_life(src)

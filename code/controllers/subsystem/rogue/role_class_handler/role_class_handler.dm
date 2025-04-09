@@ -140,6 +140,7 @@ SUBSYSTEM_DEF(role_class_handler)
 	qdel(GET_IT_OUT)
 	H.cure_blind("advsetup")
 	H.apply_status_effect(/datum/status_effect/buff/spawn_protection)
+	H.remove_status_effect(/datum/status_effect/incapacitating/stun)
 
 	//If we get any plus factor at all, we run the datums boost proc on the human also.
 	if(plus_factor)

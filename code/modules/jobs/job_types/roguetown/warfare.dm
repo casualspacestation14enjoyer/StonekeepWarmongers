@@ -291,6 +291,7 @@
 		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
 
 //// MUSKETEER ////
 
@@ -805,6 +806,7 @@
 		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
 
 //// MUSKETEER ////
 

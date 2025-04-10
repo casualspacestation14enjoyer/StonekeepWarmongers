@@ -238,6 +238,7 @@
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
 	var/datum/looping_sound/musloop/war/soundloop
+	var/faction = BLUE_WARTEAM
 	var/curfile
 	var/playing = FALSE
 	var/curvol = 70
@@ -249,9 +250,11 @@
 	songs = list("Faiāransā e no ōdo" = 'sound/music/jukeboxes/heart_music1.ogg',
 	"Shōri e no kōshin" = 'sound/music/jukeboxes/heart_music2.ogg',
 	"Shi ka haji ka" = 'sound/music/jukeboxes/heart_music3.ogg')
+	faction = RED_WARTEAM
 
 /obj/item/rogue/musicpack/Initialize()
 	soundloop = new(list(src), FALSE)
+	soundloop.musicpack = src
 	. = ..()
 
 /obj/item/rogue/musicpack/attack_right(mob/user)

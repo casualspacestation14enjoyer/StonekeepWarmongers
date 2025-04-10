@@ -60,6 +60,7 @@
 /datum/round_aspect/explodeatwill
 	name = "Explode at Will"
 	description = "Shouting your war cry causes you to explode due to a bomb inside your anus."
+	adminonly = TRUE
 
 /datum/round_aspect/supplypoints
 	name = "Favors in the Right Places"

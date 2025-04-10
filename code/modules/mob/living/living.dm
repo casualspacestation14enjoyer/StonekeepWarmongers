@@ -665,7 +665,7 @@
 	if(resting)
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message("<span class='notice'>[src] stands up.</span>")
-			if(move_after(src, 20, target = src))
+			if(move_after(src, 10, target = src))
 				set_resting(FALSE, FALSE)
 				return TRUE
 		else
@@ -683,7 +683,7 @@
 	if(resting)
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message("<span class='info'>[src] stands up.</span>")
-			if(move_after(src, 20, target = src))
+			if(move_after(src, 10, target = src))
 				set_resting(FALSE, FALSE)
 		else
 			src.visible_message("<span class='warning'>[src] tries to stand up.</span>")

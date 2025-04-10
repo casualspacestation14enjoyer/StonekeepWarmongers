@@ -85,6 +85,7 @@
 				var/obj/item/bomb/B = new(get_turf(user))
 				B.light()
 				B.explode(TRUE)
+				user.gib()
 				
 	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
 	user.shoutbubble()

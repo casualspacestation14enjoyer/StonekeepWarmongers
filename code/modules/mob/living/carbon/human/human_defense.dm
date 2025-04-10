@@ -509,7 +509,7 @@
 //			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
 //				adjustEarDamage(30, 120)
 			Unconscious(20)							//short amount of time for follow up attacks against elusive enemies like wizards
-			Knockdown(200 - (bomb_armor * 1.6)) 	//between ~4 and ~20 seconds of knockdown depending on bomb armor
+			Knockdown(25)
 
 		if(EXPLODE_LIGHT)
 			brute_loss = 5
@@ -518,7 +518,7 @@
 //			damage_clothes(max(50 - bomb_armor, 0), BRUTE, "bomb")
 //			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
 //				adjustEarDamage(15,60)
-			Knockdown(160 - (bomb_armor * 1.6))		//100 bomb armor will prevent knockdown altogether
+			Knockdown(20)
 
 	take_overall_damage(brute_loss,burn_loss)
 

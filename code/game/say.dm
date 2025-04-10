@@ -102,11 +102,11 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	if(istype(D) && D.display_icon(src))
 		languageicon = "[D.get_icon()] "
 
-	var/warfare_faction_icon = ""
+	var/warfare_faction_icon = "normie"
 
 	if(ishuman(speaker))
 		var/mob/living/carbon/human/H = speaker
-		warfare_faction_icon = H.client.getemojiforfaction()
+		warfare_faction_icon = H.client?.getemojiforfaction()
 
 	return "\icon[icon('icons/emoji.dmi', warfare_faction_icon)] [spanpart1][spanpart2][colorpart][freqpart][languageicon][compose_track_href(speaker, namepart)][namepart][compose_job(speaker, message_language, raw_message, radio_freq)][arrowpart][endspanpart][messagepart]"
 

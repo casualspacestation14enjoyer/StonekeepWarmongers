@@ -97,6 +97,8 @@
 			var/mob/living/carbon/human/H = user
 			if(H.warfare_faction != src.warfare_faction)
 				. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
+			else if(HAS_TRAIT(H, TRAIT_NOBLE))
+				. += "<span class='notice'>Our Lord! Protect him!</span>"
 
 		if(iszizocultist(user) || iszizolackey(user))
 			if(virginity)
@@ -129,18 +131,12 @@
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
 	if(wear_shirt && !(SLOT_SHIRT in obscured))
-		. += "[m3] [wear_shirt.get_examine_string(user)]."
-
-	//uniform
-	if(wear_pants && !(SLOT_PANTS in obscured))
-		//accessory
 		var/accessory_msg
-		if(istype(wear_pants, /obj/item/clothing/under))
-			var/obj/item/clothing/under/U = wear_pants
+		if(istype(wear_shirt, /obj/item/clothing/suit))
+			var/obj/item/clothing/suit/U = wear_shirt
 			if(U.attached_accessory)
-				accessory_msg += " with [icon2html(U.attached_accessory, user)] \a [U.attached_accessory]"
-
-		. += "[m3] [wear_pants.get_examine_string(user)][accessory_msg]."
+				accessory_msg += " with \icon[U.attached_accessory] \a [U.attached_accessory]"
+		. += "[m3] [wear_shirt.get_examine_string(user)][accessory_msg]."
 
 	//head
 	if(head && !(SLOT_HEAD in obscured))

@@ -11,13 +11,13 @@
 	var/datum/component/storage/detached_pockets
 	var/attachment_slot = CHEST
 
-/obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/U, mob/user)
+/obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/suit/U, mob/user)
 	if(!attachment_slot || (U && U.body_parts_covered & attachment_slot))
 		return TRUE
 	if(user)
 		to_chat(user, "<span class='warning'>There doesn't seem to be anywhere to put [src]...</span>")
 
-/obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/attach(obj/item/clothing/suit/U, user)
 	var/datum/component/storage/storage = GetComponent(/datum/component/storage)
 	if(storage)
 		if(SEND_SIGNAL(U, COMSIG_CONTAINS_STORAGE))
@@ -47,7 +47,7 @@
 
 	return TRUE
 
-/obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/detach(obj/item/clothing/suit/U, user)
 	if(detached_pockets && detached_pockets.parent == U)
 		TakeComponent(detached_pockets)
 
@@ -66,10 +66,10 @@
 	U.attached_accessory = null
 	U.accessory_overlay = null
 
-/obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/suit/U, user)
 	return
 
-/obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/suit/U, user)
 	return
 
 /obj/item/clothing/accessory/AltClick(mob/user)
@@ -80,9 +80,7 @@
 
 /obj/item/clothing/accessory/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>\The [src] can be attached to a uniform. Alt-click to remove it once attached.</span>"
-	if(initial(above_suit))
-		. += "<span class='notice'>\The [src] can be worn above or below my suit. Alt-click to toggle.</span>"
+	. += "<span class='notice'>\The [src] can be attached to a shirt. Alt-click to remove it once attached.</span>"
 
 /obj/item/clothing/accessory/waistcoat
 	name = "waistcoat"
@@ -115,15 +113,15 @@
 
 //Pinning medals on people
 /obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/M, mob/living/user)
-	if(ishuman(M) && (user.used_intent.type == INTENT_HELP))
+	if(ishuman(M))
 
 		if(M.wear_armor)
 			if((M.wear_armor.flags_inv & HIDEJUMPSUIT)) //Check if the jumpsuit is covered
-				to_chat(user, "<span class='warning'>Medals can only be pinned on jumpsuits.</span>")
+				to_chat(user, "<span class='warning'>It's all covered up.</span>")
 				return
 
-		if(M.wear_pants)
-			var/obj/item/clothing/under/U = M.wear_pants
+		if(M.wear_shirt)
+			var/obj/item/clothing/suit/U = M.wear_shirt
 			var/delay = 20
 			if(user == M)
 				delay = 0
@@ -132,7 +130,7 @@
 									 "<span class='notice'>I try to pin [src] on [M]'s chest.</span>")
 			var/input
 			if(!commended && user != M)
-				input = stripped_input(user,"Please input a reason for this commendation, it will be recorded by Nanotrasen.", ,"", 140)
+				input = stripped_input(user,"Please input a reason for this award.", ,"", 140)
 			if(do_after(user, delay, target = M))
 				if(U.attach_accessory(src, user, 0)) //Attach it, do not notify the user of the attachment
 					if(user == M)
@@ -149,7 +147,7 @@
 							message_admins("<b>[key_name_admin(M)]</b> was given the following commendation by <b>[key_name_admin(user)]</b>: [input]")
 
 		else
-			to_chat(user, "<span class='warning'>Medals can only be pinned on jumpsuits!</span>")
+			to_chat(user, "<span class='warning'>Medals can only be pinned on shirts!</span>")
 	else
 		..()
 
@@ -186,8 +184,12 @@
 	name = "robust security award"
 	desc = ""
 
+/obj/item/clothing/accessory/medal/silver/veteran
+	name = "Sky Veteran medal"
+	desc = "A medal for veterans of whom is said could even beat the Sky in a battle."
+
 /obj/item/clothing/accessory/medal/silver/excellence
-	name = "the head of personnel award for outstanding achievement in the field of excellence"
+	name = "award for outstanding achievement in the field of excellence"
 	desc = ""
 
 /obj/item/clothing/accessory/medal/gold
@@ -284,12 +286,12 @@
 		user.say("The testimony contradicts the evidence!", forced = "attorney's badge")
 	user.visible_message("<span class='notice'>[user] shows [user.p_their()] attorney's badge.</span>", "<span class='notice'>I show my attorney's badge.</span>")
 
-/obj/item/clothing/accessory/lawyers_badge/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/lawyers_badge/on_uniform_equip(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(L)
 		L.bubble_icon = "lawyer"
 
-/obj/item/clothing/accessory/lawyers_badge/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/lawyers_badge/on_uniform_dropped(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(L)
 		L.bubble_icon = initial(L.bubble_icon)
@@ -326,12 +328,12 @@
 	minimize_when_attached = TRUE
 	attachment_slot = CHEST
 
-/obj/item/clothing/accessory/fan_clown_pin/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fan_clown_pin/on_uniform_equip(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_FAN_CLOWN))
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "fan_clown_pin", /datum/mood_event/fan_clown_pin)
 
-/obj/item/clothing/accessory/fan_clown_pin/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fan_clown_pin/on_uniform_dropped(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_FAN_CLOWN))
 		SEND_SIGNAL(L, COMSIG_CLEAR_MOOD_EVENT, "fan_clown_pin")
@@ -344,12 +346,12 @@
 	minimize_when_attached = TRUE
 	attachment_slot = CHEST
 
-/obj/item/clothing/accessory/fan_clown_pin/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fan_clown_pin/on_uniform_equip(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_FAN_MIME))
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "fan_mime_pin", /datum/mood_event/fan_mime_pin)
 
-/obj/item/clothing/accessory/fan_clown_pin/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fan_clown_pin/on_uniform_dropped(obj/item/clothing/suit/U, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_FAN_MIME))
 		SEND_SIGNAL(L, COMSIG_CLEAR_MOOD_EVENT, "fan_clown_pin")

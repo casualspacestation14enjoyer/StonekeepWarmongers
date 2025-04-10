@@ -9,6 +9,8 @@
 	slot_flags = ITEM_SLOT_OCLOTHING
 	var/blood_overlay_type = "suit"
 	var/togglename = null
+	var/obj/item/clothing/accessory/attached_accessory
+	var/mutable_appearance/accessory_overlay
 	bloody_icon_state = "bodyblood"
 
 

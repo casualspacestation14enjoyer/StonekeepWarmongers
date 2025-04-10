@@ -118,7 +118,8 @@
 			SSdroning.kill_droning(G.client)
 			SSdroning.kill_loop(G.client)
 			SSdroning.kill_rain(G.client)
-			G.playsound_local(src, 'sound/misc/deth.ogg', 100)
+			G.playsound_local(src, 'sound/misc/deth.ogg', 75)
+			G.playsound_local(src, 'sound/foley/death.ogg', 100)
 
 			var/atom/movable/screen/gameover/hog/H = new()
 			var/list/iconstato = list(

@@ -12,6 +12,11 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
+/obj/structure/cannon/examine(mob/user)
+	. = ..()
+	if(loaded)
+		. += "<span class='info'>It is loaded.</span>"
+
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
 		if(loaded)
@@ -48,6 +53,8 @@
 	fire()
 
 /obj/structure/cannon/proc/fire()
+	if(!loaded)
+		return
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
@@ -59,14 +66,11 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_firea", src)
-	if(!loaded)
-		return
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(get_turf(src))
 	fired_projectile.firer = src
 	fired_projectile.fired_from = src
 	fired_projectile.fire(dir2angle(dir))
 	QDEL_NULL(loaded)
-	SSticker.musketsshot++ // ????
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
 	sleep(4)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
@@ -101,6 +105,13 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
 	var/obj/item/bomb/loaded
+
+/obj/structure/bombard/examine(mob/user)
+	. = ..()
+	if(plusy)
+		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists to the north, negative numbers to the south.</span>"
+	if(loaded)
+		. += "<span class='info'>It is loaded.</span>"
 
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
@@ -151,8 +162,8 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("bombardier_firea", src)
-	SSticker.musketsshot++ // ????
-
+	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
+	
 	var/oldy = y
 	var/newy = oldy + plusy
 
@@ -166,6 +177,5 @@
 		loaded.explode(TRUE)
 		QDEL_NULL(loaded)
 
-	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE)
-	sleep(4)
+	sleep(8)
 	new /obj/effect/particle_effect/smoke(get_turf(src))

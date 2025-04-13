@@ -18,10 +18,11 @@
 
 /obj/structure/bloodstatue/proc/beginround()
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-		C.warmode = GAMEMODE_STAND
 		to_chat(world, "<span class='danger'>Secure [win_kills] kills for your team to win!</span>")
-		SEND_SOUND(world, 'sound/misc/alert.ogg')
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, 'sound/vo/halo/exterminatus.mp3')
+		else
+			SEND_SOUND(world, 'sound/misc/alert.ogg')
 
 /obj/structure/bloodstatue/process()
 	if(istype(SSticker.mode, /datum/game_mode/warfare))

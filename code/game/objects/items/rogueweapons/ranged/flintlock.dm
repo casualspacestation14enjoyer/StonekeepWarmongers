@@ -58,39 +58,34 @@
 	rod = rrod
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
-	var/tt = ramtime
-	tt = ramtime - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2.5)
+	var/rt = ramtime
+	if(aspect_chosen(/datum/round_aspect/linefocus))
+		rt = 9
+	var/tt
+	tt = rt - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2.5)
 
 	var/mob/living/carbon/human/U
 	if(ishuman(user))
 		U = user
 	
-	for(var/atom/T in get_step(src, NORTH))
-		if(ishuman(T))
-			var/mob/living/carbon/human/H = T
-			if(H.warfare_faction == U.warfare_faction)
-				ramtime = ramtime - 0.5
+	for(var/mob/living/carbon/human/H in get_step(src, NORTH))
+		if(H.warfare_faction == U.warfare_faction)
+			tt = tt - 0.5
 
-	for(var/atom/T in get_step(src, SOUTH))
-		if(ishuman(T))
-			var/mob/living/carbon/human/H = T
-			if(H.warfare_faction == U.warfare_faction)
-				ramtime = ramtime - 0.5
+	for(var/mob/living/carbon/human/H in get_step(src, SOUTH))
+		if(H.warfare_faction == U.warfare_faction)
+			tt = tt - 0.5
 
-	for(var/atom/T in get_step(src, EAST))
-		if(ishuman(T))
-			var/mob/living/carbon/human/H = T
-			if(H.warfare_faction == U.warfare_faction)
-				ramtime = ramtime - 0.5
+	for(var/mob/living/carbon/human/H in get_step(src, EAST))
+		if(H.warfare_faction == U.warfare_faction)
+			tt = tt - 0.5
 
-	for(var/atom/T in get_step(src, WEST))
-		if(ishuman(T))
-			var/mob/living/carbon/human/H = T
-			if(H.warfare_faction == U.warfare_faction)
-				ramtime = ramtime - 0.5
+	for(var/mob/living/carbon/human/H in get_step(src, WEST))
+		if(H.warfare_faction == U.warfare_faction)
+			tt = tt - 0.5
 
 	if(aspect_chosen(/datum/round_aspect/noreloading))
-		ramtime = 0.1
+		tt = 0.1
 
 	if(istype(A, /obj/item/rogue/ramrod))
 		if(!user.is_holding(src))

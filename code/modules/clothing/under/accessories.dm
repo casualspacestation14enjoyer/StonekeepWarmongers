@@ -165,6 +165,9 @@
 	desc = ""
 	icon_state = "cargo"
 
+/obj/item/clothing/accessory/medal/badmin
+	name = "bad conduct medal"
+
 /obj/item/clothing/accessory/medal/ribbon/cargo
 	name = "\"cargo tech of the shift\" award"
 	desc = ""
@@ -198,6 +201,9 @@
 	icon_state = "gold"
 	medaltype = "medal-gold"
 	custom_materials = list(/datum/material/gold=1000)
+
+/obj/item/clothing/accessory/medal/gold/admin
+	name = "humenitarian service medal"
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "medal of captaincy"

@@ -300,6 +300,31 @@
 	icon_state = "border"
 	passcrawl = FALSE
 
+/obj/structure/fluff/explodabarrel
+	name = "barkpowder barrel"
+	desc = "Uh oh."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "explodabarrel"
+	density = TRUE
+	opacity = FALSE
+	anchored = FALSE
+	max_integrity = 150
+	w_class = WEIGHT_CLASS_BULKY
+	drag_slowdown = 2
+
+/obj/structure/fluff/explodabarrel/bullet_act(obj/projectile/P)
+	boom()
+
+/obj/structure/fluff/explodabarrel/fire_act(added, maxstacks)
+	boom()
+
+/obj/structure/fluff/explodabarrel/ex_act(severity, target)
+	boom()
+
+/obj/structure/fluff/explodabarrel/proc/boom()
+	explosion(get_turf(src), 0, 1, 5, flame_range = 3)
+	qdel(src)
+
 /obj/structure/fluff/ponr
 	name = "Grenzelhofts Point of No Return"
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
@@ -311,6 +336,14 @@
 	density = TRUE
 	opacity = FALSE
 	var/team = BLUE_WARTEAM
+
+/obj/structure/fluff/ponr/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		to_chat(world, "<span class='danger'>Capture the enemy flag and take it to your PONR!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, 'sound/vo/halo/ctf.mp3')
+		else
+			SEND_SOUND(world, 'sound/misc/alert.ogg')
 
 /obj/structure/fluff/ponr/Initialize()
 	. = ..()
@@ -329,6 +362,8 @@
 	if(H.warfare_faction == team)
 		if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
 			C.do_war_end(H, team)
+			if(aspect_chosen(/datum/round_aspect/halo))
+				SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')
 		else if(C.crownbearer != H)
 			to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
 			return
@@ -340,6 +375,8 @@
 
 	C.crownbearer = H
 	to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG TAKEN.</span>")
+	if(aspect_chosen(/datum/round_aspect/halo))
+		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
 /obj/structure/fluff/ponr/red
 	name = "Heartfelts Point of No Return"

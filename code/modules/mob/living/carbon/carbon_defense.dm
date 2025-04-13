@@ -68,6 +68,16 @@
 						return 1
 	..()
 
+/mob/living/carbon/human/check_projectile_wounding(obj/projectile/P, def_zone, blocked)
+	. = ..()
+	if(ishuman(P.firer))
+		var/mob/living/carbon/human/H = P.firer
+		if(warfare_faction == H.warfare_faction)
+			to_chat(H, "<span class='warning'>I just shot a teammate.</span>")
+			to_chat(src, "<span class='warning'>I just got shot by a teammate.</span>")
+			if(aspect_chosen(/datum/round_aspect/halo))
+				H.playsound_local(get_turf(H), 'sound/vo/halo/betrayed.mp3', 50)
+				playsound_local(get_turf(src), 'sound/vo/halo/betrayed.mp3', 50)
 
 /mob/living/carbon/check_projectile_wounding(obj/projectile/P, def_zone, blocked)
 	var/obj/item/bodypart/BP = get_bodypart(check_zone(def_zone))
@@ -76,6 +86,10 @@
 		var/newdam = P.damage * (100-blocked)/100
 		if(istype(BP, /obj/item/bodypart/head) && istype(P, /obj/projectile/bullet/reusable/bullet))
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
+			if(aspect_chosen(/datum/round_aspect/halo))
+				if(isliving(P.firer))
+					var/mob/living/F = P.firer
+					F.playsound_local(get_turf(P.firer), 'sound/vo/halo/headshot.mp3', 50)
 			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
 			var/obj/item/clothing/head/roguetown/hed = head
@@ -87,7 +101,10 @@
 			else
 				newdam = newdam * 5
 				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
-				playsound_local(get_turf(src), 'sound/lobotomy.ogg', 50)
+				if(aspect_chosen(/datum/round_aspect/halo))
+					playsound_local(get_turf(src), 'sound/vo/halo/skillissue.mp3', 100)
+				else
+					playsound_local(get_turf(src), 'sound/lobotomy.ogg', 50)
 				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE

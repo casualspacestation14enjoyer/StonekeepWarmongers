@@ -102,3 +102,37 @@
 /datum/round_aspect/bloodybastards
 	name = "Bloody Bastards"
 	description = "Everyone has more blood than usual."
+
+/datum/round_aspect/linefocus
+	name = "Line Focused Warfare"
+	description = "Barksteels take longer to reload!"
+
+/datum/round_aspect/explodabarrels
+	name = "Explodabarrels"
+	description = "The battlefield is scattered with explosive barrels!"
+	var/spawncount = 1
+
+/datum/round_aspect/explodabarrels/apply()
+	. = ..()
+	spawncount = rand(5,15)
+	var/list/spawn_locs = GLOB.hauntstart.Copy()
+	if(LAZYLEN(spawn_locs))
+		for(var/i in 1 to spawncount)
+			var/obj/effect/landmark/events/haunts/_T = pick_n_take(spawn_locs)
+			if(_T)
+				_T = get_turf(_T)
+				if(isfloorturf(_T))
+					var/obj/structure/fluff/explodabarrel/G = locate() in _T
+					if(G)
+						continue
+					new /obj/structure/fluff/explodabarrel(_T)
+					
+/* todo: do this
+/datum/round_aspect/drafted
+	name = "Reinforcement Draft"
+	description = "Respawning takes time and your class is randomized. Keeps the battle dynamic and chaotic, or so ChatGPT told me."
+*/
+
+/datum/round_aspect/halo
+	name = "Heroic Ballads"
+	description = "This battle has an announcer. How cool!"

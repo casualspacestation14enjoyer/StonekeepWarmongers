@@ -1003,8 +1003,12 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
 	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
-	for(var/mob/M in GLOB.player_list)
-		SEND_SOUND(M, 'sound/music/traitor.ogg')
+	if(aspect_chosen(/datum/round_aspect/halo))
+		for(var/mob/M in GLOB.player_list)
+			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
+	else
+		for(var/mob/M in GLOB.player_list)
+			SEND_SOUND(M, 'sound/music/traitor.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
 		new typepath(red.loc)

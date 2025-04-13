@@ -253,6 +253,9 @@
 
 /datum/status_effect/buff/spawn_protection/on_apply()
 	owner.status_flags |= GODMODE
+	to_chat(owner, "<span class='info'>Spawn protection now active.</span>")
+	if(aspect_chosen(/datum/round_aspect/halo))
+		owner.playsound_local(src, 'sound/vo/halo/invincible.mp3', 100)
 	return ..()
 
 /datum/status_effect/buff/spawn_protection/on_remove()

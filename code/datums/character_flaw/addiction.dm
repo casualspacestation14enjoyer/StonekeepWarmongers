@@ -137,13 +137,6 @@
 	time = 40 MINUTES
 	needsate_text = "Time to pray."
 
-/datum/outfit/job/roguetown/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE) // added since the previous way it was implemented caused a bunch of runtimes
-	. = ..()
-	if(!check_bypasslist(H.ckey))
-		return
-	if(!H.wear_neck)
-		H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/psicross/noc(H), SLOT_NECK)
-
 /// ALCOHOLIC
 
 /datum/charflaw/addiction/lovefiend

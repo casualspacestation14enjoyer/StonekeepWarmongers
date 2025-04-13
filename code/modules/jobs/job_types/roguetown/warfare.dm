@@ -7,7 +7,8 @@
 									"LARGE LEAD BALLS",\
 									"BOMBARDIER",\
 									"CROWN POINTER",\
-									"TETSUBISHI CALTROPS")
+									"TETSUBISHI CALTROPS",\
+									"EXPLODABARRELS")
 
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
@@ -109,7 +110,10 @@
 				continue
 			M.apply_status_effect(/datum/status_effect/buff/inspired)
 			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
-			M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+			if(aspect_chosen(/datum/round_aspect/halo))
+				M.playsound_local(M.loc, 'sound/vo/halo/hail2theking.mp3', 75)
+			else
+				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
 /mob/living/carbon/human/proc/warfare_shop()
 	set name = "REDEEM SUPPORT POINTS"
@@ -172,6 +176,12 @@
 			new /obj/item/rogue/caltrop(H.loc)
 			new /obj/item/rogue/caltrop(H.loc)
 			new /obj/item/rogue/caltrop(H.loc)
+		if("EXPLODABARRELS")
+			new /obj/structure/fluff/explodabarrel(H.loc)
+			new /obj/structure/fluff/explodabarrel(H.loc)
+			new /obj/structure/fluff/explodabarrel(H.loc)
+			new /obj/structure/fluff/explodabarrel(H.loc)
+			new /obj/structure/fluff/explodabarrel(H.loc)
 
 ///////////////////////////// RED ///////////////////////////////////////
 

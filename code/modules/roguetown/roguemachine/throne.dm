@@ -55,6 +55,14 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	buckle_lying = FALSE
 
+/obj/structure/throne/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		to_chat(world, "<span class='danger'>Take the enemy Lord's crown and sit on the Throne of Heartfelt!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, 'sound/vo/halo/hail2theking.mp3')
+		else
+			SEND_SOUND(world, 'sound/misc/alert.ogg')
+
 /obj/structure/throne/post_buckle_mob(mob/living/M)
 	..()
 	density = TRUE

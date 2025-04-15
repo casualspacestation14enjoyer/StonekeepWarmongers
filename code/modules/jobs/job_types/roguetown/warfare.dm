@@ -218,7 +218,7 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
 		ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 	if(aspect_chosen(/datum/round_aspect/veteranlords))
@@ -227,11 +227,10 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		var/datum/charflaw/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
-		H.charflaw = new shit()
+		H.charflaw = new /datum/charflaw/noeyer()
 		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
 			qdel(H.wear_mask)
-			H.wear_mask = new /obj/item/clothing/mask/rogue/eyepatch
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
@@ -738,11 +737,10 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
-		var/datum/charflaw/shit = pick(/datum/charflaw/noeyer,/datum/charflaw/noeyel)
-		H.charflaw = new shit()
+		H.charflaw = new /datum/charflaw/noeyer()
 		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
 			qdel(H.wear_mask)
-			H.wear_mask = new /obj/item/clothing/mask/rogue/eyepatch
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 

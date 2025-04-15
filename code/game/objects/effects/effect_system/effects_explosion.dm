@@ -12,6 +12,7 @@
 	var/direct = pick(GLOB.alldirs)
 	var/steps_amt = rand(1,50)
 	for(var/j in 1 to steps_amt)
+		icon_state = "impact[rand(1,3)]"
 		step(src, direct)
 		sleep(1)
 	qdel(src)
@@ -37,8 +38,6 @@
 	. = ..()
 	QDEL_IN(src, 10)
 
-/datum/effect_system/explosion
-
 /datum/effect_system/explosion/set_up(loca)
 	if(isturf(loca))
 		location = loca
@@ -46,7 +45,8 @@
 		location = get_turf(loca)
 
 /datum/effect_system/explosion/start()
-	new/obj/effect/explosion( location )
+	var/obj/effect/explosion/EXP = new(location)
+	animate(EXP, transform = matrix()*4, alpha = 0, time = 10)
 	var/datum/effect_system/expl_particles/P = new/datum/effect_system/expl_particles()
 	P.set_up(10, 0, location)
 	P.start()

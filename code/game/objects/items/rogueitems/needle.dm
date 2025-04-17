@@ -28,8 +28,10 @@
 			. += "<span class='bold'>It has [stringamt] uses left.</span>"
 		else
 			. += "<span class='bold'>It has no uses left.</span>"
+	/*
 	else
 		. += "<span class='bold'>Can be used indefinitely.</span>"
+	*/
 
 /obj/item/needle/Initialize()
 	. = ..()
@@ -170,6 +172,6 @@
 	anvilrepair = null
 
 /obj/item/needle/blessed
-	name = "blessed needle"
+	name = "needle"
 	desc = ""
 	infinite = TRUE

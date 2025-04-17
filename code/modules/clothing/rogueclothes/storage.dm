@@ -336,7 +336,6 @@
 	new /obj/item/rogueweapon/surgery/retractor(src)
 	new /obj/item/rogueweapon/surgery/bonesetter(src)
 	new /obj/item/rogueweapon/surgery/cautery(src)
-	new /obj/item/natural/worms/leech/parasite(src)
 	new /obj/item/rogueweapon/surgery/hammer(src)
 
 //...............Kaizoku Update..............

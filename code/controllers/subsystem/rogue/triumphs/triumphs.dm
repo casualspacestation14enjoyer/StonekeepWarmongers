@@ -220,7 +220,7 @@ SUBSYSTEM_DEF(triumphs)
 	We save everything when its time for reboot
 */
 /datum/controller/subsystem/triumphs/proc/end_triumph_saving_time()
-	to_chat(world, "<span class='boldannounce'> Recording VICTORIES to the WORLD END MACHINE. </span>")
+	to_chat(world, "<span class='boldannounce'>Recording VICTORIES to the WORLD END MACHINE.</span>")
 	//for(var/target_ckey in triumph_amount_cache)
 	//	var/list/saving_data = list()
 	//	// this will be for example "data/player_saves/a/ass/triumphs.json" if their ckey was ass

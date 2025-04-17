@@ -264,8 +264,9 @@ GLOBAL_VAR(restart_counter)
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue
+		thing.stop_sounds_rogue()
 		thing << sound(round_end_sound)
-		thing << quote
+		thing << "<span class='info'>[quote]</span>"
 
 	to_chat(world, "<B>You will be reconnected in a few seconds.</B>")
 	Master.Shutdown()	//run SS shutdowns? rtchange

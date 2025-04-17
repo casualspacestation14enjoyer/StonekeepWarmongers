@@ -883,8 +883,6 @@ SUBSYSTEM_DEF(ticker)
 	SStriumphs.end_triumph_saving_time()
 	to_chat(world, "<span class='boldannounce'>Rebooting World in [DisplayTimeText(delay)]. [reason]</span>")
 
-	to_chat(world, "<span class='boldannounce'>Rebooting World in [DisplayTimeText(delay)].</span>")
-
 	var/start_wait = world.time
 	UNTIL(round_end_sound_sent || (world.time - start_wait) > (delay * 2))	//don't wait forever
 	sleep(delay - (world.time - start_wait))
@@ -920,21 +918,29 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
 	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
-		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!"))
+		to_chat(world, "<span class='userdanger'>[pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!")]</span>")
 		if(!(oneteammode))
 			W.reinforcements()
 		warfare_ready_to_die = TRUE
+
+		// https://imgur.com/a/mzWBurl
+
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
+
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
-		for(var/obj/structure/warfarebarrier/red/WB in world)
-			qdel(WB)
-		for(var/obj/structure/bloodstatue/WS in world)
-			WS.beginround()
-		for(var/obj/structure/fluff/ponr/PONR in world)
+
+		var/obj/structure/bloodstatue/BS = locate()
+		if(BS)
+			BS.beginround()
+
+		var/obj/structure/ponr/PONR = locate()
+		if(PONR)
 			PONR.beginround()
-		for(var/obj/structure/throne/THR in world)
+
+		var/obj/structure/warthrone/THR = locate()
+		if(THR)
 			THR.beginround()
 
 /proc/GetMainGunForWarfareHeartfelt()
@@ -1007,11 +1013,10 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
 	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
-	if(aspect_chosen(/datum/round_aspect/halo))
-		for(var/mob/M in GLOB.player_list)
+	for(var/mob/M in GLOB.player_list)
+		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
-	else
-		for(var/mob/M in GLOB.player_list)
+		else
 			SEND_SOUND(M, 'sound/music/traitor.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)

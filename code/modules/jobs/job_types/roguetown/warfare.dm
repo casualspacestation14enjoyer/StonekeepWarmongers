@@ -754,12 +754,13 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	backl = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/quiver/bullets
+	beltl = /obj/item/rogueweapon/sword
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		cloak = /obj/item/clothing/cloak/lordcloak

@@ -1331,7 +1331,7 @@
 #include "code\game\objects\structures\transit_tubes\transit_tube.dm"
 #include "code\game\objects\structures\transit_tubes\transit_tube_construction.dm"
 #include "code\game\objects\structures\transit_tubes\transit_tube_pod.dm"
-#include "code\game\structures\warfarestatue.dm"
+#include "code\game\structures\warfare.dm"
 #include "code\game\turfs\baseturf_skipover.dm"
 #include "code\game\turfs\change_turf.dm"
 #include "code\game\turfs\turf.dm"

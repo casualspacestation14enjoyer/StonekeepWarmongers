@@ -276,7 +276,7 @@
 /turf/closed/wall/mineral/rogue/decostone/long
 	icon_state = "decostone-l"
 
-/obj/structure/thronething
+/obj/structure/warthronething
 	name = "stone wall"
 	icon = 'icons/turf/roguewall.dmi'
 	max_integrity = 0

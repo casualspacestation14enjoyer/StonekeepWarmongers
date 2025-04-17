@@ -325,64 +325,6 @@
 	explosion(get_turf(src), 0, 1, 5, flame_range = 3)
 	qdel(src)
 
-/obj/structure/fluff/ponr
-	name = "Grenzelhofts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
-	icon = 'icons/shamelessly_stolen.dmi'
-	icon_state = "destruct"
-	max_integrity = 999999
-	anchored = TRUE
-	climbable = FALSE
-	density = TRUE
-	opacity = FALSE
-	var/team = BLUE_WARTEAM
-
-/obj/structure/fluff/ponr/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		to_chat(world, "<span class='danger'>Capture the enemy flag and take it to your PONR!</span>")
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/ctf.mp3')
-		else
-			SEND_SOUND(world, 'sound/misc/alert.ogg')
-
-/obj/structure/fluff/ponr/Initialize()
-	. = ..()
-	START_PROCESSING(SSobj, src)
-
-/obj/structure/fluff/ponr/process()
-	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
-		W.dismantle_wall()
-
-/obj/structure/fluff/ponr/attack_hand(mob/user)
-	. = ..()
-	var/mob/living/carbon/human/H
-	var/datum/game_mode/warfare/C = SSticker.mode
-	if(ishuman(user))
-		H = user
-	if(H.warfare_faction == team)
-		if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
-			C.do_war_end(H, team)
-			if(aspect_chosen(/datum/round_aspect/halo))
-				SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')
-		else if(C.crownbearer != H)
-			to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
-			return
-		else
-			to_chat(H, "<span class='info'>This belongs to us.</span>")
-		return
-	if(C.crownbearer == H)
-		return
-
-	C.crownbearer = H
-	to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG TAKEN.</span>")
-	if(aspect_chosen(/datum/round_aspect/halo))
-		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
-
-/obj/structure/fluff/ponr/red
-	name = "Heartfelts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
-	team = RED_WARTEAM
-
 /obj/structure/fluff/standingflag
 	name = "standing flag"
 	desc = "A stand showing the heraldry coat of arms of the Grenzelhoft royal family. A shame you can't see it, it's really detailed and cool looking. A real shame the only thing you see is a mess, truly!"

@@ -99,7 +99,7 @@
 		stalker.forceMove(get_step_towards(stalker, owner))
 	if(get_dist(owner, stalker) <= 8)
 		if(!close_stalker)
-			var/sound/slowbeat = sound('sound/blank.ogg', repeat = TRUE)
+			var/sound/slowbeat = sound('sound/misc/slowbeat.ogg', repeat = TRUE)
 			owner.playsound_local(owner, slowbeat, 40, 0, channel = CHANNEL_HEARTBEAT)
 			close_stalker = TRUE
 	else

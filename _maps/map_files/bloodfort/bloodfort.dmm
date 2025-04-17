@@ -104,7 +104,7 @@
 "ue" = (/obj/structure/roguewindow/openclose{dir = 4},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "uv" = (/obj/structure/warfarebarrier/red,/obj/structure/fluff/railing/wood{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors)
 "uL" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
-"uO" = (/obj/structure/throne,/obj/effect/landmark/start/heartfeltlord,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
+"uO" = (/obj/structure/warthrone,/obj/effect/landmark/start/heartfeltlord,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "uT" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
 "uU" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "vK" = (/obj/structure/table/wood/treestump,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)

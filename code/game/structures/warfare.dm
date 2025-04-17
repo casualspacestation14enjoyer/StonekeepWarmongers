@@ -121,3 +121,128 @@
 				to_chat(H, "<span class='danger'>The [src] is taking damage!</span>")
 			last_scream = world.time + 600
 */
+
+// CTF
+
+/obj/structure/ponr
+	name = "Grenzelhofts Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
+	icon = 'icons/shamelessly_stolen.dmi'
+	icon_state = "destruct"
+	max_integrity = 999999
+	anchored = TRUE
+	climbable = FALSE
+	density = TRUE
+	opacity = FALSE
+	var/team = BLUE_WARTEAM
+
+/obj/structure/ponr/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		to_chat(world, "<span class='danger'>Capture the enemy flag and take it to your PONR!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, 'sound/vo/halo/ctf.mp3')
+		else
+			SEND_SOUND(world, 'sound/misc/alert.ogg')
+
+/obj/structure/ponr/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+/obj/structure/ponr/process()
+	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
+		W.dismantle_wall()
+
+/obj/structure/ponr/attack_hand(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H
+	var/datum/game_mode/warfare/C = SSticker.mode
+	if(ishuman(user))
+		H = user
+	if(H.warfare_faction == team)
+		if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
+			C.do_war_end(H, team)
+			if(aspect_chosen(/datum/round_aspect/halo))
+				SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')
+		else if(C.crownbearer != H)
+			to_chat(H, "<span class='info'>Someone else is carrying the flag.</span>")
+			return
+		else
+			to_chat(H, "<span class='info'>This belongs to us.</span>")
+		return
+	if(C.crownbearer == H)
+		return
+
+	C.crownbearer = H
+	to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG TAKEN.</span>")
+	if(aspect_chosen(/datum/round_aspect/halo))
+		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
+
+/obj/structure/ponr/red
+	name = "Heartfelts Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
+	team = RED_WARTEAM
+
+// LD
+
+/obj/structure/warthrone
+	name = "throne of Heartfelt"
+	desc = "Do not let the enemy sit on this with your crown."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "throne"
+	density = FALSE
+	can_buckle = 1
+	pixel_x = -32
+	max_integrity = 999999
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	buckle_lying = FALSE
+
+/obj/structure/warthrone/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		to_chat(world, "<span class='danger'>Take the enemy Lord's crown and sit on the Throne of Heartfelt!</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, 'sound/vo/halo/hail2theking.mp3')
+		else
+			SEND_SOUND(world, 'sound/misc/alert.ogg')
+
+/obj/structure/warthrone/post_buckle_mob(mob/living/M)
+	..()
+	density = TRUE
+	M.set_mob_offsets("bed_buckle", _x = 0, _y = 8)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		if(C.crownbearer == H)
+			return // Gets rid of people farming triumphs
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))
+					C.do_war_end(H, RED_WARTEAM)
+			if(BLUE_WARTEAM)
+				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
+					C.do_war_end(H, BLUE_WARTEAM)
+
+/obj/structure/warthrone/post_unbuckle_mob(mob/living/M)
+	..()
+	density = FALSE
+	M.reset_offsets("bed_buckle")
+
+/obj/structure/warthrone/Initialize()
+	..()
+	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
+
+/obj/structure/warthrone/Destroy()
+	GLOB.lordcolor -= src
+	return ..()
+
+/obj/structure/warthrone/lordcolor(primary,secondary)
+	if(!primary || !secondary)
+		return
+	var/mutable_appearance/M = mutable_appearance(icon, "throne_primary", -(layer+0.1))
+	M.color = primary
+	add_overlay(M)
+	M = mutable_appearance(icon, "throne_secondary", -(layer+0.1))
+	M.color = secondary
+	add_overlay(M)
+	GLOB.lordcolor -= src

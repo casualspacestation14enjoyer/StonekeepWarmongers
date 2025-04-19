@@ -62,6 +62,9 @@
 // The normal route for first use of this list.
 /datum/class_select_handler/proc/initial_setup()
 	assemble_the_CLASSES()
+	if(aspect_chosen(/datum/round_aspect/drafted))
+		to_chat(world, "oh yeah baby")
+		SSrole_class_handler.finish_class_handler(linked_client.mob, pick(rolled_classes), src)
 	second_step()
 
 // The second step, aka we just want to make sure the resources are there and that the menu is being displayed
@@ -148,15 +151,6 @@
 	if(!rolled_classes.len)
 		linked_client.mob.returntolobby()
 		message_admins("CLASS_SELECT_HANDLER HAD PERSON WITH 0 CLASS SELECT OPTIONS. THIS IS REALLY BAD! RETURNED THEM TO LOBBY")
-
-	if(aspect_chosen(/datum/round_aspect/drafted))
-		to_chat(world, "oh yeah baby")
-		var/list/fuckingstupid = list()
-		for(var/datum/advclass/ADV in rolled_classes)
-			ADV += fuckingstupid
-			to_chat(world, "[ADV.name]")
-		SSrole_class_handler.finish_class_handler(linked_client.mob, pick(fuckingstupid), src)
-		return
 
 // Something is calling to tell this datum a class it rolled is currently maxed out.
 // More shitcode!

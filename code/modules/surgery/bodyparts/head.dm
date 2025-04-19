@@ -84,6 +84,8 @@
 			toth.add_mob_blood(owner)
 
 			playsound(get_turf(owner), "wetbreak", 100, TRUE, -5)
+			owner.flash_fullscreen("redflash3")
+			owner.emote("painscream")
 
 			var/turf/target = get_turf(owner.loc)
 			var/range = rand(1, 3)

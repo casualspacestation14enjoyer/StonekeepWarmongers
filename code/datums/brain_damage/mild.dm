@@ -84,7 +84,7 @@
 
 /datum/brain_trauma/mild/concussion/on_life()
 	if(prob(5))
-		switch(rand(1,11))
+		switch(rand(1,9))
 			if(1)
 				owner.vomit()
 			if(2,3)
@@ -94,12 +94,6 @@
 				owner.blur_eyes(10)
 			if(6 to 9)
 				owner.slurring += 30
-			if(10)
-				to_chat(owner, "<span class='notice'>I forget for a moment what you were doing.</span>")
-				owner.Stun(20)
-			if(11)
-				to_chat(owner, "<span class='warning'>I faint.</span>")
-				owner.Unconscious(80)
 
 	..()
 

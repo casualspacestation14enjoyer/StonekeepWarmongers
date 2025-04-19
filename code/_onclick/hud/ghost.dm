@@ -41,7 +41,11 @@
 		if(G.client)
 			G.playsound_local(get_turf(G), 'sound/magic/holyshield.ogg', 35)
 			animate(src, transform = matrix()*1.5, alpha = 0, time = 5) // looks cool
-			spawn(10)
+			var/ttime = 10
+			if(aspect_chosen(/datum/round_aspect/drafted))
+				to_chat(G, "You will return to combat in 20 seconds.")
+				ttime = 20 SECONDS
+			spawn(ttime)
 				G.returntolobby()
 
 /atom/movable/screen/ghost/reenter_corpse

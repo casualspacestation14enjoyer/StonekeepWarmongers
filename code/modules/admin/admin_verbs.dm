@@ -375,14 +375,12 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Adminverbs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
-/client/proc/set_context_menu_enabled(Enable as num)
+/client/proc/set_context_menu_enabled()
 	set category = "Admin"
 	set name = "Right-click Menu"
 	if(holder)
-		if(Enable)
-			show_popup_menus = TRUE
-		else
-			show_popup_menus = FALSE
+		show_popup_menus = !show_popup_menus
+		to_chat(src, "[show_popup_menus]")
 	else
 		show_popup_menus = FALSE
 

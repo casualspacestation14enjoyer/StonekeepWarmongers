@@ -218,7 +218,7 @@
 	..()
 
 
-/mob/living/carbon/human/attacked_by(obj/item/I, mob/living/user)
+/mob/living/carbon/human/attacked_by(obj/item/I, mob/living/user) // user = attacker
 	if(!I || !user)
 		return 0
 

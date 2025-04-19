@@ -127,11 +127,11 @@
 						continue
 					new /obj/structure/fluff/explodabarrel(_T)
 					
-/* todo: do this
+
 /datum/round_aspect/drafted
 	name = "Reinforcement Draft"
 	description = "Respawning takes time and your class is randomized. Keeps the battle dynamic and chaotic, or so ChatGPT told me."
-*/
+	adminonly = TRUE
 
 /datum/round_aspect/halo
 	name = "Heroic Ballads"

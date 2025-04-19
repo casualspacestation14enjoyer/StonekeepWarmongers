@@ -21,6 +21,7 @@
 	var/obj/item/organ/eyes/eyesl
 	var/obj/item/organ/ears/ears
 	var/obj/item/organ/tongue/tongue
+	var/obj/item/stack/teeth/teeth
 
 	//Limb appearance info:
 	var/real_name = "" //Replacement name
@@ -67,12 +68,46 @@
 		if(BODY_ZONE_PRECISE_NECK)
 			return list(/datum/intent/grab/move, /datum/intent/grab/choke)
 
+/obj/item/bodypart/head/Initialize() // stupid? probably.
+	..()
+	teeth = new /obj/item/stack/teeth/full(src)
+
+/obj/item/bodypart/head/proc/knock_out_teeth(throw_dir, num=24)
+	num = CLAMP(num, 1, 24)
+	var/done = FALSE
+	if(teeth && !teeth.zero_amount()) //We still have teeth
+		for(var/d = 1 to num) //Random amount of teeth
+			var/obj/item/stack/teeth/toth = teeth.change_stack(amount = 1)
+			if(!toth)
+				return done
+			toth.forceMove(get_turf(owner))
+			toth.add_mob_blood(owner)
+
+			playsound(get_turf(owner), "wetbreak", 100, TRUE, -5)
+
+			var/turf/target = get_turf(owner.loc)
+			var/range = rand(1, 3)
+			for(var/i = 1; i < range; i++)
+				var/turf/new_turf = get_step(target, throw_dir)
+				target = new_turf
+				if(new_turf.density)
+					break
+			toth.throw_at(get_edge_target_turf(toth,pick(GLOB.alldirs)),rand(1,3),30)
+			toth.loc.add_mob_blood(owner)
+			toth.do_knock_out_animation()
+			toth.update_transform()
+
+			toth.zero_amount() //Try to delete the teeth
+			done = TRUE
+	return done
+
 /obj/item/bodypart/head/Destroy()
 	QDEL_NULL(brainmob) //order is sensitive, see warning in handle_atom_del() below
 	QDEL_NULL(brain)
 	QDEL_NULL(eyes)
 	QDEL_NULL(ears)
 	QDEL_NULL(tongue)
+	QDEL_NULL(teeth)
 	return ..()
 
 /obj/item/bodypart/head/handle_atom_del(atom/A)
@@ -266,3 +301,34 @@
 	dismemberable = 0
 	max_damage = 50
 	animal_origin = LARVA_BODYPART
+
+// teeth
+
+/obj/item/stack/teeth
+	name = "teeth"
+	singular_name = "tooth"
+	desc = "Youchies."
+	icon = 'icons/roguetown/items/surgery.dmi'
+	icon_state = "tooth_4"
+	dropshrink = 0.5
+	var/base_icon_state = "tooth"
+	max_amount = 24 // i know this isnt realistic but it would be dumb to have so much teeth objects being flung around
+	throwforce = 4 // trol
+	force = 0
+	var/icon_state_variation = 4
+
+/obj/item/stack/teeth/Initialize()
+	. = ..()
+	if(icon_state_variation >= 1)
+		icon_state = "[base_icon_state]_[rand(1, icon_state_variation)]"
+
+/obj/item/stack/teeth/proc/do_knock_out_animation(shrink_time = 5)
+	shrink_time = rand(1, shrink_time)
+	var/old_transform = matrix(transform)
+	transform = transform.Scale(2, 2)
+	transform = transform.Turn(rand(0, 360))
+	animate(src, transform = old_transform, time = shrink_time)
+
+//many teethe
+/obj/item/stack/teeth/full
+	amount = 24

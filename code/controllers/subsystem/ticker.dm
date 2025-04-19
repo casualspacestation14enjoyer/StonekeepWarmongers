@@ -934,14 +934,17 @@ SUBSYSTEM_DEF(ticker)
 		var/obj/structure/bloodstatue/BS = locate()
 		if(BS)
 			BS.beginround()
+			return
 
 		var/obj/structure/ponr/PONR = locate()
 		if(PONR)
 			PONR.beginround()
+			return
 
 		var/obj/structure/warthrone/THR = locate()
 		if(THR)
 			THR.beginround()
+			return
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)

@@ -2132,6 +2132,7 @@
 #include "code\modules\jobs\job_types\roguetown\roguetown.dm"
 #include "code\modules\jobs\job_types\roguetown\statueitems.dm"
 #include "code\modules\jobs\job_types\roguetown\warfare.dm"
+#include "code\modules\jobs\job_types\roguetown\warfare_shippables.dm"
 #include "code\modules\jobs\job_types\roguetown\adventurer\adventurer.dm"
 #include "code\modules\jobs\job_types\roguetown\adventurer\DRIFTERZ.dm"
 #include "code\modules\jobs\job_types\roguetown\adventurer\pilgrim.dm"

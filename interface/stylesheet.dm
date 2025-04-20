@@ -63,7 +63,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .emote					{color: #b1bb9f;}
 
 .crit					{color: #c71d76;}
-.userdanger				{color: #c71d76;	font-weight: bold;	font-size: 120%; font-family: "VCR OSD Mono", Pterra;}
+.userdanger				{color: #c71d76;	font-weight: bold;	font-size: 120%; font-family: "GenericTypewriter", Pterra;}
 .danger					{color: #b9322b;	font-weight: bold;}
 .warning				{color: #bb4e28;	font-size: 75%;}
 .boldwarning			{color: #bb4e28;	font-weight: bold}
@@ -121,7 +121,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .robot					{font-family: "Courier New", cursive, sans-serif;}
 
 .human					{font-family: "Honoka Mincho", Pterra;}
-.vcr					{font-family: "VCR OSD Mono", Pterra;}
+.vcr					{font-family: "GenericTypewriter", Pterra;}
 .elf					{font-family: "Dauphin", cursive, Pterra;}
 .dwarf					{font-family: "MasonAlternate", Pterra;}
 .sandspeak				{font-family: "Arabolical", Pterra;}

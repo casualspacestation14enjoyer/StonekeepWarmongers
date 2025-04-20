@@ -592,7 +592,7 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"book2.ttf" = 'interface/fonts/book1.ttf',
 		"book3.ttf" = 'interface/fonts/book1.ttf',
 		"book4.ttf" = 'interface/fonts/book1.ttf',
-		"vcr.ttf" = 'interface/fonts/vcr.ttf',
+		"typewrite.ttf" = 'interface/fonts/typewrite.ttf',
 		"dwarf.ttf" = 'interface/fonts/languages/dwarf.ttf',
 		"elf.ttf" = 'interface/fonts/languages/elf.ttf',
 		"hell.ttf" = 'interface/fonts/languages/hell.ttf',

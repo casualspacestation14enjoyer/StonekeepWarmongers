@@ -84,6 +84,9 @@
 		if(H.warfare_faction == U.warfare_faction)
 			tt = tt - 0.5
 
+	if(tt < 0)
+		tt = 0.1
+
 	if(aspect_chosen(/datum/round_aspect/noreloading))
 		tt = 0.1
 

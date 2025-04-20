@@ -1,15 +1,3 @@
-#define WARMONGERS_SHIPPABLES		list("FIVE SMOKE BOMBS",\
-									"GAS BOMBS",\
-									"BOMBS",\
-									"FIRE BOMB",\
-									"WOODEN BALLS",\
-									"LEAD BALLS",\
-									"LARGE LEAD BALLS",\
-									"BOMBARDIER",\
-									"CROWN POINTER",\
-									"TETSUBISHI CALTROPS",\
-									"EXPLODABARRELS")
-
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	var/obj/S = null
@@ -118,22 +106,30 @@
 /mob/living/carbon/human/proc/warfare_shop()
 	set name = "REDEEM SUPPORT POINTS"
 	set category = "LORD"
-	var/mob/living/carbon/human/H = usr
 	var/datum/game_mode/warfare/C = SSticker.mode
-	var/shoppin = input(usr, "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in WARMONGERS_SHIPPABLES
+	var/list/shippables = list()
+
+	for(var/s in subtypesof(/datum/warshippable))
+		var/datum/warshippable/WS = new s()
+		if(C.reinforcementwave >= WS.reinforcement)
+			shippables[WS.name] = WS
+
+	var/choice = input(src, "URGENT AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in shippables
+	var/datum/warshippable/shoppin = shippables[choice]
 	if(!shoppin)
 		return
-	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
+	if(!do_after(src, 5 SECONDS, TRUE, loc))
 		playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return
-	switch(H.warfare_faction)
+
+	switch(warfare_faction)
 		if(RED_WARTEAM)
 			if(C.red_bonus >= 1)
 				C.red_bonus--
 				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
 				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				to_chat(src, "<span class='info'>Insufficient points.</span>")
 				return
 		if(BLUE_WARTEAM)
 			if(C.blu_bonus >= 1)
@@ -141,47 +137,12 @@
 				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
 				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				to_chat(src, "<span class='info'>Insufficient points.</span>")
 				return
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	switch(shoppin)
-		if("FIVE SMOKE BOMBS")
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-		if("GAS BOMBS")
-			new /obj/item/bomb/poison(H.loc)
-			new /obj/item/bomb/poison(H.loc)
-		if("BOMBS")
-			new /obj/item/bomb(H.loc)
-			new /obj/item/bomb(H.loc)
-			new /obj/item/bomb(H.loc)
-		if("CROWN POINTER")
-			new /obj/item/pinpointer/crown(H.loc)
-		if("FIRE BOMB")
-			new /obj/item/bomb/fire(H.loc)
-		if("WOODEN BALLS")
-			new /obj/item/quiver/woodbullets(H.loc)
-		if("LEAD BALLS")
-			new /obj/item/quiver/bullets(H.loc)
-		if("LARGE LEAD BALLS")
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-		if("BOMBARDIER")
-			new /obj/structure/bombard(H.loc)
-		if("TETSUBISHI CALTROPS")
-			new /obj/item/rogue/caltrop(H.loc)
-			new /obj/item/rogue/caltrop(H.loc)
-			new /obj/item/rogue/caltrop(H.loc)
-		if("EXPLODABARRELS")
-			new /obj/structure/fluff/explodabarrel(H.loc)
-			new /obj/structure/fluff/explodabarrel(H.loc)
-			new /obj/structure/fluff/explodabarrel(H.loc)
-			new /obj/structure/fluff/explodabarrel(H.loc)
-			new /obj/structure/fluff/explodabarrel(H.loc)
+
+	for(var/i in shoppin.items)
+		new i(get_turf(src))
 
 ///////////////////////////// RED ///////////////////////////////////////
 

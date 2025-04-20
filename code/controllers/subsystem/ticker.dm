@@ -1015,7 +1015,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
-	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
+	to_chat(world, "<span class='info'><span class='vcr'>Reinforcements have arrived.</span></span>")
 	for(var/mob/M in GLOB.player_list)
 		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')

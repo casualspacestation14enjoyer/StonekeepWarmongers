@@ -8,7 +8,6 @@ body {
 }
 
 #top_handwriting {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 30px;
@@ -37,7 +36,6 @@ img.ninetysskull{
 
 a.vagrant:link, a.vagrant:visited, a.vagrant:active, .linkOn, .linkOff
 {
-	font-family: "GenericTypewriter", serif;
   	font-weight: 700;
   	font-style: normal;
 	font-size: 20px;
@@ -64,7 +62,6 @@ a.vagrant:hover img.ninetysskull {
 }
 
 a.bottom_buttons, a.bottom_buttons:link, a.bottom_buttons:visited, a.bottom_buttons:active {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 25px;
@@ -86,7 +83,6 @@ a.bottom_buttons:hover
 }
 
 a.mo_bottom_buttons, a.mo_bottom_buttons:link, a.mo_bottom_buttons:visited, a.mo_bottom_buttons:active {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 20px;
@@ -108,7 +104,6 @@ a.mo_bottom_buttons:hover
 }
 
 .bottom_button_cost {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 10px;
@@ -117,7 +112,6 @@ a.mo_bottom_buttons:hover
 
 
 a.class_desc_YES_LINK, a.class_desc_YES_LINK:link, a.class_desc_YES_LINK:visited, a.class_desc_YES_LINK:active {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 25px;
@@ -152,7 +146,6 @@ a.class_desc_YES_LINK:hover
 }
 
 .title_shit {
-	font-family: "GenericTypewriter", serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 30px;
@@ -160,7 +153,6 @@ a.class_desc_YES_LINK:hover
 }
 
 .post_title_shit{
-	font-family: "GenericTypewriter", serif;
 	font-weight: 400;
 	font-size: 20px;
 	font-style: normal;

@@ -121,7 +121,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .robot					{font-family: "Courier New", cursive, sans-serif;}
 
 .human					{font-family: "Honoka Mincho", Pterra;}
-.vcr					{font-family: "GenericTypewriter", Pterra;}
+.typewrite				{font-family: "GenericTypewriter", Pterra;}
 .elf					{font-family: "Dauphin", cursive, Pterra;}
 .dwarf					{font-family: "MasonAlternate", Pterra;}
 .sandspeak				{font-family: "Arabolical", Pterra;}

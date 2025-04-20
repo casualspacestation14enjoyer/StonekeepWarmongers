@@ -488,15 +488,16 @@ SUBSYSTEM_DEF(ticker)
 	SSdbcore.SetRoundStart()
 	pickaspect()
 
-	to_chat(world, "<span class='notice'>♔ Praise the Crown! ♔</span>")
+	to_chat(world, "<span class='notice'><span class='typewrite'>♔ Praise the Crown! ♔</span></span>")
+	
+	spawn(10)
+		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
+		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
 	spawn(15)
 		if(end_party)
 			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
 		if(oneteammode)
 			to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
-	spawn(10)
-		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")
-		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
 
 	// handle setting the war mode for this round, this is retarded, but im too lazy to do it any other way
 	var/datum/game_mode/warfare/W = mode
@@ -1015,7 +1016,7 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb/poison"
-	to_chat(world, "<span class='info'><span class='vcr'>Reinforcements have arrived.</span></span>")
+	to_chat(world, "<span class='info'><span class='typewrite'>Reinforcements have arrived.</span></span>")
 	for(var/mob/M in GLOB.player_list)
 		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')

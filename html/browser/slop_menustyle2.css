@@ -8,10 +8,10 @@ body {
 }
 
 #top_handwriting {
-	font-family: "UnifrakturMaguntia", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 38px;
+	font-size: 30px;
 	color:#ab2020;
 }
 
@@ -37,10 +37,10 @@ img.ninetysskull{
 
 a.vagrant:link, a.vagrant:visited, a.vagrant:active, .linkOn, .linkOff
 {
-	font-family: "Charm", cursive;
+	font-family: "VCR OSD Mono", serif;
   	font-weight: 700;
   	font-style: normal;
-	font-size: 24px;
+	font-size: 20px;
 
 	color: #9a9b70;
 	text-decoration: none;
@@ -55,7 +55,7 @@ a.vagrant:link, a.vagrant:visited, a.vagrant:active, .linkOn, .linkOff
 a.vagrant:hover
 {
 	color: #ffffff;
-	font-size: 32px;
+	font-size: 30px;
 
 }
 
@@ -64,10 +64,10 @@ a.vagrant:hover img.ninetysskull {
 }
 
 a.bottom_buttons, a.bottom_buttons:link, a.bottom_buttons:visited, a.bottom_buttons:active {
-	font-family: "UnifrakturMaguntia", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 24px;
+	font-size: 25px;
 	color: #ab2020;
 
 	text-decoration: none;
@@ -86,10 +86,10 @@ a.bottom_buttons:hover
 }
 
 a.mo_bottom_buttons, a.mo_bottom_buttons:link, a.mo_bottom_buttons:visited, a.mo_bottom_buttons:active {
-	font-family: "Tangerine", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 26px;
+	font-size: 20px;
 	color: #249557;
 
 	text-decoration: none;
@@ -108,19 +108,19 @@ a.mo_bottom_buttons:hover
 }
 
 .bottom_button_cost {
-	font-family: "Charm", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 12px;
+	font-size: 10px;
 	color: #ffffff;
 }
 
 
 a.class_desc_YES_LINK, a.class_desc_YES_LINK:link, a.class_desc_YES_LINK:visited, a.class_desc_YES_LINK:active {
-	font-family: "UnifrakturMaguntia", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 24px;
+	font-size: 25px;
 	color: #249557;
 
 	text-decoration: none;
@@ -152,17 +152,17 @@ a.class_desc_YES_LINK:hover
 }
 
 .title_shit {
-	font-family: "Tangerine", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 34px;
-	color: #ffffff;
+	font-size: 30px;
+	color: #570000;
 }
 
 .post_title_shit{
-	font-family: "Charm", cursive;
+	font-family: "VCR OSD Mono", serif;
 	font-weight: 400;
 	font-size: 20px;
 	font-style: normal;
-	color: #ffffff;
+	color: #bc0000;
 }

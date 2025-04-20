@@ -191,11 +191,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<head>
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-				@import url("https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap");
-			</style>
 			<link rel='stylesheet' type='text/css' href='slop_menustyle2.css'>
 		</head>
 	"}
@@ -271,11 +266,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<head>
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
-			</style>
 			<link rel='stylesheet' type='text/css' href='slop_menustyle2.css'>
 		</head>
 		<body>

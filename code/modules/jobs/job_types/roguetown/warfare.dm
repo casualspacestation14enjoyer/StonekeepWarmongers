@@ -532,7 +532,7 @@
 //// RIFLEMEN ////
 
 /datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Sharpshooter"
+	name = "Sharpbarker"
 	tutorial = "Far better trained compared to the common soldiery, and with a marksmans rifle as well. The only issue is lacking in melee combat even worse than Ashigaru."
 	outfit = /datum/outfit/job/roguetown/redriflemen
 	allowed_sexes = list(MALE, FEMALE)
@@ -1111,7 +1111,7 @@
 //// RIFLEMEN ////
 
 /datum/advclass/blu/riflemen
-	name = "Sharpshooter"
+	name = "Sharpbarker"
 	tutorial = "Marksmen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
 	outfit = /datum/outfit/job/roguetown/bluriflemen
 	allowed_sexes = list(MALE, FEMALE)

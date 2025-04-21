@@ -1815,6 +1815,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			log_combat(user, target, "attempted to punch")
 			return FALSE
 */
+
+		var/hit_area
 		var/selzone = accuracy_check(user.zone_selected, user, target, /datum/skill/combat/unarmed, user.used_intent)
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(check_zone(selzone))
@@ -1822,6 +1824,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!affecting)
 			to_chat(user, "<span class='warning'>Unfortunately, there's nothing there.</span>")
 			return 0
+		
+		hit_area = affecting.name
 
 		if(!target.lying_attack_check(user))
 			return 0
@@ -1853,6 +1857,23 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					if(affecting.brute_dam > 0)
 						if(affecting.dismember())
 							playsound(get_turf(target), "desceration", 80, TRUE)
+
+			if(prob(damage/2 * user.STASTR/3))
+				switch(hit_area)
+					if(BODY_ZONE_HEAD)
+						var/hitcheck = rand(1,5)
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(hitcheck * (selzone == BODY_ZONE_PRECISE_MOUTH ? 5 : 3) * user.STASTR/3))) //MUCH higher chance to knock out teeth if you aim for mouth
+							var/obj/item/bodypart/head/BPH = affecting
+							if(BPH.knock_out_teeth(get_dir(target, user), rand(1,5)))
+								target.visible_message("<span class='danger'>[target]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[target]'s teeth sail off in an arc!</span>")
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)))
+							target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+							if(target.stat == CONSCIOUS)
+								target.visible_message("<span class='danger'>[target] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
+								target.confused = max(target.confused, 20)
+								target.adjust_blurriness(10)
+							if(prob(10))
+								target.gain_trauma(/datum/brain_trauma/mild/concussion)
 
 /*		if(user == target)
 			target.visible_message("<span class='danger'>[user] [atk_verb]ed themself![target.next_attack_msg.Join()]</span>", COMBAT_MESSAGE_RANGE, user)
@@ -2283,7 +2304,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					//to_chat(world, "[BPH.knock_out_teeth(get_dir(H, user), rand(1,5))]")
 					if(BPH.knock_out_teeth(get_dir(H, user), rand(1,5)))
 						H.visible_message("<span class='danger'>[H]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[H]'s teeth sail off in an arc!</span>")
-				if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(I.force/2 * user.STASTR/3)))
+				if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(I.force/2 * user.STASTR/4)))
 					H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 					if(H.stat == CONSCIOUS)
 						H.visible_message("<span class='danger'>[H] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")

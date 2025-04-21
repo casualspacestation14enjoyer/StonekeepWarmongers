@@ -104,7 +104,7 @@
 				if(aspect_chosen(/datum/round_aspect/halo))
 					playsound_local(get_turf(src), 'sound/vo/halo/skillissue.mp3', 100)
 				else
-					playsound_local(get_turf(src), 'sound/lobotomy.ogg', 50)
+					playsound_local(get_turf(src), 'sound/lobotomy.ogg', 10)
 				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE

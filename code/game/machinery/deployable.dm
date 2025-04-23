@@ -83,7 +83,7 @@
 
 /obj/item/rogue/sandbagkit/attack_right(mob/user)
 	. = ..()
-	var/turf/T = get_turf(user.loc)
+	var/turf/T = get_turf(src)
 	if(!isfloorturf(T))
 		to_chat(user, "<span class='warning'>I need ground to plant this on!</span>")
 		return
@@ -102,6 +102,7 @@
 
 /obj/structure/barricade/sandbags/rogue
 	name = "sand bags"
+	gender = PLURAL
 	desc = "Bags of sand meant to cover your sorry face."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sandbags"

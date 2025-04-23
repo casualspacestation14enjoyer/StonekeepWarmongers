@@ -71,6 +71,20 @@
 			/obj/item/rogue/caltrop
 			)
 
+/datum/warshippable/sandbags
+	name = "TEN SAND BAGS"
+	items = list(/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit,
+			/obj/item/rogue/sandbagkit
+			)
+
 /datum/warshippable/explodabarrel
 	name = "EXPLODABARRELS"
 	items = list(/obj/structure/fluff/explodabarrel,

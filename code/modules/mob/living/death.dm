@@ -57,7 +57,6 @@
 	for(var/i in 1 to 3)
 		new /obj/item/ash(loc)
 
-
 /mob/living/death(gibbed)
 	var/was_dead_before = stat == DEAD
 	stat = DEAD

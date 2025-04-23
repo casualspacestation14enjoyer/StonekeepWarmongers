@@ -105,23 +105,51 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
 	var/obj/item/bomb/loaded
+	
+/obj/structure/bombard/Moved(atom/OldLoc, Dir)
+	. = ..()
+	switch(Dir)
+		if(NORTH)
+			plusy = abs(plusy)
+		if(SOUTH)
+			plusy = -abs(plusy)
+
+/obj/structure/bombard/MiddleClick(mob/user, params)
+	if(ishuman(user))
+		var/oldy = y
+		var/newy = oldy + plusy
+		var/turf/epicenter = locate(x,newy,z)
+
+		to_chat(user, "<span class='notice'>I try to look through the magnifying glass on \the [src].</span>")
+		if(do_after(user, 2 SECONDS, TRUE, src))
+			// these vars are reset automatically when a person tries to move
+			user.client.eye = epicenter
+			user.client.perspective = EYE_PERSPECTIVE
 
 /obj/structure/bombard/examine(mob/user)
 	. = ..()
 	if(plusy)
-		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists to the north, negative numbers to the south.</span>"
+		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists the direction it is facing.</span>"
 	if(loaded)
 		. += "<span class='info'>It is loaded.</span>"
 
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
-	var/agka = input(user, "Insert plus azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
+	var/agka = input(user, "Insert azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
+	agka = abs(agka)
 	if(agka)
-		plusy = agka
+		switch(dir)
+			if(NORTH)
+				plusy = agka
+			if(SOUTH)
+				plusy = -agka
 		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
+	if(dir == WEST || dir == EAST)
+		to_chat(user, "<span class='warning'>Shooting that direction would be a waste of resources.</span>")
+		return
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
 		to_chat(user, "<span class='warning'>It won't work, I need a bomb.</span>")
 		return

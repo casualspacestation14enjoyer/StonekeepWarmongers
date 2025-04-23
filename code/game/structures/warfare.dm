@@ -1,6 +1,20 @@
+/obj/structure/warobjective
+	name = "objective"
+	var/blurb = "Fuck the opposing team to win!"
+	var/alertsound = 'sound/misc/alert.ogg'
+	var/haloalertsound = 'sound/misc/alert.ogg'
+
+/obj/structure/warobjective/proc/beginround()
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		to_chat(world, "<span class='danger'>[blurb]</span>")
+		if(aspect_chosen(/datum/round_aspect/halo))
+			SEND_SOUND(world, haloalertsound)
+		else
+			SEND_SOUND(world, alertsound)
+
 // TDM
 
-/obj/structure/bloodstatue // new LAST STAND
+/obj/structure/warobjective/bloodstatue // new LAST STAND
 	name = "Sanctified Statue"
 	desc = "A derelict of a former age. It demands blood."
 	icon = 'icons/roguetown/misc/96x96.dmi'
@@ -9,22 +23,16 @@
 	resistance_flags = INDESTRUCTIBLE
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
+	haloalertsound = 'sound/vo/halo/exterminatus.mp3'
 	var/stalemate_kills = 98
 	var/win_kills = 50
 
-/obj/structure/bloodstatue/Initialize()
+/obj/structure/warobjective/bloodstatue/Initialize()
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
+	blurb = "Secure [win_kills] kills for your team to win!"
 
-/obj/structure/bloodstatue/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		to_chat(world, "<span class='danger'>Secure [win_kills] kills for your team to win!</span>")
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/exterminatus.mp3')
-		else
-			SEND_SOUND(world, 'sound/misc/alert.ogg')
-
-/obj/structure/bloodstatue/process()
+/obj/structure/warobjective/bloodstatue/process()
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		if(SSticker.grenzelhoft_deaths >= win_kills)
@@ -124,7 +132,7 @@
 
 // CTF
 
-/obj/structure/ponr
+/obj/structure/warobjective/ponr
 	name = "Grenzelhofts Point of No Return"
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
@@ -134,25 +142,19 @@
 	climbable = FALSE
 	density = TRUE
 	opacity = FALSE
+	haloalertsound = 'sound/vo/halo/ctf.mp3'
+	blurb = "Capture the enemy flag and take it to your PONR!"
 	var/team = BLUE_WARTEAM
 
-/obj/structure/ponr/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		to_chat(world, "<span class='danger'>Capture the enemy flag and take it to your PONR!</span>")
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/ctf.mp3')
-		else
-			SEND_SOUND(world, 'sound/misc/alert.ogg')
-
-/obj/structure/ponr/Initialize()
+/obj/structure/warobjective/ponr/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/ponr/process()
+/obj/structure/warobjective/ponr/process()
 	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
 		W.dismantle_wall()
 
-/obj/structure/ponr/attack_hand(mob/user)
+/obj/structure/warobjective/ponr/attack_hand(mob/user)
 	. = ..()
 	var/mob/living/carbon/human/H
 	var/datum/game_mode/warfare/C = SSticker.mode
@@ -177,14 +179,14 @@
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
-/obj/structure/ponr/red
+/obj/structure/warobjective/ponr/red
 	name = "Heartfelts Point of No Return"
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
 	team = RED_WARTEAM
 
 // LD
 
-/obj/structure/warthrone
+/obj/structure/warobjective/warthrone
 	name = "throne of Heartfelt"
 	desc = "Do not let the enemy sit on this with your crown."
 	icon = 'icons/roguetown/misc/96x96.dmi'
@@ -195,16 +197,10 @@
 	max_integrity = 999999
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	buckle_lying = FALSE
+	blurb = "Take the enemy Lord's crown and sit on the Throne of Heartfelt!"
+	haloalertsound = 'sound/vo/halo/hail2theking.mp3'
 
-/obj/structure/warthrone/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		to_chat(world, "<span class='danger'>Take the enemy Lord's crown and sit on the Throne of Heartfelt!</span>")
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, 'sound/vo/halo/hail2theking.mp3')
-		else
-			SEND_SOUND(world, 'sound/misc/alert.ogg')
-
-/obj/structure/warthrone/post_buckle_mob(mob/living/M)
+/obj/structure/warobjective/warthrone/post_buckle_mob(mob/living/M)
 	..()
 	density = TRUE
 	M.set_mob_offsets("bed_buckle", _x = 0, _y = 8)
@@ -223,20 +219,20 @@
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
 					C.do_war_end(H, BLUE_WARTEAM)
 
-/obj/structure/warthrone/post_unbuckle_mob(mob/living/M)
+/obj/structure/warobjective/warthrone/post_unbuckle_mob(mob/living/M)
 	..()
 	density = FALSE
 	M.reset_offsets("bed_buckle")
 
-/obj/structure/warthrone/Initialize()
+/obj/structure/warobjective/warthrone/Initialize()
 	..()
 	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
 
-/obj/structure/warthrone/Destroy()
+/obj/structure/warobjective/warthrone/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
 
-/obj/structure/warthrone/lordcolor(primary,secondary)
+/obj/structure/warobjective/warthrone/lordcolor(primary,secondary)
 	if(!primary || !secondary)
 		return
 	var/mutable_appearance/M = mutable_appearance(icon, "throne_primary", -(layer+0.1))

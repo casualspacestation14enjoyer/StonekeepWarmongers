@@ -72,7 +72,7 @@
 	bar_material = WOOD
 	drop_amount = 0
 
-/obj/item/sandbagkit
+/obj/item/rogue/sandbagkit
 	name = "kit of sand bags"
 	desc = "Bags of sand meant to be built to cover your sorry face."
 	icon = 'icons/roguetown/misc/structure.dmi'
@@ -81,7 +81,7 @@
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/sandbagkit/attack_right(mob/user)
+/obj/item/rogue/sandbagkit/attack_right(mob/user)
 	. = ..()
 	var/turf/T = get_turf(user.loc)
 	if(!isfloorturf(T))
@@ -134,6 +134,10 @@
 		if(get_dir(loc, target) == dir)
 			return !density
 	return 1
+
+/obj/structure/barricade/sandbags/rogue/obj_break(damage_flag)
+	new /obj/item/rogue/sandbagkit(get_turf(src))
+	. = ..()
 
 /obj/structure/barricade/wooden/rogue/crude
 	name = "crude plank barricade"

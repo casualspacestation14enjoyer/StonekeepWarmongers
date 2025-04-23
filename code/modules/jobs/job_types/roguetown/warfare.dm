@@ -386,7 +386,7 @@
 	else
 		head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	backpack_contents = list(/obj/item/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
+	backpack_contents = list(/obj/item/rogue/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

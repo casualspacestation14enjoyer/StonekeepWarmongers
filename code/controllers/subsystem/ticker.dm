@@ -932,20 +932,9 @@ SUBSYSTEM_DEF(ticker)
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
 
-		var/obj/structure/bloodstatue/BS = locate()
-		if(BS)
-			BS.beginround()
-			return
-
-		var/obj/structure/ponr/PONR = locate()
-		if(PONR)
-			PONR.beginround()
-			return
-
-		var/obj/structure/warthrone/THR = locate()
-		if(THR)
-			THR.beginround()
-			return
+		var/obj/structure/warobjective/WO = locate()
+		if(WO)
+			WO.beginround()
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)

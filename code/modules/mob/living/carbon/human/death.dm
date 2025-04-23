@@ -4,7 +4,7 @@
 
 /mob/living/carbon/human/dust_animation()
 	new /obj/effect/temp_visual/dust_animation(loc, "dust-h")
-
+	
 /mob/living/carbon/human/spawn_gibs(with_bodyparts)
 	if(with_bodyparts)
 		new /obj/effect/gibspawner/human(drop_location(), src, get_static_viruses())

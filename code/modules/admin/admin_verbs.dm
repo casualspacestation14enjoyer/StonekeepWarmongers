@@ -807,13 +807,17 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	var/list/possibilities = list()
 	for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
-		var/datum/round_aspect/A = thing
-		possibilities += A
-	var/chosen = input(usr, "Choose", "WARMONGERS") as null|anything in possibilities
-	if(chosen)
-		SSticker.round_aspect = new chosen
-		SSticker.forcing_aspect = TRUE
-		SSticker.round_aspect.apply()
+		var/datum/round_aspect/A = new thing
+		possibilities[A.name] = A
+	var/chosen = input(usr, "Now forcing round aspects.", "WARMONGERS") as null|anything in possibilities
+	var/datum/round_aspect/RA = possibilities[chosen]
+	if(RA)
+		var/alerto = alert(usr, RA.description, RA.name, "Confirm", "Cancel")
+		if(alerto == "Confirm")
+			to_chat(usr, "Round Aspect force change successful!")
+			SSticker.round_aspect = RA
+			SSticker.forcing_aspect = TRUE
+			SSticker.round_aspect.apply()
 
 /client/proc/join_as_martyr()
 	set category = "GameMaster"

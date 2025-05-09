@@ -16,7 +16,8 @@
 	can_cauterize = FALSE
 	disabling = TRUE
 	critical = TRUE
-	sleep_healing = 0 // no sleep healing that is retarded
+	sleep_healing = 10
+	passive_healing = 5
 	/// Whether or not we can be surgically set
 	var/can_set = TRUE
 	/// Emote we use when applied

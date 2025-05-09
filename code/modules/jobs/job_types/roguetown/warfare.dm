@@ -289,10 +289,8 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backr = GetMainGunForWarfareHeartfelt()
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	head = /obj/item/clothing/head/roguetown/helmet/jingasa
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/jingasa
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/jingasa
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
@@ -320,7 +318,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 1
+	reinforcements_wave = 2
 
 /datum/outfit/job/roguetown/redsamurai/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -381,10 +379,8 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backr = /obj/item/rogueweapon/shield/rattan
+	head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	backpack_contents = list(/obj/item/rogue/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
 	if(H.mind)
@@ -428,10 +424,8 @@
 	beltl = /obj/item/rogueweapon/mace/ararebo
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backl = /obj/item/storage/backpack/rogue/satchel
+	head = /obj/item/clothing/head/roguetown/helmet/zijinguan
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/zijinguan
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/zijinguan
 		mask = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	backpack_contents = list(/obj/item/sanctiflux = 3)
 	if(H.mind)
@@ -517,10 +511,8 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
 	r_hand = GetMainGunForWarfareHeartfelt()
+	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/tengai/gasa
-	else
-		head = /obj/item/clothing/head/roguetown/tengai/gasa
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -537,6 +529,7 @@
 		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -566,9 +559,6 @@
 	backr = /obj/item/quiver/ironbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
 		mouth = /obj/item/clothing/mask/cigarette/pipe/westman
 	if(H.gender == FEMALE)
 		armor =	/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand/female
@@ -804,10 +794,8 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	backr = GetMainGunForWarfareGrenzelhoft()
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
@@ -836,7 +824,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 1
+	reinforcements_wave = 2
 
 /datum/outfit/job/roguetown/bluzweihander/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -848,10 +836,8 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
 	backr = /obj/item/rogueweapon/sword/long/reskin
+	head = /obj/item/clothing/head/roguetown/grenzelhofthat
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/grenzelhofthat
-	else
-		head = /obj/item/clothing/head/roguetown/grenzelhofthat
 		mouth = /obj/item/clothing/mask/cigarette/pipe
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
@@ -939,11 +925,9 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backl = /obj/item/storage/backpack/rogue/backpack
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
+	mask = /obj/item/clothing/mask/rogue/platemask
 	if(prob(70))
-		head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
-		mask = /obj/item/clothing/mask/rogue/platemask
-	else
-		head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	backpack_contents = list(/obj/item/bomb = 4, /obj/item/flint = 1)
 	if(H.mind)
@@ -1108,12 +1092,13 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
-		H.change_stat("perception", 2)
+		H.change_stat("perception", 4)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)
 		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -1141,10 +1126,8 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	head = /obj/item/clothing/head/roguetown/offitser
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/offitser
-	else
-		head = /obj/item/clothing/head/roguetown/offitser
 		mouth = /obj/item/clothing/mask/cigarette/pipe
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

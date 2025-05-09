@@ -204,10 +204,16 @@
 		if(user.client)
 			if(user.client.chargedprog >= 100)
 				BB.accuracy += 20 //better accuracy for fully aiming
-		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 1.5)
+			if(user.STAPER > 8)
+				BB.accuracy += (user.STAPER - 8) * 4 //each point of perception above 8 increases standard accuracy by 4.
+				BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
+		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/flintlocks) * 2)
 	if(!cocked)
 		return
 	if(!rammed)
+		return
+	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
+		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
 		return
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
@@ -216,9 +222,6 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++

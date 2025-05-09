@@ -287,7 +287,7 @@
 	flag = "bullet"
 	armor_penetration = 75
 	speed = 0.1
-	accuracy = 55
+	accuracy = 75
 
 /obj/projectile/bullet/reusable/bullet/wood
 	damage = 35

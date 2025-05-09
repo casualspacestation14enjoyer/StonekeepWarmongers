@@ -474,31 +474,31 @@
 
 /obj/item/rogueweapon/spear/firelance/proc/ignite(mob/living/user)
 	if(lit)
-		to_chat(user.loc, "<span class='warning'>The Firelance's fuse is already ignited and fierce as a bull.</span>")
+		to_chat(user, "<span class='warning'>The Firelance's fuse is already ignited and fierce as a bull.</span>")
 		return
 
 	if(!fuel_source)
-		to_chat(user.loc, "<span class='warning'>There is none.</span>")
+		to_chat(user, "<span class='info'>There is none.</span>")
 		return
 
 	if(!cocked)
 		return
 
-	to_chat(src.loc, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
-	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	to_chat(user, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
+	playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 
 	lit = TRUE
 	spawn(20) // 2 seconds
 		if(lit)
-			to_chat(src.loc, "<span class='warning'>The fuze reaches the composite, building deadly pressure.</span>")
-			playsound(src,'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
+			to_chat(user, "<span class='warning'>The fuze reaches the composite, building deadly pressure.</span>")
+			playsound(get_turf(src),'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
 	spawn(40) // 4 seconds
 		if(lit)
-			to_chat(src.loc, "<span class='danger'>The firelance is about to release purifying death!</span>")
-			playsound(src.loc, 'sound/items/firelight.ogg', 100)
+			to_chat(user, "<span class='danger'>The firelance is about to release purifying death!</span>")
+			playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 	spawn(60) // 6 seconds
 		if(lit)
-			playsound(src.loc, 'sound/magic/fireball.ogg', 100)
+			playsound(get_turf(src), 'sound/magic/fireball.ogg', 100)
 			flamefire(user)
 			fuel_source = FALSE
 			lit = FALSE
@@ -546,7 +546,7 @@
 /obj/item/rogueweapon/spear/firelance/dropped(mob/living/user)
 	. = ..()
 	if(fuel_source)
-		to_chat(src, "<span class='info'>[user] dropped the [usr] with its gourd's cap unsealed, hissing quietly, as it tells the tales of widowmaking by doing the obvious.</span>")
+		visible_message("<span class='info'>[user] dropped the [usr] with its gourd's cap unsealed, hissing quietly, as it tells the tales of widowmaking by doing the obvious.</span>")
 		user.adjust_fire_stacks(3)
 		user.IgniteMob()
 		flamefire(user)
@@ -568,7 +568,7 @@
 				limb = user.get_bodypart(zone)
 				if(limb)
 					playsound(src,'sound/misc/eat.ogg', rand(30,60), TRUE)
-					to_chat(user, "<span class='danger'>Without a gourd, [user]'s [limb] was accidentally snatched by jagged blades, bleeding before being severed!</span>")
+					to_chat(user, "<span class='danger'>YOUR HAND IS EATEN BY THE JAGGED BLADES!</span>")
 					limb.dismember()
 					user.emote("scream")
 					cocked = TRUE
@@ -595,7 +595,7 @@
 		return
 	else
 		if(fuel_source) // If it already has a fuel source, you can't insert a new one.
-			to_chat(user, "<span class='warning'>The firelance already has a gourd on.</span>")
+			to_chat(user, "<span class='warning'>The Firelance already has a gourd on.</span>")
 			return
 		if(cocked)
 			to_chat(user, "<span class='warning'>I shoved the gourd against the steel blades, almost cracking it. I cannot put the gourd inside if the blades are on the way.</span>")

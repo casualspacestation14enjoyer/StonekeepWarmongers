@@ -93,7 +93,7 @@
 			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
 			var/obj/item/clothing/head/roguetown/hed = head
-			if(hed && !HAS_TRAIT(src, TRAIT_SNIPER))
+			if(hed && !HAS_TRAIT(P.firer, TRAIT_SNIPER))
 				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
 				hed.take_damage(45 + newdam / 2, BRUTE, "melee", 1)
 				head = null
